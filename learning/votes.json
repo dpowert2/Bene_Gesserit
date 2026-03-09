@@ -1,8 +1,8 @@
 {
   "overmind": {
-    "stars": 3,
-    "note": "Test",
-    "voter": "Magda",
-    "voted_at": "2026-03-09T14:03:04.463Z"
+    "stars": 5,
+    "note": "This is a test\n",
+    "voter": "Dave",
+    "voted_at": "2026-03-09T14:03:21.186Z"
   }
 }
