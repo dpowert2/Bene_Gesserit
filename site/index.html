@@ -2177,7 +2177,7 @@
 
 
 
-<button id="settings-btn" title="Set your name for vote attribution">⚙</button>
+<button id="settings-btn" title="Set your name for vote attribution" onclick="openSettings()">⚙</button>
 
 <div class="modal-backdrop" id="settings-modal" hidden="">
   <div class="modal">
@@ -2188,8 +2188,8 @@
     </p>
     <input type="text" id="voter-name-input" placeholder="e.g. Dave" maxlength="40" autocomplete="off"/>
     <div class="modal-actions">
-      <button class="btn-secondary" id="btn-cancel-settings">Cancel</button>
-      <button class="btn-primary"   id="btn-save-settings">Save</button>
+      <button class="btn-secondary" id="btn-cancel-settings" onclick="closeSettings()">Cancel</button>
+      <button class="btn-primary"   id="btn-save-settings"   onclick="saveSettings()">Save</button>
     </div>
   </div>
 </div>
