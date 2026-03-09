@@ -656,6 +656,306 @@
       text-decoration: none;
     }
     .evidence-links li a:hover { text-decoration: underline; }
+
+    /* ============================================================ */
+    /* VOTING                                                       */
+    /* ============================================================ */
+    .vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .star {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: var(--border-strong);
+      padding: 0 1px;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+
+    .star:hover,
+    .star.active { color: var(--amber); }
+
+    .star:hover { transform: scale(1.15); }
+
+    .note-toggle {
+      background: none;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .note-toggle:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .vote-status {
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: auto;
+    }
+
+    .vote-status.saving { color: var(--amber); }
+    .vote-status.saved  { color: var(--accent-dark); }
+    .vote-status.error  { color: var(--coral); }
+
+    .note-area {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .note-area textarea {
+      width: 100%;
+      min-height: 64px;
+      padding: 9px 12px;
+      font-size: 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg-page);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+      line-height: 1.5;
+    }
+
+    .note-area textarea:focus { border-color: var(--brown); }
+    .note-area textarea::placeholder { color: var(--text-light); }
+
+    /* Vote badge next to score badge */
+    .vote-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 9px;
+      border-radius: 10px;
+      background: var(--amber-light);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    /* Dim low-rated cards */
+    .startup-card.voted-low {
+      opacity: 0.45;
+      transition: opacity 0.3s;
+    }
+
+    .startup-card.voted-low:hover { opacity: 1; }
+
+    /* ============================================================ */
+    /* FILTER BAR                                                   */
+    /* ============================================================ */
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      background: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .filter-btn.active {
+      background: var(--brown-light);
+      border-color: var(--brown);
+      color: var(--brown-dark);
+    }
+
+    .filter-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      background: var(--bg);
+      padding: 1px 6px;
+      border-radius: 100px;
+      color: var(--text-light);
+    }
+
+    .filter-btn.active .filter-count {
+      background: var(--brown);
+      color: #fff;
+    }
+
+    /* ============================================================ */
+    /* SETTINGS GEAR                                                */
+    /* ============================================================ */
+    #settings-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      z-index: 200;
+    }
+
+    #settings-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    #settings-btn.connected {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    /* ============================================================ */
+    /* TOKEN MODAL                                                  */
+    /* ============================================================ */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 24px;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    .modal h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .modal p a { color: var(--brown); text-decoration: none; }
+    .modal p a:hover { text-decoration: underline; }
+
+    .modal input[type="text"],
+    .modal input[type="password"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      background: var(--bg-page);
+      outline: none;
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .modal input:focus { border-color: var(--brown); }
+
+    .modal-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .btn-primary {
+      padding: 8px 18px;
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--brown-dark); }
+
+    .btn-secondary {
+      padding: 8px 18px;
+      background: none;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .modal-note {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
   </style>
 </head>
 <body>
@@ -810,6 +1110,12 @@
 <span class="count">13 candidates</span>
 </div>
 <!-- #1 Overmind — Score 90 -->
+
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all">All <span class="filter-count">13</span></button>
+<button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
+<button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">13</span></button>
+</div>
 <div class="startup-card">
 <div class="startup-top">
 <h3><a href="https://overmindlab.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Overmind</a></h3>
@@ -838,7 +1144,7 @@
 <div class="note-label">Why this matters</div>
 <p>Overmind is building the supervision layer that every regulated AI agent deployment will need. As Fidelity positions itself as the infrastructure layer for agentic AI, having a partner that provides production monitoring, audit trails, and safety guarantees for agents is essential. The MI5 pedigree adds credibility in security-critical contexts. London HQ aligns with the Europe-preferred geography.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.eu-startups.com/2026/02/former-mi5-officer-lands-e2-3-million-for-ai-agent-security-startup-overmind/" style="color: var(--brown);" target="_blank">EU Startups</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="overmind"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 97.1%"></div></div>
@@ -890,7 +1196,7 @@
 <div class="note-label">Why this matters</div>
 <p>As AI agents begin transacting on behalf of humans in financial services, the identity and trust layer becomes critical infrastructure. t54 Labs is building exactly this — and their investor roster (Franklin Templeton, Ripple) signals that incumbents already see the need. This is a natural complement to Fidelity's infrastructure layer thesis.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.theblock.co/post/391273/ripple-franklin-templeton-ai-agent-trust-startup-t54-labs" style="color: var(--brown);" target="_blank">The Block</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="t54-labs"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
@@ -942,7 +1248,7 @@
 <div class="note-label">Why this matters</div>
 <p>Stacks validates the thesis that agentic AI is ready for production finance workflows. As enterprise finance teams adopt orchestrated AI agents, they'll need regulated infrastructure partners like Fidelity to connect to for execution, custody, and data.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/02/20/stacks-raises-23m-series-a-to-scale-agentic-ai/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li><li><a href="https://www.fintechfutures.com/venture-capital-funding/stacks-raises-23m-series-a" style="color: var(--brown);" target="_blank">Fintech Futures</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="stacks"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
@@ -994,7 +1300,7 @@
 <div class="note-label">Why this matters</div>
 <p>Unit21 proves that agent-native compliance is production-ready. Their 99% accuracy across 300K+ alerts demonstrates the viability of AI agents in regulated compliance workflows — exactly the kind of infrastructure Fidelity will need as it enables third-party agents.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/02/20/were-going-to-lose-if-we-dont-use-ai-unit21-founder-warns-banks-on-rising-fraud-threats/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="unit21"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 91.4%"></div></div>
@@ -1046,7 +1352,7 @@
 <div class="note-label">Why this matters</div>
 <p>Mine/MoneyGPT represents exactly the "front door" personal agent the thesis describes — an AI that handles financial discovery, planning, and execution on behalf of consumers. These agents will need regulated counterparties like Fidelity for execution. Partnership potential is high.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.pymnts.com/news/investment-tracker/2026/mine-raises-14-million-and-launches-ai-personal-finance-agent/" style="color: var(--brown);" target="_blank">PYMNTS.com</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="mine-moneygpt"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
@@ -1098,7 +1404,7 @@
 <div class="note-label">Why this matters</div>
 <p>Dyna.Ai shows agentic AI is going live in banking across Asia-Pacific and the Middle East. Their platform approach — AI-as-a-Service for banks — could complement Fidelity's infrastructure layer in non-US markets.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/03/03/dyna-ai-raises-eight-figure-series-a-to-scale-agentic-ai/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="dyna-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 74.3%"></div></div>
@@ -1150,7 +1456,7 @@
 <div class="note-label">Why this matters</div>
 <p>Tendi represents a pure-play personal finance agent that could serve as a "front door" connecting consumers to Fidelity's infrastructure. The CFP-level training and 12,000+ institution connections demonstrate serious finserv commitment.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://tendi.ai/" style="color: var(--brown);" target="_blank">Tendi.ai</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="tendi"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
@@ -1202,7 +1508,7 @@
 <div class="note-label">Why this matters</div>
 <p>Guardrails AI addresses a non-negotiable requirement for deploying AI agents in financial services: ensuring outputs are safe, validated, and hallucination-free. As Fidelity enables third-party agents on its platform, a guardrails layer becomes essential infrastructure.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://tracxn.com/d/companies/guardrailsai/__pQbLepOnDmjgxrW3Pd8s3NWNKgThaNiorz2ZzWAOrFk/funding-and-investors" style="color: var(--brown);" target="_blank">Tracxn</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="guardrails-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
@@ -1254,7 +1560,7 @@
 <div class="note-label">Why this matters</div>
 <p>Uptiq's approach — embedding compliance guardrails directly into AI agents for financial services — validates the thesis that regulated infrastructure is the key differentiator. A partner like Uptiq could help Fidelity ensure third-party agents meet compliance requirements.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.uptiq.ai/" style="color: var(--brown);" target="_blank">Uptiq.ai</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="uptiq"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
@@ -1306,7 +1612,7 @@
 <div class="note-label">Why this matters</div>
 <p>Alter is building the zero-trust layer for AI agents — wrapping every tool call in authentication and authorization. As Fidelity becomes the infrastructure layer that agents connect to, this exact capability is needed to ensure only authorized agents can transact.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://dev.to/composiodev/4-best-ai-agent-authentication-platforms-to-consider-in-2026-32o8" style="color: var(--brown);" target="_blank">Composio / dev.to</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="alter"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
@@ -1358,7 +1664,7 @@
 <div class="note-label">Why this matters</div>
 <p>Mezzi demonstrates that AI-driven tax optimisation is productised and consumer-ready. As AI agents handle more portfolio management, tax-aware execution becomes a critical capability — and a natural extension of Fidelity's infrastructure layer.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.mezzi.com/blog/ai-tools-for-tax-loss-harvesting-in-portfolios" style="color: var(--brown);" target="_blank">Mezzi blog – AI tools for TLH</a></li><li><a href="https://www.mezzi.com/blog/ai-driven-tax-loss-harvesting-long-term-roi" style="color: var(--brown);" target="_blank">Mezzi blog – AI-driven TLH ROI</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="mezzi"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
@@ -1410,7 +1716,7 @@
 <div class="note-label">Why this matters</div>
 <p>Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns. As Fidelity's agents handle portfolio management, tax-aware execution becomes a critical integration point.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://hivetax.ai/smart-tax-loss-harvesting-tools-tips-and-tactics/" style="color: var(--brown);" target="_blank">Hive Tax AI blog</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="hive-tax-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
@@ -1462,7 +1768,7 @@
 <div class="note-label">Why this matters</div>
 <p>Trace addresses a real bottleneck: getting AI agents from pilot to production. As Fidelity builds its agent infrastructure, tools that make agent deployment reliable and monitorable become valuable partners.</p>
 </div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/" style="color: var(--brown);" target="_blank">TechCrunch</a></li></ul></div>
-<div class="score-bars">
+<div class="vote-row" data-slug="trace"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
 <div class="bar-item">
 <span class="bar-label">Gap Fit</span>
 <div class="bar-track"><div class="bar-fill" style="width: 71.4%"></div></div>
@@ -1601,5 +1907,270 @@
       document.querySelector(l.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     }));
   </script>
+<button id="settings-btn" title="Connect GitHub to save votes">⚙</button>
+<div class="modal-backdrop" hidden="" id="token-modal">
+<div class="modal">
+<h3>GitHub connection</h3>
+<p>
+      Votes are saved to <code>learning/votes.json</code> in your repo via the GitHub API.
+      Create a <a href="https://github.com/settings/tokens/new?scopes=repo&amp;description=Bene+Gesserit+votes" target="_blank">personal access token</a>
+      with <strong>repo</strong> scope and paste it here.<br/>
+      The token is stored only in this browser.
+    </p>
+<input autocomplete="off" id="token-input" placeholder="github_pat_…" type="password"/>
+<div class="modal-actions">
+<button class="btn-secondary" id="btn-clear-token">Disconnect</button>
+<button class="btn-secondary" id="btn-cancel-token">Cancel</button>
+<button class="btn-primary" id="btn-save-token">Connect</button>
+</div>
+<p class="modal-note">Tip: revoke the token any time in GitHub Settings → Developer settings.</p>
+</div>
+</div>
+
+  <script>
+    /* ── Config ──────────────────────────────────────────────── */
+    const REPO       = 'dpowert2/Bene_Gesserit';
+    const VOTES_PATH = 'learning/votes.json';
+    const BRANCH     = 'main';
+
+    /* ── State ───────────────────────────────────────────────── */
+    let token    = localStorage.getItem('bg_gh_token') || '';
+    let votes    = {};
+    let votesSha = '';
+
+    /* ── GitHub API ──────────────────────────────────────────── */
+    async function ghGet(path) {
+      const r = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        { headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' } }
+      );
+      if (!r.ok) throw new Error(`GET ${r.status}`);
+      return r.json();
+    }
+
+    async function ghPut(path, content, sha, msg) {
+      const r = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        {
+          method: 'PUT',
+          headers: {
+            Authorization: `token ${token}`,
+            Accept: 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: msg,
+            content: btoa(unescape(encodeURIComponent(content))),
+            sha,
+            branch: BRANCH
+          })
+        }
+      );
+      if (!r.ok) { const e = await r.json(); throw new Error(JSON.stringify(e)); }
+      return r.json();
+    }
+
+    /* ── Load votes from GitHub ──────────────────────────────── */
+    async function loadVotes() {
+      if (!token) { renderAll(); return; }
+      try {
+        const data = await ghGet(VOTES_PATH);
+        votesSha = data.sha;
+        const raw = JSON.parse(atob(data.content.replace(/\s/g, '')));
+        votes = Array.isArray(raw) ? {} : raw;
+      } catch(e) {
+        console.warn('loadVotes:', e);
+        votes = {};
+      }
+      renderAll();
+    }
+
+    /* ── Save votes to GitHub ────────────────────────────────── */
+    async function saveVotes(slug) {
+      if (!token) { openModal(); return; }
+      const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
+      const st   = card.querySelector('.vote-status');
+      st.textContent = 'Saving…'; st.className = 'vote-status saving';
+      try {
+        const fresh = await ghGet(VOTES_PATH);
+        votesSha = fresh.sha;
+        const serverVotes = Array.isArray(JSON.parse(atob(fresh.content.replace(/\s/g, ''))))
+          ? {}
+          : JSON.parse(atob(fresh.content.replace(/\s/g, '')));
+        votes = { ...serverVotes, ...votes };
+        const res = await ghPut(VOTES_PATH, JSON.stringify(votes, null, 2), votesSha, `vote: ${slug}`);
+        votesSha = res.content.sha;
+        st.textContent = 'Saved ✓'; st.className = 'vote-status saved';
+        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
+      } catch(e) {
+        console.error('saveVotes:', e);
+        st.textContent = 'Error — check token'; st.className = 'vote-status error';
+        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 4000);
+      }
+    }
+
+    /* ── Vote actions ────────────────────────────────────────── */
+    function setStars(slug, val) {
+      if (!votes[slug]) votes[slug] = {};
+      const prev = votes[slug].stars || 0;
+      votes[slug].stars    = val === prev ? 0 : val;  // toggle off if same
+      votes[slug].voted_at = new Date().toISOString();
+      renderCard(slug);
+      saveVotes(slug);
+      applyFilter();
+    }
+
+    function setNote(slug, text) {
+      if (!votes[slug]) votes[slug] = {};
+      votes[slug].note     = text;
+      votes[slug].voted_at = new Date().toISOString();
+    }
+
+    /* ── Render ──────────────────────────────────────────────── */
+    function renderCard(slug) {
+      const row  = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+      if (!row) return;
+      const v    = votes[slug] || {};
+      const stars = v.stars || 0;
+      const card = row.closest('.startup-card');
+
+      /* stars */
+      row.querySelectorAll('.star').forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars);
+      });
+
+      /* note textarea (don't clobber if user is typing) */
+      const ta = row.querySelector('textarea');
+      if (ta && !ta._focused) ta.value = v.note || '';
+
+      /* vote badge */
+      const top = card.querySelector('.startup-top');
+      let badge = top.querySelector('.vote-badge');
+      if (stars > 0) {
+        if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
+        badge.textContent = '★'.repeat(stars);
+        badge.dataset.stars = stars;
+      } else if (badge) {
+        badge.remove();
+      }
+
+      /* dim low */
+      card.classList.toggle('voted-low',  stars > 0 && stars <= 2);
+      card.classList.toggle('voted-high', stars >= 4);
+    }
+
+    function renderAll() {
+      document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug));
+      updateFilterCounts();
+    }
+
+    /* ── Filter ──────────────────────────────────────────────── */
+    let activeFilter = 'all';
+
+    function applyFilter(f) {
+      if (f) activeFilter = f;
+      document.querySelectorAll('.filter-btn').forEach(b =>
+        b.classList.toggle('active', b.dataset.filter === activeFilter)
+      );
+      document.querySelectorAll('.startup-card').forEach(card => {
+        const slug  = card.querySelector('.vote-row')?.dataset.slug;
+        const voted = slug && votes[slug]?.stars;
+        let show = true;
+        if (activeFilter === 'voted')   show = !!voted;
+        if (activeFilter === 'unvoted') show = !voted;
+        card.style.display = show ? '' : 'none';
+      });
+      updateFilterCounts();
+    }
+
+    function updateFilterCounts() {
+      const cards = [...document.querySelectorAll('.startup-card')];
+      const voted   = cards.filter(c => { const s = c.querySelector('.vote-row')?.dataset.slug; return s && votes[s]?.stars; }).length;
+      const unvoted = cards.length - voted;
+      const set = (f, n) => { const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`); if (b) b.textContent = n; };
+      set('all', cards.length); set('voted', voted); set('unvoted', unvoted);
+    }
+
+    /* ── Token modal ─────────────────────────────────────────── */
+    function openModal()  { document.getElementById('token-modal').hidden = false; document.getElementById('token-input').focus(); }
+    function closeModal() { document.getElementById('token-modal').hidden = true; }
+
+    function saveToken() {
+      const val = document.getElementById('token-input').value.trim();
+      if (!val) return;
+      token = val;
+      localStorage.setItem('bg_gh_token', token);
+      closeModal();
+      updateGearState();
+      loadVotes();
+    }
+
+    function clearToken() {
+      token = '';
+      localStorage.removeItem('bg_gh_token');
+      closeModal();
+      updateGearState();
+    }
+
+    function updateGearState() {
+      const gear = document.getElementById('settings-btn');
+      if (!gear) return;
+      gear.classList.toggle('connected', !!token);
+      gear.title = token ? 'GitHub connected ✓ — click to change token' : 'Connect GitHub to save votes';
+      const inp = document.getElementById('token-input');
+      if (inp) inp.value = token;
+    }
+
+    /* ── Wire up events ──────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', () => {
+      updateGearState();
+
+      /* modal backdrop */
+      document.getElementById('token-modal').addEventListener('click', e => { if (e.target.id === 'token-modal') closeModal(); });
+      document.getElementById('token-input').addEventListener('keydown', e => { if (e.key === 'Enter') saveToken(); });
+      document.getElementById('btn-save-token').addEventListener('click', saveToken);
+      document.getElementById('btn-cancel-token').addEventListener('click', closeModal);
+      document.getElementById('btn-clear-token').addEventListener('click', clearToken);
+      document.getElementById('settings-btn').addEventListener('click', openModal);
+
+      /* stars */
+      document.querySelectorAll('.star').forEach(btn =>
+        btn.addEventListener('click', function() {
+          setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
+        })
+      );
+
+      /* note toggle */
+      document.querySelectorAll('.note-toggle').forEach(btn =>
+        btn.addEventListener('click', function() {
+          const row  = this.closest('.vote-row');
+          const area = row.querySelector('.note-area');
+          const open = area.hidden;
+          area.hidden  = !open;
+          this.textContent = open ? '− Hide note' : '+ Add note';
+          if (open) row.querySelector('textarea').focus();
+        })
+      );
+
+      /* note autosave on blur */
+      document.querySelectorAll('.note-area textarea').forEach(ta => {
+        ta.addEventListener('focus',  function() { this._focused = true; });
+        ta.addEventListener('blur',   function() {
+          this._focused = false;
+          const slug = this.closest('.vote-row').dataset.slug;
+          setNote(slug, this.value);
+          if (this.value.trim() || (votes[slug]?.stars)) saveVotes(slug);
+        });
+      });
+
+      /* filter */
+      document.querySelectorAll('.filter-btn').forEach(btn =>
+        btn.addEventListener('click', function() { applyFilter(this.dataset.filter); })
+      );
+
+      loadVotes();
+    });
+  </script>
+
 </body>
 </html>
