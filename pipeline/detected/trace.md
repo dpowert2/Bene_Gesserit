@@ -7,6 +7,7 @@
 **Team signal:** TechCrunch coverage suggests credible founding team; limited public details
 **Product maturity:** beta
 **Business model:** SaaS / API-platform
+**Website:** https://trace.so
 
 ## Scoring
 **Relevance score:** 62

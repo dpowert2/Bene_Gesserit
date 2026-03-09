@@ -7,6 +7,7 @@
 **Team signal:** Rebranded from Fizz; demonstrated pivot capability; no specific founder pedigree found
 **Product maturity:** live product
 **Business model:** SaaS (consumer fintech)
+**Website:** https://usemine.com
 
 ## Scoring
 **Relevance score:** 74

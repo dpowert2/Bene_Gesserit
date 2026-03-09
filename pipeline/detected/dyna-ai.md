@@ -7,6 +7,7 @@
 **Team signal:** Lion X Ventures led round; expanding to Saudi market
 **Product maturity:** live product
 **Business model:** SaaS / services
+**Website:** https://dyna.ai
 
 ## Scoring
 **Relevance score:** 68

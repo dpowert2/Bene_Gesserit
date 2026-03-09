@@ -7,6 +7,7 @@
 **Team signal:** No specific team data found
 **Product maturity:** live product
 **Business model:** API/platform
+**Website:** https://www.uptiq.ai
 
 ## Scoring
 **Relevance score:** 70

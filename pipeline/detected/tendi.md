@@ -7,6 +7,7 @@
 **Team signal:** No data found on founding team
 **Product maturity:** live product
 **Business model:** SaaS (consumer)
+**Website:** https://tendi.ai
 
 ## Scoring
 **Relevance score:** 70

@@ -7,6 +7,7 @@
 **Team signal:** No specific team data found
 **Product maturity:** live product
 **Business model:** SaaS (consumer, $119/year premium)
+**Website:** https://www.mezzi.com
 
 ## Scoring
 **Relevance score:** 66
