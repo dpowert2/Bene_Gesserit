@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Don't commit learning notes with potentially sensitive company assessments
+# (uncomment these if you want to keep notes private)
+# learning/notes/

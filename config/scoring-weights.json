@@ -1,0 +1,22 @@
+{
+  "current": {
+    "gap_fit": 35,
+    "finserv_readiness": 25,
+    "stage_match": 20,
+    "team_signal": 20
+  },
+  "soft_factors": [],
+  "history": [
+    {
+      "date": "2026-03-09",
+      "weights": {
+        "gap_fit": 35,
+        "finserv_readiness": 25,
+        "stage_match": 20,
+        "team_signal": 20
+      },
+      "soft_factors": [],
+      "note": "Initial configuration. No votes yet."
+    }
+  ]
+}
