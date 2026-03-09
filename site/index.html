@@ -956,6 +956,41 @@
       margin-bottom: 0;
     }
 
+
+    .vote-attr {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+    }
+
+    #name-prompt {
+      background: var(--brown-light);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    #name-prompt button {
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    #name-prompt button:hover { background: var(--brown-dark); }
+
   </style>
 </head>
 <body>
@@ -1907,116 +1942,66 @@
       document.querySelector(l.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     }));
   </script>
-<button id="settings-btn" title="Connect GitHub to save votes">⚙</button>
-<div class="modal-backdrop" hidden="" id="token-modal">
-<div class="modal">
-<h3>GitHub connection</h3>
-<p>
-      Votes are saved to <code>learning/votes.json</code> in your repo via the GitHub API.
-      Create a <a href="https://github.com/settings/tokens/new?scopes=repo&amp;description=Bene+Gesserit+votes" target="_blank">personal access token</a>
-      with <strong>repo</strong> scope and paste it here.<br/>
-      The token is stored only in this browser.
-    </p>
-<input autocomplete="off" id="token-input" placeholder="github_pat_…" type="password"/>
-<div class="modal-actions">
-<button class="btn-secondary" id="btn-clear-token">Disconnect</button>
-<button class="btn-secondary" id="btn-cancel-token">Cancel</button>
-<button class="btn-primary" id="btn-save-token">Connect</button>
-</div>
-<p class="modal-note">Tip: revoke the token any time in GitHub Settings → Developer settings.</p>
-</div>
-</div>
 
   <script>
-    /* ── Config ──────────────────────────────────────────────── */
-    const REPO       = 'dpowert2/Bene_Gesserit';
-    const VOTES_PATH = 'learning/votes.json';
-    const BRANCH     = 'main';
+    /* ── Worker URL — update this after deploying worker.js ── */
+    const WORKER_URL = 'https://bg-votes.YOURSUBDOMAIN.workers.dev';
 
-    /* ── State ───────────────────────────────────────────────── */
-    let token    = localStorage.getItem('bg_gh_token') || '';
-    let votes    = {};
-    let votesSha = '';
+    /* ── State ─────────────────────────────────────────────── */
+    let voter  = localStorage.getItem('bg_voter_name') || '';
+    let votes  = {};
 
-    /* ── GitHub API ──────────────────────────────────────────── */
-    async function ghGet(path) {
-      const r = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${path}`,
-        { headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' } }
-      );
-      if (!r.ok) throw new Error(`GET ${r.status}`);
-      return r.json();
-    }
-
-    async function ghPut(path, content, sha, msg) {
-      const r = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${path}`,
-        {
-          method: 'PUT',
-          headers: {
-            Authorization: `token ${token}`,
-            Accept: 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: msg,
-            content: btoa(unescape(encodeURIComponent(content))),
-            sha,
-            branch: BRANCH
-          })
-        }
-      );
-      if (!r.ok) { const e = await r.json(); throw new Error(JSON.stringify(e)); }
-      return r.json();
-    }
-
-    /* ── Load votes from GitHub ──────────────────────────────── */
+    /* ── Worker API ─────────────────────────────────────────── */
     async function loadVotes() {
-      if (!token) { renderAll(); return; }
       try {
-        const data = await ghGet(VOTES_PATH);
-        votesSha = data.sha;
-        const raw = JSON.parse(atob(data.content.replace(/\s/g, '')));
-        votes = Array.isArray(raw) ? {} : raw;
-      } catch(e) {
+        const r = await fetch(`${WORKER_URL}/votes`);
+        if (!r.ok) throw new Error(`${r.status}`);
+        const data = await r.json();
+        votes = data.votes || {};
+      } catch (e) {
         console.warn('loadVotes:', e);
         votes = {};
       }
       renderAll();
     }
 
-    /* ── Save votes to GitHub ────────────────────────────────── */
-    async function saveVotes(slug) {
-      if (!token) { openModal(); return; }
+    async function saveVote(slug) {
       const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
       const st   = card.querySelector('.vote-status');
       st.textContent = 'Saving…'; st.className = 'vote-status saving';
+
       try {
-        const fresh = await ghGet(VOTES_PATH);
-        votesSha = fresh.sha;
-        const serverVotes = Array.isArray(JSON.parse(atob(fresh.content.replace(/\s/g, ''))))
-          ? {}
-          : JSON.parse(atob(fresh.content.replace(/\s/g, '')));
-        votes = { ...serverVotes, ...votes };
-        const res = await ghPut(VOTES_PATH, JSON.stringify(votes, null, 2), votesSha, `vote: ${slug}`);
-        votesSha = res.content.sha;
+        const r = await fetch(`${WORKER_URL}/votes`, {
+          method:  'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            slug,
+            stars:  votes[slug]?.stars ?? 0,
+            note:   votes[slug]?.note  ?? '',
+            voter:  voter || 'anonymous',
+          }),
+        });
+        if (!r.ok) throw new Error(`${r.status}: ${await r.text()}`);
+        const data = await r.json();
+        votes = data.votes || votes;
+        renderAll();
         st.textContent = 'Saved ✓'; st.className = 'vote-status saved';
         setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
-      } catch(e) {
-        console.error('saveVotes:', e);
-        st.textContent = 'Error — check token'; st.className = 'vote-status error';
-        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 4000);
+      } catch (e) {
+        console.error('saveVote:', e);
+        st.textContent = 'Error — is the Worker deployed?';
+        st.className = 'vote-status error';
+        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
       }
     }
 
-    /* ── Vote actions ────────────────────────────────────────── */
+    /* ── Vote actions ───────────────────────────────────────── */
     function setStars(slug, val) {
       if (!votes[slug]) votes[slug] = {};
-      const prev = votes[slug].stars || 0;
-      votes[slug].stars    = val === prev ? 0 : val;  // toggle off if same
+      votes[slug].stars    = val === (votes[slug].stars || 0) ? 0 : val;
       votes[slug].voted_at = new Date().toISOString();
       renderCard(slug);
-      saveVotes(slug);
+      saveVote(slug);
       applyFilter();
     }
 
@@ -2026,29 +2011,44 @@
       votes[slug].voted_at = new Date().toISOString();
     }
 
-    /* ── Render ──────────────────────────────────────────────── */
+    /* ── Render ─────────────────────────────────────────────── */
     function renderCard(slug) {
-      const row  = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+      const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
       if (!row) return;
-      const v    = votes[slug] || {};
+      const v     = votes[slug] || {};
       const stars = v.stars || 0;
-      const card = row.closest('.startup-card');
+      const card  = row.closest('.startup-card');
 
       /* stars */
-      row.querySelectorAll('.star').forEach(btn => {
-        btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars);
-      });
+      row.querySelectorAll('.star').forEach(btn =>
+        btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars)
+      );
 
-      /* note textarea (don't clobber if user is typing) */
+      /* note textarea (don't clobber while typing) */
       const ta = row.querySelector('textarea');
       if (ta && !ta._focused) ta.value = v.note || '';
 
-      /* vote badge */
+      /* voter attribution below note toggle */
+      let attr = row.querySelector('.vote-attr');
+      if (v.voter && v.voted_at) {
+        if (!attr) {
+          attr = document.createElement('span');
+          attr.className = 'vote-attr';
+          row.querySelector('.vote-status').insertAdjacentElement('beforebegin', attr);
+        }
+        const d = new Date(v.voted_at);
+        const fmt = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+        attr.textContent = `${v.voter} · ${fmt}`;
+      } else if (attr) {
+        attr.remove();
+      }
+
+      /* badge */
       const top = card.querySelector('.startup-top');
       let badge = top.querySelector('.vote-badge');
       if (stars > 0) {
         if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
-        badge.textContent = '★'.repeat(stars);
+        badge.textContent  = '★'.repeat(stars);
         badge.dataset.stars = stars;
       } else if (badge) {
         badge.remove();
@@ -2064,7 +2064,7 @@
       updateFilterCounts();
     }
 
-    /* ── Filter ──────────────────────────────────────────────── */
+    /* ── Filter ─────────────────────────────────────────────── */
     let activeFilter = 'all';
 
     function applyFilter(f) {
@@ -2084,93 +2084,115 @@
     }
 
     function updateFilterCounts() {
-      const cards = [...document.querySelectorAll('.startup-card')];
-      const voted   = cards.filter(c => { const s = c.querySelector('.vote-row')?.dataset.slug; return s && votes[s]?.stars; }).length;
+      const cards   = [...document.querySelectorAll('.startup-card')];
+      const voted   = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.stars).length;
       const unvoted = cards.length - voted;
       const set = (f, n) => { const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`); if (b) b.textContent = n; };
       set('all', cards.length); set('voted', voted); set('unvoted', unvoted);
     }
 
-    /* ── Token modal ─────────────────────────────────────────── */
-    function openModal()  { document.getElementById('token-modal').hidden = false; document.getElementById('token-input').focus(); }
-    function closeModal() { document.getElementById('token-modal').hidden = true; }
-
-    function saveToken() {
-      const val = document.getElementById('token-input').value.trim();
-      if (!val) return;
-      token = val;
-      localStorage.setItem('bg_gh_token', token);
-      closeModal();
-      updateGearState();
-      loadVotes();
+    /* ── Settings modal (name only) ─────────────────────────── */
+    function openSettings() {
+      document.getElementById('settings-modal').hidden = false;
+      const inp = document.getElementById('voter-name-input');
+      inp.value = voter;
+      inp.focus();
     }
+    function closeSettings() { document.getElementById('settings-modal').hidden = true; }
 
-    function clearToken() {
-      token = '';
-      localStorage.removeItem('bg_gh_token');
-      closeModal();
+    function saveSettings() {
+      voter = document.getElementById('voter-name-input').value.trim();
+      localStorage.setItem('bg_voter_name', voter);
+      closeSettings();
       updateGearState();
     }
 
     function updateGearState() {
       const gear = document.getElementById('settings-btn');
       if (!gear) return;
-      gear.classList.toggle('connected', !!token);
-      gear.title = token ? 'GitHub connected ✓ — click to change token' : 'Connect GitHub to save votes';
-      const inp = document.getElementById('token-input');
-      if (inp) inp.value = token;
+      gear.title = voter
+        ? `Voting as: ${voter} (click to change)`
+        : 'Set your name for vote attribution';
+      gear.classList.toggle('connected', !!voter);
     }
 
-    /* ── Wire up events ──────────────────────────────────────── */
+    /* ── Wire events ────────────────────────────────────────── */
     document.addEventListener('DOMContentLoaded', () => {
       updateGearState();
 
-      /* modal backdrop */
-      document.getElementById('token-modal').addEventListener('click', e => { if (e.target.id === 'token-modal') closeModal(); });
-      document.getElementById('token-input').addEventListener('keydown', e => { if (e.key === 'Enter') saveToken(); });
-      document.getElementById('btn-save-token').addEventListener('click', saveToken);
-      document.getElementById('btn-cancel-token').addEventListener('click', closeModal);
-      document.getElementById('btn-clear-token').addEventListener('click', clearToken);
-      document.getElementById('settings-btn').addEventListener('click', openModal);
+      document.getElementById('settings-modal')
+        .addEventListener('click', e => { if (e.target.id === 'settings-modal') closeSettings(); });
+      document.getElementById('voter-name-input')
+        .addEventListener('keydown', e => { if (e.key === 'Enter') saveSettings(); });
+      document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+      document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+      document.getElementById('settings-btn').addEventListener('click', openSettings);
 
       /* stars */
       document.querySelectorAll('.star').forEach(btn =>
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
           setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
         })
       );
 
       /* note toggle */
       document.querySelectorAll('.note-toggle').forEach(btn =>
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
           const row  = this.closest('.vote-row');
           const area = row.querySelector('.note-area');
           const open = area.hidden;
-          area.hidden  = !open;
-          this.textContent = open ? '− Hide note' : '+ Add note';
+          area.hidden      = !open;
+          this.textContent  = open ? '− Hide note' : '+ Add note';
           if (open) row.querySelector('textarea').focus();
         })
       );
 
       /* note autosave on blur */
       document.querySelectorAll('.note-area textarea').forEach(ta => {
-        ta.addEventListener('focus',  function() { this._focused = true; });
-        ta.addEventListener('blur',   function() {
+        ta.addEventListener('focus', function () { this._focused = true; });
+        ta.addEventListener('blur',  function () {
           this._focused = false;
           const slug = this.closest('.vote-row').dataset.slug;
           setNote(slug, this.value);
-          if (this.value.trim() || (votes[slug]?.stars)) saveVotes(slug);
+          if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
         });
       });
 
       /* filter */
       document.querySelectorAll('.filter-btn').forEach(btn =>
-        btn.addEventListener('click', function() { applyFilter(this.dataset.filter); })
+        btn.addEventListener('click', function () { applyFilter(this.dataset.filter); })
       );
+
+      /* first-time name prompt */
+      if (!voter) {
+        setTimeout(() => {
+          const banner = document.getElementById('name-prompt');
+          if (banner) banner.hidden = false;
+        }, 1200);
+      }
 
       loadVotes();
     });
   </script>
+
+
+
+<button id="settings-btn" title="Set your name for vote attribution">⚙</button>
+
+<div class="modal-backdrop" id="settings-modal" hidden="">
+  <div class="modal">
+    <h3>Your name</h3>
+    <p>
+      Enter your name or initials so votes show who rated what in the commit history.
+      Votes are shared — everyone sees the same ratings.
+    </p>
+    <input type="text" id="voter-name-input" placeholder="e.g. Dave" maxlength="40" autocomplete="off"/>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="btn-cancel-settings">Cancel</button>
+      <button class="btn-primary"   id="btn-save-settings">Save</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,11 @@
+name            = "bg-votes"
+main            = "worker.js"
+compatibility_date = "2024-09-23"
+
+# Deploy:
+#   1. npm install -g wrangler
+#   2. wrangler login
+#   3. wrangler secret put GITHUB_TOKEN    ← paste a fine-grained PAT (Contents: write)
+#   4. wrangler deploy
+#
+# Then copy the worker URL and set WORKER_URL in index.html / site/index.html
