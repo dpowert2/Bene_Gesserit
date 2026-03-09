@@ -2092,19 +2092,14 @@
     }
 
     /* ── Settings modal (name only) ─────────────────────────── */
-    function openSettings() {
-      document.getElementById('settings-modal').hidden = false;
-      const inp = document.getElementById('voter-name-input');
-      inp.value = voter;
-      inp.focus();
-    }
-    function closeSettings() { document.getElementById('settings-modal').hidden = true; }
+    function openSettings() { var m=document.getElementById('settings-modal'); m.removeAttribute('hidden'); m.style.display='flex'; var inp=document.getElementById('voter-name-input'); if(inp){inp.value=voter; inp.focus();} }
+    function closeSettings() { var m=document.getElementById('settings-modal'); m.setAttribute('hidden',''); m.style.display='none'; }
 
     function saveSettings() {
-      voter = document.getElementById('voter-name-input').value.trim();
-      localStorage.setItem('bg_voter_name', voter);
+      try { voter = (document.getElementById('voter-name-input').value || '').trim(); } catch(e) {}
+      try { localStorage.setItem('bg_voter_name', voter); } catch(e) {}
       closeSettings();
-      updateGearState();
+      try { updateGearState(); } catch(e) {}
     }
 
     function updateGearState() {
@@ -2188,8 +2183,8 @@
     </p>
     <input type="text" id="voter-name-input" placeholder="e.g. Dave" maxlength="40" autocomplete="off"/>
     <div class="modal-actions">
-      <button class="btn-secondary" id="btn-cancel-settings" onclick="closeSettings()">Cancel</button>
-      <button class="btn-primary"   id="btn-save-settings"   onclick="saveSettings()">Save</button>
+      <button type="button" class="btn-secondary" id="btn-cancel-settings" onclick="closeSettings()">Cancel</button>
+      <button type="button" class="btn-primary" id="btn-save-settings" onclick="saveSettings()">Save</button>
     </div>
   </div>
 </div>
