@@ -1,0 +1,32 @@
+{
+  "seen_urls": [
+    "https://blogs.nvidia.com/blog/ai-in-financial-services-survey-2026/",
+    "https://emerline.com/blog/how-to-build-fintech-ai-agent-usa",
+    "https://home.treasury.gov/news/press-releases/sb0401",
+    "https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/",
+    "https://techfundingnews.com/the-rise-of-ai-agents-in-europe-startups-shaping-the-next-wave/",
+    "https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/",
+    "https://www.codebridge.tech/articles/mastering-multi-agent-orchestration-coordination-is-the-new-scale-frontier",
+    "https://www.federalreserve.gov/newsevents/speech/waller20260224a.htm",
+    "https://www.globalcompliancenews.com/2026/03/02/https-www-bakermckenzie-com-en-insight-publications-2026-02-united-kingdom-fca-launches-mills-review-on-ai-future_02232026/",
+    "https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services",
+    "https://www.journalofaccountancy.com/news/2026/feb/agentic-ai-is-handling-more-finance-work-but-can-cfos-trust-it/",
+    "https://www.klgates.com/EU-and-Luxembourg-Update-on-the-European-Harmonised-Rules-on-Artificial-IntelligenceRecent-Developments-1-20-2026",
+    "https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/",
+    "https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents",
+    "https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/",
+    "https://www.socialnews.xyz/2026/03/06/sutherland-launches-finai-hub-to-industrialize-agentic-ai-for-banking-and-financial-services/",
+    "https://fintech.global/2026/02/11/ai-compliance-firm-bretton-ai-lands-75m/",
+    "https://www.thedailyupside.com/advisor/wealthtech/vanguard-sei-back-25m-funding-round-in-wealth-ai-startup-avantos/",
+    "https://fintech.global/2026/01/28/rogo-raises-75m-series-c-to-scale-ai-finance-platform/",
+    "https://www.eu-startups.com/2026/02/former-mi5-officer-lands-e2-3-million-for-ai-agent-security-startup-overmind/",
+    "https://www.eu-startups.com/2026/03/madrid-based-taxdown-secures-e4-million-from-bbva-spark-to-scale-ai-driven-digital-tax-platform/",
+    "https://fintech.global/2026/03/10/escape-raises-18m-series-a-for-ai-offensive-security/",
+    "https://fintech.global/2026/02/20/stacks-raises-23m-series-a-to-scale-agentic-ai/",
+    "https://fintech.global/2026/03/03/dyna-ai-raises-eight-figure-series-a-to-scale-agentic-ai/",
+    "https://www.wealthmanagement.com/artificial-intelligence/sequoia-bets-on-ai-startup-to-ease-wealth-advisors-grunt-work",
+    "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/"
+  ],
+  "last_updated": "2026-03-11",
+  "note": "Append source URLs here after each radar scan run to prevent duplicate reporting across scans."
+}
