@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Mar 10, 2026 Run</title>
+<meta content="Signals, startups, and research from the Mar 10, 2026 agentic AI radar run." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .run-nav { background: var(--bg-page); border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+    .run-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .run-nav-left, .run-nav-right { display: flex; gap: 12px; }
+    .nav-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; color: var(--text-muted); text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; transition: all 0.2s; }
+    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .nav-link.primary:hover { background: var(--brown); border-color: var(--brown); }
+    .run-nav-center { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-heading); font-weight: 500; }
+
+    header { padding: 32px 0 24px; background: var(--bg-page); }
+    header h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; font-weight: 400; color: var(--text-heading); letter-spacing: -1px; }
+    header p { font-size: 0.9rem; color: var(--text-muted); margin-top: 2px; }
+    .edition-badge { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 500; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 2.5px; background: var(--accent-light); padding: 4px 10px; border-radius: 100px; display: inline-block; margin-left: 12px; }
+
+    section { padding: 44px 0; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .section-header h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.8rem; font-weight: 400; color: var(--text-heading); letter-spacing: -0.5px; }
+    .section-header .count { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 500; color: var(--text-light); text-transform: uppercase; letter-spacing: 1.5px; }
+
+    .tag { display: inline-flex; align-items: center; font-family: 'DM Mono', monospace; font-size: 0.58rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 100px; }
+    .tag.gap { background: var(--brown-light); color: var(--brown-dark); }
+    .tag.reinforces { background: var(--accent-light); color: var(--accent-dark); }
+    .tag.challenges { background: var(--coral-light); color: var(--coral); }
+    .tag.new-signal { background: var(--blue-light); color: var(--blue); }
+    .tag.stage { background: var(--amber-light); color: var(--amber); }
+    .tag.geo { background: #EEEDEB; color: var(--text-muted); }
+
+    .briefing-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .briefing-item:last-child { border-bottom: none; }
+    .briefing-tags { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .briefing-item h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--text-heading); line-height: 1.4; margin-bottom: 6px; }
+    .briefing-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+    .briefing-item .source-link { display: inline-block; margin-top: 8px; font-size: 0.8rem; font-weight: 600; color: var(--brown); text-decoration: none; }
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    footer { padding: 44px 0; border-top: 1px solid var(--border); background: var(--bg-page); }
+    footer p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+    footer strong { color: var(--text-heading); font-weight: 600; }
+
+    @media (max-width: 640px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 1.8rem; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .briefing-item {
+      animation: slideUp 0.35s ease-out both;
+    }
+
+    .briefing-item:nth-child(2) { animation-delay: 0.05s; }
+    .briefing-item:nth-child(3) { animation-delay: 0.1s; }
+    .briefing-item:nth-child(4) { animation-delay: 0.15s; }
+    .briefing-item:nth-child(5) { animation-delay: 0.2s; }
+</style>
+</head>
+<body>
+
+<nav class="run-nav">
+  <div class="container">
+    <div class="run-nav-left">
+      <a class="nav-link" href="index.html">← All runs</a>
+      <a class="nav-link" href="2026-03-09.html">← Mar 9</a>
+    </div>
+    <div class="run-nav-center">Mar 10, 2026</div>
+    <div class="run-nav-right">
+      <a class="nav-link" href="2026-03-11.html">Mar 11 →</a>
+      <a class="nav-link primary" href="pipeline.html">Full Pipeline →</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+      <h1>Mar 10, 2026</h1>
+    </div>
+    <p>7 signals · 0 new startups · 0 research papers</p>
+  </div>
+</header>
+
+<section id="signals">
+  <div class="container">
+    <div class="section-header"><h2>Signals</h2><span class="count">7 signals</span></div>
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Funding / Agent Orchestration</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents" style="color: var(--brown); text-decoration: none;" target="_blank">Dify Raises $30M Pre-A to Scale Open-Source Agentic Workflow Platform</a></h3>
+<p>Dify, an open-source platform for building and deploying agentic AI applications, closed a $30M Series Pre-A valuing the company at $180M, with the platform now running on over 1.4 million machines worldwide.</p>
+<a class="source-link" href="https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Funding / Agent Orchestration</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/" style="color: var(--brown); text-decoration: none;" target="_blank">AppZen Raises $180M Series D With Amazon and Salesforce as Customers</a></h3>
+<p>AppZen, which has built an agentic AI platform for enterprise finance teams automating expense, procurement, and AP workflows, raised $180M in a Series D. The company counts 500+ global enterprises and 65 Fortune 500 firms as customers.</p>
+<a class="source-link" href="https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Regulation</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/" style="color: var(--brown); text-decoration: none;" target="_blank">FINRA 2026 Annual Regulatory Oversight Report Flags AI Agents as Emerging Risk</a></h3>
+<p>FINRA's 2026 Annual Regulatory Oversight Report formally identifies AI agents as an emerging trend presenting material risks — specifically citing agents acting beyond user intent and unintentional disclosure of sensitive data.</p>
+<a class="source-link" href="https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Regulation / Europe</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/" style="color: var(--brown); text-decoration: none;" target="_blank">FCA Launches Mills Review Into AI's Impact on Retail Financial Services</a></h3>
+<p>The UK Financial Conduct Authority launched the Mills Review on January 27, 2026, a formal examination of how advances in AI — including agentic and autonomous systems — could transform retail financial services.</p>
+<a class="source-link" href="https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Regulation / Europe</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services" style="color: var(--brown); text-decoration: none;" target="_blank">UK Treasury Committee: Government and Regulators "Not Doing Enough" on AI Risks in Finance</a></h3>
+<p>The UK House of Commons Treasury Committee concluded in a published report that the UK government, FCA, and Bank of England are failing to adequately manage consumer and systemic risks from rapid AI adoption.</p>
+<a class="source-link" href="https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Market Signal / AI Safety</span>
+<span class="tag new-signal">New Signal</span>
+</div>
+<h3><a href="https://emerline.com/blog/how-to-build-fintech-ai-agent-usa" style="color: var(--brown); text-decoration: none;" target="_blank">Professional Liability Insurance for AI Agents Emerges as New Market Category</a></h3>
+<p>A new category of professional liability insurance for AI agents has appeared in the US market in 2026, with insurers now requiring proof of prompt injection protection and data privacy shields as conditions for coverage.</p>
+<a class="source-link" href="https://emerline.com/blog/how-to-build-fintech-ai-agent-usa">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Big Tech / Agent Orchestration</span>
+<span class="tag challenges">Challenges</span>
+</div>
+<h3><a href="https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/" style="color: var(--brown); text-decoration: none;" target="_blank">Oracle Reimagines Banking for the AI Era With New Agentic Platform</a></h3>
+<p>Oracle announced a new agentic platform specifically for banking, positioning itself as infrastructure for AI-driven financial operations across customer engagement, risk, and compliance workflows.</p>
+<a class="source-link" href="https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/">Read source →</a>
+</div>
+  </div>
+</section>
+
+<section id="startups">
+  <div class="container">
+    <div class="section-header"><h2>New Startups</h2><span class="count">0 startups</span></div>
+    <p style="color:var(--text-light);font-size:0.85rem;font-style:italic;padding:16px 0;">No new startups detected this run.</p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <div class="section-header"><h2>Research</h2><span class="count">0 papers</span></div>
+    <p style="color:var(--text-light);font-size:0.85rem;font-style:italic;padding:16px 0;">No new research papers detected this run.</p>
+  </div>
+</section>
+
+<footer>
+<div class="container">
+<p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar.</p>
+<p>Powered by Claude. Published on GitHub Pages. Refreshed every two days.</p>
+</div>
+</footer>
+
+</body>
+</html>
