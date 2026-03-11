@@ -875,9 +875,10 @@
 <div class="modal-backdrop" id="settings-modal" hidden="">
   <div class="modal">
     <h3>Your name</h3>
+    <p id="settings-msg" style="font-size:0.82rem;color:var(--accent-dark);background:var(--accent-light);border-radius:6px;padding:8px 12px;margin-bottom:4px;display:none;"></p>
     <p>
-      Enter your name or initials so votes show who rated what in the commit history.
-      Votes are shared — everyone sees the same ratings.
+      Enter your name or initials so votes show who rated what.
+      Stored in your browser — you'll only need to do this once.
     </p>
     <input type="text" id="voter-name-input" placeholder="e.g. Dave" maxlength="40" autocomplete="off"/>
     <div class="modal-actions">
@@ -1048,6 +1049,7 @@ function renderPipelineCards() {
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
 let voter = localStorage.getItem('bg_voter_name') || '';
 let votes = {};
+let _pendingVote = null;
 
 async function loadVotes() {
   try {
@@ -1095,6 +1097,11 @@ async function saveVote(slug) {
 }
 
 function setStars(slug, val) {
+  if (!voter) {
+    _pendingVote = { slug, val };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
   if (!votes[slug]) votes[slug] = {};
   votes[slug].stars = val === (votes[slug].stars || 0) ? 0 : val;
   votes[slug].voted_at = new Date().toISOString();
@@ -1181,10 +1188,12 @@ function wireVoting() {
   });
 }
 
-function openSettings() {
+function openSettings(msg) {
   const m = document.getElementById('settings-modal');
   m.removeAttribute('hidden');
   m.style.display = 'flex';
+  const msgEl = document.getElementById('settings-msg');
+  if (msgEl) { msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none'; }
   const inp = document.getElementById('voter-name-input');
   if (inp) { inp.value = voter; inp.focus(); }
 }
@@ -1200,6 +1209,11 @@ function saveSettings() {
   try { localStorage.setItem('bg_voter_name', voter); } catch (e) {}
   closeSettings();
   updateGearState();
+  if (_pendingVote && voter) {
+    const { slug, val } = _pendingVote;
+    _pendingVote = null;
+    setStars(slug, val);
+  }
 }
 
 function updateGearState() {

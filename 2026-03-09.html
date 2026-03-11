@@ -303,6 +303,7 @@ function renderPipelineCards() {
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
 let voter = localStorage.getItem('bg_voter_name') || '';
 let votes = {};
+let _pendingVote = null;
 
 async function loadVotes() {
   try {
@@ -340,6 +341,11 @@ async function saveVote(slug) {
 }
 
 function setStars(slug, val) {
+  if (!voter) {
+    _pendingVote = { slug, val };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
   if (!votes[slug]) votes[slug] = {};
   votes[slug].stars = val === (votes[slug].stars || 0) ? 0 : val;
   votes[slug].voted_at = new Date().toISOString();
