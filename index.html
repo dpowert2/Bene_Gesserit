@@ -878,6 +878,82 @@
     }
 
     /* ============================================================ */
+    /* STARTUP CHIPS (in date panels — link to full pipeline cards) */
+    /* ============================================================ */
+    .startup-chips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    a.startup-chip {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    a.startup-chip:hover {
+      border-color: var(--brown);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .chip-main { flex: 1; min-width: 0; }
+
+    .chip-name-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .chip-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-heading);
+    }
+
+    .chip-score {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 2px 7px;
+      border-radius: 100px;
+    }
+
+    .chip-score.high { background: var(--accent-light); color: var(--accent-dark); }
+    .chip-score.mid  { background: var(--amber-light);  color: var(--amber); }
+    .chip-score.low  { background: var(--coral-light);  color: var(--coral); }
+
+    .chip-oneliner {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .chip-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .chip-arrow {
+      font-size: 1rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    a.startup-chip:hover .chip-arrow {
+      color: var(--brown);
+      transform: translateY(2px);
+    }
+
+    /* ============================================================ */
     /* ANIMATIONS                                                   */
     /* ============================================================ */
     @keyframes slideUp {
@@ -1006,88 +1082,75 @@
 
 <section id="new-startups-2026-03-11">
 <div class="container">
-<div class="section-header"><h2>New Startups</h2><span class="count">4 startups</span></div>
+<div class="section-header"><h2>New Startups</h2><span class="count">4 startups · <a href="#pipeline" style="color:var(--text-muted);font-size:0.8rem;font-weight:400;">rate in Full Pipeline ↓</a></span></div>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.bretton.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Bretton AI</a></h3>
-<div class="score-badge high">
-<span class="num">88</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Agentic AI platform that automates high-volume financial crime compliance workflows — AML investigations, KYC reviews, and fraud screening — at regulated banks and fintechs.</p>
-<div class="startup-tags">
-<span class="tag gap">Compliance</span>
-<span class="tag stage">Series B</span>
-<span class="tag geo">San Francisco</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Bretton AI is the clearest early proof point that agent-native compliance is production-ready in regulated financial services — exactly the kind of infrastructure Fidelity would need to safely deploy AI agents in supervised workflows.</p>
-</div>
-</div>
+<div class="startup-chips-list">
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://taxdown.es" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">TaxDown</a></h3>
-<div class="score-badge high">
-<span class="num">78</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-driven digital tax platform that automates personal tax filing and optimisation, backed by BBVA Spark from seed stage.</p>
-<div class="startup-tags">
-<span class="tag gap">Tax Optimisation</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">Madrid, Spain</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>TaxDown demonstrates that incumbents (BBVA) are already co-investing in AI tax tooling from the seed stage — validating the Tax Optimisation gap as commercially viable.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-bretton-ai">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Bretton AI</span>
+      <span class="chip-score high">88/100</span>
+    </div>
+    <span class="chip-oneliner">Agentic AI platform automating financial crime compliance — AML investigations, KYC reviews, and fraud screening — at regulated banks and fintechs.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Compliance</span>
+      <span class="tag stage">Series B</span>
+      <span class="tag geo">San Francisco</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.natural.finance" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Natural</a></h3>
-<div class="score-badge mid">
-<span class="num">70</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Payment infrastructure purpose-built for agentic workflows — enabling AI agents to transact autonomously on behalf of businesses, consumers, and other agents.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Orchestration</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">USA</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>If Fidelity becomes the regulated infrastructure layer for AI agents, those agents will need to make transactions. Natural is building the payment plumbing for exactly that use case.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-oasis-security">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Oasis Security</span>
+      <span class="chip-score high">84/100</span>
+    </div>
+    <span class="chip-oneliner">Non-human identity and agentic access management platform that discovers, secures, and governs AI agent identities across enterprise environments.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Authentication &amp; Security</span>
+      <span class="tag stage">Series A</span>
+      <span class="tag geo">Tel Aviv, Israel</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.oasis.security" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Oasis Security</a></h3>
-<div class="score-badge high">
-<span class="num">84</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Non-human identity and agentic access management platform that discovers, secures, and governs AI agent identities and secrets across enterprise environments.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Authentication & Security</span>
-<span class="tag stage">Series A</span>
-<span class="tag geo">Tel Aviv, Israel</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>As Fidelity deploys AI agents that act on behalf of advisors and clients, every agent action needs to be authenticated, permissioned, and auditable. Oasis Security's AAM platform solves exactly this.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-taxdown">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">TaxDown</span>
+      <span class="chip-score high">78/100</span>
+    </div>
+    <span class="chip-oneliner">AI-driven digital tax platform automating personal tax filing and optimisation, backed from seed by BBVA Spark.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Tax Optimisation</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">Madrid, Spain</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
+<a class="startup-chip" href="#startup-natural-payments">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Natural</span>
+      <span class="chip-score mid">70/100</span>
+    </div>
+    <span class="chip-oneliner">Payment infrastructure purpose-built for agentic workflows — enabling AI agents to transact autonomously on behalf of businesses and consumers.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Orchestration</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
+
+</div>
 </div>
 </section>
 
@@ -1293,268 +1356,235 @@
 
 <section id="new-startups-2026-03-09">
 <div class="container">
-<div class="section-header"><h2>New Startups</h2><span class="count">13 startups</span></div>
+<div class="section-header"><h2>New Startups</h2><span class="count">13 startups · <a href="#pipeline" style="color:var(--text-muted);font-size:0.8rem;font-weight:400;">rate in Full Pipeline ↓</a></span></div>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://alterai.dev" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Alter</a></h3>
-<div class="score-badge mid">
-<span class="num">72</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Zero-trust identity and access control platform purpose-built for AI agents with fine-grained authorization and real-time guardrails.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Authentication & Security</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Alter is building the zero-trust layer for AI agents — wrapping every tool call in authentication and authorization. As Fidelity becomes the infrastructure layer, this capability is needed to ensure only authorized agents can transact.</p>
-</div>
-</div>
+<div class="startup-chips-list">
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://dyna.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Dyna.Ai</a></h3>
-<div class="score-badge mid">
-<span class="num">74</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-as-a-Service platform delivering agentic AI solutions for banking and financial services.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Orchestration</span>
-<span class="tag stage">Series A</span>
-<span class="tag geo">Singapore / Saudi Arabia</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Dyna.Ai shows agentic AI is going live in banking across Asia-Pacific and the Middle East. Their platform approach could complement Fidelity's infrastructure layer in non-US markets.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-overmind">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Overmind</span>
+      <span class="chip-score high">90/100</span>
+    </div>
+    <span class="chip-oneliner">AI agent supervision and monitoring platform built by a former MI5 officer, targeting regulated industries.</span>
+    <div class="chip-tags">
+      <span class="tag gap">AI Safety &amp; Guardrails</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">London, UK</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://guardrailsai.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Guardrails AI</a></h3>
-<div class="score-badge mid">
-<span class="num">73</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Open-source framework for adding safety guardrails and validation to LLM outputs, applicable to financial services.</p>
-<div class="startup-tags">
-<span class="tag gap">AI Safety & Guardrails</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Guardrails AI addresses a non-negotiable requirement for deploying AI agents in financial services: ensuring outputs are safe, validated, and hallucination-free.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-t54-labs">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">t54 Labs</span>
+      <span class="chip-score high">88/100</span>
+    </div>
+    <span class="chip-oneliner">Identity, verification, and compliance tools for AI agents, backed by Franklin Templeton and Ripple.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Authentication &amp; Security</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">US / Global</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://hivetax.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Hive Tax AI</a></h3>
-<div class="score-badge mid">
-<span class="num">68</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-powered tax planning platform for high-net-worth individuals and tax professionals with agentic workflow automation.</p>
-<div class="startup-tags">
-<span class="tag gap">Tax Optimisation</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-stacks">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Stacks</span>
+      <span class="chip-score high">82/100</span>
+    </div>
+    <span class="chip-oneliner">Agentic AI platform for enterprise finance teams automating reconciliation, reporting, and forecasting workflows.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Orchestration</span>
+      <span class="tag stage">Series A</span>
+      <span class="tag geo">Europe / Global</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.mezzi.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Mezzi</a></h3>
-<div class="score-badge mid">
-<span class="num">70</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-powered tax-loss harvesting and portfolio optimisation platform for individual investors.</p>
-<div class="startup-tags">
-<span class="tag gap">Tax Optimisation</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Mezzi demonstrates that AI-driven tax optimisation is productised and consumer-ready. As AI agents handle more portfolio management, tax-aware execution becomes critical.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-unit21">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Unit21</span>
+      <span class="chip-score high">81/100</span>
+    </div>
+    <span class="chip-oneliner">AI-powered compliance platform for transaction monitoring, screening, and due diligence — 99% accuracy on 300K+ alerts.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Compliance</span>
+      <span class="tag stage">Series B+</span>
+      <span class="tag geo">San Francisco</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://usemine.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Mine (MoneyGPT)</a></h3>
-<div class="score-badge high">
-<span class="num">78</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI personal finance agent for young adults that learns spending habits and provides autonomous financial advice.</p>
-<div class="startup-tags">
-<span class="tag gap">Personal Agent</span>
-<span class="tag stage">Series A</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Mine/MoneyGPT represents exactly the "front door" personal agent the thesis describes — an AI that handles financial discovery, planning, and execution on behalf of consumers.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-mine-moneygpt">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Mine (MoneyGPT)</span>
+      <span class="chip-score high">78/100</span>
+    </div>
+    <span class="chip-oneliner">AI personal finance agent for young adults that learns spending habits and provides autonomous financial advice.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Personal Agent</span>
+      <span class="tag stage">Series A</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://overmindlab.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Overmind</a></h3>
-<div class="score-badge high">
-<span class="num">90</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI agent supervision and monitoring platform built by a former MI5 officer, targeting regulated industries.</p>
-<div class="startup-tags">
-<span class="tag gap">AI Safety & Guardrails</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">London, UK</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Overmind is building the supervision layer that every regulated AI agent deployment will need. The MI5 pedigree adds credibility in security-critical contexts. London HQ aligns with the Europe-preferred geography.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-dyna-ai">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Dyna.Ai</span>
+      <span class="chip-score mid">74/100</span>
+    </div>
+    <span class="chip-oneliner">AI-as-a-Service platform delivering agentic AI solutions for banking and financial services.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Orchestration</span>
+      <span class="tag stage">Series A</span>
+      <span class="tag geo">Singapore / Saudi Arabia</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://stacks.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Stacks</a></h3>
-<div class="score-badge high">
-<span class="num">82</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Agentic AI platform for enterprise finance teams automating workflows like reconciliation, reporting, and forecasting.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Orchestration</span>
-<span class="tag stage">Series A</span>
-<span class="tag geo">Europe / Global</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Stacks validates the thesis that agentic AI is ready for production finance workflows. Enterprise finance teams will need regulated infrastructure partners like Fidelity for execution.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-tendi">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Tendi</span>
+      <span class="chip-score mid">74/100</span>
+    </div>
+    <span class="chip-oneliner">AI-powered personal financial advisor trained to outperform on the CFP exam, connected to 12,000+ financial institutions.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Personal Agent</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA / Global</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.t54.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">t54 Labs</a></h3>
-<div class="score-badge high">
-<span class="num">88</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Identity, verification, and compliance tools for AI agents, backed by Franklin Templeton and Ripple.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Authentication & Security</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US / Global</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>As AI agents begin transacting on behalf of humans in financial services, the identity and trust layer becomes critical infrastructure. t54 Labs is building exactly this.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-alter">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Alter</span>
+      <span class="chip-score mid">72/100</span>
+    </div>
+    <span class="chip-oneliner">Zero-trust identity and access control platform purpose-built for AI agents with fine-grained authorization and real-time guardrails.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Authentication &amp; Security</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://tendi.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Tendi</a></h3>
-<div class="score-badge mid">
-<span class="num">74</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-powered personal financial advisor trained to outperform on the CFP exam, connected to 12,000+ financial institutions.</p>
-<div class="startup-tags">
-<span class="tag gap">Personal Agent</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US / Global</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Tendi represents a pure-play personal finance agent that could serve as a "front door" connecting consumers to Fidelity's infrastructure. The CFP-level training demonstrates serious finserv commitment.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-guardrails-ai">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Guardrails AI</span>
+      <span class="chip-score mid">73/100</span>
+    </div>
+    <span class="chip-oneliner">Open-source framework for adding safety guardrails and validation to LLM outputs, applicable to financial services.</span>
+    <div class="chip-tags">
+      <span class="tag gap">AI Safety &amp; Guardrails</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://trace.so" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Trace</a></h3>
-<div class="score-badge mid">
-<span class="num">65</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Platform solving the AI agent adoption problem in enterprise by enabling reliable agent deployment and monitoring.</p>
-<div class="startup-tags">
-<span class="tag gap">Agent Orchestration</span>
-<span class="tag stage">Seed</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Trace addresses a real bottleneck: getting AI agents from pilot to production. As Fidelity builds its agent infrastructure, tools that make agent deployment reliable become valuable partners.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-uptiq">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Uptiq</span>
+      <span class="chip-score mid">73/100</span>
+    </div>
+    <span class="chip-oneliner">Purpose-built AI agent platform for financial institutions with embedded compliance and regulatory guardrails.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Compliance</span>
+      <span class="tag stage">Active</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://unit21.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Unit21</a></h3>
-<div class="score-badge high">
-<span class="num">81</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">AI-powered compliance platform for transaction monitoring, screening, and due diligence with 99% accuracy on 300K+ alerts.</p>
-<div class="startup-tags">
-<span class="tag gap">Compliance</span>
-<span class="tag stage">Series B+</span>
-<span class="tag geo">San Francisco</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Unit21 proves that agent-native compliance is production-ready. Their 99% accuracy across 300K+ alerts demonstrates the viability of AI agents in regulated compliance workflows.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-natural-payments">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Natural</span>
+      <span class="chip-score mid">70/100</span>
+    </div>
+    <span class="chip-oneliner">Payment infrastructure purpose-built for agentic workflows — enabling AI agents to transact autonomously on behalf of businesses and consumers.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Orchestration</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
-<div class="startup-card">
-<div class="startup-top">
-<h3><a href="https://www.uptiq.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Uptiq</a></h3>
-<div class="score-badge mid">
-<span class="num">73</span>
-<span class="of">/100</span>
-</div>
-</div>
-<p class="startup-oneliner">Purpose-built AI agent platform for financial institutions with embedded compliance and regulatory guardrails.</p>
-<div class="startup-tags">
-<span class="tag gap">Compliance</span>
-<span class="tag stage">Active</span>
-<span class="tag geo">US</span>
-</div>
-<div class="thesis-note">
-<div class="note-label">Why this matters</div>
-<p>Uptiq's approach — embedding compliance guardrails directly into AI agents for financial services — validates the thesis that regulated infrastructure is the key differentiator.</p>
-</div>
-</div>
+<a class="startup-chip" href="#startup-mezzi">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Mezzi</span>
+      <span class="chip-score mid">70/100</span>
+    </div>
+    <span class="chip-oneliner">AI-powered tax-loss harvesting and portfolio optimisation platform for individual investors.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Tax Optimisation</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
 
+<a class="startup-chip" href="#startup-hive-tax-ai">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Hive Tax AI</span>
+      <span class="chip-score mid">68/100</span>
+    </div>
+    <span class="chip-oneliner">AI-powered tax planning platform for high-net-worth individuals and tax professionals with agentic workflow automation.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Tax Optimisation</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
+
+<a class="startup-chip" href="#startup-trace">
+  <div class="chip-main">
+    <div class="chip-name-row">
+      <span class="chip-name">Trace</span>
+      <span class="chip-score mid">65/100</span>
+    </div>
+    <span class="chip-oneliner">Platform solving the AI agent adoption problem in enterprise by enabling reliable agent deployment and monitoring.</span>
+    <div class="chip-tags">
+      <span class="tag gap">Agent Orchestration</span>
+      <span class="tag stage">Seed</span>
+      <span class="tag geo">USA</span>
+    </div>
+  </div>
+  <span class="chip-arrow">↓</span>
+</a>
+
+</div>
 </div>
 </section>
 
@@ -1919,6 +1949,7 @@ function renderPipelineCards() {
     const scoreClass = startup.score >= 75 ? 'high' : (startup.score >= 50 ? 'mid' : 'low');
     const card = document.createElement('div');
     card.className = 'startup-card';
+    card.id = `startup-${startup.slug}`;
     card.innerHTML = `
       <div class="startup-top">
         <h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3>
