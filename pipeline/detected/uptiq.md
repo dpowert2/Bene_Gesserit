@@ -23,7 +23,7 @@
 **Final score: 73**
 
 ## Why This Matters
-Uptiq's approach — embedding compliance guardrails directly into AI agents for financial services — validates the thesis that regulated infrastructure is the key differentiator. A partner like Uptiq could help Fidelity ensure third-party agents meet compliance requirements.
+Uptiq's approach — embedding compliance guardrails directly into AI agents for financial services — validates the thesis that regulated infrastructure is the key differentiator. A partner like Uptiq could help you ensure third-party agents meet compliance requirements.
 
 ## Why You Might Pass
 Limited public information on team, funding, and stage. US-based. May overlap with Unit21 in the compliance space.

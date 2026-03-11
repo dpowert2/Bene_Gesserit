@@ -23,7 +23,7 @@
 **Final score: 71**
 
 ## Why This Matters
-Alter is building the zero-trust layer for AI agents — wrapping every tool call in authentication and authorization. As Fidelity becomes the infrastructure layer that agents connect to, this exact capability is needed to ensure only authorized agents can transact.
+Alter is building the zero-trust layer for AI agents — wrapping every tool call in authentication and authorization. As you becomes the infrastructure layer that agents connect to, this exact capability is needed to ensure only authorized agents can transact.
 
 ## Why You Might Pass
 Limited public information on team, funding, and customers. No explicit finserv focus. Competes with t54 Labs and Aembit in the agent identity space.

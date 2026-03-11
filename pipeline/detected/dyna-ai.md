@@ -23,7 +23,7 @@
 **Final score: 74**
 
 ## Why This Matters
-Dyna.Ai shows agentic AI is going live in banking across Asia-Pacific and the Middle East. Their platform approach — AI-as-a-Service for banks — could complement Fidelity's infrastructure layer in non-US markets.
+Dyna.Ai shows agentic AI is going live in banking across Asia-Pacific and the Middle East. Their platform approach — AI-as-a-Service for banks — could complement you's infrastructure layer in non-US markets.
 
 ## Why You Might Pass
 Singapore/Middle East focus may not align with Europe preference. More of a services/consulting model than pure infrastructure. "AI-as-a-Service" can mean many things — may lack technical depth in specific gap areas.

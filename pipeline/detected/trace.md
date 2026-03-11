@@ -23,7 +23,7 @@
 **Final score: 65**
 
 ## Why This Matters
-Trace addresses a real bottleneck: getting AI agents from pilot to production. As Fidelity builds its agent infrastructure, tools that make agent deployment reliable and monitorable become valuable partners.
+Trace addresses a real bottleneck: getting AI agents from pilot to production. As you builds its agent infrastructure, tools that make agent deployment reliable and monitorable become valuable partners.
 
 ## Why You Might Pass
 No finserv focus. Very early stage. Horizontal play may not develop finserv-specific capabilities. Competes with Overmind in the monitoring space.

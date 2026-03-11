@@ -23,7 +23,7 @@
 **Final score: 81**
 
 ## Why This Matters
-Unit21 proves that agent-native compliance is production-ready. Their 99% accuracy across 300K+ alerts demonstrates the viability of AI agents in regulated compliance workflows — exactly the kind of infrastructure Fidelity will need as it enables third-party agents.
+Unit21 proves that agent-native compliance is production-ready. Their 99% accuracy across 300K+ alerts demonstrates the viability of AI agents in regulated compliance workflows — exactly the kind of infrastructure you will need as it enables third-party agents.
 
 ## Why You Might Pass
 Likely too mature for early-stage FCAT partnership (Series B+). US-based. May already be locked into competing relationships. Not explicitly an "agentic AI" startup — more traditional RegTech with AI features.

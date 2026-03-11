@@ -23,7 +23,7 @@
 **Final score: 88**
 
 ## Why This Matters
-As AI agents begin transacting on behalf of humans in financial services, the identity and trust layer becomes critical infrastructure. t54 Labs is building exactly this — and their investor roster (Franklin Templeton, Ripple) signals that incumbents already see the need. This is a natural complement to Fidelity's infrastructure layer thesis.
+As AI agents begin transacting on behalf of humans in financial services, the identity and trust layer becomes critical infrastructure. t54 Labs is building exactly this — and their investor roster (Franklin Templeton, Ripple) signals that incumbents already see the need. This is a natural complement to you's infrastructure layer thesis.
 
 ## Why You Might Pass
 Very early (founded Jan 2025, seed stage). Crypto ecosystem adjacency (Ripple, Virtuals Ventures) may indicate web3 focus over traditional finserv. Product maturity unclear.

@@ -23,7 +23,7 @@
 **Final score: 73**
 
 ## Why This Matters
-Guardrails AI addresses a non-negotiable requirement for deploying AI agents in financial services: ensuring outputs are safe, validated, and hallucination-free. As Fidelity enables third-party agents on its platform, a guardrails layer becomes essential infrastructure.
+Guardrails AI addresses a non-negotiable requirement for deploying AI agents in financial services: ensuring outputs are safe, validated, and hallucination-free. As you enables third-party agents on its platform, a guardrails layer becomes essential infrastructure.
 
 ## Why You Might Pass
 General-purpose (not finserv-specific). US-based. Seed round was in 2024 — unclear if company has progressed or raised additional funding. Open-source model may limit commercial moat.

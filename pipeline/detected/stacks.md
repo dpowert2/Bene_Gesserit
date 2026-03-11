@@ -23,7 +23,7 @@
 **Final score: 82**
 
 ## Why This Matters
-Stacks validates the thesis that agentic AI is ready for production finance workflows. As enterprise finance teams adopt orchestrated AI agents, they'll need regulated infrastructure partners like Fidelity to connect to for execution, custody, and data.
+Stacks validates the thesis that agentic AI is ready for production finance workflows. As enterprise finance teams adopt orchestrated AI agents, they'll need regulated infrastructure partners like you to connect to for execution, custody, and data.
 
 ## Why You Might Pass
 More focused on internal CFO/finance ops than on consumer-facing financial services agents. May be more of an enterprise software play than a finserv infrastructure partner.

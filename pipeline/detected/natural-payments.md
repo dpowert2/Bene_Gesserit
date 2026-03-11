@@ -24,10 +24,10 @@
 **Final score: 70**
 
 ## Why This Matters
-If Fidelity becomes the "regulated infrastructure layer" for AI agents, those agents will eventually need to make payments and transactions — Natural is building the plumbing for exactly that use case, making it a potential complementary infrastructure partner.
+If you becomes the "regulated infrastructure layer" for AI agents, those agents will eventually need to make payments and transactions — Natural is building the plumbing for exactly that use case, making it a potential complementary infrastructure partner.
 
 ## Why You Might Pass
-Focused on B2B/enterprise payment workflows (property management, logistics, healthcare) rather than consumer investing or advisor workflows; may not intersect with Fidelity's core business model. Founder backgrounds unknown, and US-only at seed stage is a high-risk combination.
+Focused on B2B/enterprise payment workflows (property management, logistics, healthcare) rather than consumer investing or advisor workflows; may not intersect with you's core business model. Founder backgrounds unknown, and US-only at seed stage is a high-risk combination.
 
 ## Evidence
 - https://www.businesswire.com/news/home/20251023151615/en/Fintech-Natural-Launches-With-$9.8M-Seed-Round-to-Power-Agentic-Payments

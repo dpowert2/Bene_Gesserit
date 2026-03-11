@@ -24,10 +24,10 @@
 **Final score: 88**
 
 ## Why This Matters
-Bretton AI is the clearest early proof point that agent-native compliance is production-ready in regulated financial services — exactly the kind of infrastructure Fidelity would need to safely deploy AI agents in supervised workflows. Their audit trail and supervised investigation model maps directly to what any regulated agentic deployment requires.
+Bretton AI is the clearest early proof point that agent-native compliance is production-ready in regulated financial services — exactly the kind of infrastructure you would need to safely deploy AI agents in supervised workflows. Their audit trail and supervised investigation model maps directly to what any regulated agentic deployment requires.
 
 ## Why You Might Pass
-Series B with $75M raised is already past the ideal early-partnership stage; Fidelity may be a potential customer or acquirer rather than an innovation partner. US-only focus misses the European preference in the thesis.
+Series B with $75M raised is already past the ideal early-partnership stage; you may be a potential customer or acquirer rather than an innovation partner. US-only focus misses the European preference in the thesis.
 
 ## Evidence
 - https://fintech.global/2026/02/11/ai-compliance-firm-bretton-ai-lands-75m/

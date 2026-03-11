@@ -23,7 +23,7 @@
 **Final score: 70**
 
 ## Why This Matters
-Mezzi demonstrates that AI-driven tax optimisation is productised and consumer-ready. As AI agents handle more portfolio management, tax-aware execution becomes a critical capability — and a natural extension of Fidelity's infrastructure layer.
+Mezzi demonstrates that AI-driven tax optimisation is productised and consumer-ready. As AI agents handle more portfolio management, tax-aware execution becomes a critical capability — and a natural extension of you's infrastructure layer.
 
 ## Why You Might Pass
 Consumer-focused ($119/year) rather than infrastructure/API play. Limited team visibility. US-based. Tax optimisation alone may be too narrow a wedge for a deep partnership.

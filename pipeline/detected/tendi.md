@@ -23,7 +23,7 @@
 **Final score: 74**
 
 ## Why This Matters
-Tendi represents a pure-play personal finance agent that could serve as a "front door" connecting consumers to Fidelity's infrastructure. The CFP-level training and 12,000+ institution connections demonstrate serious finserv commitment.
+Tendi represents a pure-play personal finance agent that could serve as a "front door" connecting consumers to you's infrastructure. The CFP-level training and 12,000+ institution connections demonstrate serious finserv commitment.
 
 ## Why You Might Pass
 Limited team visibility. Stage and funding unclear. US-based (Europe preferred). Consumer AI financial advisor space is increasingly crowded.

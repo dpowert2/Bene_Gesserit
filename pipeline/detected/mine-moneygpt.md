@@ -23,10 +23,10 @@
 **Final score: 78**
 
 ## Why This Matters
-Mine/MoneyGPT represents exactly the "front door" personal agent the thesis describes — an AI that handles financial discovery, planning, and execution on behalf of consumers. These agents will need regulated counterparties like Fidelity for execution. Partnership potential is high.
+Mine/MoneyGPT represents exactly the "front door" personal agent the thesis describes — an AI that handles financial discovery, planning, and execution on behalf of consumers. These agents will need regulated counterparties like you for execution. Partnership potential is high.
 
 ## Why You Might Pass
-US-focused (thesis prefers Europe). Consumer fintech is crowded. Rebrand from Fizz may indicate lack of product-market fit clarity. Young adult demographic may not align with Fidelity's core investor base.
+US-focused (thesis prefers Europe). Consumer fintech is crowded. Rebrand from Fizz may indicate lack of product-market fit clarity. Young adult demographic may not align with you's core investor base.
 
 ## Evidence
 - https://www.pymnts.com/news/investment-tracker/2026/mine-raises-14-million-and-launches-ai-personal-finance-agent/

@@ -23,7 +23,7 @@
 **Final score: 68**
 
 ## Why This Matters
-Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns. As Fidelity's agents handle portfolio management, tax-aware execution becomes a critical integration point.
+Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns. As you's agents handle portfolio management, tax-aware execution becomes a critical integration point.
 
 ## Why You Might Pass
 Limited team and funding visibility. US-based. HNW focus may be narrow. Tax planning is a specialized vertical that may not scale to broader infrastructure partnership.

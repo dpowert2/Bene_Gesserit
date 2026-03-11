@@ -23,7 +23,7 @@
 **Final score: 90**
 
 ## Why This Matters
-Overmind is building the supervision layer that every regulated AI agent deployment will need. As Fidelity positions itself as the infrastructure layer for agentic AI, having a partner that provides production monitoring, audit trails, and safety guarantees for agents is essential. The MI5 pedigree adds credibility in security-critical contexts. London HQ aligns with the Europe-preferred geography.
+Overmind is building the supervision layer that every regulated AI agent deployment will need. As you positions itself as the infrastructure layer for agentic AI, having a partner that provides production monitoring, audit trails, and safety guarantees for agents is essential. The MI5 pedigree adds credibility in security-critical contexts. London HQ aligns with the Europe-preferred geography.
 
 ## Why You Might Pass
 Very early stage (seed). Multi-vertical focus (legal, healthcare, fintech) means finserv may not get exclusive attention. Limited public information on product capabilities.

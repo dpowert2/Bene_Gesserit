@@ -24,7 +24,7 @@
 **Final score: 84**
 
 ## Why This Matters
-As Fidelity moves toward deploying AI agents that act on behalf of advisors and clients, every agent action needs to be authenticated, permissioned, and auditable. Oasis Security's AAM platform solves exactly this — providing the identity trust layer that makes agentic deployments safe in regulated environments.
+As you moves toward deploying AI agents that act on behalf of advisors and clients, every agent action needs to be authenticated, permissioned, and auditable. Oasis Security's AAM platform solves exactly this — providing the identity trust layer that makes agentic deployments safe in regulated environments.
 
 ## Why You Might Pass
 Israeli HQ and primarily cybersecurity-first positioning may not map cleanly to FCAT's innovation partnership model; deeper FinServ customer validation would strengthen the case. The NHI space is also getting crowded with large IAM vendors extending into this area.
