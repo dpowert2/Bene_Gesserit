@@ -205,6 +205,7 @@
       <button class="filter-btn active" data-filter="all">All <span class="filter-count">21</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">21</span></button>
+      <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
     </div>
 
     <div id="pipeline-cards"></div>
@@ -244,7 +245,7 @@ function renderPipelineCards() {
     const card = document.createElement('div');
     card.className = 'startup-card';
     card.id = `startup-${startup.slug}`;
-    card.innerHTML = `<div class="startup-top"><h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3><div class="score-badge ${scoreClass}"><span class="num">${startup.score}</span><span class="of">/100</span></div></div><p class="startup-oneliner">${startup.oneliner}</p><div class="startup-tags"><span class="tag gap">${startup.gap}</span><span class="tag stage">${startup.stage}</span><span class="tag geo">${startup.geo}</span></div><div class="startup-details"><div class="detail-block"><div class="detail-label">FinServ Signal</div><div class="detail-value">${startup.finserv}</div></div><div class="detail-block"><div class="detail-label">Team</div><div class="detail-value">${startup.team}</div></div></div><div class="thesis-note"><div class="note-label">Why this matters</div><p>${startup.thesis}</p></div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links">${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}</ul></div><div class="vote-row" data-slug="${startup.slug}"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars"><div class="bar-item"><span class="bar-label">Gap Fit</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span></div><div class="bar-item"><span class="bar-label">FinServ</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span></div><div class="bar-item"><span class="bar-label">Stage</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span></div><div class="bar-item"><span class="bar-label">Team</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.team[0] / startup.bars.team[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span></div></div>`;
+    card.innerHTML = `<div class="startup-top"><h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3><div class="score-badge ${scoreClass}"><span class="num">${startup.score}</span><span class="of">/100</span></div></div><p class="startup-oneliner">${startup.oneliner}</p><div class="startup-tags"><span class="tag gap">${startup.gap}</span><span class="tag stage">${startup.stage}</span><span class="tag geo">${startup.geo}</span></div><div class="startup-details"><div class="detail-block"><div class="detail-label">FinServ Signal</div><div class="detail-value">${startup.finserv}</div></div><div class="detail-block"><div class="detail-label">Team</div><div class="detail-value">${startup.team}</div></div></div><div class="thesis-note"><div class="note-label">Why this matters</div><p>${startup.thesis}</p></div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links">${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}</ul></div><div class="vote-row" data-slug="${startup.slug}"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars"><div class="bar-item"><span class="bar-label">Gap Fit</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span></div><div class="bar-item"><span class="bar-label">FinServ</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span></div><div class="bar-item"><span class="bar-label">Stage</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span></div><div class="bar-item"><span class="bar-label">Team</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.team[0] / startup.bars.team[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span></div></div>`;
     container.appendChild(card);
   });
   wireVoting();
@@ -274,7 +275,7 @@ async function saveVote(slug) {
   st.textContent = 'Saving…';
   st.className = 'vote-status saving';
   try {
-    const r = await fetch(`${WORKER_URL}/votes`, {method: 'PUT', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({slug, stars: votes[slug]?.stars ?? 0, note: votes[slug]?.note ?? '', voter: voter || 'anonymous'})});
+    const r = await fetch(`${WORKER_URL}/votes`, {method: 'PUT', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({slug, stars: votes[slug]?.stars ?? 0, note: votes[slug]?.note ?? '', voter: voter || 'anonymous', followup: votes[slug]?.followup ?? false})});
     if (!r.ok) throw new Error(`${r.status}`);
     const data = await r.json();
     votes = data.votes || votes;
@@ -310,6 +311,19 @@ function setNote(slug, text) {
   votes[slug].voted_at = new Date().toISOString();
 }
 
+function setFollowUp(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'followup' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].followup = !votes[slug].followup;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
 function renderCard(slug) {
   const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
   if (!row) return;
@@ -330,6 +344,9 @@ function renderCard(slug) {
   let badge = top.querySelector('.vote-badge');
   if (stars > 0) {if (!badge) {badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge);} badge.textContent = '★'.repeat(stars);} else if (badge) {badge.remove();}
   card.classList.toggle('voted-low', stars > 0 && stars <= 2);
+  const fb = row.querySelector('.followup-btn');
+  if (fb) fb.classList.toggle('active', !!v.followup);
+  card.classList.toggle('followup', !!v.followup);
 }
 
 function renderAll() {document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug)); updateFilterCounts();}
@@ -338,13 +355,22 @@ let activeFilter = 'all';
 
 function applyFilter(f) {
   if (f) activeFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === activeFilter));
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const isActive = b.dataset.filter === activeFilter;
+    b.classList.toggle('active', isActive);
+    if (b.dataset.filter === 'followup') {
+      b.style.background = isActive ? 'var(--coral-light)' : '';
+      b.style.borderColor = isActive ? 'var(--coral)' : 'var(--coral)';
+      b.style.color = isActive ? 'var(--coral)' : 'var(--coral)';
+    }
+  });
   document.querySelectorAll('#pipeline-cards .startup-card').forEach(card => {
     const slug = card.querySelector('.vote-row')?.dataset.slug;
     const voted = slug && votes[slug]?.stars;
     let show = true;
     if (activeFilter === 'voted') show = !!voted;
     if (activeFilter === 'unvoted') show = !voted;
+    if (activeFilter === 'followup') show = !!(slug && votes[slug]?.followup);
     card.style.display = show ? '' : 'none';
   });
   updateFilterCounts();
@@ -354,6 +380,7 @@ function updateFilterCounts() {
   const cards = [...document.querySelectorAll('#pipeline-cards .startup-card')];
   const voted = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.stars).length;
   const unvoted = cards.length - voted;
+  const followup = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.followup).length;
   const set = (f, n) => {
     const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`);
     if (b) b.textContent = n;
@@ -361,6 +388,7 @@ function updateFilterCounts() {
   set('all', cards.length);
   set('voted', voted);
   set('unvoted', unvoted);
+  set('followup', followup);
 }
 
 function wireVoting() {
@@ -372,7 +400,7 @@ function wireVoting() {
 
 function openSettings(msg) {const m = document.getElementById('settings-modal'); m.removeAttribute('hidden'); m.style.display = 'flex'; const msgEl = document.getElementById('settings-msg'); if (msgEl) {msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none';} const inp = document.getElementById('voter-name-input'); if (inp) {inp.value = voter; inp.focus();}}
 function closeSettings() {const m = document.getElementById('settings-modal'); m.setAttribute('hidden', ''); m.style.display = 'none';}
-function saveSettings() {try {voter = (document.getElementById('voter-name-input').value || '').trim();} catch (e) {} try {localStorage.setItem('bg_voter_name', voter);} catch (e) {} closeSettings(); updateGearState(); if (_pendingVote && voter) {const {slug, val} = _pendingVote; _pendingVote = null; setStars(slug, val);}}
+function saveSettings() {try {voter = (document.getElementById('voter-name-input').value || '').trim();} catch (e) {} try {localStorage.setItem('bg_voter_name', voter);} catch (e) {} closeSettings(); updateGearState(); if (_pendingVote && voter) {const {slug, val, action} = _pendingVote; _pendingVote = null; if (action === 'followup') setFollowUp(slug); else setStars(slug, val);}}
 function updateGearState() {const gear = document.getElementById('settings-btn'); if (!gear) return; gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution'; gear.classList.toggle('connected', !!voter);}
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -754,6 +754,32 @@
     .startup-card:nth-child(4) { animation-delay: 0.15s; }
     .startup-card:nth-child(5) { animation-delay: 0.2s; }
 
+
+    /* ============================================================ */
+    /* FOLLOW UP BUTTON                                             */
+    /* ============================================================ */
+    .followup-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border-strong);
+      background: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .followup-btn:hover { border-color: var(--coral); color: var(--coral); }
+    .followup-btn.active {
+      background: var(--coral-light);
+      border-color: var(--coral);
+      color: var(--coral);
+      font-weight: 600;
+    }
+    .startup-card.followup {
+      border-left: 3px solid var(--coral);
+    }
   </style>
 </head>
 <body>
@@ -1095,6 +1121,7 @@ async function saveVote(slug) {
         stars: votes[slug]?.stars ?? 0,
         note: votes[slug]?.note ?? '',
         voter: voter || 'anonymous',
+        followup: votes[slug]?.followup ?? false,
       }),
     });
     if (!r.ok) throw new Error(`${r.status}`);
@@ -1129,6 +1156,19 @@ function setNote(slug, text) {
   if (!votes[slug]) votes[slug] = {};
   votes[slug].note = text;
   votes[slug].voted_at = new Date().toISOString();
+}
+
+function setFollowUp(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'followup' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].followup = !votes[slug].followup;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
 }
 
 function renderCard(slug) {
@@ -1169,6 +1209,9 @@ function renderCard(slug) {
   }
 
   card.classList.toggle('voted-low', stars > 0 && stars <= 2);
+  const fb = row.querySelector('.followup-btn');
+  if (fb) fb.classList.toggle('active', !!v.followup);
+  card.classList.toggle('followup', !!v.followup);
 }
 
 function renderAll() {
@@ -1202,6 +1245,9 @@ function wireVoting() {
       if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
     });
   });
+  document.querySelectorAll('.followup-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setFollowUp(this.closest('.vote-row').dataset.slug); })
+  );
 }
 
 function openSettings(msg) {
@@ -1226,9 +1272,9 @@ function saveSettings() {
   closeSettings();
   updateGearState();
   if (_pendingVote && voter) {
-    const { slug, val } = _pendingVote;
+    const { slug, val, action } = _pendingVote;
     _pendingVote = null;
-    setStars(slug, val);
+    if (action === 'followup') setFollowUp(slug); else setStars(slug, val);
   }
 }
 
