@@ -40,5 +40,11 @@
     "note": "This is good but a little early - there's not a lot of agentic infrastructure out there to fix security for yet.",
     "voter": "Dave",
     "voted_at": "2026-03-13T09:38:35.302Z"
+  },
+  "sphinx": {
+    "stars": 3,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-03-13T09:38:52.463Z"
   }
 }
