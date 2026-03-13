@@ -780,6 +780,27 @@
     .startup-card.followup {
       border-left: 3px solid var(--coral);
     }
+    .archive-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--border-strong);
+      background: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .archive-btn:hover { border-color: var(--brown); color: var(--brown); }
+    .archive-btn.active {
+      background: var(--brown-light);
+      border-color: var(--border-strong);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .startup-card.archived { opacity: 0.4; border-left: 3px solid var(--border-strong) !important; }
+    .startup-card.archived:hover { opacity: 0.75; }
   </style>
 </head>
 <body>
@@ -1051,6 +1072,8 @@ function renderPipelineCards() {
           <button class="star" data-val="5" title="5 stars">★</button>
         </div>
         <button class="note-toggle">+ Add note</button>
+        <button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button>
+        <button class="archive-btn" title="Archive this startup">↓ Archive</button>
         <span class="vote-status"></span>
         <div class="note-area" hidden="">
           <textarea placeholder="Why this rating? What would need to change?"></textarea>
@@ -1089,7 +1112,12 @@ function renderPipelineCards() {
 /* VOTING SYSTEM */
 /* ────────────────────────────────────────────────────────────── */
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
-let voter = localStorage.getItem('bg_voter_name') || '';
+function _readVoter() {
+  try { const ls = localStorage.getItem('bg_voter_name'); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) return decodeURIComponent(m[1]); } catch(e) {}
+  return '';
+}
+let voter = _readVoter();
 let votes = {};
 let _pendingVote = null;
 
@@ -1122,6 +1150,7 @@ async function saveVote(slug) {
         note: votes[slug]?.note ?? '',
         voter: voter || 'anonymous',
         followup: votes[slug]?.followup ?? false,
+        archived: votes[slug]?.archived ?? false,
       }),
     });
     if (!r.ok) throw new Error(`${r.status}`);
@@ -1171,6 +1200,19 @@ function setFollowUp(slug) {
   saveVote(slug);
 }
 
+function setArchive(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'archive' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].archived = !votes[slug].archived;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
 function renderCard(slug) {
   const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
   if (!row) return;
@@ -1212,6 +1254,9 @@ function renderCard(slug) {
   const fb = row.querySelector('.followup-btn');
   if (fb) fb.classList.toggle('active', !!v.followup);
   card.classList.toggle('followup', !!v.followup);
+  const ab = row.querySelector('.archive-btn');
+  if (ab) ab.classList.toggle('active', !!v.archived);
+  card.classList.toggle('archived', !!v.archived);
 }
 
 function renderAll() {
@@ -1248,6 +1293,9 @@ function wireVoting() {
   document.querySelectorAll('.followup-btn').forEach(btn =>
     btn.addEventListener('click', function () { setFollowUp(this.closest('.vote-row').dataset.slug); })
   );
+  document.querySelectorAll('.archive-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setArchive(this.closest('.vote-row').dataset.slug); })
+  );
 }
 
 function openSettings(msg) {
@@ -1269,12 +1317,13 @@ function closeSettings() {
 function saveSettings() {
   try { voter = (document.getElementById('voter-name-input').value || '').trim(); } catch (e) {}
   try { localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } catch(e) {}
   closeSettings();
   updateGearState();
   if (_pendingVote && voter) {
     const { slug, val, action } = _pendingVote;
     _pendingVote = null;
-    if (action === 'followup') setFollowUp(slug); else setStars(slug, val);
+    if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);
   }
 }
 
