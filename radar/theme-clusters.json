@@ -1,0 +1,187 @@
+{
+  "generated": "2026-03-13",
+  "clusters": [
+    {
+      "gap": "Agent Authentication & Security",
+      "theme": "Agent Identity as Regulated Infrastructure",
+      "count": 4,
+      "companies": ["alter", "oasis-security", "t54-labs", "sapiom"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Zero-trust per-call AuthN/AuthZ",
+          "companies": ["alter"],
+          "status": "new"
+        },
+        {
+          "name": "Non-human identity (NHI) management",
+          "companies": ["oasis-security"],
+          "status": "new"
+        },
+        {
+          "name": "Agent identity standards and developer tools",
+          "companies": ["t54-labs"],
+          "status": "new"
+        },
+        {
+          "name": "Agent identity + payment rails",
+          "companies": ["sapiom"],
+          "status": "new"
+        }
+      ],
+      "notes": "Strongest early vote signal in pipeline — two 5★ votes (t54 Labs, Oasis Security). Agent payment rails sub-theme (Sapiom) is emerging and may warrant a standalone gap category if more companies surface."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "Agentic Guardrails as Regulated Infrastructure",
+      "count": 3,
+      "companies": ["overmind", "kai", "guardrails-ai"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Regulated-industry agent supervision",
+          "companies": ["overmind"],
+          "status": "new"
+        },
+        {
+          "name": "Agentic cybersecurity (IT/OT)",
+          "companies": ["kai"],
+          "status": "new"
+        },
+        {
+          "name": "Open-source guardrails framework",
+          "companies": ["guardrails-ai"],
+          "status": "new"
+        }
+      ],
+      "notes": "FINRA 2026 and EU AI Act August deadline are converting guardrails from product category to compliance requirement. Overmind (5★, score 90) is top candidate for shortlisting."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "Compliance Without Disruption",
+      "count": 4,
+      "companies": ["bretton-ai", "unit21", "uptiq", "sphinx"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "High-scale financial crime automation (replacement approach)",
+          "companies": ["bretton-ai"],
+          "status": "new"
+        },
+        {
+          "name": "Browser-native / no-new-system compliance agents",
+          "companies": ["sphinx", "uptiq"],
+          "status": "new"
+        },
+        {
+          "name": "Fraud and AML risk operations platform",
+          "companies": ["unit21"],
+          "status": "new"
+        }
+      ],
+      "notes": "Dave voted Bretton AI 3★ with note 'not so interested in KYC and AML' — preference may be for orchestration-layer compliance rather than individual workflow automation."
+    },
+    {
+      "gap": "Tax Optimisation",
+      "theme": "Portfolio-Integrated Tax Intelligence (gap open)",
+      "count": 3,
+      "companies": ["hive-tax-ai", "mezzi", "taxdown"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Tax filing / digital tax returns",
+          "companies": ["taxdown"],
+          "status": "new",
+          "preference_signal": "low — downvoted 2★"
+        },
+        {
+          "name": "Portfolio-native tax optimisation",
+          "companies": ["mezzi", "hive-tax-ai"],
+          "status": "new",
+          "preference_signal": "unvoted — pending"
+        }
+      ],
+      "notes": "Core gap remains unmet. Ideal product: portfolio-integrated, investor-benefit-optimising tax intelligence. Tax filing tools downvoted. Search terms need refinement."
+    },
+    {
+      "gap": "Agent Orchestration",
+      "theme": "Incumbent-Backed Enterprise Orchestration",
+      "count": 5,
+      "companies": ["dyna-ai", "natural-payments", "stacks", "trace", "lyzr"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "On-prem enterprise agent orchestration (finserv-anchored)",
+          "companies": ["lyzr"],
+          "status": "new"
+        },
+        {
+          "name": "Accounting / finance workflow automation",
+          "companies": ["stacks"],
+          "status": "new",
+          "preference_signal": "low — downvoted 2★"
+        },
+        {
+          "name": "Agent tracing and observability",
+          "companies": ["trace"],
+          "status": "new"
+        },
+        {
+          "name": "Enterprise AI deployment (APAC/ME)",
+          "companies": ["dyna-ai"],
+          "status": "new"
+        },
+        {
+          "name": "B2B workflow automation",
+          "companies": ["natural-payments"],
+          "status": "new"
+        }
+      ],
+      "notes": "Stacks downvoted despite score 82 — accounting automation mismatch. Lyzr (Accenture-backed, on-prem, banking/insurance) is likely the strongest entry once scored."
+    },
+    {
+      "gap": "Personal Agent",
+      "theme": "AI-Powered Advisor and Consumer Finance Agents",
+      "count": 2,
+      "companies": ["mine-moneygpt", "tendi"],
+      "first_seen": "2026-03-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "AI financial advisor for consumers and advisors",
+          "companies": ["mine-moneygpt"],
+          "status": "new"
+        },
+        {
+          "name": "Multi-institution connectivity agents",
+          "companies": ["tendi"],
+          "status": "new"
+        }
+      ],
+      "notes": "Lowest company count in any gap. Searching for more companies in this category should be a priority. Mine (MoneyGPT) at 78 is highest-scored entry in this gap."
+    }
+  ],
+  "emerging_cross_gap_themes": [
+    {
+      "theme": "Agent Payment Rails",
+      "status": "monitoring",
+      "companies": ["sapiom"],
+      "external_signals": ["Google AP2", "Coinbase x402"],
+      "notes": "Currently classified under Agent Authentication & Security. Promote to standalone gap if 3+ additional companies emerge.",
+      "first_seen": "2026-03-13"
+    },
+    {
+      "theme": "AI Governance / Regulatory Compliance for AI Systems",
+      "status": "monitoring",
+      "companies": [],
+      "external_signals": ["FINRA 2026 Annual Regulatory Oversight Report", "EU AI Act August 2026 deadline"],
+      "notes": "No startup in pipeline addresses AI-Act-style governance tooling. Proposed as a new search thread in next scan cycle.",
+      "first_seen": "2026-03-13"
+    }
+  ]
+}
