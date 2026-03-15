@@ -33,8 +33,16 @@
     "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-25-salesforce-q4-2026-earnings-agentic-ai-drives-revenue-beat-and-enterprise-transformation",
     "https://medium.com/@gwrx2005/ai-agents-and-autonomous-payments-a-comparative-study-of-x402-and-ap2-protocols-e71b572d9838",
     "https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/gen-ai",
-    "https://www.twobirds.com/en/insights/2026/recent-developments-on-the-interplay-between-ai-and-financial-institutions"
+    "https://www.twobirds.com/en/insights/2026/recent-developments-on-the-interplay-between-ai-and-financial-institutions",
+    "https://fintech.global/2026/03/13/cybersecurity-fintech-onyx-security-secures-40m-funding/",
+    "https://fintech.global/2026/03/04/ai-security-platform-jetstream-security-bags-34m-funding/",
+    "https://techcrunch.com/2026/02/11/complyance-raises-20m-to-help-companies-manage-risk-and-compliance/",
+    "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    "https://www.wealthmanagement.com/regulation-compliance/finra-cautions-broker-dealers-to-catch-hallucinations-when-using-gen-ai",
+    "https://arxiv.org/abs/2602.16666",
+    "https://finance.yahoo.com/news/big-tech-set-to-spend-650-billion-in-2026-as-ai-investments-soar-163907630.html",
+    "https://www.theblock.co/post/391273/ripple-franklin-templeton-ai-agent-trust-startup-t54-labs"
   ],
-  "last_updated": "2026-03-12",
+  "last_updated": "2026-03-15",
   "note": "Append source URLs here after each radar scan run to prevent duplicate reporting across scans."
 }
