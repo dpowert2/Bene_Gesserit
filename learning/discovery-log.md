@@ -26,3 +26,8 @@ Any signals that challenge or complicate the thesis? (1) Salesforce Agentforce a
 ### What I Learned This Week
 
 This inaugural week established the core thesis signal clearly: the strongest early preference is for the infrastructure trust layer — Agent Authentication & Security and AI Safety & Guardrails — exactly where the thesis centres. Dave's 5★ votes for Overmind and t54 Labs confirm the search is for regulated plumbing beneath agents, not any agentic AI company. The two near-misses — Stacks and TaxDown — reveal a precision failure in sub-domain matching: the system found the right category but not the right flavour within it. The tax gap is underserved; the ideal company (portfolio-integrated, intelligent, not filing-focused) has not yet surfaced. Regulatory acceleration signals from FINRA and the EU AI Act, combined with the AP2 vs. x402 standards battle, mean the compliance overlay on agent payment infrastructure is the emerging thesis-aligned white space to watch.
+
+---
+
+## Preference Learning — 2026-03-15
+Total votes: 8 (4 up, 2 down, 2 neutral) | New near misses: 2 (Stacks, TaxDown — first formal logging) | New soft factors: none (sub-domain blind spot at 1 occurrence each; threshold is 3) | Weight changes: none (8 votes; threshold is 50) | Key insight: The trust infrastructure gaps (Agent Authentication & Security and AI Safety & Guardrails) generated 4/4 upvotes at 100%, while both downvotes trace to the same intra-category sub-domain mismatch pattern — correct gap, wrong product flavour | Confidence: med
