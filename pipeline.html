@@ -245,7 +245,7 @@
     </div>
 
     <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All <span class="filter-count">24</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="filter-count">29</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">21</span></button>
       <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
@@ -279,7 +279,86 @@
 </div>
 
 <script>
-const startups = [{  {
+const startups = [
+  {
+    slug: "manifold",
+    name: "Manifold",
+    url: "https://manifoldaidr.com",
+    oneliner: "Manifold is an AI Detection and Response (AIDR) platform that provides real-time runtime visibility into autonomous AI agents — monitoring every tool call, MCP server connection, database access, and external system interaction — so enterprise security teams can detect and respond to agentic AI risks before they become incidents.",
+    gap: "AI Safety & Guardrails",
+    stage: "Seed ($8M)",
+    geo: "San Francisco, CA",
+    finserv: "Financial institutions deploying AI agents in customer-facing and back-office workflows face a new class of risk: agents that behave unpredictably, access systems beyond their intended scope, or are manipulated via prompt injection. Manifold's AIDR platform provides the runtime observability layer that compliance and security teams will require as a precondition for production agent deployment in regulated environments. Investors include Rain Capital (cybersecurity specialist) and angels from Uber's CSO and Google DeepMind's CISO — both of whom have financial sector client exposure at scale.",
+    team: "Founded by Neal Swaelens, Oleksandr Yaremchuk, and Michael McKenna. Swaelens and Yaremchuk co-founded Laiyer AI, creators of LLM Guard — the most widely adopted open-source LLM firewall with millions of downloads. Backed by Costanoa Ventures (lead), Cherry Ventures, Rain Capital, Modern Technical Fund, and angels including Joe Sullivan (former Uber CSO) and Vijay Bolina (former Google DeepMind CISO).",
+    thesis: "As your strategy builds the regulated infrastructure layer for agentic AI in financial services, you need to be able to guarantee to regulators and clients that agents operating on your platform behave within defined boundaries. Manifold provides that runtime guarantee — the \"what did the agent actually do\" layer that turns theoretical agent governance into auditable evidence. Their open-source lineage (LLM Guard) also means the product has genuine community validation rather than just marketing claims.",
+    evidence: [["GlobeNewswire — $8M Seed Announcement", "https://www.globenewswire.com/news-release/2026/03/18/3258198/0/en/Manifold-Announces-8-Million-Seed-Funding-Round-to-Secure-Autonomous-Endpoint-AI-Agents-at-Runtime.html"], ["SiliconANGLE", "https://siliconangle.com/2026/03/18/manifold-raises-8m-secure-autonomous-ai-agents-enterprise-endpoints/"]],
+    score: 80,
+    bars: {gap: [28, 35], finserv: [17, 25], stage: [14, 20], team: [21, 20]}
+  },
+  {
+    slug: "april",
+    name: "April",
+    url: "https://www.getapril.com",
+    oneliner: "April is an embedded AI tax platform that integrates directly into financial services products — enabling banks, wealth managers, and fintechs to offer AI-powered tax filing, real-time tax simulations, and advisor workflow tools to their customers without building the capability in-house.",
+    gap: "Tax Optimisation",
+    stage: "Series B ($78M total)",
+    geo: "New York, NY",
+    finserv: "April launched an integrated tax platform specifically for wealth management and advisory firms in February 2026, positioning itself as the tax intelligence layer inside advisor workflows rather than a consumer-facing product. The platform runs precise simulations for equity compensation, Roth conversions, concentrated stock positions, and estimated payments — exactly the high-value, advice-adjacent tax workflows that regulated wealth advisors need to automate. QED Investors (lead Series B investor) has one of the deepest finserv-focused portfolios in venture; prior investors include Euclidean Capital, NYCA, and Team8.",
+    team: "Founded by Daniel Marcus (former CTO at Waze) and Ben Borodach (previously at Team8 and Deloitte). The combination of consumer technology product leadership and Big Four tax/advisory DNA is well-suited to the embedded fintech distribution model. Total raised: $78M across seed, Series A, and Series B. Regulatory clearance achieved across all US states.",
+    thesis: "April's embedded model — selling to the financial institution rather than the consumer — positions it as exactly the kind of infrastructure partner your strategy needs in the Tax Optimisation gap. Rather than competing with you for the client relationship, April would plug into your advisor stack and provide tax intelligence that advisors (and agents) can act on. Their full US regulatory clearance also means this is a production-ready platform, not a roadmap.",
+    evidence: [["CPA Practice Advisor", "https://www.cpapracticeadvisor.com/2026/02/24/april-unveils-ai-tax-platform-for-wealth-management-firms/178650/"], ["Business Wire", "https://www.businesswire.com/news/home/20260224545942/en/april-Launches-AI-Tax-Platform-for-Wealth-Management-Firms"]],
+    score: 76,
+    bars: {gap: [27, 35], finserv: [22, 25], stage: [17, 20], team: [10, 20]}
+  },
+  {
+    slug: "goodfire",
+    name: "Goodfire",
+    url: "https://www.goodfire.ai",
+    oneliner: "Goodfire is an AI interpretability platform that lets enterprises understand, debug, and intentionally design AI models by identifying and modifying the internal components responsible for specific model behaviours.",
+    gap: "AI Safety & Guardrails",
+    stage: "Series B ($150M, $1.25B val.)",
+    geo: "San Francisco, CA",
+    finserv: "AI interpretability is transitioning from academic interest to a hard compliance requirement as the EU AI Act's high-risk AI rules take effect in August 2026 — including creditworthiness scoring systems. Regulators across the FCA, Fed, and OCC are signalling that audit trails and explainability will be mandatory for financial AI deployments. Salesforce Ventures participated in the Series B round, connecting Goodfire into the enterprise finserv workflow stack.",
+    team: "Founded by Eric Moran and team. Investors: B Capital (lead), Juniper Ventures, Menlo Ventures, Lightspeed Venture Partners, South Park Commons, Wing Venture Capital, DFJ Growth, Salesforce Ventures, Eric Schmidt, and others.",
+    thesis: "This gives your strategy a potential infrastructure partnership for the \"explainability layer\" that financial regulators are converging on requiring. As you build the regulated infrastructure layer for agentic AI, you need AI systems that can demonstrate to regulators why a decision was made. Goodfire's model design environment — which lets users reach inside models and identify the parts responsible for specific behaviours — is precisely the kind of tooling that will underpin regulatory compliance for AI in lending, AML, and underwriting.",
+    evidence: [["SiliconAngle", "https://siliconangle.com/2026/02/05/goodfire-raises-150m-funding-enhance-ai-interpretability-platform/"], ["PR Newswire", "https://www.prnewswire.com/news-releases/ai-lab-goodfire-raises-150m-at-1-25b-valuation-to-design-models-with-interpretability-302680120.html"]],
+    score: 77,
+    bars: {gap: [25, 35], finserv: [15, 25], stage: [19, 20], team: [18, 20]},
+    runDate: "2026-03-18"
+  },
+  {
+    slug: "armorcode",
+    name: "ArmorCode",
+    url: "https://www.armorcode.com",
+    oneliner: "ArmorCode is a unified exposure management platform that uses agentic AI to unify, prioritise, and remediate risks across applications, cloud, infrastructure, and AI systems at enterprise scale.",
+    gap: "AI Safety & Guardrails",
+    stage: "Series C (~$81M total)",
+    geo: "Palo Alto, CA",
+    finserv: "Nearly 80% of its Fortune 500 and Fortune 1000 customers are pushing for expanded Agentic AI capabilities, many of which are financial institutions. Phil Venables — former Goldman Sachs CISO and Google Cloud CISO — joined the board in March 2026, signalling deep regulated-industry relevance. The platform processes over 200 billion findings per year, a scale consistent with large financial services environments.",
+    team: "Nikhil Gupta (CEO) and team. Investors include Cheyenne Ventures, Ballistic Ventures, Highland Capital, Sierra Ventures, NGP Capital, Harmonic Growth Partners, Tau Ventures, and Cervin Ventures. Board: Phil Venables (former Goldman Sachs/Google Cloud CISO).",
+    thesis: "As your strategy positions as the regulated infrastructure layer for agentic AI in financial services, ArmorCode represents a potential partner for AI governance and exposure management tooling. Financial institutions deploying agents need a control plane that unifies risk visibility across AI, application, and cloud surface — ArmorCode provides exactly that. Its Goldman Sachs CISO pedigree on the board gives it credibility in regulated enterprise and creates a natural commercial bridge into large bank and insurer AI programmes.",
+    evidence: [["Fintech Global", "https://fintech.global/2026/03/04/armorcode-raises-16m-to-expand-agentic-ai-platform/"], ["ArmorCode", "https://www.armorcode.com/news/armorcode-doubles-growth-new-funding-and-board-appointment"]],
+    score: 66,
+    bars: {gap: [22, 35], finserv: [12, 25], stage: [17, 20], team: [15, 20]},
+    runDate: "2026-03-18"
+  },
+  {
+    slug: "certivo",
+    name: "Certivo",
+    url: "https://certivo.io",
+    oneliner: "Certivo is an AI-native compliance automation platform that deploys an AI agent (CORA) to continuously monitor regulatory changes, validate supplier documentation, and map obligations to product portfolios for manufacturers and supply chain operators.",
+    gap: "Compliance",
+    stage: "Seed ($6M total)",
+    geo: "Seattle, WA",
+    finserv: "Certivo's platform is supply-chain focused rather than directly financial-services-facing, but its AI-native compliance automation positioning and CORA agent architecture are directly analogous to what regulated financial institutions need for regulatory change management. Suffolk Technologies (the lead investor) has strong fintech and built-world crossover positioning. The pattern — purpose-built AI agent replacing manual compliance operations — mirrors finserv compliance automation demand.",
+    team: "Spun out of Pioneer Square Labs (PSL) in 2024. Investors: Suffolk Technologies (lead), Pioneer Square Labs, Pioneer Square Ventures.",
+    thesis: "Certivo demonstrates that \"AI-native compliance automation\" is emerging as a distinct product category outside finserv, with the same architecture you need inside it: a continuously running agent that monitors regulatory changes, maps them to internal obligations, and automates documentation workflows. If Certivo or analogues pivot into financial regulatory change management, it could become a direct competitor or acquisition target in the Compliance gap.",
+    evidence: [["GeekWire", "https://www.geekwire.com/2026/seattle-startup-certivo-raises-4m-to-automate-supply-chain-compliance-with-ai/"], ["Business Wire", "https://www.businesswire.com/news/home/20260213311074/en/Certivo-Raises-$4M-Seed-Round-Led-by-Suffolk-Technologies-to-Launch-the-AI-Native-Compliance-Automation-Category"]],
+    score: 50,
+    bars: {gap: [20, 35], finserv: [8, 25], stage: [10, 20], team: [12, 20]},
+    runDate: "2026-03-18"
+  },
+  {
     slug: "onyx-security",
     name: "Onyx Security",
     url: "https://onyx.security",
