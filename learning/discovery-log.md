@@ -31,3 +31,23 @@ This inaugural week established the core thesis signal clearly: the strongest ea
 
 ## Preference Learning — 2026-03-15
 Total votes: 8 (4 up, 2 down, 2 neutral) | New near misses: 2 (Stacks, TaxDown — first formal logging) | New soft factors: none (sub-domain blind spot at 1 occurrence each; threshold is 3) | Weight changes: none (8 votes; threshold is 50) | Key insight: The trust infrastructure gaps (Agent Authentication & Security and AI Safety & Guardrails) generated 4/4 upvotes at 100%, while both downvotes trace to the same intra-category sub-domain mismatch pattern — correct gap, wrong product flavour | Confidence: med
+
+---
+
+## 2026-03-20 — Weekly Radar
+
+### Thesis Drift Detection
+
+Which gaps are generating the most shortlists vs. passes? No formal shortlisting or passing has occurred — all 30 companies remain in detected. Vote data continues to provide the primary signal. Agent Authentication & Security (2 of 4 upvotes at 5★ each) and AI Safety & Guardrails (2 of 4 upvotes including 1 at 5★ and 1 at 4★) dominate the upvote count. Tax Optimisation and Agent Orchestration each carry one downvote. Compliance has 1 neutral vote; both gaps with neutral signals suggest sub-domain calibration is needed rather than gap removal.
+
+Are any search terms producing noise? Tax Optimisation refined terms are validated by April's emergence. Continue: "tax-loss harvesting," "tax-aware rebalancing," "capital gains optimisation," "after-tax portfolio returns," "embedded tax platform wealth management." Exclude: "tax filing," "tax return," "e-filing." Agent Orchestration: maintain "financial services" qualifier. AI Safety & Guardrails: current searches working well; add "AI control plane enterprise," "agentic runtime monitoring," "AI detection and response."
+
+Are there new themes that don't fit existing gaps? (1) Agent Payment Rails — significantly strengthened by Mastercard (Verifiable Intent + live Santander transaction), Visa (Agentic Ready + Crypto Labs CLI), Google (AP2), Coinbase (x402). Maintain as sub-theme of Agent Auth; promote to standalone gap if 2+ additional startups emerge. (2) AI Interpretability — Goodfire's $1.25B unicorn + EU AI Act August deadline. Monitor as sub-theme. (3) Regulatory Technology for AI Governance — US Treasury FS AI RMF, FCA SM&CR personal liability, FINRA agent-specific guidance all landed this week. Upgrade from search thread to active gap candidate.
+
+Are any gaps candidates for deprioritisation? No. All six gaps received either new companies or significant market validation this week.
+
+Any signals that challenge or complicate the thesis? (1) Nvidia NemoClaw open-sources agent security stack at GTC 2026 — narrows differentiation; thesis must be sharper about what "regulated" adds beyond open-source security. (2) Payment networks (Mastercard, Visa, Google) claiming agentic commerce infrastructure — startup opportunity is the compliance/governance layer atop whichever payment standard wins. (3) FCA SM&CR personal liability for AI decisions — validates demand but means partner infrastructure must be demonstrably liability-reducing.
+
+### What I Learned This Week
+
+The single most important insight from this week is that the AI Safety & Guardrails gap has become a full-blown infrastructure category practically overnight. Five new companies raised a combined ~$313M, Goodfire achieved unicorn status on interpretability alone, and Nvidia validated the space by open-sourcing NemoClaw — which simultaneously proves the market and compresses the differentiation window. The thesis must now be sharper about what the regulated infrastructure layer provides that open-source security stacks and horizontal governance platforms do not: fiduciary accountability chains, regulatory reporting primitives, and audit-grade provenance that satisfies FINRA, FCA, and EU AI Act requirements specifically. Meanwhile, the payment networks' coordinated sprint into agentic commerce means the identity and authorisation layer for agents is being actively claimed by the most trusted brands in financial services. The startup opportunity is not to compete with Visa and Mastercard on payment identity, but to build the compliance and governance layer that sits on top of whichever payment standard wins. April's arrival finally gives the Tax Optimisation gap a candidate that matches the stated preference — embedded, advisor-workflow-integrated, and backed by QED — and getting a vote on April should be a priority this week.

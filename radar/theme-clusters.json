@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-13",
+  "generated": "2026-03-20",
   "clusters": [
     {
       "gap": "Agent Authentication & Security",
@@ -7,30 +7,56 @@
       "count": 4,
       "companies": ["alter", "oasis-security", "t54-labs", "sapiom"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
         {
           "name": "Zero-trust per-call AuthN/AuthZ",
           "companies": ["alter"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Non-human identity (NHI) management",
           "companies": ["oasis-security"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Agent identity standards and developer tools",
           "companies": ["t54-labs"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Agent identity + payment rails",
           "companies": ["sapiom"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Strongest vote signal in pipeline (two 5★). Oasis Security closed $120M Series B (total $195M) — largest NHI raise to date. Mastercard/Visa/Google all moved on agentic payment standards this week, validating the agent identity layer as the primary strategic battleground."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "AI Agent Control Plane",
+      "count": 3,
+      "companies": ["onyx-security", "jetstream-security", "manifold"],
+      "first_seen": "2026-03-20",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Supervisory agent governance (real-time policy enforcement)",
+          "companies": ["onyx-security"],
+          "status": "new"
+        },
+        {
+          "name": "AI governance via dynamic blueprints",
+          "companies": ["jetstream-security"],
+          "status": "new"
+        },
+        {
+          "name": "AI Detection and Response (AIDR) / runtime observability",
+          "companies": ["manifold"],
           "status": "new"
         }
       ],
-      "notes": "Strongest early vote signal in pipeline — two 5★ votes (t54 Labs, Oasis Security). Agent payment rails sub-theme (Sapiom) is emerging and may warrant a standalone gap category if more companies surface."
+      "notes": "New theme this week. Three companies raised combined $82M in seed/launch rounds. Distinct from guardrails (model-level) — these are operational monitoring and enforcement platforms for deployed agents."
     },
     {
       "gap": "AI Safety & Guardrails",
@@ -38,74 +64,138 @@
       "count": 3,
       "companies": ["overmind", "kai", "guardrails-ai"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
         {
           "name": "Regulated-industry agent supervision",
           "companies": ["overmind"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Agentic cybersecurity (IT/OT)",
           "companies": ["kai"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Open-source guardrails framework",
           "companies": ["guardrails-ai"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Overmind (5★, score 90) remains top shortlist candidate. FINRA 2026, EU AI Act August deadline, and FCA SM&CR personal liability all reinforce this theme as compliance-driven."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "AI Interpretability as Compliance Infrastructure",
+      "count": 1,
+      "companies": ["goodfire"],
+      "first_seen": "2026-03-20",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Model interpretability and behaviour design",
+          "companies": ["goodfire"],
           "status": "new"
         }
       ],
-      "notes": "FINRA 2026 and EU AI Act August deadline are converting guardrails from product category to compliance requirement. Overmind (5★, score 90) is top candidate for shortlisting."
+      "notes": "Goodfire's $150M Series B at $1.25B unicorn valuation. EU AI Act high-risk provisions (creditworthiness models) effective August 2026 make interpretability a hard compliance requirement."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "Exposure Management / Broad AI Governance",
+      "count": 1,
+      "companies": ["armorcode"],
+      "first_seen": "2026-03-20",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Unified exposure management across AI systems",
+          "companies": ["armorcode"],
+          "status": "new"
+        }
+      ],
+      "notes": "ArmorCode ($81M total) is broader than pure agent governance — covers applications, cloud, infrastructure, and AI. Phil Venables (former Goldman Sachs CISO) on board signals finserv push. Score 66 reflects horizontal positioning."
     },
     {
       "gap": "Compliance",
       "theme": "Compliance Without Disruption",
       "count": 4,
-      "companies": ["bretton-ai", "unit21", "uptiq", "sphinx"],
+      "companies": ["sphinx", "uptiq", "complyance", "steward"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
-        {
-          "name": "High-scale financial crime automation (replacement approach)",
-          "companies": ["bretton-ai"],
-          "status": "new"
-        },
         {
           "name": "Browser-native / no-new-system compliance agents",
           "companies": ["sphinx", "uptiq"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI agents for GRC workflows",
+          "companies": ["complyance"],
           "status": "new"
+        },
+        {
+          "name": "Institutional investor compliance (fund-of-funds, family offices)",
+          "companies": ["steward"],
+          "status": "new"
+        }
+      ],
+      "notes": "Theme expanded from 2 to 4 companies. Complyance (Mastercard angels, GV lead) and Steward ($100B AUM, Motive Partners) added this week. Regulatory pressure from FCA SM&CR and US Treasury FS AI RMF is accelerating."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "High-Scale Financial Crime Automation",
+      "count": 3,
+      "companies": ["bretton-ai", "unit21", "certivo"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AML/fraud/KYC at scale (replacement approach)",
+          "companies": ["bretton-ai"],
+          "status": "ongoing"
         },
         {
           "name": "Fraud and AML risk operations platform",
           "companies": ["unit21"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI compliance automation (supply chain beachhead)",
+          "companies": ["certivo"],
           "status": "new"
         }
       ],
-      "notes": "Dave voted Bretton AI 3★ with note 'not so interested in KYC and AML' — preference may be for orchestration-layer compliance rather than individual workflow automation."
+      "notes": "Bretton AI (3★) — KYC/AML noted as low-preference sub-domain. Certivo (score 50) is supply-chain focused but architecture is transferable. This sub-theme has weaker thesis alignment than 'Compliance Without Disruption.'"
     },
     {
       "gap": "Tax Optimisation",
-      "theme": "Portfolio-Integrated Tax Intelligence (gap open)",
-      "count": 3,
-      "companies": ["hive-tax-ai", "mezzi", "taxdown"],
+      "theme": "Portfolio-Integrated Tax Intelligence",
+      "count": 4,
+      "companies": ["hive-tax-ai", "mezzi", "taxdown", "april"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
         {
           "name": "Tax filing / digital tax returns",
           "companies": ["taxdown"],
-          "status": "new",
+          "status": "ongoing",
           "preference_signal": "low — downvoted 2★"
         },
         {
           "name": "Portfolio-native tax optimisation",
           "companies": ["mezzi", "hive-tax-ai"],
-          "status": "new",
+          "status": "ongoing",
           "preference_signal": "unvoted — pending"
+        },
+        {
+          "name": "Embedded AI tax platform for wealth management",
+          "companies": ["april"],
+          "status": "new",
+          "preference_signal": "unvoted — high expected alignment"
         }
       ],
-      "notes": "Core gap remains unmet. Ideal product: portfolio-integrated, investor-benefit-optimising tax intelligence. Tax filing tools downvoted. Search terms need refinement."
+      "notes": "April ($78M, QED Investors) is the strongest addition to this gap since the radar began. Embedded in advisor workflows, simulations for equity compensation and Roth conversions. Needs a vote to confirm alignment."
     },
     {
       "gap": "Agent Orchestration",
@@ -113,36 +203,36 @@
       "count": 5,
       "companies": ["dyna-ai", "natural-payments", "stacks", "trace", "lyzr"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
         {
           "name": "On-prem enterprise agent orchestration (finserv-anchored)",
           "companies": ["lyzr"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Accounting / finance workflow automation",
           "companies": ["stacks"],
-          "status": "new",
+          "status": "ongoing",
           "preference_signal": "low — downvoted 2★"
         },
         {
           "name": "Agent tracing and observability",
           "companies": ["trace"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Enterprise AI deployment (APAC/ME)",
           "companies": ["dyna-ai"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "B2B workflow automation",
           "companies": ["natural-payments"],
-          "status": "new"
+          "status": "ongoing"
         }
       ],
-      "notes": "Stacks downvoted despite score 82 — accounting automation mismatch. Lyzr (Accenture-backed, on-prem, banking/insurance) is likely the strongest entry once scored."
+      "notes": "No new companies but major external signals: Mastercard/Santander live agentic payment, Visa Agentic Ready, Visa Crypto Labs CLI. Orchestration standards being claimed by incumbents."
     },
     {
       "gap": "Personal Agent",
@@ -150,37 +240,37 @@
       "count": 2,
       "companies": ["mine-moneygpt", "tendi"],
       "first_seen": "2026-03-13",
-      "status": "new",
+      "status": "ongoing",
       "sub_themes": [
         {
           "name": "AI financial advisor for consumers and advisors",
           "companies": ["mine-moneygpt"],
-          "status": "new"
+          "status": "ongoing"
         },
         {
           "name": "Multi-institution connectivity agents",
           "companies": ["tendi"],
-          "status": "new"
+          "status": "ongoing"
         }
       ],
-      "notes": "Lowest company count in any gap. Searching for more companies in this category should be a priority. Mine (MoneyGPT) at 78 is highest-scored entry in this gap."
+      "notes": "No new additions in two weeks. Lowest company count. Needs active scouting priority."
     }
   ],
   "emerging_cross_gap_themes": [
     {
       "theme": "Agent Payment Rails",
-      "status": "monitoring",
+      "status": "monitoring — strengthening",
       "companies": ["sapiom"],
-      "external_signals": ["Google AP2", "Coinbase x402"],
-      "notes": "Currently classified under Agent Authentication & Security. Promote to standalone gap if 3+ additional companies emerge.",
+      "external_signals": ["Google AP2", "Coinbase x402", "Mastercard Agent Pay + Verifiable Intent", "Mastercard/Santander live agentic payment", "Visa Agentic Ready", "Visa Crypto Labs CLI"],
+      "notes": "Major acceleration this week. All four payment networks now active. Maintain as sub-theme of Agent Auth; promote to standalone gap if 2+ additional startups emerge.",
       "first_seen": "2026-03-13"
     },
     {
-      "theme": "AI Governance / Regulatory Compliance for AI Systems",
-      "status": "monitoring",
+      "theme": "AI Governance / Regulatory Technology for AI Systems",
+      "status": "active gap candidate",
       "companies": [],
-      "external_signals": ["FINRA 2026 Annual Regulatory Oversight Report", "EU AI Act August 2026 deadline"],
-      "notes": "No startup in pipeline addresses AI-Act-style governance tooling. Proposed as a new search thread in next scan cycle.",
+      "external_signals": ["FINRA 2026 Annual Regulatory Oversight Report", "EU AI Act August 2026 deadline", "US Treasury FS AI RMF (230 control objectives)", "FCA SM&CR personal liability for AI decisions", "SEC/FINRA enforcement sharpening"],
+      "notes": "Upgraded from 'search thread' to 'active gap candidate.' Five major regulatory signals this week. No startup directly addresses AI-Act-style governance tooling for finserv. Add search terms: 'AI governance financial services,' 'AI Act compliance finserv,' 'FS AI RMF tooling.'",
       "first_seen": "2026-03-13"
     }
   ]
