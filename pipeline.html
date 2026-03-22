@@ -245,7 +245,7 @@
     </div>
 
     <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All <span class="filter-count">30</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="filter-count">32</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">21</span></button>
       <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
@@ -280,6 +280,36 @@
 
 <script>
 const startups = [
+  {
+    slug: "obin-ai",
+    name: "Obin AI",
+    url: "https://www.obin.ai/",
+    oneliner: "Obin AI builds a production-ready agentic workforce for financial institutions, automating complex, high-volume workflows end-to-end inside a firm's controls and audit boundaries.",
+    gap: "Personal Agent",
+    stage: "Seed ($7M)",
+    geo: "United States",
+    finserv: "Already secured engagements with several of the world's largest financial institutions representing over $1 trillion in AUM. In production deployments, processed 50,000+ annual loan notices for a $500bn+ private credit fund, saving 70–90% of time while improving accuracy. Pilots are moving to production in weeks, not months. Backed by Motive Partners, a specialist fintech-focused PE and VC firm.",
+    team: "Co-founder and CEO Apoorv Saxena was Head of AI at JPMorgan and previously ran multiple Google Cloud AI products (Translate, Contact Center AI). Co-founder and CTO Dr. Valliappa ("Lak") Lakshmanan is a former Google and Silver Lake executive, author of seven books on applied AI, and contributor to foundational AI research. $7M seed round led by Motive Partners (March 2026).",
+    thesis: "Obin AI is building exactly what you need to understand: a regulated-institution-native agent layer that encodes compliance logic, produces traceable outputs, and deploys inside existing governance boundaries. Their private credit fund use case (loan notice processing at scale) is a direct proof point that agentic workflows can clear financial services' audit and accuracy bar. This gives you a potential partner or competitive benchmark as you define the regulated infrastructure layer — Obin shows the \"agentic workforce\" framing resonates with institutions and that FinServ-specific controls (audit trails, inspectability) are table stakes for adoption.",
+    evidence: [["Obin AI Emerges from Stealth to Build Agentic Workforce for Financial Institutions", "https://www.businesswire.com/news/home/20260318899337/en/Obin-AI-Emerges-from-Stealth-to-Build-Agentic-Workforce-for-Financial-Institutions"], ["Google and JPMorgan vets build agentic workforce for financial institutions", "https://www.finextra.com/newsarticle/47459/google-and-jpmorgan-vets-build-agentic-workforce-for-financial-institutions"], ["Motive Partners: Why we invested in Obin AI", "https://www.motivepartners.com/insights/the-agentic-workforce-for-finance-why-we-invested-in-obin-ai"]],
+    score: 82,
+    bars: {gap: [30, 35], finserv: [23, 25], stage: [14, 20], team: [15, 20]}
+  },
+  {
+    slug: "armadin",
+    name: "Armadin",
+    url: "https://armadin.com/",
+    oneliner: "Armadin builds autonomous AI cybersecurity agents that continuously simulate attacks and respond to threats without a human in the loop, designed to give defenders an \"agentic army\" to counter AI-powered adversaries.",
+    gap: "AI Safety & Guardrails",
+    stage: "Seed / Series A ($190M)",
+    geo: "United States (San Francisco)",
+    finserv: "Already working with Fortune 100 companies and hired 60+ employees in its first six months. CIA venture arm In-Q-Tel is a backer, signalling national-security-grade trust requirements — the same bar that financial regulators increasingly apply to critical infrastructure. The autonomous red-teaming model (adversarial agent vs. defensive agent) maps directly to the AI-driven fraud and model-attack scenarios that banks and insurers are stress-testing under DORA and the EU AI Act.",
+    team: "Founded by Kevin Mandia (founder of Mandiant, sold to Google for $5.4B in 2022), Travis Lanham (former Google Cloud Security principal engineer), Evan Peña (former Mandiant exec), and David Slater (former Google SecOps engineer). $189.9M raised in combined seed and Series A led by Accel, with GV, Kleiner Perkins, Menlo Ventures, 8VC, Ballistic Ventures, and In-Q-Tel participating. Reported as a record raise for a security startup at such an early stage.",
+    thesis: "Armadin is not a direct FinServ play, but it matters for your thesis in two ways: first, as AI agents gain privileged access to financial systems, autonomous red-teaming becomes the only way to stay ahead of AI-powered attackers — this gives you a potential partner for a \"security-by-design\" narrative around the regulated infrastructure layer. Second, Mandia's credibility and the scale of the raise signals that autonomous AI security is now a consensus investment theme, meaning the compliance and safety controls you'd embed in a regulated agent infrastructure are increasingly investable as standalone categories.",
+    evidence: [["Mandiant's founder just raised $190M for his autonomous AI agent security startup", "https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/"], ["Kevin Mandia's Armadin raises $189.9M for AI-driven cyberattack simulation", "https://siliconangle.com/2026/03/10/kevin-mandias-armadin-raises-record-189-9m-develop-ai-driven-cyberattack-simulation-software/"], ["Armadin Startup: Mandiant Founder's New AI Cybersecurity Venture", "https://www.indexbox.io/blog/kevin-mandia-launches-armadin-with-1899m-funding-for-ai-defense/"]],
+    score: 68,
+    bars: {gap: [22, 35], finserv: [14, 25], stage: [15, 20], team: [17, 20]}
+  },
   {
     slug: "steward",
     name: "Steward",
