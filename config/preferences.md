@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-03-15 | Based on 8 votes (4 upvotes ★★★★–★★★★★, 2 downvotes ★★–★, 2 neutral ★★★)*
+*Last updated: 2026-03-23 | Based on 8 votes (4 upvotes ★★★★–★★★★★, 2 downvotes ★★–★, 2 neutral ★★★) | No new votes cast since 2026-03-15 cycle — confirmed current, no changes to vote-derived signals*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
@@ -86,7 +86,8 @@ Both near-misses scored correctly at the gap level but incorrectly at the produc
 **"Too early" as a temporal modifier (1 occurrence)**
 - kai 4★ ("good but a little early — there's not a lot of agentic infrastructure out there to fix security for yet")
 - Strong interest in the product, but agentic infrastructure deployment density is seen as a precondition. This is a market-timing signal, not a product quality signal. May inform priority (watch vs. engage now) rather than score.
-- *Watch for: Does infrastructure deployment density (number of agent deployments, enterprise agentic product launches) affect how this qualifier is applied over time?*
+- *Market context update (2026-03-20 radar):* The AI Safety & Guardrails market has since exploded — ~$313M raised in a single week across 5 new entrants, Goodfire achieved $1.25B unicorn valuation, and Nvidia open-sourced NemoClaw at GTC. This significantly compresses the "too early" window. The precondition Dave cited (insufficient agentic infrastructure deployment density) is now visibly changing. Kai may warrant a re-evaluation vote.
+- *Watch for: Does a re-vote on Kai after this market inflection produce a 5★? If yes, confirms the temporal qualifier is a dynamic market-density signal rather than a stable preference discount.*
 
 ---
 
@@ -97,3 +98,7 @@ Both near-misses scored correctly at the gap level but incorrectly at the produc
 **Gap quality variation:** The two most consistently upvoted gaps (Agent Auth & Security, AI Safety & Guardrails) are infrastructure-layer gaps. The other four gaps (Compliance, Tax Optimisation, Agent Orchestration, Personal Agent) have mixed or no upvote signals so far. This may indicate the thesis is narrower than six gaps suggest — or that the non-infrastructure gaps require more precise sub-domain calibration before strong candidates emerge.
 
 **Geographic neutrality:** No consistent geographic preference signal yet. Overmind (London) received 5★; TaxDown (Spain/EU) received 2★; t54 Labs (US) received 5★; Stacks (Europe) received 2★. Geography does not predict outcome — product type does.
+
+**Market acceleration signal (2026-03-20 radar — not vote-derived, context only):** The AI Safety & Guardrails market validated dramatically this week with ~$313M in new funding and Goodfire's $1.25B unicorn valuation. Nvidia's NemoClaw open-source release simultaneously proves the category and challenges horizontal differentiation. The thesis must be sharper: the value of the *regulated* layer is fiduciary accountability chains, regulatory reporting primitives, and audit-grade provenance that satisfies FINRA, FCA SM&CR, and EU AI Act — not generic security features that open-source stacks now provide. Separately, Mastercard, Visa, and Google all moved aggressively into agent payment identity in the same week; the startup differentiation opportunity is the compliance/governance overlay atop whichever payment standard wins, not the payment identity layer itself. These signals narrow the territory but confirm it is real.
+
+*Note: These observations are from radar intelligence, not new vote data. They are not applied to scoring until confirmed by vote evidence.*
