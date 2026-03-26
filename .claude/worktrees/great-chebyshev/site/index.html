@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Agentic AI Startup Signals</title>
+<meta content="A curated radar of startups, research, and signals shaping the agentic AI ecosystem in financial services." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* HEADER                                                       */
+    /* ============================================================ */
+    header {
+      padding: 60px 0 44px;
+      background: var(--bg-page);
+    }
+
+    .title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 3.2rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+
+    .edition-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      background: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    header .description {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 10px;
+      max-width: 500px;
+      line-height: 1.55;
+    }
+
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .meta-item .meta-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+    }
+
+    .meta-item .meta-value {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.4rem;
+      color: var(--text-heading);
+      line-height: 1.2;
+    }
+
+    /* ============================================================ */
+    /* NAV                                                          */
+    /* ============================================================ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 244, 239, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+    }
+
+    nav .container {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    nav a {
+      display: block;
+      padding: 13px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+    nav a.active {
+      color: var(--text-heading);
+      border-bottom-color: var(--brown);
+    }
+
+    /* ============================================================ */
+    /* SECTIONS                                                     */
+    /* ============================================================ */
+    section {
+      padding: 44px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+    }
+
+    .section-header .count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ============================================================ */
+    /* TAGS                                                         */
+    /* ============================================================ */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .tag.gap {
+      background: var(--brown-light);
+      color: var(--brown-dark);
+    }
+
+    .tag.reinforces {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .tag.challenges {
+      background: var(--coral-light);
+      color: var(--coral);
+    }
+
+    .tag.new-signal {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .tag.stage {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .tag.geo {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================ */
+    /* BRIEFING                                                     */
+    /* ============================================================ */
+    .briefing-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .briefing-item:last-child { border-bottom: none; }
+
+    .briefing-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .briefing-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .briefing-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .briefing-item .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+    }
+
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    /* ============================================================ */
+    /* STARTUP CARDS                                                */
+    /* ============================================================ */
+    .startup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .startup-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: var(--border-strong);
+    }
+
+    .startup-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .startup-top h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    .score-badge {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+
+    .score-badge .num {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .score-badge .of {
+      font-size: 0.5rem;
+      color: inherit;
+      opacity: 0.6;
+      margin-top: 1px;
+    }
+
+    .score-badge.high {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .score-badge.mid {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .score-badge.low {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    .startup-oneliner {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .startup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .startup-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .detail-block {}
+
+    .detail-block .detail-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .detail-block .detail-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .thesis-note {
+      background: var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+
+    .thesis-note .note-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+
+    .thesis-note p {
+      font-size: 0.88rem;
+      color: var(--accent-dark);
+      line-height: 1.5;
+    }
+
+    .score-bars {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bar-item .bar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.52rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-light);
+    }
+
+    .bar-track {
+      width: 100%;
+      height: 4px;
+      background: var(--bg);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      background: var(--accent);
+      transition: width 0.6s ease;
+    }
+
+    .bar-item .bar-val {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ============================================================ */
+    /* RADAR                                                        */
+    /* ============================================================ */
+    .gap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .gap-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .gap-card .indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      border-radius: 14px 0 0 14px;
+    }
+
+    .gap-card.hot .indicator { background: var(--accent); }
+    .gap-card.warm .indicator { background: var(--amber); }
+    .gap-card.cold .indicator { background: var(--coral); }
+
+    .gap-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-heading);
+      margin-bottom: 10px;
+      padding-left: 8px;
+    }
+
+    .gap-card .gap-stats {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      line-height: 1.9;
+      padding-left: 8px;
+    }
+
+    .gap-card .gap-stats span {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .gap-card .trend {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      margin-top: 10px;
+      padding-left: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .trend.up { color: var(--accent-dark); }
+    .trend.steady { color: var(--amber); }
+    .trend.down { color: var(--coral); }
+
+    /* ============================================================ */
+    /* RESEARCH                                                     */
+    /* ============================================================ */
+    .paper-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .paper-item:last-child { border-bottom: none; }
+
+    .paper-item h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .paper-item .authors {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .paper-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    footer {
+      padding: 48px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 0.76rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    footer strong { color: var(--text-muted); font-weight: 600; }
+    footer a { color: var(--brown); text-decoration: none; }
+    footer a:hover { color: var(--brown-dark); }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 640px) {
+      header { padding: 40px 0 32px; }
+      header h1 { font-size: 2.4rem; }
+      .title-row { flex-direction: column; gap: 8px; }
+      .meta-strip { gap: 16px; }
+      .meta-item .meta-value { font-size: 1.1rem; }
+      .startup-details { grid-template-columns: 1fr; }
+      .gap-grid { grid-template-columns: 1fr; }
+      .score-bars { flex-wrap: wrap; gap: 12px; }
+      .bar-item { min-width: calc(50% - 8px); }
+      .startup-card { padding: 20px; }
+    }
+
+    /* ============================================================ */
+    /* ANIMATIONS                                                   */
+    /* ============================================================ */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .startup-card,
+    .briefing-item,
+    .gap-card,
+    .paper-item {
+      animation: slideUp 0.35s ease-out both;
+    }
+
+    .startup-card:nth-child(2) { animation-delay: 0.05s; }
+    .startup-card:nth-child(3) { animation-delay: 0.1s; }
+    .startup-card:nth-child(4) { animation-delay: 0.15s; }
+    .startup-card:nth-child(5) { animation-delay: 0.2s; }
+
+    /* ── Evidence ── */
+    .startup-evidence {
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: var(--brown-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .evidence-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .evidence-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .evidence-links li a {
+      font-size: 12px;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .evidence-links li a:hover { text-decoration: underline; }
+
+    /* ============================================================ */
+    /* VOTING                                                       */
+    /* ============================================================ */
+    .vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .star {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: var(--border-strong);
+      padding: 0 1px;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+
+    .star:hover,
+    .star.active { color: var(--amber); }
+
+    .star:hover { transform: scale(1.15); }
+
+    .note-toggle {
+      background: none;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .note-toggle:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .vote-status {
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: auto;
+    }
+
+    .vote-status.saving { color: var(--amber); }
+    .vote-status.saved  { color: var(--accent-dark); }
+    .vote-status.error  { color: var(--coral); }
+
+    .note-area {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .note-area textarea {
+      width: 100%;
+      min-height: 64px;
+      padding: 9px 12px;
+      font-size: 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg-page);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+      line-height: 1.5;
+    }
+
+    .note-area textarea:focus { border-color: var(--brown); }
+    .note-area textarea::placeholder { color: var(--text-light); }
+
+    /* Vote badge next to score badge */
+    .vote-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 9px;
+      border-radius: 10px;
+      background: var(--amber-light);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    /* Dim low-rated cards */
+    .startup-card.voted-low {
+      opacity: 0.45;
+      transition: opacity 0.3s;
+    }
+
+    .startup-card.voted-low:hover { opacity: 1; }
+
+    /* ============================================================ */
+    /* FILTER BAR                                                   */
+    /* ============================================================ */
+    .filter-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      background: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .filter-btn.active {
+      background: var(--brown-light);
+      border-color: var(--brown);
+      color: var(--brown-dark);
+    }
+
+    .filter-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      background: var(--bg);
+      padding: 1px 6px;
+      border-radius: 100px;
+      color: var(--text-light);
+    }
+
+    .filter-btn.active .filter-count {
+      background: var(--brown);
+      color: #fff;
+    }
+
+    /* ============================================================ */
+    /* SETTINGS GEAR                                                */
+    /* ============================================================ */
+    #settings-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      z-index: 200;
+    }
+
+    #settings-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    #settings-btn.connected {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    /* ============================================================ */
+    /* TOKEN MODAL                                                  */
+    /* ============================================================ */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 24px;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    .modal h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .modal p a { color: var(--brown); text-decoration: none; }
+    .modal p a:hover { text-decoration: underline; }
+
+    .modal input[type="text"],
+    .modal input[type="password"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      background: var(--bg-page);
+      outline: none;
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .modal input:focus { border-color: var(--brown); }
+
+    .modal-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .btn-primary {
+      padding: 8px 18px;
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--brown-dark); }
+
+    .btn-secondary {
+      padding: 8px 18px;
+      background: none;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .modal-note {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+
+    .vote-attr {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+    }
+
+    #name-prompt {
+      background: var(--brown-light);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    #name-prompt button {
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    #name-prompt button:hover { background: var(--brown-dark); }
+
+  </style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="title-row">
+<h1>Bene Gesserit</h1>
+<span class="edition-badge">Signals Digest</span>
+</div>
+<p class="description">A curated radar of startups, research, and market signals shaping the agentic AI ecosystem in financial services. Updated every two days.</p>
+<div class="meta-strip">
+<div class="meta-item">
+<span class="meta-label">Published</span>
+<span class="meta-value">2026-03-10</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Tracked</span>
+<span class="meta-value">16</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">New</span>
+<span class="meta-value">16</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Papers</span>
+<span class="meta-value">4</span>
+</div>
+</div>
+</div>
+</header>
+<nav>
+<div class="container">
+<a class="active" href="#briefing">Briefing</a>
+<a href="#startups">Startups</a>
+<a href="#radar">Radar</a>
+<a href="#research">Research</a>
+</div>
+</nav>
+<!-- BRIEFING -->
+<section id="briefing">
+<div class="container">
+<div class="section-header">
+<h2>Briefing</h2>
+<span class="count">7 signals</span>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents" style="color: var(--brown); text-decoration: none;" target="_blank">Dify Raises $30M Pre-A to Scale Open-Source Agentic Workflow Platform</a></h3>
+<p>Dify, an open-source platform for building and deploying agentic AI applications, closed a $30M Series Pre-A valuing the company at $180M, with the platform now running on over 1.4 million machines worldwide and used by 2,000+ teams and 280 enterprises. The funding accelerates work on agentic workflow tooling that lets teams build, deploy, and operate multi-step AI applications without deep ML expertise.</p>
+<a class="source-link" href="https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/" style="color: var(--brown); text-decoration: none;" target="_blank">AppZen Raises $180M Series D With Amazon and Salesforce as Customers</a></h3>
+<p>AppZen, which has built an agentic AI platform for enterprise finance teams automating expense, procurement, and AP workflows, raised $180M in a Series D led by Riverwood Capital, bringing total funding to $290M. The company counts 500+ global enterprises and 65 Fortune 500 firms as customers, including JPMorgan Chase, Amazon, and Airbus.</p>
+<a class="source-link" href="https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/" style="color: var(--brown); text-decoration: none;" target="_blank">FINRA 2026 Annual Regulatory Oversight Report Flags AI Agents as Emerging Risk</a></h3>
+<p>FINRA's 2026 Annual Regulatory Oversight Report formally identifies AI agents as an emerging trend presenting material risks — specifically citing agents acting beyond user intent and unintentional disclosure of sensitive data. This marks the first time a major US securities regulator has explicitly named autonomous agents in its supervisory framework.</p>
+<a class="source-link" href="https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/" style="color: var(--brown); text-decoration: none;" target="_blank">FCA Launches Mills Review Into AI's Impact on Retail Financial Services</a></h3>
+<p>The UK Financial Conduct Authority launched the Mills Review on January 27, 2026, a formal examination of how advances in AI — including agentic and autonomous systems — could transform retail financial services. The FCA signalled guidance on audit trails and human-in-the-loop protocols is likely in 2026, acknowledging bias, concentration risk, and third-party dependencies as live issues.</p>
+<a class="source-link" href="https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3><a href="https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services" style="color: var(--brown); text-decoration: none;" target="_blank">UK Treasury Committee: Government and Regulators "Not Doing Enough" on AI Risks in Finance</a></h3>
+<p>The UK House of Commons Treasury Committee concluded that the UK government, FCA, and Bank of England are failing to adequately manage consumer and systemic risks from rapid AI adoption, with AI now used by 75% of UK financial firms. The report strengthens the case that agent-native compliance tooling and AI governance infrastructure are near-term requirements, not optional overlays.</p>
+<a class="source-link" href="https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">AI Safety &amp; Guardrails</span>
+<span class="tag new-signal">New Signal</span>
+</div>
+<h3><a href="https://emerline.com/blog/how-to-build-fintech-ai-agent-usa" style="color: var(--brown); text-decoration: none;" target="_blank">Professional Liability Insurance for AI Agents Emerges as New Market Category</a></h3>
+<p>A new category of professional liability insurance for AI agents has appeared in the US market in 2026, with insurers now requiring proof of prompt injection protection and data privacy shields as conditions for coverage. Banks and fintechs in several US states are beginning to require such insurance as a mandatory condition for partnership — creating a new compliance layer that directly benefits AI safety and guardrails vendors.</p>
+<a class="source-link" href="https://emerline.com/blog/how-to-build-fintech-ai-agent-usa">Read source →</a>
+</div>
+<div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag challenges">Challenges</span>
+</div>
+<h3><a href="https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/" style="color: var(--brown); text-decoration: none;" target="_blank">Oracle Reimagines Banking for the AI Era With New Agentic Platform</a></h3>
+<p>Oracle announced a new agentic platform specifically for banking, positioning itself as infrastructure for AI-driven financial operations across customer engagement, risk, and compliance workflows. The announcement underlines accelerating big-tech competition in the agentic banking infrastructure space, raising the stakes for early-stage startups to differentiate before enterprise vendors consolidate the opportunity.</p>
+<a class="source-link" href="https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/">Read source →</a>
+</div>
+</div>
+</section>
+<!-- STARTUPS -->
+<section id="startups">
+<div class="container">
+<div class="section-header">
+<h2>Startup Pipeline</h2>
+<span class="count">16 candidates</span>
+</div>
+<!-- #1 Overmind — Score 90 -->
+
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all">All <span class="filter-count">16</span></button>
+<button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
+<button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">16</span></button>
+</div>
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://overmindlab.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Overmind</a></h3>
+<div class="score-badge high">
+<span class="num">90</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI agent supervision and monitoring platform built by a former MI5 officer, targeting regulated industries</p>
+<div class="startup-tags">
+<span class="tag gap">AI Safety &amp; Guardrails</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">London, UK</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Targets fintech, legal, and healthcare — regulated-industry DNA; agentic AI supervision specifically for compliance-heavy contexts</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Founded by former MI5 officer; security/intelligence background implies deep expertise in monitoring, audit, and compliance</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Overmind is building the supervision layer that every regulated AI agent deployment will need. As Fidelity positions itself as the infrastructure layer for agentic AI, having a partner that provides production monitoring, audit trails, and safety guarantees for agents is essential. The MI5 pedigree adds credibility in security-critical contexts. London HQ aligns with the Europe-preferred geography.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.eu-startups.com/2026/02/former-mi5-officer-lands-e2-3-million-for-ai-agent-security-startup-overmind/" style="color: var(--brown);" target="_blank">EU Startups</a></li></ul></div>
+<div class="vote-row" data-slug="overmind"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 97.1%"></div></div>
+<span class="bar-val">34/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">20/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+</div>
+</div>
+<!-- #2 Bretton AI — Score 88 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.bretton.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Bretton AI</a></h3>
+<div class="score-badge high">
+<span class="num">88</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Agentic AI platform that automates high-volume financial crime compliance workflows — AML investigations, KYC reviews, and fraud screening — at regulated banks and fintechs.</p>
+<div class="startup-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag stage">Series B</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">In production at OCC/FDIC/Federal Reserve-regulated banks; customers include Robinhood, Mercury, Gusto, Lead Bank; 1.2M+ investigations completed; $10M+ compliance cost savings documented</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Rebranded from Greenlite AI (Y Combinator alumni); backed by Sapphire Ventures (board seat), Greylock, Thomson Reuters Ventures, Canvas Ventures; TIAA Ventures as strategic investor</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Bretton AI is the clearest early proof point that agent-native compliance is production-ready in regulated financial services — exactly the kind of infrastructure Fidelity would need to safely deploy AI agents in supervised workflows. Their audit trail and supervised investigation model maps directly to what any regulated agentic deployment requires.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/02/11/ai-compliance-firm-bretton-ai-lands-75m/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li><li><a href="https://fortune.com/2026/02/10/bretton-ai-money-laundering-compliance-financial-services-venture-sapphire-greylock/" style="color: var(--brown);" target="_blank">Fortune</a></li><li><a href="https://www.businesswire.com/news/home/20260209387593/en/Bretton-AI-Raises-$75M-Series-B-Rebrands-from-Greenlite-AI-to-Build-the-AI-Standard-for-Financial-Crime" style="color: var(--brown);" target="_blank">Business Wire</a></li></ul></div>
+<div class="vote-row" data-slug="bretton-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
+<span class="bar-val">33/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 96%"></div></div>
+<span class="bar-val">24/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 75%"></div></div>
+<span class="bar-val">15/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+</div>
+</div>
+<!-- #3 t54 Labs — Score 88 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.t54.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">t54 Labs</a></h3>
+<div class="score-badge high">
+<span class="num">88</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Identity, verification, and compliance tools for AI agents, backed by Franklin Templeton and Ripple</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Authentication &amp; Security</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Franklin Templeton and Ripple as investors signal deep finserv alignment; building compliance tooling specifically for AI agents in financial contexts</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Founded Jan 2025; Franklin Templeton + Ripple backing implies strong finserv network</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>As AI agents begin transacting on behalf of humans in financial services, the identity and trust layer becomes critical infrastructure. t54 Labs is building exactly this — and their investor roster (Franklin Templeton, Ripple) signals that incumbents already see the need. This is a natural complement to Fidelity's infrastructure layer thesis.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.theblock.co/post/391273/ripple-franklin-templeton-ai-agent-trust-startup-t54-labs" style="color: var(--brown);" target="_blank">The Block</a></li></ul></div>
+<div class="vote-row" data-slug="t54-labs"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
+<span class="bar-val">33/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div>
+<span class="bar-val">23/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+<span class="bar-val">14/20</span>
+</div>
+</div>
+</div>
+<!-- #4 Oasis Security — Score 84 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.oasis.security" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Oasis Security</a></h3>
+<div class="score-badge high">
+<span class="num">84</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Non-human identity and agentic access management platform that discovers, secures, and governs AI agent identities, service accounts, API keys, and secrets across enterprise cloud and on-prem environments.</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Authentication &amp; Security</span>
+<span class="tag stage">Series A</span>
+<span class="tag geo">Tel Aviv / Global</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Dedicated financial services product; explicitly supports PCI DSS 4.0, SOC 2, GDPR compliance; targets core banking, trading, and payment systems; launched Agentic Access Management (AAM) for AI agents</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Founded by Danny Brickman and Amit Zimerman, both alumni of Israeli Intelligence Unit 81; backed by Sequoia Capital, Accel, and Cyberstarts</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>As Fidelity moves toward deploying AI agents that act on behalf of advisors and clients, every agent action needs to be authenticated, permissioned, and auditable. Oasis Security's AAM platform solves exactly this — providing the identity trust layer that makes agentic deployments safe in regulated environments.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.prnewswire.com/news-releases/oasis-security-launches-agentic-access-management-the-first-identity-solution-built-for-ai-agents-302619375.html" style="color: var(--brown);" target="_blank">PR Newswire – AAM launch</a></li><li><a href="https://www.oasis.security/resources/oasis-security-for-financial-services" style="color: var(--brown);" target="_blank">Oasis – Financial Services</a></li><li><a href="https://techcrunch.com/2024/01/31/oasis-security-leaves-stealth-with-40m-to-lock-down-the-wild-west-of-non-human-identity-management/" style="color: var(--brown);" target="_blank">TechCrunch</a></li></ul></div>
+<div class="vote-row" data-slug="oasis-security"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
+<span class="bar-val">33/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 72%"></div></div>
+<span class="bar-val">18/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+<span class="bar-val">17/20</span>
+</div>
+</div>
+</div>
+<!-- #5 Stacks — Score 82 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://stacks.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Stacks</a></h3>
+<div class="score-badge high">
+<span class="num">82</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Agentic AI platform for enterprise finance teams automating workflows like reconciliation, reporting, and forecasting</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag stage">Series A</span>
+<span class="tag geo">Europe</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">30 enterprise finance customers including Pleo (fintech) and Cleo (fintech); purpose-built for CFO/finance teams</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Backed by Lightspeed, EQT Ventures, General Catalyst, S16VC</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Stacks validates the thesis that agentic AI is ready for production finance workflows. As enterprise finance teams adopt orchestrated AI agents, they'll need regulated infrastructure partners like Fidelity to connect to for execution, custody, and data.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/02/20/stacks-raises-23m-series-a-to-scale-agentic-ai/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li><li><a href="https://www.fintechfutures.com/venture-capital-funding/stacks-raises-23m-series-a" style="color: var(--brown);" target="_blank">Fintech Futures</a></li></ul></div>
+<div class="vote-row" data-slug="stacks"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">28/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+<span class="bar-val">22/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+<span class="bar-val">14/20</span>
+</div>
+</div>
+</div>
+<!-- #4 Unit21 — Score 81 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://unit21.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Unit21</a></h3>
+<div class="score-badge high">
+<span class="num">81</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI-powered compliance platform for transaction monitoring, screening, and due diligence with 99% accuracy on 300K+ alerts</p>
+<div class="startup-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag stage">Series B+</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Very strong — RegTech100 listed; AI Agent has reviewed 300,000+ alerts with 99% accuracy; serves banks and fintechs directly</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Established company with proven product; RegTech100 recognition</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Unit21 proves that agent-native compliance is production-ready. Their 99% accuracy across 300K+ alerts demonstrates the viability of AI agents in regulated compliance workflows — exactly the kind of infrastructure Fidelity will need as it enables third-party agents.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/02/20/were-going-to-lose-if-we-dont-use-ai-unit21-founder-warns-banks-on-rising-fraud-threats/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li></ul></div>
+<div class="vote-row" data-slug="unit21"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 91.4%"></div></div>
+<span class="bar-val">32/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+<span class="bar-val">25/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+<span class="bar-val">10/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+<span class="bar-val">14/20</span>
+</div>
+</div>
+</div>
+<!-- #5 Mine (MoneyGPT) — Score 78 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://usemine.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Mine (MoneyGPT)</a></h3>
+<div class="score-badge high">
+<span class="num">78</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI personal finance agent for young adults that learns spending habits and provides autonomous financial advice</p>
+<div class="startup-tags">
+<span class="tag gap">Personal Agent</span>
+<span class="tag stage">Series A</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Direct finserv product — personal finance platform with AI agent (MoneyGPT) handling credit, saving, spending advice; connected to financial institutions</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Rebranded from Fizz; demonstrated pivot capability; no specific founder pedigree found</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Mine/MoneyGPT represents exactly the "front door" personal agent the thesis describes — an AI that handles financial discovery, planning, and execution on behalf of consumers. These agents will need regulated counterparties like Fidelity for execution. Partnership potential is high.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.pymnts.com/news/investment-tracker/2026/mine-raises-14-million-and-launches-ai-personal-finance-agent/" style="color: var(--brown);" target="_blank">PYMNTS.com</a></li></ul></div>
+<div class="vote-row" data-slug="mine-moneygpt"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
+<span class="bar-val">30/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+<span class="bar-val">22/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+<span class="bar-val">10/20</span>
+</div>
+</div>
+</div>
+<!-- #6 Dyna.Ai — Score 74 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://dyna.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Dyna.Ai</a></h3>
+<div class="score-badge high">
+<span class="num">74</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI-as-a-Service platform delivering agentic AI solutions for banking and financial services</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag stage">Series A</span>
+<span class="tag geo">Singapore / Middle East</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Strong — specifically serves banking and financial services; agentic suite for financial institutions</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Lion X Ventures led round; expanding to Saudi market</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Dyna.Ai shows agentic AI is going live in banking across Asia-Pacific and the Middle East. Their platform approach — AI-as-a-Service for banks — could complement Fidelity's infrastructure layer in non-US markets.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://fintech.global/2026/03/03/dyna-ai-raises-eight-figure-series-a-to-scale-agentic-ai/" style="color: var(--brown);" target="_blank">Fintech.Global</a></li></ul></div>
+<div class="vote-row" data-slug="dyna-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 74.3%"></div></div>
+<span class="bar-val">26/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+<span class="bar-val">22/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+<span class="bar-val">10/20</span>
+</div>
+</div>
+</div>
+<!-- #7 Tendi — Score 74 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://tendi.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Tendi</a></h3>
+<div class="score-badge high">
+<span class="num">74</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI-powered personal financial advisor trained to outperform on the CFP exam, connected to 12,000+ financial institutions</p>
+<div class="startup-tags">
+<span class="tag gap">Personal Agent</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US / Global</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Strong — trained specifically on financial planning; scores higher than all other AI models on CFP exam; connected to 12,000+ financial institutions</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">No data found on founding team</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Tendi represents a pure-play personal finance agent that could serve as a "front door" connecting consumers to Fidelity's infrastructure. The CFP-level training and 12,000+ institution connections demonstrate serious finserv commitment.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://tendi.ai/" style="color: var(--brown);" target="_blank">Tendi.ai</a></li></ul></div>
+<div class="vote-row" data-slug="tendi"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
+<span class="bar-val">30/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+<span class="bar-val">22/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+<span class="bar-val">14/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+<span class="bar-val">8/20</span>
+</div>
+</div>
+</div>
+<!-- #8 Guardrails AI — Score 73 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://guardrailsai.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Guardrails AI</a></h3>
+<div class="score-badge high">
+<span class="num">73</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Open-source framework for adding safety guardrails and validation to LLM outputs, applicable to financial services</p>
+<div class="startup-tags">
+<span class="tag gap">AI Safety &amp; Guardrails</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Bloomberg Beta as investor signals finserv relevance; general-purpose guardrails framework applicable to finance; no named finserv customers</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Backed by Bloomberg Beta and GitHub; open-source community traction</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Guardrails AI addresses a non-negotiable requirement for deploying AI agents in financial services: ensuring outputs are safe, validated, and hallucination-free. As Fidelity enables third-party agents on its platform, a guardrails layer becomes essential infrastructure.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://tracxn.com/d/companies/guardrailsai/__pQbLepOnDmjgxrW3Pd8s3NWNKgThaNiorz2ZzWAOrFk/funding-and-investors" style="color: var(--brown);" target="_blank">Tracxn</a></li></ul></div>
+<div class="vote-row" data-slug="guardrails-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">28/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div>
+<span class="bar-val">15/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div>
+<span class="bar-val">12/20</span>
+</div>
+</div>
+</div>
+<!-- #9 Uptiq — Score 73 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.uptiq.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Uptiq</a></h3>
+<div class="score-badge high">
+<span class="num">73</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Purpose-built AI agent platform for financial institutions with embedded compliance and regulatory guardrails</p>
+<div class="startup-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag stage">Early</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Very strong — purpose-built for financial institutions; compliance and regulatory guardrails embedded by design</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">No specific team data found</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Uptiq's approach — embedding compliance guardrails directly into AI agents for financial services — validates the thesis that regulated infrastructure is the key differentiator. A partner like Uptiq could help Fidelity ensure third-party agents meet compliance requirements.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.uptiq.ai/" style="color: var(--brown);" target="_blank">Uptiq.ai</a></li></ul></div>
+<div class="vote-row" data-slug="uptiq"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 85.7%"></div></div>
+<span class="bar-val">30/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div>
+<span class="bar-val">23/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div>
+<span class="bar-val">12/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+<span class="bar-val">8/20</span>
+</div>
+</div>
+</div>
+<!-- #10 Alter — Score 71 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://alterai.dev" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Alter</a></h3>
+<div class="score-badge high">
+<span class="num">71</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Zero-trust identity and access control platform purpose-built for AI agents with fine-grained authorization and real-time guardrails</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Authentication &amp; Security</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Agent authentication and authorization are critical for finserv; no explicit finserv customers mentioned but use case is directly applicable</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">No specific team data found</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Alter is building the zero-trust layer for AI agents — wrapping every tool call in authentication and authorization. As Fidelity becomes the infrastructure layer that agents connect to, this exact capability is needed to ensure only authorized agents can transact.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://dev.to/composiodev/4-best-ai-agent-authentication-platforms-to-consider-in-2026-32o8" style="color: var(--brown);" target="_blank">Composio / dev.to</a></li></ul></div>
+<div class="vote-row" data-slug="alter"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 94.3%"></div></div>
+<span class="bar-val">33/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 56%"></div></div>
+<span class="bar-val">14/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+<span class="bar-val">8/20</span>
+</div>
+</div>
+</div>
+<!-- #13 Natural — Score 70 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.natural.finance" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Natural</a></h3>
+<div class="score-badge high">
+<span class="num">70</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Payment infrastructure purpose-built for agentic workflows — enabling AI agents to transact autonomously on behalf of businesses, consumers, and other agents, with built-in approval chains and complex workflow support.</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Core product is financial infrastructure for agents; backed by fintech operators including CEOs/CTOs of Mercury, Ramp, Unit, and Emprise Bank — deep finserv operator network</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">Strong fintech angel investor network (Mercury, Ramp, Unit, Vercel CEOs/CTOs); founder identities not publicly surfaced</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>If Fidelity becomes the "regulated infrastructure layer" for AI agents, those agents will eventually need to make payments and transactions — Natural is building the plumbing for exactly that use case, making it a potential complementary infrastructure partner.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.businesswire.com/news/home/20251023151615/en/Fintech-Natural-Launches-With-$9.8M-Seed-Round-to-Power-Agentic-Payments" style="color: var(--brown);" target="_blank">Business Wire – launch</a></li><li><a href="https://www.pymnts.com/artificial-intelligence-2/2025/from-agentic-payments-to-ai-infrastructure-this-weeks-startup-funding/" style="color: var(--brown);" target="_blank">PYMNTS</a></li></ul></div>
+<div class="vote-row" data-slug="natural-payments"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 62.9%"></div></div>
+<span class="bar-val">22/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 84%"></div></div>
+<span class="bar-val">21/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">16/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 55%"></div></div>
+<span class="bar-val">11/20</span>
+</div>
+</div>
+</div>
+<!-- #14 Mezzi — Score 70 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://www.mezzi.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Mezzi</a></h3>
+<div class="score-badge high">
+<span class="num">70</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI-powered tax-loss harvesting and portfolio optimisation platform for individual investors</p>
+<div class="startup-tags">
+<span class="tag gap">Tax Optimisation</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Direct finserv product — real-time portfolio monitoring, wash sale prevention, automated trade execution, consolidated account analysis</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">No specific team data found</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Mezzi demonstrates that AI-driven tax optimisation is productised and consumer-ready. As AI agents handle more portfolio management, tax-aware execution becomes a critical capability — and a natural extension of Fidelity's infrastructure layer.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://www.mezzi.com/blog/ai-tools-for-tax-loss-harvesting-in-portfolios" style="color: var(--brown);" target="_blank">Mezzi blog – AI tools for TLH</a></li><li><a href="https://www.mezzi.com/blog/ai-driven-tax-loss-harvesting-long-term-roi" style="color: var(--brown);" target="_blank">Mezzi blog – AI-driven TLH ROI</a></li></ul></div>
+<div class="vote-row" data-slug="mezzi"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">28/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">20/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+<span class="bar-val">14/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+<span class="bar-val">8/20</span>
+</div>
+</div>
+</div>
+<!-- #12 Hive Tax AI — Score 68 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://hivetax.ai" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Hive Tax AI</a></h3>
+<div class="score-badge mid">
+<span class="num">68</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">AI-powered tax planning platform for high-net-worth individuals and tax professionals with agentic workflow automation</p>
+<div class="startup-tags">
+<span class="tag gap">Tax Optimisation</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Direct finserv product — tax planning, multi-state income handling, automated tax-loss harvesting; targets HNW individuals and tax professionals</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">No specific team data found</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns. As Fidelity's agents handle portfolio management, tax-aware execution becomes a critical integration point.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://hivetax.ai/smart-tax-loss-harvesting-tools-tips-and-tactics/" style="color: var(--brown);" target="_blank">Hive Tax AI blog</a></li></ul></div>
+<div class="vote-row" data-slug="hive-tax-ai"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">28/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+<span class="bar-val">20/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div>
+<span class="bar-val">12/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+<span class="bar-val">8/20</span>
+</div>
+</div>
+</div>
+<!-- #13 Trace — Score 65 -->
+<div class="startup-card">
+<div class="startup-top">
+<h3><a href="https://trace.so" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">Trace</a></h3>
+<div class="score-badge mid">
+<span class="num">65</span>
+<span class="of">/100</span>
+</div>
+</div>
+<p class="startup-oneliner">Platform solving the AI agent adoption problem in enterprise by enabling reliable agent deployment and monitoring</p>
+<div class="startup-tags">
+<span class="tag gap">Agent Orchestration</span>
+<span class="tag stage">Seed</span>
+<span class="tag geo">US</span>
+</div>
+<div class="startup-details">
+<div class="detail-block">
+<div class="detail-label">FinServ Signal</div>
+<div class="detail-value">Enterprise focus; no explicit finserv customers mentioned but agent adoption/monitoring is horizontal with clear finserv applicability</div>
+</div>
+<div class="detail-block">
+<div class="detail-label">Team</div>
+<div class="detail-value">TechCrunch coverage suggests credible founding team; limited public details</div>
+</div>
+</div>
+<div class="thesis-note">
+<div class="note-label">Why this matters</div>
+<p>Trace addresses a real bottleneck: getting AI agents from pilot to production. As Fidelity builds its agent infrastructure, tools that make agent deployment reliable and monitorable become valuable partners.</p>
+</div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links"><li><a href="https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/" style="color: var(--brown);" target="_blank">TechCrunch</a></li></ul></div>
+<div class="vote-row" data-slug="trace"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars">
+<div class="bar-item">
+<span class="bar-label">Gap Fit</span>
+<div class="bar-track"><div class="bar-fill" style="width: 71.4%"></div></div>
+<span class="bar-val">25/35</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">FinServ</span>
+<div class="bar-track"><div class="bar-fill" style="width: 48%"></div></div>
+<span class="bar-val">12/25</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Stage</span>
+<div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+<span class="bar-val">18/20</span>
+</div>
+<div class="bar-item">
+<span class="bar-label">Team</span>
+<div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+<span class="bar-val">10/20</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RADAR -->
+<section id="radar">
+<div class="container">
+<div class="section-header">
+<h2>Radar</h2>
+<span class="count">Gap coverage</span>
+</div>
+<div class="gap-grid">
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>Agent Orchestration</h4>
+<div class="gap-stats">
+            Tracked: <span>4</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>4</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>Agent Authentication &amp; Security</h4>
+<div class="gap-stats">
+            Tracked: <span>3</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>3</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>AI Safety &amp; Guardrails</h4>
+<div class="gap-stats">
+            Tracked: <span>2</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>2</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>Compliance</h4>
+<div class="gap-stats">
+            Tracked: <span>3</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>3</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>Personal Agent</h4>
+<div class="gap-stats">
+            Tracked: <span>2</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>2</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+<div class="gap-card hot">
+<div class="indicator"></div>
+<h4>Tax Optimisation</h4>
+<div class="gap-stats">
+            Tracked: <span>2</span><br/>
+            Shortlisted: <span>0</span><br/>
+            New: <span>2</span>
+</div>
+<div class="trend up">Active ↑</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RESEARCH -->
+<section id="research">
+<div class="container">
+<div class="section-header">
+<h2>Research</h2>
+<span class="count">4 papers</span>
+</div>
+<div class="paper-item">
+<h4><a href="https://arxiv.org/abs/2601.00818" style="color: var(--brown); text-decoration: none;" target="_blank">Agentic AI for Autonomous, Explainable, and Real-Time Credit Risk Decision-Making</a></h4>
+<div class="authors">arXiv preprint (2601.00818) · 2026-03-10</div>
+<p>Presents a multi-agent framework for credit risk assessment where agents operate with reinforcement learning, natural language reasoning, explainable AI modules, and real-time data pipelines — enabling fully autonomous yet auditable credit decisions without continuous human supervision. Directly validates the Personal Agent and Compliance gap categories.</p>
+</div>
+<div class="paper-item">
+<h4><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5803628" style="color: var(--brown); text-decoration: none;" target="_blank">Agentic Artificial Intelligence in Finance: A Comprehensive Survey</a></h4>
+<div class="authors">Irene Aldridge, Jolie An, Riley Burke, Michael Cao et al. · 2026-03-09</div>
+<p>Comprehensive survey of agentic AI applications across finance, covering autonomous trading, wealth management, risk management, and compliance. Maps the landscape of how AI agents are transforming financial services from chatbot-era to fully autonomous operational agents — providing the academic foundation for the transition from passive AI to agentic AI in finance.</p>
+</div>
+<div class="paper-item">
+<h4><a href="https://arxiv.org/html/2512.11933v1" style="color: var(--brown); text-decoration: none;" target="_blank">The Agentic Regulator: Risks for AI in Finance and a Proposed Agent-based Framework for Governance</a></h4>
+<div class="authors">Multiple authors · 2026-03-09</div>
+<p>Proposes an agent-based framework for AI governance in financial services, addressing the risks of agentic AI deployment. Argues that regulators themselves should adopt agentic approaches to keep pace with AI-driven financial services — a "fight fire with fire" approach to governance. Directly validates the Compliance gap and regulatory urgency.</p>
+</div>
+<div class="paper-item">
+<h4><a href="https://arxiv.org/abs/2502.05439" style="color: var(--brown); text-decoration: none;" target="_blank">Agentic AI Systems Applied to Tasks in Financial Services: Modeling and Model Risk Management Crews</a></h4>
+<div class="authors">Multiple authors · 2026-03-09</div>
+<p>Explores agentic crew workflows with human-in-the-loop modules for financial modeling and model risk management. The modeling crew uses specialized agents — a judge agent plus agents for EDA, feature engineering, model selection, training, evaluation, and documentation — demonstrating that multi-agent collaboration can handle complex regulated financial tasks.</p>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar .</p>
+<p>Powered by Claude. Published on GitHub Pages. Refreshed every two days.</p>
+</div>
+</footer>
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (pageYOffset >= s.offsetTop - 60) current = s.id; });
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+    });
+    navLinks.forEach(l => l.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(l.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    }));
+  </script>
+
+  <script>
+    /* ── Worker URL — update this after deploying worker.js ── */
+    const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
+
+    /* ── State ─────────────────────────────────────────────── */
+    let voter  = localStorage.getItem('bg_voter_name') || '';
+    let votes  = {};
+
+    /* ── Worker API ─────────────────────────────────────────── */
+    async function loadVotes() {
+      try {
+        const r = await fetch(`${WORKER_URL}/votes`);
+        if (!r.ok) throw new Error(`${r.status}`);
+        const data = await r.json();
+        votes = data.votes || {};
+      } catch (e) {
+        console.warn('loadVotes:', e);
+        votes = {};
+      }
+      renderAll();
+    }
+
+    async function saveVote(slug) {
+      const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
+      const st   = card.querySelector('.vote-status');
+      st.textContent = 'Saving…'; st.className = 'vote-status saving';
+
+      try {
+        const r = await fetch(`${WORKER_URL}/votes`, {
+          method:  'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            slug,
+            stars:  votes[slug]?.stars ?? 0,
+            note:   votes[slug]?.note  ?? '',
+            voter:  voter || 'anonymous',
+          }),
+        });
+        if (!r.ok) throw new Error(`${r.status}: ${await r.text()}`);
+        const data = await r.json();
+        votes = data.votes || votes;
+        renderAll();
+        st.textContent = 'Saved ✓'; st.className = 'vote-status saved';
+        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
+      } catch (e) {
+        console.error('saveVote:', e);
+        st.textContent = 'Error — is the Worker deployed?';
+        st.className = 'vote-status error';
+        setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
+      }
+    }
+
+    /* ── Vote actions ───────────────────────────────────────── */
+    function setStars(slug, val) {
+      if (!votes[slug]) votes[slug] = {};
+      votes[slug].stars    = val === (votes[slug].stars || 0) ? 0 : val;
+      votes[slug].voted_at = new Date().toISOString();
+      renderCard(slug);
+      saveVote(slug);
+      applyFilter();
+    }
+
+    function setNote(slug, text) {
+      if (!votes[slug]) votes[slug] = {};
+      votes[slug].note     = text;
+      votes[slug].voted_at = new Date().toISOString();
+    }
+
+    /* ── Render ─────────────────────────────────────────────── */
+    function renderCard(slug) {
+      const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+      if (!row) return;
+      const v     = votes[slug] || {};
+      const stars = v.stars || 0;
+      const card  = row.closest('.startup-card');
+
+      /* stars */
+      row.querySelectorAll('.star').forEach(btn =>
+        btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars)
+      );
+
+      /* note textarea (don't clobber while typing) */
+      const ta = row.querySelector('textarea');
+      if (ta && !ta._focused) ta.value = v.note || '';
+
+      /* voter attribution below note toggle */
+      let attr = row.querySelector('.vote-attr');
+      if (v.voter && v.voted_at) {
+        if (!attr) {
+          attr = document.createElement('span');
+          attr.className = 'vote-attr';
+          row.querySelector('.vote-status').insertAdjacentElement('beforebegin', attr);
+        }
+        const d = new Date(v.voted_at);
+        const fmt = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+        attr.textContent = `${v.voter} · ${fmt}`;
+      } else if (attr) {
+        attr.remove();
+      }
+
+      /* badge */
+      const top = card.querySelector('.startup-top');
+      let badge = top.querySelector('.vote-badge');
+      if (stars > 0) {
+        if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
+        badge.textContent  = '★'.repeat(stars);
+        badge.dataset.stars = stars;
+      } else if (badge) {
+        badge.remove();
+      }
+
+      /* dim low */
+      card.classList.toggle('voted-low',  stars > 0 && stars <= 2);
+      card.classList.toggle('voted-high', stars >= 4);
+    }
+
+    function renderAll() {
+      document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug));
+      updateFilterCounts();
+    }
+
+    /* ── Filter ─────────────────────────────────────────────── */
+    let activeFilter = 'all';
+
+    function applyFilter(f) {
+      if (f) activeFilter = f;
+      document.querySelectorAll('.filter-btn').forEach(b =>
+        b.classList.toggle('active', b.dataset.filter === activeFilter)
+      );
+      document.querySelectorAll('.startup-card').forEach(card => {
+        const slug  = card.querySelector('.vote-row')?.dataset.slug;
+        const voted = slug && votes[slug]?.stars;
+        let show = true;
+        if (activeFilter === 'voted')   show = !!voted;
+        if (activeFilter === 'unvoted') show = !voted;
+        card.style.display = show ? '' : 'none';
+      });
+      updateFilterCounts();
+    }
+
+    function updateFilterCounts() {
+      const cards   = [...document.querySelectorAll('.startup-card')];
+      const voted   = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.stars).length;
+      const unvoted = cards.length - voted;
+      const set = (f, n) => { const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`); if (b) b.textContent = n; };
+      set('all', cards.length); set('voted', voted); set('unvoted', unvoted);
+    }
+
+    /* ── Settings modal (name only) ─────────────────────────── */
+    function openSettings() { var m=document.getElementById('settings-modal'); m.removeAttribute('hidden'); m.style.display='flex'; var inp=document.getElementById('voter-name-input'); if(inp){inp.value=voter; inp.focus();} }
+    function closeSettings() { var m=document.getElementById('settings-modal'); m.setAttribute('hidden',''); m.style.display='none'; }
+
+    function saveSettings() {
+      try { voter = (document.getElementById('voter-name-input').value || '').trim(); } catch(e) {}
+      try { localStorage.setItem('bg_voter_name', voter); } catch(e) {}
+      closeSettings();
+      try { updateGearState(); } catch(e) {}
+    }
+
+    function updateGearState() {
+      const gear = document.getElementById('settings-btn');
+      if (!gear) return;
+      gear.title = voter
+        ? `Voting as: ${voter} (click to change)`
+        : 'Set your name for vote attribution';
+      gear.classList.toggle('connected', !!voter);
+    }
+
+    /* ── Wire events ────────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', () => {
+      updateGearState();
+
+      document.getElementById('settings-modal')
+        .addEventListener('click', e => { if (e.target.id === 'settings-modal') closeSettings(); });
+      document.getElementById('voter-name-input')
+        .addEventListener('keydown', e => { if (e.key === 'Enter') saveSettings(); });
+      document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+      document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+      document.getElementById('settings-btn').addEventListener('click', openSettings);
+
+      /* stars */
+      document.querySelectorAll('.star').forEach(btn =>
+        btn.addEventListener('click', function () {
+          setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
+        })
+      );
+
+      /* note toggle */
+      document.querySelectorAll('.note-toggle').forEach(btn =>
+        btn.addEventListener('click', function () {
+          const row  = this.closest('.vote-row');
+          const area = row.querySelector('.note-area');
+          const open = area.hidden;
+          area.hidden      = !open;
+          this.textContent  = open ? '− Hide note' : '+ Add note';
+          if (open) row.querySelector('textarea').focus();
+        })
+      );
+
+      /* note autosave on blur */
+      document.querySelectorAll('.note-area textarea').forEach(ta => {
+        ta.addEventListener('focus', function () { this._focused = true; });
+        ta.addEventListener('blur',  function () {
+          this._focused = false;
+          const slug = this.closest('.vote-row').dataset.slug;
+          setNote(slug, this.value);
+          if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
+        });
+      });
+
+      /* filter */
+      document.querySelectorAll('.filter-btn').forEach(btn =>
+        btn.addEventListener('click', function () { applyFilter(this.dataset.filter); })
+      );
+
+      /* first-time name prompt */
+      if (!voter) {
+        setTimeout(() => {
+          const banner = document.getElementById('name-prompt');
+          if (banner) banner.hidden = false;
+        }, 1200);
+      }
+
+      loadVotes();
+    });
+  </script>
+
+
+
+<button id="settings-btn" title="Set your name for vote attribution" onclick="openSettings()">⚙</button>
+
+<div class="modal-backdrop" id="settings-modal" hidden="">
+  <div class="modal">
+    <h3>Your name</h3>
+    <p>
+      Enter your name or initials so votes show who rated what in the commit history.
+      Votes are shared — everyone sees the same ratings.
+    </p>
+    <input type="text" id="voter-name-input" placeholder="e.g. Dave" maxlength="40" autocomplete="off"/>
+    <div class="modal-actions">
+      <button type="button" class="btn-secondary" id="btn-cancel-settings" onclick="closeSettings()">Cancel</button>
+      <button type="button" class="btn-primary" id="btn-save-settings" onclick="saveSettings()">Save</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

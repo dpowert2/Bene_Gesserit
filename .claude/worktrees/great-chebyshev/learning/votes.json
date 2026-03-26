@@ -1,0 +1,50 @@
+{
+  "overmind": {
+    "stars": 5,
+    "note": "This is a test\n",
+    "voter": "Dave",
+    "voted_at": "2026-03-13T16:15:45.824Z"
+  },
+  "t54-labs": {
+    "stars": 5,
+    "note": "This is good - we need a verification layer for agents.",
+    "voter": "Dave",
+    "voted_at": "2026-03-09T16:57:25.352Z"
+  },
+  "stacks": {
+    "stars": 2,
+    "note": "Not really looking for accounting services. This is too small.\n",
+    "voter": "Dave",
+    "voted_at": "2026-03-09T16:58:12.405Z"
+  },
+  "bretton-ai": {
+    "stars": 3,
+    "note": "Not so interested in KYC and AML.",
+    "voter": "Dave",
+    "voted_at": "2026-03-11T19:21:35.722Z"
+  },
+  "oasis-security": {
+    "stars": 5,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-03-11T19:27:01.729Z"
+  },
+  "taxdown": {
+    "stars": 2,
+    "note": "Not really interested in EU tax products or tax filing. Looking for intelligent tax systems that uncover benefits as you update your portfolio.",
+    "voter": "Dave",
+    "voted_at": "2026-03-11T19:31:24.643Z"
+  },
+  "kai": {
+    "stars": 4,
+    "note": "This is good but a little early - there's not a lot of agentic infrastructure out there to fix security for yet.",
+    "voter": "Dave",
+    "voted_at": "2026-03-13T09:38:35.302Z"
+  },
+  "sphinx": {
+    "stars": 3,
+    "note": "Probably good but not exactly ground breaking.",
+    "voter": "Dave",
+    "voted_at": "2026-03-13T09:39:08.754Z"
+  }
+}
