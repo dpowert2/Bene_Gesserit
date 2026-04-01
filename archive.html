@@ -215,8 +215,8 @@ const startups = [{slug: "sphinx", name: "Sphinx", url: "https://www.sphinx.ai",
 
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
 function _readVoter() {
-  try { const ls = localStorage.getItem('bg_voter_name'); if (ls) return ls; } catch(e) {}
-  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) return decodeURIComponent(m[1]); } catch(e) {}
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
   return '';
 }
 let voter = _readVoter();

@@ -1099,8 +1099,8 @@ function renderPipelineCards() {
 /* ────────────────────────────────────────────────────────────── */
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
 function _readVoter() {
-  try { const ls = localStorage.getItem('bg_voter_name'); if (ls) return ls; } catch(e) {}
-  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) return decodeURIComponent(m[1]); } catch(e) {}
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
   return '';
 }
 let voter = _readVoter();
@@ -1301,9 +1301,9 @@ function closeSettings() {
 }
 
 function saveSettings() {
-  try { voter = (document.getElementById('voter-name-input').value || '').trim(); } catch (e) {}
-  try { localStorage.setItem('bg_voter_name', voter); } catch (e) {}
-  try { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } catch(e) {}
+  try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
+  try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } } catch(e) {}
   closeSettings();
   updateGearState();
   if (_pendingVote && voter) {

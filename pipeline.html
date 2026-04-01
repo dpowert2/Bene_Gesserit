@@ -529,8 +529,8 @@ function renderPipelineCards() {
 
 const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
 function _readVoter() {
-  try { const ls = localStorage.getItem('bg_voter_name'); if (ls) return ls; } catch(e) {}
-  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) return decodeURIComponent(m[1]); } catch(e) {}
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
   return '';
 }
 let voter = _readVoter();
@@ -702,7 +702,7 @@ function wireVoting() {
 
 function openSettings(msg) {const m = document.getElementById('settings-modal'); m.removeAttribute('hidden'); m.style.display = 'flex'; const msgEl = document.getElementById('settings-msg'); if (msgEl) {msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none';} const inp = document.getElementById('voter-name-input'); if (inp) {inp.value = voter; inp.focus();}}
 function closeSettings() {const m = document.getElementById('settings-modal'); m.setAttribute('hidden', ''); m.style.display = 'none';}
-function saveSettings() {try {voter = (document.getElementById('voter-name-input').value || '').trim();} catch (e) {} try {localStorage.setItem('bg_voter_name', voter);} catch (e) {} try {const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`;} catch(e) {} closeSettings(); updateGearState(); if (_pendingVote && voter) {const {slug, val, action} = _pendingVote; _pendingVote = null; if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);}}
+function saveSettings() {try {const n=(document.getElementById('voter-name-input').value||'').trim(); if(n) voter=n;} catch (e) {} try {if(voter) localStorage.setItem('bg_voter_name', voter);} catch (e) {} try {if(voter){const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`;}} catch(e) {} closeSettings(); updateGearState(); if (_pendingVote && voter) {const {slug, val, action} = _pendingVote; _pendingVote = null; if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);}}
 function updateGearState() {const gear = document.getElementById('settings-btn'); if (!gear) return; gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution'; gear.classList.toggle('connected', !!voter);}
 
 document.addEventListener('DOMContentLoaded', () => {
