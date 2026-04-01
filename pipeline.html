@@ -245,7 +245,7 @@
     </div>
 
     <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All <span class="filter-count">36</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="filter-count">38</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">21</span></button>
       <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
@@ -280,6 +280,36 @@
 
 <script>
 const startups = [
+  {
+    slug: "norm-ai",
+    name: "Norm AI",
+    url: "https://www.norm.ai",
+    oneliner: "Norm AI encodes regulatory rules as machine-executable policies, enabling AI agents to interpret and enforce compliance obligations in real time across financial services workflows.",
+    gap: "Compliance",
+    stage: "Series A ($27M)",
+    geo: "United States",
+    finserv: "Targets financial institutions directly, encoding SEC, FINRA, and AML regulation as structured executable policies. Series A signals institutional confidence in compliance automation.",
+    team: "US-based team with regulatory and AI engineering backgrounds. Already piloting with financial services firms.",
+    thesis: "As agentic systems take on more financial tasks, compliance rules must be machine-readable and enforceable at runtime. Norm AI is a potential integration partner for the regulated infrastructure layer.",
+    evidence: [["Norm AI raises $27M Series A for regulatory compliance automation", "https://www.fintechfutures.com/fintech-start-ups/us-regtech-start-up-norm-ai-raises-27m-series-a-funding"]],
+    score: 72,
+    bars: {gap: [28, 35], finserv: [20, 25], stage: [13, 20], team: [11, 20]}
+  },
+  {
+    slug: "hybridity",
+    name: "Hybridity",
+    url: "https://hybridity.ai",
+    oneliner: "Hybridity automates DORA, NIS2, and GDPR compliance for EU financial institutions using agentic workflows for evidence collection, gap analysis, and regulatory reporting.",
+    gap: "Compliance",
+    stage: "Seed (€2M)",
+    geo: "Stockholm, Sweden",
+    finserv: "Targets EU financial institutions subject to DORA digital operational resilience requirements. Automates compliance evidence collection and gap assessments through AI agents.",
+    team: "Stockholm-based early-stage team. Backed by European investors. Geographic alignment with EU regulatory focus is a strategic advantage.",
+    thesis: "Well-positioned for the European market where geography is preferred. Worth monitoring for traction signals over the next 12 months before formal engagement.",
+    evidence: [["Hybridity raises €2M to automate regulatory compliance through AI", "https://www.eu-startups.com/2026/02/stockholm-based-hybridity-raises-e2-million-to-automate-regulatory-compliance-through-ai/"]],
+    score: 58,
+    bars: {gap: [24, 35], finserv: [16, 25], stage: [9, 20], team: [9, 20]}
+  },
   {
     slug: "imper-ai",
     name: "imper.ai",
