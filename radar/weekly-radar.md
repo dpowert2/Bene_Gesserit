@@ -1,239 +1,249 @@
 # Bene Gesserit — Weekly Strategic Radar
-**Week ending:** 2026-03-20 (Friday)
-**Prior report:** 2026-03-13 (inaugural radar)
+**Week ending:** 2026-03-29 (Sunday)
+**Prior report:** 2026-03-20
 
 ---
 
 ## This Week in Numbers
 
-New startups: 9 | Voted: 8 (22 pending) | Upvoted (4–5★): 4 | Downvoted (1–2★): 2 | Neutral (3★): 2 | Upvote rate: 50% | Papers: 3 | Signals: 30
+New startups: 10 | Voted: 8 (32 pending) | Upvoted: 4 | Downvoted: 2 | Neutral: 2 | Upvote rate: 50% | Papers: 0 | Signals: 26
 
-**vs. last week:** +9 new startups (21→30 total), +1 vote (7→8), upvote rate 57%→50% (sphinx 3★ now counted), +3 papers, +16 signals
+**vs. last week:** +10 new startups (30→40 total), 0 new votes (32 pending vs. 22 pending), upvote rate unchanged at 50%, 0 new papers, +26 signals across 3 briefings (Mar 22, 24, 26)
 
 ---
 
 ## Gap Coverage This Week
 
-All 30 pipeline entries remain in **detected** stage — no companies have been moved to engaged, reviewing, shortlisted, or passed. The pipeline has grown by 9 companies since the inaugural radar, with the strongest growth in AI Safety & Guardrails (+5) and Compliance (+3).
+All 40 pipeline entries remain in **detected** — no companies have moved to engaged, reviewing, shortlisted, or passed. The pipeline grew by 10 companies this week, the largest single-week intake to date. Growth was concentrated in Agent Authentication & Security (+3), AI Safety & Guardrails (+2), Compliance (+2), and Agent Orchestration (+2), with Personal Agent receiving its strongest addition to date.
 
 ### 1. Personal Agent
-- **New startups surfaced this week:** 0
-- **Pipeline:** 2 detected / 0 screened / 0 shortlisted / 0 passed
-- **Trend vs. last week:** Flat. No new entries. This remains the thinnest gap.
-- **Notable:** Mine (MoneyGPT) [score 78] and Tendi [score 74] are unchanged. No votes cast. This gap needs active scouting attention — it has the fewest pipeline entries and zero new additions in two weeks.
+- **New startups surfaced this week:** Obin AI [score 82, Seed $7M, Motive Partners]
+- **Pipeline:** 3 detected / 0 screened / 0 shortlisted / 0 passed (was 2)
+- **Trend vs. last week:** +1 new entry. Still the thinnest gap by company count, but this week's addition is the most significant since scouting began.
+- **Notable:** Obin AI is the most compelling Personal Agent candidate in the pipeline. Founded by JPMorgan's former Head of AI (Apoorv Saxena) and a Google AI veteran, the company deploys a production-ready agentic workforce inside financial institutions' existing controls and audit boundaries — already processing 50,000+ annual loan notices for a $500B+ private credit fund at 70–90% time savings. Crucially, Obin AI is not a consumer agent product but an institution-native workflow layer, which aligns more closely with the infrastructure thesis than the gap label implies. Motive Partners (also backing Steward) provides strong finserv conviction signal. Score 82 makes it the joint-highest new entry this week. **Recommend: priority vote.**
 
 ### 2. Compliance
-- **New startups surfaced this week:** Complyance [score 78, Series A, $20M, GV + Mastercard angels], Certivo [score 50, Seed, $6M, supply chain beachhead], Steward [score 79, Seed, $5M, Motive Partners, $100B AUM on-platform]
-- **Pipeline:** 7 detected / 0 screened / 0 shortlisted / 0 passed (was 4)
-- **Trend vs. last week:** +3 new entries (75% growth). Strongest gap growth rate alongside AI Safety & Guardrails.
-- **Notable:** Steward (score 79) is the standout new entry — AI-first AML/KYC for institutional investors (fund-of-funds, family offices, offshore trusts), managing $100B in investor assets with same-day onboarding in 80% of cases. Motive Partners backing signals deep finserv conviction. Complyance's Mastercard angel involvement and GV lead confirm financial services distribution intent. Certivo (score 50) is supply-chain focused today but its continuously-running compliance agent architecture is the exact pattern finserv needs for regulatory change management.
+- **New startups surfaced this week:** Zoven [score 52, Pre-Seed, India — Blume pivot], Harvey [score 71, Series D+ $200M at $11B valuation, GIC + Sequoia]
+- **Pipeline:** 9 detected / 0 screened / 0 shortlisted / 0 passed (was 7)
+- **Trend vs. last week:** +2 new entries. Gap is now the second-largest by company count.
+- **Notable:** Harvey is the largest company to enter the pipeline to date — $11B valuation, $190M ARR, 1,300+ enterprise organisations, 100,000+ lawyers. It frames legal AI for financial services compliance (ISDA documentation, AML policy review, regulatory diligence), not KYC/AML filing — the distinction matters. The sovereign-wealth-fund lead (GIC) confers institutional trust that most startup-stage pipeline companies lack. However, Harvey's stage (Series D+) places it well outside the Seed-to-Series B partnership sweet spot. Zoven (formerly Zivy) is an early-market signal from India: a Blume Ventures-backed team pivoting from B2B SaaS into AI-native fintech compliance as AI-accelerated onboarding creates compliance gaps. Score 52 reflects both stage risk and geographic focus (India-first, not Europe/US).
 
 ### 3. Tax Optimisation
-- **New startups surfaced this week:** April [score 76, Series B, $78M total, QED Investors lead]
-- **Pipeline:** 4 detected / 0 screened / 0 shortlisted / 0 passed (was 3)
-- **Trend vs. last week:** +1 new entry. The gap remains partially open but April is the most significant addition since the radar began.
-- **Notable:** April is the first company to directly address the preference gap identified in the inaugural radar. Its embedded AI tax platform for wealth management firms provides real-time tax simulations for equity compensation, Roth conversions, and concentrated stock positions — embedded in advisor workflows rather than sold to consumers. This is materially closer to "portfolio-integrated tax intelligence" than anything previously in the pipeline. QED Investors' deep finserv portfolio adds credibility. TaxDown (2★) remains the only voted company in this gap.
-
-### 4. Agent Orchestration
-- **New startups surfaced this week:** 0
-- **Pipeline:** 5 detected / 0 screened / 0 shortlisted / 0 passed
-- **Trend vs. last week:** Flat. No new entries.
-- **Notable:** No new companies, but significant external signals: Mastercard + Santander completed Europe's first live agentic payment; Visa launched "Agentic Ready"; Visa Crypto Labs released CLI for AI agent payments. The orchestration layer is being claimed by incumbents. Lyzr (Accenture-backed, on-prem, banking/insurance) remains the strongest unvoted entry in this gap.
-
-### 5. AI Safety & Guardrails
-- **New startups surfaced this week:** Onyx Security [score 82, $40M launch, Conviction + Cyberstarts], JetStream Security [score 78, $34M seed, Redpoint + CrowdStrike DNA], ArmorCode [score 66, $81M total, Phil Venables on board], Goodfire [score 77, $150M Series B, $1.25B unicorn, B Capital + Salesforce Ventures], Manifold [score 80, $8M seed, LLM Guard creators, Costanoa Ventures]
-- **Pipeline:** 8 detected / 0 screened / 0 shortlisted / 0 passed (was 3)
-- **Trend vs. last week:** +5 new entries (167% growth). This is now the largest gap by company count.
-- **Notable:** This gap exploded this week. The combined funding across the 5 new entries is ~$313M, signalling massive market conviction that agent governance is an infrastructure category. Onyx Security (score 82) launched from stealth with 70 employees and Fortune 500 customers already live — the most production-ready new entrant. Goodfire's $1.25B unicorn valuation on AI interpretability positions explainability as an enterprise requirement, not a research curiosity, especially with EU AI Act high-risk rules taking effect August 2026. Manifold (score 80) from the LLM Guard creators is the first purpose-built runtime observability platform for agentic AI. Nvidia's NemoClaw open-source release at GTC challenges the thesis by potentially commoditising the agent security layer, though it does not address regulated financial services requirements specifically.
-
-### 6. Agent Authentication & Security
 - **New startups surfaced this week:** 0
 - **Pipeline:** 4 detected / 0 screened / 0 shortlisted / 0 passed
-- **Trend vs. last week:** Flat in company count, but major developments for existing entries.
-- **Notable:** Oasis Security (already 5★) closed a $120M Series B bringing total to $195M — the largest dedicated raise in the non-human identity (NHI) space to date. ARR grew 5x year-over-year. This validates the market and strengthens Oasis's position as a shortlist candidate. The Mastercard/Santander live agentic payment and Visa's "Agentic Ready" launch confirm that agent identity and payment authorisation is the primary strategic battleground in financial services.
+- **Trend vs. last week:** Flat. No new entries for the second consecutive week.
+- **Notable:** April remains the most thesis-aligned entry (score 76, QED Investors) and the gap's highest-priority unvoted company. No external signals specific to portfolio-integrated tax intelligence this week. The EU AI Act August deadline and Treasury AITO roundtables are tax-adjacent but do not add new startups. **Getting a vote on April is the single most impactful calibration action available this week.**
+
+### 4. Agent Orchestration
+- **New startups surfaced this week:** Eragon [score 55, Seed $12M, Long Journey Ventures], OpenCFO [score 64, Pre-Seed $2M, Endiya Partners]
+- **Pipeline:** 7 detected / 0 screened / 0 shortlisted / 0 passed (was 5)
+- **Trend vs. last week:** +2 new entries (40% growth). Both are early-stage.
+- **Notable:** OpenCFO is the more thesis-aligned of the two — it explicitly positions itself as a "financial OS" for mid-market CFOs, connecting banking infrastructure, ERP, AP/AR/treasury with built-in human oversight and audit trails. The CrowdStrike and Bloomberg engineering pedigree signals technical credibility for regulated environments. Score 64 reflects early stage ($2M). Eragon (score 55) is more broadly enterprise-focused with limited finserv specificity — it's relevant as a signal that LLM-native enterprise OS is a real category, but is not a strong thesis match today. The JPMorgan/Mirakl agentic commerce partnership and Manulife/Akka selection confirm that incumbents are selecting orchestration infrastructure partners now, compressing the window for startups.
+
+### 5. AI Safety & Guardrails
+- **New startups surfaced this week:** Armadin [score 68, Seed/Series A $190M, Accel + In-Q-Tel], Surf AI [score 66, Seed $57M, Accel + Cyberstarts]
+- **Pipeline:** 10 detected / 0 screened / 0 shortlisted / 0 passed (was 8)
+- **Trend vs. last week:** +2 new entries. Now the largest gap by company count (10) and total funding.
+- **Notable:** RSAC 2026 (March 24–26) dominated this gap's news cycle. Agentic AI security was the conference's defining theme — 87% of organisations report increased risk from AI vulnerabilities, 72% lack confidence in their AI security strategy. Armadin (Kevin Mandia, Mandiant founder) raised a record $190M for autonomous AI red-teaming — not finserv-specific but directionally relevant as financial regulators adopt national-security-grade requirements under DORA and EU AI Act. Surf AI ($57M, Accel) builds an agentic security operations platform with identity, cloud, HR, and IT signal integration — auditability and human approval gates are explicitly core. Both new entries strengthen market validation without directly addressing the regulated-infrastructure-specific gap. Overmind (score 90, 5★) remains the top shortlist candidate in this gap. Combined new investment in this gap over two weeks: ~$560M+.
+
+### 6. Agent Authentication & Security
+- **New startups surfaced this week:** Crossmint [score 80, Series A $23.6M, Ribbit Capital + Franklin Templeton], InFlow [score 62, Pre-Seed], imper.ai [score 73, Seed/Series A $28M, Redpoint + Battery]
+- **Pipeline:** 7 detected / 0 screened / 0 shortlisted / 0 passed (was 4)
+- **Trend vs. last week:** +3 new entries (75% growth). The fastest-growing gap this week.
+- **Notable:** This is the standout gap of the week. Three new entries with materially different positioning: Crossmint provides the full agentic payments stack (agent wallets, virtual Visa/Mastercard cards, stablecoin, KYA credentials — backed by Ribbit and Franklin Templeton), score 80, the strongest new entry across all gaps this week. imper.ai targets AI-driven impersonation at the human-agent boundary, deployed in financial services and launched publicly at RSAC 2026 — score 73. InFlow (score 62) addresses agent onboarding and credentialing at the point of action, not just at setup. RSAC 2026 also produced the IBM WatsonX/Auth0/Yubico hardware-backed human approval framework for agent actions — a big-tech validation of the exact pattern this gap addresses. The Agent Payment Rails cross-gap theme has now accelerated significantly with Crossmint and InFlow as the first two pure-play startup entrants.
 
 ---
 
 ## Emerging Themes
 
-### Theme 1: AI Agent Control Plane (AI Safety & Guardrails) — NEW
-**Count:** 3 companies (Onyx Security, JetStream Security, Manifold) | **Status:** New, rapidly forming
-A distinct product category has crystallised this week around "AI control planes" — platforms that continuously discover, monitor, and govern AI agents in real time across enterprise environments. Onyx provides supervisory agents that enforce governance policies; JetStream generates dynamic "AI Blueprints" mapping agent operations; Manifold offers runtime detection and response (AIDR) for every tool call and system interaction. This is the operational layer between the trust infrastructure (Agent Auth) and the regulatory compliance layer — and it is attracting serious capital ($82M combined across three seed/launch rounds). For the thesis, these companies represent the monitoring and enforcement infrastructure that sits atop the regulated OS.
+### Theme 1: RSAC 2026 — Agentic Security as Consensus Category (AI Safety & Guardrails + Agent Auth & Security) — NEW THIS WEEK
+**Count:** 4 new companies (Armadin, Surf AI, Crossmint, imper.ai) plus major big-tech moves | **Status:** New, high urgency
+RSA Conference 2026 crystallised agentic AI security as the defining enterprise security category of 2026. The conference surfaced: Surf AI's agentic SecOps platform, imper.ai's workforce identity launch, Armadin's autonomous red-teaming, the IBM/Auth0/Yubico human-approval-gate framework, and the statistic that 72% of organisations lack confidence in their AI security strategy. For the thesis, RSAC confirms that the market for governed, auditable agent access to financial systems is past the "is this real?" question. The open question is now whether financial-sector-specific regulatory compliance (FINRA, FCA, EU AI Act) becomes the differentiation layer, or whether horizontal security platforms absorb the finserv vertical.
 
-### Theme 2: Agent Identity as Regulated Infrastructure (Agent Auth & Security) — ONGOING
-**Count:** 4 companies (Alter, Oasis Security, t54 Labs, Sapiom) | **Status:** Ongoing, strengthening
-No new companies this week but Oasis Security's $120M Series B and the Mastercard/Visa agentic payment launches dramatically elevated this theme. The agent identity layer is no longer speculative — major payment networks are actively building around it. Oasis's 5x ARR growth confirms enterprise willingness to pay for NHI management at scale. This remains the highest-conviction theme in the pipeline with two 5★ votes and the largest total funding.
+### Theme 2: Agent Payment Infrastructure Stack Crystallising (Agent Auth & Security) — NEW THIS WEEK
+**Count:** 2 new companies (Crossmint, InFlow) | **Status:** New, accelerating
+With Crossmint and InFlow both entering the pipeline, the "Agent Payment Rails" cross-gap theme has its first two dedicated startup entrants. Crossmint (Ribbit + Franklin Templeton) offers end-to-end agent payments — wallets, virtual cards, stablecoin, KYA credentials — as a complete platform. InFlow targets the narrower problem of agent onboarding and credentialing at the moment of action. Together, they define the emerging stack: Crossmint as the rails and credential layer, InFlow as the onboarding and policy compliance layer. This sub-gap is now sufficiently populated to warrant promotion from "monitoring" to "active sub-gap." **Recommendation: promote Agent Payment Rails to standalone gap candidate with its own search terms if 1+ additional pure-play companies surface in the next 2 weeks.**
 
-### Theme 3: Incumbent Payment Networks Claiming Agentic Commerce (Cross-gap) — NEW
-**Count:** 0 startups (external signal only) | **Status:** New, high urgency
-Mastercard (Agent Pay + Verifiable Intent + live Santander transaction), Visa (Agentic Ready + Crypto Labs CLI), and Google (AP2 protocol) all moved decisively this week to establish agent payment standards. Coinbase's x402 remains the crypto-native alternative. This creates a compression dynamic for the thesis: the window to position as the "regulated infrastructure layer" is narrowing as incumbents claim the standards. The differentiated opportunity remains the compliance overlay — who authorised the agent, under what rules, with what regulatory reporting.
+### Theme 3: KYA (Know Your Agent) as Emerging Compliance Standard (Agent Auth & Security) — NEW THIS WEEK
+**Count:** 2 companies (Crossmint, InFlow) | **Status:** New
+The Crossmint/BlockEden analysis this week named KYA (Know Your Agent) as the parallel to KYC in the agent world — a framework that creates auditable chains from every agent action back to a human principal. This is not just a product feature; it is the vocabulary regulators will likely adopt as they formalise agent governance. For the thesis: whichever infrastructure company establishes KYA credentialing as a standard is positioned the same way SWIFT was positioned for interbank messaging — as the mandatory middle layer. This is a vocabulary to track and a concept to use in partnership conversations.
 
-### Theme 4: AI Interpretability as Compliance Infrastructure (AI Safety & Guardrails) — NEW
-**Count:** 1 company (Goodfire) | **Status:** New, high signal
-Goodfire's $150M Series B at $1.25B unicorn valuation positions AI interpretability as enterprise infrastructure rather than research. With EU AI Act high-risk provisions (including creditworthiness models) taking effect August 2026, financial institutions will need explainability tools to demonstrate regulatory compliance. This sub-theme may warrant its own tracking category if more interpretability-focused companies emerge.
+### Theme 4: Incumbent Agentic Commerce Build-Out (Cross-gap — pressure signal) — ONGOING, ESCALATING
+**Count:** 0 new startups (external signals only) | **Status:** Ongoing, highest-urgency external pressure signal
+Three major institutional moves this week: JPMorgan Payments + Mirakl (agentic enterprise commerce with governance-first framing), Mastercard Virtual C-Suite (AI CFO agents for SMEs distributed through FIs and accounting platforms), and Manulife/Akka ($1B+ enterprise value from agentic AI, choosing orchestration infrastructure partner). Mastercard's Virtual C-Suite is the most challenging signal — it positions Mastercard as not just payment rails but the agentic intelligence layer for SME financial services, using 175B annual transaction signals as proprietary data moat. The implications for the thesis: the "front door" personal/financial agent may increasingly be an incumbent product; the infrastructure play is in the layers incumbents cannot or will not build (compliance, audit, regulated identity) rather than the agent application layer itself.
 
-### Theme 5: Compliance Without Disruption (Compliance) — ONGOING, expanding
-**Count:** 4 companies (Sphinx, Uptiq, Complyance, Steward) | **Status:** Ongoing, growing
-Two new entries this week (Complyance, Steward) expand this theme. Complyance brings AI agents for GRC workflows with Mastercard angel backing; Steward targets the institutional compliance gap (fund-of-funds, family offices) with $100B AUM and Motive Partners backing. The theme now spans general GRC automation (Complyance), browser-native compliance (Sphinx), embedded compliance orchestration (Uptiq), and institutional investor compliance (Steward). The regulatory pressure from FCA SM&CR personal liability and US Treasury's FS AI RMF is converting compliance from a cost centre to an infrastructure requirement.
+### Theme 5: Obin AI — Institutional Agent Workforce Model (Personal Agent, evolving) — NEW
+**Count:** 1 company (Obin AI) | **Status:** New, high signal
+Obin AI's institution-native framing is conceptually distinct from the consumer-facing personal finance agent most "Personal Agent" gap candidates represent. By embedding agentic workflows directly inside a financial institution's existing controls, audit boundaries, and regulatory perimeter, Obin AI is closer to the regulated infrastructure thesis than to a consumer app. If this model gains traction, it suggests the Personal Agent gap may need to bifurcate: consumer-facing advisor agents (Mine/Tendi) vs. institution-native agentic workforce platforms (Obin AI). **Recommend assessing whether Obin AI belongs in Agent Orchestration rather than Personal Agent.**
 
-### Theme 6: Portfolio-Integrated Tax Intelligence (Tax Optimisation) — ONGOING, gap narrowing
-**Count:** 3 companies (Mezzi, Hive Tax AI, April) | **Status:** Ongoing, improving
-April's arrival directly addresses the preference gap. Its embedded AI tax platform for wealth management firms — with simulations for equity compensation, Roth conversions, and concentrated positions — is the closest match to the explicitly stated preference for "intelligent tax systems that uncover benefits as you update your portfolio." The gap is narrowing but unvoted; April needs a vote to confirm alignment.
+### Theme 6: Agent Identity as the Human-Agent Boundary (Agent Auth & Security) — NEW THIS WEEK
+**Count:** 1 new company (imper.ai), plus big-tech validation | **Status:** New
+imper.ai's launch at RSAC 2026 and the IBM/Auth0/Yubico hardware-backed approval framework both address the same risk: as AI agents gain delegated access to financial systems, the boundary between human and agent identity becomes the primary attack surface. The regulatory demand for non-repudiation in agentic financial workflows (who authorised this transaction? was a human in the loop?) is now being answered at the hardware level (YubiKey) and at the software level (imper.ai's contextual verification). For the thesis: the regulated infrastructure layer must be able to prove human accountability for agent actions — this is no longer a design aspiration but an emerging technical standard.
 
 ---
 
 ## Competitive Landscape
 
+All 40 pipeline companies remain in detected. No shortlists or formal passes have occurred.
+
 ### Personal Agent
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
+| **Obin AI** ★ | Seed ($7M, Motive Partners) | 82 | USA | Agentic workforce for FIs, private credit |
 | Mine (MoneyGPT) | Series A ($14M) | 78 | US | AI financial advisor, consumer + advisor |
 | Tendi | Seed | 74 | US + Global | Multi-institution connectivity |
 
-**No shortlisted entries yet.** No new additions. This gap needs active scouting.
+★ = New this week. Obin AI is the strongest entry in this gap to date — production deployments with $500B+ AUM institutions, JPMorgan/Google founding team, Motive Partners backing. Mine and Tendi remain unvoted.
 
 ### Compliance
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
 | Bretton AI | Series B ($75M+) | 88 | US | AML, fraud, KYC for regulated banks |
 | Unit21 | Series B+ | 81 | US | Fraud + AML risk ops platform |
-| **Steward** ★ | Seed ($5M) | 79 | NYC / London | AI-first AML/KYC for institutional investors |
-| **Complyance** ★ | Series A ($20M) | 78 | US | AI agents for GRC workflows |
+| Steward | Seed ($5M, Motive Partners) | 79 | NYC / London | AI-first AML/KYC for institutional investors |
+| Complyance | Series A ($20M, GV) | 78 | US | AI agents for GRC workflows |
 | Uptiq | Unknown | 73 | US | AI compliance orchestration |
+| **Harvey** ★ | Series D+ ($200M, $11B val) | 71 | San Francisco | Legal AI agents for compliance, 100K+ lawyers |
 | Sphinx | Seed ($7.1M) | TBD | Europe | Browser-native AML/KYC/KYB agents |
-| **Certivo** ★ | Seed ($6M) | 50 | Seattle | AI compliance automation (supply chain) |
+| Certivo | Seed ($6M) | 50 | Seattle | AI compliance automation (supply chain) |
+| **Zoven** ★ | Pre-Seed (pivoted) | 52 | India | AI-native KYC/AML for fintech onboarding |
 
-★ = New this week. **No shortlisted entries yet.** Steward's institutional investor focus and Motive Partners backing make it the most thesis-aligned new entrant. Bretton AI leads on funding and score but KYC/AML focus is noted as low-preference (3★).
+★ = New this week. Harvey's scale and GIC backing are notable, but Series D+ stage and legal-first framing are limitations for a partnership model. Zoven is an early-signal watchlist entry.
 
 ### Tax Optimisation
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
-| TaxDown | Seed (€4M, BBVA) | 78 | Spain / Europe | AI-driven digital tax filing |
-| **April** ★ | Series B ($78M) | 76 | New York | Embedded AI tax platform for wealth mgmt |
+| TaxDown | Seed (€4M, BBVA) | 78 | Spain / Europe | AI-driven digital tax filing (downvoted 2★) |
+| April | Series B ($78M, QED) | 76 | New York | Embedded AI tax platform for wealth mgmt |
 | Mezzi | Seed | 70 | US | Portfolio tax optimisation |
 | Hive Tax AI | Seed | 68 | US | Tax loss harvesting, capital gains |
 
-★ = New this week. **No shortlisted entries yet.** April is the strongest thesis-aligned entry in this gap — embedded in advisor workflows, real-time simulations, QED Investors backing. TaxDown was downvoted for tax filing focus.
+No new entries. **April remains the highest-priority unvoted candidate in this gap.**
 
 ### Agent Orchestration
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
-| Stacks | Series A ($23M) | 82 | Europe | Agentic accounting/finance automation |
+| Stacks | Series A ($23M) | 82 | Europe | Agentic accounting/finance automation (downvoted 2★) |
 | Dyna.Ai | Series A | 74 | Singapore / ME | Enterprise AI agent deployment |
 | Natural | Seed | 70 | US | B2B workflow automation |
-| Lyzr | Series A+ ($14.5M) | TBD | India / Global | On-prem enterprise agent orchestration |
+| **OpenCFO** ★ | Pre-Seed ($2M) | 64 | Seattle | Agentic financial OS for mid-market CFOs |
 | Trace | Seed ($3M) | 65 | US | Agent tracing/observability |
+| Lyzr | Series A+ ($14.5M) | TBD | India / Global | On-prem enterprise agent orchestration |
+| **Eragon** ★ | Seed ($12M) | 55 | San Francisco | LLM-native enterprise OS (horizontal) |
 
-**No shortlisted entries yet.** No new additions. Lyzr remains the strongest finserv-anchored entry. External signals (Mastercard, Visa, Google) suggest orchestration standards are being defined by incumbents.
+★ = New this week. OpenCFO's "financial OS" framing and regulated infrastructure architecture are thesis-aligned; Eragon is a weaker fit but a useful market signal. JPMorgan/Mirakl and Manulife/Akka confirm incumbents are selecting orchestration partners now.
 
 ### AI Safety & Guardrails
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
-| Overmind | Seed (€2.3M) | 90 | London, UK | Regulated industry agent supervision |
-| **Onyx Security** ★ | Launch ($40M) | 82 | San Francisco | Secure AI control plane, Fortune 500 |
-| **Manifold** ★ | Seed ($8M) | 80 | San Francisco | AI Detection & Response (AIDR) |
-| **JetStream Security** ★ | Seed ($34M) | 78 | US | AI governance via dynamic blueprints |
-| **Goodfire** ★ | Series B ($150M) | 77 | San Francisco | AI interpretability ($1.25B unicorn) |
+| Overmind | Seed (€2.3M) | 90 | London, UK | Regulated industry agent supervision (5★) |
+| Onyx Security | Launch ($40M) | 82 | San Francisco | Secure AI control plane, Fortune 500 |
+| Manifold | Seed ($8M) | 80 | San Francisco | AI Detection & Response (AIDR) |
+| JetStream Security | Seed ($34M) | 78 | US | AI governance via dynamic blueprints |
+| Goodfire | Series B ($150M, $1.25B val) | 77 | San Francisco | AI interpretability |
 | Guardrails AI | Seed ($7.5M) | 73 | US | Open-source guardrails framework |
-| **ArmorCode** ★ | Series C ($81M total) | 66 | Palo Alto | Agentic AI exposure management |
-| Kai | Series A (~$125M) | TBD | US | Agentic cybersecurity, IT/OT |
+| **Armadin** ★ | Seed/Series A ($190M) | 68 | San Francisco | Autonomous AI red-teaming (Mandiant founder) |
+| **Surf AI** ★ | Seed ($57M) | 66 | New York | Agentic SecOps with auditability |
+| ArmorCode | Series C ($81M total) | 66 | Palo Alto | Agentic AI exposure management |
+| Kai | Series A (~$125M) | TBD | US | Agentic cybersecurity, IT/OT (4★) |
 
-★ = New this week. **No shortlisted entries yet.** This gap is now the most populated and heavily funded in the pipeline. Overmind remains the top candidate for shortlisting (score 90, 5★ vote). Onyx Security's production-ready platform and Manifold's runtime observability are the strongest new entrants. **Combined new funding this week: ~$313M — the market is declaring agent governance a category.**
+★ = New this week. **Overmind remains the top shortlist candidate.** RSAC 2026 confirmed agentic security as a consensus category — both new entrants validate the market without yet surpassing existing candidates on finserv specificity. Combined gap funding now exceeds $700M.
 
 ### Agent Authentication & Security
 | Company | Stage | Score | Geography | Finserv Focus |
 |---|---|---|---|---|
-| t54 Labs | Seed ($5M) | 88 | US | Agent identity standards, crypto/fintech |
-| Oasis Security | **Series B ($195M total)** ↑ | 84 | Israel / Global | Non-human identity (NHI) management |
-| Sapiom | Seed ($15.75M) | TBD | US | Agent identity + payment rails |
+| t54 Labs | Seed ($5M) | 88 | US | Agent identity standards, crypto/fintech (5★) |
+| Oasis Security | Series B ($195M total) | 84 | Israel / Global | Non-human identity (NHI) management (5★) |
+| **Crossmint** ★ | Series A ($23.6M) | 80 | Miami / USA | Full agentic payments stack, KYA credentials |
+| **imper.ai** ★ | Seed/Series A ($28M) | 73 | Israel / USA | Workforce identity security, FI-deployed |
 | Alter | Seed | 71 | US | Zero-trust agent AuthN/AuthZ |
+| **InFlow** ★ | Pre-Seed | 62 | San Francisco | Agent onboarding + policy compliance payments |
+| Sapiom | Seed ($15.75M) | TBD | US | Agent identity + payment rails |
 
-↑ = Funding updated this week ($75M→$195M). **No shortlisted entries yet.** t54 Labs and Oasis Security remain the two strongest candidates (both 5★). Oasis's $120M Series B and 5x ARR growth confirm enterprise demand for NHI management at scale.
+★ = New this week. Crossmint (score 80, Ribbit + Franklin Templeton) is the strongest new entrant across all gaps this week. imper.ai is immediately thesis-relevant for the human-agent boundary problem. InFlow addresses the underrated agent onboarding gap. **This gap now has the strongest depth of thesis-aligned coverage in the pipeline.**
 
 ---
 
 ## Research Highlights
 
-**Top 3 thesis-relevant papers from the past 7 days:**
+**No new academic papers were published or detected within the past 7 days.** All three briefings (March 22, 24, 26) confirmed zero new papers. The papers corpus remains at the four papers logged prior to March 22:
 
-### 1. Towards a Science of AI Agent Reliability
-*arXiv:2602.16666 | Feb 2026*
-**Key takeaway:** Proposes formal definitions and measurement frameworks for AI agent reliability, treating it as a multi-dimensional property covering consistency, fault tolerance, and predictability under distribution shift.
-**Relevance to thesis:** Directly relevant to **AI Safety & Guardrails**. As regulators demand auditable, accountable AI systems, formal reliability standards will become a compliance input. The framework's vocabulary — consistency, fault tolerance, predictability — maps directly to what the regulated infrastructure layer will need to certify and warrant about agent behaviour.
+- *Agentic AI Systems Applied to Tasks in Financial Services: Modeling and Model Risk Management Crews* (arXiv:2502.05439) — remains the strongest validation of agentic MRM workflows in finserv.
+- *Agentic AI for Financial Crime Compliance: Architecture and Deployment* (arXiv:2509.13137) — empirical deployment evidence for modular compliance infrastructure.
+- *Towards a Science of AI Agent Reliability* (arXiv:2602.16666) — formal reliability framework with regulatory vocabulary implications.
+- *AI Agents in Financial Markets: Architecture* (arXiv:2603.13942) — tracked from March 24 briefing, not yet formally reviewed.
 
-### 2. Agentic AI Systems Applied to Tasks in Financial Services: Modeling and Model Risk Management Crews
-*arXiv:2502.05439 | Feb 2026*
-**Key takeaway:** Demonstrates multi-agent crews with human-in-the-loop modules performing complex modeling and model risk management (MRM) tasks in financial services — covering EDA, feature engineering, model selection, compliance documentation, and regulatory review.
-**Relevance to thesis:** First published academic framework showing a full agentic MRM workflow in finserv. Validates that the most risk-sensitive processes (model risk governance) are tractable with agentic systems — the exact context where a **regulated infrastructure layer** is most defensible. Strengthens both **Agent Orchestration** and **Compliance** gap rationale.
-
-### 3. Agentic AI for Financial Crime Compliance: Architecture and Deployment
-*arXiv:2509.13137 | Published/surfaced this week*
-**Key takeaway:** Documents the live deployment of a multi-agent compliance system at a regulated fintech, with specialised sub-agents for onboarding, transaction monitoring, investigation, and regulatory reporting. Multi-agent architectures outperform monolithic AI in both accuracy and regulatory auditability.
-**Relevance to thesis:** Empirical validation of modular, composable compliance infrastructure — exactly the building-block model the regulated OS thesis describes. The finding that specialised sub-agents outperform monoliths strengthens the case for the **Compliance** gap and the orchestration layer that coordinates them.
+**Practitioner signals this week partially substituted for academic papers:** The BCG $200B market sizing report, the ABA/BPI NIST submission on agentic AI governance standards, the US Treasury AITO/FSOC AI Innovation Series launch, and the PYMNTS "three non-negotiables" analysis (security, data governance, decision rights) collectively constitute high-credibility practitioner literature that reinforces and extends the thesis. These are not academic papers but warrant tracking alongside the research corpus.
 
 ---
 
 ## Thesis Drift Detection
 
 ### Which gaps are generating the most shortlists vs. passes?
-No formal shortlisting or passing has occurred — all 30 companies remain in detected. Vote data continues to provide the primary signal. **Agent Authentication & Security** (2 of 4 upvotes at 5★ each) and **AI Safety & Guardrails** (2 of 4 upvotes including 1 at 5★ and 1 at 4★) dominate the upvote count. Tax Optimisation and Agent Orchestration each carry one downvote. The new sphinx vote (3★) brings Compliance to 1 neutral and 1 neutral — both gaps with neutral signals suggesting sub-domain calibration is needed rather than gap removal.
+No formal shortlisting or passing has occurred — all 40 companies remain in detected. Vote data remains the only calibration signal. **Agent Authentication & Security** and **AI Safety & Guardrails** are the only gaps with confirmed upvotes (4 of 4 combined, all at 4–5★). **Tax Optimisation** and **Agent Orchestration** each have one downvote and no upvotes. **Compliance** has one neutral (Bretton AI, 3★). **Personal Agent** has no votes at all.
+
+The imbalance is stark: the two infrastructure-layer gaps (Auth + Safety) have 100% upvote rates across all votes cast; the four application/workflow gaps have either downvotes or no votes. This may reflect genuine thesis concentration in the trust infrastructure layer, or it may reflect scouting bias — searches have surfaced more infrastructure candidates for voting. Getting at least two votes in Personal Agent, Tax Optimisation, and Agent Orchestration (on candidates other than the already-downvoted Stacks and TaxDown) would materially improve analytical confidence.
 
 ### Are any search terms producing noise? Propose replacements.
-Last week's proposed refinements remain relevant:
 
-1. **Tax Optimisation** — April's emergence validates the refined terms. Continue using: "tax-loss harvesting," "tax-aware rebalancing," "capital gains optimisation," "after-tax portfolio returns," "embedded tax platform wealth management." Exclude: "tax filing," "tax return," "e-filing."
+1. **Agent Orchestration** — Eragon (score 55) is a horizontal enterprise OS with no finserv specificity; its presence in the pipeline suggests "agentic AI operating system" without the "financial services" qualifier is too broad. Continue: "agentic workflow financial services," "agent deployment banking," "agent orchestration regulated industry." Consider removing: "agentic AI operating system" as a standalone term.
 
-2. **Agent Orchestration** — No new entries this week. The "financial services" qualifier should remain appended to orchestration searches. Consider adding: "agentic workflow banking," "agent deployment regulated" to surface regulated-context orchestration tools.
+2. **Compliance** — Zoven's entry from India via a pivot suggests "AI compliance fintech" may be surfacing geographic markets (India-first) that are outside the primary thesis geography. Add qualifier: "AI compliance fintech Europe" or "AI compliance fintech US" if India-specific results continue to appear.
 
-3. **AI Safety & Guardrails** — This gap is now producing high signal-to-noise results. The current searches are working well. Consider adding: "AI control plane enterprise," "agentic runtime monitoring," "AI detection and response" to capture the emerging AIDR sub-category.
+3. **Tax Optimisation** — No new entries this week, which may indicate the refined search terms (excluding tax filing, including portfolio-integrated) are working as intended. No changes recommended.
+
+4. **AI Safety & Guardrails / Agent Authentication & Security** — Both gaps are producing high-quality results. No changes recommended. Continue the AIDR search terms added in the prior week; add "KYA Know Your Agent" and "agent identity compliance financial services" to Auth searches to capture the emerging KYA sub-theme.
 
 ### Are there new themes that don't fit existing gaps? Propose a new category if warranted.
 
-1. **Agent Payment Rails** — Now significantly stronger than last week. Mastercard (Verifiable Intent + live Santander transaction), Visa (Agentic Ready + Crypto Labs CLI), Google (AP2), and Coinbase (x402) are all moving. Sapiom remains the only startup in the pipeline. **Recommendation:** Maintain as a sub-theme of Agent Authentication & Security for now, but if 2+ additional startups emerge in the next 2 weeks, promote to a standalone gap. The payment networks are moving faster than the startup ecosystem here.
+1. **Agent Payment Rails** — Now elevated from "monitoring" to a formal gap candidate. Crossmint and InFlow are both pipeline entries in this sub-theme. The KYA (Know Your Agent) credential layer, Mastercard Verifiable Intent, and the Visa Agentic Ready programme all define the emerging standard. **Recommendation: Promote "Agent Payment Rails" to standalone gap category if any one of the following occurs: (a) a third pure-play startup enters the pipeline, (b) a regulatory body specifically references agent payment standards in formal guidance, or (c) Crossmint or InFlow receives a positive vote confirming thesis alignment.**
 
-2. **AI Interpretability / Explainability** — Goodfire's $1.25B unicorn round and the EU AI Act August 2026 deadline create a new sub-theme within AI Safety & Guardrails. Currently 1 company. **Recommendation:** Monitor as a sub-theme. If 2+ interpretability-focused companies surface, consider a standalone gap or formal sub-category.
+2. **Institution-Native Agentic Workforce** — Obin AI introduces a model distinct from existing gaps: agentic AI deployed inside an institution's own governance perimeter, not as a third-party service. This is closer to "regulated internal agent tooling" than "personal agent" and may warrant a new sub-category or gap repositioning. **Recommendation: Assess whether Obin AI belongs in Agent Orchestration (its work is inside-institution workflow automation) or if a new gap label ("Institutional Agent Deployment" or "Regulated Agentic Workforce") better captures the thesis-relevant sub-theme.**
 
-3. **Regulatory Technology for AI Governance** — The US Treasury FS AI RMF (230 control objectives), FCA SM&CR personal liability, and FINRA's agent-specific guidance all landed this week. No startup directly addresses AI-Act-style governance tooling for financial services. **Recommendation:** Upgrade from "search thread" to active gap candidate. Add search terms: "AI governance financial services," "AI Act compliance finserv," "FS AI RMF tooling."
+3. **Human-Agent Boundary Security** — imper.ai and the IBM/Auth0/Yubico framework both address the identity verification problem at the exact point where a human delegates authority to an agent. This is architecturally distinct from NHI management (Oasis, t54) and from agent payment rails (Crossmint, InFlow). It may warrant its own sub-theme within Agent Authentication & Security rather than a new gap.
 
 ### Are any gaps candidates for deprioritisation?
-**No.** All six gaps received either new companies or significant market validation this week. Tax Optimisation has improved with April's arrival. Personal Agent remains thin but is not a candidate for removal — the front-door agent that connects to the infrastructure layer is architecturally necessary. Consider increasing scouting effort for Personal Agent.
+**No.** All six gaps received either new companies or significant market validation this week. The most data-starved gap (Tax Optimisation) remains thesis-relevant with April as a high-quality unvoted candidate. The lowest-quality new entry across all gaps this week (Eragon, score 55) is in Agent Orchestration, which has one downvote — but the gap itself is not a candidate for removal, as the JP Morgan/Mirakl and Manulife/Akka institutional moves confirm real enterprise demand for orchestration infrastructure.
 
 ### Any signals that challenge or complicate the thesis?
 
-1. **Nvidia NemoClaw open-sources agent security stack (GTC 2026)** — The most significant challenge signal this week. Nvidia released an open-source, hardware-agnostic security stack for AI agents (sandboxed runtime, access policies, privacy routing) that installs in one command, with a financial services-specific Nemotron model. **Counter-argument:** NemoClaw addresses general enterprise security; it does not address regulated-specific requirements (audit trails, regulatory reporting, fiduciary accountability). The thesis's differentiation is the *regulated* layer, not the *security* layer. However, this narrows the territory — the thesis must be sharper about what "regulated" adds beyond what open-source security provides.
+1. **Mastercard Virtual C-Suite** — Mastercard is no longer content to be payment rails; it is building agentic intelligence for SME financial services using 175B annual transaction signals as a proprietary data moat, distributed through FIs and accounting platforms. If the leading payment network becomes the default personal/financial agent for SMEs, startup opportunity in the front-door agent layer narrows sharply. The infrastructure play (compliance, audit, identity) remains intact — but the Personal Agent gap rationale weakens if incumbents occupy that space.
 
-2. **Payment networks claiming agentic commerce infrastructure** — Mastercard, Visa, and Google all moved this week. If card networks become the default agent identity and payment layer, the thesis's "trust anchor" positioning faces competition from the most trusted financial brands in the world. **Counter-argument:** The networks are optimising for payment authorisation; the broader compliance, audit, and governance layer across all agent actions (not just payments) remains open.
+2. **Harvey's $11B valuation** — A $190M ARR legal AI company at $11B signals that enterprise AI for compliance documentation is investable at scale without being explicitly finserv-infrastructure. The compliance layer may be more heterogeneous than assumed — legal-first companies reaching finserv via contract review and regulatory diligence may compete with finserv-native compliance infrastructure plays. This complicates the Compliance gap's thesis boundary.
 
-3. **FCA SM&CR personal liability for AI decisions** — This is both a validation and a complication. It validates demand for the regulated infrastructure layer, but it also means that any partner deploying your infrastructure inherits personal liability risk for their senior managers. The infrastructure must be demonstrably liability-reducing, not just functionally useful.
+3. **ABA/BPI voluntary standards push** — The banking industry is actively shaping the governance standards for agentic AI before regulators prescribe them. Whoever builds the certified infrastructure referenced in those emerging standards wins the regulated deployment market. This is both a validation and a race: if NIST publishes voluntary standards by late 2026 and financial services vendors start certifying against them, early-mover infrastructure plays that lack formal certification will face a difficult competitive headwind.
+
+4. **No new research papers for the third consecutive briefing** — The academic-to-industry pipeline for agentic financial AI appears to be in a deployment phase, not a discovery phase. Most new signals are practitioner reports, conference announcements, and funding news rather than novel research. This is consistent with a market moving from "what is possible?" to "how do we deploy and govern it?" — which favours the regulated infrastructure thesis.
 
 ---
 
 ## Scoring Model Health
 
-**Precision (upvote rate):** 50% (4 upvotes out of 8 total votes)
+**Precision (upvote rate):** 50% (4 upvotes out of 8 total votes) — unchanged from last week.
 
-**Prior week comparison:** 57% → 50%. The decline is driven by sphinx (3★) being formally counted this week rather than new negative signal. No new votes were cast during the March 14–20 period.
+**Prior week comparison:** 50% → 50%. No new votes were cast during the March 21–29 period. The pipeline grew from 30 to 40 companies, meaning the un-voted proportion increased from 22/30 (73%) to 32/40 (80%).
 
-**Near-miss rate:** 2/8 = 25% (down from 29% at 2/7, due to expanded denominator)
+**Near-miss rate:** 25% (2/8 total votes) — unchanged. Both near-misses remain the same (Stacks, TaxDown).
 
 **Near-miss cases (unchanged):**
-- Stacks — Score: 82, Vote: 2★ (accounting automation mismatch)
-- TaxDown — Score: 78, Vote: 2★ (tax filing mismatch)
+- Stacks — Score: 82, Vote: 2★ (accounting automation sub-domain mismatch within Agent Orchestration)
+- TaxDown — Score: 78, Vote: 2★ (tax filing sub-domain mismatch within Tax Optimisation)
 
-**Soft factor performance:**
-No soft factors are currently active in scoring-weights.json. The two intra-category sub-domain mismatches (Agent Orchestration/accounting, Tax Optimisation/filing) remain at 1 occurrence each — below the 3-occurrence threshold to propose a formal soft factor.
+**Soft factor performance:** No soft factors are active. The two intra-category sub-domain mismatches remain at 1 occurrence each (threshold: 3 to trigger formal soft factor). The model cannot currently distinguish preferred from dispreferred sub-domains within a gap — this is the primary known weakness.
 
-**New observation:** April (score 76) is the first company in Tax Optimisation that appears to match the stated preference for embedded portfolio-integrated tax intelligence. If April receives an upvote, this would be the first positive calibration data point for this gap's preferred sub-domain. Conversely, if April is downvoted, the gap definition itself may need revision.
+**Critical gap in model data:** Three new Agent Authentication & Security entries this week (Crossmint, InFlow, imper.ai) are scoring in the 62–80 range based on base weights alone. The highest-scoring entry (Crossmint, 80) is in the gap that has consistently generated 5★ votes. Crossmint's score of 80 should be tested against a vote — if it receives 4–5★, this becomes the first positive calibration data point for the Agent Payment Rails sub-theme, which the model does not yet separately track.
 
 **Recommended weight adjustments to scoring-weights.json:**
-No immediate weight changes recommended. The base weights (gap_fit: 35, finserv_readiness: 25, stage_match: 20, team_signal: 20) continue to perform adequately — the near-misses are driven by sub-domain qualification gaps, not weight miscalibration. **Recommended action:**
+No changes recommended at this time. Threshold for weight adjustment is 50 total votes; current total is 8. **The most impactful single action available to the scoring model this week is voting.** Priority vote candidates, ranked by expected calibration value:
 
-1. Continue holding on weight changes until 15+ total votes (currently 8).
-2. Prioritise voting on the 9 new pipeline entries from this week — particularly April (Tax Optimisation), Steward (Compliance), Manifold (AI Safety & Guardrails), and Onyx Security (AI Safety & Guardrails) — as these votes will provide the highest-value calibration data.
-3. Consider adding a "regulated-industry specificity" soft factor once a third data point emerges distinguishing horizontal tools from regulated-context tools within the same gap.
+1. April (Tax Optimisation) — confirms or refutes the portfolio-integrated tax preference
+2. Obin AI (Personal Agent) — confirms or refutes whether institution-native agentic workforce fits the thesis
+3. Crossmint (Agent Auth & Security) — calibrates the Agent Payment Rails sub-theme
+4. Steward (Compliance) — separates institutional AML/KYC (Motive Partners, $100B AUM) from generic KYC/AML (Bretton AI, 3★)
+5. imper.ai (Agent Auth & Security) — calibrates the human-agent boundary security sub-theme
 
 ---
 
 ## What I Learned This Week
 
-The single most important insight from this week is that the AI Safety & Guardrails gap has become a full-blown infrastructure category practically overnight. Five new companies raised a combined ~$313M, Goodfire achieved unicorn status on interpretability alone, and Nvidia validated the space by open-sourcing NemoClaw — which simultaneously proves the market and compresses the differentiation window. The thesis must now be sharper about what the *regulated* infrastructure layer provides that open-source security stacks and horizontal governance platforms do not: fiduciary accountability chains, regulatory reporting primitives, and audit-grade provenance that satisfies FINRA, FCA, and EU AI Act requirements specifically. Meanwhile, the payment networks' coordinated sprint into agentic commerce (Mastercard's live transaction, Visa's Agentic Ready, Visa Crypto Labs CLI) means the identity and authorisation layer for agents is being actively claimed by the most trusted brands in financial services. The startup opportunity is not to compete with Visa and Mastercard on payment identity, but to build the compliance and governance layer that sits on top of whichever payment standard wins. April's arrival finally gives the Tax Optimisation gap a candidate that matches the stated preference — embedded, advisor-workflow-integrated, and backed by QED — and getting a vote on April should be a priority this week.
+The most important insight this week is that the thesis is being validated from both ends simultaneously — and the validation is accelerating faster than the pipeline can absorb. From the top, incumbents (Mastercard, JPMorgan, Manulife, Visa) are publicly committing to agentic commerce infrastructure with explicit governance-first framing, confirming that regulated institutions will pay for the infrastructure layer the thesis describes. From the bottom, the startup ecosystem produced ten new pipeline entries in a single week — its largest intake — concentrated in exactly the gaps (Agent Auth, AI Safety & Guardrails) where the thesis has the strongest signal. The clearest new insight is the emergence of KYA (Know Your Agent) as vocabulary and concept: it positions the agent credentialing problem as structurally equivalent to KYC for humans, which means regulators will eventually mandate it, whoever defines the standard earliest has a durable advantage, and the compliance layer atop any agentic payment standard is the defensible infrastructure play. The week's most uncomfortable signal is Mastercard's Virtual C-Suite — which suggests the "front door" personal finance agent may be claimed by incumbents with proprietary data moats before startups can establish it, making the regulated plumbing beneath those incumbent agents the more durable opportunity. Finally, the complete absence of new academic papers for the third consecutive week signals that the market has moved into deployment mode: the analytical challenge is no longer understanding what is theoretically possible but identifying which governance and compliance primitives become hard requirements in production environments — and which startups are building those primitives with finserv-grade quality.
