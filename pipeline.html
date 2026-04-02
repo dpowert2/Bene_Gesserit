@@ -245,7 +245,7 @@
     </div>
 
     <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All <span class="filter-count">38</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="filter-count">42</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">21</span></button>
       <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
@@ -280,6 +280,66 @@
 
 <script>
 const startups = [
+  {
+    slug: "unique-ai",
+    name: "Unique AI",
+    url: "https://www.unique.ai/",
+    oneliner: "Unique is a vertical agentic AI platform for wealth management, asset management, and private banking — with 25+ off-the-shelf AI agents already deployed across institutions managing $2.3 trillion AUM.",
+    gap: "Personal Agent",
+    stage: "Series A ($30M)",
+    geo: "Switzerland",
+    finserv: "Live clients include Pictet Group (6,000 users), UBP, SIX, LGT, and Partners Group. Pictet reports efficiency gains of ~2 hours per week per employee. The platform supports back and middle-office automation via specialised agents for portfolio reporting, client onboarding, trade operations, and regulatory documentation. Total funding reaches $53M including this round.",
+    team: "Series A led by CommerzVentures and DN Capital, with continued participation from VI Partners and Pictet Group. Commerzbank's venture arm brings strategic financial institution alignment. Founding team is Zurich-based with deep Swiss financial services roots.",
+    thesis: "Unique has a defensible moat: deployed production agents inside some of Europe's most demanding regulated wealth managers, processing live AUM at scale. This is not a pilot — it's production infrastructure for financial agents. This gives you a potential benchmark or acquisition target for the wealth management vertical of an agentic financial operating system. Their client roster ($2.3T AUM) signals that the enterprise financial institution market is ready to buy vertical agents, not build them. Watching Unique's trajectory also validates the gap you're tracking: regulated institutions want purpose-built agents, not generic LLMs bolted onto existing software.",
+    evidence: [["Unique Secures USD $30 Million Series A to Pioneer Agentic AI Workforce in Financial Services", "https://www.unique.ai/en/blog/unique-secures-usd-30-million-series-a-to-pioneer-agentic-ai-workforce-in-financial-services-2"], ["Agentic AI start-up Unique raises $30m Series A, appoints new CPO", "https://www.fintechfutures.com/venture-capital-funding/agentic-ai-start-up-unique-raises-30m-series-a-appoints-new-cpo"], ["Unique, a Swiss AI platform for finance, raises $30M", "https://techcrunch.com/2025/02/27/unique-a-swiss-ai-platform-for-finance-raises-30m/"]],
+    score: 82,
+    bars: {gap: [30, 35], finserv: [25, 25], stage: [15, 20], team: [12, 20]}
+  },
+  {
+    slug: "natural",
+    name: "Natural",
+    url: "https://www.natural.co/about",
+    oneliner: "Natural re-architects the payment stack for a future where transactions are executed not by people, but by autonomous software agents.",
+    gap: "Personal Agent",
+    stage: "Seed ($9.8M)",
+    geo: "USA",
+    finserv: "Backed by fintech founders from Ramp, Mercury, Unit, Bridge, and Emprise Bank — Natural's early design partners span logistics, property management, procurement, healthcare, and construction, all sectors where regulated payment flows dominate. The company is targeting B2B and embedded payment workflows, signing bank and payout partners for general availability in 2026.",
+    team: "Round co-led by Abstract and Human Capital, with participation from Forerunner Ventures, Terrain, Restive Ventures, and Genius Ventures. Angels include Zach Abrams (Bridge), Immad Akhund (Mercury), Eric Glyman &amp; Karim Atiyeh (Ramp), Guillermo Rauch (Vercel), Itai Damti (Unit), and Matt Michaelis (Emprise Bank). Founding team not publicly named.",
+    thesis: "As AI agents proliferate in financial services workflows, every agent will eventually need to move money — pay vendors, route invoices, settle contracts. Natural is building the payment rails that agents natively call. This gives you a potential partner for the execution layer of agent-driven finance: a startup specifically building the infrastructure your agentic platform would need to connect to for money movement, rather than a consumer-facing product. If you are positioning as the regulated operating system that agents plug into, Natural is building a complementary primitive on the payments side.",
+    evidence: [["Fintech Natural Launches With $9.8M Seed Round to Power Agentic Payments", "https://www.businesswire.com/news/home/20251023151615/en/Fintech-Natural-Launches-With-$9.8M-Seed-Round-to-Power-Agentic-Payments"], ["Natural — Payments for AI Agents", "https://www.natural.co/about"]],
+    score: 78,
+    bars: {gap: [28, 35], finserv: [22, 25], stage: [16, 20], team: [12, 20]}
+  },
+  {
+    slug: "vivox-ai",
+    name: "Vivox AI",
+    url: "https://www.vivox.ai/",
+    oneliner: "Vivox AI builds regulator-ready \"atomic\" AI agents for AML, KYB/KYC, and financial crime compliance at regulated institutions.",
+    gap: "Compliance",
+    stage: "Pre-Seed (£1.3M)",
+    geo: "UK",
+    finserv: "In live deployments, Vivox has reduced complex compliance case processing times from six hours to ~30 minutes, lowered false-positive screening alerts by up to 86%, and enabled straight-through processing rates up to 50% for onboarding and due-diligence workflows. Backers include Axel Weber (former Bundesbank president and UBS chairman) and Dan Cobley (former Google UK MD), plus senior executives from Barclays — deep regulatory and financial institution credibility at an early stage.",
+    team: "Backed by Axel Weber, Dan Cobley, Kos Stiskin, James Berdigans, Startup Wise Guys, and Venture Together. FCA-adjacent investor network signals strong UK regulatory awareness.",
+    thesis: "Vivox occupies a narrow but extremely defensible position: compliance agents built specifically to satisfy regulators, not just automate compliance analysts. The \"atomic agent\" architecture — where each agent handles a single auditable task — mirrors the accountability and explainability requirements that financial regulators are beginning to formalise. This gives you a potential intelligence partner or acquisition target in the compliance agent layer: a UK-anchored team building exactly the kind of regulator-first architecture that enterprise financial institutions need to deploy AI in production. Their AML/KYC focus aligns with the identity and onboarding gap you're monitoring.",
+    evidence: [["Vivox AI Raises £1.3m to Scale Regulator-Ready Atomic AI Agents for Financial Crime Compliance", "https://www.prnewswire.com/news-releases/vivox-ai-raises-1-3m-to-scale-regulator-ready-atomic-ai-agents-for-financial-crime-compliance-302703198.html"], ["Vivox AI Secures £1.3M — TheAIInsider", "https://theaiinsider.tech/2026/03/05/vivox-ai-secures-1-3m-to-scale-regulator-ready-atomic-ai-agents-for-financial-crime-compliance/"]],
+    score: 74,
+    bars: {gap: [30, 35], finserv: [21, 25], stage: [11, 20], team: [12, 20]}
+  },
+  {
+    slug: "aether-datahub",
+    name: "Aether DataHub",
+    url: "https://aetherdatahub.com/",
+    oneliner: "Aether DataHub creates human-verified, institutional-grade financial datasets for training and fine-tuning AI models in regulated financial services contexts.",
+    gap: "Market Data",
+    stage: "Early Stage",
+    geo: "USA",
+    finserv: "Partnering with OORT to address the acute shortage of high-quality domain-specific financial training data, Aether positions itself at the intersection of AI infrastructure and financial services data quality. Financial services firms have been blocked from using generic AI training data by regulatory concerns; Aether's verifiable datasets are explicitly designed to satisfy those concerns. Partnership announced April 1, 2026.",
+    team: "Limited public information available. Aether Holdings partnership with OORT (a distributed compute and data verification network) suggests an infrastructure-layer approach rather than a direct application layer.",
+    thesis: "Every AI agent deployed in financial services needs to be trained on accurate, compliant, and auditable data. Aether is betting that the bottleneck to agentic AI adoption in finance is not model capability but data quality. This gives you a potential data infrastructure partner: if you are building the operating system that financial agents plug into, Aether could supply the training and evaluation datasets that make those agents trustworthy and regulatorily defensible. Watch for whether they develop financial-domain benchmarks or become a data supplier to the regtech and compliance agent market.",
+    evidence: [["Aether Holdings Partners With OORT To Create Human-Verified Datasets For Fintech AI", "https://techstartups.com/2026/04/01/aether-holdings-partners-with-oort-to-create-human-verified-datasets-for-fintech-ai/"]],
+    score: 58,
+    bars: {gap: [20, 35], finserv: [14, 25], stage: [12, 20], team: [12, 20]}
+  },
   {
     slug: "norm-ai",
     name: "Norm AI",
