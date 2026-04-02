@@ -1,89 +1,119 @@
 # Bene Gesserit — Daily Report
-**Date:** 2026-03-10
+**Date:** 2026-04-02
 
 ---
 
 ## Stats
-- **3** new startups detected
-- **7** briefing items
-- **1** research paper added
+- **8** new startups detected (afternoon re-scan using updated search-terms.md)
+- **16** briefing items total today (8 morning + 8 afternoon)
+- **0** new research papers
+- **61** total companies in pipeline (53 prior + 8 new today)
 
 ---
 
-## Top 3 Startups by Score (all-time, across 16 in pipeline)
+## Top 3 Startups by Score (all-time)
 
-| Rank | Company | Score | Pitch |
-|------|---------|-------|-------|
-| 🥇 | **Overmind** | 90 | London-based AI agent supervision platform built by a former MI5 officer — directly addresses the AI Safety & Guardrails gap with European geography and regulated-industry DNA. |
-| 🥈 | **t54 Labs** | 88 | Identity, verification, and compliance tools purpose-built for AI agents, with strategic backing from Franklin Templeton and Ripple — deep FinServ credibility in the Agent Authentication gap. |
-| 🥈 | **Bretton AI** *(new)* | 88 | Rebranded from Greenlite AI, Bretton AI is the most production-validated compliance agent platform in US regulated banking — 1.2M+ investigations, $10M+ in compliance savings, $75M Series B. |
+| Rank | Company | Score | Gap | Pitch |
+|------|---------|-------|-----|-------|
+| 🥇 | **Keycard** *(new today)* | 98 | Agent Auth & Security | a16z-backed, Auth0/Okta pedigree team building cryptographic agent identity with delegation chains and per-action audit logs — the most technically precise agent identity solution in the pipeline. |
+| 🥈 | **Venice Security** *(new today)* | 96 | Agent Auth & Security | PAM for the AI era with Fortune 500 finance customers already displacing CyberArk; founded by Forbes 30U30 ex-Axis Security veterans with Wiz founders as angels. |
+| 🥉 | **Linx Security** *(new today)* | 94 | Agent Auth & Security | "Wiz for identity" — $83M raised, bank customers under multimillion-dollar contracts, governing millions of NHI + AI agent identities. Series B but finserv-validated at scale. |
+
+*Previous top-scorer note: Overmind (90, 5★ voted) remains the highest-voted company in the pipeline. Keycard, Venice, and Linx score higher but are unvoted.*
 
 ---
 
 ## Preference Matches
-No preference adjustments active yet (no votes recorded). Once you start voting, the system will calibrate soft factors and preference weights to surface personalised matches here.
+
+**No company currently matches 2+ strong positive preferences simultaneously.**
+
+The two active strong positive preferences are:
+1. Agent Authentication & Security — Trust Infrastructure Layer (+15)
+2. AI Safety & Guardrails — Regulated Industries (+12)
+
+Keycard, Venice Security, Linx Security, and Oasis Security each match Preference 1. Mindgard, Overmind, and Kai match Preference 2. No company detected yet sits clearly at the intersection of both (i.e., an agent identity platform with explicit AI safety/guardrails capabilities for regulated deployment).
+
+**Watch:** If Sycamore (agent OS with "trusted" governance framing) evolves its positioning toward regulated compliance, it would be the first orchestration-layer match for Preference 1.
 
 ---
 
-## Full Briefing — 2026-03-10
+## Full Briefing — 2026-04-02
 
-**1. Dify Raises $30M Pre-A to Scale Open-Source Agentic Workflow Platform**
-Dify closed a $30M Series Pre-A (valuation: $180M) to accelerate open-source agentic workflow tooling, now running on 1.4M+ machines and used by 280 enterprises. Broader agent infrastructure momentum continues to compound.
-[PYMNTS](https://www.pymnts.com/news/fintech-investments/2026/dify-secures-30-million-dollars-help-businesses-deploy-ai-agents) | Category: Funding / Agent Orchestration | **Thesis impact: reinforces**
+See full briefing at: `briefings/2026-04-02.md` (16 signals)
 
-**2. AppZen Raises $180M Series D With JPMorgan, Amazon as Customers**
-AppZen raised $180M Series D (total: $290M) with 65 Fortune 500 customers including JPMorgan Chase, proving agentic finance automation is real and scaling into large enterprises.
-[Crunchbase News](https://news.crunchbase.com/fintech/agentic-ai-startup-appzen-seriesd/) | Category: Funding / Agent Orchestration | **Thesis impact: reinforces**
+**Summary of today's signals:**
 
-**3. FINRA 2026 Oversight Report Formally Names AI Agents as Emerging Risk**
-FINRA's 2026 Annual Regulatory Oversight Report identifies AI agents as a material supervisory risk for the first time, flagging autonomous action beyond user intent and sensitive data exposure. Compliance and guardrails vendors gain direct regulatory tailwind.
-[TechInformed](https://techinformed.com/agentic-ai-and-more-to-reshape-fintech-in-2026/) | Category: Regulation | **Thesis impact: reinforces**
+**Reinforces thesis (11):**
+- Oasis Security $120M Series B (NHI security — existing 5★ pipeline company)
+- Linx Security $50M Series B (NHI + AI identity, bank customers)
+- Keycard $38M launch (cryptographic agent identity)
+- Venice Security $33M launch (PAM for AI era, finance F500 clients)
+- Sycamore $65M seed (trusted agent OS)
+- Interloom €14.2M seed (agent knowledge, Commerzbank customer)
+- Novee $51.5M (AI offensive security)
+- Kaaj $3.8M seed (agentic credit intelligence, $5B+ loan volume)
+- Complyance $20M Series A GV (AI-native GRC — existing pipeline company upgraded)
+- Banks deploying agents for autonomous money movement (42% of FIs live or assessing)
+- EU AI Act August 2026 deadline creates compliance urgency
 
-**4. FCA Launches Mills Review Into AI's Impact on Retail Financial Services**
-The UK FCA launched the Mills Review on January 27, 2026 — examining agentic AI's impact on retail financial services, with audit trail and human-in-the-loop guidance expected in 2026. Europe's regulatory framework for agents is taking shape.
-[Regulation Tomorrow](https://www.regulationtomorrow.com/2026/01/mills-review-to-consider-how-ai-will-reshape-retail-financial-services/) | Category: Regulation / Europe | **Thesis impact: reinforces**
+**Challenges thesis (2):**
+- OpenAI acquires Promptfoo + SentinelOne acquires Prompt Security: prompt injection / red-teaming sub-category being absorbed by hyperscalers. Startup window narrowing to regulatory compliance overlay.
+- Agentic commerce outpacing human-designed regulation (Centre for Data Innovation)
 
-**5. UK Treasury Committee: Regulators "Not Doing Enough" on AI in Finance**
-The UK House of Commons Treasury Committee concluded that the government, FCA, and Bank of England are failing to manage consumer and systemic AI risks, with AI now used by 75% of UK financial firms. Regulatory urgency accelerates demand for governed AI infrastructure.
-[Hogan Lovells](https://www.hoganlovells.com/en/publications/new-developments-for-ai-in-uk-financial-services) | Category: Regulation / Europe | **Thesis impact: reinforces**
-
-**6. Professional Liability Insurance for AI Agents Emerges as US Market Category**
-A new professional liability insurance product for AI agents appeared in 2026, requiring proof of prompt injection protection and privacy shields for coverage — with several US states now mandating it for bank partnerships. Structural compliance floor directly advantages AI safety vendors.
-[Emerline](https://emerline.com/blog/how-to-build-fintech-ai-agent-usa) | Category: Market Signal / AI Safety | **Thesis impact: new signal**
-
-**7. Oracle Launches Agentic Banking Platform — Big Tech Enters Infrastructure Race**
-Oracle announced a dedicated agentic platform for banking targeting customer engagement, risk, and compliance workflows. Big-tech entry raises competitive stakes; the window for differentiated, regulator-native agent startups is narrowing.
-[Oracle](https://www.oracle.com/news/announcement/oracle-reimagines-banking-for-the-ai-era-2026-02-03/) | Category: Big Tech | **Thesis impact: challenges**
+**New signals (3):**
+- "Trusted agent OS" framing at the orchestration layer (Sycamore)
+- Kaaj: agentic lending workflows at $5B+ production volume at seed
+- Commerzbank + Zurich Insurance as finserv customers for EU seed-stage AI agent company (Interloom)
 
 ---
 
-## Pending Votes (> 3 days)
-No startups have been waiting more than 3 days yet. All 13 startups from yesterday (2026-03-09) have been pending 1 day. **Start voting to activate preference learning.**
+## Startups Awaiting Vote (> 3 days)
 
-| Company | Score | Gap | Days Pending |
-|---------|-------|-----|-------------|
-| Overmind | 90 | AI Safety & Guardrails | 1 |
-| t54 Labs | 88 | Agent Authentication & Security | 1 |
-| Bretton AI *(new)* | 88 | Compliance | 0 |
-| Oasis Security *(new)* | 84 | Agent Auth & Security | 0 |
-| Stacks | 82 | Agent Orchestration | 1 |
-| Unit21 | 81 | Compliance | 1 |
-| Mine (MoneyGPT) | 78 | Personal Agent | 1 |
-| Dyna.Ai | 74 | Agent Orchestration | 1 |
-| Tendi | 74 | Personal Agent | 1 |
-| Uptiq | 73 | Compliance | 1 |
-| Guardrails AI | 73 | AI Safety & Guardrails | 1 |
-| Natural *(new)* | 70 | Agent Orchestration | 0 |
-| Alter | 71 | Agent Auth & Security | 1 |
-| Mezzi | 70 | Tax Optimisation | 1 |
-| Hive Tax AI | 68 | Tax Optimisation | 1 |
-| Trace | 65 | Agent Orchestration | 1 |
+*Sorted by score descending. All pre-April 2026 pipeline companies qualify.*
+
+| Company | Score | Gap | Est. Days Pending |
+|---------|-------|-----|-------------------|
+| Oasis Security *(5★ voted — no action needed)* | — | — | — |
+| Overmind *(5★ voted)* | — | — | — |
+| **Crossmint** | 80 | Agent Auth & Security | ~4 days |
+| **Obin AI** | 82 | Personal Agent | ~4 days |
+| **Goodfire** | 78 | AI Safety & Guardrails | ~4 days |
+| **Manifold** | 79 | AI Safety & Guardrails | ~13 days |
+| **Jetstream Security** | 77 | AI Safety & Guardrails | ~13 days |
+| **Onyx Security** | 75 | Agent Auth & Security | ~13 days |
+| **Norm AI** | 74 | Compliance | ~13 days |
+| **Unique AI** | 73 | Personal Agent | ~4 days |
+| **Vivox AI** | 72 | Compliance | ~4 days |
+| **Runsybil** | 71 | Agent Auth & Security | ~13 days |
+| **Qevlar AI** | 70 | AI Safety & Guardrails | ~13 days |
+| **Natural** | 70 | Agent Auth & Security | ~4 days |
+| **Lyzr** | 68 | Agent Orchestration | ~13 days |
+| **Certivo** | 67 | Compliance | ~13 days |
+| **Imper AI** | 66 | Agent Auth & Security | ~13 days |
+| **Harvey** | 65 | Compliance | ~13 days |
+| **Inflow** | 62 | Agent Auth & Security | ~4 days |
+
+*Note: Kai (4★), Sphinx (3★), Bretton AI (3★), Stacks (2★), TaxDown (2★) have been voted. t54-Labs (5★) and Oasis (5★) have been voted.*
+
+**Recommended next votes:** Crossmint (80, Agent Auth — KYA framing, Ribbit + Franklin Templeton), Obin AI (82, Personal Agent — JPMorgan pedigree, $500B+ fund customer), Manifold (79, AI Safety — Costanoa-backed, runtime agent security).
 
 ---
 
 ## System Health
-- **Last calibration date:** 2026-03-09 (initial configuration, no votes)
-- **Votes recorded since last calibration:** 0
-- **Next scheduled calibration:** After first votes are cast (weekly preference learning runs after 3+ votes)
-- **Total startups in pipeline:** 16 (13 carried forward + 3 new today)
-- **Coverage by gap category:** Personal Agent (4) · Compliance (3) · Tax Optimisation (2) · Agent Orchestration (4) · AI Safety & Guardrails (3) · Agent Auth & Security (3)
+
+| Metric | Value |
+|--------|-------|
+| Last calibration date | 2026-03-29 |
+| Total votes cast | 8 |
+| Votes since last calibration | 0 |
+| New companies since last vote | 20+ |
+| Next calibration trigger | On next vote |
+| Pipeline size | 61 companies |
+| Voted | 8 (13%) |
+| Unvoted | 53 (87%) |
+
+**⚠️ Vote drought alert:** No votes have been cast since March 15, 2026 — 18 days. Preference learning is frozen. The 8 new companies added today (all high-scoring, all in the thesis sweet spot) cannot be calibrated until votes resume. The preference model cannot learn from 87% of the pipeline.
+
+**Recommended action:** Vote on 3-5 companies from the "Awaiting Vote" table above. Even 2-3 new votes would unlock a preference calibration pass.
+
+---
