@@ -1,0 +1,23 @@
+{
+  "skill_name": "bene-gesserit-card",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Card Ramp for BG",
+      "expected_output": "A Bene Gesserit card for Ramp (corporate card/spend management). Should score low due to accounting automation penalty. Card should still be produced with honest scoring.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "What do you think of Astra Security for the Bene Gesserit pipeline? https://astra.security",
+      "expected_output": "A Bene Gesserit card for Astra Security (security testing platform). Should research from the URL and web. Should classify into AI Safety & Guardrails or Agent Authentication & Security depending on findings.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Score Crossmint for the BG radar — they do agentic payments and wallets",
+      "expected_output": "A Bene Gesserit card for Crossmint. User provided context about what they do. Should classify as Agent Payment Rails. Should score reasonably well given thesis alignment with agent payment infrastructure.",
+      "files": []
+    }
+  ]
+}

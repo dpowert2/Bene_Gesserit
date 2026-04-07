@@ -283,7 +283,7 @@ Catch-all for signals that don't fit a category:
 ## Scan Priority Matrix
 
 | Priority | Categories | Frequency |
-|----------|-----------|----------|
+|----------|-----------|-----------|
 | 🔴 Critical | 1 (Personal Agent), 2 (Compliance), 6 (Auth/Identity), Competitive Intel | Every scan |
 | 🟡 High | 3 (Tax), 5 (Safety), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
 | 🟠 Medium | 4 (Orchestration), 8 (Memory), 10 (Disputes) | Weekly |

@@ -1,1 +1,592 @@
-$(python3 -c 'import json; print(json.load(open("/tmp/blobs_ready.json"))[29]["content"])')
+{
+  "generated": "2026-04-03",
+  "clusters": [
+    {
+      "gap": "Agent Authentication & Security",
+      "theme": "Agent Identity as Regulated Infrastructure",
+      "count": 7,
+      "companies": ["alter", "oasis-security", "t54-labs", "sapiom", "keycard", "venice-security", "linx-security"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Zero-trust per-call AuthN/AuthZ",
+          "companies": ["alter"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Non-human identity (NHI) management",
+          "companies": ["oasis-security", "linx-security"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent identity standards and developer tools",
+          "companies": ["t54-labs"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent identity + payment rails",
+          "companies": ["sapiom"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Cryptographic agent identity binding (Auth0/Okta pedigree)",
+          "companies": ["keycard"],
+          "status": "new"
+        },
+        {
+          "name": "Unified PAM across human/machine/AI identities",
+          "companies": ["venice-security"],
+          "status": "new"
+        }
+      ],
+      "notes": "Strongest vote signal in pipeline (two 5-star for t54-labs and oasis-security). Three new entries this week: Keycard ($38M, a16z, Auth0/Okta founding team), Venice Security ($33M, displacing CyberArk at F500 finance), Linx Security ($83M total, millions of identities at banks). NIST AI Agent Standards Initiative and BPI formal comments add regulatory momentum. Combined gap funding now exceeds $400M."
+    },
+    {
+      "gap": "Agent Authentication & Security",
+      "theme": "Agent Payment Infrastructure Stack",
+      "count": 4,
+      "companies": ["sapiom", "crossmint", "inflow", "natural"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "End-to-end agentic payments: wallets, virtual cards, stablecoin, KYA credentials",
+          "companies": ["crossmint"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent onboarding and policy-compliant credentialing at point of action",
+          "companies": ["inflow"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent identity + payment rails (earlier entry)",
+          "companies": ["sapiom"],
+          "status": "ongoing"
+        },
+        {
+          "name": "B2B agentic payment rails for autonomous vendor/invoice/procurement",
+          "companies": ["natural"],
+          "status": "new"
+        }
+      ],
+      "notes": "Natural ($9.8M seed, Abstract + Human Capital) added this week as third pure-play entry. Gap promotion threshold met. Worth (Compliance gap) also building KYA framework for agent payments. Mastercard Universal Commerce Protocol (with Google and Microsoft) defines incumbent standards. Recommend formal promotion to seventh gap category."
+    },
+    {
+      "gap": "Agent Authentication & Security",
+      "theme": "Human-Agent Boundary Security",
+      "count": 1,
+      "companies": ["imper-ai"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AI-driven impersonation detection and workforce identity verification",
+          "companies": ["imper-ai"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "No new additions this week. imper.ai remains the sole dedicated entry. IBM WatsonX/Auth0/Yubico framework validates the architecture. Priority vote candidate."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "AI Agent Control Plane",
+      "count": 3,
+      "companies": ["onyx-security", "jetstream-security", "manifold"],
+      "first_seen": "2026-03-20",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Supervisory agent governance (real-time policy enforcement)",
+          "companies": ["onyx-security"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI governance via dynamic blueprints",
+          "companies": ["jetstream-security"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI Detection and Response (AIDR) / runtime observability",
+          "companies": ["manifold"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "No new additions this week. All three companies pre-vote. Manifold and Onyx Security remain high-priority vote candidates."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "Agentic Guardrails as Regulated Infrastructure",
+      "count": 3,
+      "companies": ["overmind", "kai", "guardrails-ai"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Regulated-industry agent supervision",
+          "companies": ["overmind"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agentic cybersecurity (IT/OT)",
+          "companies": ["kai"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Open-source guardrails framework",
+          "companies": ["guardrails-ai"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Overmind (5-star, score 90) remains top shortlist candidate across the entire pipeline. MAS Singapore Project MindForge Phase 2 toolkit and EU AI Act August deadline add urgency. Kai re-vote warranted given market maturation."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "Autonomous AI Security Operations",
+      "count": 7,
+      "companies": ["armadin", "surf-ai", "xbow", "runsybil", "qevlar-ai", "novee", "mindgard"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Autonomous AI red-teaming and attack simulation",
+          "companies": ["armadin", "novee", "mindgard"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Autonomous penetration testing (offensive)",
+          "companies": ["xbow", "runsybil"],
+          "status": "new"
+        },
+        {
+          "name": "Autonomous SOC / security operations",
+          "companies": ["qevlar-ai", "surf-ai"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Largest single-theme expansion this week: +5 new companies. XBOW ($120M, unicorn, MS Defender integration) and RunSybil ($40M, Khosla, OpenAI first security hire) both conduct autonomous pen testing with FI customers. Qevlar AI ($30M, Paris) serves European banks via MSSP channel. Combined theme funding exceeds $500M. Most companies in this theme are horizontal security -- finserv-specific differentiation varies. Acquisition wave (Promptfoo, Prompt Security, Lakera) absorbing horizontal layer validates but compresses this space."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "AI-Native Data Loss Prevention",
+      "count": 1,
+      "companies": ["jazz"],
+      "first_seen": "2026-04-03",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Agentic Investigator for contextual DLP",
+          "companies": ["jazz"],
+          "status": "new"
+        }
+      ],
+      "notes": "New theme. Jazz ($61M, Glilot + Team8, MassMutual Ventures) deploys an Agentic Investigator that understands context and intent behind data movement -- reducing alerts from tens of thousands to ~10 daily at 5K-person orgs. As FI agents access sensitive data at scale, contextual DLP becomes a critical governance layer."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "AI Interpretability as Compliance Infrastructure",
+      "count": 1,
+      "companies": ["goodfire"],
+      "first_seen": "2026-03-20",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Model interpretability and behaviour design",
+          "companies": ["goodfire"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Goodfire ($150M Series B, $1.25B unicorn). EU AI Act high-risk provisions effective August 2026. No new entrants."
+    },
+    {
+      "gap": "AI Safety & Guardrails",
+      "theme": "Exposure Management / Broad AI Governance",
+      "count": 1,
+      "companies": ["armorcode"],
+      "first_seen": "2026-03-20",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Unified exposure management across AI systems",
+          "companies": ["armorcode"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "ArmorCode ($81M total). Broader than pure agent governance -- horizontal positioning. No new developments."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "Compliance Without Disruption",
+      "count": 4,
+      "companies": ["sphinx", "uptiq", "complyance", "steward"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Browser-native / no-new-system compliance agents",
+          "companies": ["sphinx", "uptiq"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI agents for GRC workflows",
+          "companies": ["complyance"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Institutional investor compliance (fund-of-funds, family offices)",
+          "companies": ["steward"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "No new additions. Steward (Motive Partners, $100B AUM on-platform) remains highest-priority unvoted entry in this theme."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "High-Scale Financial Crime Automation",
+      "count": 4,
+      "companies": ["bretton-ai", "unit21", "certivo", "vivox-ai"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AML/fraud/KYC at scale (replacement approach)",
+          "companies": ["bretton-ai"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Fraud and AML risk operations platform",
+          "companies": ["unit21"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI compliance automation (supply chain beachhead)",
+          "companies": ["certivo"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Atomic agents for auditable AML/KYC tasks",
+          "companies": ["vivox-ai"],
+          "status": "new"
+        }
+      ],
+      "notes": "Vivox AI (GBP1.3M, ex-Bundesbank president advisor, atomic agent architecture) added this week. Architecture anticipates accountability requirements. Bretton AI 3-star -- KYC/AML flagged as low-preference sub-domain."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "Regulatory Policy as Executable Infrastructure",
+      "count": 2,
+      "companies": ["norm-ai", "worth"],
+      "first_seen": "2026-04-03",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Regulatory rules as executable AI policies",
+          "companies": ["norm-ai"],
+          "status": "new"
+        },
+        {
+          "name": "KYA compliance framework for agent-SMB transactions",
+          "companies": ["worth"],
+          "status": "new"
+        }
+      ],
+      "notes": "New theme. Norm AI ($27M Series A) and Worth ($30M, Amex Ventures) both treat compliance rules as programmable infrastructure rather than audit processes. Worth is the first funded product with an explicit KYA (Know Your Agent) feature. This sub-theme is the most thesis-aligned within Compliance -- compliance as code rather than compliance as documentation."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "EU Regulatory Compliance Automation",
+      "count": 1,
+      "companies": ["hybridity"],
+      "first_seen": "2026-04-03",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "DORA/NIS2/GDPR compliance via agentic workflows",
+          "companies": ["hybridity"],
+          "status": "new"
+        }
+      ],
+      "notes": "New entry. Hybridity (EUR2M, Stockholm) targets DORA/NIS2 compliance for EU financial institutions. Timely given EU enforcement ramp-up. Very early stage."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "Enterprise Legal AI for Compliance Workflows",
+      "count": 1,
+      "companies": ["harvey"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Legal AI agents for compliance documentation and regulatory due diligence",
+          "companies": ["harvey"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Harvey ($200M raise at $11B valuation). Stage outside Seed-Series B sweet spot. Monitoring for strategic partnership potential."
+    },
+    {
+      "gap": "Compliance",
+      "theme": "Emerging Market AI-Native Compliance",
+      "count": 1,
+      "companies": ["zoven"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AI-native KYC/AML for fintech merchant onboarding (India-first)",
+          "companies": ["zoven"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "Zoven (Blume Ventures, score 52). Watchlist only -- geography and stage outside primary thesis parameters."
+    },
+    {
+      "gap": "Tax Optimisation",
+      "theme": "Portfolio-Integrated Tax Intelligence",
+      "count": 4,
+      "companies": ["hive-tax-ai", "mezzi", "taxdown", "april"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Tax filing / digital tax returns",
+          "companies": ["taxdown"],
+          "status": "ongoing",
+          "preference_signal": "low -- downvoted 2-star"
+        },
+        {
+          "name": "Portfolio-native tax optimisation",
+          "companies": ["mezzi", "hive-tax-ai"],
+          "status": "ongoing",
+          "preference_signal": "unvoted -- pending"
+        },
+        {
+          "name": "Embedded AI tax platform for wealth management",
+          "companies": ["april"],
+          "status": "ongoing",
+          "preference_signal": "unvoted -- high expected alignment"
+        }
+      ],
+      "notes": "No new entries for third consecutive week. April ($78M, QED Investors) remains the highest-priority unvoted candidate. Consider broadening search terms."
+    },
+    {
+      "gap": "Agent Orchestration",
+      "theme": "Trusted Agent Operating Systems",
+      "count": 2,
+      "companies": ["sycamore", "notch"],
+      "first_seen": "2026-04-03",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Trusted enterprise agent OS with native governance",
+          "companies": ["sycamore"],
+          "status": "new"
+        },
+        {
+          "name": "AI OS for regulated industries (insurance-first, finserv expansion)",
+          "companies": ["notch"],
+          "status": "new"
+        }
+      ],
+      "notes": "New theme. Sycamore ($65M seed, Coatue + Lightspeed, ex-Atlassian CTO) and Notch ($30M, 12x ARR growth) both position as governance-native agent platforms. This is the most direct competitive challenge to the thesis -- if governance becomes a platform feature rather than standalone infrastructure, the thesis target shifts. Sycamore is a priority vote candidate."
+    },
+    {
+      "gap": "Agent Orchestration",
+      "theme": "Incumbent-Backed Enterprise Orchestration",
+      "count": 5,
+      "companies": ["dyna-ai", "natural-payments", "stacks", "trace", "lyzr"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "On-prem enterprise agent orchestration (finserv-anchored)",
+          "companies": ["lyzr"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Accounting / finance workflow automation",
+          "companies": ["stacks"],
+          "status": "ongoing",
+          "preference_signal": "low -- downvoted 2-star"
+        },
+        {
+          "name": "Agent tracing and observability",
+          "companies": ["trace"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Enterprise AI deployment (APAC/ME)",
+          "companies": ["dyna-ai"],
+          "status": "ongoing"
+        },
+        {
+          "name": "B2B workflow automation",
+          "companies": ["natural-payments"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "No new additions to this sub-theme."
+    },
+    {
+      "gap": "Agent Orchestration",
+      "theme": "Financial OS and CFO-Layer Agent Infrastructure",
+      "count": 2,
+      "companies": ["opencfo", "eragon"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Agentic financial OS for mid-market CFOs",
+          "companies": ["opencfo"],
+          "status": "ongoing"
+        },
+        {
+          "name": "LLM-native enterprise OS (horizontal)",
+          "companies": ["eragon"],
+          "status": "ongoing"
+        }
+      ],
+      "notes": "No new additions."
+    },
+    {
+      "gap": "Agent Orchestration",
+      "theme": "Agent Knowledge Infrastructure",
+      "count": 1,
+      "companies": ["interloom"],
+      "first_seen": "2026-04-03",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "Tacit knowledge capture and corporate memory for AI agents",
+          "companies": ["interloom"],
+          "status": "new"
+        }
+      ],
+      "notes": "New entry. Interloom (EUR14.2M, DN Capital, Munich) captures undocumented expert decisions as queryable agent memory. Commerzbank production customer. Most finserv-grounded EU seed-stage company this cycle."
+    },
+    {
+      "gap": "Personal Agent",
+      "theme": "AI-Powered Advisor and Consumer Finance Agents",
+      "count": 4,
+      "companies": ["mine-moneygpt", "tendi", "unique-ai", "natural"],
+      "first_seen": "2026-03-13",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AI financial advisor for consumers and advisors",
+          "companies": ["mine-moneygpt"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Multi-institution connectivity agents",
+          "companies": ["tendi"],
+          "status": "ongoing"
+        },
+        {
+          "name": "Vertical agentic AI for wealth/asset management",
+          "companies": ["unique-ai"],
+          "status": "new"
+        },
+        {
+          "name": "Agentic payment rails for consumers/SMBs",
+          "companies": ["natural"],
+          "status": "new"
+        }
+      ],
+      "notes": "Unique AI ($30M, CommerzVentures, deployed at Pictet/Partners Group managing $2.3T AUM) is the most institutionally validated Personal Agent entry. Natural ($9.8M seed) builds payment rails for AI agents -- overlaps with Agent Payment Rails cross-gap theme."
+    },
+    {
+      "gap": "Personal Agent",
+      "theme": "Institution-Native Agentic Workforce",
+      "count": 3,
+      "companies": ["obin-ai", "enfi", "kaaj"],
+      "first_seen": "2026-03-29",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Production-grade agentic workforce inside FI governance boundaries",
+          "companies": ["obin-ai"],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI credit analyst agents deployed alongside human underwriters",
+          "companies": ["enfi"],
+          "status": "new"
+        },
+        {
+          "name": "Agentic credit intelligence for SMB lending",
+          "companies": ["kaaj"],
+          "status": "new"
+        }
+      ],
+      "notes": "Significantly expanded: +2 new entries. EnFi ($15M, FINTOP Capital, 150+ FI investor network) and Kaaj ($3.8M, $5B+ loan volume at seed) both deploy agentic AI inside bank lending workflows. Combined with Obin AI, this sub-theme now has three companies demonstrating that banks are embedding AI agents into core credit and lending processes -- which creates immediate demand for the compliance infrastructure layer beneath them."
+    }
+  ],
+  "emerging_cross_gap_themes": [
+    {
+      "theme": "Agent Payment Rails",
+      "status": "promotion threshold met -- recommend formal seventh gap",
+      "companies": ["sapiom", "crossmint", "inflow", "natural"],
+      "external_signals": [
+        "Google AP2",
+        "Coinbase x402",
+        "Mastercard Agent Pay + Verifiable Intent + Universal Commerce Protocol (with Google and Microsoft)",
+        "Visa Agentic Ready (21 European bank partners)",
+        "KYA (Know Your Agent) framework -- now a funded product feature (Worth)",
+        "NIST AI Agent Standards Initiative -- identity and authorisation concept paper",
+        "BPI formal comments on agent security standards"
+      ],
+      "notes": "Third pure-play startup (Natural) entered this week, meeting the promotion threshold. Worth (Compliance) also building KYA as product feature. Mastercard Universal Commerce Protocol with Google and Microsoft defines incumbent standards layer. Recommend formal gap promotion.",
+      "first_seen": "2026-03-13"
+    },
+    {
+      "theme": "AI Governance / Regulatory Technology for AI Systems",
+      "status": "active gap candidate -- strengthened by NIST + MAS + FCA signals",
+      "companies": ["norm-ai"],
+      "external_signals": [
+        "NIST AI Agent Standards Initiative (April 2026 finance-specific sessions)",
+        "BPI/ABA formal NIST comments on agent identity and authorisation",
+        "EU AI Act August 2026 deadline (high-risk AI in finserv) -- EU Council Digital Omnibus position agreed",
+        "FCA AI Live Testing Cohort 2 (April 2026)",
+        "MAS Project MindForge Phase 2 AI Risk Management Toolkit",
+        "US Treasury AITO/FSOC AI Innovation Series",
+        "ABA/BPI NIST voluntary governance standards",
+        "Center for Data Innovation regulatory friction analysis"
+      ],
+      "notes": "Norm AI ($27M Series A) is the first startup that directly addresses regulatory-rules-as-executable-infrastructure. Multi-jurisdiction regulatory convergence (US NIST, EU AI Act, UK FCA, Singapore MAS) is the strongest thesis tailwind. Standards propagation timeline: 12-18 months from NIST publication to procurement mandate.",
+      "first_seen": "2026-03-13"
+    },
+    {
+      "theme": "Incumbent Agentic Commerce Build-Out",
+      "status": "pressure monitoring -- intensifying",
+      "companies": [],
+      "external_signals": [
+        "Mastercard Universal Commerce Protocol (with Google and Microsoft)",
+        "Mastercard Virtual C-Suite (agentic AI CFO for SMEs)",
+        "Oracle Fusion Agentic Applications (unresolved liability gap)",
+        "Goldman Sachs Claude-powered agents in production",
+        "JPMorgan Payments + Mirakl agentic commerce partnership",
+        "Manulife/Akka: $1B+ enterprise value target from agentic AI",
+        "Visa Agentic Ready",
+        "42% of FIs using/assessing agentic AI; 21% fully deployed"
+      ],
+      "notes": "Intensifying. Mastercard Universal Commerce Protocol with Google and Microsoft is the most significant new signal -- incumbents defining agentic commerce standards before regulators do. Oracle's unresolved liability gap (enterprise bears legal accountability for agent decisions) validates the thesis directly. Goldman Sachs production deployment confirms tier-1 bank adoption.",
+      "first_seen": "2026-03-29"
+    },
+    {
+      "theme": "AI Safety Acquisition Consolidation",
+      "status": "new -- competitive threat to horizontal AI safety plays",
+      "companies": [],
+      "external_signals": [
+        "OpenAI acquires Promptfoo (150K+ developers, 25% F500)",
+        "SentinelOne acquires Prompt Security (~$250M)",
+        "Check Point acquires Lakera (2025)",
+        "Google Cloud AI Protection / Model Armor (post-Wiz)",
+        "Microsoft Agent 365 (Defender + Entra + Purview)"
+      ],
+      "notes": "New cross-gap theme. The prompt injection / red-teaming / input-output filtering layer is being absorbed into platforms. Residual startup opportunity narrows to regulated compliance overlay (FINRA, FCA, EU AI Act audit primitives) that platform vendors lack domain expertise to build. Companies with regulated-industry-specific positioning (Overmind, Kai, Mindgard) are in the survivable zone.",
+      "first_seen": "2026-04-03"
+    }
+  ]
+}

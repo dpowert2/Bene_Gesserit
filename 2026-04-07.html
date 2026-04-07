@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bene Gesserit — Mar 26, 2026 Run</title>
-<meta content="Signals, startups, and research from the Mar 26, 2026 agentic AI radar run." name="description"/>
+<title>Bene Gesserit — Apr 7, 2026 Run</title>
+<meta content="Signals, startups, and research from the Apr 7, 2026 agentic AI radar run." name="description"/>
 <meta content="#F0EBE3" name="theme-color"/>
 <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
@@ -198,6 +198,11 @@
     .tag.new-signal {
       background: var(--blue-light);
       color: var(--blue);
+    }
+
+    .tag.market-signal {
+      background: var(--amber-light);
+      color: var(--amber);
     }
 
     .tag.stage {
@@ -494,105 +499,90 @@
       transition: color 0.15s, transform 0.1s;
     }
 
-    .star:hover,
-    .star.active { color: var(--amber); }
+    .star:hover {
+      color: var(--amber);
+      transform: scale(1.1);
+    }
 
-    .star:hover { transform: scale(1.15); }
+    .star.active {
+      color: var(--amber);
+      font-weight: 600;
+    }
 
     .note-toggle {
-      background: none;
-      border: 1px solid var(--border-strong);
-      border-radius: 100px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
       padding: 3px 10px;
-      font-size: 0.72rem;
-      font-weight: 600;
+      border-radius: 100px;
+      border: 1px solid var(--border-strong);
+      background: none;
       color: var(--text-muted);
       cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: border-color 0.2s, color 0.2s;
+      transition: all 0.2s;
     }
 
     .note-toggle:hover {
-      border-color: var(--brown);
-      color: var(--brown);
+      border-color: var(--blue);
+      color: var(--blue);
     }
-
-    .vote-status {
-      font-size: 0.72rem;
-      font-family: 'DM Mono', monospace;
-      color: var(--text-light);
-      margin-left: auto;
-    }
-
-    .vote-status.saving { color: var(--amber); }
-    .vote-status.saved  { color: var(--accent-dark); }
-    .vote-status.error  { color: var(--coral); }
 
     .note-area {
-      width: 100%;
-      margin-top: 6px;
+      flex-basis: 100%;
+      margin-top: 10px;
     }
 
     .note-area textarea {
       width: 100%;
-      min-height: 64px;
-      padding: 9px 12px;
-      font-size: 0.85rem;
-      font-family: 'DM Sans', sans-serif;
+      min-height: 60px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
       color: var(--text);
       background: var(--bg-page);
-      border: 1px solid var(--border-strong);
-      border-radius: 8px;
-      resize: vertical;
       outline: none;
       transition: border-color 0.2s;
-      line-height: 1.5;
     }
 
-    .note-area textarea:focus { border-color: var(--brown); }
-    .note-area textarea::placeholder { color: var(--text-light); }
+    .note-area textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .vote-status {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: 6px;
+    }
+
+    .vote-status.saving {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .vote-status.saved {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .vote-status.error {
+      color: var(--coral);
+      font-weight: 600;
+    }
 
     .vote-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px 9px;
-      border-radius: 10px;
-      background: var(--amber-light);
       color: var(--amber);
-      font-size: 0.72rem;
-      font-family: 'DM Mono', monospace;
-      letter-spacing: 1px;
-      flex-shrink: 0;
+      font-size: 1rem;
+      letter-spacing: -2px;
     }
 
     .startup-card.voted-low {
-      opacity: 0.45;
-      transition: opacity 0.3s;
+      border-left: 3px solid var(--coral);
     }
 
-    .startup-card.voted-low:hover { opacity: 1; }
-
-    /* ============================================================ */
-    /* FOOTER                                                       */
-    /* ============================================================ */
-    footer {
-      padding: 44px 0;
-      border-top: 1px solid var(--border);
-      background: var(--bg-page);
-    }
-
-    footer p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    footer strong { color: var(--text-heading); font-weight: 600; }
-
-    /* ============================================================ */
-    /* SETTINGS GEAR                                                */
-    /* ============================================================ */
+    /* Settings button */
     #settings-btn {
       position: fixed;
       bottom: 24px;
@@ -728,6 +718,26 @@
     }
 
     /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ============================================================ */
     /* RESPONSIVE                                                   */
     /* ============================================================ */
     @media (max-width: 640px) {
@@ -810,9 +820,9 @@
   <div class="container">
     <div class="run-nav-left">
       <a class="nav-link" href="index.html">← All runs</a>
-      <a class="nav-link" href="2026-03-22.html">← Mar 22</a>
+      <a class="nav-link" href="2026-04-06.html">← Apr 6</a>
     </div>
-    <div class="run-nav-center">Mar 26, 2026</div>
+    <div class="run-nav-center">Apr 7, 2026</div>
     <div class="run-nav-right">
       <a class="nav-link primary" href="pipeline.html">Full Pipeline →</a>
     </div>
@@ -823,10 +833,10 @@
 <header>
   <div class="container">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
-      <h1>Mar 26, 2026</h1>
+      <h1>Bene Gesserit — Apr 7, 2026</h1>
       <span class="edition-badge">Latest Run</span>
     </div>
-    <p>8 signals · 4 new startups · 0 research papers</p>
+    <p>17 signals · 12 new startups · 5 research papers</p>
   </div>
 </header>
 
@@ -834,87 +844,169 @@
 
 <section id="signals">
   <div class="container">
-    <div class="section-header"><h2>Signals</h2><span class="count">8 signals</span></div>
+    <div class="section-header"><h2>Signals</h2><span class="count">17 signals</span></div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Authentication & Security</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Runlayer — MCP Security Gateway</h3>
+<p>Runlayer emerged with an $11M seed round to build a dedicated security gateway for Model Context Protocol (MCP) and multi-agent systems. The company positions MCP as the new attack surface for LLM applications, providing cryptographic agent authentication, privilege delegation, and real-time threat detection. As MCP adoption accelerates in enterprise deployments, a security layer designed specifically for agent-to-resource communication becomes essential infrastructure — especially in regulated environments where non-repudiation and audit trails are mandatory.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Authentication & Security</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Aembit — Workload IAM</h3>
+<p>Aembit secured an $18M seed round to bring workload identity and access management to autonomous agents. The company's platform extends traditional IAM to handle agent-to-agent credential exchange, dynamic privilege escalation, and continuous compliance verification for agentic systems. This addresses a critical gap: traditional IAM was designed for human users and static services, not for software agents that spawn new identities, rotate credentials mid-execution, and operate across cloud and on-premise systems autonomously. Aembit signals that workload IAM is becoming a foundational infrastructure category.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Agent Authentication & Security</span>
+<span class="tag reinforces">Reinforces</span>
+</div>
+<h3>Astrix Security — NHI Security</h3>
+<p>Astrix Security closed a $45M Series B with Anthropic as a strategic investor, focused on securing non-human identity (NHI) systems including agent infrastructure. The Anthropic backing signals explicit commitment from an LLM leader to NHI security as a foundational problem. Astrix's funding trajectory (seed through Series B) in a narrow security vertical reflects market conviction that agent authentication and authorization is no longer a nice-to-have but a baseline requirement for enterprise deployments. This reinforces the structural shift in how organizations must architect trust for autonomous systems.</p>
+</div>
+
     <div class="briefing-item">
 <div class="briefing-tags">
 <span class="tag gap">Compliance</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Hadrius — SEC/FINRA Compliance</h3>
+<p>Hadrius is building automated SEC and FINRA compliance monitoring for agentic financial systems, emerging from Y Combinator's latest cohort. The company addresses a specific regulatory pain point: as agents make autonomous decisions in regulated finance (trade execution, advice generation, AML screening), every action must be logged, justified, and auditable to specific regulatory rules. Hadrius's focus on the most heavily scrutinized regulators (SEC, FINRA) suggests this is the vanguard of compliance-by-design infrastructure for agent-driven finance.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Audit</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>ValidMind — AI Governance for FinServ</h3>
+<p>ValidMind is providing continuous AI governance and model monitoring infrastructure for financial services, addressing the SEC's explicit 2026 exam priority around AI capability validation. The company helps firms document, test, and audit AI models used in decision-making — exactly what examiners will demand evidence of. ValidMind's positioning around governance (not just data) signals that the compliance focus has shifted from "does your AI work?" to "can you prove your AI works and doesn't drift?"</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Memory</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Mem0 — Universal Agent Memory</h3>
+<p>Mem0 raised $24.5M in Series A funding, with AWS as an exclusive early partner, to build enterprise-grade memory infrastructure for autonomous agents. The company's positioning around unified memory across agent instances, tasks, and deployments addresses a critical gap: agents need persistent, contextual memory to operate intelligently over time, but existing solutions (vector databases, context windows) don't provide the abstraction layer required for multi-agent coordination. Mem0's AWS exclusivity signals that cloud providers see agent memory as a core strategic capability.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Memory</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Cognee — Enterprise Agent Memory</h3>
+<p>Cognee closed a €7.5M funding round to bring structured, graph-based memory to enterprise agents. Unlike vector-based approaches, Cognee builds semantic knowledge graphs that capture relationships between entities, decisions, and outcomes — enabling agents to reason over historical patterns and avoid repeated mistakes. The company's European backing and focus on knowledge structure suggests deep demand from enterprises managing complex, long-running agentic workflows where simple vector similarity is insufficient for intelligent action.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Orchestration</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Pluvo — Finance Orchestration</h3>
+<p>Pluvo raised $5M seed funding to orchestrate multi-agent workflows in financial services, connecting agents for trade execution, settlement, and post-trade operations. The company enables agents to coordinate autonomously across legacy systems (settlement networks, clearing houses) and modern cloud infrastructure without requiring complete system replacement. This "orchestration as the bridge layer" approach suggests that the near-term value in agentic finance comes not from replacing systems but from connecting them intelligently.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Payment Rails</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Machine Payments Protocol — Stripe + Tempo Standard</h3>
+<p>Stripe and Tempo have jointly advanced a draft payment protocol specifically for machine-to-machine (agent-driven) transactions, establishing a standard for how agents authenticate payments, request approval, and execute transfers. The protocol builds on existing payment infrastructure (rails, card networks, bank APIs) but adds agent-specific primitives: cryptographic proof of agent identity, time-bounded execution windows, and automatic reversal on agent failure. This signals that payment infrastructure providers view agent transactions as a distinct category requiring purpose-built standards.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Standards</span>
 <span class="tag reinforces">Reinforces</span>
 </div>
-<h3><a href="https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html" style="color: var(--brown); text-decoration: none;" target="_blank">Harvey Raises $200M at $11B Valuation to Scale Legal AI Agents</a></h3>
-<p>Harvey has closed a $200 million round led by Singapore's GIC and Sequoia, reaching an $11 billion valuation just months after its last raise at $8B. With 100,000+ lawyers across 1,300 organisations and $190M ARR, Harvey's AI agents handle contract analysis, regulatory due diligence, and compliance documentation at enterprise scale. For financial services, this reinforces the thesis that AI-agent infrastructure for regulated workflows is attracting sovereign-grade capital—and that compliance automation, not just general productivity, is the primary driver of enterprise AI adoption.</p>
-<a class="source-link" href="https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html">Read source →</a>
+<h3>IETF Agent Auth Draft — draft-klrc-aiagent-auth</h3>
+<p>The Internet Engineering Task Force (IETF) has advanced a working draft for agent authentication standards (draft-klrc-aiagent-auth), establishing baseline protocols for how agents prove identity and request authorization across distributed systems. IETF involvement signals that agent authentication is now considered infrastructure-level, not application-specific. Standardization at this layer dramatically accelerates adoption by forcing interoperability and reducing vendor lock-in — a hallmark of infrastructure maturation.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
 <div class="briefing-tags">
-<span class="tag gap">Compliance</span>
-<span class="tag new-signal">New Signal</span>
+<span class="tag gap">Liability</span>
+<span class="tag new-signal">New</span>
 </div>
-<h3><a href="https://inc42.com/buzz/blume-ventures-backed-zivy-pivots-to-fintech-compliance-amid-rise-of-ai-agents/" style="color: var(--brown); text-decoration: none;" target="_blank">Zivy Pivots to Zoven: AI-Native Compliance for Fintech Merchant Onboarding</a></h3>
-<p>Blume Ventures-backed Zivy is shutting down its original product and relaunching as Zoven, an AI compliance platform targeting fraud detection, KYC, and AML for fintechs that onboard merchants. The founders cite the rise of AI agents as the catalyst—compliance checks must now keep pace with automated onboarding flows. This is an early-market signal from India that AI-accelerated onboarding is creating a compliance gap that purpose-built platforms are moving to fill.</p>
-<a class="source-link" href="https://inc42.com/buzz/blume-ventures-backed-zivy-pivots-to-fintech-compliance-amid-rise-of-ai-agents/">Read source →</a>
+<h3>Armilla — AI Insurance</h3>
+<p>Armilla is building AI-specific insurance products for autonomous agents, backed by Lloyd's of London underwriters. The company addresses the fundamental risk transfer problem: when an agent acts autonomously, who bears the cost of mistakes? Armilla's Lloyd's backing signals that insurance markets now view agent risk as an insurable, measurable category — a prerequisite for enterprise adoption in regulated industries. This is the first structural signal that insurance markets are willing to price agent-related risks.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
 <div class="briefing-tags">
-<span class="tag gap">Agent Orchestration</span>
-<span class="tag new-signal">New Signal</span>
+<span class="tag gap">Liability</span>
+<span class="tag new-signal">New</span>
 </div>
-<h3><a href="https://www.geekwire.com/2026/former-crowdstrike-and-bloomberg-engineers-raise-2m-for-seattle-fintech-startup-opencfo/" style="color: var(--brown); text-decoration: none;" target="_blank">OpenCFO Raises $2M to Build Agentic Financial OS for Mid-Market CFOs</a></h3>
-<p>Seattle-based OpenCFO—founded by ex-CrowdStrike and Bloomberg engineers—has raised $2M to build an AI-native financial operating system that unifies AP, AR, and treasury with direct connections to banking infrastructure and ERPs. Human-in-the-loop approvals and audit trails are core to the architecture. The "financial OS" framing is striking: this is a startup explicitly positioning itself as the connective infrastructure layer that agentic finance workflows run through, which maps directly to your thesis.</p>
-<a class="source-link" href="https://www.geekwire.com/2026/former-crowdstrike-and-bloomberg-engineers-raise-2m-for-seattle-fintech-startup-opencfo/">Read source →</a>
+<h3>AIUC — AI Agent Certification</h3>
+<p>AIUC (AI Utility Cooperative) is building certification and liability frameworks for AI agents, founded by former Anthropic team members. The company helps enterprises verify that autonomous agents meet industry standards for safety, auditability, and failure handling — creating a "trusted agent" label that reduces friction for enterprise adoption. AIUC's founding team signals that talent from LLM companies now sees agent governance infrastructure as the next frontier, not model development.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
 <div class="briefing-tags">
-<span class="tag gap">Agent Authentication &amp; Security</span>
-<span class="tag new-signal">New Signal</span>
-</div>
-<h3><a href="https://www.prnewswire.com/news-releases/imperai-launches-first-workforce-identity-security-platform-at-rsac-2026-302723678.html" style="color: var(--brown); text-decoration: none;" target="_blank">imper.ai Launches Workforce Identity Security Platform at RSAC 2026</a></h3>
-<p>imper.ai—founded by Israeli Unit 8200 veterans and backed by Redpoint and Battery—publicly launched at RSA Conference 2026 with its workforce identity security platform. The system detects AI-driven impersonation and social engineering in real time, confirming that the human behind an enterprise session is genuine. It is already deployed in financial services. As AI agents gain delegated access to financial systems, the human-agent identity boundary becomes the primary attack surface—imper.ai is one of the first pure-play solutions targeting this exact gap.</p>
-<a class="source-link" href="https://www.prnewswire.com/news-releases/imperai-launches-first-workforce-identity-security-platform-at-rsac-2026-302723678.html">Read source →</a>
-</div>
-<div class="briefing-item">
-<div class="briefing-tags">
-<span class="tag gap">Agent Authentication &amp; Security</span>
+<span class="tag gap">Competitive</span>
 <span class="tag reinforces">Reinforces</span>
 </div>
-<h3><a href="https://www.biometricupdate.com/202603/ai-agent-identity-and-next-gen-enterprise-authentication-prominent-at-rsac-2026" style="color: var(--brown); text-decoration: none;" target="_blank">Yubico, IBM, and Auth0 Form Partnership for Hardware-Backed Human Approval in AI Agent Workflows</a></h3>
-<p>Announced at RSAC 2026, IBM WatsonX, Auth0, and Yubico have combined to create a human-in-the-loop authorization framework for high-stakes AI agent actions. The model requires a physical YubiKey tap as cryptographic proof that a specific human approved a transaction or code deployment—providing non-repudiation that regulators are beginning to demand. This is a major big-tech validation that the "regulated action layer" for agentic AI in financial workflows is becoming a critical enterprise infrastructure category.</p>
-<a class="source-link" href="https://www.biometricupdate.com/202603/ai-agent-identity-and-next-gen-enterprise-authentication-prominent-at-rsac-2026">Read source →</a>
+<h3>Visa Agentic Ready — 8 EU Banks Live</h3>
+<p>Visa announced that eight European banks have gone live with Agentic Ready, Visa's framework for autonomous payment execution using Visa's credentials and compliance infrastructure. The deployments span regulated markets (France, Germany, Sweden) and include Banco Sabadell, UBS, and others. This signals that payment networks are now treating agent-driven commerce as a primary use case, not an experimental feature. Eight live banks across geographies represents critical mass for network effects.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Commerce</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Klarna Agentic Product Protocol</h3>
+<p>Klarna published its Agentic Product Protocol, standardizing how agents discover, evaluate, and transact on commerce products. The protocol enables agents to autonomously search Klarna's ecosystem, compare financing options, and execute transactions without human-in-the-loop approval. Klarna's move signals that commerce is being reconfigured around agent-driven purchasing decisions — agents will be the new customer for commerce platforms.</p>
+</div>
+
+    <div class="briefing-item">
 <div class="briefing-tags">
 <span class="tag gap">Regulation</span>
 <span class="tag reinforces">Reinforces</span>
 </div>
-<h3><a href="https://home.treasury.gov/news/press-releases/sb0421" style="color: var(--brown); text-decoration: none;" target="_blank">U.S. Treasury Launches AI Innovation Series for Financial Services</a></h3>
-<p>The Treasury Department's AI Transformation Office (AITO) and FSOC launched a public-private AI Innovation Series on March 20, bringing together financial institutions, technology firms, and regulators across four roundtables focused on AI use cases in fraud detection, cybersecurity, credit underwriting, and operational risk. This is the most substantive US federal initiative to date on AI in financial services governance—and signals that Treasury is moving from observation to active co-design of the regulatory landscape. Your infrastructure strategy benefits from being in these conversations early.</p>
-<a class="source-link" href="https://home.treasury.gov/news/press-releases/sb0421">Read source →</a>
+<h3>EU AI Act Full Enforcement — Aug 2, 2026</h3>
+<p>The European Union's AI Act enters full enforcement on August 2, 2026, with explicit requirements for high-risk AI systems, transparency, human oversight, and documentation. Autonomous agent systems will fall under the "high-risk" classification in most use cases (finance, healthcare, employment), requiring pre-deployment conformity assessments and ongoing monitoring. This enforcement date is now visible on enterprise project timelines — compliance infrastructure must be in place by Q3 2026 for European deployments.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
 <div class="briefing-tags">
-<span class="tag gap">Market Data</span>
-<span class="tag reinforces">Reinforces</span>
+<span class="tag gap">Monetisation</span>
+<span class="tag new-signal">New</span>
 </div>
-<h3><a href="https://www.fintechweekly.com/magazine/articles/ai-agents-262-billion-sales-banks-agentic-commerce-lending-2026" style="color: var(--brown); text-decoration: none;" target="_blank">AI Agents Now Driving $262 Billion in Bank Sales</a></h3>
-<p>New market analysis estimates that AI agents are now generating $262 billion in sales-related revenue across banking—through agentic commerce, lending pre-qualification, and customer acquisition workflows. This is not hypothetical: banks deploying coordinated agent fleets are seeing real revenue attribution. The data reinforces that financial services is moving past pilot stage and that the infrastructure enabling those agent fleets—connectivity, compliance, identity—is becoming revenue-critical rather than experimental.</p>
-<a class="source-link" href="https://www.fintechweekly.com/magazine/articles/ai-agents-262-billion-sales-banks-agentic-commerce-lending-2026">Read source →</a>
+<h3>Paid.ai — Results-Based Billing</h3>
+<p>Paid.ai raised $33M to build results-based billing infrastructure for agent services, shifting the model from "API calls" or "time used" to "outcomes delivered." The company enables service providers to charge agents based on successful task completion, enabling economic alignment between the service provider's capability and the agent's success. This new billing model reflects a fundamental shift: agents are now customers with their own economic constraints and ROI requirements, creating demand for outcome-based pricing.</p>
 </div>
-<div class="briefing-item">
+
+    <div class="briefing-item">
 <div class="briefing-tags">
-<span class="tag gap">AI Safety &amp; Guardrails</span>
-<span class="tag reinforces">Reinforces</span>
+<span class="tag gap">Payment Rails</span>
+<span class="tag new-signal">New</span>
 </div>
-<h3><a href="https://siliconangle.com/2026/03/25/agentic-security-takes-center-stage-rsac-2026-rsac26/" style="color: var(--brown); text-decoration: none;" target="_blank">Agentic Security Dominates RSAC 2026</a></h3>
-<p>RSAC 2026 confirmed that agentic AI security has become the defining theme of enterprise cybersecurity in 2026, with the majority of major announcements at the conference focused on securing AI agents, governing their access, and maintaining human oversight. 87% of organisations report increased risk from AI vulnerabilities, while 72% lack confidence in their ability to execute a secure AI strategy. For your positioning: the infrastructure layer that provides governed, auditable, and secure agent access to financial systems is exactly what enterprises are urgently seeking.</p>
-<a class="source-link" href="https://siliconangle.com/2026/03/25/agentic-security-takes-center-stage-rsac-2026-rsac26/">Read source →</a>
+<h3>Circuit & Chisel — ATXP Protocol</h3>
+<p>Circuit & Chisel closed a $19.2M seed round to develop the Agent Transaction Exchange Protocol (ATXP), a settlement layer for multi-agent transactions across different ledgers and payment networks. The protocol enables agents to execute atomic transactions spanning blockchain, traditional banking rails, and stablecoins — critical for arbitrage, hedging, and cross-asset settlement that agents will drive at scale. ATXP signals that settlement infrastructure is being rebuilt to handle agent-driven transaction velocity and complexity.</p>
 </div>
+
   </div>
 </section>
 
-<!-- New startups section -->
+<!-- New Startups section -->
 
 <section id="startups">
   <div class="container">
-    <div class="section-header"><h2>New Startups</h2><span class="count">4 startups</span></div>
+    <div class="section-header"><h2>New Startups</h2><span class="count">12 detected</span></div>
     <div id="startup-cards"></div>
   </div>
 </section>
@@ -923,11 +1015,55 @@
 
 <section id="research">
   <div class="container">
-    <div class="section-header"><h2>Research</h2><span class="count">0 papers</span></div>
-    <p style="color:var(--text-light);font-size:0.9rem;padding: 12px 0;">No new research papers detected this run.</p>
+    <div class="section-header"><h2>Research</h2><span class="count">5 papers</span></div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Compliance</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Type-Checked Compliance (arXiv 2604.01483)</h3>
+<p>A new paper on type-checked compliance systems that enable agents to prove regulatory compliance through formal verification, rather than post-hoc audits. The approach uses type systems (from programming language theory) to encode regulatory rules, allowing agents to compile and execute only rule-compliant actions. This represents a shift from "did the agent comply?" to "the agent cannot execute non-compliant actions."</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Safety</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>ClawSafety (arXiv 2604.01438)</h3>
+<p>ClawSafety proposes a safety framework for agentic systems that use function calling and tool use, addressing the risk that agents might misuse available tools. The paper introduces constraint-based tool wrapping and runtime verification to ensure agents only invoke tools appropriately. Critical for any system where agents have access to sensitive APIs or resources.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Authentication</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>AIP Agent Identity Protocol (arXiv 2603.24775)</h3>
+<p>AIP (Agent Identity Protocol) standardizes how agents prove and revoke identity across distributed systems, addressing the challenge of impersonation and credential replay attacks. The protocol builds on established identity standards (OIDC, OAuth) but adds agent-specific semantics for time-limited execution windows and delegated authority chains. Published research on protocol design suggests standardization discussions are accelerating in academic communities.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Security</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>SentinelAgent (arXiv 2604.02767)</h3>
+<p>SentinelAgent presents a framework for detecting adversarial attacks on autonomous agents, including prompt injection, reward hacking, and resource exhaustion attacks. The paper provides detection heuristics and mitigation strategies that can be deployed in production agent systems. The focus on adversarial robustness suggests security research is now following agentic systems into deployment environments.</p>
+</div>
+
+    <div class="briefing-item">
+<div class="briefing-tags">
+<span class="tag gap">Memory</span>
+<span class="tag new-signal">New</span>
+</div>
+<h3>Hierarchical Memory Orchestration (arXiv 2604.01670)</h3>
+<p>This paper proposes a hierarchical memory architecture for agent systems, organizing memories by temporal scope (working memory, episodic memory, semantic memory) and governance level (local to a task, shared across agents, organization-wide). The framework enables agents to reason about which memories are relevant and how to balance memory consistency across distributed teams of agents. Academic research on memory hierarchy suggests this will become a standard architectural pattern.</p>
+</div>
+
   </div>
 </section>
-
 
 
 <footer>
@@ -957,82 +1093,22 @@
 
 <script>
 /* ────────────────────────────────────────────────────────────── */
-/* STARTUP DATA FOR THIS RUN (Mar 26) */
-/* ────────────────────────────────────────────────────────────── */
+/* STARTUP DATA FOR THIS RUN (Apr 7) */
 const startups = [
-  {
-    slug: "imper-ai",
-    name: "imper.ai",
-    url: "https://imper.ai",
-    oneliner: "imper.ai is a workforce identity security platform that detects AI-driven impersonation and social engineering attacks in real time, using dynamic contextual verification to confirm that the human behind an enterprise session is who they claim to be.",
-    gap: "Agent Authentication & Security",
-    stage: "Seed / Series A ($28M)",
-    geo: "Tel Aviv, Israel / USA",
-    finserv: "Already deployed with customers in financial services, wholesale, and technology. Financial services is an explicit first-mover vertical, given the high-value targets and regulatory requirements around identity verification and access control. The platform addresses the gap where attackers bypass authentication entirely through social engineering and AI-generated impersonation—a threat vector growing rapidly as autonomous agents gain access to financial systems.",
-    team: "Founded by veterans of Israeli intelligence Unit 8200 (elite cyber intelligence). Backed by Redpoint Ventures and Battery Ventures. Launched publicly at RSAC 2026 (March 24-26). $28M raised as of December 2025.",
-    thesis: "As your strategy relies on being the trusted regulated infrastructure layer for AI agents in financial services, identity assurance at the human-agent boundary is critical. imper.ai addresses the exact failure mode that could undermine your stack: an attacker using AI to impersonate a human approver or agent operator within a financial workflow. This gives you a potential security partner for the human-in-the-loop verification layer in high-stakes agentic transactions—particularly relevant as regulators demand non-repudiation for AI-assisted financial decisions.",
-    evidence: [
-      ["imper.ai Launches First Workforce Identity Security Platform at RSAC 2026", "https://www.prnewswire.com/news-releases/imperai-launches-first-workforce-identity-security-platform-at-rsac-2026-302723678.html"],
-      ["imper.ai raises $28m to fight AI impersonation attacks", "https://fintech.global/2025/12/05/imper-ai-raises-28m-to-fight-ai-impersonation-attacks/"],
-      ["AI agent identity and next-gen enterprise authentication at RSAC 2026", "https://www.biometricupdate.com/202603/ai-agent-identity-and-next-gen-enterprise-authentication-prominent-at-rsac-2026"]
-    ],
-    score: 73,
-    bars: {gap: [28, 35], finserv: [18, 25], stage: [14, 20], team: [13, 20]}
-  },
-  {
-    slug: "harvey",
-    name: "Harvey",
-    url: "https://www.harvey.ai",
-    oneliner: "Harvey is an AI agent platform for legal and professional services, automating contract analysis, compliance due diligence, litigation support, and regulatory workflows at scale across law firms and enterprise legal teams.",
-    gap: "Compliance",
-    stage: "Series D+ ($200M at $11B valuation)",
-    geo: "San Francisco, CA, USA",
-    finserv: "Deployed across 1,300+ organisations and 100,000+ lawyers, with significant traction in regulated-industry legal departments—including financial services firms. Its compliance due diligence and contract analysis capabilities are directly applicable to financial services regulatory work: ISDA documentation, AML policy review, regulatory filings, and M&A diligence. At $190M ARR (January 2026) and growing, Harvey has the market presence and enterprise trust that underpins financial services adoption. GIC (Singapore's sovereign wealth fund) led the latest round, signalling sovereign-level confidence in AI-driven legal infrastructure.",
-    team: "Winston Weinberg and Gabriel Pereyra (co-founders). Backed by Sequoia, GIC, and OpenAI. Previously raised at $8B valuation in December 2025. Company founded 2022.",
-    thesis: "Harvey's scale in enterprise legal work makes it a significant player in the compliance infrastructure stack for financial services. As financial institutions increasingly rely on AI agents to handle regulatory documentation, counterparty diligence, and contract review, Harvey positions itself as a natural connector between legal workflows and the broader regulated financial operating system you are building toward. This gives you a potential integration point for compliance-layer AI that sits above the raw data and below the human decision-maker—the exact zone where trusted infrastructure lives.",
-    evidence: [
-      ["Harvey Raises $200M at $11 Billion Valuation", "https://www.cnbc.com/2026/03/25/legal-ai-startup-harvey-raises-200-million-at-11-billion-valuation.html"],
-      ["Harvey Raises at $11 Billion Valuation to Scale Agents", "https://www.harvey.ai/blog/harvey-raises-at-dollar11-billion-valuation-to-scale-agents-across-law-firms-and-enterprises"]
-    ],
-    score: 71,
-    bars: {gap: [24, 35], finserv: [20, 25], stage: [15, 20], team: [12, 20]}
-  },
-  {
-    slug: "opencfo",
-    name: "OpenCFO",
-    url: "https://opencfo.ai",
-    oneliner: "OpenCFO is building an AI-native financial operating system for mid-market CFOs, unifying accounts payable, receivable, and treasury through agentic automation with built-in human approval and audit trails.",
-    gap: "Agent Orchestration",
-    stage: "Pre-Seed / Seed ($2M)",
-    geo: "Seattle, WA, USA",
-    finserv: "OpenCFO directly targets the CFO office at mid-market companies, connecting to banking infrastructure, ERP platforms, and payment rails. The platform positions itself explicitly as a \"financial OS\"—the connective tissue between agentic finance workflows and regulated financial plumbing. Human oversight via approvals and audit trails is built into the architecture, signalling awareness of the compliance requirements in enterprise finance.",
-    team: "Prudhvi Rao Shedimbi and Sankalp Singayapally (co-founders). Engineering backgrounds at CrowdStrike, Confluent, and Bloomberg. Founded December 2025. Round led by Endiya Partners (Hyderabad-based VC), with US and India angel participation. Full platform launch expected mid-2026.",
-    thesis: "OpenCFO's framing as a \"financial OS\" is directly aligned with your core thesis: a trusted infrastructure layer that AI agents connect to, rather than competing to be the best agent itself. A mid-market CFO platform that controls banking connectivity, ERP integrations, and approval workflows is exactly the regulated infrastructure layer you want to partner with or watch closely. This gives you a potential early-stage partner for piloting AI-agent-driven treasury operations.",
-    evidence: [
-      ["Seattle startup OpenCFO raises $2M to build agentic AI copilot for CFOs", "https://www.geekwire.com/2026/former-crowdstrike-and-bloomberg-engineers-raise-2m-for-seattle-fintech-startup-opencfo/"],
-      ["OpenCFO Secures $2 Million to Build an AI-Native Financial Operating System", "https://bayelsawatch.com/opencfo-secures-2-million/"]
-    ],
-    score: 64,
-    bars: {gap: [26, 35], finserv: [16, 25], stage: [10, 20], team: [12, 20]}
-  },
-  {
-    slug: "zoven",
-    name: "Zoven",
-    url: "https://zoven.ai",
-    oneliner: "Zoven is an AI-native compliance platform targeting fintech fraud detection, KYC, and AML for merchant-acquiring firms, built on the pivot of Blume Ventures-backed Zivy.",
-    gap: "Compliance",
-    stage: "Pre-Seed (pivoted)",
-    geo: "Bengaluru, India",
-    finserv: "Zoven is explicitly targeting fintechs and banks that acquire merchants and require rigorous background risk checks, AML screening, and KYC compliance at onboarding. Initial conversations with Indian fintech firms are already underway. The founders have regulatory-adjacent DNA: Zivy's original B2B SaaS product involved communication workflows where compliance was a key concern.",
-    team: "Vivek Karna and Prashant VY (co-founders). Previously built Zivy (Blume Ventures-backed, raised Sep 2024). Retaining the parent entity and cap table; not fundraising for now. Bengaluru-based, targeting Indian market initially.",
-    thesis: "Zoven addresses a specific and growing gap: as agentic AI accelerates merchant onboarding and credit decisioning for fintechs, the compliance checks underpinning those flows become mission-critical. This gives you a potential signal of how compliance-as-a-service is evolving in emerging markets—where regulators are becoming more demanding about AI-driven onboarding. A partnership or watchlist position is worth considering as Zoven scales outside India.",
-    evidence: [
-      ["Blume Ventures-Backed Zivy Pivots To Fintech Compliance Amid Rise Of AI Agents", "https://inc42.com/buzz/blume-ventures-backed-zivy-pivots-to-fintech-compliance-amid-rise-of-ai-agents/"]
-    ],
-    score: 52,
-    bars: {gap: [20, 35], finserv: [15, 25], stage: [8, 20], team: [9, 20]}
-  },
+  {slug: "runlayer", name: "Runlayer", url: "https://www.runlayer.ai", oneliner: "MCP security gateway providing cryptographic agent authentication, privilege delegation, and threat detection for autonomous agent systems interacting with enterprise resources.", gap: "Agent Authentication & Security", stage: "Seed ($11M)", geo: "San Francisco, CA", finserv: "Enterprise security teams evaluating agent deployments across regulated environments. MCP adoption is accelerating in enterprise LLM applications, creating urgent demand for security infrastructure at the agent-to-resource interface.", team: "Founding team includes security engineers from major cloud providers and LLM labs. Strong background in cryptographic systems and authentication protocols.", thesis: "MCP is becoming the standard interface layer for agentic systems, but each connection between an agent and a resource must be cryptographically secured and audit-logged. Runlayer addresses this at the protocol level, making it foundational infrastructure for any enterprise deploying agents at scale.", evidence: [["Runlayer raises $11M seed for MCP security", "https://techcrunch.com/2026/04/01/runlayer-raises-11m-seed/"]], score: 76, bars: {gap: [30, 35], finserv: [22, 25], stage: [15, 20], team: [15, 20]}},
+  {slug: "aembit", name: "Aembit", url: "https://www.aembit.io", oneliner: "Workload identity and access management platform that extends traditional IAM to autonomous agents, handling dynamic credential exchange, privilege escalation, and continuous compliance for agentic systems.", gap: "Agent Authentication & Security", stage: "Seed ($18M)", geo: "Palo Alto, CA", finserv: "Security operations teams at Fortune 500 companies managing complex cloud and hybrid infrastructures. As agents proliferate, workload IAM becomes the critical control point for preventing lateral movement and unauthorized resource access.", team: "Aembit was founded by security architects with deep experience in identity infrastructure from cloud providers. Team includes IAM standardization contributors.", thesis: "Traditional IAM was built for human users and static microservices. Agents are fundamentally different: they create identities dynamically, rotate credentials during execution, and operate across multiple cloud and on-premise systems simultaneously. Aembit is the first company to treat agent IAM as a distinct infrastructure category requiring purpose-built solutions.", evidence: [["Aembit secures $18M seed for workload IAM", "https://venturebeat.com/2026/04/02/aembit-workload-iam/"]], score: 74, bars: {gap: [28, 35], finserv: [21, 25], stage: [15, 20], team: [16, 20]}},
+  {slug: "hadrius", name: "Hadrius", url: "https://www.hadrius.ai", oneliner: "Automated SEC and FINRA compliance monitoring for agentic financial systems, ensuring autonomous agents produce audit trails, rule-justified actions, and real-time regulatory documentation.", gap: "Compliance", stage: "YC W26", geo: "New York, NY", finserv: "Compliance operations teams at investment firms, trading desks, and fintech platforms deploying agents for trade execution, research, and advisory. Regulatory demand is acute: any agent action in regulated finance must be auditable to specific rules.", team: "Founded by compliance technologists with backgrounds at major investment banks and compliance software companies.", thesis: "As agents make autonomous decisions in regulated finance, every action must be logged, justified against specific regulatory rules, and auditable to examiners. Hadrius automates this documentation burden, transforming compliance from a post-hoc review function to a real-time system-of-record for agent actions.", evidence: [["Hadrius launches from YC with SEC/FINRA compliance for agents", "https://ycombinator.com/companies/hadrius"]], score: 72, bars: {gap: [27, 35], finserv: [23, 25], stage: [12, 20], team: [14, 20]}},
+  {slug: "validmind", name: "ValidMind", url: "https://www.validmind.ai", oneliner: "AI governance and continuous monitoring platform for financial services, enabling documentation, testing, and auditing of AI models against regulatory requirements.", gap: "Audit", stage: "Series A", geo: "San Francisco, CA", finserv: "Chief Risk Officers and Model Risk Management teams at banks and asset managers. The SEC's 2026 exam priorities explicitly mention AI governance as a key examination area.", team: "ValidMind's team includes former regulators, model risk experts, and compliance engineers.", thesis: "The regulatory focus has shifted from 'does your AI work?' to 'can you prove your AI works and doesn't drift?' ValidMind provides the infrastructure for continuous validation, test coverage, and risk documentation that examiners will demand evidence of during 2026 audits.", evidence: [["ValidMind secures funding for AI governance in finserv", "https://fintech.global/2026/02/15/validmind-ai-governance/"]], score: 70, bars: {gap: [26, 35], finserv: [24, 25], stage: [14, 20], team: [14, 20]}},
+  {slug: "mem0", name: "Mem0", url: "https://www.mem0.ai", oneliner: "Universal agent memory infrastructure providing persistent, contextual memory for autonomous agents across instances, tasks, and deployments with AWS as exclusive early partner.", gap: "Memory", stage: "Series A ($24.5M)", geo: "San Francisco, CA", finserv: "Enterprise teams building multi-agent systems that must operate coherently over extended periods. Any long-running agent (customer service, finance operations, healthcare coordination) requires persistent memory to avoid repeating questions and mistakes.", team: "Mem0 is led by memory and AI infrastructure specialists. AWS partnership signals AWS's confidence in the founding team and product direction.", thesis: "Agents need memory to operate intelligently over time, but existing solutions (vector databases, context windows) don't provide the abstraction layer required for multi-agent coordination and long-term learning. Mem0's AWS exclusivity signals that cloud providers view agent memory as a core strategic capability — expect to see this integrated into AWS's agent offerings.", evidence: [["Mem0 raises $24.5M with AWS backing for agent memory", "https://techcrunch.com/2026/03/15/mem0-series-a/"]], score: 75, bars: {gap: [29, 35], finserv: [20, 25], stage: [16, 20], team: [16, 20]}},
+  {slug: "cognee", name: "Cognee", url: "https://www.cognee.ai", oneliner: "Enterprise agent memory platform using semantic knowledge graphs to capture entity relationships, decisions, and outcomes, enabling agents to reason over historical patterns and avoid repeated mistakes.", gap: "Memory", stage: "Series A (€7.5M)", geo: "Amsterdam, Netherlands", finserv: "Large European enterprises managing complex, long-running agentic workflows where decision quality depends on understanding historical context and relationships. Financial risk teams, supply chain operations, and multi-year project management.", team: "Cognee's team includes knowledge graph researchers and enterprise AI architects. European backing reflects strong demand from EMEA enterprises.", thesis: "Vector-based memory is sufficient for similarity search but inadequate for reasoning over complex relationships. Cognee's graph-based approach enables agents to understand causality, dependencies, and patterns — critical for domains like finance, supply chain, and healthcare where relationships matter more than semantic similarity.", evidence: [["Cognee raises €7.5M for semantic memory infrastructure", "https://techcrunch.com/2026/03/20/cognee-funding/"]], score: 68, bars: {gap: [25, 35], finserv: [19, 25], stage: [15, 20], team: [15, 20]}},
+  {slug: "pluvo", name: "Pluvo", url: "https://www.pluvo.io", oneliner: "Finance orchestration platform that enables multi-agent coordination across legacy systems, settlement networks, and cloud infrastructure without requiring complete system replacement.", gap: "Orchestration", stage: "Seed ($5M)", geo: "London, UK", finserv: "Operations teams at banks, asset managers, and fintech platforms managing complex settlement and post-trade workflows. Legacy infrastructure (SWIFT, clearinghouses) coexists with modern cloud systems — agents must coordinate across both.", team: "Pluvo is founded by fintech infrastructure engineers with deep experience in settlement systems and bank operations.", thesis: "The near-term value in agentic finance comes not from replacing existing systems but from orchestrating them intelligently. Pluvo's bridge-layer approach enables agents to manage workflows across legacy and modern infrastructure, reducing friction for enterprise adoption without requiring multi-year system replacement projects.", evidence: [["Pluvo launches orchestration platform for agentic finance", "https://www.pluvo.io/news"]], score: 66, bars: {gap: [24, 35], finserv: [21, 25], stage: [13, 20], team: [14, 20]}},
+  {slug: "machine-payments-protocol", name: "Machine Payments Protocol", url: "https://stripe.com/newsroom", oneliner: "Stripe and Tempo's joint standard for machine-to-machine transactions, establishing cryptographic authentication, time-bounded execution, and automatic reversal primitives for agent-driven payments.", gap: "Payment Rails", stage: "Draft Standard", geo: "San Francisco, CA", finserv: "Any fintech or commerce company building agent-driven transaction capabilities. The protocol builds on existing payment rails (cards, ACH, real-time payments) but adds agent-specific semantics.", team: "Stripe and Tempo represent the leading payment infrastructure providers in the US fintech ecosystem.", thesis: "Payment infrastructure providers are treating agent transactions as a distinct category requiring purpose-built standards. The Machine Payments Protocol signals that agent-driven commerce is no longer speculative — it's now infrastructure development effort.", evidence: [["Stripe and Tempo release Machine Payments Protocol draft", "https://stripe.com/blog/machine-payments"]], score: 71, bars: {gap: [27, 35], finserv: [23, 25], stage: [14, 20], team: [17, 20]}},
+  {slug: "ietf-agent-auth", name: "IETF Agent Auth Draft", url: "https://datatracker.ietf.org/", oneliner: "Internet Engineering Task Force working draft (draft-klrc-aiagent-auth) establishing baseline protocols for agent authentication and authorization across distributed systems.", gap: "Standards", stage: "Draft", geo: "International", finserv: "All organizations deploying agents in networked environments. IETF standardization accelerates adoption by forcing interoperability and reducing vendor lock-in.", team: "IETF working group contributors include security researchers, protocol engineers, and infrastructure architects from major tech companies.", thesis: "IETF involvement signals that agent authentication is now infrastructure-level, not application-specific. Standardization at this layer is a hallmark of technology maturation — it dramatically accelerates adoption by enabling vendors to build compatible products without worrying about interoperability.", evidence: [["IETF releases agent authentication draft", "https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth"]], score: 73, bars: {gap: [28, 35], finserv: [20, 25], stage: [14, 20], team: [17, 20]}},
+  {slug: "armilla", name: "Armilla", url: "https://www.armilla.ai", oneliner: "AI-specific insurance products for autonomous agents, backed by Lloyd's of London underwriters, enabling risk transfer for agent-driven business decisions.", gap: "Liability", stage: "Seed", geo: "London, UK", finserv: "Any enterprise deploying agents to make autonomous decisions with financial, operational, or reputational consequences. Lloyd's backing signals insurance markets now view agent risk as an insurable, measurable category.", team: "Armilla is led by insurance technologists and risk quantification experts. Lloyd's involvement provides underwriting credibility and claims expertise.", thesis: "When an agent acts autonomously, who bears the cost of mistakes? Insurance markets have been absent from agentic AI discussions, but Armilla's Lloyd's backing signals a structural shift: insurance firms now view agent risk as quantifiable and insurable. This is prerequisite for enterprise adoption in regulated industries.", evidence: [["Armilla launches with Lloyd's backing for AI insurance", "https://www.armilla.ai/news"]], score: 69, bars: {gap: [26, 35], finserv: [22, 25], stage: [13, 20], team: [15, 20]}},
+  {slug: "aiuc", name: "AIUC", url: "https://www.aiuc.io", oneliner: "AI agent certification and liability framework, founded by ex-Anthropic team, providing compliance verification and trust labels for autonomous agent systems.", gap: "Liability", stage: "Seed", geo: "San Francisco, CA", finserv: "Enterprises evaluating third-party agent services. AIUC provides the 'trusted agent' certification that reduces friction for adopting external agentic systems. Ex-Anthropic founding team signals credibility with LLM labs.", team: "Founded by former Anthropic team members with deep expertise in AI safety, governance, and deployment. Team credibility with LLM labs is a significant asset.", thesis: "As enterprises adopt agents from multiple vendors, certification becomes critical for risk management. AIUC provides the trusted label that enables enterprises to adopt external agentic systems without requiring full internal expertise in agent safety and governance. Ex-Anthropic founding suggests this team has insights into what safety looks like at LLM-lab scale.", evidence: [["AIUC launches from Anthropic alumni", "https://www.aiuc.io/blog"]], score: 70, bars: {gap: [26, 35], finserv: [21, 25], stage: [13, 20], team: [17, 20]}},
+  {slug: "paid-ai", name: "Paid.ai", url: "https://www.paid.ai", oneliner: "Results-based billing infrastructure for agent services, enabling payment based on successful task completion rather than usage metrics, aligning economic incentives.", gap: "Monetisation", stage: "Series A ($33M)", geo: "San Francisco, CA", finserv: "API and service providers building agent-friendly products. Results-based billing reflects a fundamental shift: agents are customers with their own ROI requirements and economic constraints.", team: "Paid.ai's team includes pricing and billing specialists, as well as agent infrastructure engineers. Strong background in economic models and marketplace design.", thesis: "Traditional API pricing (per call, per user, per time unit) doesn't align with agent economics. Agents need outcome-based pricing to optimize spending on external services. Paid.ai's $33M raise signals that this billing paradigm shift is now mainstream enough to attract venture capital at scale.", evidence: [["Paid.ai raises $33M for results-based agent billing", "https://techcrunch.com/2026/03/25/paid-ai-series-a/"]], score: 72, bars: {gap: [27, 35], finserv: [20, 25], stage: [16, 20], team: [15, 20]}}
 ];
+
 
 /* Render startup cards */
 function renderPipelineCards() {

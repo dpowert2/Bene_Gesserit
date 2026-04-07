@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "bene-gesserit-card", "runs": [{"id": "eval-1-ramp-with_skill", "prompt": "Card Ramp for BG", "eval_id": 1, "outputs": [{"name": "card.md", "type": "text", "content": "> **BENE GESSERIT CARD**\n>\n> # Ramp\n> *AI-powered spend management platform combining corporate cards, expense automation, and agentic workflows for real-time policy enforcement and financial operations automation.*\n>\n> | | |\n> |---|---|\n> | **Gap** | Agent Orchestration / Agent Payment Rails (secondary) |\n> | **Stage** | Series E-2 ($500M at $22.5B valuation, July 2025; $300M primary round Nov 2025 at $32B) |\n> | **Geo** | USA |\n> | **FinServ** | 50,000+ business customers across general corporate spending. No explicit finserv customer wins. Team has capital markets DNA (Paribus acquired by Capital One 2016; both founders spent 2 years in card infrastructure post-acquisition). |\n> | **Team** | Eric Glyman (CEO), Karim Atiyeh (CTO), Gene Lee (co-founder). Prior exit: Paribus to Capital One. Backed by Lightspeed, Founders Fund, D1 Capital, Coatue, GIC, Khosla, T. Rowe Price, ICONIQ. |\n>\n> **SCORE: 52**\n> ```\n> Gap fit       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591 12/35\n> FinServ       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591 12/25\n> Stage match   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591 10/20\n> Team signal   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591 18/20\n> ```\n>\n> **Why this matters:** Ramp's Policy Agent and emerging AP agents represent meaningful progress in application-layer agentic automation for finance operations. Early deployments show 15x improvement in policy violation detection and 99% approval accuracy. The company has 1B ARR and is growing rapidly. Infrastructure knowledge (card rails, virtual card controls, spend orchestration) is real and could become foundational if packaged for other agents.\n>\n> **Why you might pass:** Ramp is application-layer spend automation, not infrastructure-layer agentic AI. The Policy Agent is proprietary to Ramp's platform\u2014not a trust layer other agents connect to. No finserv signal (corporate IT and HR buyers dominate). Series E-2 valuation suggests growth story is priced in; unlikely to see venture multiples. The core moat is network effects on spend visibility and policy library, not on the agentic layer.\n>\n> **Sources:** [Ramp Corporate Card Platform](https://ramp.com/corporate-cards) \u00b7 [Ramp Funding Overview](https://tracxn.com/d/companies/ramp/__mMFluFx9yKyt9DXRq5KzSGK2frbsYq5y9jc9XK9-g9E/funding-and-investors) \u00b7 [Ramp AI Agents Announcement](https://www.prnewswire.com/news-releases/ramp-introduces-ai-agents-to-automate-finance-operations-302502154.html) \u00b7 [Ramp Policy Agent GA](https://ramp.com/blog/ramp-policy-agent-ga-launch) \u00b7 [Fast Company: Ramp Agentic AI](https://www.fastcompany.com/91502967/ramp-most-innovative-companies-2026)\n"}], "grading": {"run_id": "eval-1-ramp/with_skill", "expectations": [{"text": "has_score", "passed": true, "evidence": "Line 14 contains 'SCORE: 52'"}, {"text": "has_gap_category", "passed": true, "evidence": "Line 8 classifies as 'Agent Orchestration / Agent Payment Rails (secondary)'"}, {"text": "has_score_breakdown", "passed": true, "evidence": "Lines 16-19 show 4-dimension breakdown with Gap fit (12/35), FinServ (12/25), Stage match (10/20), Team signal (18/20)"}, {"text": "has_why_matters", "passed": true, "evidence": "Line 22 includes 'Why this matters:' section explaining Policy Agent and agentic automation impact"}, {"text": "has_why_pass", "passed": true, "evidence": "Line 24 includes 'Why you might pass:' section with risk assessment of application-layer positioning"}, {"text": "has_sources", "passed": true, "evidence": "Line 26 contains 5 source URLs with proper citations"}, {"text": "consistent_format", "passed": true, "evidence": "Output follows exact BG card format with header, table metadata, score bars, and clearly delineated sections"}]}}, {"id": "eval-1-ramp-without_skill", "prompt": "Card Ramp for BG", "eval_id": 1, "outputs": [{"name": "card.md", "type": "text", "content": "# Ramp Assessment for Bene Gesserit Radar\n\n**Company:** Ramp\n**Category:** Corporate Card & Spend Management with Agentic AI\n**Assessment Date:** April 2026\n**Status:** STRONG FIT FOR RADAR\n\n---\n\n## Executive Summary\n\nRamp is a prime candidate for the Bene Gesserit agentic AI startups radar in financial services. The company has evolved from a traditional corporate card platform into a comprehensive financial operations platform powered by autonomous AI agents. With a $32 billion valuation (November 2025), $1+ billion in annualized revenue, and deep integration of agentic AI into core financial workflows, Ramp exemplifies the convergence of fintech and autonomous intelligence that the radar tracks.\n\n---\n\n## Company Overview\n\n### Founding & Team\n\n**Founded:** March 2019\n**Founders:** Eric Glyman (CEO), Karim Atiyeh (CTO), Gene Lee\n\nThe founding team brought significant fintech pedigree: Glyman and Atiyeh previously founded Paribus, a price-tracking consumer fintech that scaled to 10 million users before acquisition by Capital One in 2016. Before starting Ramp, Glyman spent two years in the card industry learning infrastructure fundamentals. The team conducted ~100 interviews with finance professionals before launch, identifying inefficiency in expense collection and logging as a key market pain point.\n\n### Market Position & Growth\n\n- **50,000+ customers** across all business sizes\n- **$1+ billion in annualized revenue** (as of November 2025)\n- **$100+ billion in annual purchase volume** processed\n- **27.5 million hours** of manual work saved across customer base\n- **$10 billion in total savings** delivered to customers\n- CNBC Disruptor 50 (2025)\n- Fast Company Most Innovative Companies (2026)\n\n### Valuation Trajectory\n\n- Series E-2 (July 2025): $500M at $22.5B valuation\n- Series E-3 (November 2025): $300M at $32B valuation\n- Investors: Stripe, Founders Fund, ICONIQ, Lightspeed, Bessemer, Robinhood Ventures, Alpha Wave Global, and others\n\n---\n\n## Core Products & Services\n\n### Traditional Offerings\n\n1. **Corporate Card** - Spend visibility and control with real-time policy enforcement\n2. **Expense Management** - Automated receipt capture and categorization\n3. **Bill Pay & AP Automation** - Invoice processing and payment workflows\n4. **Accounting Integration** - Real-time ERP integration and month-end close automation\n5. **Ramp Treasury** (Jan 2025) - Cash management with yield optimization\n6. **Ramp Travel** (June 2024) - AI-powered travel booking and expense management (partnership with Priceline)\n7. **Seat Intelligence** (Jan 2024) - SaaS contract optimization via Okta integration\n\n### Agentic AI Capabilities\n\nThis is where Ramp most strongly aligns with the Bene Gesserit thesis. The company has embedded autonomous agents across its platform:\n\n#### Policy Agent\n- Reviews every expense in real-time\n- Auto-approves low-risk, policy-compliant spend\n- Flags ambiguous transactions for human judgment\n- **Performance:** 99%+ accuracy in compliance determinations (exceeds human-alone performance)\n- **Customer Impact:** Early adopters catching 3x more out-of-policy spend\n- Automatically follows up with employees for missing context via Slack/SMS\n\n#### Bill Pay Agent\n- Processes invoices end-to-end without manual intervention\n- Autonomous AP software system providing fully automated accounts payable\n- Integrates with Visa Intelligent Commerce for payment optimization\n\n#### Payment Optimization Agent\n- Analyzes early payment discounts, cash flow, vendor terms, and financial forecasts\n- Intelligently determines optimal payment timing for each bill\n- Identifies card-eligible vendors to capture additional cashback\n- Delivers autonomous payment decisions\n\n#### Fraud Detection Agent\n- Real-time transaction monitoring\n- Scans for anomalies and AI-generated fake documents\n- Instant threat flagging and prevention\n\n#### Invoice & Categorization Agent\n- Automatic extraction and categorization of every expense\n- Perfect coding to customer ERP systems\n- Eliminates manual data entry and classification tasks\n\n#### Financial Modeling Agent\n- Production-ready AI agent for financial modeling (latest development)\n- Provides autonomous forecasting and scenario analysis capabilities\n\n### Agent Architecture Strengths\n\n1. **Audit-Ready Reasoning** - Agents provide citations for all work, critical for annual audits\n2. **Context Awareness** - Agents apply human-like reasoning to manage entire workflows independently\n3. **Policy Adherence** - Embedded policy context that continuously improves as guidelines evolve\n4. **Proactive Intervention** - Agents work independently and flag issues before they escalate\n5. **Multi-Channel Integration** - SMS, Slack, email interfaces for agent interaction\n\n---\n\n## Why Ramp Fits Bene Gesserit\n\n### 1. **Agentic AI at Core Business Logic**\n\nUnlike fintech companies applying AI as a feature overlay, Ramp has embedded autonomous agents into foundational financial workflows:\n- Expense approval (Policy Agent)\n- Accounts payable (Bill Pay Agent)\n- Payment decisions (Optimization Agent)\n- Risk management (Fraud Detection Agent)\n\nThese agents operate independently and at scale, making autonomous decisions that traditionally required human accountants, controllers, and CFOs.\n\n### 2. **Financial Services Domain**\n\nRamp operates in B2B financial services, precisely the domain the radar tracks. The company is automating core financial operations workflows for 50,000 organizations.\n\n### 3. **Proven Autonomous Impact**\n\nThe metrics demonstrate that Ramp's agents actually function autonomously:\n- 99%+ accuracy on policy determinations\n- 85% reduction in manual reviews reported by beta customers\n- 15x improvement in policy violation detection\n- End-to-end invoice processing without human intervention\n- Processing at scale (50,000+ organizations)\n\n### 4. **Recent Strategic Focus on AI**\n\n- Raised $500M specifically \"to deepen product innovation & expand AI for finance\" (July 2025)\n- Announced joint AI agent development with Visa (via Visa Intelligent Commerce and Trusted Agent Protocol)\n- Introduced \"Ramp AI Principles\" guiding autonomous finance operations\n- Created dedicated agentic AI guides and resources for finance teams\n\n### 5. **Market Leadership**\n\nWith $32B valuation and $1B+ ARR, Ramp has achieved escape velocity as a market leader. The company isn't experimenting with AI\u2014it's industrializing agentic automation across a massive customer base.\n\n---\n\n## Assessment Scoring\n\n| Dimension | Score | Rationale |\n|-----------|-------|-----------|\n| **Agentic AI Integration** | 9/10 | Core agents across approval, payments, fraud, and modeling; proven autonomous operation at scale |\n| **Financial Services Domain** | 10/10 | B2B fintech with 50,000+ organizational customers; core spend management focus |\n| **Autonomous Capability Maturity** | 9/10 | Production-ready agents with 99%+ accuracy; end-to-end automation in multiple workflows |\n| **Recent Strategic Momentum** | 10/10 | $500M Series E specifically for AI expansion; Visa partnership on autonomous agents; new product launches |\n| **Market Validation** | 10/10 | $32B valuation, $1B+ ARR, 50,000 customers, CNBC Disruptor, Fast Company recognition |\n| **Potential for Disruption** | 8/10 | Significant, but operating in established spend management market; opportunity is efficiency gains and role transformation |\n| **AI Research/Innovation Credibility** | 8/10 | Strong product innovation; founded on principles of autonomous workflow; limited published research on AI methodology |\n\n**Overall Score: 9.1/10**\n\n---\n\n## Key Insights\n\n### Strengths\n\n1. **Proven Execution** - Ramp has taken agentic AI from concept to production-grade systems serving 50,000 organizations. The company isn't an early-stage AI lab; it's an operational proof-of-concept.\n\n2. **Multi-Agent Architecture** - Rather than a single AI feature, Ramp has deployed specialized agents across the financial operations stack (approval, payment, fraud, modeling). This modular approach is scalable and demonstrates sophisticated system design.\n\n3. **Audit & Compliance Ready** - By building agents that provide citations and maintain audit trails, Ramp solved a critical enterprise blocker. Most organizations can't automate financial decisions without audit-ready documentation.\n\n4. **Visa Partnership as Validation** - The Visa Intelligent Commerce and Trusted Agent Protocol partnership signals that financial infrastructure providers see Ramp's agents as industrial-grade. This is institutional validation of autonomous finance.\n\n5. **Revenue-Based Validation** - At $1B+ ARR from agentic AI features (not just traditional card/expense functions), Ramp has proven customers will pay premium pricing for autonomous capabilities.\n\n### Challenges / Considerations\n\n1. **Regulatory Opacity** - Financial services automation faces regulatory scrutiny. Ramp's approach to compliance, especially regarding autonomous payment decisions, may draw regulatory attention as the market scales.\n\n2. **Competitive Response** - Visa, Mastercard, and traditional players are accelerating agentic AI deployments. Ramp's first-mover advantage in autonomous agents for spend management may compress as competitors integrate similar capabilities.\n\n3. **Limited Transparency on AI Methods** - While Ramp publishes case studies and guides, detailed information on agent architecture, LLM selection, and model performance is limited. Transparency would strengthen radar credibility.\n\n4. **Role Transformation Friction** - As agents handle approval, categorization, and payment decisions, accounting and finance teams may face job displacement concerns. Organizational adoption may face internal resistance despite efficiency gains.\n\n5. **Scope Limitations** - Current agents focus on spend management. Broader financial operations (forecasting, planning, compliance) remain partially automated, limiting the scope of autonomous intelligence.\n\n---\n\n## Related Market Activity\n\n- **Visa Expansion (2025)** - Visa deepening partnership with Ramp on Intelligent Commerce and Trusted Agent Protocol for autonomous bill pay and spend automation\n- **Industry Acceleration** - Mastercard and other card networks expanding agentic AI deployments in response to Ramp's success\n- **Series E Funding Surge** - Additional $500M funding in July 2025 specifically directed at AI expansion, reflecting investor confidence in agentic finance thesis\n\n---\n\n## Recommendation\n\n**INCLUDE IN BENE GESSERIT RADAR**\n\nRamp is a mandatory inclusion for the Bene Gesserit agentic AI startups radar. The company represents the maturation of autonomous intelligence in financial services: from theoretical application to operational reality at scale. With proven autonomous workflows, institutional partnerships, and substantial revenue validation, Ramp demonstrates that agentic AI can drive business model transformation in regulated industries.\n\nThe company serves as both a benchmark for other fintech AI efforts and a case study in how to architect and deploy autonomous agents in high-stakes financial operations.\n\n---\n\n## Sources\n\n- [How Ramp is deploying agentic AI to help contain corporate costs - Fast Company](https://www.fastcompany.com/91502967/ramp-most-innovative-companies-2026)\n- [Ramp and Visa expand partnership on agentic corporate payments - The Paypers](https://thepaypers.com/payments/news/ramp-visa-expand-collaboration-on-agentic-ai-payments-and-corporate-spend-automation)\n- [Ramp and Visa Deepen Partnership to Power the Next Era of Autonomous Finance - PR Newswire](https://www.prnewswire.com/news-releases/ramp-and-visa-deepen-partnership-to-power-the-next-era-of-autonomous-finance-302728894.html)\n- [Visa and Ramp Develop AI Agents for Corporate Bill Pay - PYMNTS.com](https://www.pymnts.com/news/b2b-payments/2026/visa-and-ramp-develop-ai-agents-for-corporate-bill-pay/)\n- [Ramp Business Breakdown & Founding Story - Contrary Research](https://research.contrary.com/company/ramp)\n- [Ramp 2025 Release Notes](https://ramp.com/blog/2025-release-notes)\n- [Ramp: 2025 CNBC Disruptor 50](https://www.cnbc.com/2025/06/10/ramp-cnbc-disruptor-50.html)\n- [Ramp raises $500M to rush AI - Payments Dive](https://www.paymentsdive.com/news/ramp-raises-500m-to-rush-ai/756360/)\n- [Ramp Reaches $32 Billion Valuation - PR Newswire](https://www.prnewswire.com/news-releases/ramp-reaches-32-billion-valuation-doubling-revenue-and-customers-in-past-year-302616510.html)\n- [Ramp raises $500M to deepen product innovation & expand AI for finance](https://ramp.com/blog/ramp-raised-500m-to-build-the-future-of-finance)\n- [How Ramp's Eric Glyman went from \"a sheet of paper\" to a 13,000+ customer fintech business - Bloomberg](https://www.bloomberg.com/company/stories/how-eric-glyman-ramp-sheet-paper-fintech-business-four-years-cornell-tech-bloomberg/)\n- [Ramp founder Eric Glyman: How I built a $22.5 billion company - Fortune](https://fortune.com/article/ramp-founder-eric-glyman-titans-and-disruptors/)\n- [Ramp at $32 billion: Money talks. Now It thinks.](https://ramp.com/blog/ramp-november-2025-valuation)\n- [Ramp hits $32B valuation - TechCrunch](https://techcrunch.com/2025/11/17/ramp-hits-32b-valuation-just-three-months-after-hitting-22-5b/)\n\n"}], "grading": {"run_id": "eval-1-ramp/without_skill", "expectations": [{"text": "has_score", "passed": true, "evidence": "Line 152 contains 'Overall Score: 9.1/10'"}, {"text": "has_gap_category", "passed": false, "evidence": "No explicit gap category classification provided. Company assessed as 'prime candidate' and 'strong fit' but no gap category assigned"}, {"text": "has_score_breakdown", "passed": true, "evidence": "Lines 142-150 show 6-dimension scoring table (Agentic AI Integration 9/10, FinServ 10/10, Autonomous Capability 9/10, Strategic Momentum 10/10, Market Validation 10/10, Disruption Potential 8/10, AI Research 8/10)"}, {"text": "has_why_matters", "passed": true, "evidence": "Lines 157-170 'Strengths' section explains market significance and value of Ramp's agentic infrastructure"}, {"text": "has_why_pass", "passed": true, "evidence": "Lines 170-180 'Challenges / Considerations' section provides risk assessment and pass-through reasoning"}, {"text": "has_sources", "passed": true, "evidence": "Lines 202-217 contain 12 comprehensive source URLs"}, {"text": "consistent_format", "passed": false, "evidence": "Uses narrative section headers and standard report format rather than structured card format. Content is equivalent but formatting is not the BG card style"}]}}, {"id": "eval-2-astra-with_skill", "prompt": "What do you think of Astra Security for the Bene Gesserit pipeline? https://astra.security", "eval_id": 2, "outputs": [{"name": "card.md", "type": "text", "content": "> **BENE GESSERIT CARD**\n>\n> # Astra Security\n> *AI-powered continuous penetration testing platform that mimics real-world hacker behavior to identify vulnerabilities in applications, cloud infrastructure, and APIs at scale.*\n>\n> | | |\n> |---|---|\n> | **Gap** | AI Safety & Guardrails (application-layer) |\n> | **Stage** | Seed ($2.82M total; $2.7M led by Emergent Ventures, Feb 2025; +$120K from Techstars) |\n> | **Geo** | India (New Delhi) |\n> | **FinServ** | Strong fintech market positioning: explicit fintech solutions, PCI-DSS 4.0, SOC2, GDPR, CCPA compliance. Recent focus on AI app security and LLM pentesting. No named enterprise fintech customers disclosed. |\n> | **Team** | Shikhil Sharma (Founder & CEO), Ananda Krishna (Co-founder & CTO). Both security researchers with 10+ years finding vulnerabilities in Microsoft, Adobe, AT&T, Yahoo, Blackberry. NIIT University background. Backed by Emergent Ventures (AI/data-led B2B focus). |\n>\n> **SCORE: 66**\n> ```\n> Gap fit       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591 8/35\n> FinServ       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591 20/25\n> Stage match   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591 16/20\n> Team signal   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591 14/20\n> ```\n> *+8 AI Safety for regulated industries (LLM/AI app security focus, but application-layer)*\n>\n> **Why this matters:** Astra has real fintech DNA (compliance certifications, regulated-industry playbook) and credible AI security chops (LLM pentesting, AI agent risk detection). Recent $2.7M funding signals market confidence in continuous, AI-driven security automation. The team's hacker pedigree and early-stage position make them structurally well-placed to pivot toward agent-native security infrastructure.\n>\n> **Why you might pass:** Astra is a security *vendor*, not an infrastructure layer. The product is application-layer pentest automation, not infrastructure that other agents depend on. Bene Gesserit targets companies other agentic systems *must connect to* \u2014 Astra is something agents might *use*. No disclosed fintech customer wins. Early-stage India-based team with limited venture track record. Geographic and regulatory arbitrage may slow fintech adoption in regulated US markets.\n>\n> **Sources:** [Crunchbase](https://www.crunchbase.com/organization/astra-c747) \u00b7 [Emergent Ventures Announcement](https://fintech.global/2025/02/06/astra-security-clinches-2-7m-for-ai-driven-cybersecurity-enhancements/) \u00b7 [Astra Security](https://www.getastra.com) \u00b7 [SiliconAngle](https://siliconangle.com/2025/02/05/astra-raises-2-7m-simplify-cybersecurity-mimicking-hacker-behavior-ai-powered-solutions/) \u00b7 [Astra AI Security Research](https://www.business-standard.com/content/press-releases-ani/astra-security-unveils-research-on-ai-security-exposing-critical-risks-and-defining-the-future-of-large-language-models-pentesting-125070300556_1.html)\n"}], "grading": {"run_id": "eval-2-astra/with_skill", "expectations": [{"text": "has_score", "passed": true, "evidence": "Line 14 contains 'SCORE: 66'"}, {"text": "has_gap_category", "passed": true, "evidence": "Line 8 classifies as 'AI Safety & Guardrails (application-layer)'"}, {"text": "has_score_breakdown", "passed": true, "evidence": "Lines 16-21 show 4-dimension breakdown with Gap fit (8/35), FinServ (20/25), Stage match (16/20), Team signal (14/20), plus modifier for AI Safety"}, {"text": "has_why_matters", "passed": true, "evidence": "Line 23 includes 'Why this matters:' section explaining fintech DNA and AI security capabilities"}, {"text": "has_why_pass", "passed": true, "evidence": "Line 25 includes 'Why you might pass:' section noting vendor-vs-infrastructure positioning and geographic constraints"}, {"text": "has_sources", "passed": true, "evidence": "Line 27 contains 5 source URLs with citations"}, {"text": "consistent_format", "passed": true, "evidence": "Output follows exact BG card format with header, table metadata, score bars, and clearly delineated sections"}]}}, {"id": "eval-2-astra-without_skill", "prompt": "What do you think of Astra Security for the Bene Gesserit pipeline? https://astra.security", "eval_id": 2, "outputs": [{"name": "card.md", "type": "text", "content": "# Astra Security: Assessment for Bene Gesserit Radar\n\n## Executive Summary\n\nAstra Security is a **moderately relevant** candidate for the Bene Gesserit startup radar, but with significant caveats. While the company is building AI-driven autonomous pentesting agents and operates in the security domain, it is not primarily an agentic AI company operating in financial services. It is a cybersecurity vendor that happens to be adopting agentic AI approaches.\n\n---\n\n## Company Overview\n\n**Astra Security** is a cybersecurity SaaS company founded in 2018 by Shikhil Sharma and Ananda Krishna. The platform provides AI-driven continuous penetration testing and vulnerability scanning services.\n\n**Key Details:**\n- **Headquarters:** US and India\n- **Stage:** Growth-stage (recently closed $2.7M Series A in February 2025)\n- **Funding Investors:** Emergent Ventures (lead), Neon Fund, Better Capital, Blume Ventures, PointOne Capital\n- **Business Model:** SaaS/Subscription security testing platform\n- **Customer Base:** 800+ companies globally\n\n---\n\n## Product & Technology\n\n### Core Platform\nAstra's platform emulates hacker behavior through AI-powered vulnerability scanning and continuous pentesting. The technology performs over 10,000 security tests to identify vulnerabilities in applications and infrastructure.\n\n### Key Metrics\n- Uncovered 5,500 vulnerabilities per day for customers (2024)\n- Identified 2,000,000+ vulnerabilities annually\n- Saved customers $69M+ in potential security losses\n\n### AI/Agentic Elements\nAstra is **actively building autonomous pentesting agents** as part of its product roadmap:\n- **Autonomous Pentesting Agents:** AI agents designed to simulate advanced chained attacks autonomously\n- **Logic-Aware Detection:** AI-trained tools to understand workflows and context\n- **LLM/AI Security Focus:** Specialized testing for prompt injection, jailbreaks, and AI application vulnerabilities\n\n---\n\n## Financial Services Relevance\n\n### Limited but Growing\nAstra Security is **not primarily a financial services company**, but:\n- Offers specialized fintech penetration testing solutions\n- Provides guidance on fintech cloud security and compliance (PCI-DSS, SOC 2, GDPR)\n- Serves some financial services customers who need security testing\n\n**Critical Distinction:** Astra is a security *testing vendor*, not an agentic AI platform that operates within financial services. They secure financial systems; they don't process payments, manage assets, or execute financial transactions autonomously.\n\n---\n\n## Assessment for Bene Gesserit Radar\n\n### Alignment with Radar Mission\n\n**Alignment Score: 3/10**\n\n**Why Low Alignment:**\n1. **Not Agentic-First:** Astra is a traditional cybersecurity vendor adding agentic AI capabilities, not a company founded on agentic AI principles\n2. **Not Financial Services-Native:** While they serve fintech customers, they are a vendor to the industry, not a player in it\n3. **Wrong Category:** Security testing is infrastructure/tooling, not financial services operations\n\n**Why Worth Monitoring:**\n1. The autonomous pentesting agents could become genuinely agentic over time\n2. Their LLM security testing is becoming increasingly relevant as AI agents proliferate in fintech\n3. Strong recent funding signal suggests venture interest in this space\n\n### Competitive Position\nAstra competes with traditional penetration testing firms, DAST tools, and other security vendors. They are gaining traction through their AI-driven approach and continuous testing model, but this is not a unique market position.\n\n### Team & Execution\n- Experienced founders with deep security backgrounds (worked at Microsoft, Adobe, etc.)\n- Successfully bootstrapped to profitability before raising Series A\n- Clear product-market fit demonstrated by 800+ customer base\n\n---\n\n## Investment Thesis Considerations\n\n**Strengths:**\n- Proven customer adoption and retention\n- Strong recent funding from quality investors\n- Clear narrative around AI-driven security\n- Expanding into AI/LLM security (growing category)\n- Growing fintech security needs\n\n**Weaknesses:**\n- Commoditized market (many security vendors exist)\n- Not differentiated as an agentic AI company\n- No revenue growth rate disclosed\n- Limited visibility into unit economics\n- Security/compliance spending can be cyclical\n\n---\n\n## Radar Recommendation\n\n### Primary Verdict: **MONITOR, Don't Add to Primary Radar**\n\n**Rationale:**\nAstra Security is better suited for a **subsidiary or adjacent radar** such as:\n- \"AI Infrastructure for Financial Services\"\n- \"AI Security & Compliance Tools\"\n- \"Enterprise Security Stack Evolution\"\n\nRather than the core \"Agentic AI in Financial Services\" radar.\n\n### Action Items\n1. **Re-evaluate in 12-18 months** after they ship autonomous pentesting agents and demonstrate meaningful adoption in fintech\n2. **Watch for strategic positioning changes** - if Astra pivots to become an agentic AI company selling directly to financial institutions, that changes the calculus significantly\n3. **Track competitive dynamics** - if this becomes a standard defense pattern for AI-native fintechs, Astra's relevance increases\n\n---\n\n## Final Thoughts\n\nAstra Security is a **solid cybersecurity company with AI ambitions**, not an agentic AI company with security offerings. For a radar focused on \"agentic AI startups in financial services,\" they are adjacent but not core. However, as agentic AI systems proliferate in fintech, the security tools that protect them (especially LLM/AI-specific testing) will become increasingly important. Keep them on the watchlist.\n\n---\n\n## Sources\n\n- [Astra Security Raises Funding to Simplify Cybersecurity With AI-Driven Pentesting - BusinessWire](https://www.businesswire.com/news/home/20250205502953/en/Astra-Security-Raises-Funding-to-Simplify-Cybersecurity-With-AI-Driven-Pentesting)\n- [Astra raises $2.7M to simplify cybersecurity by mimicking hacker behavior - SiliconANGLE](https://siliconangle.com/2025/02/05/astra-raises-2-7m-simplify-cybersecurity-mimicking-hacker-behavior-ai-powered-solutions/)\n- [Astra Security - AI Powered Continuous Pentest Platform](https://www.getastra.com)\n- [Astra Security LinkedIn](https://www.linkedin.com/company/getastra)\n- [Autonomous vs Traditional Pentesting: What's More Secure in 2026? - Astra Blog](https://www.getastra.com/blog/security-audit/autonomous-vs-traditional-pentesting/)\n- [Astra Security Unveils Research on AI Security - Business Standard](https://www.business-standard.com/content/press-releases-ani/astra-security-unveils-research-on-ai-security-exposing-critical-risks-and-defining-the-future-of-large-language-models-pentesting-125070300556_1.html)\n- [Fintech Penetration Testing | Secure Your Financial Platform - Astra](https://www.getastra.com/solutions/fintech)\n"}], "grading": {"run_id": "eval-2-astra/without_skill", "expectations": [{"text": "has_score", "passed": false, "evidence": "No numerical score provided. Output includes 'Alignment Score: 3/10' (line 56) but no overall company score in standard format"}, {"text": "has_gap_category", "passed": false, "evidence": "Company classified as 'moderately relevant' candidate and 'Monitor, Don't Add to Primary Radar' but no gap category assignment provided"}, {"text": "has_score_breakdown", "passed": false, "evidence": "No 4-dimension (or any systematic) scoring breakdown table provided"}, {"text": "has_why_matters", "passed": true, "evidence": "Lines 58-62 'Why Low Alignment' and lines 63-66 'Why Worth Monitoring' explain significance and value proposition"}, {"text": "has_why_pass", "passed": true, "evidence": "Lines 58-62 'Why Low Alignment' and lines 80-92 'Weaknesses' provide comprehensive pass-through reasoning"}, {"text": "has_sources", "passed": true, "evidence": "Lines 121-130 contain 7 source URLs"}, {"text": "consistent_format", "passed": true, "evidence": "Uses clear structured sections with headers and consistent organization throughout"}]}}, {"id": "eval-3-crossmint-with_skill", "prompt": "Score Crossmint for the BG radar \u2014 they do agentic payments and wallets", "eval_id": 3, "outputs": [{"name": "card.md", "type": "text", "content": "> **BENE GESSERIT CARD**\n>\n> # Crossmint\n> *Agentic payment infrastructure providing non-custodial wallets, virtual cards, and stablecoin settlement for autonomous agent transactions with programmable guardrails and global compliance.*\n>\n> | | |\n> |---|---|\n> | **Gap** | Agent Payment Rails |\n> | **Stage** | Series A ($23.6M \u2014 Ribbit Capital, Franklin Templeton, NYCA, First Round, Lightspeed Faction, Mar 2025) |\n> | **Geo** | USA (HQ: New York, Miami, Madrid) |\n> | **FinServ** | Named finserv customers: MoneyGram, Santander Bank, WireX. MiCA-authorized regulated CASP across EU, VASP license, SOC 2 Type II compliant. Live regulatory infrastructure. |\n> | **Team** | Alfonso G\u00f3mez-Jordana Ma\u00f1as (Google: reCAPTCHA, Firebase Auth, AI agent API creator, third PM at WhatsApp, crypto since 2012). Rodri Fern\u00e1ndez Touza (McKinsey fintech, 10+ years experience, Stanford/Harvard fintech DNA). 60+ person team across 15+ countries. |\n>\n> **SCORE: 100**\n> ```\n> Gap fit       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 33/35\n> FinServ       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591\u2591\u2591 22/25\n> Stage match   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591 20/20\n> Team signal   \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2591 20/20\n> ```\n> *+15 trust infrastructure layer*\n>\n> **Why this matters:** Crossmint is the closest thesis fit: purpose-built agent payment infrastructure with dual-key wallet custody, programmable spending guardrails, and direct integration with both card networks and stablecoin rails. The founding team bridges Google's AI agent infrastructure (Firebase Auth, reCAPTCHA, AI API) with deep fintech execution. Critically, they've already secured regulated status (MiCA CASP, VASP, SOC 2) and named finserv customers, proving the market exists at scale.\n>\n> **Why you might pass:** While Stage-A timing is ideal, execution risk remains around enterprise adoption velocity and regulatory complexity across geographies. The company's 1,100% revenue growth in 2024 and 40,000+ developer base suggest adoption is real, but finserv-specific traction is still being proven relative to general enterprise/developer base.\n>\n> **Sources:** [Crossmint Blog](https://blog.crossmint.com/crossmint-raises-23-6m-led-by-ribbit-capital/) \u00b7 [CoinDesk](https://www.coindesk.com/business/2025/03/18/blockchain-firm-crossmint-used-by-adidas-red-bull-raises-usd23-6m-in-funding) \u00b7 [The Block](https://theblock.co/post/346863/ribbit-capital-leads-23-6-million-funding-round-for-enterprise-blockchain-platform-crossmint) \u00b7 [Fintech Global](https://fintech.global/2025/03/19/crossmint-secures-23-6m-to-simplify-blockchain-for-businesses-and-ai-agents/) \u00b7 [PR Newswire MiCA](https://www.prnewswire.com/news-releases/crossmint-secures-mica-authorization-expanding-global-digital-asset-infrastructure-across-the-eu-302661230.html)"}], "grading": {"run_id": "eval-3-crossmint/with_skill", "expectations": [{"text": "has_score", "passed": true, "evidence": "Line 14 contains 'SCORE: 100'"}, {"text": "has_gap_category", "passed": true, "evidence": "Line 8 classifies as 'Agent Payment Rails'"}, {"text": "has_score_breakdown", "passed": true, "evidence": "Lines 16-20 show 4-dimension breakdown with Gap fit (33/35), FinServ (22/25), Stage match (20/20), Team signal (20/20), plus modifier for trust infrastructure"}, {"text": "has_why_matters", "passed": true, "evidence": "Line 23 includes 'Why this matters:' section explaining purpose-built agent payment infrastructure and regulated finserv traction"}, {"text": "has_why_pass", "passed": true, "evidence": "Line 25 includes 'Why you might pass:' section noting execution risk and finserv-specific traction validation"}, {"text": "has_sources", "passed": true, "evidence": "Line 27 contains 5 source URLs with citations"}, {"text": "consistent_format", "passed": true, "evidence": "Output follows exact BG card format with header, table metadata, score bars, modifiers, and clearly delineated sections"}]}}, {"id": "eval-3-crossmint-without_skill", "prompt": "Score Crossmint for the BG radar \u2014 they do agentic payments and wallets", "eval_id": 3, "outputs": [{"name": "card.md", "type": "text", "content": "# Crossmint \u2014 Bene Gesserit Radar Assessment\n\n## Executive Summary\n\n**Company:** Crossmint\n**Sector:** Agentic Payments & Wallets Infrastructure\n**Assessment Date:** April 7, 2026\n**Fit for BG Radar:** \u2605\u2605\u2605\u2605\u2605 (Strong Fit)\n\nCrossmint is a **highly aligned** candidate for the Bene Gesserit radar. The company has built a purpose-built infrastructure platform specifically designed to enable AI agents to autonomously hold funds, make payments, and execute transactions\u2014directly matching the radar's focus on agentic AI in financial services.\n\n---\n\n## Company Overview\n\n**What They Do:**\nCrossmint is an enterprise-grade developer platform for building onchain commerce and agentic payments infrastructure. They provide an integrated suite of products including agent wallets, virtual cards, stablecoin orchestration, and payment APIs specifically designed for AI agents to autonomously execute financial transactions.\n\n**Key Products:**\n- **Agent Wallets**: Purpose-built wallets with dual-key architecture allowing AI agents to hold funds and transact autonomously within programmatic guardrails\n- **Virtual Card Infrastructure**: Visa Intelligent Platform-powered cards that AI agents can use for fiat payments across 1B+ merchant inventory (Amazon, Shopify, browser checkouts)\n- **Stablecoin Orchestration**: Support for stablecoins across 50+ blockchains in 150+ countries\n- **Agentic Payment Protocols**: Support for emerging standards like x402, enabling agent-to-agent micropayments and API call settlements\n- **Developer APIs**: Comprehensive tooling for integrating wallets, payments, and onchain functionality with minimal code\n\n---\n\n## Agentic AI Focus (Core BG Criteria)\n\n### Agent-First Architecture\nCrossmint has built **agent autonomy** as a foundational design principle:\n\n- **Dual-Key Model**: Agents hold cryptographic keys in Trusted Execution Environments (TEEs) and can sign transactions independently without human approval for each action\n- **Programmable Guardrails**: Smart account contracts embed spending limits, merchant whitelisting, approval thresholds, and business logic directly onchain\u2014ensuring agents cannot exceed authorized parameters even if they \"hallucinate\"\n- **Auditable Transaction Logs**: All agent activity is logged and verifiable, enabling oversight without requiring manual human-in-the-loop approval for every transaction\n\n### Real-World AI Agent Use Cases\nCrossmint has documented production use cases demonstrating agentic autonomy:\n\n1. **Conversational Commerce**: Voice-based shopping agents that handle entire transactions autonomously\u2014e.g., agents selling weekly subscription deliveries where customers call and the agent recommends products, processes payment, and executes purchases\n2. **Autonomous Price Monitoring**: Agents monitoring prices across dozens of platforms 24/7, executing purchases autonomously when thresholds are met (e.g., \"book flights when NYC\u2192London < $400\")\n3. **Agent-to-Agent Transactions**: Early adoption of agents settling micropayments with other agents for API calls, compute access, and data\u2014establishing economic networks between autonomous systems\n\n### Financial Services Positioning\nCrossmint is explicitly positioning itself as infrastructure for **agentic finance**\u2014enabling autonomous economic actors in the AI era:\n\n- Agents hold funds and make spending decisions independently\n- Human operators define guardrails and budgets, but agents execute transactions autonomously\n- Smart account logic prevents agent errors from becoming financial risks\n\n---\n\n## Funding & Traction\n\n**Recent Funding Round (March 2025):**\n- **Amount:** $23.6M Series A, led by Ribbit Capital\n- **Co-Investors:** Franklin Templeton, Nyca, First Round, Lightspeed Faction\n- **Valuation Signal:** Premium enterprise software investors (Ribbit Capital, First Round) alongside institutional crypto players (Franklin Templeton) indicate confidence in the business model\n\n**Market Traction:**\n- **40,000+ customers** including enterprise brands: Adidas, Red Bull, Coinbase\n- **1,100% subscription revenue growth in 2024** (strong indication of product-market fit and scalable unit economics)\n- **Offices:** New York, Miami, Madrid (crypto hub presence)\n\n---\n\n## Founding Team & Expertise\n\n**Alfonso G\u00f3mez-Jordana Ma\u00f1as** (Founder & CEO)\n- Led product at Google on AI agents: created the company's first AI agent API\n- Previous: Third Product Manager at WhatsApp, builder of Firebase Auth and reCAPTCHA\n- Crypto background since 2012 (Bitcoin scripting era)\n- Deep expertise in both consumer payments (WhatsApp, Google) and AI systems (Google AI agents)\n\n**Rodri Fern\u00e1ndez Touza** (Co-Founder)\n- Former McKinsey consultant\n- Early crypto builder; influenced by time at Hacker Foundation Zero (HF0) residency\n\n**Team Profile:**\nDecades of combined experience scaling fintech and infrastructure at both large institutions and high-growth startups. Strong mix of payments expertise (Google, WhatsApp) and crypto/blockchain knowledge.\n\n---\n\n## Competitive Positioning\n\n### Market Landscape\nThe agent wallet/payments market has segmented into two categories:\n1. **Full-Stack Platforms** (Crossmint, Coinbase AgentKit, thirdweb): Integrated wallet + payments + stablecoins + onramps/offramps\n2. **Infrastructure Layers** (Privy, Turnkey, Dynamic): Signing keys and auth only; require integrating third parties for payments\n\n### Crossmint's Differentiation\n\n**vs. Privy:**\n- Privy is a wallet + auth layer not purpose-built for agents\n- Requires integrating separate onramp/offramp/bridge providers\n- Privy: pricing starts $299/mo for 2,500 MAUs\n- Crossmint: integrated wallet + card + stablecoins + onramps (160+ countries) on single API\u2014purpose-built for agents with out-of-the-box agentic credentials and spending controls\n\n**vs. Coinbase AgentKit:**\n- AgentKit is open-source and Base-chain optimized; Crossmint is a full platform supporting 50+ blockchains\n- AgentKit: good for Base ecosystem developers; Crossmint: multichain and includes card payments\n\n**vs. Turnkey:**\n- Turnkey: pure non-custodial signing (Bitcoin, EVM, Solana, TRON)\n- Crossmint: custodial + payments + commerce rails (broader but different value prop)\n\n**Crossmint's Strategic Advantage:**\nBest positioned for teams wanting agents to transact on **both stablecoin and card network rails** with low fees, fast settlement, and flexibility. Uniquely addresses the \"how do agents actually buy things in the real world?\" problem.\n\n---\n\n## Financial Services Alignment\n\n### Direct Alignment with \"Agentic Payments & Wallets\"\n- \u2713 **Agents as Economic Actors**: Agents hold wallets, initiate transactions, spend budgets\n- \u2713 **Autonomous Execution**: Transactions execute without human approval (within smart contract guardrails)\n- \u2713 **Real Money Movement**: Agents spend fiat (via Visa virtual cards) and stablecoins\n- \u2713 **Payment Infrastructure**: Integrated onramps, offramps, settlement\n- \u2713 **Enterprise Fintech Scale**: 40k+ customers, Fortune 100 brands (Adidas, Red Bull), subscription revenue\n\n### Secondary Strengths for FS Radar\n- **Institutional Backing**: Ribbit Capital (fintech specialist), Franklin Templeton (legacy finance entry)\n- **Commerce Automation**: Agent procurement, autonomous shopping, supplier payment\n- **Agent-to-Agent Settlement**: Early infrastructure for economic networks between autonomous systems\n- **Regulatory-Ready Design**: Auditable logs, guardrails, and custodial foundation (easier regulatory path than pure crypto)\n\n---\n\n## Risk Factors & Considerations\n\n### Upside Risks (Bullish)\n1. **Market Timing**: AI agents with autonomous financial capabilities are at inflection point; Crossmint has first-mover advantage and top-tier distribution\n2. **Enterprise Adoption**: Already embedded with Adidas, Red Bull, Coinbase\u2014creates network effects and switching costs\n3. **Regulatory Path**: Custodial model with smart contract guardrails positions them well for regulated markets (vs. non-custodial-only competitors)\n4. **Cross-Rail Flexibility**: Card + stablecoin support gives agents optionality most competitors lack\n\n### Downside Risks (Cautious)\n1. **Regulatory Uncertainty**: Agent autonomy in financial transactions may face regulatory scrutiny; unclear how \"agent spending limits\" are governed legally\n2. **Custody Risk**: Full custody model concentrates counterparty risk; smart contract guardrails mitigate but don't eliminate\n3. **Market Definition**: \"Agentic payments\" is still nascent; consumer adoption of AI agents managing real budgets may be slower than hype cycle suggests\n4. **Competition**: Coinbase AgentKit (backed by largest crypto exchange), Privy (well-funded), and others entering market rapidly\n5. **Enterprise Churn**: B2B SaaS subscription growth (1,100%) impressive but sustainability depends on retention and true product stickiness\n\n---\n\n## Assessment Verdict\n\n### BG Radar Fit: **Strong Match** (9/10)\n\n**Why Include Crossmint:**\n1. **Core Focus Alignment**: Purpose-built for agentic AI in financial services\u2014the exact intersection the radar targets\n2. **Market Leadership**: Best-in-class wallet + payments infrastructure for AI agents; clear competitive advantage vs. alternatives\n3. **Traction**: $23.6M funding with blue-chip investors; 40k+ customers; 1,100% YoY growth signals real product-market fit\n4. **Team**: Exceptional founding team with pedigree in both payments (Google, WhatsApp) and AI/crypto\n5. **Momentum**: Raised capital in Q1 2025 specifically to \"move every business and AI agent onchain\"\u2014shows investor thesis alignment with agentic finance narrative\n\n**Why It Matters for Bene Gesserit:**\nCrossmint is the most direct \"agentic payments\" infrastructure play in existence. If the radar is tracking AI agents executing autonomous financial transactions, Crossmint is the infrastructure layer enabling that future. They're not dabbling in agent capabilities; they've organized the entire company around making agents autonomous economic actors.\n\n---\n\n## Recommendation\n\n**Include on BG Radar: YES**\n\n**Positioning:** Tier-1 (Core Category) \u2014 Agentic Payments & Wallets Infrastructure\n\n**Watch For:**\n- Regulatory developments around autonomous agent spending authority\n- Enterprise customer churn/retention rates (sustainability of 1,100% growth)\n- Network effects from agent-to-agent settlement protocols\n- Competitive pressure from Coinbase AgentKit and Privy\n\n**Follow-Up Research:**\n- Customer case studies: What specific agents are using Crossmint in production?\n- Regulatory filings: How are they managing compliance for agent autonomous spending?\n- Retention metrics: How many of the 40k customers are active monthly?\n\n---\n\n## Sources\n\n- [AI Agent Payments Infrastructure | Crossmint](https://www.crossmint.com/solutions/agentic-payments)\n- [Agentic Payments Platform | Crossmint](https://www.crossmint.com/solutions/agentic-finance)\n- [Crossmint Raises $23.6M, led by Ribbit Capital](https://blog.crossmint.com/crossmint-raises-23-6m-led-by-ribbit-capital/)\n- [Blockchain Firm Crossmint Raises $23.6M | CoinDesk](https://www.coindesk.com/business/2025/03/18/blockchain-firm-crossmint-used-by-adidas-red-bull-raises-usd23-6m-in-funding)\n- [Agentic Commerce Use Cases: 5 Examples That Work Today](https://blog.crossmint.com/agentic-commerce-use-cases/)\n- [How AI Agents Can Make Real-World Transactions](https://blog.crossmint.com/how-ai-agents-can-make-real-world-transactions-a-complete-toolkit/)\n- [Agent Wallets Compared: Crossmint, Privy, Turnkey, Coinbase, lobster.cash](https://www.crossmint.com/learn/agent-wallets-compared)\n- [Privy vs Crossmint: Comparison of Features and Pros](https://www.crossmint.com/learn/privy-vs-crossmint)\n- [Overview - Crossmint Docs](https://docs.crossmint.com/solutions/ai-agents/introduction)\n- [Rodri Fern\u00e1ndez Touza - LinkedIn](https://www.linkedin.com/in/rodrifernandez/)\n- [Alfonso G\u00f3mez-Jordana Ma\u00f1as - LinkedIn](https://www.linkedin.com/in/alfongj/)\n- [My Career in Crypto with Rodri Fernandez Touza at Crossmint](https://www.checkout.com/blog/my-career-in-crypto-with-rodri-fernandez-touza-at-crossmint)\n\n---\n\n**Card Version:** 1.0\n**Prepared by:** Claude Agent (Anthropic)\n**Assessment Framework:** Bene Gesserit Radar Criteria \u2014 Agentic AI in Financial Services\n"}], "grading": {"run_id": "eval-3-crossmint/without_skill", "expectations": [{"text": "has_score", "passed": true, "evidence": "Line 148 contains 'Strong Match (9/10)' for BG Radar Fit"}, {"text": "has_gap_category", "passed": false, "evidence": "Company category provided as 'Agentic Payments & Wallets Infrastructure' and 'Tier-1 (Core Category)' but no specific gap category in standard format"}, {"text": "has_score_breakdown", "passed": false, "evidence": "No 4-dimension scoring table provided. Output uses narrative assessment rather than structured score breakdown"}, {"text": "has_why_matters", "passed": true, "evidence": "Lines 157-159 'Why It Matters for Bene Gesserit' explains market significance and infrastructure positioning"}, {"text": "has_why_pass", "passed": true, "evidence": "Lines 150-156 'Why Include Crossmint' provides positive case, and lines 129-144 'Risk Factors' provide balanced pass-through assessment"}, {"text": "has_sources", "passed": true, "evidence": "Lines 181-195 contain 14 source URLs"}, {"text": "consistent_format", "passed": true, "evidence": "Uses clear structured sections with headers, subsections, and consistent professional organization"}]}}], "previous_feedback": {}, "previous_outputs": {}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>
