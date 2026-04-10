@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Apr 9, 2026 Run</title>
+<meta content="Signals, startups, and research from the Apr 9, 2026 agentic AI radar run." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* RUN NAVIGATION */
+    /* ============================================================ */
+    .run-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .run-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .run-nav-left, .run-nav-right {
+      display: flex;
+      gap: 12px;
+    }
+    .nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      transition: all 0.2s;
+    }
+    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .nav-link.primary:hover { background: var(--brown); border-color: var(--brown); }
+    .run-nav-center {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-heading);
+      font-weight: 500;
+    }
+
+    /* ============================================================ */
+    /* HEADER                                                       */
+    /* ============================================================ */
+    header {
+      padding: 32px 0 24px;
+      background: var(--bg-page);
+    }
+
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .edition-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      background: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    /* ============================================================ */
+    /* SECTIONS                                                     */
+    /* ============================================================ */
+    section {
+      padding: 44px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+    }
+
+    .section-header .count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ============================================================ */
+    /* TAGS                                                         */
+    /* ============================================================ */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .tag.gap {
+      background: var(--brown-light);
+      color: var(--brown-dark);
+    }
+
+    .tag.reinforces {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .tag.challenges {
+      background: var(--coral-light);
+      color: var(--coral);
+    }
+
+    .tag.new-signal {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .tag.market-signal {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .tag.stage {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .tag.geo {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================ */
+    /* BRIEFING                                                     */
+    /* ============================================================ */
+    .briefing-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .briefing-item:last-child { border-bottom: none; }
+
+    .briefing-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .briefing-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .briefing-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .briefing-item .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+    }
+
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    /* ============================================================ */
+    /* STARTUP CARDS                                                */
+    /* ============================================================ */
+    .startup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .startup-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: var(--border-strong);
+    }
+
+    .startup-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .startup-top h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    .score-badge {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+
+    .score-badge .num {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .score-badge .of {
+      font-size: 0.5rem;
+      color: inherit;
+      opacity: 0.6;
+      margin-top: 1px;
+    }
+
+    .score-badge.high {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .score-badge.mid {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .score-badge.low {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    .startup-oneliner {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .startup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .startup-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .detail-block {}
+
+    .detail-block .detail-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .detail-block .detail-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .thesis-note {
+      background: var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+
+    .thesis-note .note-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+
+    .thesis-note p {
+      font-size: 0.88rem;
+      color: var(--accent-dark);
+      line-height: 1.5;
+    }
+
+    .score-bars {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+    }
+
+    .bar-track {
+      width: 100%;
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--amber);
+      border-radius: 3px;
+      transition: width 0.2s;
+    }
+
+    .bar-val {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.54rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    /* Evidence */
+    .startup-evidence {
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: var(--brown-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .evidence-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .evidence-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .evidence-links li a {
+      font-size: 12px;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .evidence-links li a:hover { text-decoration: underline; }
+
+    /* ============================================================ */
+    /* VOTING                                                       */
+    /* ============================================================ */
+    .vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .star {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: var(--border-strong);
+      padding: 0 1px;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+
+    .star:hover {
+      color: var(--amber);
+      transform: scale(1.1);
+    }
+
+    .star.active {
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .note-toggle {
+      background: none;
+      border: none;
+      color: var(--brown);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .note-toggle:hover { color: var(--brown-dark); }
+
+    .note-area {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .note-area textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .note-area textarea:focus {
+      outline: none;
+      border-color: var(--brown);
+    }
+
+    .vote-badge {
+      flex-shrink: 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .vote-status {
+      font-size: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: 8px;
+    }
+
+    .vote-status.saving { color: var(--blue); }
+    .vote-status.saved { color: var(--accent-dark); }
+    .vote-status.error { color: var(--coral); }
+
+    .followup-btn, .archive-btn {
+      background: none;
+      border: none;
+      color: var(--brown);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .followup-btn:hover, .archive-btn:hover {
+      color: var(--brown-dark);
+    }
+
+    .followup-btn.active, .archive-btn.active {
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .startup-card.followup {
+      border-left: 3px solid var(--amber);
+    }
+
+    .startup-card.archived {
+      opacity: 0.5;
+    }
+
+    .btn-secondary {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .vote-attr {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ============================================================ */
+    /* SETTINGS MODAL                                               */
+    /* ============================================================ */
+    #settings-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+
+    .settings-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .settings-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    #settings-msg {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .settings-form-group {
+      margin-bottom: 20px;
+    }
+
+    .settings-form-group label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .settings-form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .settings-form-group input:focus {
+      outline: none;
+      border-color: var(--brown);
+    }
+
+    .settings-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .settings-buttons button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    #btn-save-settings {
+      background: var(--text-heading);
+      border: 1px solid var(--text-heading);
+      color: #fff;
+    }
+
+    #btn-save-settings:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+    }
+
+    #btn-cancel-settings {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    #btn-cancel-settings:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    #settings-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+      padding: 8px;
+    }
+
+    #settings-btn:hover { color: var(--brown); }
+    #settings-btn.connected { color: var(--accent-dark); }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 640px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 1.8rem; }
+      .startup-details { grid-template-columns: 1fr; }
+      .score-bars { flex-wrap: wrap; gap: 12px; }
+      .bar-item { min-width: calc(50% - 8px); }
+      .startup-card { padding: 20px; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .startup-card,
+    .briefing-item {
+      animation: slideUp 0.35s ease-out both;
+    }
+
+    .startup-card:nth-child(2) { animation-delay: 0.05s; }
+    .startup-card:nth-child(3) { animation-delay: 0.1s; }
+    .startup-card:nth-child(4) { animation-delay: 0.15s; }
+    .startup-card:nth-child(5) { animation-delay: 0.2s; }
+
+</style>
+</head>
+<body>
+
+<nav class="run-nav">
+  <div class="container">
+    <div class="run-nav-left">
+      <a class="nav-link" href="index.html">← All runs</a>
+      <a class="nav-link" href="2026-04-07.html">← Apr 7</a>
+    </div>
+    <div class="run-nav-center">Apr 9, 2026</div>
+    <div class="run-nav-right">
+      <a class="nav-link primary" href="pipeline.html">Full Pipeline →</a>
+      <button id="settings-btn" title="Set your name for vote attribution">⚙</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Bene Gesserit — Apr 9, 2026 <span class="edition-badge">Latest Run</span></h1>
+    <p>8 signals · 0 new startups · 0 research papers</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Signals</h2>
+      <span class="count">8 items</span>
+    </div>
+    <div id="briefing">
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Agent Authentication &amp; Security</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>Okta for AI Agents — Blueprint for the Secure Agentic Enterprise</h3>
+        <p>At Showcase 2026, Okta announced "Okta for AI Agents" launching April 30 — a platform to discover, register, and govern AI agent identities across the enterprise. Research shows 88% of organizations report suspected agent security incidents while only 22% treat agents as identity-bearing entities. This is the first major identity platform to treat agents as first-class identity objects, setting the standard for agent IAM at scale.</p>
+        <a class="source-link" href="https://www.okta.com/newsroom/press-releases/showcase-2026/" target="_blank">Okta Newsroom →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">AI Safety &amp; Guardrails</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>Microsoft Open-Sources Agent Governance Toolkit</h3>
+        <p>Microsoft released a seven-package, MIT-licensed Agent Governance Toolkit addressing all 10 OWASP agentic AI risks with sub-millisecond policy enforcement. Available for Python, Rust, TypeScript, Go, and .NET, it integrates with LangChain, CrewAI, Google ADK, and Microsoft Agent Framework. This makes production-grade agent governance accessible to any team building agentic systems — lowering the barrier to safe deployment in regulated environments.</p>
+        <a class="source-link" href="https://opensource.microsoft.com/blog/2026/04/02/introducing-the-agent-governance-toolkit-open-source-runtime-security-for-ai-agents/" target="_blank">Microsoft Open Source Blog →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Agent Orchestration</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>x402 Protocol Joins Linux Foundation with Google, OpenAI, Circle</h3>
+        <p>Google, OpenAI, and Circle have joined a Linux Foundation initiative backing the x402 protocol for autonomous agent payments. The protocol leverages the HTTP 402 "Payment Required" status code to enable instant, automated payments between agents. A competing standard — the Machine Payments Protocol (MPP) backed by Stripe and Paradigm — is also vying for dominance. The standards war signals that agentic commerce infrastructure is moving from experimental to production-ready.</p>
+        <a class="source-link" href="https://www.thestreet.com/crypto/markets/google-openai-circle-join-hands-for-agentic-payments" target="_blank">TheStreet →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Market Data</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>Swift Completes Shared Ledger Design for Tokenized Deposits</h3>
+        <p>Swift completed the design for its blockchain-based shared ledger for tokenized deposits, with over 40 banks including JPMorgan, HSBC, Deutsche Bank, and Bank of America shaping the design. The EVM-compatible, permissioned system built on Hyperledger Besu aims for live MVP transactions in 2026. This infrastructure will enable 24/7 cross-border payments using tokenized deposits — rails that agentic systems will need for autonomous settlement.</p>
+        <a class="source-link" href="https://www.fintechfutures.com/blockchain-crypto-digital-assets/swift-begins-building-tokenised-deposit-ledger-following-design-completion" target="_blank">Fintech Futures →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Tax Optimisation</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>Perplexity Launches Computer for Taxes</h3>
+        <p>Perplexity announced Computer for Taxes, an AI agent that drafts full U.S. federal tax returns on official IRS forms. The agent reviews financial documents, asks follow-up questions, and produces completed returns — or audits a professionally prepared return for accuracy. Tax modules are continuously updated from IRS materials without model retraining. This represents the first consumer-facing agentic tax product from a major AI company, directly challenging TurboTax's $15B industry.</p>
+        <a class="source-link" href="https://www.pymnts.com/taxes/2026/perplexity-launches-ai-agent-that-drafts-tax-returns/" target="_blank">PYMNTS →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Tax Optimisation</span>
+          <span class="tag new-signal">New</span>
+        </div>
+        <h3>Altruist Adds AI Tax Planning to Hazel Platform</h3>
+        <p>Altruist launched AI-powered tax planning capabilities within its Hazel platform for wealth advisors. The feature automates tax-loss harvesting recommendations, capital gains planning, and tax-aware rebalancing strategies. This signals that agentic tax optimisation is moving from standalone products into integrated advisor platforms — the wedge through which AI-driven tax intelligence will reach mass-affluent investors.</p>
+        <a class="source-link" href="https://www.wealthmanagement.com/artificial-intelligence/altruist-launches-ai-powered-tax-planning-feature-in-hazel-platform-for-advisors" target="_blank">Wealth Management →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Market Signal</span>
+          <span class="tag market-signal">New</span>
+        </div>
+        <h3>Q1 2026 AI Funding Doubles All of 2025</h3>
+        <p>Q1 2026 venture funding to foundational AI startups reached $297 billion globally — double the total for all of 2025. OpenAI's $122B round at $852B valuation led the surge. Agentic AI companies have raised $2.66B across 44 rounds in 2026 to date. The funding environment remains highly favourable for agentic startups, though investors are increasingly demanding demonstrated ROI and regulatory resilience.</p>
+        <a class="source-link" href="https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/" target="_blank">Crunchbase →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Market Signal</span>
+          <span class="tag challenges">Challenges</span>
+        </div>
+        <h3>Fintech VCs Sharpening Criteria for AI Ventures</h3>
+        <p>Fintech investors are narrowing their AI investment criteria, concentrating on applications with clear immediate value, proprietary technology, and durable competitive advantages. Only solutions offering demonstrable ROI and regulatory resilience will secure funding. This challenges the narrative that all agentic AI startups can raise easily — the bar is rising, and startups without clear differentiation or finserv traction will struggle.</p>
+        <a class="source-link" href="https://www.crowdfundinsider.com/2026/04/271805-fintech-investors-are-sharpening-criteria-for-backing-ai-ventures-analysis/" target="_blank">Crowdfund Insider →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Startups</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new startups detected in this scan — signals were dominated by big tech platform moves and market-level developments.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Research</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new research papers identified beyond those already catalogued.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Bene Gesserit is your agentic AI radar — signals, startups, and research from the frontier of autonomous systems.</p>
+    <p>You can rate and follow startups by setting your name in the settings panel (gear icon, top right). Your votes are saved and help identify which companies merit deeper diligence.</p>
+  </div>
+</footer>
+
+<div id="settings-modal" hidden="">
+  <div class="settings-panel">
+    <h2>Settings</h2>
+    <div id="settings-msg"></div>
+    <div class="settings-form-group">
+      <label for="voter-name-input">Your name</label>
+      <input id="voter-name-input" type="text" placeholder="e.g., Alex" />
+    </div>
+    <div class="settings-buttons">
+      <button id="btn-save-settings">Save</button>
+      <button id="btn-cancel-settings">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ────────────────────────────────────────────────────────────── */
+/* STARTUP DATA FOR THIS RUN (Apr 9 — no startups) */
+const startups = [];
+
+/* Render startup cards */
+function renderPipelineCards() {
+  const container = document.getElementById('startup-cards');
+  if (!container) return;
+  container.innerHTML = '';
+
+  startups.forEach(startup => {
+    const scoreClass = startup.score >= 75 ? 'high' : (startup.score >= 50 ? 'mid' : 'low');
+    const card = document.createElement('div');
+    card.className = 'startup-card';
+    card.id = `startup-${startup.slug}`;
+    card.innerHTML = `
+      <div class="startup-top">
+        <h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3>
+        <div class="score-badge ${scoreClass}">
+          <span class="num">${startup.score}</span>
+          <span class="of">/100</span>
+        </div>
+      </div>
+      <p class="startup-oneliner">${startup.oneliner}</p>
+      <div class="startup-tags">
+        <span class="tag gap">${startup.gap}</span>
+        <span class="tag stage">${startup.stage}</span>
+        <span class="tag geo">${startup.geo}</span>
+      </div>
+      <div class="startup-details">
+        <div class="detail-block">
+          <div class="detail-label">FinServ Signal</div>
+          <div class="detail-value">${startup.finserv}</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Team</div>
+          <div class="detail-value">${startup.team}</div>
+        </div>
+      </div>
+      <div class="thesis-note">
+        <div class="note-label">Why this matters</div>
+        <p>${startup.thesis}</p>
+      </div>
+      <div class="startup-evidence">
+        <div class="evidence-label">Evidence</div>
+        <ul class="evidence-links">
+          ${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}
+        </ul>
+      </div>
+      <div class="vote-row" data-slug="${startup.slug}">
+        <div class="stars">
+          <button class="star" data-val="1" title="1 star">★</button>
+          <button class="star" data-val="2" title="2 stars">★</button>
+          <button class="star" data-val="3" title="3 stars">★</button>
+          <button class="star" data-val="4" title="4 stars">★</button>
+          <button class="star" data-val="5" title="5 stars">★</button>
+        </div>
+        <button class="note-toggle">+ Add note</button>
+        <button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button>
+        <button class="archive-btn" title="Archive this startup">↓ Archive</button>
+        <span class="vote-status"></span>
+        <div class="note-area" hidden="">
+          <textarea placeholder="Why this rating? What would need to change?"></textarea>
+        </div>
+      </div>
+      <div class="score-bars">
+        <div class="bar-item">
+          <span class="bar-label">Gap Fit</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">FinServ</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Stage</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Team</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${Math.min(startup.bars.team[0] / startup.bars.team[1] * 100, 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  wireVoting();
+}
+
+/* ────────────────────────────────────────────────────────────── */
+/* VOTING SYSTEM */
+/* ────────────────────────────────────────────────────────────── */
+const WORKER_URL = 'https://bg-votes.benegesserit.workers.dev';
+function _readVoter() {
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
+  return 'Dave';
+}
+let voter = _readVoter();
+try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } catch(e) {}
+let votes = {};
+let _pendingVote = null;
+
+async function loadVotes() {
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`);
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || {};
+  } catch (e) {
+    console.warn('loadVotes:', e);
+    votes = {};
+  }
+  renderAll();
+}
+
+async function saveVote(slug) {
+  const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
+  const st = card.querySelector('.vote-status');
+  st.textContent = 'Saving…';
+  st.className = 'vote-status saving';
+
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        slug,
+        stars: votes[slug]?.stars ?? 0,
+        note: votes[slug]?.note ?? '',
+        voter: voter || 'anonymous',
+        followup: votes[slug]?.followup ?? false,
+        archived: votes[slug]?.archived ?? false,
+      }),
+    });
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || votes;
+    renderAll();
+    st.textContent = 'Saved ✓';
+    st.className = 'vote-status saved';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
+  } catch (e) {
+    console.error('saveVote:', e);
+    st.textContent = 'Error';
+    st.className = 'vote-status error';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
+  }
+}
+
+function setStars(slug, val) {
+  if (!voter) {
+    _pendingVote = { slug, val };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].stars = val === (votes[slug].stars || 0) ? 0 : val;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setNote(slug, text) {
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].note = text;
+  votes[slug].voted_at = new Date().toISOString();
+}
+
+function setFollowUp(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'followup' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].followup = !votes[slug].followup;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setArchive(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'archive' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].archived = !votes[slug].archived;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function renderCard(slug) {
+  const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+  if (!row) return;
+  const v = votes[slug] || {};
+  const stars = v.stars || 0;
+  const card = row.closest('.startup-card');
+
+  row.querySelectorAll('.star').forEach(btn =>
+    btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars)
+  );
+
+  const ta = row.querySelector('textarea');
+  if (ta && !ta._focused) ta.value = v.note || '';
+
+  let attr = row.querySelector('.vote-attr');
+  if (v.voter && v.voted_at) {
+    if (!attr) {
+      attr = document.createElement('span');
+      attr.className = 'vote-attr';
+      row.querySelector('.vote-status').insertAdjacentElement('beforebegin', attr);
+    }
+    const d = new Date(v.voted_at);
+    const fmt = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+    attr.textContent = `${v.voter} · ${fmt}`;
+  } else if (attr) {
+    attr.remove();
+  }
+
+  const top = card.querySelector('.startup-top');
+  let badge = top.querySelector('.vote-badge');
+  if (stars > 0) {
+    if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
+    badge.textContent = '★'.repeat(stars);
+  } else if (badge) {
+    badge.remove();
+  }
+
+  card.classList.toggle('voted-low', stars > 0 && stars <= 2);
+  const fb = row.querySelector('.followup-btn');
+  if (fb) fb.classList.toggle('active', !!v.followup);
+  card.classList.toggle('followup', !!v.followup);
+  const ab = row.querySelector('.archive-btn');
+  if (ab) ab.classList.toggle('active', !!v.archived);
+  card.classList.toggle('archived', !!v.archived);
+}
+
+function renderAll() {
+  document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug));
+}
+
+function wireVoting() {
+  document.querySelectorAll('.star').forEach(btn =>
+    btn.addEventListener('click', function () {
+      setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
+    })
+  );
+
+  document.querySelectorAll('.note-toggle').forEach(btn =>
+    btn.addEventListener('click', function () {
+      const row = this.closest('.vote-row');
+      const area = row.querySelector('.note-area');
+      const open = area.hidden;
+      area.hidden = !open;
+      this.textContent = open ? '− Hide note' : '+ Add note';
+      if (open) row.querySelector('textarea').focus();
+    })
+  );
+
+  document.querySelectorAll('.note-area textarea').forEach(ta => {
+    ta.addEventListener('focus', function () { this._focused = true; });
+    ta.addEventListener('blur', function () {
+      this._focused = false;
+      const slug = this.closest('.vote-row').dataset.slug;
+      setNote(slug, this.value);
+      if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
+    });
+  });
+  document.querySelectorAll('.followup-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setFollowUp(this.closest('.vote-row').dataset.slug); })
+  );
+  document.querySelectorAll('.archive-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setArchive(this.closest('.vote-row').dataset.slug); })
+  );
+}
+
+function openSettings(msg) {
+  const m = document.getElementById('settings-modal');
+  m.removeAttribute('hidden');
+  m.style.display = 'flex';
+  const msgEl = document.getElementById('settings-msg');
+  if (msgEl) { msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none'; }
+  const inp = document.getElementById('voter-name-input');
+  if (inp) { inp.value = voter; inp.focus(); }
+}
+
+function closeSettings() {
+  const m = document.getElementById('settings-modal');
+  m.setAttribute('hidden', '');
+  m.style.display = 'none';
+}
+
+function saveSettings() {
+  try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
+  try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } } catch(e) {}
+  closeSettings();
+  updateGearState();
+  if (_pendingVote && voter) {
+    const { slug, val, action } = _pendingVote;
+    _pendingVote = null;
+    if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);
+  }
+}
+
+function updateGearState() {
+  const gear = document.getElementById('settings-btn');
+  if (!gear) return;
+  gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution';
+  gear.classList.toggle('connected', !!voter);
+}
+
+/* Init */
+document.addEventListener('DOMContentLoaded', () => {
+  renderPipelineCards();
+  updateGearState();
+
+  document.getElementById('settings-modal').addEventListener('click', e => {
+    if (e.target.id === 'settings-modal') closeSettings();
+  });
+  document.getElementById('voter-name-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') saveSettings();
+  });
+  document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+  document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+
+  loadVotes();
+});
+</script>
+
+</body>
+</html>

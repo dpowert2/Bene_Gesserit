@@ -1,88 +1,82 @@
 # Bene Gesserit — Weekly Report
-**Week ending:** 2026-04-03
-**Prior report:** 2026-03-29
+**Week ending:** 2026-04-10
 
 ---
 
 ## Executive Summary
 
-The pipeline grew by 21 companies this week to 61 total -- more than doubling the previous single-week intake record. Combined new funding across entries exceeds $700M. Growth was concentrated in AI Safety & Guardrails (+6 companies, gap now at 16), Compliance (+4, now at 13), Personal Agent (+4, now at 7), Agent Authentication & Security (+3, now at 10), and Agent Orchestration (+3, now at 10). Tax Optimisation received no new entries for the third consecutive week. No companies have been voted, shortlisted, or passed this week -- all 61 remain in detected.
+The pipeline grew 41% this week (61→86 companies), driven by a full-category scan using expanded search terms that surfaced companies across six entirely new infrastructure categories. Incumbents — Visa, Amex, Mastercard, FIS, JPMorgan — are now operationalising agentic commerce at continental scale, confirming that the regulated infrastructure gap between "agents can transact" and "agents are governed while transacting" is the defining opportunity. Five new academic papers broke a five-week research drought, with the most significant demonstrating that safe LLMs become unsafe agents — validating the need for agent-level safety infrastructure in regulated environments.
 
 ---
 
-## Gap Coverage
+## Gap Coverage This Week
 
-### Personal Agent — 7 companies (was 3)
-The gap more than doubled with four new entries. **Unique AI** (Series A, $30M, CommerzVentures and DN Capital) is the most institutionally validated: deployed at Pictet, UBP, SIX, LGT, and Partners Group -- institutions managing $2.3 trillion AUM combined. Pictet reports approximately two hours of efficiency gained per employee per week. **Kaaj** (Seed, $3.8M) has processed over $5 billion in loan applications at seed stage with sub-3-minute underwriting, representing the strongest production traction per dollar raised in the pipeline. **EnFi** (Series A, $15M, FINTOP Capital) deploys AI credit analyst agents alongside human underwriters at banks, targeting the $112 billion US credit labour market. **Natural** (Seed, $9.8M) builds B2B payment rails for AI agents, overlapping with the Agent Payment Rails theme.
+All 86 pipeline entries remain in the detected stage. Growth was broad-based, with companies entering the pipeline across all original gaps plus six new categories identified through expanded search coverage.
 
-The institution-native sub-theme (Obin AI, EnFi, Kaaj) now has three companies demonstrating that banks are embedding AI agents into core credit and lending workflows -- creating immediate demand for the compliance infrastructure layer beneath them.
+### Agent Authentication & Security — 14 companies (+4 this week)
+The thesis's strongest gap by alignment and institutional validation. Runlayer ($11M, Khosla Ventures) launched the first pure MCP security gateway, signing eight unicorns before launch. Aembit ($18M, Ballistic Ventures + Okta Ventures + CrowdStrike) provides just-in-time, task-scoped credentials for agents. Astrix Security closed a $45M Series B with Anthropic as co-investor — the model provider itself investing in identity governance. Bank of Bots emerged from stealth as the first financial infrastructure platform treating AI agents as primary account holders, issuing the world's first loan to an AI agent.
 
-### Compliance — 13 companies (was 9)
-**Worth** (Series A, $30M, Fulcrum Equity Partners and American Express Ventures) is the most strategically significant entry. Worth is explicitly building a "Know Your Agent" (KYA) framework for AI agents transacting on behalf of SMBs -- the first funded product commitment to KYA as a concrete compliance feature. **Norm AI** (Series A, $27M) encodes regulatory rules as executable policies that AI agents interpret and enforce in real time -- a direct infrastructure play. **Vivox AI** (Pre-Seed, GBP 1.3M, UK) builds modular "atomic" AI agents for AML and KYC, each handling a single auditable task, cutting compliance case processing from six hours to 30 minutes and reducing false positives by 86%. **Hybridity** (Seed, EUR 2M, Stockholm) automates DORA, NIS2, and GDPR compliance for EU financial institutions.
+On the incumbent side, Okta announced "Okta for AI Agents" (launching April 30) — the first major identity platform treating agents as first-class identity objects. FIS launched its Know Your Agent (KYA) framework with Mastercard and Visa. The IETF published draft-klrc-aiagent-auth, the first formal internet standard for agent identity.
 
-The Delve "fake compliance" scandal this week -- in which a $300M AI compliance startup was accused of fabricating compliance documentation -- underscores why auditability and independent verification are non-negotiable. This simultaneously challenges undifferentiated AI compliance plays and reinforces the case for infrastructure that makes AI agent decisions independently verifiable.
+### AI Safety & Guardrails — 18 companies (+2 this week)
+OpenBox AI ($5M seed, ex-BlackRock and ex-Microsoft founders) is the most structurally complete seed-stage AI agent governance company seen — selected for the Accenture FinTech Innovation Lab London 2026. Trent AI ($13M seed, London, ex-AWS + Cambridge ML professor) provides pre-deployment vulnerability assessment for AI agents. Microsoft open-sourced its Agent Governance Toolkit — MIT-licensed, sub-millisecond policy enforcement across all ten OWASP agentic risks — further commoditising horizontal safety and narrowing the standalone opportunity to the regulated compliance overlay.
 
-### Tax Optimisation — 4 companies (unchanged)
-No new entries for the third consecutive week. April (Series B, $78M, QED Investors) remains the most thesis-aligned entry as an embedded AI tax platform for wealth management workflows.
+### Compliance — 16 companies (+3 this week)
+Variance ($21.5M Series A, ex-Apple Fraud Engineering) deploys autonomous KYC/KYB/AML/fraud investigation agents with full audit trails across 150+ global data sources — the clearest product-market fit signal in compliance this cycle. Lema AI ($24M, Team8 + Salesforce Ventures) replaces static vendor compliance questionnaires with continuous agentic monitoring, directly addressing DORA requirements. Haast ($12M, 4.5x revenue growth, 100% customer retention) governs AI-generated enterprise content — a new problem vector as financial institutions scale AI content production. The SEC's 2026 exam priorities now explicitly flag AI governance as a cross-cutting risk area.
 
-### Agent Orchestration — 10 companies (was 7)
-**Sycamore** (Seed, $65M, Coatue and Lightspeed) -- one of the largest seed rounds in enterprise AI -- is building a "trusted agent operating system" with governance embedded into the orchestration layer. Founded by Atlassian's former CTO with a board including senior alumni from Databricks, Cadence, and OpenAI. **Notch** (Series A, $30M, Headline and Lightspeed) explicitly calls itself "the AI operating system for regulated industries" with 12x ARR growth, currently focused on insurance and expanding into financial services. **Interloom** (Seed, EUR 14.2M, DN Capital) captures undocumented expert decisions as queryable corporate memory for AI agents -- Commerzbank is a production customer, reducing the documentation gap from 50% to 5%.
+### Tax Optimisation — 5 companies (+1 this week)
+Juno ($12M seed, mid-seven-figure ARR in eight months) broke a four-week drought with the first new entry. However, Juno's primary focus is tax preparation acceleration for CPA firms — closer to the tax filing sub-domain than to portfolio-integrated tax intelligence. Market signal: Altruist added AI-powered tax-loss harvesting and capital gains planning to its Hazel advisor platform, indicating that thesis-aligned tax intelligence is emerging as a feature of advisor platforms rather than standalone startups.
 
-The "trusted OS" positioning of both Sycamore and Notch is the most significant competitive development this week. If governance becomes a native feature of the agent platform layer rather than standalone infrastructure, it redefines the partnership opportunity -- from building the compliance layer to partnering with platforms that need finserv-specific compliance modules they cannot credibly build themselves.
+### Agent Orchestration — 13 companies (+3 this week)
+Pace ($10M Series A, Sequoia) is the standout entry — Prudential Financial is a production customer, replacing the $70B insurance BPO layer with agentic AI. Meridian AI ($17M seed, a16z + QED, Goldman Sachs alumni) is building a Cursor-style IDE for financial modelling with embedded audit trail properties. Pluvo ($5M seed) is the most finserv-specific orchestration play identified to date, stress-testing forecasts and scenario analysis in real time.
 
-### AI Safety & Guardrails — 16 companies (was 10)
-The largest gap by company count, now exceeding $1 billion in combined funding. Six new entries: **Jazz** (Seed + Series A, $61M, Glilot Capital and Team8, MassMutual Ventures) deploys an "Agentic Investigator" for data loss prevention that understands context and intent behind data movement, reducing daily alerts from tens of thousands to approximately 10 at a 5,000-person organisation. **XBOW** (Series C, $120M, unicorn at $1B+) and **RunSybil** (Seed, $40M, Khosla Ventures, founded by OpenAI's first security hire) both conduct autonomous penetration testing with existing financial institution customers. **Qevlar AI** (Series A, $30M, Partech, Paris) provides autonomous SOC capabilities to managed security providers serving European banks and insurers. **Novee** (Seed + Series A, $51.5M, Israel) builds AI-versus-AI offensive security. **Mindgard** (Seed, approximately $11.6M, Lancaster UK) offers AI red teaming with finserv clients.
+### Personal Agent — 10 companies (+3 this week)
+Numos ($4.25M seed, General Catalyst, Udemy/Dandy in production) provides full reasoning transparency for CFO-layer finance workflows. Samaya AI received strategic investment from NVIDIA and Databricks, positioning it at the intersection of GPU compute and enterprise data for investment research agents. Galdera Labs (ex-Klarna FP&A founders) brings institutional operator pedigree to AI-native financial modelling.
 
-Equally significant: the acquisition wave consolidating horizontal AI safety. OpenAI acquired Promptfoo (150,000+ developers, 25% of F500). SentinelOne acquired Prompt Security for approximately $250M. Check Point acquired Lakera in 2025. The prompt injection and red-teaming sub-category is being absorbed into platform incumbents. The residual startup opportunity is narrowing to the regulated compliance overlay -- fiduciary accountability chains, FINRA/FCA/EU AI Act audit primitives -- that platform vendors will not build natively.
-
-### Agent Authentication & Security — 10 companies (was 7)
-Three well-capitalised new entries, all directly addressing agent identity governance. **Keycard** (Series A, $38M, a16z and boldstart) uses cryptographic short-term identity binding tokens with founding pedigree from Auth0, Okta, and Datadog -- the team that built the previous identity standards layer building the next one. **Venice Security** (Series A, $33M, IVP and Index Ventures, Wiz founders as angels) is already displacing CyberArk at Fortune 500 finance companies for privileged access management across human, machine, and AI identities. **Linx Security** (Series B, $83M total, Insight Partners) governs millions of identities for F500 companies and has signed multimillion-dollar contracts with banks -- the most finserv-validated non-human identity company since Oasis Security.
-
-This gap now has the deepest thesis alignment and strongest institutional validation in the pipeline. NIST's formal AI Agent Standards Initiative (with finance-specific sessions in April) and BPI's formal comments on agent identity standards add regulatory momentum.
+### New Gap Categories (6 new categories, 9 companies)
+The expanded search terms surfaced companies across entirely new infrastructure categories: Agent Memory & Context (Mem0 $24.5M + Cognee €7.5M), Dispute Resolution & Agent Liability (Armilla with Lloyds backing + AIUC with first agent certification standard), Agent Payment Rails (Circuit & Chisel $19.2M with ATXP protocol), Pre-Trade Compliance (Hadrius, YC-backed SEC/FINRA native), Audit & Explainability (ValidMind, EU AI Act focus), and Agent Monetisation (Paid.ai $33M, results-based billing infrastructure).
 
 ---
 
 ## Emerging Themes
 
-### AI Safety Acquisition Wave
-Three acquisitions in 60 days (Promptfoo, Prompt Security, Lakera) are collapsing the horizontal AI safety layer into platform incumbents. Google Cloud launched AI Protection and Model Armor post-Wiz acquisition. Microsoft announced Agent 365, bundling Defender, Entra, and Purview into an agentic governance layer. The strategic implication: horizontal AI safety is no longer a standalone startup opportunity. The differentiated opportunity is the regulated-industry-specific compliance overlay that platform vendors lack the domain expertise to build.
+### MCP Authentication as Its Own Infrastructure Layer
+Runlayer's launch as a pure MCP security gateway, combined with Okta's "Okta for AI Agents" announcement, signals that agent-to-tool authentication is crystallising as a distinct infrastructure category. As MCP becomes the dominant agent-tool protocol under Linux Foundation governance, whoever controls the authentication gateway occupies the same structural position as API gateway providers in the previous generation.
 
-### NIST Agent Standards and Banking Engagement
-NIST's Center for AI Standards and Innovation launched a formal AI Agent Standards Initiative, with the public comment window on agent identity and authorisation closing April 2, 2026. The Bank Policy Institute and allied trades submitted formal comments -- meaning banks are now defining the standards, not just receiving them. NIST standards propagate rapidly into procurement requirements (the AI RMF precedent: 18 months from publication to procurement mandate). Infrastructure companies that align earliest with emerging standards gain structural advantages when they formalise.
+### Incumbent Agent Commerce at Continental Scale
+The most concentrated incumbent activity to date. Visa launched Intelligent Commerce Connect — a protocol-agnostic on-ramp supporting all four agentic payment protocols simultaneously, with general availability planned for June. Amex unveiled its ACE developer kit. Mastercard completed live agentic transactions in Hong Kong with HSBC, DBS, Citi, Standard Chartered, Hang Seng, and Mox Bank. FIS launched its KYA framework with both card networks. JPMorgan disclosed 450+ active agentic AI use cases, targeting 1,000+ by year-end with $2B in annual AI-delivered value. The gap between agent transaction capability and agent governance infrastructure is widening — incumbents are building the rails, not the governance layer.
 
-### Trusted Agent OS as Competitive Framing
-Sycamore and Notch both position as governance-native agent operating systems -- the first startups to frame trust and compliance as features of the platform rather than as standalone infrastructure. If this framing succeeds at scale, the regulated infrastructure opportunity shifts from standalone companies to finserv-specific compliance modules that these platforms will need to purchase or partner for. This is the thesis's most significant competitive development to date.
+### Agent Insurance and Certification as Foundational Infrastructure
+Armilla (Lloyds-backed AI agent insurance) and AIUC (first AI agent certification standard, ex-Anthropic founder) represent an entirely new infrastructure layer. If regulators adopt certification standards analogous to UL certification for electrical equipment, certified agents gain structural market access advantages. The insurance market for AI agent-caused losses is projected at $4.8B by 2032.
 
-### Agent Payment Rails Approaching Critical Mass
-Natural joins Crossmint and InFlow as the third dedicated agentic payments infrastructure startup. Worth is building KYA as a product feature. Mastercard has established a Universal Commerce Protocol with Google and Microsoft for agentic checkout interoperability. The sub-theme now has sufficient depth and institutional backing to warrant consideration as a standalone gap category.
-
-### Multi-Jurisdiction Regulatory Convergence
-Four major regulatory signals in one week: EU AI Act high-risk financial AI deadline confirmed for August 2, 2026 (EU Council Digital Omnibus position agreed). FCA opened AI Live Testing Cohort 2 with April 2026 start. Singapore's MAS published the most advanced agentic AI risk management toolkit globally. NIST launched agent standards with finance-specific sessions. The multi-jurisdiction convergence is the single strongest tailwind for the regulated infrastructure thesis.
+### Regulatory Convergence Accelerating
+SEC 2026 exam priorities explicitly flag AI governance as a cross-cutting risk. FCA PS25/22 targeted support went live April 6, creating the first compliant pathway for AI-driven personalised financial guidance in the UK. EU AI Act high-risk enforcement confirmed for August 2, 2026, with penalties up to 7% of global turnover. The IETF published its first formal internet standard for agent identity. Multi-jurisdiction convergence (US, EU, UK, Singapore) is structural and accelerating.
 
 ---
 
-## Competitive Landscape Highlights
+## Competitive Landscape
 
-The pipeline's strongest companies by gap, based on scoring, traction, and thesis alignment:
+### Agent Authentication & Security
+The thesis's strongest gap. Fourteen companies with 100% upvote rate on votes cast. Key players: Astrix Security ($85M total, Anthropic co-investor), Linx Security ($83M total, Insight Partners), Keycard ($38M, a16z), Venice Security ($33M, IVP + Index). Incumbents defining standards: Okta (Okta for AI Agents), FIS (KYA framework), Visa (Trusted Agent Protocol + Intelligent Commerce Connect). The IETF and NIST are formalising agent identity at the standards layer.
 
-**Personal Agent:** Obin AI (Seed, Motive Partners, JPMorgan founding team, 50K+ annual loan notices for $500B+ AUM fund) and Unique AI (Series A, CommerzVentures, $2.3T AUM customer base)
+### AI Safety & Guardrails
+Largest gap by company count (18) with combined funding exceeding $1.2B. The horizontal safety layer is being absorbed by platform incumbents (OpenAI, SentinelOne, Check Point, Microsoft open-source). The surviving opportunity is the regulated compliance overlay — fiduciary accountability chains, FINRA/FCA/EU AI Act audit primitives — that platform vendors cannot build. Overmind (5★, MI5/MI6/GCHQ pedigree) remains the top shortlist candidate.
 
-**Compliance:** Steward (Seed, Motive Partners, $100B AUM on-platform), Worth (Series A, Amex Ventures, first KYA product), Norm AI (Series A, executable regulatory policies)
-
-**Tax Optimisation:** April (Series B, QED Investors, embedded wealth management tax platform) -- highest-priority unvoted candidate
-
-**Agent Orchestration:** Sycamore (Seed $65M, ex-Atlassian CTO, "trusted OS"), Notch (Series A, 12x ARR growth, regulated-industry focus), Interloom (Seed, Commerzbank customer)
-
-**AI Safety & Guardrails:** Overmind (Seed, 5-star rating, top shortlist candidate), Jazz ($61M, agentic DLP), XBOW (unicorn, autonomous pen testing)
-
-**Agent Authentication & Security:** t54 Labs (Seed, 5-star), Oasis Security (Series B, $195M, 5-star), Crossmint (Series A, Ribbit Capital, KYA credentials), Keycard (Series A, a16z, Auth0/Okta pedigree)
+### Agent Payment Rails
+Five pure-play startups (Crossmint, Natural, Circuit & Chisel, InFlow, Sapiom) with four competing protocols now live or near-live (Visa TAP, Stripe MPP, Google AP2/x402, ATXP). Visa's Intelligent Commerce Connect supports all four simultaneously, positioning as the neutral clearing layer. The compliance and governance overlay atop whichever payment standard wins remains the most defensible infrastructure play.
 
 ---
 
 ## Research Highlights
 
-No new academic papers were identified in the past seven days, marking the fifth consecutive week without new research output. The analytical frontier has decisively shifted from academic research to practitioner and regulatory publications. The most relevant outputs this week were the NIST AI Agent Standards Initiative documentation, BPI's formal comments on agent security frameworks, the MAS Project MindForge Phase 2 toolkit, and the Center for Data Innovation's regulatory friction analysis. These collectively constitute higher-signal intelligence for the thesis than the peer-reviewed corpus at this stage of market development.
+Five new papers broke a five-week academic drought. The three most thesis-relevant:
+
+**Type-Checked Compliance** (arXiv 2604.01483) applies Lean 4 theorem proving to formally verify regulatory compliance of agentic financial systems — mathematical proof rather than empirical testing. If formal verification becomes a regulatory expectation, this methodology becomes foundational infrastructure.
+
+**Agent Identity Protocol (AIP)** (arXiv 2603.24775) proposes invocation-bound capability tokens that bridge MCP and A2A protocols, cryptographically binding each agent action to a specific identity and permission scope. This is the academic formulation of what Runlayer and t54 Labs are building commercially.
+
+**ClawSafety** (arXiv 2604.01438) demonstrates that LLMs passing safety benchmarks as chatbots exhibit degraded safety when deployed as agents — the agentic context introduces failure modes not captured by standard evaluations. This validates that agent-level safety infrastructure is non-negotiable for regulated deployment.
 
 ---
 
-*Report generated 2026-04-03 by Bene Gesserit. Scoring internals, weight adjustments, and near-miss analysis excluded from this stakeholder version.*
+*Report generated by Bene Gesserit strategic radar. Week ending April 10, 2026.*
