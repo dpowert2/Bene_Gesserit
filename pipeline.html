@@ -856,7 +856,7 @@ function renderCard(slug) {
   card.classList.toggle('archived', !!v.archived);
 }
 
-function renderAll() {document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug)); updateFilterCounts();}
+function renderAll() {document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug)); applyFilter();}
 
 let activeFilter = 'all';
 
