@@ -850,6 +850,7 @@ function wireVoting() {
   document.querySelectorAll('.star').forEach(btn => btn.addEventListener('click', function () {setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));}));
   document.querySelectorAll('.note-toggle').forEach(btn => btn.addEventListener('click', function () {const row = this.closest('.vote-row'); const area = row.querySelector('.note-area'); const open = area.hidden; area.hidden = !open; this.textContent = open ? '− Hide note' : '+ Add note'; if (open) row.querySelector('textarea').focus();}));
   document.querySelectorAll('.note-area textarea').forEach(ta => {ta.addEventListener('focus', function () {this._focused = true;}); ta.addEventListener('blur', function () {this._focused = false; const slug = this.closest('.vote-row').dataset.slug; setNote(slug, this.value); if (this.value.trim() || votes[slug]?.stars) saveVote(slug);});});
+  document.querySelectorAll('.followup-btn').forEach(btn => btn.addEventListener('click', function () {setFollowUp(this.closest('.vote-row').dataset.slug);}));
   document.querySelectorAll('.archive-btn').forEach(btn => btn.addEventListener('click', function () {setArchive(this.closest('.vote-row').dataset.slug);}));
   document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', function () {applyFilter(this.dataset.filter);}));
 }
