@@ -231,6 +231,27 @@
     }
     .startup-card.archived { opacity: 0.4; border-left: 3px solid var(--border-strong) !important; }
     .startup-card.archived:hover { opacity: 0.75; }
+    /* Collapsed archived card — shown in non-archived views as a minimal stub */
+    .startup-card.collapsed { padding: 12px 20px; opacity: 0.55; animation: none; }
+    .startup-card.collapsed:hover { opacity: 0.9; }
+    .startup-card.collapsed > *:not(.startup-top):not(.vote-row) { display: none !important; }
+    .startup-card.collapsed .startup-top { margin: 0; display: flex; align-items: center; gap: 12px; }
+    .startup-card.collapsed .startup-top h3 { font-size: 1rem; margin: 0; }
+    .startup-card.collapsed .score-badge { display: none; }
+    .startup-card.collapsed .startup-top::after {
+      content: 'ARCHIVED';
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      padding: 3px 9px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      margin-left: auto;
+    }
+    .startup-card.collapsed .vote-row { padding-top: 8px; margin-top: 8px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
+    .startup-card.collapsed .vote-row > *:not(.archive-btn):not(.vote-status) { display: none !important; }
 </style>
 </head>
 <body>
@@ -841,13 +862,13 @@ function applyFilter(f) {
     const voted = slug && votes[slug]?.stars;
     const isArchived = !!(slug && votes[slug]?.archived);
     let show = true;
-    if (activeFilter === 'voted') show = !!voted;
-    if (activeFilter === 'unvoted') show = !voted;
-    if (activeFilter === 'followup') show = !!(slug && votes[slug]?.followup);
+    if (activeFilter === 'voted') show = !!voted && !isArchived;
+    if (activeFilter === 'unvoted') show = !voted && !isArchived;
+    if (activeFilter === 'followup') show = !!(slug && votes[slug]?.followup) && !isArchived;
     if (activeFilter === 'archived') show = isArchived;
-    // Hide archived cards from all non-archived views
-    if (activeFilter !== 'archived' && isArchived) show = false;
     card.style.display = show ? '' : 'none';
+    // Collapse archived cards in non-archived views; expand them in the archived view
+    card.classList.toggle('collapsed', isArchived && activeFilter !== 'archived');
   });
   updateFilterCounts();
 }
@@ -864,7 +885,7 @@ function updateFilterCounts() {
     const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`);
     if (b) b.textContent = n;
   };
-  set('all', activeCards.length);
+  set('all', allCards.length);
   set('voted', voted);
   set('unvoted', unvoted);
   set('followup', followup);
