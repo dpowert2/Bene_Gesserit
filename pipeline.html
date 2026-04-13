@@ -231,17 +231,20 @@
     }
     .startup-card.archived { opacity: 0.4; border-left: 3px solid var(--border-strong) !important; }
     .startup-card.archived:hover { opacity: 0.75; }
+    /* Smooth transitions for collapsing */
+    .startup-card { transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease, opacity 0.3s ease, background 0.3s ease; max-height: 3000px; overflow: hidden; }
+    .startup-card > * { transition: opacity 0.25s ease, max-height 0.4s ease, margin 0.35s ease; }
     /* Collapsed archived card — shown in non-archived views as a minimal stub */
-    .startup-card.collapsed { padding: 12px 20px; opacity: 0.55; animation: none; }
+    .startup-card.collapsed { padding: 14px 22px; opacity: 0.55; animation: none; max-height: 62px; }
     .startup-card.collapsed:hover { opacity: 0.9; }
-    .startup-card.collapsed > *:not(.startup-top):not(.vote-row) { display: none !important; }
+    .startup-card.collapsed > *:not(.startup-top) { opacity: 0; max-height: 0; margin-top: 0; margin-bottom: 0; pointer-events: none; }
     .startup-card.collapsed .startup-top { margin: 0; display: flex; align-items: center; gap: 12px; }
-    .startup-card.collapsed .startup-top h3 { font-size: 1rem; margin: 0; }
+    .startup-card.collapsed .startup-top h3 { font-size: 0.95rem; margin: 0; }
     .startup-card.collapsed .score-badge { display: none; }
     .startup-card.collapsed .startup-top::after {
       content: 'ARCHIVED';
       font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 0.58rem;
       letter-spacing: 1.5px;
       color: var(--text-muted);
       padding: 3px 9px;
@@ -250,8 +253,6 @@
       border-radius: 100px;
       margin-left: auto;
     }
-    .startup-card.collapsed .vote-row { padding-top: 8px; margin-top: 8px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
-    .startup-card.collapsed .vote-row > *:not(.archive-btn):not(.vote-status) { display: none !important; }
 </style>
 </head>
 <body>
@@ -805,11 +806,24 @@ function setArchive(slug) {
     return;
   }
   if (!votes[slug]) votes[slug] = {};
-  votes[slug].archived = !votes[slug].archived;
+  const nowArchived = !votes[slug].archived;
+  votes[slug].archived = nowArchived;
   votes[slug].voted_at = new Date().toISOString();
   renderCard(slug);
   saveVote(slug);
   applyFilter();
+  // Keep the collapsing card in view so the user sees the animation
+  const card = document.getElementById(`startup-${slug}`);
+  if (card) {
+    requestAnimationFrame(() => {
+      const rect = card.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // If card top is above viewport or bottom is out of view, scroll into view
+      if (rect.top < 120 || rect.bottom > vh - 20) {
+        card.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    });
+  }
 }
 
 function renderCard(slug) {
