@@ -53,7 +53,7 @@ export default {
       let body;
       try { body = await request.json(); } catch { return respond({ error: 'Invalid JSON' }, 400); }
 
-      const { slug, stars, note, voter } = body;
+      const { slug, stars, note, voter, followup, archived } = body;
       if (!slug) return respond({ error: 'slug is required' }, 400);
 
       /* Retry once on SHA conflict (two people voting simultaneously) */
@@ -66,6 +66,8 @@ export default {
             stars:    stars    ?? votes[slug]?.stars    ?? 0,
             note:     note     ?? votes[slug]?.note     ?? '',
             voter:    voter    ?? votes[slug]?.voter    ?? 'anonymous',
+            followup: followup ?? votes[slug]?.followup ?? false,
+            archived: archived ?? votes[slug]?.archived ?? false,
             voted_at: new Date().toISOString(),
           };
 
