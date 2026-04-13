@@ -839,27 +839,32 @@ function applyFilter(f) {
   document.querySelectorAll('#pipeline-cards .startup-card').forEach(card => {
     const slug = card.querySelector('.vote-row')?.dataset.slug;
     const voted = slug && votes[slug]?.stars;
+    const isArchived = !!(slug && votes[slug]?.archived);
     let show = true;
     if (activeFilter === 'voted') show = !!voted;
     if (activeFilter === 'unvoted') show = !voted;
     if (activeFilter === 'followup') show = !!(slug && votes[slug]?.followup);
-    if (activeFilter === 'archived') show = !!(slug && votes[slug]?.archived);
+    if (activeFilter === 'archived') show = isArchived;
+    // Hide archived cards from all non-archived views
+    if (activeFilter !== 'archived' && isArchived) show = false;
     card.style.display = show ? '' : 'none';
   });
   updateFilterCounts();
 }
 
 function updateFilterCounts() {
-  const cards = [...document.querySelectorAll('#pipeline-cards .startup-card')];
-  const voted = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.stars).length;
-  const unvoted = cards.length - voted;
-  const followup = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.followup).length;
-  const archived = cards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.archived).length;
+  const allCards = [...document.querySelectorAll('#pipeline-cards .startup-card')];
+  const activeCards = allCards.filter(c => !votes[c.querySelector('.vote-row')?.dataset.slug]?.archived);
+  const voted = activeCards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.stars).length;
+  const unvoted = activeCards.length - voted;
+  const followup = activeCards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.followup).length;
+  const archived = allCards.filter(c => votes[c.querySelector('.vote-row')?.dataset.slug]?.archived).length;
+  const cards = activeCards; // used below for stats
   const set = (f, n) => {
     const b = document.querySelector(`.filter-btn[data-filter="${f}"] .filter-count`);
     if (b) b.textContent = n;
   };
-  set('all', cards.length);
+  set('all', activeCards.length);
   set('voted', voted);
   set('unvoted', unvoted);
   set('followup', followup);
@@ -871,12 +876,9 @@ function updateFilterCounts() {
     const v = votes[slug] || {};
     return (v.stars || 0) > 0 || !!v.followup || !!v.archived || !!(v.note && v.note.trim());
   }).length;
-  const rejected = cards.filter(c => {
-    const slug = c.querySelector('.vote-row')?.dataset.slug;
-    return !!votes[slug]?.archived;
-  }).length;
+  const rejected = archived;
   const setStat = (id, n) => { const el = document.getElementById(id); if (el) el.textContent = n; };
-  setStat('stat-total', cards.length);
+  setStat('stat-total', activeCards.length);
   setStat('stat-reviewed', reviewed);
   setStat('stat-rejected', rejected);
   setStat('stat-followup', followup);
