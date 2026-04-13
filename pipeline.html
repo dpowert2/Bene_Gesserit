@@ -249,7 +249,7 @@
   <div class="container">
     <div class="stat-item"><span class="stat-num" id="stat-total">–</span><span class="stat-label">Total in Pipeline</span></div>
     <div class="stat-item"><span class="stat-num reviewed" id="stat-reviewed">–</span><span class="stat-label">Reviewed</span></div>
-    <div class="stat-item"><span class="stat-num rejected" id="stat-rejected">–</span><span class="stat-label">Rejected (≤2★)</span></div>
+    <div class="stat-item"><span class="stat-num rejected" id="stat-rejected">–</span><span class="stat-label">Rejected (archived)</span></div>
     <div class="stat-item"><span class="stat-num followup" id="stat-followup">–</span><span class="stat-label">Follow Up</span></div>
   </div>
 </div>
@@ -873,8 +873,7 @@ function updateFilterCounts() {
   }).length;
   const rejected = cards.filter(c => {
     const slug = c.querySelector('.vote-row')?.dataset.slug;
-    const s = votes[slug]?.stars || 0;
-    return s > 0 && s <= 2;
+    return !!votes[slug]?.archived;
   }).length;
   const setStat = (id, n) => { const el = document.getElementById(id); if (el) el.textContent = n; };
   setStat('stat-total', cards.length);
