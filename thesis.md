@@ -1,6 +1,6 @@
 # Bene Gesserit — Living Investment Thesis
 
-*Last updated: 2026-04-14 | Version: 2.1 — preference model updated from 53 votes (was 8)*
+*Last updated: 2026-04-15 | Version: 3.0 — scouting rebalanced from platform infrastructure toward specialist agents*
 
 ---
 
@@ -87,24 +87,68 @@ Fidelity needs compliance-native technology. European startups build that way by
 
 ---
 
+## Scouting Priority Shift (v3.0)
+
+**The platform infrastructure side is largely addressed.** Agent Auth, AI Safety, Orchestration, and Compliance each have strong candidates or POC partners. The system's exposure bias — flooding the pipeline with security/auth companies because search terms favoured them — created a false signal that these were the highest-priority gaps. They were the *most visible* gaps, not the most important remaining ones.
+
+**The specialist agents are the unscouted frontier.** The thesis describes 14 stages of how elite traders work and maps 11 specialist agent types to them. But only 2 have any pipeline coverage (Personal Financial Agent, Tax Optimisation). The other 9 — Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis — have zero search terms, zero pipeline companies, and zero scoring signals.
+
+**These specialist agents are what makes the app store worth using.** The garden can have perfect identity, perfect safety, perfect compliance — but if there are no brilliant specialist agents operating inside it, there's no customer value. The infrastructure is the enabler. The agents are the product.
+
+**Rebalanced scouting allocation:**
+
+| Category | Previous Priority | New Priority | Rationale |
+|----------|------------------|-------------|-----------|
+| Research & Signal Intelligence | Not scouted | 🔴 CRITICAL | Core value proposition — no pipeline coverage |
+| Portfolio Construction & Risk | Not scouted | 🔴 CRITICAL | Core value proposition — no pipeline coverage |
+| Trade Structuring & Account Optimisation | Not scouted | 🟡 HIGH | Differentiated capability — no pipeline coverage |
+| Execution Quality | Not scouted | 🟡 HIGH | Professional-grade execution for retail — no coverage |
+| Options & Derivatives Strategy | Not scouted | 🟡 HIGH | Deep specialist knowledge gap — no coverage |
+| Position Monitoring & Thesis Tracking | Not scouted | 🟠 MEDIUM | Continuous intelligence — no coverage |
+| Financial Planning | Not scouted | 🟠 MEDIUM | Goals-based guardrail — no coverage |
+| Behavioural Coaching | Not scouted | ⚪ MONITOR | Emerging category — fewer startups expected |
+| Post-Trade Analysis & Learning | Not scouted | ⚪ MONITOR | Feedback loop — fewer startups expected |
+| Agent Auth & Security | 🔴 CRITICAL | 🟠 MEDIUM | Strong candidates exist (Keycard, Resistant AI, etc.) |
+| AI Safety & Guardrails | 🟡 HIGH | 🟠 MEDIUM | Strong candidate (Overmind). Box ticked. |
+| Agent Orchestration | 🟠 MEDIUM | ⚪ MONITOR | POC partner (Jentic). Covered. |
+| Pre-Trade Compliance | 🔴 CRITICAL | 🟡 HIGH | Still a genuine gap but narrower scope |
+
+---
+
 ## Gap Map: Reimagining Brokerage Infrastructure for Agents
 
-Every function a brokerage performs today — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each of these must be reimagined. KYC becomes KYA (Know Your Agent). Pre-trade compliance checks must happen in milliseconds against agent-initiated orders. Audit trails must capture agent reasoning, not just human sign-off. Dispute resolution must account for a new actor in the value chain.
+Every function a brokerage performs today — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each of these must be reimagined. The gap map below covers BOTH sides: the specialist agents that deliver the customer experience AND the platform infrastructure that makes the garden safe.
 
-The gap map below identifies the infrastructure layers needed to build the app store. For each, we ask: is there a startup building this through an agentic, financial-services-specific lens?
+### Specialist Agents (The Apps) — PRIMARY SCOUTING FOCUS
 
-| Layer | Traditional Brokerage Function | Agent-First Reimagining | Status |
-|-------|-------------------------------|------------------------|--------|
-| Agent Orchestration | Workflow management | Route, schedule, and govern multi-agent workflows | ✅ Jentic (POC partner) |
-| AI Safety & Guardrails | Risk controls | Supervise agent behaviour, enforce boundaries, prevent hallucination | ✅ Overmind (strong candidate) |
-| Pre-Trade Compliance | Suitability, best execution | Agent checks suitability, concentration limits, restricted lists before every trade | ❌ **Market gap** |
-| Agent Authentication | KYC / identity | KYA — Know Your Agent. Permissions, secrets, identity delegation for non-human actors | ❌ No finserv startup |
-| Audit & Explainability | Regulatory reporting | "Why did the agent do this?" — auditable, regulator-ready explanation | ❌ No finserv startup |
-| Dispute Resolution | Customer complaints | When an agent trade goes wrong, who pays? Insurance, certification, accountability | ❌ Unsolved |
-| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ⚠️ Likely internal build |
-| Agent Monetisation | Fee schedules | Results-based billing for agent-mediated services | ✅ Paid AI (pattern signal) |
+| Agent Type | Investment Stage | What It Does | Status |
+|-----------|-----------------|-------------|--------|
+| Research & Signal Intelligence | Stages 1, 2, 3 | Alternative data, earnings analysis, sentiment, institutional flow tracking | ❌ **Not scouted — highest priority** |
+| Portfolio Construction & Risk | Stages 4, 5, 11 | Concentration, factor exposure, scenario analysis, position sizing, rebalancing | ❌ **Not scouted — highest priority** |
+| Trade Structuring | Stage 6 | Equity vs options vs pairs, account selection across taxable/IRA/Roth | ❌ **Not scouted** |
+| Tax Optimisation | Stage 7 | Lot-level TLH, gain deferral, asset location, wash sale prevention | ⚠️ Scouting — no confirmed match |
+| Options & Derivatives Strategy | Stages 6, 10 | Covered calls, protective puts, spreads, volatility strategies | ❌ **Not scouted** |
+| Execution Quality | Stage 9 | Algorithm selection, dark pool routing, slippage minimisation | ❌ **Not scouted** |
+| Position Monitoring | Stage 10 | Thesis tracking, stop-loss management, catalyst monitoring | ❌ **Not scouted** |
+| Personal Financial Agent | Stages 1, 13, 14 | Front door — intent translation, orchestration across specialists | ⚠️ Partial (Bank of Bots 4★) |
+| Financial Planning | Stage 14 | Goals-based planning, retirement, life events, estate | ❌ **Not scouted** |
+| Behavioural Coaching | Stage 13 | Panic prevention, discipline enforcement, drawdown perspective | ❌ **Not scouted** |
+| Post-Trade Analysis | Stage 12 | Trade journaling, attribution, pattern recognition, strategy refinement | ❌ **Not scouted** |
 
-### Gaps With European Startup Coverage
+### Platform Infrastructure (The Garden) — MAINTENANCE SCOUTING
+
+| Layer | What It Does | Status |
+|-------|-------------|--------|
+| Agent Orchestration | Route, schedule, govern multi-agent workflows | ✅ Jentic (POC partner) |
+| AI Safety & Guardrails | Supervise agent behaviour, enforce boundaries | ✅ Overmind (strong candidate) |
+| Agent Authentication & Identity | KYA — permissions, secrets, identity delegation | ⚠️ Multiple candidates (Keycard, Resistant AI, Vouched) |
+| Pre-Trade Compliance | Suitability, concentration, restricted lists, best execution | ❌ Genuine gap (Hadrius closest) |
+| Audit & Explainability | Auditable agent reasoning for regulators | ❌ Gap (ValidMind closest) |
+| Dispute Resolution & Liability | Insurance, certification, accountability | ❌ Gap (Armilla, AIUC embryonic) |
+| Agent Payment Rails | Agent-initiated financial transactions | ⚠️ Emerging (Nava, Natural, Crossmint) |
+| Agent Monetisation | Results-based billing for agent services | ✅ Paid AI (pattern signal) |
+
+### Pipeline Coverage (Platform Infrastructure — Largely Addressed)
 
 **1. Agent Orchestration & Workflow** ✅ POC Partner
 Jentic (Dublin, pre-seed $4.5M). Arazzo workflows, agentic sandboxes, centralised credentials, governed execution. Governance-native architecture. BG Score: 95.
@@ -127,7 +171,7 @@ Paid AI (London, seed $33M). Results-based billing for AI agents. Directly relev
 **7. Cross-Border Compliance** ✅ Adjacent
 Outpost (London, seed $17.5M). Ex-Revolut founders, Ribbit Capital. Cross-border payments and tax compliance. BG Score: 58.
 
-### Genuine Market Gaps (Highest Priority for Scouting)
+### Remaining Platform Infrastructure Gaps
 
 **8. Pre-Trade Compliance Agent** ❌ FCAT's Most Actionable Insight
 Nobody building this. When an AI agent in the marketplace wants to trade, who checks: is this suitable for the client? Does it violate concentration limits? Is the security on a restricted list? Is this best execution? In a world where Public.com ships "describe your intent, we execute" without suitability checks, the company that builds the pre-trade compliance agent owns the governance layer for every agentic brokerage — including the app store. Hadrius (YC, SEC/FINRA native) is the closest signal.
@@ -276,5 +320,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 1.0 | 2026-03-10 | Initial setup | 6 gap categories, basic criteria |
 | 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research, competitive landscape, agentic brokerage race, gap mapping | 13 gaps, "app store for financial agents" thesis, European supply chain rationale, competitive intelligence, learned anti-patterns, challenge signals |
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
+| 3.0 | 2026-04-15 | Exposure bias correction — scouting rebalanced | Platform infrastructure (Auth, Safety, Orchestration) downgraded from CRITICAL to MEDIUM/MONITOR — strong candidates exist. 9 specialist agent categories added to scouting: Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution Quality, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis. These are the agents that make the app store worth using — the unscouted frontier. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
