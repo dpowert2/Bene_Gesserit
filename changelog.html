@@ -76,23 +76,50 @@ header .description {
   line-height: 1.55;
 }
 
-.back-link {
-  display: inline-flex;
+/* ── Site Navigation ── */
+.site-nav {
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-nav .container {
+  display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 16px;
+}
+.site-nav-brand {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-nav-link {
   font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 100px;
-  padding: 6px 14px;
-  margin-bottom: 24px;
+  padding: 5px 12px;
   transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.back-link:hover { border-color: var(--brown); color: var(--brown); }
+.site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+.site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
 
 /* ── Filter bar ──────────────────── */
 .filter-bar {
@@ -257,9 +284,20 @@ footer p {
 </head>
 <body>
 
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link active" href="changelog.html">Changelog</a>
+      <a class="site-nav-link" href="archive.html">Archive</a>
+    </div>
+  </div>
+</nav>
+
 <header>
   <div class="container">
-    <a class="back-link" href="index.html">← Back to Radar</a>
     <h1>Changelog</h1>
     <p class="description">Every substantive change the system makes to the thesis, preferences, and search terms — so you can see what shifted and intervene if needed.</p>
   </div>
