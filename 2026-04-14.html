@@ -54,46 +54,57 @@
     }
 
     /* ============================================================ */
-    /* RUN NAVIGATION */
+    /* SITE NAVIGATION */
     /* ============================================================ */
-    .run-nav {
+    .site-nav {
       background: var(--bg-page);
       border-bottom: 1px solid var(--border);
-      padding: 12px 0;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-    .run-nav .container {
+    .site-nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
     }
-    .run-nav-left, .run-nav-right {
-      display: flex;
-      gap: 12px;
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
     }
-    .nav-link {
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
       font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 500;
       color: var(--text-muted);
       text-decoration: none;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 100px;
-      padding: 6px 14px;
+      padding: 5px 12px;
       transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
-    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
-    .nav-link.primary:hover { background: var(--brown); border-color: var(--brown); }
-    .run-nav-center {
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .site-nav-date {
       font-family: 'DM Mono', monospace;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: var(--text-heading);
       font-weight: 500;
+      margin: 0 4px;
     }
 
     /* ============================================================ */
@@ -564,22 +575,32 @@
     .vote-status.error { color: var(--coral); }
 
     .followup-btn, .archive-btn {
-      background: none;
-      border: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
       color: var(--brown);
-      font-size: 0.8rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
       font-weight: 500;
       cursor: pointer;
-      text-decoration: underline;
-      transition: color 0.2s;
+      padding: 4px 10px;
+      text-decoration: none;
+      transition: all 0.2s;
     }
-
     .followup-btn:hover, .archive-btn:hover {
+      border-color: var(--brown);
       color: var(--brown-dark);
     }
-
-    .followup-btn.active, .archive-btn.active {
+    .followup-btn.active {
+      background: var(--amber-light);
+      border-color: var(--amber);
       color: var(--amber);
+      font-weight: 600;
+    }
+    .archive-btn.active {
+      background: var(--text-heading);
+      border-color: var(--text-heading);
+      color: #fff;
       font-weight: 600;
     }
 
@@ -788,16 +809,16 @@
 </style>
 </head>
 <body>
-<nav class="run-nav">
+<nav class="site-nav">
   <div class="container">
-    <div class="run-nav-left">
-      <a class="nav-link" href="index.html">← All runs</a>
-      <a class="nav-link" href="2026-04-12.html">← Apr 12</a>
-    </div>
-    <div class="run-nav-center">Apr 14, 2026</div>
-    <div class="run-nav-right">
-      <a class="nav-link primary" href="pipeline.html">Full Pipeline →</a>
-      <button id="settings-btn" title="Set your name for vote attribution">⚙</button>
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="2026-04-12.html">← Apr 12</a>
+      <span class="site-nav-date">Apr 14, 2026</span>
+      <a class="site-nav-link" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
     </div>
   </div>
 </nav>
