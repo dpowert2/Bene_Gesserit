@@ -49,13 +49,49 @@
 
     .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
-    .run-nav { background: var(--bg-page); border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
-    .run-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .run-nav-left, .run-nav-right { display: flex; gap: 12px; }
-    .nav-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; color: var(--text-muted); text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; transition: all 0.2s; }
-    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
-    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
-    .run-nav-center { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-heading); font-weight: 500; }
+    .site-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
 
     header { padding: 32px 0 24px; background: var(--bg-page); }
     header h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; font-weight: 400; color: var(--text-heading); letter-spacing: -1px; }
@@ -161,14 +197,16 @@
 </style>
 </head>
 <body>
-<nav class="run-nav">
+<nav class="site-nav">
   <div class="container">
-    <div class="run-nav-left">
-      <a class="nav-link" href="index.html">← All runs</a>
-      <a class="nav-link" href="pipeline.html">Full Pipeline</a>
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <a class="site-nav-link active" href="archive.html">Archive</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
     </div>
-    <div class="run-nav-center">Archive</div>
-    <div class="run-nav-right"></div>
   </div>
 </nav>
 
