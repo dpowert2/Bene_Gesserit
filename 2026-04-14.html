@@ -813,7 +813,7 @@
   <div class="container">
     <div class="section-header">
       <h2>Signals</h2>
-      <span class="count">7 signals</span>
+      <span class="count">10 signals</span>
     </div>
     <div id="briefing">
 
@@ -893,6 +893,33 @@
         <a class="source-link" href="https://www.bcg.com/publications/2026/the-200-billion-dollar-ai-opportunity-in-tech-services" target="_blank" style="margin-left: 12px;">BCG →</a>
       </div>
 
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Competitive Intel</span>
+          <span class="tag challenges">Challenges</span>
+        </div>
+        <h3>OpenAI acquires Hiro Finance — first frontier model provider M&A in finserv AI</h3>
+        <p>OpenAI officially announced the acquisition of Hiro Finance (April 14), a startup specialising in autonomous personal finance. The core technology and talent will move to OpenAI's emerging vertical applications division. This is the first major frontier model provider acquiring a finserv-specific AI startup — signalling that vertical financial AI is now in platform vendors' M&A crosshairs. The implication for the thesis: standalone personal finance agent startups face platform risk from above, strengthening the case for infrastructure-layer companies that serve all agents regardless of who builds them.</p>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Agent Payment Rails</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>Ralio secures additional £1.8M pre-seed — total now £2.5M+ for agent payment rails</h3>
+        <p>Ralio (already in pipeline, 5★) raised an additional £1.8M pre-seed to build programmable payment rails for AI agents, bringing its total to over £2.5M. The continued investor appetite for the earliest-stage agent payment infrastructure validates the thesis that "who pays when an agent transacts" is an unsolved and funded problem.</p>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">AI Safety &amp; Guardrails</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>Geordie AI wins RSAC 2026 Innovation Sandbox — "Most Innovative Startup" in agentic governance</h3>
+        <p>Geordie AI (already tracked, referenced by Manifold 5★) won RSAC 2026 Innovation Sandbox as "Most Innovative Startup" and was selected for the CrowdStrike/AWS/NVIDIA accelerator. Also a SC Awards finalist. The agentic AI governance platform addresses exactly the third-party agent visibility problem — covering SaaS-hosted, low-code, and self-coded agents. Team from Snyk, Veracode, Darktrace. This is the strongest external validation yet for agent-level (not model-level) security as a standalone category.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -901,7 +928,7 @@
   <div class="container">
     <div class="section-header">
       <h2>New Startups</h2>
-      <span class="count">2 new</span>
+      <span class="count">6 new</span>
     </div>
     <div id="startup-cards"></div>
   </div>
@@ -978,6 +1005,74 @@ const startups = [
     ],
     score: 72,
     bars: {gap: [28, 35], finserv: [18, 25], stage: [12, 20], team: [14, 20]}
+  },
+  {
+    slug: "nava",
+    name: "Nava",
+    url: "https://www.nava.xyz/",
+    oneliner: "Controls architecture for the AI economy — escrow service for AI agent transactions with intent verification, dispute resolution, and economic backstops around agent activity.",
+    gap: "Agent Payment Rails",
+    stage: "Seed — $8.3M",
+    geo: "US (crypto-native)",
+    finserv: "Explicitly targets 'any agent handling real capital' — prediction markets, treasury management, high-frequency execution, automated auditing. This is the most direct articulation yet of the payment rails gap: who holds the funds, who verifies intent, and who resolves disputes when agents transact autonomously.",
+    team: "Co-founders from EigenLayer. Backed by Polychain Capital and Archetype. Emerged from stealth April 14, 2026.",
+    thesis: "Nava directly addresses the 'who pays when an agent trade goes wrong?' gap. Escrow + intent verification + dispute resolution is the exact infrastructure missing from eToro Agent Portfolios and Public.com's agentic brokerage. This is external agent infrastructure by definition — it governs third-party agent financial transactions. High thesis alignment.",
+    evidence: [
+      ["Nava — Controls Architecture for the AI Economy", "https://www.nava.xyz/"]
+    ],
+    score: 85,
+    bars: {gap: [28, 35], finserv: [20, 25], stage: [18, 20], team: [14, 20]}
+  },
+  {
+    slug: "trent-ai",
+    name: "Trent AI",
+    url: "https://www.trent.ai/",
+    oneliner: "Multi-agent security solution using specialised security agents that continuously scan environments, judge risk, mitigate vulnerabilities, and evaluate security posture through a proprietary judgement layer.",
+    gap: "AI Safety & Guardrails",
+    stage: "Seed — €11M/$13M",
+    geo: "London, UK",
+    finserv: "No explicit finserv focus — enterprise-broad. OpenAI, Spotify, Databricks, AWS leaders backing. Agent-level security (not model-level) passes the 'AI, not agents' test that failed Mindgard. London base is thesis-preferred.",
+    team: "Backed by LocalGlobe and Cambridge Innovation Capital. Strong enterprise pedigree with backers from OpenAI, Spotify, Databricks, and AWS leadership.",
+    thesis: "Trent AI addresses agent-level security through context-driven agentic security and reinforcement learning — distinct from model-level safety that Dave rejected (Mindgard 2★). However, no finserv specificity and 'enterprise security' could be interpreted as internal tooling. Needs finserv customer signal to confirm thesis alignment.",
+    evidence: [
+      ["Trent AI — Multi-Agent Security", "https://www.trent.ai/"]
+    ],
+    score: 78,
+    bars: {gap: [28, 35], finserv: [12, 25], stage: [18, 20], team: [16, 20]}
+  },
+  {
+    slug: "vouched",
+    name: "Vouched",
+    url: "https://www.vouched.id/",
+    oneliner: "Know Your Agent (KYA) identity platform with Agent Checkpoint for AI agent identification and permissioning, Agent Detect for real-time AI agent detection, and Agent Govern via MCP-Identity (MCP-I).",
+    gap: "Agent Authentication & Identity",
+    stage: "Series A — $17M",
+    geo: "Seattle, US",
+    finserv: "Won 'Identity Verification Solution of the Year' at the 2026 FinTech Breakthrough Awards. Core product expanded from human IDV to agent IDV — directly addresses the KYA vocabulary the thesis uses. MCP-Identity integration positions it as infrastructure for the protocol layer.",
+    team: "Series A led by Spring Rock Ventures. Includes KnowThat.ai community-driven agent trust directory.",
+    thesis: "KYA is THE emerging regulatory standard the thesis identifies as structurally equivalent to KYC. Vouched is the first pure-play KYA platform with fintech recognition. MCP-Identity integration positions it as protocol-layer infrastructure. Risk: Series A $17M is borderline stage; human IDV origins may make the agent pivot seem bolted-on.",
+    evidence: [
+      ["Vouched — Know Your Agent", "https://www.vouched.id/"]
+    ],
+    score: 83,
+    bars: {gap: [32, 35], finserv: [18, 25], stage: [14, 20], team: [14, 20]}
+  },
+  {
+    slug: "alomana",
+    name: "Alomana",
+    url: "https://www.alomana.ai/",
+    oneliner: "Autonomous AI agents that automate portfolio rebalancing, harvest tax losses, minimise transaction costs, and maintain target risk profiles across thousands of client accounts simultaneously.",
+    gap: "Tax Optimisation",
+    stage: "Seed — €4M",
+    geo: "EU",
+    finserv: "Directly serves wealth managers with portfolio optimisation — exactly what Dave described as the ideal Tax Optimisation product ('agents that can help investors with clever tax strategies'). Serves RIAs and wealth managers managing thousands of accounts.",
+    team: "EU-based seed stage. €4M raised.",
+    thesis: "HIGH UNCERTAINTY. This is exactly the kind of agent that would sit inside the app store marketplace (a specialist tax/rebalancing agent serving investors). But it could also be classified as an 'internal workflow tool for wealth managers.' The internal/external boundary is ambiguous here. First real Tax Optimisation candidate since the gap was defined.",
+    evidence: [
+      ["Alomana — Autonomous Portfolio Management", "https://www.alomana.ai/"]
+    ],
+    score: 72,
+    bars: {gap: [30, 35], finserv: [22, 25], stage: [18, 20], team: [10, 20]}
   }
 ];
 
