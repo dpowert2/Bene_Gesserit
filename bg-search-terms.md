@@ -1,7 +1,7 @@
 # Bene Gesserit — Search Terms
-## April 2026 Revision v2 (12 categories + 2 tracks)
+## April 2026 Revision v3 (21 categories + 2 tracks)
 
-*Updated 2026-04-14 based on 53-vote preference model. Key changes: "external/third-party agent" qualifiers added across all categories, stronger negative filters for internal workflow tools, "agent" (not "AI") precision in safety/security terms, stage qualifiers (seed/Series A) added, KYC/AML and tax filing negatives strengthened.*
+*Updated 2026-04-15. v3.0 REBALANCE: 9 new specialist agent categories added (Research, Portfolio, Trade Structuring, Options, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis). Platform infrastructure categories (Auth, Safety, Orchestration) downgraded from CRITICAL/HIGH to MEDIUM/MONITOR. The specialist agents are what makes the app store worth using — they are now the primary scouting target.*
 
 Organised by gap category. Each query is designed for web search. Rotate through these across scan runs to avoid repetition. Priority categories should be searched every scan; medium categories every other scan; monitor categories bi-weekly.
 
@@ -19,7 +19,182 @@ Organised by gap category. Each query is designed for web search. Rotate through
 
 ---
 
-## 1. Personal Financial Agent 🔴 EVERY SCAN
+# SPECIALIST AGENTS (THE APPS) — PRIMARY SCOUTING FOCUS
+
+These categories represent the agent types that deliver the actual customer experience inside the app store. They are the unscouted frontier. Most have ZERO pipeline coverage.
+
+---
+
+## S1. Research & Signal Intelligence Agent 🔴 EVERY SCAN
+- "AI investment research agent startup seed 2026"
+- "alternative data intelligence agent startup seed series A"
+- "AI equity research platform startup seed"
+- "agentic sentiment analysis financial markets startup"
+- "institutional flow tracking AI startup seed"
+- "AI earnings analysis agent startup seed series A"
+- "alternative data startup fintech seed 2026"
+- "AI catalyst identification investment startup"
+- "agentic financial research API startup seed"
+- "AI signal generation trading startup seed series A Europe"
+- "satellite data investment intelligence startup seed"
+- "AI research agent wealth management startup"
+
+### What we're looking for
+Startups building deep research intelligence that agents can draw on — alternative data feeds, earnings analysis, sentiment analysis, institutional flow tracking, catalyst identification. The knowledge layer that generates ideas and validates theses. Must be API-accessible or agent-callable, not a dashboard for human analysts.
+
+### Negative filters
+- Internal research desk tools
+- Business intelligence dashboards
+- General purpose data analytics
+
+---
+
+## S2. Portfolio Construction & Risk Agent 🔴 EVERY SCAN
+- "AI portfolio construction startup seed 2026"
+- "portfolio risk agent API startup seed series A"
+- "factor exposure analysis AI startup seed"
+- "AI portfolio optimisation startup fintech seed"
+- "position sizing AI agent startup seed"
+- "portfolio scenario analysis agent startup seed series A"
+- "correlation modelling AI investment startup seed"
+- "risk budgeting agent startup seed Europe"
+- "AI rebalancing trigger agent startup seed"
+- "portfolio concentration analysis AI startup seed"
+- "AI asset allocation agent startup seed series A"
+- "multi-asset portfolio agent API startup seed"
+
+### What we're looking for
+Startups that can answer "what does adding this position do to the whole portfolio?" — concentration analysis, factor exposure, scenario modelling, position sizing, rebalancing triggers. Must operate on live portfolios in real time, not just backtest historical data. Agent-callable API, not a dashboard.
+
+### Negative filters
+- Robo-advisors (passive allocation, not active construction)
+- Backtesting-only platforms
+- Internal risk management tools
+
+---
+
+## S3. Trade Structuring & Account Optimisation Agent 🟡 HIGH
+- "AI trade structuring startup seed 2026"
+- "options vs equity structuring AI startup seed"
+- "cross-account investment optimisation AI startup seed"
+- "asset location optimisation agent startup seed series A"
+- "IRA Roth taxable account selection AI startup"
+- "investment vehicle selection agent API startup seed"
+- "multi-account portfolio structuring startup seed"
+- "AI trade expression optimisation startup seed"
+- "defined risk structure agent startup seed Europe"
+
+### What we're looking for
+"How should I express this thesis?" — equity vs options vs pairs vs ETFs. "Which account?" — taxable vs IRA vs Roth vs 529. The agent that structures the optimal expression of a trade given the client's full account picture.
+
+---
+
+## S4. Options & Derivatives Strategy Agent 🟡 HIGH
+- "AI options strategy startup seed 2026"
+- "options trading agent API startup seed series A"
+- "covered call income strategy AI startup seed"
+- "AI volatility trading startup seed"
+- "options spread strategy agent startup seed"
+- "protective put strategy AI startup seed Europe"
+- "collar strategy agent automated startup seed"
+- "AI options analytics startup retail investor seed"
+- "derivatives strategy AI wealth management startup seed"
+- "options income agent startup seed series A"
+
+### What we're looking for
+Deep specialist knowledge in options and derivatives — covered calls for income, protective puts, spreads for defined risk, volatility strategies. This is expertise most retail investors can't access today. Must be agent-accessible or API-first.
+
+---
+
+## S5. Execution Quality Agent 🟡 HIGH
+- "AI execution algorithm startup seed 2026"
+- "smart order routing startup fintech seed series A"
+- "execution quality AI startup seed"
+- "algorithmic trading startup retail seed"
+- "VWAP TWAP execution agent startup seed"
+- "best execution AI startup seed Europe"
+- "dark pool routing startup seed series A"
+- "slippage minimisation AI startup seed"
+- "execution analytics agent startup seed"
+- "AI order routing optimisation startup seed"
+
+### What we're looking for
+Professional-grade execution for everyone. Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart order routing, slippage minimisation. The gap between clicking "buy" on an app and how institutions actually execute.
+
+### Negative filters
+- High-frequency trading firms
+- Prop trading infrastructure
+- Internal execution desks
+
+---
+
+## S6. Position Monitoring & Thesis Tracking Agent 🟠 MEDIUM
+- "AI portfolio monitoring agent startup seed 2026"
+- "investment thesis tracking agent startup seed"
+- "catalyst monitoring AI startup seed series A"
+- "AI stop loss profit target agent startup seed"
+- "position alerting agent startup seed Europe"
+- "AI earnings surprise monitoring startup seed"
+- "portfolio watchdog agent startup seed"
+- "continuous investment monitoring AI startup seed"
+
+### What we're looking for
+"Is my trade still working?" — continuous thesis monitoring, stop-loss/profit-target management, catalyst tracking, earnings surprise detection. Initiates new conversations when conditions change.
+
+---
+
+## S7. Financial Planning Agent 🟠 MEDIUM
+- "AI financial planning agent startup seed 2026"
+- "goals-based investing agent startup seed series A"
+- "retirement planning AI agent startup seed"
+- "life event financial modelling agent startup seed"
+- "AI income generation strategy retirement startup seed"
+- "estate planning AI agent startup seed Europe"
+- "holistic financial planning agent API startup seed"
+- "AI wealth planning agent startup seed series A"
+
+### What we're looking for
+The long-term guardrail — goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. Ensures no short-term trade decision undermines long-term objectives.
+
+### Negative filters
+- Generic budgeting apps
+- Expense tracking tools
+
+---
+
+## S8. Behavioural Coaching Agent ⚪ MONITOR
+- "AI behavioural finance coaching startup seed 2026"
+- "investor behavioural AI agent startup seed"
+- "market panic prevention AI startup seed"
+- "investment discipline agent startup seed"
+- "AI investor psychology startup seed series A"
+- "drawdown coaching AI startup seed"
+
+### What we're looking for
+Panic prevention, discipline enforcement, drawdown perspective. The agent that stops you selling at the bottom. Behavioural psychology applied to finance.
+
+---
+
+## S9. Post-Trade Analysis & Learning Agent ⚪ MONITOR
+- "AI trade journal startup seed 2026"
+- "portfolio attribution analysis agent startup seed"
+- "AI trade performance analysis startup seed series A"
+- "investment pattern recognition agent startup seed"
+- "post-trade analytics AI startup seed"
+- "AI strategy refinement investment startup seed"
+
+### What we're looking for
+Trade journaling, attribution analysis (stock selection vs sector allocation vs timing), pattern recognition across closed positions. The feedback loop that makes the system smarter over time.
+
+---
+
+# PLATFORM INFRASTRUCTURE (THE GARDEN) — MAINTENANCE SCOUTING
+
+These categories cover the infrastructure that makes the agent marketplace safe, compliant, and trustworthy. Most have strong candidates or POC partners. Continued scouting is maintenance, not primary.
+
+---
+
+## 1. Personal Financial Agent 🟡 HIGH (downgraded from 🔴)
 - "personal AI financial agent startup 2026 seed"
 - "autonomous wealth management agent startup series A"
 - "AI agent wealth as a service platform startup"
@@ -41,7 +216,7 @@ Organised by gap category. Each query is designed for web search. Rotate through
 
 ---
 
-## 2. Pre-Trade Compliance Agent 🔴 EVERY SCAN
+## 2. Pre-Trade Compliance Agent 🟡 HIGH (downgraded from 🔴)
 - "pre-trade compliance AI agent startup 2026"
 - "investment compliance automation agent API startup"
 - "suitability check AI agent fintech startup seed"
@@ -84,7 +259,7 @@ Organised by gap category. Each query is designed for web search. Rotate through
 
 ---
 
-## 4. Agent Orchestration & Workflow 🟠 MEDIUM
+## 4. Agent Orchestration & Workflow ⚪ MONITOR (downgraded from 🟠 — Jentic POC partner)
 - "multi-agent orchestration third party agents fintech startup"
 - "agent workflow engine external agents financial services"
 - "agentic workflow governance third party startup"
@@ -110,7 +285,7 @@ Organised by gap category. Each query is designed for web search. Rotate through
 
 ---
 
-## 5. AI Safety & Guardrails 🟡 HIGH
+## 5. AI Safety & Guardrails 🟠 MEDIUM (downgraded from 🟡 — Overmind strong candidate)
 - "agentic security startup 2026 seed series A"
 - "agent safety monitoring regulated industries startup seed"
 - "agent behaviour guardrails finance startup"
@@ -134,7 +309,7 @@ Organised by gap category. Each query is designed for web search. Rotate through
 
 ---
 
-## 6. Agent Authentication & Identity 🔴 EVERY SCAN
+## 6. Agent Authentication & Identity 🟠 MEDIUM (downgraded from 🔴 — multiple strong candidates)
 - "AI agent authentication startup 2026 seed"
 - "agent identity management platform startup seed series A"
 - "delegated authorisation AI agent startup"
@@ -319,17 +494,28 @@ Catch-all for signals that don't fit a category:
 
 | Priority | Categories | Frequency |
 |----------|-----------|-----------|
-| 🔴 Critical | 1 (Personal Agent), 2 (Pre-Trade Compliance), 6 (Auth/Identity), Competitive Intel | Every scan |
-| 🟡 High | 3 (Tax), 5 (Safety), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
-| 🟠 Medium | 4 (Orchestration), 8 (Memory), 10 (Disputes) | Weekly |
-| ⚪ Monitor | 11 (Commerce Pattern), 12 (Monetisation) | Bi-weekly |
+| 🔴 Critical | S1 (Research & Signal), S2 (Portfolio & Risk), Competitive Intel | Every scan |
+| 🟡 High | S3 (Trade Structuring), S4 (Options), S5 (Execution), 1 (Personal Agent), 2 (Pre-Trade Compliance), 3 (Tax), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
+| 🟠 Medium | S6 (Position Monitoring), S7 (Financial Planning), 5 (Safety), 6 (Auth/Identity), 8 (Memory), 10 (Disputes) | Weekly |
+| ⚪ Monitor | S8 (Behavioural Coaching), S9 (Post-Trade Analysis), 4 (Orchestration), 11 (Commerce Pattern), 12 (Monetisation) | Bi-weekly |
 | 📄 Research | Papers | Monthly |
 
 ---
 
-*Last updated: 2026-04-14 (v2 — post-53-vote preference rebuild)*
-*Previous version: April 2026 v1 (12 categories, ~160 queries)*
-*This version: 12 categories + 2 tracks, ~155 queries, strengthened negative filters*
+*Last updated: 2026-04-15 (v3 — specialist agent rebalance)*
+*Previous version: April 2026 v2 (12 categories + 2 tracks, ~155 queries)*
+*This version: 21 categories + 2 tracks, ~250 queries*
+
+### Change Log (v2 → v3)
+- **MAJOR REBALANCE:** 9 new specialist agent categories added (S1–S9) with ~95 new search queries
+- S1 Research & Signal Intelligence and S2 Portfolio Construction & Risk elevated to 🔴 CRITICAL
+- S3 Trade Structuring, S4 Options & Derivatives, S5 Execution Quality elevated to 🟡 HIGH
+- Category 6 (Auth/Identity) downgraded 🔴→🟠 — multiple strong candidates in pipeline
+- Category 5 (Safety) downgraded 🟡→🟠 — Overmind is strong candidate
+- Category 4 (Orchestration) downgraded 🟠→⚪ — Jentic is POC partner
+- Category 1 (Personal Agent) downgraded 🔴→🟡
+- Category 2 (Pre-Trade Compliance) downgraded 🔴→🟡
+- Rationale: platform infrastructure is largely addressed; specialist agents are the unscouted frontier
 
 ### Change Log (v1 → v2)
 - Added "third party agent" / "external agent" qualifiers across Categories 1, 2, 4, 5, 6, 7, 9, 10, 11
