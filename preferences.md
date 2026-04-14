@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-14 | Based on 53 votes (17 upvotes ★★★★–★★★★★, 8 neutral ★★★, 28 downvotes ★★–★) | Major vote influx: 45 new votes cast since 2026-03-15, ending five consecutive data-starved cycles. Pipeline: ~86 companies, vote coverage now ~62% (up from 9%). This is the first preference cycle with statistically meaningful signal across multiple gap categories.*
+*Last updated: 2026-04-15 | Based on 53 votes (17 upvotes ★★★★–★★★★★, 8 neutral ★★★, 28 downvotes ★★–★) | v3.0 rebalance: specialist agent categories added to scoring, platform infrastructure bonuses capped to prevent continued bias.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
@@ -44,9 +44,63 @@ You can edit this file directly at any time to override or supplement the system
 
 ---
 
+## Scouting Priority Rebalance (v3.0)
+
+**EXPOSURE BIAS CORRECTION:** The strong positive signals below were derived from 53 votes, but those votes were cast against a pipeline dominated by platform infrastructure companies (security, auth, compliance) because that's what the search terms surfaced. The resulting preference weights over-index on platform infrastructure and under-represent specialist agent categories that were never scouted. This section corrects the imbalance.
+
+**Specialist agent bonuses apply when a company builds deep domain intelligence that agents in the marketplace can draw on — the "apps" in the app store.** These are the companies that make the customer experience worth having. They are the PRIMARY scouting target as of v3.0.
+
+### Specialist Agent Bonuses (NEW — highest scouting priority)
+
+**Research & Signal Intelligence Agent** (+18 points, PRIORITY)
+- Alternative data for investment decisions, earnings analysis, sentiment analysis, institutional flow tracking, catalyst identification
+- Must serve external agents or end investors, not internal research desks
+- The "idea generation" layer — Stages 1, 2, 3 of the investment process
+
+**Portfolio Construction & Risk Agent** (+18 points, PRIORITY)
+- Concentration analysis, factor exposure modelling, correlation analysis, position sizing, scenario analysis, rebalancing triggers
+- Must operate on live portfolios, not just backtest
+- The "what does this trade do to the whole portfolio?" layer — Stages 4, 5, 11
+
+**Trade Structuring & Account Optimisation Agent** (+15 points)
+- Equity vs options vs pairs vs ETFs, cross-account selection (taxable/IRA/Roth/529)
+- Structures the expression of a thesis for optimal risk/reward and tax efficiency
+- Stage 6 of the investment process
+
+**Options & Derivatives Strategy Agent** (+15 points)
+- Covered calls, protective puts, spreads, collar strategies, volatility trading
+- Deep specialist knowledge that retail investors can't access today
+- Stages 6, 10
+
+**Execution Quality Agent** (+15 points)
+- Algorithm selection (VWAP, TWAP, POV), dark pool routing, smart order routing, slippage minimisation
+- Professional-grade execution infrastructure for everyone
+- Stage 9
+
+**Position Monitoring & Thesis Tracking Agent** (+12 points)
+- Continuous thesis monitoring, stop-loss/profit-target management, catalyst tracking, earnings surprise detection
+- The "is my trade still working?" layer — Stage 10
+
+**Financial Planning Agent** (+12 points)
+- Goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations
+- The long-term guardrail — Stage 14
+
+**Behavioural Coaching Agent** (+8 points)
+- Panic prevention, discipline enforcement, drawdown perspective, portfolio-consistent decision support
+- Stage 13
+
+**Post-Trade Analysis & Learning Agent** (+8 points)
+- Trade journaling, attribution analysis, pattern recognition, strategy refinement
+- The feedback loop — Stage 12
+
+---
+
 ## Strong Positive Signals
 
-### 1. Agent Authentication & Security — Trust Infrastructure Layer (+15 points)
+### EXPOSURE BIAS NOTE
+The bonuses below for platform infrastructure categories (Auth, Safety, Compliance) were derived from a pipeline heavily skewed toward those categories. They remain valid scoring signals but should NOT be interpreted as higher priority than the specialist agent bonuses above. The platform infrastructure side is largely addressed — strong candidates exist for Auth, Safety, and Orchestration. Continued scouting in those categories is maintenance, not primary.
+
+### 1. Agent Authentication & Security — Trust Infrastructure Layer (+15 points, CAPPED — strong candidates exist)
 
 - **Evidence:** t54-labs 5★ ("we need a verification layer for agents"), oasis-security 5★, keycard 5★ ("Spot on"), resistant-ai 5★ ("Novel and love the agentic security angle"), venice-security 4★, imper-ai 4★ ("good for fraud")
 - **Vote rate in gap:** 6/6 upvotes (100%) — strongest signal in entire pipeline
@@ -54,7 +108,7 @@ You can edit this file directly at any time to override or supplement the system
 - **Key attribute:** Infrastructure-layer positioning — the product is something other agents connect *to* for trust anchoring. Must be about AGENTS specifically, not AI model security generally (mindgard 2★ "AI, not agents").
 - **Minimum score boost:** Apply when core product directly addresses "who authorises the agent" or "how do agents prove identity" or "how do we detect malicious agent behaviour"
 
-### 2. AI Safety & Guardrails for Regulated Industries (+12 points)
+### 2. AI Safety & Guardrails for Regulated Industries (+12 points, CAPPED — strong candidate exists)
 
 - **Evidence:** overmind 5★, manifold 5★ ("Similar to Geordie"), complyance 5★ ("Would need to talk to them to understand whether they could help us with our use case"), kai 4★ ("good but a little early"), norm-ai 4★
 - **Vote rate in gap:** 5/5 upvotes (100%)
