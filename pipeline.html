@@ -53,7 +53,57 @@
       padding: 0 24px;
     }
 
-    .run-nav { background: var(--bg-page); border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+    .site-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .site-nav-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin: 0 4px;
+    }
+
     .stats-bar { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 45px; z-index: 99; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
     .stats-bar .container { display: flex; align-items: stretch; justify-content: center; gap: 0; flex-wrap: wrap; }
     .stat-item { flex: 1; min-width: 120px; padding: 2px 20px; text-align: center; border-right: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
@@ -64,13 +114,6 @@
     .stat-num.followup { color: var(--coral); }
     .stat-label { font-family: 'DM Mono', monospace; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 500; }
     @media (max-width: 640px) { .stats-bar { padding: 10px 0; } .stat-item { padding: 2px 8px; min-width: 80px; } .stat-num { font-size: 1.4rem; } .stat-label { font-size: 0.58rem; } }
-    .run-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .run-nav-left, .run-nav-right { display: flex; gap: 12px; }
-    .nav-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; color: var(--text-muted); text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; transition: all 0.2s; }
-    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
-    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
-    .nav-link.primary:hover { background: var(--brown); border-color: var(--brown); }
-    .run-nav-center { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-heading); font-weight: 500; }
 
     header { padding: 32px 0 24px; background: var(--bg-page); }
     header h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; font-weight: 400; color: var(--text-heading); letter-spacing: -1px; }
@@ -189,46 +232,36 @@
     .startup-card:nth-child(4) { animation-delay: 0.15s; }
     .startup-card:nth-child(5) { animation-delay: 0.2s; }
 
-    .followup-btn {
+    .followup-btn, .archive-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--brown);
       font-family: 'DM Mono', monospace;
       font-size: 0.68rem;
       font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 100px;
-      border: 1px solid var(--border-strong);
-      background: none;
-      color: var(--text-muted);
       cursor: pointer;
+      padding: 4px 10px;
+      text-decoration: none;
       transition: all 0.2s;
     }
-    .followup-btn:hover { border-color: var(--coral); color: var(--coral); }
+    .followup-btn:hover, .archive-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown-dark);
+    }
     .followup-btn.active {
-      background: var(--coral-light);
-      border-color: var(--coral);
-      color: var(--coral);
+      background: var(--amber-light);
+      border-color: var(--amber);
+      color: var(--amber);
+      font-weight: 600;
+    }
+    .archive-btn.active {
+      background: var(--text-heading);
+      border-color: var(--text-heading);
+      color: #fff;
       font-weight: 600;
     }
     .startup-card.followup { border-left: 3px solid var(--coral); }
-
-    .archive-btn {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 100px;
-      border: 1px solid var(--border-strong);
-      background: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .archive-btn:hover { border-color: var(--brown); color: var(--brown); }
-    .archive-btn.active {
-      background: var(--brown-light);
-      border-color: var(--border-strong);
-      color: var(--text-muted);
-      font-weight: 600;
-    }
     .startup-card.archived { opacity: 0.4; border-left: 3px solid var(--border-strong) !important; }
     .startup-card.archived:hover { opacity: 0.75; }
     .date-divider { display: flex; align-items: center; gap: 18px; margin: 36px 0 22px; }
@@ -280,13 +313,16 @@
 </head>
 <body>
 
-<nav class="run-nav">
+<nav class="site-nav">
   <div class="container">
-    <div class="run-nav-left">
-      <a class="nav-link" href="index.html">← All runs</a>
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="index.html">Radar</a>
+      <a class="site-nav-link active" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <a class="site-nav-link" href="archive.html">Archive</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
     </div>
-    <div class="run-nav-center">Full Pipeline</div>
-    <div class="run-nav-right"><a class="nav-link" href="archive.html">↓ Archive</a></div>
   </div>
 </nav>
 
