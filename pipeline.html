@@ -1,1 +1,88 @@
-FILE_TOO_LARGE_PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Full Pipeline</title>
+<meta content="All 65 startups tracked across all agentic AI radar runs, with filtering and collaborative voting." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .run-nav { background: var(--bg-page); border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+    .stats-bar { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 45px; z-index: 99; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+    .stats-bar .container { display: flex; align-items: stretch; justify-content: center; gap: 0; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 120px; padding: 2px 20px; text-align: center; border-right: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Instrument Serif', serif; font-size: 1.9rem; font-weight: 400; line-height: 1; color: var(--text-heading); }
+    .stat-num.reviewed { color: var(--accent-dark); }
+    .stat-num.rejected { color: var(--text-muted); }
+    .stat-num.followup { color: var(--coral); }
+    .stat-label { font-family: 'DM Mono', monospace; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 500; }
+    @media (max-width: 640px) { .stats-bar { padding: 10px 0; } .stat-item { padding: 2px 8px; min-width: 80px; } .stat-num { font-size: 1.4rem; } .stat-label { font-size: 0.58rem; } }
+    .run-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .run-nav-left, .run-nav-right { display: flex; gap: 12px; }
+    .nav-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500; color: var(--text-muted); text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; transition: all 0.2s; }
+    .nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .nav-link.primary { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .nav-link.primary:hover { background: var(--brown); border-color: var(--brown); }
+    .run-nav-center { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-heading); font-weight: 500; }
+
+    header { padding: 32px 0 24px; background: var(--bg-page); }
+    header h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; font-weight: 400; color: var(--text-heading); letter-spacing: -1px; }
+
+    section { padding: 44px 0; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .section-header h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.8rem; font-weight: 400; color: var(--text-heading); letter-spacing: -0.5px; }
+    .section-header .count { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 500; color: var(--text-light); text-transform: uppercase; letter-spacing: 1.5px; }
+
+    .filter-bar { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+    .filter-btn { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 100px; background: none; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover { border-color: var(--brown); background: var(--brown-light); }
+    .filter-btn.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    
+    TABLE_PLACEHOLDER
