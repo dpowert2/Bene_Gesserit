@@ -318,6 +318,23 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Human-initiated</span>
+  </div>
+  <div class="entry-title">Phase 0 coverage audit added to bg-full-cycle pipeline</div>
+  <div class="entry-body">
+    <p>New Phase 0 runs at the start of every cycle before any other work. It compares the thesis gap map against the actual pipeline, counting companies per category. Any category with fewer than 3 companies is flagged as "structurally underrepresented" and automatically elevated to critical scan priority. Any category with 0 companies is flagged as a "blind spot" and receives mandatory search allocation.</p>
+    <p>This prevents the system from endlessly deepening coverage in categories it already knows about while ignoring categories it has never searched &mdash; the structural failure that caused the platform infrastructure exposure bias.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    The v3.0 rebalance revealed that 9 of 11 specialist agent types from the thesis had zero pipeline companies, zero search terms, and zero scoring signals. Exposure normalisation and thesis anchoring catch scoring and preference drift, but neither catches the upstream problem: categories that were never searched in the first place. Phase 0 closes this gap.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="thesis">
   <div class="entry-header">
     <span class="entry-date">2026-04-15</span>
