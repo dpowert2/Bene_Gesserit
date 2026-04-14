@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Changelog</title>
+<meta content="Every substantive change the system makes to the thesis, preferences, and search terms." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #F0EBE3;
+  --bg-page: #F7F4EF;
+  --bg-card: #FFFFFF;
+  --border: #E2DDD5;
+  --border-strong: #D4CEC4;
+  --text: #3D3A36;
+  --text-heading: #1A1816;
+  --text-muted: #8C857B;
+  --text-light: #A9A29A;
+  --accent: #6B8F71;
+  --accent-light: #E8F0E9;
+  --accent-dark: #4A6B4F;
+  --brown: #8B6F54;
+  --brown-light: #F3EDE7;
+  --coral: #C4716E;
+  --coral-light: #F8EDEC;
+  --blue: #6B849A;
+  --blue-light: #ECF0F4;
+  --amber: #B8944A;
+  --amber-light: #F6F0E2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg-page);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ──────────────────────── */
+header {
+  padding: 60px 0 32px;
+  background: var(--bg-page);
+}
+
+header h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  letter-spacing: -1.2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+header .description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 8px;
+  max-width: 600px;
+  line-height: 1.55;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 24px;
+  transition: all 0.2s;
+}
+.back-link:hover { border-color: var(--brown); color: var(--brown); }
+
+/* ── Filter bar ──────────────────── */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.filter-btn:hover { border-color: var(--brown); color: var(--brown); }
+.filter-btn.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+
+/* ── Changelog entries ───────────── */
+.changelog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.changelog-entry {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: border-color 0.2s;
+}
+.changelog-entry:hover { border-color: var(--border-strong); }
+
+.entry-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.entry-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-heading);
+  letter-spacing: 0.5px;
+}
+
+.entry-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-thesis { background: var(--accent-light); color: var(--accent-dark); }
+.badge-preferences { background: var(--blue-light); color: var(--blue); }
+.badge-search-terms { background: var(--amber-light); color: var(--amber); }
+.badge-scoring { background: var(--coral-light); color: var(--coral); }
+.badge-system { background: var(--brown-light); color: var(--brown); }
+
+.entry-source {
+  margin-left: auto;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.entry-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.entry-body {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.entry-body p { margin-bottom: 8px; }
+.entry-body p:last-child { margin-bottom: 0; }
+
+.entry-evidence {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: var(--bg-page);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.entry-evidence .evidence-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+/* ── Empty state ─────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+}
+.empty-state h3 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+}
+
+/* ── Footer ──────────────────────── */
+footer {
+  margin-top: 64px;
+  padding: 32px 0 48px;
+  text-align: center;
+}
+footer p {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+/* ── Responsive ──────────────────── */
+@media (max-width: 640px) {
+  header h1 { font-size: 2.2rem; }
+  .changelog-entry { padding: 18px 20px; }
+  .entry-source { margin-left: 0; margin-top: 4px; }
+  .entry-header { gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to Radar</a>
+    <h1>Changelog</h1>
+    <p class="description">Every substantive change the system makes to the thesis, preferences, and search terms — so you can see what shifted and intervene if needed.</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="thesis">Thesis</button>
+      <button class="filter-btn" data-filter="preferences">Preferences</button>
+      <button class="filter-btn" data-filter="search-terms">Search Terms</button>
+      <button class="filter-btn" data-filter="scoring">Scoring</button>
+    </div>
+
+    <div class="changelog-list">
+<!-- ═══ CHANGELOG ENTRIES START ═══ -->
+<!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Automated</span>
+  </div>
+  <div class="entry-title">Changelog initialised</div>
+  <div class="entry-body">
+    <p>This page now tracks all substantive changes made by the bg-full-cycle pipeline. Each cycle will log what changed in the thesis, preferences, search terms, and scoring weights — along with the evidence that triggered the change and whether it was human-initiated or system-derived.</p>
+  </div>
+</div>
+
+<!-- ═══ CHANGELOG ENTRIES END ═══ -->
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>Bene Gesserit</strong> — Changelog</p>
+    <p>Changes are logged automatically by the bg-full-cycle pipeline.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const entries = document.querySelectorAll('.changelog-entry');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      entries.forEach(entry => {
+        if (filter === 'all' || entry.dataset.type === filter) {
+          entry.style.display = '';
+        } else {
+          entry.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
