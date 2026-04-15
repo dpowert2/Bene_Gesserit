@@ -4,46 +4,101 @@ A "near miss" is a startup that scored above 60 on the relevance model but recei
 
 ---
 
-## 2026-03-15 — First Preference Learning Cycle
+## Summary Statistics
+
+| Cycle | New Near Misses | Total | Dominant Root Cause |
+|---|---|---|---|
+| 2026-03-15 | 2 | 2 | Sub-domain mismatch |
+| 2026-04-05 | 0 | 2 | — |
+| 2026-04-12 | 0 | 2 | — |
+| **2026-04-14** | **22** | **24** | **Internal workflow blind spot (14/22)** |
+
+---
+
+## 2026-04-14 — Sixth Preference Learning Cycle (MAJOR UPDATE)
+
+45 new votes processed. 22 new near-misses identified (score > 60, stars ≤ 2). This is the single largest blind-spot detection event in system history. The dominant failure mode is clear: **the model scores based on gap category without detecting the internal/external boundary**.
+
+### Root Cause Analysis
+
+| Root Cause | Count | Companies | Action Taken |
+|---|---|---|---|
+| Internal Workflow / Back-Office | 14 | appzen, haast, lyzr, obin-ai, basis, pace, lema-ai, kaaj, meridian-ai, numos, galdera, interloom, sycamore, opencfo | **HARD FILTER created** (–50 points) |
+| Wrong Stage (Series B+ / Over-Funded) | 2 | linx-security (94→2★), armadin (68→2★) | **Soft factor created** (–15 points) |
+| Wrong Sub-Domain (Tax/KYC/IT) | 4 | juno (76→2★), vivox-ai (74→2★), novee (72→1★), mindgard (82→2★) | Tax filing penalty confirmed; KYC/AML penalty elevated; AI-vs-agent signal created |
+| Internal Security (Not Innovation) | 1 | armorcode (66→2★) | Covered by internal workflow + AI-vs-agent signals |
+| Unclear (no note) | 1 | goodfire (77→2★) | Likely AI-vs-agent (interpretability company) |
+
+### High-Score Near Misses (Most Informative)
+
+#### Linx-Security — Score 94, Stars 2★
+- **Note:** "Just too late at series B"
+- **Root cause:** Stage mismatch. This is the highest-scoring near-miss in system history. The model gave near-perfect score (94/100) to a company that was rejected purely on stage grounds. The product was presumably thesis-aligned but the company is too mature.
+- **Scoring fix:** The –15 stage penalty for Series B+ would reduce this to 79, still high but no longer a top-tier recommendation. Consider whether stage should carry even more weight.
+
+#### Obin-AI — Score 82, Stars 1★
+- **Note:** "Internal pipelines. Again, not what I'm looking for."
+- **Root cause:** Internal workflow. Previously tracked as an emerging signal in preferences.md ("institution-native agentic workforce framing"). The 1★ vote decisively resolves this: inside-the-institution deployment is NOT thesis-aligned regardless of how it's framed.
+- **Previous prediction:** Preferences.md asked "Does Obin AI vote as an infrastructure-layer candidate (4–5★) or as an application candidate (3★ or below)?" Answer: 1★. The institution-native framing was a negative, not a positive.
+
+#### Mindgard — Score 82, Stars 2★
+- **Note:** "AI, not agents"
+- **Root cause:** AI-vs-agent confusion. The model scored this AI red-teaming company highly because it sits in the AI Safety & Guardrails gap. But Dave's distinction is precise: the thesis is about AGENT security, not AI/model security. Two-word note, crystal clear signal.
+
+#### Sycamore — Score 65, Stars 1★
+- **Note:** "Looks like more internal workflow stuff."
+- **Root cause:** Internal workflow. Previously tracked as a competitive threat ("trusted agent OS" absorbing the governance layer). Dave doesn't see it as a competitive threat at all — he sees it as internal workflow tooling. The competitive threat from preferences.md is now resolved as a non-issue.
+
+#### Haast — Score 80, Stars 1★
+- **Note:** "Internal workflow nonsense"
+- **Root cause:** Internal workflow. Strong language ("nonsense") confirms depth of rejection.
+
+#### Lyzr — Score 80, Stars 2★
+- **Note:** "Internal workflows again"
+- **Root cause:** Internal workflow. The word "again" signals frustration with repeated internal workflow companies in the pipeline.
+
+#### Basis — Score 79, Stars 1★
+- **Note:** "raised too much and for accounting firms. This is not who we serve and it is not useful to who we serve."
+- **Root cause:** Dual failure — accounting firm focus (Hard Filter #2) + over-funded. "This is not who we serve" is an important framing: the thesis serves end investors through an agent marketplace, not accounting firms.
+
+#### Lema-AI — Score 78, Stars 1★
+- **Note:** "wrong kind of risk. I'm looking for solutions that mitigate risk of third party agents."
+- **Root cause:** Internal vs external risk. This note is THE most precisely stated preference in the entire corpus. Dave is not looking for enterprise risk management tools. He is looking for tools that protect AGAINST risks posed by third-party agents.
+
+#### Juno — Score 76, Stars 2★
+- **Note:** "I'm not looking for tax compliance so much as tax efficiencies. Agents that can help investors with clever tax strategies."
+- **Root cause:** Tax sub-domain mismatch. Confirms the penalty extends to CPA-firm tax preparation, not just consumer e-filing. Draws the line clearly: "compliance" vs "efficiencies."
+
+---
+
+## 2026-03-15 — First Preference Learning Cycle (Original Near Misses)
 
 ### Near Miss #1: Stacks
 
 - **Score:** 82 | **Gap:** Agent Orchestration | **Stage:** Series A ($23M) | **Geography:** Europe
 - **Vote:** 2★ | **Note:** "Not really looking for accounting services. This is too small."
-- **Score breakdown:** High gap_fit (Agent Orchestration), reasonable stage_match (Series A), Europe geography. Model awarded 82/100 based on category label alone.
-- **What the model got wrong:** Classified Stacks as a strong Agent Orchestration match without detecting that its primary product is *accounting automation* — bookkeeping and accounts payable workflows — rather than financial services agentic infrastructure. The orchestration category is too broadly defined; the model cannot yet distinguish finserv agentic workflow tooling from generic business automation.
-- **Missing dimension:** Sub-domain qualifier within Agent Orchestration. The preferred sub-domain is "finserv agentic workflow infrastructure" (orchestrating agents operating on financial data, compliance decisions, customer interactions). The dispreferred sub-domain is "accounting/bookkeeping automation" (automating repetitive finance back-office tasks with no agent identity or trust layer).
-- **Secondary signal:** "This is too small" suggests that company scale/traction may be a secondary qualifier. Stacks at Series A $23M may be below the minimum threshold of interest. Cannot isolate from the product-type signal with only 1 data point — tracking separately.
-- **Blind spot type:** Intra-category sub-domain mismatch — Agent Orchestration (Occurrence 1 of 3 needed to propose soft factor)
-
----
+- **Root cause:** Intra-category sub-domain mismatch (accounting automation ≠ agent orchestration) + now subsumed by Hard Filter #2 (accounting/bookkeeping).
 
 ### Near Miss #2: TaxDown
 
 - **Score:** 78 | **Gap:** Tax Optimisation | **Stage:** Seed (€4M, BBVA Spark) | **Geography:** Spain / Europe
-- **Vote:** 2★ | **Note:** "Not really interested in EU tax products or tax filing. Looking for intelligent tax systems that uncover benefits as you update your portfolio."
-- **Score breakdown:** High gap_fit (Tax Optimisation), finserv_readiness boosted by BBVA backing, Seed stage. Model awarded 78/100 on category and institutional backing alone.
-- **What the model got wrong:** Treated all tax-related AI products as equivalent within the Tax Optimisation gap. TaxDown is a *tax filing* tool (helping individuals and businesses submit tax returns digitally using AI) — not a portfolio-integrated tax intelligence product. The preference is explicitly for tools that sit inside investment portfolio workflows and surface tax-advantaged decisions dynamically as holdings change.
-- **Missing dimension:** Product type specificity within Tax Optimisation. The preferred sub-domain is "portfolio-integrated tax intelligence" (tools that operate on a live portfolio and surface tax-optimised decisions: loss harvesting, gain deferral, rebalancing sequencing). The dispreferred sub-domain is "tax filing / e-filing" (tools that automate or improve the annual/quarterly tax return submission process).
-- **Secondary signal:** "EU tax products" were also flagged — EU geographic focus may be a mild negative for Tax Optimisation specifically (US/international portfolio tax tools more relevant to thesis). Only 1 data point — tracking.
-- **Blind spot type:** Intra-category sub-domain mismatch — Tax Optimisation (Occurrence 1 of 3 needed to propose soft factor)
+- **Vote:** 2★ | **Note:** "Not really interested in EU tax products or tax filing."
+- **Root cause:** Tax filing sub-domain mismatch. Now confirmed and strengthened by Juno 2★.
 
 ---
 
 ## Blind Spot Tracker
 
-| Blind Spot | Occurrences | Status | Threshold to Propose Soft Factor |
+| Blind Spot | Occurrences | Status | Action |
 |---|---|---|---|
-| Intra-category sub-domain mismatch — Agent Orchestration (accounting automation) | 1 | Tracking | 3 occurrences |
-| Intra-category sub-domain mismatch — Tax Optimisation (tax filing) | 1 | Tracking | 3 occurrences |
-| Company scale below interest threshold | 1 | Tracking | 3 occurrences |
+| Internal workflow / back-office tools | 16 | **HARD FILTER ACTIVE** | –50 points, auto-archive |
+| Accounting / bookkeeping / CFO tools | 5 | **HARD FILTER ACTIVE** | –50 points, auto-archive |
+| Tax filing / tax compliance | 3 (TaxDown, Juno, + thesis statement) | **Soft factor active** | –20 points |
+| KYC/AML compliance | 2 (bretton-ai 3★, vivox-ai 2★) | **Soft factor active** | –15 points |
+| Series B+ / over-funded | 4 (linx-security, april, armadin, basis) | **Soft factor active** | –15 points |
+| AI-level (not agent-level) security | 3 (mindgard, goodfire, armorcode) | **Soft factor active** | –15 points |
+| Non-finserv focus | 2 (certivo, novee) | Tracking | –10 points (emerging) |
+| Company scale below interest threshold | 1 (stacks) | Tracking | Needs more data |
+| Geography (SF specifically negative) | 1 (onyx-security) | Tracking | Needs more data |
 
-*Once any blind spot reaches 3 occurrences, a formal soft factor will be proposed in the next learning cycle with: name, condition, initial value, and supporting evidence.*
-
----
-
-## 2026-04-05 — Fourth Preference Learning Cycle
-
-No new near misses identified. No new votes were cast between the 2026-03-29 cycle and today. The two existing near misses (Stacks, TaxDown) remain the only entries and their blind spot counts remain at 1 each — no soft factor proposals triggered this cycle.
-
-**Stale-data note:** With 53 of 61 pipeline companies unvoted (87%), the near-miss tracker cannot expand until additional votes are cast. The most likely next near-miss candidates are companies in the Agent Orchestration gap (where the sub-domain mismatch blind spot is active) or Compliance gap (where the KYC/AML neutral signal may surface as a near-miss if a high-scoring KYC-focused company receives a 2★ vote). Priority votes that could resolve or extend existing blind spots: Sycamore (Agent Orchestration — would test whether "trusted OS" positioning avoids the sub-domain mismatch pattern), Steward (Compliance — would test whether institutional AML/KYC scores differently from generic KYC).
+*Once any tracking blind spot reaches 3 occurrences, it will be elevated to a formal soft factor.*
