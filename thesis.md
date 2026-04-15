@@ -1,6 +1,6 @@
 # Bene Gesserit — Living Investment Thesis
 
-*Last updated: 2026-04-15 | Version: 3.0 — scouting rebalanced from platform infrastructure toward specialist agents*
+*Last updated: 2026-04-15 | Version: 3.3 — S1 validated, Overmind archived, Dispute Resolution partially addressed*
 
 ---
 
@@ -109,7 +109,7 @@ Fidelity needs compliance-native technology. European startups build that way by
 | Behavioural Coaching | Not scouted | ⚪ MONITOR | Emerging category — fewer startups expected |
 | Post-Trade Analysis & Learning | Not scouted | ⚪ MONITOR | Feedback loop — fewer startups expected |
 | Agent Auth & Security | 🔴 CRITICAL | 🟠 MEDIUM | Strong candidates exist (Keycard, Resistant AI, etc.) |
-| AI Safety & Guardrails | 🟡 HIGH | 🟠 MEDIUM | Strong candidate (Overmind). Box ticked. |
+| AI Safety & Guardrails | 🟡 HIGH | 🟡 HIGH | Overmind declined participation (2026-04-15). Gap reopened. Manifold, Kai remain but gap needs new lead candidate. |
 | Agent Orchestration | 🟠 MEDIUM | ⚪ MONITOR | POC partner (Jentic). Covered. |
 | Pre-Trade Compliance | 🔴 CRITICAL | 🟡 HIGH | Still a genuine gap but narrower scope |
 
@@ -123,7 +123,7 @@ Every function a brokerage performs today — onboarding, compliance, trading, c
 
 | Agent Type | Investment Stage | What It Does | Status |
 |-----------|-----------------|-------------|--------|
-| Research & Signal Intelligence | Stages 1, 2, 3 | Alternative data, earnings analysis, sentiment, institutional flow tracking | ❌ **Not scouted — highest priority** |
+| Research & Signal Intelligence | Stages 1, 2, 3 | Alternative data, earnings analysis, sentiment, institutional flow tracking | ✅ **3 candidates — AgentSmyth 5★, Serafis 5★, Kimpton AI 5★** |
 | Portfolio Construction & Risk | Stages 4, 5, 11 | Concentration, factor exposure, scenario analysis, position sizing, rebalancing | ❌ **Not scouted — highest priority** |
 | Trade Structuring | Stage 6 | Equity vs options vs pairs, account selection across taxable/IRA/Roth | ❌ **Not scouted** |
 | Tax Optimisation | Stage 7 | Lot-level TLH, gain deferral, asset location, wash sale prevention | ⚠️ Scouting — Alomana 5★ first confirmed match |
@@ -140,11 +140,11 @@ Every function a brokerage performs today — onboarding, compliance, trading, c
 | Layer | What It Does | Status |
 |-------|-------------|--------|
 | Agent Orchestration | Route, schedule, govern multi-agent workflows | ✅ Jentic (POC partner) |
-| AI Safety & Guardrails | Supervise agent behaviour, enforce boundaries | ✅ Overmind (strong candidate) |
+| AI Safety & Guardrails | Supervise agent behaviour, enforce boundaries | ⚠️ Overmind declined participation — gap reopened. Manifold 5★, Kai 4★ remain |
 | Agent Authentication & Identity | KYA — permissions, secrets, identity delegation | ⚠️ Multiple candidates (Keycard, Resistant AI, Vouched) |
 | Pre-Trade Compliance | Suitability, concentration, restricted lists, best execution | ❌ Genuine gap (Hadrius closest) |
 | Audit & Explainability | Auditable agent reasoning for regulators | ❌ Gap (ValidMind closest) |
-| Dispute Resolution & Liability | Insurance, certification, accountability | ❌ Gap (Armilla, AIUC embryonic) |
+| Dispute Resolution & Liability | Insurance, certification, accountability | ⚠️ Partially addressed — Mount 5★ ("Reduces risk — excellent"), Klaimee 4★ |
 | Agent Payment Rails | Agent-initiated financial transactions | ⚠️ Emerging (Nava, Natural, Crossmint) |
 | Agent Monetisation | Results-based billing for agent services | ✅ Paid AI (pattern signal) |
 
@@ -153,8 +153,8 @@ Every function a brokerage performs today — onboarding, compliance, trading, c
 **1. Agent Orchestration & Workflow** ✅ POC Partner
 Jentic (Dublin, pre-seed $4.5M). Arazzo workflows, agentic sandboxes, centralised credentials, governed execution. Governance-native architecture. BG Score: 95.
 
-**2. AI Safety & Guardrails** ✅ Strong Candidate
-Overmind (London, seed €2.3M). Ex-MI5 founder. AI agent supervision for regulated industries. Fintech explicit target. BG Score: 100.
+**2. AI Safety & Guardrails** ⚠️ Gap Reopened
+Overmind (London, seed €2.3M). Ex-MI5 founder. AI agent supervision for regulated industries. Fintech explicit target. BG Score: 100. **STATUS: Archived — "They aren't interested in participating." (2026-04-15).** Manifold (5★, "Similar to Geordie") and Kai (4★) remain as candidates but neither is as strong. Scouting priority re-elevated to HIGH.
 
 **3. Compliance — Customer Operations** ✅ Reference Architecture
 Gradient Labs (London, Series A $13M). SOP-following agents in regulated banking. Deployed at a major UK bank, 98% CSAT. LHV Bank POC signed. The architectural pattern — procedure-based, auditable, deterministic — is the template for how agents should behave inside the walled garden. BG Score: 82.
@@ -323,5 +323,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 3.0 | 2026-04-15 | Exposure bias correction — scouting rebalanced | Platform infrastructure (Auth, Safety, Orchestration) downgraded from CRITICAL to MEDIUM/MONITOR — strong candidates exist. 9 specialist agent categories added to scouting: Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution Quality, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis. These are the agents that make the app store worth using — the unscouted frontier. |
 | 3.1 | 2026-04-15 | 3 new votes (nava 5★, vouched 5★, alomana 5★) — all scout finds validated | Tax Optimisation gap partially resolved: Alomana 5★ confirms portfolio-integrated tax intelligence is thesis-aligned. Agent Payment Rails strengthened: Nava 5★ (2nd upvote in category). Coverage audit reveals 12/20 thesis categories have 0 pipeline companies. Specialist agent scouting now mandatory. |
 | 3.2 | 2026-04-15 | European geographic rebalance | Pipeline was 61% US vs 24% EU despite thesis stating "Europe preferred". ~30 European-focused and multilingual search queries added (German, French, Spanish). European accelerators/VCs added to monitoring (Forge, EQT, Seedcamp, Earlybird, Ada Ventures). European regulator monitoring expanded (BaFin, ESMA, DORA-native, PSD3/FiDA). Geography scoring bonus added: +5 points for European HQ. US not excluded — just ensuring Europe is properly represented in pipeline. |
+| 3.3 | 2026-04-15 | Specialist agent thesis validated + Overmind archived | Research & Signal Intelligence (S1) validated: 3/3 upvotes (agentsmyth 5★, serafis 5★, kimpton-ai 5★). Dispute Resolution partially resolved (mount 5★, klaimee 4★). AI Safety gap REOPENED: Overmind archived ("They aren't interested in participating"). AI Safety scouting re-elevated from MEDIUM to HIGH. "Agent exposure" preference emerging: Dave wants companies to expose intelligence as agent-callable APIs. European search reinforced by serafis note. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
