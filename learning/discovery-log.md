@@ -161,6 +161,163 @@ The expanded search terms dramatically improved coverage:
 
 ---
 
+## Preference Learning — 2026-04-12
+Total votes: 8 (4 up, 2 down, 2 neutral) | New near misses: 0 | New soft factors: none (sub-domain blind spot at 1 occurrence each; threshold is 3; Compliance dual-failure-mode pattern identified but unconfirmed) | Weight changes: none (8 votes; threshold is 50) | Key insight: Zero new votes for the fifth consecutive learning cycle — the pipeline has expanded to 86 companies across 12 gap categories while the vote corpus remains frozen at 8; the Compliance gap's dual neutral pattern (Bretton AI: wrong sub-domain; Sphinx: undifferentiated execution) reveals two distinct failure modes requiring different corrective signals, and Juno's entry into Tax Optimisation creates the first natural test of the tax filing penalty's scope | Confidence: low
+
+---
+
+## 2026-04-14 — Full Cycle (Phases 1–6)
+
+### Run Context
+First full end-to-end cycle since system launch. Dave cast 45 votes in a single session, ending five consecutive data-starved cycles. Vote corpus jumped from 8 to 53. Preference model rebuilt from the ground up. All 6 phases executed: LEARN → STRATEGISE → ARM → SCOUT → PUBLISH → REPORT.
+
+### Phase 1: LEARN
+- 45 new votes processed (8 → 53 total)
+- 17 upvotes (4–5★): keycard, resistant-ai, manifold, complyance, ralio (all 5★); unique-ai, natural, bank-of-bots, norm-ai, aether-datahub, venice-security, imper-ai (4★)
+- 28 downvotes (1–2★): 16 explicitly rejected as "internal workflow"
+- 22 new near-misses (score > 60, stars ≤ 2) — highest ever
+- 2 new Hard Filters created: Internal Workflow (–50pts), Accounting/CFO (–50pts)
+- 7 new soft factors: Series B+ (–15pts), AI-not-agents (–15pts), KYC/AML (–15pts), Non-finserv (–10pts)
+- 12 companies flagged for followup
+
+### Phase 2: STRATEGISE
+- Thesis updated v2.0 → v2.1
+- Learned Preferences section rebuilt from 53 votes
+- Sycamore competitive threat resolved (1★ — "internal workflow stuff")
+- AI safety commoditisation added as challenge signal
+- Key insight: Internal/external boundary is THE primary scoring dimension (16/28 downvotes cite it)
+
+### Phase 3: ARM
+- Search terms updated v1 → v2
+- "External/third-party agent" qualifiers added across all categories
+- Stage qualifiers (seed/Series A) added to most searches
+- Category 5 shifted from "AI safety" to "agentic security" vocabulary
+- CRITICAL negative filters added to Category 4 (Orchestration) — produced 6+ false positives in vote data
+
+### Phase 4: SCOUT — 4 New Companies
+1. **Nava** (Score 85) — Escrow + intent verification + dispute resolution for AI agent transactions. Seed $8.3M (Polychain, Archetype). Gap: Agent Payment Rails.
+2. **Vouched** (Score 83) — Know Your Agent (KYA) identity platform with MCP-Identity. Series A $17M. Gap: Agent Authentication & Identity.
+3. **Trent AI** (Score 78) — Multi-agent security via specialised security agents. Seed €11M (LocalGlobe). Gap: AI Safety & Guardrails.
+4. **Alomana** (Score 72) — Autonomous portfolio rebalancing + tax-loss harvesting. Seed €4M. Gap: Tax Optimisation. HIGH UNCERTAINTY on internal/external boundary.
+
+### Competitive Intelligence
+- OpenAI acquires Hiro Finance — first frontier model provider M&A in finserv AI
+- Ralio additional £1.8M pre-seed (total £2.5M+) for agent payment rails
+- Geordie AI wins RSAC 2026 Innovation Sandbox as "Most Innovative Startup"
+
+### Thesis Drift Observations
+1. Internal/external boundary is now THE primary scoring dimension (16/28 downvotes)
+2. Trust infrastructure thesis stronger than ever — Agent Auth (100%) and AI Safety (100%) upvote rates
+3. Compliance gap resolved — Complyance 5★ proves differentiated compliance is thesis-aligned
+4. Stage filter crystallised — Series B = "too late"; Seed to early Series A only
+5. AI ≠ Agents is critical — model-level safety companies fail even in the right gap
+6. Tax Optimisation remains unfilled — Alomana is first potential match but internal/external risk high
+
+### Pipeline State
+- Previous: ~81 companies
+- Added: 4 (nava, trent-ai, vouched, alomana) + 2 from morning radar (ralio, basis)
+- Current: ~85 companies tracked
+- Voted: 53/85 (62%) — up from 9% pre-cycle
+
+### What I Learned This Cycle
+The most important insight is that Dave's thesis is far more precisely defined than the model previously captured. The overwhelming signal from 45 votes is a single, decisive dimension: external vs. internal. Sixteen companies were rejected explicitly as internal workflow tools — not because they were bad companies, but because they don't build infrastructure for THIRD-PARTY agents in a regulated marketplace. The trust infrastructure gaps (Agent Auth, AI Safety) maintain 100% upvote rates across 11 total votes with zero exceptions. The scoring model's biggest blind spot — failing to detect the internal/external boundary — has been corrected with a Hard Filter. The second insight is that stage matters more than previously modelled: Series B = "too late" (Linx-Security 94 score → 2★). The third insight is that "AI safety" and "agent safety" are categorically different things in Dave's framework — Mindgard's 2★ with the two-word note "AI, not agents" is the most economical preference statement in the corpus. This cycle transforms the system from a broad scanner into a precision instrument calibrated to Dave's actual investment thesis.
+
+---
+
+## 2026-04-15 — Full Cycle #2 (Phases 0–6)
+
+### Run Context
+Second full end-to-end cycle. First cycle to include Phase 0 (Coverage Audit). 3 new votes processed (nava 5★, vouched 5★, alomana 5★). 5 new companies scouted — first specialist agent companies in the pipeline. Specialist agent vs infrastructure split: 60% specialist agents (3/5), 40% infrastructure (2/5).
+
+### Phase 0: Coverage Audit
+- **12 out of 20 thesis gap categories have ZERO pipeline companies**
+- All 9 specialist agent categories (S1–S9) have zero coverage — confirmed as blind spots
+- Platform infrastructure blind spots: Audit & Explainability (0), Dispute Resolution & Liability (0), Agent Monetisation (0)
+- Agent Payment Rails underrepresented (1 company)
+- Well-covered: Orchestration (14), Safety (14), Compliance (14), Auth (11)
+- Mandatory scan overrides applied to all blind spots
+- Phase 0 effectiveness this cycle: S1 gained 3 companies (from 0→3). Dispute Resolution gained 2 (from 0→2). Remaining blind spots (S2–S9, Audit, Monetisation) produced no thesis-matching results — deeper or different search strategies needed.
+
+### Phase 1: LEARN
+- 3 new votes processed (53 → 56 total)
+- 19 upvotes, 8 neutral, 29 downvotes
+- New votes: nava 5★ (Agent Payment Rails), vouched 5★ (Agent Auth/KYA), alomana 5★ (Tax Optimisation)
+- All 3 are companies found in the previous cycle's Phase 4 scout — 75% of scout finds voted, 100% positive
+- Agent Payment Rails bonus strengthened (+10→+12)
+- Tax Optimisation gap partially resolved — alomana 5★ confirms portfolio-integrated tax intelligence is thesis-aligned
+- Exposure-normalised metrics: Agent Auth hit rate 64%, AI Safety 43%, Compliance 14%, Orchestration 7%
+- No new near-misses (all 3 votes are 5★)
+
+### Phase 2: STRATEGISE
+- Thesis v3.0 → v3.1
+- Tax Optimisation status updated: "Alomana 5★ first confirmed match"
+- Vote count updated to 56
+- No structural thesis changes — v3.0 rebalance still correct
+
+### Phase 3: ARM
+- Search terms v3 confirmed (just created yesterday)
+- Minor addition: 2 new queries added to Agent Payment Rails (agent escrow, agent dispute)
+- ~252 queries total across 21 categories + 2 tracks
+
+### Phase 4: SCOUT — 5 New Companies
+1. **AgentSmyth** (Score 88) — S1: Research & Signal Intelligence. Seed $8.7M ($11.2M total). FinTech Collective, Thomson Reuters, BNY (Ascent). 48 institutional customers. 5 autonomous specialist agents (macro, sentiment, quant, options, earnings). NYC. FIRST ENTRY IN S1.
+2. **Serafis** (Score 85) — S1: Research & Signal Intelligence. YC. Mining unstructured data for narrative inflections. 5+ orgs, $40B+ AUM. Ex-Ribbit Capital Head of Data. SF. SECOND ENTRY IN S1.
+3. **Kimpton AI** (Score 80) — S1: Research & Signal Intelligence. YC P26. AI-native investment research. 120K+ assets. Ex-Goldman Sachs quant fund operators. SF. THIRD ENTRY IN S1.
+4. **Mount** (Score 78) — Dispute Resolution & Agent Liability. "Insurer for the Agent Economy." Agent risk evaluation, ADR certifications. FIRST NEW ENTRY IN DISPUTE RESOLUTION.
+5. **Klaimee** (Score 72) — Dispute Resolution & Agent Liability. Agent certification + AI-native liability coverage. Self-serve. SECOND ENTRY IN DISPUTE RESOLUTION.
+
+### Competitive Intelligence
+- eToro Agent Portfolios now live — scoped API keys, BYOA model, $200 minimum
+- Public.com Agents rolling out since March 31 — "world's first Agentic Brokerage"
+- AIUC emerged from stealth with $15M seed (Nat Friedman) — agent insurance standards (AIUC-1), audits, liability coverage. Predicts $500B market by 2030.
+- OpenAI acquired Hiro Finance — first frontier model provider M&A in finserv AI
+- European VC: Q1 2026 $17.6B (up 30% YoY), AI claimed 50%+ of Europe's total funding for first time
+
+### Specialist Agent vs Infrastructure Split
+- New companies this cycle: 3 specialist agents (60%), 2 infrastructure (40%)
+- Cumulative pipeline: specialist agents still dramatically underrepresented (3 in S1 vs 14+ in each infrastructure category)
+- The specialist agent scouting challenge is real: most startups building investment intelligence sell to institutions (internal workflow risk). The S1 candidates found this cycle all serve institutional customers directly — marketplace fit needs validation through votes.
+
+### Phase 0 Effectiveness
+- S1 (Research & Signal Intelligence): MANDATORY scan override → 3 companies found ✅
+- Dispute Resolution & Liability: MANDATORY scan override → 2 companies found ✅
+- S2 (Portfolio Construction & Risk): Searched but no thesis-matching results ❌
+- S3–S9: Searched but no thesis-matching startups found at Seed/Series A ❌
+- Audit & Explainability: Searched but no dedicated startups found ❌
+- Agent Monetisation: No new entries ❌
+- **Conclusion:** Phase 0 overrides produced results where startups exist (S1, Dispute Resolution). Categories producing zero results may reflect genuine market gaps (fewer startups at this stage) rather than search term failures. Next cycle should try alternative search strategies for S2–S9.
+
+### Thesis Drift Observations
+1. Internal/external boundary remains THE decisive dimension — but now applies to specialist agent scouting too. S1 candidates serve institutions directly — marketplace fit is ambiguous.
+2. The 100% validation rate on scout finds (3/3 voted as 5★) suggests the scoring model is well-calibrated for categories with vote training data.
+3. Specialist agent categories have zero vote training data — scoring model is operating blind on S1–S9 companies.
+4. Competitive pressure intensifying: eToro and Public.com both live with agent trading features. Neither has governance/compliance infrastructure. The window for the app store thesis is compressing.
+5. AIUC's $15M seed and $500B market prediction validates the Dispute Resolution gap as a massive opportunity.
+
+### Search Term Effectiveness
+- S1 queries productive: 3 companies found on first scan (AgentSmyth, Serafis, Kimpton AI)
+- Dispute Resolution queries productive: 2 companies found (Mount, Klaimee)
+- S2 queries produced interesting leads (AgentSmyth partially covers S2) but no dedicated S2 company
+- S3–S5 (Trade Structuring, Options, Execution): search terms produced no seed-stage startups. These may be categories where startups haven't emerged yet or where the search vocabulary needs refinement.
+- S6–S9 (Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade): minimal results. These are emerging categories with few dedicated startups.
+
+### Pipeline State
+- Previous: 69 companies (in pipeline.html)
+- Added: 5
+- Current: 74 companies
+- Voted: 56/74 (76%)
+- Unvoted new entries: agentsmyth, serafis, kimpton-ai, mount-insurance, klaimee (all need votes)
+- **Priority votes needed:** AgentSmyth (highest score S1 entry — will calibrate the internal/external boundary for specialist agents)
+
+### Recommendations
+1. **Vote on AgentSmyth** — highest priority. Will determine if institutional-deployment research agents are thesis-aligned or internal workflow.
+2. **Vote on Serafis and Kimpton AI** — will calibrate S1 scoring across the three entries.
+3. **Vote on Mount and Klaimee** — will establish baseline for Dispute Resolution gap.
+4. **Next cycle should try refined search strategies for S2–S9** — consider broader terms, different search engines, or startup database searches rather than web searches.
+5. **Track AIUC** ($15M seed, Nat Friedman) as potential pipeline addition if not already tracked.
+
+---
+
 ## 2026-04-10 — Weekly Radar
 
 ### Thesis Drift Detection
