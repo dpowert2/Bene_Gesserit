@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-15 | Based on 53 votes (17 upvotes ★★★★–★★★★★, 8 neutral ★★★, 28 downvotes ★★–★) | v3.0 rebalance: specialist agent categories added to scoring, platform infrastructure bonuses capped to prevent continued bias.*
+*Last updated: 2026-04-15 (cycle 2) | Based on 56 votes (19 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) | v3.0 rebalance: specialist agent categories added to scoring, platform infrastructure bonuses capped to prevent continued bias. 3 new votes this cycle: nava 5★, vouched 5★, alomana 5★ — all with followup requested.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
@@ -127,18 +127,20 @@ The bonuses below for platform infrastructure categories (Auth, Safety, Complian
 - **The test:** "Would this product be part of an app store for financial agents where third-party agents operate on behalf of customers?" If yes → thesis-aligned. If it's about making the institution's own processes better → out of scope.
 - **This signal overrides all others.** A perfectly scored company in the right gap, at the right stage, with the right team still fails if its product is internal-facing.
 
-### 4. Portfolio-Integrated Tax Intelligence (+10 points, confirmed)
+### 4. Portfolio-Integrated Tax Intelligence (+12 points, CONFIRMED BY UPVOTE)
 
-- **Evidence:** Explicitly stated in TaxDown 2★ and Juno 2★: "I'm not looking for tax compliance so much as tax efficiencies. Agents that can help investors with clever tax strategies."
-- **Vote confirmation:** No upvote yet — still a scouting gap.
-- **What would score well:** AI tool that operates on a live investment portfolio, surfaces tax-loss harvesting opportunities, optimises rebalancing sequences for after-tax returns — dynamically as portfolio evolves
-- **Key attribute:** Integration with portfolio management workflow (not a standalone filing or compliance interface)
+- **Evidence:** Explicitly stated in TaxDown 2★ and Juno 2★: "I'm not looking for tax compliance so much as tax efficiencies. Agents that can help investors with clever tax strategies." **Now confirmed by alomana 5★ (followup requested).**
+- **Vote confirmation:** Alomana 5★ — autonomous portfolio rebalancing + tax-loss harvesting. This is the FIRST upvote in the Tax Optimisation gap. The internal/external uncertainty flagged last cycle is RESOLVED: portfolio-integrated tax intelligence IS thesis-aligned.
+- **What scores well:** AI tool that operates on a live investment portfolio, surfaces tax-loss harvesting opportunities, optimises rebalancing sequences for after-tax returns — dynamically as portfolio evolves. Alomana's "autonomous portfolio rebalancing + TLH" is the archetype.
+- **Key attribute:** Integration with portfolio management workflow (not a standalone filing or compliance interface). Agent-callable, not a dashboard.
+- **Scoring note:** The +12 bonus now applies to Tax Optimisation companies matching this profile. Tax filing/compliance companies still receive –20 penalty.
 
-### 5. Agent Payment Rails (+10 points, NEW — first confirmed signal)
+### 5. Agent Payment Rails (+12 points, STRENGTHENED — second upvote confirms signal)
 
-- **Evidence:** natural 4★ ("Could be interesting", followup requested)
-- **What scores well:** Infrastructure enabling agents to initiate, authorise, and settle financial transactions with proper governance
-- **Note:** Only 1 upvote; tracking for strengthening. Natural's followup request suggests genuine interest.
+- **Evidence:** natural 4★ ("Could be interesting", followup requested), nava 5★ (followup requested)
+- **Vote rate in gap:** 2/1 exposed (nava is the only pipeline entry; natural is mapped to Personal Agent but has payment rails characteristics). Both positive.
+- **What scores well:** Infrastructure enabling agents to initiate, authorise, and settle financial transactions with proper governance. Escrow, intent verification, dispute resolution for agent transactions (nava).
+- **Nava 5★ signal:** Dave gave maximum score + followup to an agent payment escrow/dispute company. This confirms payment rails as a genuine gap with high conviction. Combined with natural 4★, the payment infrastructure layer is now a validated thesis category.
 
 ### 6. Marketplace/Platform Concepts (+8 points, NEW)
 
@@ -265,5 +267,22 @@ onyx-security 3★ ("Too far away in SF"), hybridity 3★ ("Maybe they come to t
 **Juno tax filing prediction confirmed:** Juno (2★) confirms the –20 tax filing penalty extends to CPA-firm tax preparation. The boundary is now precisely drawn: "tax compliance/filing" = negative; "tax efficiencies/strategies for investors" = positive.
 
 **Data starvation RESOLVED:** The pipeline went from 9% voted to ~62% voted in a single cycle. The model now has meaningful calibration data across multiple gaps for the first time.
+
+**Scout-to-vote validation STRONG (2026-04-15):** The 3 companies found in the previous cycle's Phase 4 that were voted all received 5★ with followup: nava, vouched, alomana. 75% of scout finds voted (3/4; trent-ai not yet voted). This is an exceptionally strong signal that the scoring model is now well-calibrated for the categories it's been trained on. The internal/external filter, stage filter, and sub-domain precision are working.
+
+**Alomana 5★ resolves Tax Optimisation gap:** The previous cycle flagged alomana with "HIGH UNCERTAINTY on internal/external boundary." Dave's 5★ resolves this — autonomous portfolio rebalancing + TLH is thesis-aligned even though the company operates at the portfolio level. This validates the specialist agent thesis: deep domain intelligence that can be called by other agents in the marketplace.
+
+**Exposure-normalised metrics (56 votes, 2026-04-15):**
+| Gap | Exposures | Upvotes | Downvotes | Hit Rate | Rejection Rate |
+|---|---|---|---|---|---|
+| Agent Auth | 11 | 7 | 2 | 64% | 18% |
+| AI Safety | 14 | 6 | 5 | 43% | 36% |
+| Payment Rails | 1 | 1 | 0 | 100% | 0% |
+| Market Data | 1 | 1 | 0 | 100% | 0% |
+| Personal Agent | 8 | 2 | 4 | 25% | 50% |
+| Tax Optimisation | 6 | 1 | 2 | 17% | 33% |
+| Compliance | 14 | 2 | 4 | 14% | 29% |
+| Orchestration | 14 | 1 | 9 | 7% | 64% |
+| S1–S9 | 0 | 0 | 0 | Newly scouted — awaiting votes | — |
 
 *All observations are now grounded in vote evidence unless explicitly marked "radar signal."*
