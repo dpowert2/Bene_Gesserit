@@ -323,6 +323,70 @@ footer p {
   <div class="entry-header">
     <span class="entry-date">2026-04-15</span>
     <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Pipeline — category filter</span>
+  </div>
+  <div class="entry-title">Pipeline page now has a category dropdown filter that auto-populates from startup data</div>
+  <div class="entry-body">
+    <p>Added a dropdown filter to the pipeline page that lets you filter startups by gap category (e.g. Research & Signal Intelligence, Agent Orchestration, Compliance). The dropdown builds itself dynamically from the startup array at render time, so new categories introduced by thesis changes appear automatically — no manual HTML updates needed. Works alongside the existing status filters (All, Rated, Unrated, Follow Up, Archived). Header candidate count is now also dynamic instead of hardcoded.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    10 categories currently active: AI Safety & Guardrails (14), Agent Orchestration (14), Compliance (14), Agent Authentication & Security (11), Personal Agent (8), Tax Optimisation (6), Research & Signal Intelligence (3), Dispute Resolution & Agent Liability (2), Market Data (1), Agent Payment Rails (1).
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Pipeline — bug fixes</span>
+  </div>
+  <div class="entry-title">Fixed 5 April 15th startups missing from pipeline, voter gear icon, and hardcoded counts</div>
+  <div class="entry-body">
+    <p>Three bugs fixed. (1) Five startups from the April 15 run (AgentSmyth, Serafis, Kimpton AI, Mount, Klaimee) were added to the startups array but not to the SLUG_DATES lookup, so they rendered without a date section header and were effectively invisible. Added all five with date 2026-04-15 and added missing thesis fields. (2) The settings gear icon in the nav bar had a duplicate ID and no click handler — replaced with a person icon (👤) and wired up the onclick. (3) Header count was hardcoded at "17 candidates" — now set dynamically from the startups array length.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Root causes: SLUG_DATES missing entries, thesis field omitted from new entries, duplicate id="settings-btn" in HTML. Publisher prompt updated with CRITICAL rules to prevent recurrence.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Infrastructure — auth & routing</span>
+  </div>
+  <div class="entry-title">Voter identity now persists via server-side cookie; old GitHub Pages URL redirects to Workers</div>
+  <div class="entry-body">
+    <p>Three infrastructure changes. (1) The Cloudflare Worker now sets a bg_voter=Dave cookie server-side at login (HttpOnly=false, Secure, SameSite=Lax, 1-year expiry), so voter identity persists without relying solely on localStorage. All client-side cookie writes also now include the Secure flag. (2) All 26 HTML pages now include a redirect script that sends visitors from the old dpowert2.github.io/Bene_Gesserit URL to the Workers URL at bg-votes.benegesserit.workers.dev. (3) Scheduled task prompts (digest-publish, watchdog, radar) updated to use the Workers URL and dynamic workspace discovery paths instead of hardcoded stale session paths.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    worker.js: headers.append('Set-Cookie', bg_voter=Dave). All HTML files: redirect script in &lt;head&gt;. Scheduled tasks: dynamic /sessions/*/mnt/BeneGesserit glob pattern.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
+    <span class="entry-source">Publisher prompt — guardrails</span>
+  </div>
+  <div class="entry-title">Digest publisher prompt updated with mandatory field rules to prevent incomplete pipeline entries</div>
+  <div class="entry-body">
+    <p>The digest publisher scheduled task prompt now enforces: (1) every new startup must include all fields including thesis (previously omitted, rendering as "undefined"), (2) every new slug must be added to SLUG_DATES (previously omitted, making startups invisible), (3) counts must not be hardcoded (now dynamic from JS), (4) category dropdown auto-populates so new gap categories from thesis changes require no manual HTML updates.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    bene-gesserit-digest-publish task prompt updated via scheduled-tasks API. Local prompt file synced.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-15</span>
+    <span class="entry-badge badge-system">System</span>
     <span class="entry-source">Phase 0 Coverage Audit</span>
   </div>
   <div class="entry-title">Coverage audit reveals 12/20 thesis categories have zero pipeline companies</div>
