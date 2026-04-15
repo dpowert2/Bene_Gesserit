@@ -1,7 +1,7 @@
 # Bene Gesserit — Search Terms
-## April 2026 Revision v3 (21 categories + 2 tracks)
+## April 2026 Revision v3.1 (21 categories + 2 tracks)
 
-*Updated 2026-04-15. v3.0 REBALANCE: 9 new specialist agent categories added (Research, Portfolio, Trade Structuring, Options, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis). Platform infrastructure categories (Auth, Safety, Orchestration) downgraded from CRITICAL/HIGH to MEDIUM/MONITOR. The specialist agents are what makes the app store worth using — they are now the primary scouting target.*
+*Updated 2026-04-15. v3.1 EUROPEAN REBALANCE: ~30 European-focused and multilingual queries added across all categories. European accelerators, VCs, regulators, and city hubs now represented. Multilingual queries in German, French, and Spanish added. Previous: v3.0 REBALANCE: 9 new specialist agent categories added (Research, Portfolio, Trade Structuring, Options, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis). Platform infrastructure categories (Auth, Safety, Orchestration) downgraded from CRITICAL/HIGH to MEDIUM/MONITOR.*
 
 Organised by gap category. Each query is designed for web search. Rotate through these across scan runs to avoid repetition. Priority categories should be searched every scan; medium categories every other scan; monitor categories bi-weekly.
 
@@ -38,6 +38,10 @@ These categories represent the agent types that deliver the actual customer expe
 - "AI signal generation trading startup seed series A Europe"
 - "satellite data investment intelligence startup seed"
 - "AI research agent wealth management startup"
+- "KI Agent Finanzanalyse Startup Seed 2026"
+- "agent IA recherche financière startup seed Europe"
+- "AI investment research startup Europe seed Stockholm Berlin"
+- "alternative data startup fintech London seed 2026"
 
 ### What we're looking for
 Startups building deep research intelligence that agents can draw on — alternative data feeds, earnings analysis, sentiment analysis, institutional flow tracking, catalyst identification. The knowledge layer that generates ideas and validates theses. Must be API-accessible or agent-callable, not a dashboard for human analysts.
@@ -62,6 +66,9 @@ Startups building deep research intelligence that agents can draw on — alterna
 - "portfolio concentration analysis AI startup seed"
 - "AI asset allocation agent startup seed series A"
 - "multi-asset portfolio agent API startup seed"
+- "KI Portfoliokonstruktion Startup Seed Europa"
+- "AI portfolio risk startup Europe Zurich Amsterdam seed"
+- "agent IA gestion de portefeuille startup seed"
 
 ### What we're looking for
 Startups that can answer "what does adding this position do to the whole portfolio?" — concentration analysis, factor exposure, scenario modelling, position sizing, rebalancing triggers. Must operate on live portfolios in real time, not just backtest historical data. Agent-callable API, not a dashboard.
@@ -83,6 +90,8 @@ Startups that can answer "what does adding this position do to the whole portfol
 - "multi-account portfolio structuring startup seed"
 - "AI trade expression optimisation startup seed"
 - "defined risk structure agent startup seed Europe"
+- "KI Handelsstrukturierung Startup Seed Europa"
+- "ISA SIPP account optimisation AI startup UK seed"
 
 ### What we're looking for
 "How should I express this thesis?" — equity vs options vs pairs vs ETFs. "Which account?" — taxable vs IRA vs Roth vs 529. The agent that structures the optimal expression of a trade given the client's full account picture.
@@ -100,6 +109,8 @@ Startups that can answer "what does adding this position do to the whole portfol
 - "AI options analytics startup retail investor seed"
 - "derivatives strategy AI wealth management startup seed"
 - "options income agent startup seed series A"
+- "AI Optionsstrategie Startup Seed Europa"
+- "options derivatives AI startup Europe London seed"
 
 ### What we're looking for
 Deep specialist knowledge in options and derivatives — covered calls for income, protective puts, spreads for defined risk, volatility strategies. This is expertise most retail investors can't access today. Must be agent-accessible or API-first.
@@ -117,6 +128,8 @@ Deep specialist knowledge in options and derivatives — covered calls for incom
 - "slippage minimisation AI startup seed"
 - "execution analytics agent startup seed"
 - "AI order routing optimisation startup seed"
+- "best execution AI startup Europe MiFID seed"
+- "smart order routing startup Europe seed 2026"
 
 ### What we're looking for
 Professional-grade execution for everyone. Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart order routing, slippage minimisation. The gap between clicking "buy" on an app and how institutions actually execute.
@@ -137,6 +150,7 @@ Professional-grade execution for everyone. Algorithm selection (VWAP, TWAP, POV)
 - "AI earnings surprise monitoring startup seed"
 - "portfolio watchdog agent startup seed"
 - "continuous investment monitoring AI startup seed"
+- "KI Positionsüberwachung Startup Seed Europa"
 
 ### What we're looking for
 "Is my trade still working?" — continuous thesis monitoring, stop-loss/profit-target management, catalyst tracking, earnings surprise detection. Initiates new conversations when conditions change.
@@ -152,6 +166,8 @@ Professional-grade execution for everyone. Algorithm selection (VWAP, TWAP, POV)
 - "estate planning AI agent startup seed Europe"
 - "holistic financial planning agent API startup seed"
 - "AI wealth planning agent startup seed series A"
+- "agent IA planification financière startup seed Europe"
+- "Altersvorsorge KI Agent Startup Europa Seed"
 
 ### What we're looking for
 The long-term guardrail — goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. Ensures no short-term trade decision undermines long-term objectives.
@@ -206,6 +222,9 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "AI portfolio agent goal-seeking autonomous startup"
 - "finance agent marketplace platform startup"
 - "external financial agent ecosystem startup"
+- "AI Finanzagent Startup Seed Europa 2026"
+- "agent IA finance personnelle startup seed Europe"
+- "personal AI finance agent startup Europe London Berlin seed"
 
 ### Reference companies (track, don't re-scan every time)
 - Arta Finance
@@ -230,6 +249,10 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "MiFID suitability AI agent startup Europe"
 - "SEC FINRA compliance automation AI startup seed series A"
 - "third party agent compliance gateway startup"
+- "DORA-native compliance agent startup Europe seed"
+- "PSD3 FiDA compliance AI startup Europe seed 2026"
+- "BaFin compliant AI agent startup seed"
+- "ESMA AI agent compliance startup Europe seed"
 
 ---
 
@@ -295,6 +318,7 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "confidence scoring agent financial decisions startup"
 - "human-in-the-loop agent escalation startup"
 - "agent supervision regulated startup Europe seed"
+- "KI Sicherheit Agent Finanzdienstleistungen Startup Seed"
 - "safe actioning financial services agent startup"
 - "agentic AI security startup third party agents"
 - "autonomous agent risk mitigation startup seed"
@@ -324,6 +348,8 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "OAuth agent delegation startup fintech seed"
 - "third party agent verification startup"
 - "agent identity trust layer startup seed"
+- "KI Agent Identität Startup Europa Seed"
+- "agent identity startup Europe Copenhagen Stockholm seed"
 
 ### Incumbent watch (not startups — track their moves)
 - Ping Identity "Identity for AI"
@@ -383,6 +409,8 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "agent reasoning transparency financial startup"
 - "audit-grade agent logging startup seed"
 - "third party agent audit trail startup"
+- "EU AI Act audit trail agent startup Europe seed"
+- "agent Erklärbarkeit Audit Startup Europa Seed"
 
 ---
 
@@ -489,6 +517,19 @@ Catch-all for signals that don't fit a category:
 - "agentic AI startup fintech accelerator 2026"
 - "third party financial agent startup 2026"
 - "agent marketplace financial services startup 2026"
+- "agentic AI fintech startup Berlin 2026"
+- "agentic AI fintech startup Stockholm Copenhagen 2026"
+- "agentic AI fintech startup Amsterdam Zurich 2026"
+- "agentic AI fintech startup Paris 2026"
+- "agente IA fintech startup Europa seed 2026"
+- "KI Agent Fintech Startup Seed Europa 2026"
+- "agent IA fintech startup seed Europe 2026"
+- "Forge London fintech accelerator agentic AI 2026"
+- "EQT Ventures fintech AI agent investment 2026"
+- "Plug and Play Europe fintech AI agent 2026"
+- "Ada Ventures fintech AI agent seed 2026"
+- "Seedcamp fintech agentic AI portfolio 2026"
+- "Earlybird fintech AI agent investment Europe 2026"
 
 ---
 
@@ -504,9 +545,18 @@ Catch-all for signals that don't fit a category:
 
 ---
 
-*Last updated: 2026-04-15 (v3 — specialist agent rebalance)*
-*Previous version: April 2026 v2 (12 categories + 2 tracks, ~155 queries)*
-*This version: 21 categories + 2 tracks, ~250 queries*
+*Last updated: 2026-04-15 (v3.1 — European geographic rebalance)*
+*Previous version: v3.0 (specialist agent rebalance, ~250 queries)*
+*This version: 21 categories + 2 tracks, ~280 queries*
+
+### Change Log (v3 → v3.1)
+- **EUROPEAN GEOGRAPHIC REBALANCE:** ~30 new queries added across all categories
+- European city hub queries: Berlin, Stockholm, Copenhagen, Zurich, Amsterdam, Paris, London
+- Multilingual queries added: German ("KI Agent", "Finanzanalyse", "Portfoliokonstruktion", "Optionsstrategie", "Positionsüberwachung", "Altersvorsorge", "Erklärbarkeit", "Sicherheit", "Identität"), French ("agent IA", "recherche financière", "gestion de portefeuille", "planification financière"), Spanish ("agente IA fintech")
+- European regulator monitoring: BaFin, ESMA, DORA-native, PSD3/FiDA
+- European accelerator/VC tracking: Forge London, EQT Ventures, Plug and Play EU, Ada Ventures, Seedcamp, Earlybird
+- UK-specific: ISA/SIPP account optimisation, MiFID best execution
+- Rationale: Pipeline was 61% US vs 24% EU; only 4.6% of queries referenced Europe despite thesis stating "Europe preferred". Rebalance ensures European startups are surfaced without excluding US
 
 ### Change Log (v2 → v3)
 - **MAJOR REBALANCE:** 9 new specialist agent categories added (S1–S9) with ~95 new search queries
