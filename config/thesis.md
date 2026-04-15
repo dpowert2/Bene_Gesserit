@@ -280,7 +280,7 @@ These are the startups building the technology that makes the agent marketplace 
 ## What "Good" Looks Like
 
 - **Stage:** Seed to Series A (we want to shape what the startup is building, not adopt a finished product)
-- **Geography:** Europe preferred, global acceptable
+- **Geography:** Europe preferred (active scoring bonus: +5 points for European HQ or significant European operations). Global acceptable but European startups are the primary scouting target. European regulatory environment (GDPR, DORA, MiFID II, EU AI Act) produces compliance-native architecture by default.
 - **FinServ readiness:** Evidence of financial services traction, customers, or regulated-industry DNA
 - **Team:** Domain expertise in financial services, AI/ML, or security. Prior startup experience valued
 - **Architecture:** API-first, platform thinking, not point solutions
@@ -322,5 +322,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
 | 3.0 | 2026-04-15 | Exposure bias correction — scouting rebalanced | Platform infrastructure (Auth, Safety, Orchestration) downgraded from CRITICAL to MEDIUM/MONITOR — strong candidates exist. 9 specialist agent categories added to scouting: Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution Quality, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis. These are the agents that make the app store worth using — the unscouted frontier. |
 | 3.1 | 2026-04-15 | 3 new votes (nava 5★, vouched 5★, alomana 5★) — all scout finds validated | Tax Optimisation gap partially resolved: Alomana 5★ confirms portfolio-integrated tax intelligence is thesis-aligned. Agent Payment Rails strengthened: Nava 5★ (2nd upvote in category). Coverage audit reveals 12/20 thesis categories have 0 pipeline companies. Specialist agent scouting now mandatory. |
+| 3.2 | 2026-04-15 | European geographic rebalance | Pipeline was 61% US vs 24% EU despite thesis stating "Europe preferred". ~30 European-focused and multilingual search queries added (German, French, Spanish). European accelerators/VCs added to monitoring (Forge, EQT, Seedcamp, Earlybird, Ada Ventures). European regulator monitoring expanded (BaFin, ESMA, DORA-native, PSD3/FiDA). Geography scoring bonus added: +5 points for European HQ. US not excluded — just ensuring Europe is properly represented in pipeline. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
