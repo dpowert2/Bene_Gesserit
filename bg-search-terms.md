@@ -345,6 +345,8 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 - "programmable payment agent startup seed"
 - "agent commerce governance startup"
 - "third party agent payment rails startup"
+- "agent transaction escrow startup seed 2026"
+- "AI agent dispute resolution payment startup seed"
 
 ### Ecosystem tracking
 - "Visa Intelligent Commerce startup integration 2026"
