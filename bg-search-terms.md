@@ -1,5 +1,5 @@
 # Bene Gesserit — Search Terms
-## April 2026 Revision v3.1 (21 categories + 2 tracks)
+## April 2026 Revision v3.2 (21 categories + 2 tracks)
 
 *Updated 2026-04-15. v3.1 EUROPEAN REBALANCE: ~30 European-focused and multilingual queries added across all categories. European accelerators, VCs, regulators, and city hubs now represented. Multilingual queries in German, French, and Spanish added. Previous: v3.0 REBALANCE: 9 new specialist agent categories added (Research, Portfolio, Trade Structuring, Options, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis). Platform infrastructure categories (Auth, Safety, Orchestration) downgraded from CRITICAL/HIGH to MEDIUM/MONITOR.*
 
@@ -308,7 +308,7 @@ These categories cover the infrastructure that makes the agent marketplace safe,
 
 ---
 
-## 5. AI Safety & Guardrails 🟠 MEDIUM (downgraded from 🟡 — Overmind strong candidate)
+## 5. AI Safety & Guardrails 🟡 HIGH (re-elevated from 🟠 — Overmind declined participation 2026-04-15)
 - "agentic security startup 2026 seed series A"
 - "agent safety monitoring regulated industries startup seed"
 - "agent behaviour guardrails finance startup"
@@ -538,16 +538,21 @@ Catch-all for signals that don't fit a category:
 | Priority | Categories | Frequency |
 |----------|-----------|-----------|
 | 🔴 Critical | S1 (Research & Signal), S2 (Portfolio & Risk), Competitive Intel | Every scan |
-| 🟡 High | S3 (Trade Structuring), S4 (Options), S5 (Execution), 1 (Personal Agent), 2 (Pre-Trade Compliance), 3 (Tax), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
-| 🟠 Medium | S6 (Position Monitoring), S7 (Financial Planning), 5 (Safety), 6 (Auth/Identity), 8 (Memory), 10 (Disputes) | Weekly |
+| 🟡 High | S3 (Trade Structuring), S4 (Options), S5 (Execution), 1 (Personal Agent), 2 (Pre-Trade Compliance), 3 (Tax), 5 (Safety — re-elevated), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
+| 🟠 Medium | S6 (Position Monitoring), S7 (Financial Planning), 6 (Auth/Identity), 8 (Memory), 10 (Disputes) | Weekly |
 | ⚪ Monitor | S8 (Behavioural Coaching), S9 (Post-Trade Analysis), 4 (Orchestration), 11 (Commerce Pattern), 12 (Monetisation) | Bi-weekly |
 | 📄 Research | Papers | Monthly |
 
 ---
 
-*Last updated: 2026-04-15 (v3.1 — European geographic rebalance)*
-*Previous version: v3.0 (specialist agent rebalance, ~250 queries)*
+*Last updated: 2026-04-15 (v3.2 — AI Safety re-elevated, agent exposure signal)*
+*Previous version: v3.1 (European geographic rebalance, ~280 queries)*
 *This version: 21 categories + 2 tracks, ~280 queries*
+
+### Change Log (v3.1 → v3.2)
+- **AI Safety & Guardrails re-elevated from 🟠 MEDIUM to 🟡 HIGH** — Overmind declined participation; gap reopened
+- Scan priority matrix updated accordingly
+- No new search terms required; existing queries adequate for the gap
 
 ### Change Log (v3 → v3.1)
 - **EUROPEAN GEOGRAPHIC REBALANCE:** ~30 new queries added across all categories
