@@ -161,13 +161,11 @@ async function handleLogin(request, env) {
   if (hash !== PASSWORD_HASH) return serveLoginPage('Incorrect password.');
 
   const token = await createSessionToken(env);
-  return new Response(null, {
-    status: 302,
-    headers: {
-      'Set-Cookie': `${COOKIE_NAME}=${token}; Path=/; Max-Age=${SESSION_DAYS * 86400}; HttpOnly; Secure; SameSite=Strict`,
-      Location: '/',
-    },
-  });
+  const headers = new Headers();
+  headers.append('Set-Cookie', `${COOKIE_NAME}=${token}; Path=/; Max-Age=${SESSION_DAYS * 86400}; HttpOnly; Secure; SameSite=Strict`);
+  headers.append('Set-Cookie', `bg_voter=Dave; Path=/; Max-Age=${365 * 86400}; Secure; SameSite=Lax`);
+  headers.set('Location', '/');
+  return new Response(null, { status: 302, headers });
 }
 
 /* ================================================================

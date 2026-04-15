@@ -1099,7 +1099,7 @@ function _readVoter() {
   return 'Dave';
 }
 let voter = _readVoter();
-try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } catch(e) {}
+try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } catch(e) {}
 let votes = {};
 let _pendingVote = null;
 
@@ -1299,7 +1299,7 @@ function closeSettings() {
 function saveSettings() {
   try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
   try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
-  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; SameSite=Lax`; } } catch(e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } } catch(e) {}
   closeSettings();
   updateGearState();
   if (_pendingVote && voter) {
