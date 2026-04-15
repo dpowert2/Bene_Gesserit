@@ -126,7 +126,7 @@ Every function a brokerage performs today — onboarding, compliance, trading, c
 | Research & Signal Intelligence | Stages 1, 2, 3 | Alternative data, earnings analysis, sentiment, institutional flow tracking | ❌ **Not scouted — highest priority** |
 | Portfolio Construction & Risk | Stages 4, 5, 11 | Concentration, factor exposure, scenario analysis, position sizing, rebalancing | ❌ **Not scouted — highest priority** |
 | Trade Structuring | Stage 6 | Equity vs options vs pairs, account selection across taxable/IRA/Roth | ❌ **Not scouted** |
-| Tax Optimisation | Stage 7 | Lot-level TLH, gain deferral, asset location, wash sale prevention | ⚠️ Scouting — no confirmed match |
+| Tax Optimisation | Stage 7 | Lot-level TLH, gain deferral, asset location, wash sale prevention | ⚠️ Scouting — Alomana 5★ first confirmed match |
 | Options & Derivatives Strategy | Stages 6, 10 | Covered calls, protective puts, spreads, volatility strategies | ❌ **Not scouted** |
 | Execution Quality | Stage 9 | Algorithm selection, dark pool routing, slippage minimisation | ❌ **Not scouted** |
 | Position Monitoring | Stage 10 | Thesis tracking, stop-loss management, catalyst monitoring | ❌ **Not scouted** |
@@ -286,7 +286,7 @@ These are the startups building the technology that makes the agent marketplace 
 - **Architecture:** API-first, platform thinking, not point solutions
 - **Governance-native:** Compliance, audit, and explainability as foundational design — not bolted on
 
-### Learned Preferences (from 53 votes — 17 upvotes, 8 neutral, 28 downvotes)
+### Learned Preferences (from 56 votes — 19 upvotes, 8 neutral, 29 downvotes)
 
 **THE DECISIVE DIMENSION: External vs Internal**
 The single most predictive attribute is whether the product serves external/third-party agents in a marketplace or improves internal institutional workflows. 16 internal workflow companies received 1–2★ with zero exceptions. This is now a Hard Filter. Dave's words: *"I'm looking for solutions that mitigate risk of third party agents"* (lema-ai 1★). *"This works as long as it also works for external agents"* (ralio 5★).
@@ -321,5 +321,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research, competitive landscape, agentic brokerage race, gap mapping | 13 gaps, "app store for financial agents" thesis, European supply chain rationale, competitive intelligence, learned anti-patterns, challenge signals |
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
 | 3.0 | 2026-04-15 | Exposure bias correction — scouting rebalanced | Platform infrastructure (Auth, Safety, Orchestration) downgraded from CRITICAL to MEDIUM/MONITOR — strong candidates exist. 9 specialist agent categories added to scouting: Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution Quality, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis. These are the agents that make the app store worth using — the unscouted frontier. |
+| 3.1 | 2026-04-15 | 3 new votes (nava 5★, vouched 5★, alomana 5★) — all scout finds validated | Tax Optimisation gap partially resolved: Alomana 5★ confirms portfolio-integrated tax intelligence is thesis-aligned. Agent Payment Rails strengthened: Nava 5★ (2nd upvote in category). Coverage audit reveals 12/20 thesis categories have 0 pipeline companies. Specialist agent scouting now mandatory. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
