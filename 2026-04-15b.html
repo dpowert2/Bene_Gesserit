@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BG Radar — 2026-04-15 Cycle 3 (Full Pipeline)</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #F0EBE3; --bg-page: #F7F4EF; --bg-card: #FFFFFF; --bg-card-hover: #FDFCFA;
+  --border: #E2DDD5; --border-strong: #D4CEC4;
+  --text: #3D3A36; --text-heading: #1A1816; --text-muted: #8C857B; --text-light: #A9A29A;
+  --accent: #6B8F71; --accent-light: #E8F0E9;
+  --brown: #8B6F54; --brown-light: #F3EDE7;
+  --coral: #C4716E; --coral-light: #F8EDEC;
+  --blue: #6B849A; --blue-light: #ECF0F4;
+  --amber: #B8944A; --amber-light: #F6F0E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg-page); font-family: 'DM Sans', sans-serif; color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.site-nav { background: var(--bg-page); border-bottom: 1px solid var(--border); padding: 10px 0; position: sticky; top: 0; z-index: 100; }
+.site-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.site-nav-brand { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.1rem; font-weight: 400; color: var(--text-heading); text-decoration: none; letter-spacing: -0.3px; }
+.site-nav-links { display: flex; align-items: center; gap: 8px; }
+.site-nav-link { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500; color: var(--text-muted); text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 5px 12px; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+.site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+.site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: 2rem; font-weight: 400; color: var(--text-heading); margin: 40px 0 8px; letter-spacing: -0.5px; }
+h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.4rem; font-weight: 400; color: var(--text-heading); margin: 32px 0 12px; }
+h3 { font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 500; color: var(--brown); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 8px; }
+.subtitle { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 32px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.card-name { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.3rem; color: var(--text-heading); }
+.card-name a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); }
+.card-name a:hover { border-color: var(--brown); }
+.score-badge { font-family: 'DM Mono', monospace; font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 100px; }
+.score-high { background: var(--accent-light); color: var(--accent); }
+.score-med { background: var(--amber-light); color: var(--amber); }
+.tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; padding: 3px 10px; border-radius: 100px; border: 1px solid var(--border); color: var(--text-muted); margin-right: 6px; margin-bottom: 6px; }
+.tag-gap { background: var(--brown-light); border-color: var(--brown); color: var(--brown); }
+.tag-stage { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+.tag-geo { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+.thesis-block { font-size: 0.92rem; line-height: 1.7; margin: 12px 0; color: var(--text); }
+.evidence { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text-muted); margin-top: 12px; }
+.evidence a { color: var(--brown); }
+.score-bars { display: flex; gap: 16px; padding-top: 16px; border-top: 1px solid var(--border); margin-top: 16px; }
+.bar-item { flex: 1; }
+.bar-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+.bar-track { height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; background: var(--accent); }
+.alert { background: var(--coral-light); border: 1px solid var(--coral); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.alert-title { font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 600; color: var(--coral); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.intel { background: var(--amber-light); border: 1px solid var(--amber); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.intel-title { font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 600; color: var(--amber); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.coverage-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 16px 0; }
+.coverage-table th { font-family: 'DM Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--border-strong); }
+.coverage-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+.blind-spot { color: var(--coral); font-weight: 600; }
+.underrep { color: var(--amber); font-weight: 600; }
+.adequate { color: var(--accent); }
+.well-covered { color: var(--text-muted); }
+.vote-section { margin: 32px 0; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+.vote-title { font-family: 'DM Mono', monospace; font-size: 0.78rem; font-weight: 500; color: var(--brown); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.vote-item { display: flex; gap: 12px; align-items: baseline; margin-bottom: 8px; font-size: 0.88rem; }
+.vote-stars { font-family: 'DM Mono', monospace; font-weight: 600; }
+.stars-5 { color: var(--accent); }
+.stars-4 { color: var(--blue); }
+footer { text-align: center; padding: 40px 0; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-light); }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link active" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <a class="site-nav-link" href="archive.html">Archive</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Full Cycle Report — 2026-04-15</h1>
+  <p class="subtitle">Cycle 3 &middot; 61 votes processed &middot; 5 new votes &middot; 1 new company &middot; 8 blind spots confirmed &middot; eToro App Store launched</p>
+
+  <!-- COMPETITIVE INTELLIGENCE ALERT -->
+  <div class="alert">
+    <div class="alert-title">Breaking: eToro Launches App Store — April 14, 2026</div>
+    <p class="thesis-block"><strong>eToro has launched exactly what the thesis describes.</strong> The eToro App Store is a marketplace enabling third-party developers and quantitative strategists to build, share, and access trading/analytics applications directly within the eToro platform. It includes a builders portal with APIs, agent skills, MCP server, CLI tooling, and technical documentation. This is the "app store for financial agents" thesis materialising at a competitor. Combined with Public.com's agentic brokerage (now supporting stocks, options, and crypto through plain-language agents), the competitive clock is ticking. Neither has the compliance, identity, or audit infrastructure the thesis prioritises — <strong>but the marketplace form factor is now live.</strong></p>
+  </div>
+
+  <!-- VOTE PROCESSING -->
+  <div class="vote-section">
+    <div class="vote-title">5 New Votes Processed (61 Total)</div>
+    <div class="vote-item"><span class="vote-stars stars-5">★★★★★</span> <strong>AgentSmyth</strong> — "This is what we are looking for. Shame we didn't find them sooner." <em>(Research & Signal Intelligence)</em></div>
+    <div class="vote-item"><span class="vote-stars stars-5">★★★★★</span> <strong>Serafis</strong> — "Looks really interesting for us. Can we also find things like this in the EU?" <em>(Research & Signal Intelligence)</em></div>
+    <div class="vote-item"><span class="vote-stars stars-5">★★★★★</span> <strong>Kimpton AI</strong> — "Definitely worth a look. Again, better if it exposed an agent." <em>(Research & Signal Intelligence)</em></div>
+    <div class="vote-item"><span class="vote-stars stars-5">★★★★★</span> <strong>Mount</strong> — "Reduces risk — excellent." <em>(Dispute Resolution & Agent Liability)</em></div>
+    <div class="vote-item"><span class="vote-stars stars-4">★★★★</span> <strong>Klaimee</strong> — "Not quite as good as Mount." <em>(Dispute Resolution & Agent Liability)</em></div>
+    <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);"><strong>Key signals:</strong> S1 (Research & Signal Intelligence) validated — 3/3 upvotes at 5★. Dispute Resolution validated — 2/2 upvotes. "Agent exposure" preference emerging (2/3 S1 votes mention it). Overmind archived ("They aren't interested in participating") — AI Safety gap reopened.</p>
+  </div>
+
+  <!-- COVERAGE AUDIT -->
+  <h2>Coverage Audit</h2>
+  <p class="thesis-block">The thesis maps 20 gap categories across specialist agents and platform infrastructure. The Phase 0 audit reveals persistent structural imbalances: 8 of 11 specialist agent categories have zero pipeline companies. Platform infrastructure is well-covered (11–14 companies per category).</p>
+
+  <h3>Specialist Agents (The Apps)</h3>
+  <table class="coverage-table">
+    <thead><tr><th>Category</th><th>Pipeline</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td>Research & Signal Intelligence (S1)</td><td>3</td><td class="adequate">Adequate</td><td>3/3 votes at 5★ — validated</td></tr>
+      <tr><td>Portfolio Construction & Risk (S2)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found. Genuine market gap.</td></tr>
+      <tr><td>Trade Structuring (S3)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found.</td></tr>
+      <tr><td>Tax Optimisation</td><td>6</td><td class="adequate">Adequate</td><td>Alomana 5★ confirmed.</td></tr>
+      <tr><td>Options & Derivatives (S4)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found.</td></tr>
+      <tr><td>Execution Quality (S5)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found.</td></tr>
+      <tr><td>Position Monitoring (S6)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found.</td></tr>
+      <tr><td>Personal Financial Agent</td><td>8</td><td class="adequate">Adequate</td><td>Bank of Bots 4★ validated.</td></tr>
+      <tr><td>Financial Planning (S7)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>Hiro Finance acquired by OpenAI. No standalone startups.</td></tr>
+      <tr><td>Behavioural Coaching (S8)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>Shaping Wealth/Lydia exists but not a scoutable startup.</td></tr>
+      <tr><td>Post-Trade Analysis (S9)</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>No seed-stage startups found.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Platform Infrastructure (The Garden)</h3>
+  <table class="coverage-table">
+    <thead><tr><th>Category</th><th>Pipeline</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td>Agent Orchestration</td><td>14</td><td class="well-covered">Well Covered</td><td>Jentic POC partner.</td></tr>
+      <tr><td>AI Safety & Guardrails</td><td>14</td><td class="underrep">GAP REOPENED</td><td>Overmind declined. Manifold 5★, Kai 4★ remain. Re-elevated to HIGH.</td></tr>
+      <tr><td>Compliance (Pre-Trade + General)</td><td>14</td><td class="well-covered">Well Covered</td><td>Complyance 5★ strongest.</td></tr>
+      <tr><td>Agent Auth & Security</td><td>11</td><td class="well-covered">Well Covered</td><td>Keycard 5★, Resistant AI 5★.</td></tr>
+      <tr><td>Audit & Explainability</td><td class="underrep">0*</td><td class="underrep">UNDERREPRESENTED</td><td>*Bundled in "Compliance". Alinia is first dedicated find.</td></tr>
+      <tr><td>Dispute Resolution</td><td>2</td><td class="underrep">UNDERREPRESENTED</td><td>Mount 5★, Klaimee 4★ validate the gap.</td></tr>
+      <tr><td>Agent Payment Rails</td><td>1</td><td class="underrep">UNDERREPRESENTED</td><td>Nava 5★. Category still thin.</td></tr>
+      <tr><td>Agent Monetisation</td><td class="blind-spot">0</td><td class="blind-spot">BLIND SPOT</td><td>Paid AI is pattern signal only.</td></tr>
+    </tbody>
+  </table>
+
+  <!-- NEW COMPANY -->
+  <h2>New Find</h2>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-name"><a href="https://alinia.ai/" target="_blank">Alinia</a></div>
+      <span class="score-badge score-high">83</span>
+    </div>
+    <div>
+      <span class="tag tag-gap">Audit & Explainability</span>
+      <span class="tag tag-stage">Seed — $7.5M</span>
+      <span class="tag tag-geo">Barcelona, Spain</span>
+    </div>
+    <p class="thesis-block">Backend compliance controller for high-stake AI agents. Embeds real-time auditing, policy enforcement, and risk controls directly into AI systems at scale. MiFID II focus. Backed by Mouro Capital (Santander). Female-led (Ariadna Font Llitjós, Carlos Muñoz Ferrandis). The first dedicated Audit & Explainability company in the pipeline — fills a gap previously covered only by general "Compliance" entries. The product monitors and controls AI agent behaviour in banking operations, ensuring regulatory compliance.</p>
+    <p class="thesis-block"><strong>Thesis alignment:</strong> Fills the Audit & Explainability gap directly. European HQ (+5 pts). Santander partnership validates finserv focus. MiFID II native. <strong>Uncertainty:</strong> whether the product extends to external/third-party agents or primarily serves internal institutional AI deployments. The internal/external boundary is the decisive scoring dimension — needs investigation.</p>
+    <div class="evidence">Evidence: <a href="https://alinia.ai/alinia-seed-round-7-5-milions/" target="_blank">Alinia Seed Round</a> · <a href="https://techfundingnews.com/alinia-raises-7-5m-seed-ai-compliance-finance/" target="_blank">TechFundingNews</a></div>
+    <div class="score-bars">
+      <div class="bar-item"><div class="bar-label">Gap Fit (25/35)</div><div class="bar-track"><div class="bar-fill" style="width:71%"></div></div></div>
+      <div class="bar-item"><div class="bar-label">FinServ (22/25)</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+      <div class="bar-item"><div class="bar-label">Stage (18/20)</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+      <div class="bar-item"><div class="bar-label">Team (13/20)</div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+    </div>
+  </div>
+
+  <!-- COMPETITIVE INTELLIGENCE -->
+  <h2>Competitive Intelligence</h2>
+
+  <div class="intel">
+    <div class="intel-title">eToro App Store — Launched April 14, 2026</div>
+    <p class="thesis-block">eToro has launched a third-party developer marketplace with: (1) a builders portal giving developers structured access to APIs, agent skills, MCP server, CLI tooling, and docs; (2) Agent Portfolios where users allocate capital and connect their own AI agent via scoped API key ($200 minimum); (3) social trading extended from "copy a human" to "copy an AI agent." This is the first live implementation of the "app store for financial agents" model. <strong>No governance layer, no pre-trade compliance, no agent identity management.</strong> The infrastructure gap the thesis targets is real and visible.</p>
+  </div>
+
+  <div class="intel">
+    <div class="intel-title">Public.com Agentic Brokerage — Live Rollout</div>
+    <p class="thesis-block">Public.com's agents now support stocks, options, and crypto. Users describe strategies in plain language ("If VIX hits 25, buy a put on the S&P 500") and agents handle monitoring, decision-making, and execution. Every agent runs within the authenticated brokerage environment. No external agent marketplace — all agents are built by Public.com internally. <strong>This confirms the thesis: consumer-facing agentic brokerage is live, but the external agent marketplace model hasn't been attempted by Public.com.</strong></p>
+  </div>
+
+  <div class="intel">
+    <div class="intel-title">OpenAI Acquires Hiro Finance — Financial Planning Gap Narrows</div>
+    <p class="thesis-block">OpenAI acquired Hiro Finance, an AI financial planning startup. This removes Hiro from the scoutable pipeline but signals that frontier model providers are moving into financial planning (S7). The financial planning agent gap is now addressed by a hyperscaler, not a startup — which may mean the opportunity for an independent startup in this category is compressed.</p>
+  </div>
+
+  <!-- STRUCTURAL FINDING -->
+  <h2>Structural Finding: The Specialist Agent Desert</h2>
+  <p class="thesis-block">This cycle's most important finding is negative: <strong>8 of 9 specialist agent categories (S2–S9, excluding Tax Optimisation) have zero pipeline companies after intensive scouting.</strong> Web searches across portfolio construction, trade structuring, options strategy, execution quality, position monitoring, financial planning, behavioural coaching, and post-trade analysis turned up almost no seed-stage startups building these as agent-callable APIs.</p>
+  <p class="thesis-block">This could mean: (1) These capabilities are too specialised to exist as standalone startups yet — they may emerge as features of larger platforms. (2) The search terms need further refinement. (3) These agents are being built inside incumbents (Vanguard's autonomous TLH, BlackRock's portfolio tools) rather than as startups. (4) The eToro App Store may catalyse startup creation in these categories as developers build for a live marketplace.</p>
+  <p class="thesis-block"><strong>Implication for the thesis:</strong> The "specialist agent" half of the app store may require a different scouting strategy — partnering with quantitative teams, monitoring eToro's app store for developer activity, or tracking academic spinouts rather than traditional VC-backed startups.</p>
+
+  <h3>Split This Cycle</h3>
+  <p class="thesis-block"><strong>Specialist agents:</strong> 1 new company found (0 this cycle — all 3 S1 companies were from previous cycle). <strong>Platform infrastructure:</strong> 1 new company (Alinia). <strong>Ratio:</strong> 0% specialist / 100% infrastructure. The structural imbalance persists despite the scouting rebalance. The problem is supply-side: these startups don't exist yet at scale.</p>
+</div>
+
+<footer>
+  <div class="container">Bene Gesserit &middot; Full Cycle 3 &middot; 2026-04-15 &middot; 61 votes &middot; 75 pipeline companies</div>
+</footer>
+</body>
+</html>
