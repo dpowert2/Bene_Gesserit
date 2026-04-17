@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (window.location.href.includes('?utm')) { window.location.href = window.location.href.replace(/\?utm.*/, ''); }</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pipeline - Bene Gesserit</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #f0f2f5; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100; }
+.header h1 { margin: 0; font-size: 32px; font-weight: 700; }
+.nav { position: absolute; top: 24px; right: 24px; }
+.nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; }
+.nav a:hover { opacity: 0.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+.section { margin-bottom: 48px; }
+.section h2 { font-size: 24px; margin: 0 0 24px 0; color: #333; border-bottom: 3px solid #667eea; padding-bottom: 12px; }
+.pipeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.deal-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); border-left: 4px solid #667eea; }
+.deal-card.series-a { border-left-color: #f44336; }
+.deal-card.series-b { border-left-color: #ff9800; }
+.deal-card.growth { border-left-color: #4caf50; }
+.deal-card h3 { margin: 0 0 12px 0; font-size: 18px; color: #333; }
+.company-name { font-weight: 700; color: #667eea; }
+.deal-meta { display: flex; justify-content: space-between; margin: 12px 0; padding: 12px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.deal-meta-item { color: #666; }
+.deal-meta-value { font-weight: 600; color: #333; }
+.deal-status { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; margin-top: 12px; }
+.status-outreach { background: #e3f2fd; color: #1565c0; }
+.status-conversation { background: #f3e5f5; color: #6a1b9a; }
+.status-dd { background: #fff3e0; color: #e65100; }
+.status-ready { background: #e8f5e9; color: #2e7d32; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th { background: #f5f5f5; padding: 12px; text-align: left; border-bottom: 2px solid #ddd; font-weight: 600; color: #666; }
+td { padding: 12px; border-bottom: 1px solid #f0f0f0; }
+tr:hover { background: #fafafa; }
+.stat-box { background: white; border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+.stat-number { font-size: 36px; font-weight: 700; color: #667eea; }
+.stat-label { color: #666; font-size: 14px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Bene Gesserit Pipeline</h1>
+<div class="nav">
+<a href="index.html">Radar</a>
+<a href="pipeline.html">Pipeline</a>
+<a href="2026-04-17b.html">Reports</a>
+</div>
+</div>
+<div class="container">
+<div class="section">
+<h2>Pipeline Overview</h2>
+<div class="pipeline-grid">
+<div class="stat-box"><div class="stat-number">23</div><div class="stat-label">Outreach Queue</div></div>
+<div class="stat-box"><div class="stat-number">12</div><div class="stat-label">In Conversation</div></div>
+<div class="stat-box"><div class="stat-number">5</div><div class="stat-label">Due Diligence</div></div>
+<div class="stat-box"><div class="stat-number">2</div><div class="stat-label">Ready to Fund</div></div>
+</div>
+</div>
+<div class="section">
+<h2>Series A Prospects (21X AG, Matchbook Predictions)</h2>
+<div class="pipeline-grid">
+<div class="deal-card series-a">
+<h3><span class="company-name">21X AG</span></h3>
+<p>Agricultural AI platform for crop optimization and precision farming across Europe.</p>
+<div class="deal-meta">
+<span class="deal-meta-item">Round: <span class="deal-meta-value">Series A</span></span>
+<span class="deal-meta-item">Size: <span class="deal-meta-value">€3-5M</span></span>
+<span class="deal-meta-item">Location: <span class="deal-meta-value">Germany</span></span>
+</div>
+<span class="deal-status status-conversation">In Conversation</span>
+</div>
+<div class="deal-card series-a">
+<h3><span class="company-name">Matchbook Predictions</span></h3>
+<p>Real-time sports analytics and predictive modeling for betting markets and odds optimization.</p>
+<div class="deal-meta">
+<span class="deal-meta-item">Round: <span class="deal-meta-value">Series A</span></span>
+<span class="deal-meta-item">Size: <span class="deal-meta-value">$2-4M</span></span>
+<span class="deal-meta-item">Location: <span class="deal-meta-value">UK</span></span>
+</div>
+<span class="deal-status status-outreach">Outreach</span>
+</div>
+</div>
+</div>
+<div class="section">
+<h2>Active Conversations</h2>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Sector</th>
+<th>Round</th>
+<th>Status</th>
+<th>Last Contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>21X AG</strong></td>
+<td>AgTech/AI</td>
+<td>Series A</td>
+<td><span class="deal-status status-conversation">Conversation</span></td>
+<td>Apr 16</td>
+</tr>
+<tr>
+<td><strong>HydroFlow Systems</strong></td>
+<td>Climate Tech</td>
+<td>Series B</td>
+<td><span class="deal-status status-dd">Due Diligence</span></td>
+<td>Apr 15</td>
+</tr>
+<tr>
+<td><strong>BioMark Labs</strong></td>
+<td>Biotech</td>
+<td>Series A</td>
+<td><span class="deal-status status-dd">Due Diligence</span></td>
+<td>Apr 14</td>
+</tr>
+<tr>
+<td><strong>NeuralEdge</strong></td>
+<td>AI/ML</td>
+<td>Series B</td>
+<td><span class="deal-status status-ready">Ready to Fund</span></td>
+<td>Apr 12</td>
+</tr>
+<tr>
+<td><strong>Matchbook Predictions</strong></td>
+<td>Sports Analytics</td>
+<td>Series A</td>
+<td><span class="deal-status status-outreach">Outreach</span></td>
+<td>Apr 10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2>Due Diligence Pipeline</h2>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Focus Area</th>
+<th>Key Metrics</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HydroFlow Systems</strong></td>
+<td>Water Management</td>
+<td>ARR: €450K, MRR Growth: 12%</td>
+<td>Decision: Apr 25</td>
+</tr>
+<tr>
+<td><strong>BioMark Labs</strong></td>
+<td>Biomarker Detection</td>
+<td>Clinical Trials: Phase II</td>
+<td>Decision: May 2</td>
+</tr>
+<tr>
+<td><strong>CloudScale AI</strong></td>
+<td>Infrastructure ML</td>
+<td>Revenue: €320K, Customers: 18</td>
+<td>Decision: May 8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2>Ready to Fund</h2>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Investment Size</th>
+<th>Valuation</th>
+<th>Expected Close</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NeuralEdge</strong></td>
+<td>$8M</td>
+<td>$45M</td>
+<td>Apr 28</td>
+</tr>
+<tr>
+<td><strong>VentureSoft</strong></td>
+<td>€6M</td>
+<td>€32M</td>
+<td>May 5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

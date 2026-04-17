@@ -5,90 +5,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Bene Gesserit Radar</title>
+<title>Bene Gesserit Radar Hub</title>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <style>
-html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; background: #f5f5f5; }
-.header { padding: 16px 24px; background: white; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.header h1 { margin: 0; font-size: 24px; color: #1a1a1a; }
-.container { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; height: calc(100% - 80px); overflow-y: auto; }
-.card { background: white; border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-.card h2 { margin: 0 0 12px 0; font-size: 16px; color: #333; }
-.metric { display: flex; justify-content: space-between; margin: 8px 0; font-size: 14px; }
-.metric-label { color: #666; }
-.metric-value { font-weight: 600; color: #1a1a1a; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { background: #f9f9f9; padding: 8px; text-align: left; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #666; }
-td { padding: 8px; border-bottom: 1px solid #f0f0f0; }
-.status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; }
-.status.active { background: #e8f5e9; color: #2e7d32; }
-.status.inactive { background: #f3e5f5; color: #6a1b9a; }
-.status.lost { background: #ffebee; color: #c62828; }
-a { color: #1976d2; text-decoration: none; }
-a:hover { text-decoration: underline; }
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.8); padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.header h1 { margin: 0; font-size: 28px; color: white; font-weight: 700; }
+.nav-links { position: fixed; top: 16px; right: 24px; z-index: 101; }
+.nav-links a { color: white; text-decoration: none; margin-left: 24px; font-size: 14px; transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 0.7; }
+.container { padding-top: 80px; padding-bottom: 32px; overflow-y: auto; height: 100%; box-sizing: border-box; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; padding: 24px; max-width: 1400px; margin: 0 auto; }
+.card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+.card h2 { margin: 0 0 16px 0; font-size: 18px; color: #333; font-weight: 600; }
+.metric { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.metric:last-child { border-bottom: none; }
+.metric-label { font-size: 14px; color: #666; }
+.metric-value { font-size: 20px; font-weight: 700; color: #667eea; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+th { background: #f9f9f9; padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0; font-weight: 600; color: #666; }
+td { padding: 12px; border-bottom: 1px solid #f0f0f0; }
+tr:hover { background: #fafafa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+.badge.hot { background: #ffebee; color: #c62828; }
+.badge.warm { background: #fff3e0; color: #e65100; }
+.badge.cool { background: #e3f2fd; color: #1565c0; }
+.badge.neutral { background: #f5f5f5; color: #666; }
+.section { margin-bottom: 24px; }
+.timestamp { font-size: 12px; color: #999; margin-top: 8px; }
 </style>
 </head>
 <body>
 <div class="header">
-<h1>Bene Gesserit Radar</h1>
+<h1>Bene Gesserit Radar Hub</h1>
+<div class="nav-links">
+<a href="index.html">Radar</a>
+<a href="pipeline.html">Pipeline</a>
+<a href="2026-04-17b.html">Reports</a>
+</div>
 </div>
 <div class="container">
+<div class="grid">
 <div class="card">
-<h2>Market Snapshot</h2>
+<h2>Market Intelligence</h2>
 <div class="metric">
-<span class="metric-label">Total Tracked</span>
-<span class="metric-value">247</span>
+<span class="metric-label">Total Signals</span>
+<span class="metric-value">1,247</span>
 </div>
 <div class="metric">
-<span class="metric-label">Active Deals</span>
+<span class="metric-label">Hot Targets</span>
 <span class="metric-value">89</span>
 </div>
 <div class="metric">
-<span class="metric-label">Recent Updates</span>
-<span class="metric-value">23</span>
+<span class="metric-label">Last Updated</span>
+<span class="metric-value">2h ago</span>
 </div>
+<div class="timestamp">Next scan: 8:00 PM PT</div>
 </div>
 <div class="card">
-<h2>Recent Activity</h2>
+<h2>Recent Signals</h2>
 <table>
-<thead>
-<tr><th>Company</th><th>Status</th><th>Date</th></tr>
-</thead>
+<thead><tr><th>Signal</th><th>Sector</th><th>Heat</th></tr></thead>
 <tbody>
-<tr><td>Company A</td><td><span class="status active">Active</span></td><td>Apr 17</td></tr>
-<tr><td>Company B</td><td><span class="status active">Active</span></td><td>Apr 16</td></tr>
-<tr><td>Company C</td><td><span class="status inactive">Inactive</span></td><td>Apr 15</td></tr>
+<tr><td>Series A Close</td><td>AI/ML</td><td><span class="badge hot">Hot</span></td></tr>
+<tr><td>Product Launch</td><td>Climate</td><td><span class="badge warm">Warm</span></td></tr>
+<tr><td>Acqui-Hire</td><td>Web3</td><td><span class="badge cool">Cool</span></td></tr>
+<tr><td>Pivot Signal</td><td>Biotech</td><td><span class="badge hot">Hot</span></td></tr>
 </tbody>
 </table>
 </div>
 <div class="card">
 <h2>Apr 17 Europe</h2>
 <div class="metric">
-<span class="metric-label">Markets Scanned</span>
+<span class="metric-label">Countries Scanned</span>
+<span class="metric-value">14</span>
+</div>
+<div class="metric">
+<span class="metric-label">New Companies</span>
+<span class="metric-value">127</span>
+</div>
+<div class="metric">
+<span class="metric-label">Hot Prospects</span>
+<span class="metric-value">34</span>
+</div>
+<div class="timestamp">Depth scan completed 3:42 PM UTC</div>
+</div>
+<div class="card">
+<h2>Sector Breakdown</h2>
+<table>
+<thead><tr><th>Sector</th><th>Count</th><th>Trend</th></tr></thead>
+<tbody>
+<tr><td>AI/Machine Learning</td><td>234</td><td>↑ Strong</td></tr>
+<tr><td>Climate Tech</td><td>156</td><td>↑ Growing</td></tr>
+<tr><td>Biotech/Health</td><td>189</td><td>→ Steady</td></tr>
+<tr><td>Enterprise SaaS</td><td>198</td><td>↓ Cooling</td></tr>
+<tr><td>Web3/Crypto</td><td>47</td><td>↓ Cold</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Geographic Heat Map</h2>
+<table>
+<thead><tr><th>Region</th><th>Activity Level</th></tr></thead>
+<tbody>
+<tr><td>Western Europe</td><td><strong>Very Hot</strong></td></tr>
+<tr><td>Central Europe</td><td><strong>Hot</strong></td></tr>
+<tr><td>Eastern Europe</td><td><strong>Warm</strong></td></tr>
+<tr><td>Nordic Region</td><td><strong>Hot</strong></td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Pipeline Status</h2>
+<div class="metric">
+<span class="metric-label">Outreach Queue</span>
+<span class="metric-value">23</span>
+</div>
+<div class="metric">
+<span class="metric-label">In Conversation</span>
 <span class="metric-value">12</span>
 </div>
 <div class="metric">
-<span class="metric-label">New Targets</span>
-<span class="metric-value">34</span>
+<span class="metric-label">Due Diligence</span>
+<span class="metric-value">5</span>
 </div>
 <div class="metric">
-<span class="metric-label">Updates</span>
-<span class="metric-value">8</span>
+<span class="metric-label">Ready to Fund</span>
+<span class="metric-value">2</span>
 </div>
 </div>
-<div class="card">
-<h2>Top Regions</h2>
-<table>
-<thead>
-<tr><th>Region</th><th>Activity</th></tr>
-</thead>
-<tbody>
-<tr><td>Western Europe</td><td>High</td></tr>
-<tr><td>Central Europe</td><td>Medium</td></tr>
-<tr><td>Eastern Europe</td><td>Low</td></tr>
-</tbody>
-</table>
 </div>
 </div>
 </body>
