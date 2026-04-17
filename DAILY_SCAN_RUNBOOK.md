@@ -11,7 +11,7 @@
 The portal has broken multiple times this month because sessions pushed `pipeline.html` as 0 bytes after a content-truncation accident, then tried to "fix" it by fabricating replacement data. If you are here because the site looks broken:
 
 - **Do not fabricate startup data.** Ever. If `pipeline.html` is zero bytes, the data still exists in git history — restore from there.
-- **Do not push large files through multiple-round-trip content assembly.** Use `scripts/push_with_guard.py` and pass the file path.
+- **Do not push large files through multiple-round-trip content assembly.** Use `push_with_guard.py` and pass the file path.
 - **Do not invent a new architecture mid-incident.** If you need to change the data model, open a scope doc, don't improvise in production.
 
 ---
@@ -30,7 +30,7 @@ Each radar run produces:
 ## How to push (use the guarded script)
 
 ```bash
-python scripts/push_with_guard.py \
+python push_with_guard.py \
   --owner dpowert2 --repo Bene_Gesserit --pat <PAT> \
   --file pipeline.html \
   --file index.html \
