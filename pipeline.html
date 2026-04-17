@@ -388,7 +388,7 @@
 </div>
 
 <script>
-const startups = [
+let startups = [
   {slug: "solvapay", name: "SolvaPay", url: "https://solvapay.com", oneliner: "Stockholm-based startup building machine-native payment rails that let AI agents discover, negotiate, and pay for services autonomously across platforms. €2.4M pre-seed from Redstone, MS&AD Ventures, and Antler.", gap: "Cat 7 — Agent Payment Rails", stage: "Pre-Seed — €2.4M", geo: "Stockholm, Sweden", team: "Founding team alumni from Spotify, FIS, Bank of America, Lehman Brothers, and Handelsbanken. Round led by Redstone and MS&AD Ventures, with Antler and Greens Ventures participating.", finserv: "Founding team brings 50+ years combined experience at FIS, Bank of America, Lehman Brothers, and Handelsbanken — heavy regulated finserv DNA. Positioned explicitly for the agentic economy with agent-to-agent transaction discovery and settlement.", thesis: "SolvaPay is a candidate for the machine-native payment layer the agentic app store needs. The Stockholm base answers the recurring 'Europe equivalent?' scout request. At pre-seed, there is maximum opportunity to shape product direction toward the regulated financial agent context. The team's FIS/BoA/Lehman DNA suggests they understand the compliance constraints that matter for institutional deployment.", evidence: [["SolvaPay raises €2.4m — Fintech Global", "https://fintech.global/2026/04/15/solvapay-raises-e2-4m-for-agentic-payment-layer/"], ["SolvaPay pre-seed — EU Startups", "https://www.eu-startups.com/2026/04/stockholms-solvapay-raises-e2-4-million-pre-seed-to-build-payments-infrastructure-for-agentic-commerce/"]], score: 88, bars: {gap: [26, 35], finserv: [21, 25], stage: [20, 20], team: [16, 20]}},
   {slug: "pillar", name: "Pillar", url: "https://pillar.finance", oneliner: "AI agent that continuously constructs and manages hedge portfolios for commodity-exposed businesses — autonomously ingesting exposure data, sizing positions, and executing trades against live risk. $20M seed led by a16z.", gap: "S2 — Portfolio Construction & Risk Agent", stage: "Seed — $20M", geo: "San Francisco, US", team: "Co-founders Harsha Ramesh (CEO) and Chinmay Deshpande (CTO). Investors: Andreessen Horowitz (lead), Crucible Capital, Gallery Ventures, and Dara Khosrowshahi (Uber CEO). $23M total raised.", finserv: "Clients include commodity trading firms, metal recyclers, and logistics companies managing FX and freight exposure. Pillar executes live trades, monitors risk in real time, and adjusts positions autonomously — a genuine execution agent rather than a dashboard.", thesis: "Pillar demonstrates the S2 Portfolio Construction & Risk agent pattern at production scale — the agent ingests raw exposure from ERP, contracts, and spreadsheets, builds the hedge portfolio, and executes trades autonomously. The market is commodity hedging for industrial businesses rather than investment portfolios, which limits direct fit, but the underlying capability is exactly the pattern needed in the investment context. HARD NOTE: at $23M total raised, this may already be past the shaping window — monitor rather than pursue aggressively.", evidence: [["Pillar raises $20M seed — TechCrunch", "https://techcrunch.com/2026/04/14/financial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z/"], ["Pillar targets institutional hedge gap — AInvest", "https://www.ainvest.com/news/pillar-targets-institutional-hedge-gap-ai-powered-real-time-risk-control-2604/"]], score: 72, bars: {gap: [18, 35], finserv: [16, 25], stage: [15, 20], team: [17, 20]}},
   {slug: "alinia", name: "Alinia", url: "https://alinia.ai/", oneliner: "Backend compliance controller for high-stake AI agents — embeds real-time auditing, policy enforcement, and risk controls into AI systems at scale. MiFID II focus.", gap: "Compliance", stage: "Seed — $7.5M", geo: "Barcelona, Spain", team: "Ariadna Font Llitjós (CEO, co-founder), Carlos Muñoz Ferrandis (co-founder). Mouro Capital (Santander) led.", finserv: "Santander/Mouro Capital backing. MiFID II compliance focus. Banking-first go-to-market. Working with Santander Group and Origin Financial.", thesis: "Alinia fills the Audit & Explainability gap — the first pipeline company dedicated to real-time compliance monitoring and policy enforcement for AI agents in regulated finance. The Santander/Mouro backing validates finserv alignment. European HQ and MiFID II focus make this compliance-native by design. Key uncertainty: whether the product extends to external/third-party agents or primarily serves internal institutional AI — the internal/external boundary is the decisive scoring dimension.", evidence: [["Alinia Seed Round", "https://alinia.ai/alinia-seed-round-7-5-milions/"], ["TechFundingNews", "https://techfundingnews.com/alinia-raises-7-5m-seed-ai-compliance-finance/"]], score: 83, bars: {gap: [25, 35], finserv: [22, 25], stage: [18, 20], team: [13, 20]}},
@@ -928,7 +928,7 @@ const startups = [
   }
 ];
 
-const SLUG_DATES = {"solvapay":"2026-04-17","pillar":"2026-04-17","alter":"2026-03-09","dyna-ai":"2026-03-09","guardrails-ai":"2026-03-09","hive-tax-ai":"2026-03-09","mezzi":"2026-03-09","mine-moneygpt":"2026-03-09","natural-payments":"2026-03-09","overmind":"2026-03-09","stacks":"2026-03-09","t54-labs":"2026-03-09","tendi":"2026-03-09","trace":"2026-03-09","unit21":"2026-03-09","uptiq":"2026-03-09","bretton-ai":"2026-03-11","oasis-security":"2026-03-11","taxdown":"2026-03-11","kai":"2026-03-12","lyzr":"2026-03-12","sapiom":"2026-03-12","sphinx":"2026-03-12","complyance":"2026-03-15","jetstream-security":"2026-03-15","onyx-security":"2026-03-15","armorcode":"2026-03-18","certivo":"2026-03-18","goodfire":"2026-03-18","april":"2026-03-19","manifold":"2026-03-19","steward":"2026-03-20","armadin":"2026-03-22","obin-ai":"2026-03-22","harvey":"2026-03-26","imper-ai":"2026-03-26","opencfo":"2026-03-26","zoven":"2026-03-26","hybridity":"2026-04-01","norm-ai":"2026-04-01","aether-datahub":"2026-04-02","interloom":"2026-04-02","kaaj":"2026-04-02","keycard":"2026-04-02","linx-security":"2026-04-02","mindgard":"2026-04-02","natural":"2026-04-02","novee":"2026-04-02","sycamore":"2026-04-02","unique-ai":"2026-04-02","venice-security":"2026-04-02","vivox-ai":"2026-04-02","bank-of-bots":"2026-04-04","numos":"2026-04-04","openbox-ai":"2026-04-04","pace":"2026-04-04","lema-ai":"2026-04-06","meridian-ai":"2026-04-06","galdera":"2026-04-10","haast":"2026-04-10","juno":"2026-04-10","appzen":"2026-04-12","nexus":"2026-04-12","octonomy":"2026-04-12","resistant-ai":"2026-04-12","basis":"2026-04-14","ralio":"2026-04-14","nava":"2026-04-14","trent-ai":"2026-04-14","vouched":"2026-04-14","alomana":"2026-04-14","agentsmyth":"2026-04-15","serafis":"2026-04-15","kimpton-ai":"2026-04-15","mount-insurance":"2026-04-15","klaimee":"2026-04-15"};
+let SLUG_DATES = {"solvapay":"2026-04-17","pillar":"2026-04-17","alter":"2026-03-09","dyna-ai":"2026-03-09","guardrails-ai":"2026-03-09","hive-tax-ai":"2026-03-09","mezzi":"2026-03-09","mine-moneygpt":"2026-03-09","natural-payments":"2026-03-09","overmind":"2026-03-09","stacks":"2026-03-09","t54-labs":"2026-03-09","tendi":"2026-03-09","trace":"2026-03-09","unit21":"2026-03-09","uptiq":"2026-03-09","bretton-ai":"2026-03-11","oasis-security":"2026-03-11","taxdown":"2026-03-11","kai":"2026-03-12","lyzr":"2026-03-12","sapiom":"2026-03-12","sphinx":"2026-03-12","complyance":"2026-03-15","jetstream-security":"2026-03-15","onyx-security":"2026-03-15","armorcode":"2026-03-18","certivo":"2026-03-18","goodfire":"2026-03-18","april":"2026-03-19","manifold":"2026-03-19","steward":"2026-03-20","armadin":"2026-03-22","obin-ai":"2026-03-22","harvey":"2026-03-26","imper-ai":"2026-03-26","opencfo":"2026-03-26","zoven":"2026-03-26","hybridity":"2026-04-01","norm-ai":"2026-04-01","aether-datahub":"2026-04-02","interloom":"2026-04-02","kaaj":"2026-04-02","keycard":"2026-04-02","linx-security":"2026-04-02","mindgard":"2026-04-02","natural":"2026-04-02","novee":"2026-04-02","sycamore":"2026-04-02","unique-ai":"2026-04-02","venice-security":"2026-04-02","vivox-ai":"2026-04-02","bank-of-bots":"2026-04-04","numos":"2026-04-04","openbox-ai":"2026-04-04","pace":"2026-04-04","lema-ai":"2026-04-06","meridian-ai":"2026-04-06","galdera":"2026-04-10","haast":"2026-04-10","juno":"2026-04-10","appzen":"2026-04-12","nexus":"2026-04-12","octonomy":"2026-04-12","resistant-ai":"2026-04-12","basis":"2026-04-14","ralio":"2026-04-14","nava":"2026-04-14","trent-ai":"2026-04-14","vouched":"2026-04-14","alomana":"2026-04-14","agentsmyth":"2026-04-15","serafis":"2026-04-15","kimpton-ai":"2026-04-15","mount-insurance":"2026-04-15","klaimee":"2026-04-15"};
 
 function formatDateLong(iso) {
   if (!iso) return '';
@@ -1240,8 +1240,46 @@ function closeSettings() {const m = document.getElementById('settings-modal'); m
 function saveSettings() {try {const n=(document.getElementById('voter-name-input').value||'').trim(); if(n) voter=n;} catch (e) {} try {if(voter) localStorage.setItem('bg_voter_name', voter);} catch (e) {} try {if(voter){const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`;}} catch(e) {} closeSettings(); updateGearState(); if (_pendingVote && voter) {const {slug, val, action} = _pendingVote; _pendingVote = null; if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);}}
 function updateGearState() {const gear = document.getElementById('settings-btn'); if (!gear) return; gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution'; gear.classList.toggle('connected', !!voter);}
 
-document.addEventListener('DOMContentLoaded', () => {
+/* ── Runtime data loader (P1) ──────────────────────────────────────
+ * Try to fetch per-startup card JSON from /pipeline/cards/*.json plus
+ * /pipeline/manifest.json. If that succeeds, replace the inline
+ * `startups` array and `SLUG_DATES` map before rendering. If anything
+ * fails, silently fall back to the inline copies baked into this file
+ * — the site keeps working even if runtime data is missing/broken.
+ *
+ * This lets daily scans add new startups by committing small JSON
+ * files instead of editing this 180KB viewer. The inline arrays are
+ * kept as a safety net and will be removed in a follow-up once the
+ * fetch path is validated in prod.
+ */
+async function preloadAndRender() {
+  try {
+    const m = await fetch('pipeline/manifest.json', { cache: 'no-cache' }).then(r => {
+      if (!r.ok) throw new Error('manifest ' + r.status);
+      return r.json();
+    });
+    if (!m || !Array.isArray(m.cards) || m.cards.length === 0) {
+      throw new Error('manifest empty');
+    }
+    const cards = await Promise.all(
+      m.cards.map(c =>
+        fetch(`pipeline/cards/${c.slug}.json`, { cache: 'no-cache' })
+          .then(r => r.ok ? r.json() : Promise.reject(new Error(`${c.slug} ${r.status}`)))
+      )
+    );
+    // Sanity: parallel fetches all returned objects with a slug
+    if (cards.some(c => !c || !c.slug)) throw new Error('malformed card in fetch result');
+    startups = cards;
+    SLUG_DATES = Object.fromEntries(cards.filter(c => c.run_date).map(c => [c.slug, c.run_date]));
+    console.log(`[pipeline] loaded ${cards.length} cards from runtime fetch`);
+  } catch (e) {
+    console.warn('[pipeline] runtime fetch failed, using inline fallback:', e);
+  }
   renderPipelineCards();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  preloadAndRender();
   updateGearState();
   document.getElementById('settings-modal').addEventListener('click', e => {if (e.target.id === 'settings-modal') closeSettings();});
   document.getElementById('voter-name-input').addEventListener('keydown', e => {if (e.key === 'Enter') saveSettings();});
