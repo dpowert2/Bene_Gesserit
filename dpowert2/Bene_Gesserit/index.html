@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (window.location.href.includes('?utm')) { window.location.href = window.location.href.replace(/\?utm.*/, ''); }</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Bene Gesserit Radar</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; background: #f5f5f5; }
+.header { padding: 16px 24px; background: white; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.header h1 { margin: 0; font-size: 24px; color: #1a1a1a; }
+.container { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; height: calc(100% - 80px); overflow-y: auto; }
+.card { background: white; border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.card h2 { margin: 0 0 12px 0; font-size: 16px; color: #333; }
+.metric { display: flex; justify-content: space-between; margin: 8px 0; font-size: 14px; }
+.metric-label { color: #666; }
+.metric-value { font-weight: 600; color: #1a1a1a; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: #f9f9f9; padding: 8px; text-align: left; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #666; }
+td { padding: 8px; border-bottom: 1px solid #f0f0f0; }
+.status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; }
+.status.active { background: #e8f5e9; color: #2e7d32; }
+.status.inactive { background: #f3e5f5; color: #6a1b9a; }
+.status.lost { background: #ffebee; color: #c62828; }
+a { color: #1976d2; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Bene Gesserit Radar</h1>
+</div>
+<div class="container">
+<div class="card">
+<h2>Market Snapshot</h2>
+<div class="metric">
+<span class="metric-label">Total Tracked</span>
+<span class="metric-value">247</span>
+</div>
+<div class="metric">
+<span class="metric-label">Active Deals</span>
+<span class="metric-value">89</span>
+</div>
+<div class="metric">
+<span class="metric-label">Recent Updates</span>
+<span class="metric-value">23</span>
+</div>
+</div>
+<div class="card">
+<h2>Recent Activity</h2>
+<table>
+<thead>
+<tr><th>Company</th><th>Status</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr><td>Company A</td><td><span class="status active">Active</span></td><td>Apr 17</td></tr>
+<tr><td>Company B</td><td><span class="status active">Active</span></td><td>Apr 16</td></tr>
+<tr><td>Company C</td><td><span class="status inactive">Inactive</span></td><td>Apr 15</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h2>Apr 17 Europe</h2>
+<div class="metric">
+<span class="metric-label">Markets Scanned</span>
+<span class="metric-value">12</span>
+</div>
+<div class="metric">
+<span class="metric-label">New Targets</span>
+<span class="metric-value">34</span>
+</div>
+<div class="metric">
+<span class="metric-label">Updates</span>
+<span class="metric-value">8</span>
+</div>
+</div>
+<div class="card">
+<h2>Top Regions</h2>
+<table>
+<thead>
+<tr><th>Region</th><th>Activity</th></tr>
+</thead>
+<tbody>
+<tr><td>Western Europe</td><td>High</td></tr>
+<tr><td>Central Europe</td><td>Medium</td></tr>
+<tr><td>Eastern Europe</td><td>Low</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
