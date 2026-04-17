@@ -1,0 +1,42 @@
+{
+  "slug": "sycamore",
+  "name": "Sycamore",
+  "url": "https://sycamore.so/press-releases/sycamore-raises-65m-seed/",
+  "oneliner": "Trusted agent operating system for the enterprise — enabling organisations to deploy, orchestrate, and govern autonomous AI agents with built-in security, compliance, and operational control.",
+  "gap": "Agent Orchestration",
+  "stage": "Seed ($65M)",
+  "geo": "USA",
+  "finserv": "Enterprise customers confirmed but not named. No explicit finserv evidence.",
+  "team": "Sri Viswanath (CEO, former Atlassian CTO, scaled eng to 7,000+; former Coatue investor). Angels: Bob McGrew (ex-OpenAI Chief Scientist), Ali Ghodsi (Databricks CEO), Lip-Bu Tan (Intel CEO). Led by Coatue + Lightspeed.",
+  "thesis": "Sycamore's 'trusted agent OS' framing is the closest the orchestration category has come to addressing governance and compliance natively. If 'trusted' gets operationalised into regulatory compliance primitives, this becomes thesis-relevant infrastructure at the OS level.",
+  "evidence": [
+    [
+      "Former Coatue partner raises $65M seed for enterprise AI agent startup",
+      "https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/"
+    ],
+    [
+      "Sycamore Raises $65M to Build the Trusted Agent Operating System",
+      "https://sycamore.so/press-releases/sycamore-raises-65m-seed/"
+    ]
+  ],
+  "score": 65,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      8,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      20,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

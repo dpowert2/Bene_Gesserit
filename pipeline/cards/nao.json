@@ -1,0 +1,42 @@
+{
+  "slug": "nao",
+  "name": "Nao Finance",
+  "url": "https://www.nao.finance/",
+  "oneliner": "Retail ELTIF 2.0 distributor bringing institutional PE, private debt, and infrastructure funds to European consumers from \u20ac1. Natixis and Muzinich partnerships live.",
+  "gap": "Product Inversion \u2014 ELTIF 2.0 retail",
+  "stage": "Growth \u2014 Natixis partner",
+  "geo": "Berlin, Germany",
+  "finserv": "Distribution partnerships with Natixis / Muzinich private-debt ELTIF; operates under ELTIF 2.0; BaFin-adjacent through partners. Entry points from \u20ac1 or \u20ac1,000 savings plans.",
+  "team": "Berlin-based; strategic tie-ups with tier-1 asset managers compensate for modest headline capital-raise visibility. Team details not widely public yet.",
+  "thesis": "ELTIF 2.0 was the biggest European retail-access regulatory unlock of the last decade, and most traditional banks are moving far too slowly. Nao is the cleanest European bet that the private-markets wrapper will be the next 'ETF' retail moment \u2014 a textbook Caroline Federal inversion.",
+  "evidence": [
+    [
+      "Nao Finance",
+      "https://www.nao.finance/"
+    ],
+    [
+      "Natixis / Nao ELTIF launch",
+      "https://www.im.natixis.com/en-institutional/news/natixis-nao-partnership"
+    ]
+  ],
+  "score": 85,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      12,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "obligate",
+  "name": "Obligate",
+  "url": "https://www.obligate.com/",
+  "oneliner": "On-chain issuance and trading of tokenised bonds and commercial paper under Swiss DLT Act \u2014 720% annualised issuance growth.",
+  "gap": "Tokenization \u2014 debt / commercial paper",
+  "stage": "Series A \u2014 ~$3M",
+  "geo": "Zurich, Switzerland",
+  "finserv": "Swiss DLT Act compliant; FINMA-supervised. Built for regulated institutional issuers and qualified buyers. Exponential Science Capital lead plus ~150 Republic Europe angels.",
+  "team": "Ex-institutional capital-markets founders; the Swiss DLT Act wrapper is cleaner for tokenised debt than anything MiCA currently offers.",
+  "thesis": "Corporate bond and commercial paper issuance is plumbing that has barely changed in 40 years. Obligate is among the very few European plays with live regulated issuance at meaningful pace \u2014 small AUM today but the regulatory path is unusually clean.",
+  "evidence": [
+    [
+      "Obligate",
+      "https://www.obligate.com/"
+    ],
+    [
+      "FINMA DLT Act overview",
+      "https://www.finma.ch/en/authorisation/fintech/"
+    ]
+  ],
+  "score": 84,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      13,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

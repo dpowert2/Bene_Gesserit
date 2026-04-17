@@ -1,0 +1,42 @@
+{
+  "slug": "pace",
+  "name": "Pace",
+  "url": "https://withpace.com",
+  "oneliner": "Agentic AI systems that autonomously handle insurance operations — submissions intake, claims processing, and document-heavy back-office workflows — replacing the offshore BPO layer at regulated insurers.",
+  "gap": "Agent Orchestration",
+  "stage": "Series A ($10M)",
+  "geo": "USA",
+  "finserv": "$10M Series A led by Sequoia Capital. Production customers include Prudential Financial, The Mutual Group, and Newfront — all regulated insurance entities.",
+  "team": "CEO: Cuffe — previously co-founder of Cheer, acquired by Retool (2020). Backed by Sequoia, Bryan Schreier.",
+  "thesis": "Pace is occupying the BPO replacement layer inside regulated insurance — a position with exceptional defensibility. Prudential relationship gives it direct finserv credibility.",
+  "evidence": [
+    [
+      "Pace raises $10M to automate insurance operations",
+      "https://fintech.global/2026/01/28/pace-raises-10m-to-automate-insurance-operations/"
+    ],
+    [
+      "Pace selected by Prudential Financial",
+      "https://www.businesswire.com/news/home/20251203008504/en/Pace-selected-by-Prudential-Financial-to-help-automate-its-insurance-operations-with-agentic-AI"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-04"
+}

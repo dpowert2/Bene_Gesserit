@@ -1,0 +1,42 @@
+{
+  "slug": "naro",
+  "name": "NaroIQ",
+  "url": "https://www.naroiq.com/",
+  "oneliner": "ETF and fund issuance infrastructure that lets any bank or fintech launch its own ETFs \u2014 the 'Stripe-for-funds' European play. Seed $6.5M.",
+  "gap": "Product Inversion \u2014 ETF issuance",
+  "stage": "Seed \u2014 $6.5M",
+  "geo": "Cologne, Germany",
+  "finserv": "B2B distribution thesis; board includes operators from Trade Republic, N26, Liqid, Plaid. Magnetic-led seed; General Catalyst re-upping from pre-seed.",
+  "team": "Ex-Flix / Forto operator founders; European fintech pedigree. Board density is the tell \u2014 this is a team with real distribution access to the neobanks that would be the first clients.",
+  "thesis": "Product inversion doesn't always look like a consumer app. Tearing down the wholesale issuance layer so any distributor can offer thematic / factor / private-market baskets is a bigger prize than a single retail brand. NaroIQ is positioned to become the European issuance rail for everything that looks like an ETF.",
+  "evidence": [
+    [
+      "NaroIQ",
+      "https://www.naroiq.com/"
+    ],
+    [
+      "NaroIQ $6.5M seed",
+      "https://www.naroiq.com/news/seed-round"
+    ]
+  ],
+  "score": 90,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      19,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

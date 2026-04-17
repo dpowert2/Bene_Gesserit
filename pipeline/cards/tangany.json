@@ -1,0 +1,42 @@
+{
+  "slug": "tangany",
+  "name": "Tangany",
+  "url": "https://tangany.com/",
+  "oneliner": "BaFin-regulated digital-asset custodian with \u20ac3B+ under custody \u2014 the custody leg of Germany's tokenisation stack. Series A \u20ac10M.",
+  "gap": "Tokenization \u2014 custody",
+  "stage": "Series A \u2014 \u20ac10M",
+  "geo": "Munich, Germany",
+  "finserv": "BaFin crypto-custody licence; integrations with Cashlink and Finexity. Backed by Baader Bank, Elevator Ventures, Heliad Crypto Partners. \u20ac3B+ in digital assets under custody.",
+  "team": "Munich fintech founders who understand they are infrastructure rather than a destination product. Baader Bank's strategic presence unlocks genuine banking distribution.",
+  "thesis": "Custody is the quiet monopoly in tokenisation. Tangany is already the BaFin-licensed custodian behind a big chunk of Germany's eWpG tokenised securities \u2014 combined with Cashlink and 21X, it closes the German full-stack picture.",
+  "evidence": [
+    [
+      "Tangany",
+      "https://tangany.com/"
+    ],
+    [
+      "Baader Bank / Tangany Series A",
+      "https://www.baaderbank.de/Baader-Bank-invests-in-Tangany-e-1004"
+    ]
+  ],
+  "score": 91,
+  "bars": {
+    "gap": [
+      27,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

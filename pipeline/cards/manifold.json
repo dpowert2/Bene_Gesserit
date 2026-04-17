@@ -1,0 +1,42 @@
+{
+  "slug": "manifold",
+  "name": "Manifold",
+  "url": "https://manifoldaidr.com",
+  "oneliner": "Manifold is an AI Detection and Response (AIDR) platform that provides real-time runtime visibility into autonomous AI agents — monitoring every tool call, MCP server connection, database access, and external system interaction — so enterprise security teams can detect and respond to agentic AI risks before they become incidents.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed ($8M)",
+  "geo": "San Francisco, CA",
+  "finserv": "Financial institutions deploying AI agents in customer-facing and back-office workflows face a new class of risk: agents that behave unpredictably, access systems beyond their intended scope, or are manipulated via prompt injection. Manifold's AIDR platform provides the runtime observability layer that compliance and security teams will require as a precondition for production agent deployment in regulated environments. Investors include Rain Capital (cybersecurity specialist) and angels from Uber's CSO and Google DeepMind's CISO — both of whom have financial sector client exposure at scale.",
+  "team": "Founded by Neal Swaelens, Oleksandr Yaremchuk, and Michael McKenna. Swaelens and Yaremchuk co-founded Laiyer AI, creators of LLM Guard — the most widely adopted open-source LLM firewall with millions of downloads. Backed by Costanoa Ventures (lead), Cherry Ventures, Rain Capital, Modern Technical Fund, and angels including Joe Sullivan (former Uber CSO) and Vijay Bolina (former Google DeepMind CISO).",
+  "thesis": "As your strategy builds the regulated infrastructure layer for agentic AI in financial services, you need to be able to guarantee to regulators and clients that agents operating on your platform behave within defined boundaries. Manifold provides that runtime guarantee — the \"what did the agent actually do\" layer that turns theoretical agent governance into auditable evidence. Their open-source lineage (LLM Guard) also means the product has genuine community validation rather than just marketing claims.",
+  "evidence": [
+    [
+      "GlobeNewswire — $8M Seed Announcement",
+      "https://www.globenewswire.com/news-release/2026/03/18/3258198/0/en/Manifold-Announces-8-Million-Seed-Funding-Round-to-Secure-Autonomous-Endpoint-AI-Agents-at-Runtime.html"
+    ],
+    [
+      "SiliconANGLE",
+      "https://siliconangle.com/2026/03/18/manifold-raises-8m-secure-autonomous-ai-agents-enterprise-endpoints/"
+    ]
+  ],
+  "score": 80,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      17,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      21,
+      20
+    ]
+  },
+  "run_date": "2026-03-19"
+}

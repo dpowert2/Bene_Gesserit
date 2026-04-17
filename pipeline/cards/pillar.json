@@ -1,0 +1,42 @@
+{
+  "slug": "pillar",
+  "name": "Pillar",
+  "url": "https://pillar.finance",
+  "oneliner": "AI agent that continuously constructs and manages hedge portfolios for commodity-exposed businesses — autonomously ingesting exposure data, sizing positions, and executing trades against live risk. $20M seed led by a16z.",
+  "gap": "S2 — Portfolio Construction & Risk Agent",
+  "stage": "Seed — $20M",
+  "geo": "San Francisco, US",
+  "team": "Co-founders Harsha Ramesh (CEO) and Chinmay Deshpande (CTO). Investors: Andreessen Horowitz (lead), Crucible Capital, Gallery Ventures, and Dara Khosrowshahi (Uber CEO). $23M total raised.",
+  "finserv": "Clients include commodity trading firms, metal recyclers, and logistics companies managing FX and freight exposure. Pillar executes live trades, monitors risk in real time, and adjusts positions autonomously — a genuine execution agent rather than a dashboard.",
+  "thesis": "Pillar demonstrates the S2 Portfolio Construction & Risk agent pattern at production scale — the agent ingests raw exposure from ERP, contracts, and spreadsheets, builds the hedge portfolio, and executes trades autonomously. The market is commodity hedging for industrial businesses rather than investment portfolios, which limits direct fit, but the underlying capability is exactly the pattern needed in the investment context. HARD NOTE: at $23M total raised, this may already be past the shaping window — monitor rather than pursue aggressively.",
+  "evidence": [
+    [
+      "Pillar raises $20M seed — TechCrunch",
+      "https://techcrunch.com/2026/04/14/financial-risk-management-platform-pillar-raises-20m-seed-in-round-led-by-a16z/"
+    ],
+    [
+      "Pillar targets institutional hedge gap — AInvest",
+      "https://www.ainvest.com/news/pillar-targets-institutional-hedge-gap-ai-powered-real-time-risk-control-2604/"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      18,
+      35
+    ],
+    "finserv": [
+      16,
+      25
+    ],
+    "stage": [
+      15,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

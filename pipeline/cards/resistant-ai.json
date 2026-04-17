@@ -1,0 +1,42 @@
+{
+  "slug": "resistant-ai",
+  "name": "Resistant AI",
+  "url": "https://resistant.ai",
+  "oneliner": "Resistant AI builds native AI models that protect fintech systems and AI agents against financial crime — document fraud, synthetic identity, APP fraud, money laundering — without replacing existing tech stacks.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Series B ($25M)",
+  "geo": "Prague, Czech Republic",
+  "finserv": "150M+ documents verified, 10x ARR growth since Series A, 4x customer growth. Customers include Dun & Bradstreet, Payoneer, Close Brothers, AXA, PennyMac, Bank of Valletta, and Finom. Reached breakeven in September 2025. DTCP led the Series B with Experian and GV doubling down — all three are deeply tied to financial services data and infrastructure.",
+  "team": "Prague-based, EU AI leader positioning. Backed by DTCP (lead), Experian, GV, Notion Capital (all existing investors who doubled down for Series B). $25M Series B closed October 2025.",
+  "thesis": "Resistant AI occupies the guardrails layer beneath financial AI agents — exactly the trust infrastructure that regulated institutions need before they can deploy autonomous agents at scale. Their document fraud detection and transaction monitoring products are the compliance controls that make agentic finance real in a regulated environment. This gives you a potential partner for the authentication and financial crime prevention layer: Resistant AI's models could sit inside a regulated agentic infrastructure stack, providing the AML/fraud rails that allow AI agents to transact on behalf of users with regulator confidence. The EU base and DORA/AI Act alignment make this strategically timed.",
+  "evidence": [
+    [
+      "Resistant AI raises $25M Series B",
+      "https://tech.eu/2025/10/13/resistant-ai-raises-25m-series-b-to-fortify-fintechs-and-ai-agents-against-financial-crime/"
+    ],
+    [
+      "BusinessWire: Resistant AI Raises $25M",
+      "https://www.businesswire.com/news/home/20251013240676/en/Resistant-AI-Raises-$25-Million-in-Series-B-Funding-to-Empower-AI-Agents-to-Fight-Fraud-and-Fincrime"
+    ]
+  ],
+  "score": 79,
+  "bars": {
+    "gap": [
+      27,
+      35
+    ],
+    "finserv": [
+      23,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      13,
+      20
+    ]
+  },
+  "run_date": "2026-04-12"
+}

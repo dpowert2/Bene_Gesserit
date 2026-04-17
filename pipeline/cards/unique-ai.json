@@ -1,0 +1,46 @@
+{
+  "slug": "unique-ai",
+  "name": "Unique AI",
+  "url": "https://www.unique.ai/",
+  "oneliner": "Unique is a vertical agentic AI platform for wealth management, asset management, and private banking — with 25+ off-the-shelf AI agents already deployed across institutions managing $2.3 trillion AUM.",
+  "gap": "Personal Agent",
+  "stage": "Series A ($30M)",
+  "geo": "Switzerland",
+  "finserv": "Live clients include Pictet Group (6,000 users), UBP, SIX, LGT, and Partners Group. Pictet reports efficiency gains of ~2 hours per week per employee. The platform supports back and middle-office automation via specialised agents for portfolio reporting, client onboarding, trade operations, and regulatory documentation. Total funding reaches $53M including this round.",
+  "team": "Series A led by CommerzVentures and DN Capital, with continued participation from VI Partners and Pictet Group. Commerzbank's venture arm brings strategic financial institution alignment. Founding team is Zurich-based with deep Swiss financial services roots.",
+  "thesis": "Unique has a defensible moat: deployed production agents inside some of Europe's most demanding regulated wealth managers, processing live AUM at scale. This is not a pilot — it's production infrastructure for financial agents. This gives you a potential benchmark or acquisition target for the wealth management vertical of an agentic financial operating system. Their client roster ($2.3T AUM) signals that the enterprise financial institution market is ready to buy vertical agents, not build them. Watching Unique's trajectory also validates the gap you're tracking: regulated institutions want purpose-built agents, not generic LLMs bolted onto existing software.",
+  "evidence": [
+    [
+      "Unique Secures USD $30 Million Series A to Pioneer Agentic AI Workforce in Financial Services",
+      "https://www.unique.ai/en/blog/unique-secures-usd-30-million-series-a-to-pioneer-agentic-ai-workforce-in-financial-services-2"
+    ],
+    [
+      "Agentic AI start-up Unique raises $30m Series A, appoints new CPO",
+      "https://www.fintechfutures.com/venture-capital-funding/agentic-ai-start-up-unique-raises-30m-series-a-appoints-new-cpo"
+    ],
+    [
+      "Unique, a Swiss AI platform for finance, raises $30M",
+      "https://techcrunch.com/2025/02/27/unique-a-swiss-ai-platform-for-finance-raises-30m/"
+    ]
+  ],
+  "score": 82,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      25,
+      25
+    ],
+    "stage": [
+      15,
+      20
+    ],
+    "team": [
+      12,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

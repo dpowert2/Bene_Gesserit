@@ -1,0 +1,46 @@
+{
+  "slug": "21x",
+  "name": "21X AG",
+  "url": "https://21x.eu/",
+  "oneliner": "First EU-licensed DLT Trading &amp; Settlement System under the DLT Pilot Regime \u2014 the regulated secondary market that tokenised securities in Europe need to achieve real liquidity.",
+  "gap": "Tokenization \u2014 DLT Pilot Regime",
+  "stage": "Pre-Series A \u2014 BaFin license",
+  "geo": "Frankfurt, Germany",
+  "finserv": "BaFin DLT Pilot Regime license granted Dec 2024; EU DLT TSS authorisation; integrated with Cashlink issuance and Tangany custody for end-to-end tokenised-securities coverage. Positioned alongside the Deutsche B\u00f6rse ecosystem.",
+  "team": "German fintech operator team with regulated markets DNA; Cashlink integration shows they understand they are infrastructure, not a destination venue. Funding amount undisclosed.",
+  "thesis": "21X is the regulated trading venue every EU tokenisation startup needs in order to have real secondary liquidity. If it scales, it becomes default rails for every MiCA-era tokenised security \u2014 the kind of infrastructure-layer asset BG is hunting for. Combined with Cashlink and Tangany it is the most complete tokenised-securities stack live in Europe today.",
+  "evidence": [
+    [
+      "21X homepage",
+      "https://21x.eu/"
+    ],
+    [
+      "BaFin DLT Pilot license",
+      "https://www.bafin.de/SharedDocs/Veroeffentlichungen/EN/Pressemitteilung/2024/pm_2024_12_20_21X.html"
+    ],
+    [
+      "Cashlink + 21X partnership",
+      "https://cashlink.de/en/news/cashlink-21x/"
+    ]
+  ],
+  "score": 95,
+  "bars": {
+    "gap": [
+      33,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      12,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

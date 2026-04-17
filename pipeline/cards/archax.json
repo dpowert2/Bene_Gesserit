@@ -1,0 +1,42 @@
+{
+  "slug": "archax",
+  "name": "Archax",
+  "url": "https://archax.com/",
+  "oneliner": "FCA-regulated digital securities exchange, broker, and custodian \u2014 the UK's full-stack tokenisation venue. Series A $28.5M, Abrdn on the cap table.",
+  "gap": "Tokenization \u2014 FCA full-stack",
+  "stage": "Series A \u2014 $28.5M",
+  "geo": "London, UK",
+  "finserv": "FCA Cryptoasset Register (exchange, broker, custodian). Abrdn strategic stake. Tezos Foundation and Bitrock on the cap table. One of very few Western venues where you can issue, custody, and trade a tokenised security in one place.",
+  "team": "UK institutional capital-markets leadership; Abrdn's presence on the cap table signals a clear enterprise distribution path and deep regulated-finance alignment.",
+  "thesis": "Archax is one of very few Western venues where you can issue a tokenised security, custody it in a regulated entity, and trade it in one place. That end-to-end coverage with tier-1 institutional backing is exactly the Caroline Federal 'full-stack tokenisation' picture.",
+  "evidence": [
+    [
+      "Archax",
+      "https://archax.com/"
+    ],
+    [
+      "Abrdn investment",
+      "https://www.abrdn.com/en-gb/institutional/insights-and-research/strategic-investment-in-archax"
+    ]
+  ],
+  "score": 99,
+  "bars": {
+    "gap": [
+      32,
+      35
+    ],
+    "finserv": [
+      24,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      15,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

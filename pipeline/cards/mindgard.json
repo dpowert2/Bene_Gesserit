@@ -1,0 +1,42 @@
+{
+  "slug": "mindgard",
+  "name": "Mindgard",
+  "url": "https://mindgard.ai",
+  "oneliner": "Automated AI red teaming and DAST-AI platform that continuously tests, measures, and remediates vulnerabilities across deployed AI systems — purpose-built for enterprise regulated environments.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed ($11.6M)",
+  "geo": "Lancaster, UK",
+  "finserv": "Financial services explicitly listed as a served vertical. Multiple enterprise finserv clients confirmed. Cyber Innovation Prize (Infosecurity Europe 2024); Best Cybersecurity Startup (2025 Cybersecurity Excellence Awards).",
+  "team": "Dr. Peter Garraghan (CEO, 10+ years AI security research, Lancaster University spin-out); Steve Street (COO). 11 PhDs on staff. Backed by .406 Ventures, Atlantic Bridge, Lakestar, IQ Capital.",
+  "thesis": "Mindgard occupies the 'prove your AI is safe before deploying' layer — continuous DAST-AI as a compliance primitive for regulated institutions. The DAST framing maps onto existing AppSec procurement patterns in financial services.",
+  "evidence": [
+    [
+      "Mindgard — Automated AI Red Teaming & Security Testing",
+      "https://mindgard.ai"
+    ],
+    [
+      "Mindgard company information, funding & investors",
+      "https://app.dealroom.co/companies/mindgard"
+    ]
+  ],
+  "score": 82,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      15,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

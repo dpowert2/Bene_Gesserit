@@ -1,0 +1,42 @@
+{
+  "slug": "openbox-ai",
+  "name": "OpenBox AI",
+  "url": "https://www.openbox.ai",
+  "oneliner": "Enterprise AI trust platform providing Identity Security Posture Management, Agent Lifecycle Management, and a real-time Agent Access Gateway.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed ($5M)",
+  "geo": "USA / Europe",
+  "finserv": "Selected for Accenture FinTech Innovation Lab London 2026. Founded by ex-Microsoft and ex-BlackRock executives. Backed by Tykhe Ventures.",
+  "team": "Tahir Mahmood (CEO, ex-Microsoft), Asim Ahmad (COO/CRO, ex-BlackRock).",
+  "thesis": "OpenBox's cognitive behavior analysis and dynamic agent risk scoring catch emergent failure modes that static governance cannot. The Accenture FinTech Lab placement accelerates its finserv pipeline.",
+  "evidence": [
+    [
+      "OpenBox AI Launches — $5M Seed",
+      "https://www.prnewswire.com/news-releases/openbox-ai-launches-first-enterprise-ai-trust-platform-built-for-everyone-backed-by-5m-seed-round-302728522.html"
+    ],
+    [
+      "OpenBox AI Raises $5M",
+      "https://www.tokenpost.com/news/insights/19472"
+    ]
+  ],
+  "score": 74,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      19,
+      25
+    ],
+    "stage": [
+      13,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-04"
+}

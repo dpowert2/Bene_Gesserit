@@ -1,0 +1,38 @@
+{
+  "slug": "serafis",
+  "name": "Serafis",
+  "url": "https://www.ycombinator.com/companies/serafis",
+  "oneliner": "AI knowledge graph for institutional investors — mines unstructured data to identify narrative inflections before consensus. Live with orgs managing $40B+.",
+  "gap": "Research & Signal Intelligence",
+  "stage": "YC (Seed)",
+  "geo": "San Francisco, US",
+  "team": "Ex-Ribbit Capital Head of Data, ex-Google. Previous exit (Kosmos).",
+  "finserv": "Live with 5+ orgs managing $40B+ in capital. Founder ex-Head of Data at Ribbit Capital ($12B AUM).",
+  "thesis": "Serafis sits squarely in the Research & Signal Intelligence specialist lane — a knowledge-graph approach to institutional research that finds narrative inflections before consensus. The Ribbit Capital pedigree and $40B+ AUM customer base validate finserv fit. As a specialist agent that enriches investment decision-making, it's the kind of app-layer intelligence tool that would plug into a regulated data backbone for verified source material and audit trails.",
+  "evidence": [
+    [
+      "Serafis — YC",
+      "https://www.ycombinator.com/companies/serafis"
+    ]
+  ],
+  "score": 85,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-04-15"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "upvest",
+  "name": "Upvest",
+  "url": "https://upvest.co/",
+  "oneliner": "Investment API for banks and fintechs \u2014 brokerage, custody, fractional shares, and tokenised securities under one regulated German stack. Series C \u20ac108M.",
+  "gap": "Tokenization \u2014 investment API",
+  "stage": "Series C \u2014 \u20ac108M",
+  "geo": "Berlin, Germany",
+  "finserv": "eWpG / MiCA-aligned; live with Revolut, N26, Santander OpenBank, DKB, Raisin, Webull; processing 100M+ orders annually for 30+ financial institutions.",
+  "team": "Strong Berlin fintech operator bench; Sapphire Ventures and Tencent led the Series C; board depth from operators adjacent to Plaid / Liqid ecosystem.",
+  "thesis": "Upvest already powers retail investing at the neobanks everyone in Europe uses. As it layers tokenised private assets on top of that rail, it becomes the default way European incumbents distribute the Caroline Federal 'Investable Everything' catalogue \u2014 quietly, at scale. Series C places it at the top of the BG stage sweet spot, but the infrastructure-layer positioning is the point.",
+  "evidence": [
+    [
+      "Upvest",
+      "https://upvest.co/"
+    ],
+    [
+      "Series C announcement",
+      "https://upvest.co/resources/upvest-raises-series-c"
+    ]
+  ],
+  "score": 93,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      24,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

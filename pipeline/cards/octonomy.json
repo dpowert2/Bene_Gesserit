@@ -1,0 +1,42 @@
+{
+  "slug": "octonomy",
+  "name": "Octonomy",
+  "url": "https://www.octonomy.ai",
+  "oneliner": "Octonomy orchestrates specialised AI agents to automate complex enterprise service workflows — ERP queries, maintenance logs, technical support — with 95% accuracy and sub-20-day deployments.",
+  "gap": "Agent Orchestration",
+  "stage": "Seed ($20M)",
+  "geo": "Berlin, Germany",
+  "finserv": "While primarily focused on heavy equipment and manufacturing, Octonomy's core capability — orchestrating multiple AI agents across heterogeneous enterprise data sources without hallucinations — is directly applicable to financial back-office workflows. Macquarie Capital as lead investor provides direct financial services DNA in the cap table.",
+  "team": "Founded in early 2024. Backed by Macquarie Capital (lead), Capnamic, NRW.Bank, and TechVision Fund. Total funding $25M across two rounds in 15 months.",
+  "thesis": "Octonomy's 'orchestration over hallucination' technical approach — specialised sub-agents coordinating on complex, unstructured enterprise data — is the same architecture financial services firms need for agentic compliance review, document underwriting, and multi-system reconciliation. Macquarie's backing gives this legitimacy in the institutional finance world. This gives you a signal that the agent orchestration architecture is maturing; Octonomy is worth monitoring for potential partnership or competitive overlap as it expands from industrial into financial services verticals.",
+  "evidence": [
+    [
+      "SiliconANGLE: Industrial AI startup Octonomy raises $20M",
+      "https://siliconangle.com/2025/11/03/industrial-ai-startup-octonomy-raises-20m-seed-funding/"
+    ],
+    [
+      "Tech.eu: Octonomy raises $20M",
+      "https://tech.eu/2025/11/03/octonomy-raises-20m-to-accelerate-agentic-ai-for-complex-service-workflows/"
+    ]
+  ],
+  "score": 51,
+  "bars": {
+    "gap": [
+      18,
+      35
+    ],
+    "finserv": [
+      10,
+      25
+    ],
+    "stage": [
+      13,
+      20
+    ],
+    "team": [
+      10,
+      20
+    ]
+  },
+  "run_date": "2026-04-12"
+}

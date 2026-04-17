@@ -1,0 +1,42 @@
+{
+  "slug": "ralio",
+  "name": "Ralio",
+  "url": "https://ralio.co/",
+  "oneliner": "Programmable payment infrastructure for autonomous AI agents, with built-in identity verification, spend controls, and human-in-the-loop safeguards.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Pre-seed ($2.5M)",
+  "geo": "London, UK",
+  "finserv": "Ralio targets the exact trust gap that emerges when AI agents conduct financial transactions autonomously — a problem regulators are actively flagging. The company's tokenised identity verification and programmable spend controls map directly onto the kinds of oversight requirements that FINRA and the FCA are beginning to articulate for agentic AI in financial workflows.",
+  "team": "Founded in 2025 by Leonardo Rosales and Ghali Bennani Laafiret. Backed by SVV, Seed X, Love Ventures, Plug and Play, and Antler.",
+  "thesis": "Ralio is building the safety layer that regulated financial institutions will require before they can deploy AI agents with payment authority. As agentic workflows expand into treasury, procurement, and accounts payable, your infrastructure strategy needs controls that enforce scope, log intent, and support auditability — precisely what Ralio offers. This gives you a potential partner or acquisition target for the guardrails-as-a-service layer of your agentic infrastructure stack.",
+  "evidence": [
+    [
+      "UK fintech Ralio just raised $2.5M to make AI agentic payments safer",
+      "https://techfundingnews.com/uk-fintech-ralio-ai-agentic-payments-pitch-deck/"
+    ],
+    [
+      "Ralio raises $2.5m for agentic payments platform",
+      "https://www.finextra.com/newsarticle/47569/ralio-raises-25m-for-agentic-payments-platform"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      12,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-14"
+}

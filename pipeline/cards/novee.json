@@ -1,0 +1,42 @@
+{
+  "slug": "novee",
+  "name": "Novee",
+  "url": "https://siliconangle.com/2026/01/14/novee-launches-51-5m-bring-continuous-ai-offensive-security-enterprises/",
+  "oneliner": "AI penetration testing platform with a purpose-trained attack AI that continuously probes enterprise AI systems for novel vulnerabilities — counter-AI-cyberattack infrastructure.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed + Series A ($51.5M)",
+  "geo": "Israel",
+  "finserv": "No explicit finserv evidence. General enterprise security positioning.",
+  "team": "Ido Geffen, Gon Chalamish, Omer Ninburg — national-level offensive security leaders. Proprietary model outperforms Gemini 2.5 Pro and Claude Sonnet by 55%+ on exploitation benchmarks. Backed by YL Ventures, Canaan Partners, Zeev Ventures.",
+  "thesis": "Novee's purpose-trained attack AI represents a new category — adversarial AI as a service — that every organisation deploying AI agents will eventually require. Raised $51.5M within 4 months of founding: fastest funding trajectory in Israeli cyber.",
+  "evidence": [
+    [
+      "Novee launches with $51.5M",
+      "https://siliconangle.com/2026/01/14/novee-launches-51-5m-bring-continuous-ai-offensive-security-enterprises/"
+    ],
+    [
+      "Novee Emerges From Stealth With $51.5M",
+      "https://www.businesswire.com/news/home/20260114996647/en/Novee-Emerges-From-Stealth-With-$51.5M-to-Counter-AI-Cyberattacks-With-a-Proprietary-AI-Hacker"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      8,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      18,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "kaaj",
+  "name": "Kaaj",
+  "url": "https://kaaj.ai",
+  "oneliner": "Agentic AI credit intelligence platform that deploys coordinated AI agents to automate end-to-end small business loan underwriting — from business verification to risk assessment — in under 3 minutes.",
+  "gap": "Personal Agent",
+  "stage": "Seed ($3.8M)",
+  "geo": "USA",
+  "finserv": "Directly in financial services: lenders and brokers as customers, $5B+ in loan applications already processed. Clients include Amur Equipment Finance, Quality Equipment Finance, Fundr.",
+  "team": "Utsav Shah (CEO, decade at Uber and Cruise building AI decision systems); Shivi Sharma (President, ex-American Express, Uber, Varo Bank). Backed by Kindred Ventures, Better Tomorrow Ventures.",
+  "thesis": "Kaaj demonstrates agentic AI running regulated lending decisions at $5B+ production volume at seed stage — proof the agentic finance gap is moving from prototype to live. The team pedigree (Uber AI + Varo Bank) bridges consumer fintech credibility with institutional finance.",
+  "evidence": [
+    [
+      "Kaaj raises $3.8M seed",
+      "https://techcrunch.com/2025/11/19/credit-risk-automation-platform-kaaj-raises-3-8m-seed-from-kindred-ventures/"
+    ],
+    [
+      "Kaaj Raises $3.8M to Expand Access to Capital",
+      "https://www.businesswire.com/news/home/20251119390392/en/Kaaj-Raises-$3.8M-to-Expand-Access-to-Capital-for-Small-Businesses-with-New-Agentic-AI-Credit-Intelligence-Platform"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      22,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      20,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

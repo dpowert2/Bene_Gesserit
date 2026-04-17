@@ -1,0 +1,42 @@
+{
+  "slug": "lema-ai",
+  "name": "Lema AI",
+  "url": "https://www.lema.ai",
+  "oneliner": "Agentic security platform that continuously maps and evaluates third-party vendor risk using autonomous agents — replacing static questionnaire-based compliance with real-time attack path analysis.",
+  "gap": "Compliance",
+  "stage": "Series A ($24M)",
+  "geo": "Tel Aviv / New York",
+  "finserv": "Financial services and healthcare Fortune 500 customers. Addresses third-party vendor risk under OCC guidance and DORA. Led by Team8 with Salesforce Ventures.",
+  "team": "Founded 2023 by Eddie Dovzhik, Omer Yehudai, Tomer Roizman. $24M Series A led by Team8, Salesforce Ventures. Seed by F2 Venture Capital.",
+  "thesis": "Third-party vendor risk is one of the highest-friction compliance burdens in financial services. Lema's agentic approach maps directly onto what regulators now expect under DORA and OCC guidance — a potential partner for AI-vendor risk posture.",
+  "evidence": [
+    [
+      "Lema AI bags $24m",
+      "https://fintech.global/2026/02/10/supply-chain-security-start-up-lema-ai-bags-24m/"
+    ],
+    [
+      "Lema AI Emerges From Stealth With $24M",
+      "https://www.securityweek.com/lema-ai-emerges-from-stealth-with-24-million-to-tackle-third-party-risk/"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      15,
+      20
+    ],
+    "team": [
+      15,
+      20
+    ]
+  },
+  "run_date": "2026-04-06"
+}

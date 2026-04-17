@@ -1,0 +1,38 @@
+{
+  "slug": "juno",
+  "name": "Juno",
+  "url": "https://juno.tax",
+  "oneliner": "AI tax preparation platform for CPA firms that automates 90% of data entry across 90+ document types, reducing a 2-3 hour process to 7-10 minutes while keeping human accountants in control.",
+  "gap": "Tax Optimisation",
+  "stage": "Seed ($12M)",
+  "geo": "San Diego, CA",
+  "finserv": "Mid-seven-figure ARR within eight months of launch, priced at ~$45 per return. Serves small-to-medium CPA firms — a highly regulated, compliance-sensitive segment. CPA founder means the product reflects real regulatory constraints. Human-in-the-loop architecture designed specifically for IRS compliance requirements.",
+  "team": "Dave Haase (founder, CPA) — ran his own accounting firm before founding Juno in 2023. Backed by Bonfire Ventures (lead), Impression Ventures, and Xfund.",
+  "thesis": "Juno sits in the growing wedge between AI tax agents and the professional compliance layer CPA firms rely on. As AI agents increasingly touch tax workflows, the infrastructure that keeps those agents within regulatory guardrails — with audit trails, human review checkpoints, and IRS-grade accuracy — becomes critical. This is a potential partner for building the regulated AI layer within professional accounting workflows: you could position your infrastructure as the compliance backbone that tools like Juno connect to for identity, payment, and regulatory reporting.",
+  "evidence": [
+    [
+      "CPA-Founded Startup Juno Raises $12M Seed to Automate Tax Returns with AI",
+      "https://news.crunchbase.com/fintech/cpa-founded-ai-tax-return-startup-juno-seed-funding/"
+    ]
+  ],
+  "score": 76,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-10"
+}

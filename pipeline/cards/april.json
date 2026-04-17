@@ -1,0 +1,42 @@
+{
+  "slug": "april",
+  "name": "April",
+  "url": "https://www.getapril.com",
+  "oneliner": "April is an embedded AI tax platform that integrates directly into financial services products — enabling banks, wealth managers, and fintechs to offer AI-powered tax filing, real-time tax simulations, and advisor workflow tools to their customers without building the capability in-house.",
+  "gap": "Tax Optimisation",
+  "stage": "Series B ($78M total)",
+  "geo": "New York, NY",
+  "finserv": "April launched an integrated tax platform specifically for wealth management and advisory firms in February 2026, positioning itself as the tax intelligence layer inside advisor workflows rather than a consumer-facing product. The platform runs precise simulations for equity compensation, Roth conversions, concentrated stock positions, and estimated payments — exactly the high-value, advice-adjacent tax workflows that regulated wealth advisors need to automate. QED Investors (lead Series B investor) has one of the deepest finserv-focused portfolios in venture; prior investors include Euclidean Capital, NYCA, and Team8.",
+  "team": "Founded by Daniel Marcus (former CTO at Waze) and Ben Borodach (previously at Team8 and Deloitte). The combination of consumer technology product leadership and Big Four tax/advisory DNA is well-suited to the embedded fintech distribution model. Total raised: $78M across seed, Series A, and Series B. Regulatory clearance achieved across all US states.",
+  "thesis": "April's embedded model — selling to the financial institution rather than the consumer — positions it as exactly the kind of infrastructure partner your strategy needs in the Tax Optimisation gap. Rather than competing with you for the client relationship, April would plug into your advisor stack and provide tax intelligence that advisors (and agents) can act on. Their full US regulatory clearance also means this is a production-ready platform, not a roadmap.",
+  "evidence": [
+    [
+      "CPA Practice Advisor",
+      "https://www.cpapracticeadvisor.com/2026/02/24/april-unveils-ai-tax-platform-for-wealth-management-firms/178650/"
+    ],
+    [
+      "Business Wire",
+      "https://www.businesswire.com/news/home/20260224545942/en/april-Launches-AI-Tax-Platform-for-Wealth-Management-Firms"
+    ]
+  ],
+  "score": 76,
+  "bars": {
+    "gap": [
+      27,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      10,
+      20
+    ]
+  },
+  "run_date": "2026-03-19"
+}

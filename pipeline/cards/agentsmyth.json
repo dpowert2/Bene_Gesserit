@@ -1,0 +1,38 @@
+{
+  "slug": "agentsmyth",
+  "name": "AgentSmyth",
+  "url": "https://agentsmyth.com/",
+  "oneliner": "Autonomous agent platform for trading and investment — 5 specialist AI agents delivering real-time institutional-grade intelligence. 48 institutional customers.",
+  "gap": "Research & Signal Intelligence",
+  "stage": "Seed — $8.7M",
+  "geo": "New York, US",
+  "team": "FinTech Collective, Thomson Reuters, BNY (Ascent)",
+  "finserv": "48 institutional customers ($2B–$50B AUM). BNY, Thomson Reuters backing.",
+  "thesis": "AgentSmyth is the specialist agent archetype the thesis prioritises — a pure-play Research & Signal Intelligence agent already live with 48 institutional customers at BNY-scale. With Thomson Reuters and FinTech Collective backing, it validates that buy-side intelligence is the first agentic wedge into capital markets. The infrastructure layer connects here as the data-integrity and compliance backbone these research agents need to operate in regulated environments.",
+  "evidence": [
+    [
+      "AgentSmyth Seed Round",
+      "https://agentsmyth.com/"
+    ]
+  ],
+  "score": 88,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      24,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-15"
+}

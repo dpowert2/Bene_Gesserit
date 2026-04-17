@@ -1,0 +1,42 @@
+{
+  "slug": "alinia",
+  "name": "Alinia",
+  "url": "https://alinia.ai/",
+  "oneliner": "Backend compliance controller for high-stake AI agents \u2014 embeds real-time auditing, policy enforcement, and risk controls into AI systems at scale. MiFID II focus.",
+  "gap": "Compliance",
+  "stage": "Seed \u2014 $7.5M",
+  "geo": "Barcelona, Spain",
+  "team": "Ariadna Font Llitj\u00f3s (CEO, co-founder), Carlos Mu\u00f1oz Ferrandis (co-founder). Mouro Capital (Santander) led.",
+  "finserv": "Santander/Mouro Capital backing. MiFID II compliance focus. Banking-first go-to-market. Working with Santander Group and Origin Financial.",
+  "thesis": "Alinia fills the Audit & Explainability gap \u2014 the first pipeline company dedicated to real-time compliance monitoring and policy enforcement for AI agents in regulated finance. The Santander/Mouro backing validates finserv alignment. European HQ and MiFID II focus make this compliance-native by design. Key uncertainty: whether the product extends to external/third-party agents or primarily serves internal institutional AI \u2014 the internal/external boundary is the decisive scoring dimension.",
+  "evidence": [
+    [
+      "Alinia Seed Round",
+      "https://alinia.ai/alinia-seed-round-7-5-milions/"
+    ],
+    [
+      "TechFundingNews",
+      "https://techfundingnews.com/alinia-raises-7-5m-seed-ai-compliance-finance/"
+    ]
+  ],
+  "score": 83,
+  "bars": {
+    "gap": [
+      25,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      13,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

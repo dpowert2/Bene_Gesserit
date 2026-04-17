@@ -1,0 +1,38 @@
+{
+  "slug": "trace",
+  "name": "Trace",
+  "url": "https://trace.so",
+  "oneliner": "Platform solving the AI agent adoption problem in enterprise by enabling reliable agent deployment and monitoring",
+  "gap": "Agent Orchestration",
+  "stage": "Seed",
+  "geo": "USA",
+  "finserv": "Enterprise focus; no explicit finserv customers but agent adoption/monitoring is horizontal with clear finserv applicability",
+  "team": "TechCrunch coverage suggests credible founding team",
+  "thesis": "Trace addresses a real bottleneck: getting AI agents from pilot to production. As You builds its agent infrastructure, tools that make deployment reliable and monitorable become valuable partners.",
+  "evidence": [
+    [
+      "TechCrunch",
+      "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/"
+    ]
+  ],
+  "score": 65,
+  "bars": {
+    "gap": [
+      25,
+      35
+    ],
+    "finserv": [
+      12,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      10,
+      20
+    ]
+  },
+  "run_date": "2026-03-09"
+}

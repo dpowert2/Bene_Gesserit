@@ -1,0 +1,42 @@
+{
+  "slug": "numos",
+  "name": "Numos",
+  "url": "https://numos.ai",
+  "oneliner": "Agentic AI finance platform that automates FP&A, reconciliation, and quote-to-cash workflows for enterprise CFOs with full reasoning transparency.",
+  "gap": "Personal Agent",
+  "stage": "Seed ($4.25M)",
+  "geo": "San Francisco, USA",
+  "finserv": "Enterprise customers include Udemy and Dandy. 80% faster FP&A cycles, book-close time cut in half. Every reasoning step auditable. Backed by General Catalyst.",
+  "team": "Founded by Parijat Sarkar and Mitul Tiwari. Seed led by General Catalyst, Operator Collective.",
+  "thesis": "Numos targets the CFO layer — the governance and control centre that enterprise agents report through. The 'show your reasoning' architecture addresses the explainability gap regulators are formalising.",
+  "evidence": [
+    [
+      "Numos Raises Seed from General Catalyst",
+      "https://www.businesswire.com/news/home/20260402784539/en/Numos-Raises-Seed-from-General-Catalyst-to-Build-AI-Finance-Platform-CFOs-Can-Trust"
+    ],
+    [
+      "Numos — Axios",
+      "https://www.axios.com/pro/fintech-deals/2026/04/02/numos-ai-finance-general-catalyst"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      22,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-04"
+}

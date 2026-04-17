@@ -1,0 +1,42 @@
+{
+  "slug": "lyzr",
+  "name": "Lyzr",
+  "url": "https://www.lyzr.ai",
+  "oneliner": "Lyzr builds on-premise enterprise AI agent infrastructure, letting banks and insurers deploy full agentic systems on their own infrastructure without sending sensitive data to external cloud platforms.",
+  "gap": "Agent Orchestration",
+  "stage": "Series A",
+  "geo": "San Francisco, CA / Bengaluru",
+  "finserv": "Accenture led the $14.5M Series A+ specifically to deploy Lyzr in banking, insurance, and financial services clients through Accenture's Project Spotlight accelerator; valuation quintupled to $250M; on-premise architecture directly addresses data sovereignty requirements that block cloud-based platforms from clearing procurement in regulated institutions",
+  "team": "Founded 2023. Backed by Accenture Ventures (lead), with prior investors from the $8M Series A. Total raised: ~$22.5M+. Accenture's distribution network gives Lyzr a significant GTM advantage into regulated enterprise accounts.",
+  "thesis": "Lyzr reinforces the thesis that regulated financial institutions will not accept cloud-hosted agent orchestration for sensitive workflows. This gives you a potential partner or component for your on-premise infrastructure offering — specifically the agent runtime and orchestration layer for banks that require data to stay within their own environment.",
+  "evidence": [
+    [
+      "Tech Funding News",
+      "https://techfundingnews.com/lyzr-ai-14-5m-accenture-250m-valuation/"
+    ],
+    [
+      "Accenture Newsroom",
+      "https://newsroom.accenture.com/news/2025/accenture-invests-in-lyzr-to-bring-agentic-ai-to-banking-and-insurance-companies"
+    ]
+  ],
+  "score": 80,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      15,
+      20
+    ],
+    "team": [
+      15,
+      20
+    ]
+  },
+  "run_date": "2026-03-12"
+}

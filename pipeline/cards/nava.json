@@ -1,0 +1,42 @@
+{
+  "slug": "nava",
+  "name": "Nava",
+  "url": "https://navalabs.ai/",
+  "oneliner": "Nava builds the controls architecture for the AI economy — escrow services, intent verification, and dispute resolution for AI agent transactions, ensuring agent actions match user intent before funds move.",
+  "gap": "Agent Payment Rails",
+  "stage": "Seed ($8.3M)",
+  "geo": "USA",
+  "finserv": "Explicitly targets any agent handling real capital — prediction markets, treasury management, high-frequency execution, automated auditing. Backed by Polychain and Archetype. Emerged from stealth April 14, 2026.",
+  "team": "Co-founded by Vyas Krishnan (CEO) and Brianna Montgomery, both previously at EigenLayer. Seed round co-led by Polychain and Archetype.",
+  "thesis": "Nava directly addresses the dispute resolution and agent payment governance gaps. Its escrow + intent verification model is the exact infrastructure missing from agentic brokerages like eToro Agent Portfolios and Public.com — when an agent proposes a trade, who checks it matches user intent? Nava does. This is external agent infrastructure by definition.",
+  "evidence": [
+    [
+      "Fortune — Nava raises $8.3M",
+      "https://fortune.com/2026/04/14/nava-seed-funding-ai-financial-agents/"
+    ],
+    [
+      "Benzinga — Nava emerges from stealth",
+      "https://www.benzinga.com/pressreleases/26/04/51808286/nava-emerges-from-stealth-with-8-3m-seed-round-co-led-by-polychain-and-archetype"
+    ]
+  ],
+  "score": 85,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-14"
+}

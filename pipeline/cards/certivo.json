@@ -1,0 +1,43 @@
+{
+  "slug": "certivo",
+  "name": "Certivo",
+  "url": "https://certivo.io",
+  "oneliner": "Certivo is an AI-native compliance automation platform that deploys an AI agent (CORA) to continuously monitor regulatory changes, validate supplier documentation, and map obligations to product portfolios for manufacturers and supply chain operators.",
+  "gap": "Compliance",
+  "stage": "Seed ($6M total)",
+  "geo": "Seattle, WA",
+  "finserv": "Certivo's platform is supply-chain focused rather than directly financial-services-facing, but its AI-native compliance automation positioning and CORA agent architecture are directly analogous to what regulated financial institutions need for regulatory change management. Suffolk Technologies (the lead investor) has strong fintech and built-world crossover positioning. The pattern — purpose-built AI agent replacing manual compliance operations — mirrors finserv compliance automation demand.",
+  "team": "Spun out of Pioneer Square Labs (PSL) in 2024. Investors: Suffolk Technologies (lead), Pioneer Square Labs, Pioneer Square Ventures.",
+  "thesis": "Certivo demonstrates that \"AI-native compliance automation\" is emerging as a distinct product category outside finserv, with the same architecture you need inside it: a continuously running agent that monitors regulatory changes, maps them to internal obligations, and automates documentation workflows. If Certivo or analogues pivot into financial regulatory change management, it could become a direct competitor or acquisition target in the Compliance gap.",
+  "evidence": [
+    [
+      "GeekWire",
+      "https://www.geekwire.com/2026/seattle-startup-certivo-raises-4m-to-automate-supply-chain-compliance-with-ai/"
+    ],
+    [
+      "Business Wire",
+      "https://www.businesswire.com/news/home/20260213311074/en/Certivo-Raises-$4M-Seed-Round-Led-by-Suffolk-Technologies-to-Launch-the-AI-Native-Compliance-Automation-Category"
+    ]
+  ],
+  "score": 50,
+  "bars": {
+    "gap": [
+      20,
+      35
+    ],
+    "finserv": [
+      8,
+      25
+    ],
+    "stage": [
+      10,
+      20
+    ],
+    "team": [
+      12,
+      20
+    ]
+  },
+  "runDate": "2026-03-18",
+  "run_date": "2026-03-18"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "kai",
+  "name": "Kai",
+  "url": "https://www.kai.ai",
+  "oneliner": "Kai is the first agentic AI cybersecurity platform, using autonomous AI agents to detect, reason about, and respond to threats at machine speed across both IT and OT environments.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Series A equivalent (emerged from stealth)",
+  "geo": "Fort Lauderdale, FL",
+  "finserv": "Fortune 500 customers already signed; seven-figure bookings in first 10 months; financial services infrastructure explicitly among target verticals; founders built Claroty and SecurityMatters with deep industrial and financial sector traction",
+  "team": "Founded by creators of Claroty (acquired ~$1.5B by Rockwell Automation) and SecurityMatters. Backed by Evolution Equity Partners (lead), N47, and strategic co-investors. $125M raised on stealth exit.",
+  "thesis": "As you build the regulated infrastructure layer for agentic AI in financial services, security of agent-to-agent communication becomes a mandatory component. Kai represents a potential integration partner — its agentic threat detection sits directly in the path of any compliance-grade deployment. This also signals that agentic cybersecurity is maturing into a standalone category worth monitoring for partnership or due-diligence purposes.",
+  "evidence": [
+    [
+      "PR Newswire",
+      "https://www.prnewswire.com/news-releases/kai-emerges-from-stealth-with-125m-powering-machine-speed-defense-to-outpace-ai-enabled-adversaries-302708978.html"
+    ],
+    [
+      "SiliconANGLE",
+      "https://siliconangle.com/2026/03/11/cybersecurity-startup-kai-raises-125m-build-agent-driven-ai-security-platform/"
+    ]
+  ],
+  "score": 70,
+  "bars": {
+    "gap": [
+      25,
+      35
+    ],
+    "finserv": [
+      15,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-03-12"
+}

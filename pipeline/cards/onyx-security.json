@@ -1,0 +1,43 @@
+{
+  "slug": "onyx-security",
+  "name": "Onyx Security",
+  "url": "https://onyx.security",
+  "oneliner": "Onyx Security builds the secure AI control plane for the agentic era, providing enterprises with continuous discovery, monitoring, and governance of AI agents in real time.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed (launched with $40M)",
+  "geo": "San Francisco, CA",
+  "finserv": "Fortune 500 companies — including financial services firms — already using Onyx's control plane to govern AI agents; audit trails, real-time policy enforcement, and human-approval workflows map directly to FINRA's 2026 Regulatory Oversight Report governance expectations for broker-dealers and asset managers",
+  "team": "Team of 70 at launch after 18 months in stealth. Backed by Conviction Partners (early-stage AI-focused fund) and Cyberstarts (Israeli cyber VC behind Wiz, Cyera, and others).",
+  "thesis": "This gives you a potential infrastructure partner — or acquisition signal — for the governance layer every financial institution will need before it can deploy AI agents at scale. As the regulated infrastructure layer for agentic AI, you could white-label or partner with Onyx's control plane to offer banks and wealth managers a credentialed, auditable agent governance stack, removing a critical blocker to enterprise adoption.",
+  "evidence": [
+    [
+      "Fintech Global",
+      "https://fintech.global/2026/03/13/cybersecurity-fintech-onyx-security-secures-40m-funding/"
+    ],
+    [
+      "Yahoo Finance",
+      "https://finance.yahoo.com/news/onyx-security-launches-40m-funding-100000326.html"
+    ]
+  ],
+  "score": 82,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "runDate": "2026-03-15",
+  "run_date": "2026-03-15"
+}

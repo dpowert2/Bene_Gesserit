@@ -1,0 +1,43 @@
+{
+  "slug": "jetstream-security",
+  "name": "JetStream Security",
+  "url": "https://www.jetstreamsecurity.com",
+  "oneliner": "JetStream Security provides real-time AI governance and visibility to enterprises through \"AI Blueprints\" — dynamic system-generated graphs that continuously map how AI models operate across the organisation and flag policy violations before they cause harm.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed ($34M)",
+  "geo": "United States",
+  "finserv": "Real-time compliance monitoring, audit trails for AI outputs, and access control for sensitive prompts directly applicable to FINRA and SEC supervised financial services firms; Okta co-founder Frederic Kerrest as angel investor signals strong identity/access management angle — critical for managing AI agent permissions within regulated workflows",
+  "team": "CEO Raj Rajamani previously CrowdStrike's Chief Product Officer. Founding team from Attivo Networks, CrowdStrike, Cohesity, Dazz, McAfee, and SentinelOne. Backed by Redpoint Ventures (lead) and CrowdStrike Falcon Fund. Angels include CrowdStrike CEO George Kurtz, Wiz CEO Assaf Rappaport, and Okta co-founder Frederic Kerrest.",
+  "thesis": "JetStream addresses the same enterprise governance gap as Onyx Security but from a cybersecurity-native angle. The AI Blueprints concept — dynamic graphs of agent behaviour — could inform the transparency and audit primitives your platform offers to institutional clients. The Okta/identity management DNA is particularly relevant for agent authentication use cases as you build the regulated infrastructure layer.",
+  "evidence": [
+    [
+      "Fintech Global",
+      "https://fintech.global/2026/03/04/ai-security-platform-jetstream-security-bags-34m-funding/"
+    ],
+    [
+      "SiliconANGLE",
+      "https://siliconangle.com/2026/03/03/jetstream-security-guild-ai-workos-land-fresh-funding-amid-growing-agentic-ai-infrastructure-push/"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      17,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "runDate": "2026-03-15",
+  "run_date": "2026-03-15"
+}

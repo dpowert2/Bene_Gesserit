@@ -1,0 +1,42 @@
+{
+  "slug": "matchbook-predictions",
+  "name": "Matchbook Predictions",
+  "url": "https://b2b.matchbook.com/predictions",
+  "oneliner": "FCA-licensed UK prediction market launching yes / no event contracts \u2014 the first regulated Kalshi-style venue in Europe.",
+  "gap": "Product Inversion \u2014 prediction markets",
+  "stage": "Pre-launch \u2014 FCA licensed",
+  "geo": "Guernsey / London, UK",
+  "finserv": "First FCA-authorised prediction market in the UK; Gibraltar licence also in hand; US regulatory pipeline targeted for 2026.",
+  "team": "Majority-owned by professional gambler Zeljko Ranogajec; Matthew Benham (Brentford FC) minority stake; operator bench drawn from quantitative betting markets.",
+  "thesis": "Event contracts are a clean Caroline Federal inversion \u2014 turning a derivative that used to be institution-only into a retail UX. Being first-and-licensed in the UK matters because the European regulatory mood on prediction markets is hardening, and whoever is live while the rules are being written has outsized optionality. Biggest concern: perception is still closer to sports betting than to finance.",
+  "evidence": [
+    [
+      "Matchbook Predictions",
+      "https://b2b.matchbook.com/predictions"
+    ],
+    [
+      "FCA UK prediction market launch",
+      "https://www.bloomberg.com/news/articles/2025-12-10/matchbook-to-launch-uk-prediction-markets-ahead-of-us-entry"
+    ]
+  ],
+  "score": 76,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      12,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "klaimee",
+  "name": "Klaimee",
+  "url": "https://klaimee.com/",
+  "oneliner": "Certifies and insures autonomous AI agents — audits agents for safety and backs them with AI-native liability coverage. Self-serve from day one.",
+  "gap": "Dispute Resolution & Agent Liability",
+  "stage": "Early (unknown)",
+  "geo": "Unknown",
+  "team": "Self-serve agent certification and insurance platform.",
+  "finserv": "No explicit finserv focus. Certification model transfers to regulated agent marketplace.",
+  "thesis": "Klaimee complements Mount in the agent liability space but takes a self-serve, developer-first approach — certify and insure agents from day one. The certification-first model could become the standard trust badge that agent marketplaces require before listing financial agents. Lower finserv signal than Mount, but the self-serve model scales faster if the certification standard gains adoption.",
+  "evidence": [
+    [
+      "Agent Insurance Landscape",
+      "https://fortune.com/2025/07/23/ai-agent-insurance-startup-aiuc-stealth-15-million-seed-nat-friedman/"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      12,
+      25
+    ],
+    "stage": [
+      13,
+      20
+    ],
+    "team": [
+      10,
+      20
+    ]
+  },
+  "run_date": "2026-04-15"
+}

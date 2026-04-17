@@ -1,0 +1,42 @@
+{
+  "slug": "linx-security",
+  "name": "Linx Security",
+  "url": "https://siliconangle.com/2026/03/31/linx-security-raises-50m-new-funding-grow-identity-access-platform/",
+  "oneliner": "AI-first identity security and governance platform that continuously maps, monitors, and auto-remediates access risks across every identity — human, machine, and AI agent.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Series B ($83M)",
+  "geo": "New York, USA",
+  "finserv": "Banks and healthcare companies confirmed as multimillion-dollar contract customers; governing millions of identities in production. Positioned as 'Wiz for identity'.",
+  "team": "Israel Duanis and Niv Goldenberg, 25+ years combined at Check Point, Microsoft, Transmit. Wiz founders as angels. Backed by Insight Partners, Index Ventures, Cyberstarts.",
+  "thesis": "The most finserv-validated NHI/agent identity company after Oasis — already governs millions of identities at live banks with multimillion-dollar contracts. Series B with institutional finserv customers: the window for partnership is now.",
+  "evidence": [
+    [
+      "Linx Security raises $50M Series B",
+      "https://siliconangle.com/2026/03/31/linx-security-raises-50m-new-funding-grow-identity-access-platform/"
+    ],
+    [
+      "Linx Security Raises $50M Series B",
+      "https://www.insightpartners.com/ideas/linx-security-raises-50m-series-b-as-identity-becomes-securitys-biggest-failure-point/"
+    ]
+  ],
+  "score": 94,
+  "bars": {
+    "gap": [
+      33,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      18,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

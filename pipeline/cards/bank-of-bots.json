@@ -1,0 +1,42 @@
+{
+  "slug": "bank-of-bots",
+  "name": "Bank of Bots",
+  "url": "https://www.bankofbots.ai",
+  "oneliner": "First financial infrastructure platform purpose-built for AI agents as primary account-holders — providing bank accounts, credit lines, and working capital loans to non-human economic actors.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Seed (undisclosed)",
+  "geo": "USA",
+  "finserv": "Issued the world's first loan to an AI agent: the agent applied autonomously, cryptographically signed the loan agreement using its own Ed25519 identity key, and received USDC into a self-custodied wallet on Base. Platform provides multi-chain wallets, W3C Verifiable Credential identity passports, and a BOB Score.",
+  "team": "Founding details not yet disclosed publicly. US-based, recently emerged from stealth.",
+  "thesis": "This is the most structurally novel fintech company detected since Inflow. BOB is treating the agent itself as the regulated financial counterparty — with identity, credit, and capital. As you build the regulated infrastructure layer, BOB represents either a partner play or a thesis stress test.",
+  "evidence": [
+    [
+      "Bank of Bots Emerges from Stealth",
+      "https://ffnews.com/newsarticle/fintech/bank-of-bots-emerges-from-stealth-to-launch-the-first-financial-infrastructure-built-for-ai-agents-and-issue-the-worlds-first-loan-to-an-ai-agent"
+    ],
+    [
+      "Bank of Bots rolls out financial infrastructure for AI agents",
+      "https://thepaypers.com/fintech/news/bank-of-bots-emerges-from-stealth-with-financial-infrastructure-for-ai-agents"
+    ]
+  ],
+  "score": 81,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      12,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-04-04"
+}

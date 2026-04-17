@@ -1,0 +1,42 @@
+{
+  "slug": "meridian-ai",
+  "name": "Meridian AI",
+  "url": "https://www.meridian.ai",
+  "oneliner": "IDE-style agentic workspace that automates complex financial modeling and spreadsheet workflows with structured auditability for finance teams.",
+  "gap": "Agent Orchestration",
+  "stage": "Seed ($17M)",
+  "geo": "San Francisco, CA",
+  "finserv": "Early customers at Decagon and OffDeal; $5M in contracts in Dec 2025. Designed around auditability for finance teams. QED Investors participated alongside a16z.",
+  "team": "John Ling (CEO), team from Scale AI, Anthropic, Goldman Sachs. $17M seed led by a16z and The General Partnership with QED Investors. $100M post-money.",
+  "thesis": "Meridian targets the sprawling spreadsheet layer at the heart of FP&A and risk analysis. Its Cursor-style IDE builds traceability in from the ground up — exactly what regulators will mandate for agent-driven finance decisions.",
+  "evidence": [
+    [
+      "Meridian raises $17M",
+      "https://techcrunch.com/2026/02/11/meridian-ai-raises-17-million-to-remake-the-agentic-spreadsheet/"
+    ],
+    [
+      "Meridian gets $17M funding",
+      "https://siliconangle.com/2026/02/11/agentic-financial-modeling-startup-meridian-gets-17m-funding/"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      22,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-06"
+}

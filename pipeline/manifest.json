@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "generated_at": "2026-04-17T15:02:08.278Z",
+  "cards": [
+    {
+      "slug": "solvapay",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "pillar",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "alinia",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "agentsmyth",
+      "run_date": "2026-04-15"
+    },
+    {
+      "slug": "serafis",
+      "run_date": "2026-04-15"
+    },
+    {
+      "slug": "kimpton-ai",
+      "run_date": "2026-04-15"
+    },
+    {
+      "slug": "mount-insurance",
+      "run_date": "2026-04-15"
+    },
+    {
+      "slug": "klaimee",
+      "run_date": "2026-04-15"
+    },
+    {
+      "slug": "basis",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "ralio",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "resistant-ai",
+      "run_date": "2026-04-12"
+    },
+    {
+      "slug": "appzen",
+      "run_date": "2026-04-12"
+    },
+    {
+      "slug": "nexus",
+      "run_date": "2026-04-12"
+    },
+    {
+      "slug": "octonomy",
+      "run_date": "2026-04-12"
+    },
+    {
+      "slug": "haast",
+      "run_date": "2026-04-10"
+    },
+    {
+      "slug": "juno",
+      "run_date": "2026-04-10"
+    },
+    {
+      "slug": "galdera",
+      "run_date": "2026-04-10"
+    },
+    {
+      "slug": "lema-ai",
+      "run_date": "2026-04-06"
+    },
+    {
+      "slug": "meridian-ai",
+      "run_date": "2026-04-06"
+    },
+    {
+      "slug": "bank-of-bots",
+      "run_date": "2026-04-04"
+    },
+    {
+      "slug": "pace",
+      "run_date": "2026-04-04"
+    },
+    {
+      "slug": "openbox-ai",
+      "run_date": "2026-04-04"
+    },
+    {
+      "slug": "numos",
+      "run_date": "2026-04-04"
+    },
+    {
+      "slug": "keycard",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "venice-security",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "linx-security",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "mindgard",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "kaaj",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "novee",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "sycamore",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "interloom",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "unique-ai",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "natural",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "vivox-ai",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "aether-datahub",
+      "run_date": "2026-04-02"
+    },
+    {
+      "slug": "norm-ai",
+      "run_date": "2026-04-01"
+    },
+    {
+      "slug": "hybridity",
+      "run_date": "2026-04-01"
+    },
+    {
+      "slug": "imper-ai",
+      "run_date": "2026-03-26"
+    },
+    {
+      "slug": "harvey",
+      "run_date": "2026-03-26"
+    },
+    {
+      "slug": "opencfo",
+      "run_date": "2026-03-26"
+    },
+    {
+      "slug": "zoven",
+      "run_date": "2026-03-26"
+    },
+    {
+      "slug": "obin-ai",
+      "run_date": "2026-03-22"
+    },
+    {
+      "slug": "armadin",
+      "run_date": "2026-03-22"
+    },
+    {
+      "slug": "steward",
+      "run_date": "2026-03-20"
+    },
+    {
+      "slug": "manifold",
+      "run_date": "2026-03-19"
+    },
+    {
+      "slug": "april",
+      "run_date": "2026-03-19"
+    },
+    {
+      "slug": "goodfire",
+      "run_date": "2026-03-18"
+    },
+    {
+      "slug": "armorcode",
+      "run_date": "2026-03-18"
+    },
+    {
+      "slug": "certivo",
+      "run_date": "2026-03-18"
+    },
+    {
+      "slug": "onyx-security",
+      "run_date": "2026-03-15"
+    },
+    {
+      "slug": "jetstream-security",
+      "run_date": "2026-03-15"
+    },
+    {
+      "slug": "complyance",
+      "run_date": "2026-03-15"
+    },
+    {
+      "slug": "sphinx",
+      "run_date": "2026-03-12"
+    },
+    {
+      "slug": "lyzr",
+      "run_date": "2026-03-12"
+    },
+    {
+      "slug": "sapiom",
+      "run_date": "2026-03-12"
+    },
+    {
+      "slug": "kai",
+      "run_date": "2026-03-12"
+    },
+    {
+      "slug": "overmind",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "t54-labs",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "bretton-ai",
+      "run_date": "2026-03-11"
+    },
+    {
+      "slug": "oasis-security",
+      "run_date": "2026-03-11"
+    },
+    {
+      "slug": "stacks",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "unit21",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "natural-payments",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "taxdown",
+      "run_date": "2026-03-11"
+    },
+    {
+      "slug": "mine-moneygpt",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "dyna-ai",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "tendi",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "alter",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "guardrails-ai",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "hive-tax-ai",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "mezzi",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "trace",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "uptiq",
+      "run_date": "2026-03-09"
+    },
+    {
+      "slug": "nava",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "trent-ai",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "vouched",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "alomana",
+      "run_date": "2026-04-14"
+    },
+    {
+      "slug": "21x",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "cashlink",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "spiko",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "archax",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "iznes",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "upvest",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "tangany",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "naro",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "nao",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "blocksquare",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "obligate",
+      "run_date": "2026-04-17"
+    },
+    {
+      "slug": "matchbook-predictions",
+      "run_date": "2026-04-17"
+    }
+  ]
+}

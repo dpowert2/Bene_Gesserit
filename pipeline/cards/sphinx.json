@@ -1,0 +1,42 @@
+{
+  "slug": "sphinx",
+  "name": "Sphinx",
+  "url": "https://www.sphinx.ai",
+  "oneliner": "Sphinx deploys browser-native AI agents that operate directly inside existing compliance systems — case management platforms, third-party portals, email, and PDFs — to automate AML, KYC, and KYB investigations without requiring institutions to adopt new tooling.",
+  "gap": "Compliance",
+  "stage": "Seed",
+  "geo": "New York, NY",
+  "finserv": "Purpose-built for financial crime compliance; millions of alerts and hundreds of thousands of cases handled in production; Equals Money reported 94% reduction in false positives; multiple internationally-operating financial institutions as customers; backed by Y Combinator and Cherry Ventures",
+  "team": "Co-founded by Alexandre Berkovic and Chrisjan Wüst. Backed by Cherry Ventures (lead), Y Combinator, Rebel Fund, Deel Ventures, and Singularity Capital. $7.1M seed round closed February 2026.",
+  "thesis": "This is a near-direct fit for the compliance layer of your regulated infrastructure thesis. Sphinx operates at the workflow level inside the tools institutions already use, which positions it as a potential module in a broader compliance-grade agent stack rather than a competing platform. The browser-native, no-new-system architecture removes the primary adoption barrier in compliance-heavy institutions.",
+  "evidence": [
+    [
+      "Business Wire",
+      "https://www.businesswire.com/news/home/20260217308151/en/Sphinx-Raises-$7.1M-to-Build-Every-Financial-Institutions-Last-Compliance-Hire"
+    ],
+    [
+      "AML Intelligence",
+      "https://www.amlintelligence.com/2026/02/latest-sphinx-raises-7-1m-to-scale-ai-compliance-agents/"
+    ]
+  ],
+  "score": 82,
+  "bars": {
+    "gap": [
+      33,
+      35
+    ],
+    "finserv": [
+      23,
+      25
+    ],
+    "stage": [
+      12,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-03-12"
+}

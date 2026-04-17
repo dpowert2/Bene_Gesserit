@@ -1,0 +1,42 @@
+{
+  "slug": "keycard",
+  "name": "Keycard",
+  "url": "https://finance.yahoo.com/news/keycard-launches-solve-ai-agent-130900959.html",
+  "oneliner": "AI-native identity and access management platform that uses cryptography to verify agent identity, enforce delegation chains, and provide audit trails for every agent action.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Series A ($38M)",
+  "geo": "USA",
+  "finserv": "No explicit finserv customer evidence at launch; ecommerce named as primary beachhead. Angels include Auth0, Okta, Datadog identity veterans who typically serve regulated enterprises.",
+  "team": "Ian Livingstone (serial founder). Angels: Karl McGuinness (ex-Okta), Matias Woloski (Auth0 co-founder), Emilio Escobar (Datadog), Ian Andrews (Groq). Led by a16z and boldstart ventures, Series A by Acrew Capital.",
+  "thesis": "Keycard is the most technically precise agent identity solution in the pipeline — cryptographic short-term identity binding tokens, revocable delegation chains, per-task policy enforcement, full audit logs. The Auth0/Okta founding network built the last identity standards layer; they are likely to build the next one.",
+  "evidence": [
+    [
+      "AI agent security startup Keycard reels in $38M",
+      "https://siliconangle.com/2025/10/21/ai-agent-security-startup-keycard-reels-38m/"
+    ],
+    [
+      "Investing in Keycard",
+      "https://a16z.com/announcement/investing-in-keycard/"
+    ]
+  ],
+  "score": 98,
+  "bars": {
+    "gap": [
+      35,
+      35
+    ],
+    "finserv": [
+      10,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      20,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

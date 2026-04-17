@@ -1,0 +1,39 @@
+{
+  "slug": "complyance",
+  "name": "Complyance",
+  "url": "https://complyance.io",
+  "oneliner": "Complyance deploys AI agents to automate governance, risk, and data compliance workflows — integrating directly into enterprise tech stacks and running custom checks against risk thresholds before flagging issues for human review.",
+  "gap": "Compliance",
+  "stage": "Series A ($20M)",
+  "geo": "United States",
+  "finserv": "Mastercard as an angel investor signals direct financial services interest and distribution potential; GRC automation with AI agents directly addresses compliance operations challenges at banks, asset managers, and payment networks; Anthropic angel backing adds AI-native credibility",
+  "team": "Backed by GV (Google Ventures) as Series A lead, Speedinvest, Everywhere Ventures, and angels from Anthropic and Mastercard. Total raised: $28M.",
+  "thesis": "This is a direct play in your core Compliance gap. Complyance is building what you would want a partner to handle: the AI-native GRC layer that plugs into existing enterprise systems and runs compliance checks autonomously. As regulated infrastructure, you could position above Complyance — providing the financial identity and authorisation layer through which Complyance's agents operate, or partner to offer a bundled compliance stack to financial institutions deploying agents.",
+  "evidence": [
+    [
+      "TechCrunch",
+      "https://techcrunch.com/2026/02/11/complyance-raises-20m-to-help-companies-manage-risk-and-compliance/"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      15,
+      20
+    ],
+    "team": [
+      15,
+      20
+    ]
+  },
+  "runDate": "2026-03-15",
+  "run_date": "2026-03-15"
+}

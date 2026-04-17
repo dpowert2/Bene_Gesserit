@@ -1,0 +1,42 @@
+{
+  "slug": "interloom",
+  "name": "Interloom",
+  "url": "https://interloom.com/en/blog/seed-announcement/",
+  "oneliner": "Enterprise knowledge infrastructure for AI agents — captures undocumented expert decision-making and converts it into permanent corporate memory that agents use to execute complex workflows accurately.",
+  "gap": "Agent Orchestration",
+  "stage": "Seed (€14.2M / $16.5M)",
+  "geo": "Munich, Germany",
+  "finserv": "Commerzbank (production customer — reduced documentation gap from 50% to 5%) and Zurich Insurance both confirmed as enterprise customers. Also JLL and Volkswagen.",
+  "team": "Fabian Jakobi (CEO). Backed by DN Capital (lead), Bek Ventures, Air Street Capital.",
+  "thesis": "Interloom solves the 'why does my agent give wrong answers inside my institution' problem — a real blocker to regulated deployment. The Commerzbank result is unusually concrete ROI evidence for a seed-stage company, and the finserv customer base is the strongest of any EU-based new entry this cycle.",
+  "evidence": [
+    [
+      "German startup Interloom lands €14.2 million Seed funding",
+      "https://www.eu-startups.com/2026/03/german-startup-interloom-lands-e14-2-million-seed-funding-for-ai-agent-knowledge-infrastructure/"
+    ],
+    [
+      "Interloom Raises $16.5M",
+      "https://fortune.com/2026/03/23/interloom-ai-agents-raises-16-million-venture-funding/"
+    ]
+  ],
+  "score": 72,
+  "bars": {
+    "gap": [
+      22,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      12,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "hive-tax-ai",
+  "name": "Hive Tax AI",
+  "url": "https://hivetax.ai",
+  "oneliner": "AI-powered tax planning platform for high-net-worth individuals and tax professionals with agentic workflow automation",
+  "gap": "Tax Optimisation",
+  "stage": "Seed",
+  "geo": "USA",
+  "finserv": "Direct finserv product — tax planning, multi-state income, automated tax-loss harvesting; targets HNW and tax professionals",
+  "team": "Limited public team information",
+  "thesis": "Hive Tax AI demonstrates agentic AI applied to tax optimisation — a high-value automation that directly impacts investor returns. As You's agents handle portfolio management, tax-aware execution becomes critical.",
+  "evidence": [
+    [
+      "Hive Tax AI",
+      "https://hivetax.ai/smart-tax-loss-harvesting-tools-tips-and-tactics/"
+    ]
+  ],
+  "score": 68,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      20,
+      25
+    ],
+    "stage": [
+      12,
+      20
+    ],
+    "team": [
+      8,
+      20
+    ]
+  },
+  "run_date": "2026-03-09"
+}

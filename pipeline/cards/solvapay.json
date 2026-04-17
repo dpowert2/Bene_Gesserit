@@ -1,0 +1,42 @@
+{
+  "slug": "solvapay",
+  "name": "SolvaPay",
+  "url": "https://solvapay.com",
+  "oneliner": "Stockholm-based startup building machine-native payment rails that let AI agents discover, negotiate, and pay for services autonomously across platforms. €2.4M pre-seed from Redstone, MS&AD Ventures, and Antler.",
+  "gap": "Cat 7 — Agent Payment Rails",
+  "stage": "Pre-Seed — €2.4M",
+  "geo": "Stockholm, Sweden",
+  "team": "Founding team alumni from Spotify, FIS, Bank of America, Lehman Brothers, and Handelsbanken. Round led by Redstone and MS&AD Ventures, with Antler and Greens Ventures participating.",
+  "finserv": "Founding team brings 50+ years combined experience at FIS, Bank of America, Lehman Brothers, and Handelsbanken — heavy regulated finserv DNA. Positioned explicitly for the agentic economy with agent-to-agent transaction discovery and settlement.",
+  "thesis": "SolvaPay is a candidate for the machine-native payment layer the agentic app store needs. The Stockholm base answers the recurring 'Europe equivalent?' scout request. At pre-seed, there is maximum opportunity to shape product direction toward the regulated financial agent context. The team's FIS/BoA/Lehman DNA suggests they understand the compliance constraints that matter for institutional deployment.",
+  "evidence": [
+    [
+      "SolvaPay raises €2.4m — Fintech Global",
+      "https://fintech.global/2026/04/15/solvapay-raises-e2-4m-for-agentic-payment-layer/"
+    ],
+    [
+      "SolvaPay pre-seed — EU Startups",
+      "https://www.eu-startups.com/2026/04/stockholms-solvapay-raises-e2-4-million-pre-seed-to-build-payments-infrastructure-for-agentic-commerce/"
+    ]
+  ],
+  "score": 88,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      21,
+      25
+    ],
+    "stage": [
+      20,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

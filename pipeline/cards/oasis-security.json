@@ -1,0 +1,42 @@
+{
+  "slug": "oasis-security",
+  "name": "Oasis Security",
+  "url": "https://www.oasis.security",
+  "oneliner": "Non-human identity and agentic access management platform that discovers, secures, and governs AI agent identities and secrets across enterprise environments",
+  "gap": "Agent Authentication & Security",
+  "stage": "Series A",
+  "geo": "Tel Aviv, Israel",
+  "finserv": "Dedicated financial services product page; explicitly supports PCI DSS 4.0, SOC 2, GDPR; targets core banking and trading systems; Agentic Access Management product for AI agents",
+  "team": "Founded by Danny Brickman and Amit Zimerman (Israeli Intelligence Unit 81 alumni); backed by Sequoia Capital, Accel, and Cyberstarts",
+  "thesis": "As You deploys AI agents that act on behalf of advisors and clients, every agent action needs to be authenticated, permissioned, and auditable. Oasis Security's AAM platform solves exactly this — providing the identity trust layer that makes agentic deployments safe.",
+  "evidence": [
+    [
+      "Oasis",
+      "https://www.oasis.security/agentic-access-management"
+    ],
+    [
+      "TechCrunch",
+      "https://techcrunch.com/2024/01/31/oasis-security-leaves-stealth-with-40m-to-lock-down-the-wild-west-of-non-human-identity-management/"
+    ]
+  ],
+  "score": 84,
+  "bars": {
+    "gap": [
+      33,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      17,
+      20
+    ]
+  },
+  "run_date": "2026-03-11"
+}

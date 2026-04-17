@@ -1,0 +1,42 @@
+{
+  "slug": "trent-ai",
+  "name": "Trent AI",
+  "url": "https://trent.ai/",
+  "oneliner": "Trent AI builds multi-agent security — specialized security agents that continuously scan environments, judge risk, and mitigate vulnerabilities in autonomous AI agent deployments.",
+  "gap": "AI Safety & Guardrails",
+  "stage": "Seed (€11M/$13M)",
+  "geo": "London, UK",
+  "finserv": "No explicit finserv focus but enterprise-broad. OpenAI, Spotify, Databricks, AWS leaders participate. London base aligns with Europe-preferred geography.",
+  "team": "Founded by Eno Thereska (CEO), Neil Lawrence (chief scientist), Zhenwen Dai (CTO) — former Amazon/AWS and Spotify engineering leaders. Seed led by LocalGlobe and Cambridge Innovation Capital.",
+  "thesis": "Trent AI addresses agent-level security (not model-level), passing the 'AI, not agents' test. Multi-agent security with context-driven judgement layer is architecturally aligned with governing third-party agents. London base is thesis-preferred. The risk is whether this is perceived as enterprise security tooling or external agent governance infrastructure.",
+  "evidence": [
+    [
+      "BusinessWire — Trent AI raises $13M",
+      "https://www.businesswire.com/news/home/20260407796810/en/Trent-AI-Raises-$13M-to-Secure-the-Agentic-Age"
+    ],
+    [
+      "Tech.eu — Trent AI",
+      "https://tech.eu/2026/04/07/openai-and-spotify-leaders-back-london-based-ai-security-agent-startup-in-13m-round/"
+    ]
+  ],
+  "score": 78,
+  "bars": {
+    "gap": [
+      28,
+      35
+    ],
+    "finserv": [
+      12,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-14"
+}

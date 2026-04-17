@@ -1,0 +1,42 @@
+{
+  "slug": "cashlink",
+  "name": "Cashlink Technologies",
+  "url": "https://cashlink.de/en/",
+  "oneliner": "BaFin-licensed crypto securities registrar and qualified custodian for Germany's eWpG regime \u2014 the issuer-side layer of the EU tokenisation stack. Series A, \u20ac7M.",
+  "gap": "Tokenization \u2014 eWpG registrar",
+  "stage": "Series A \u2014 \u20ac7M",
+  "geo": "Frankfurt, Germany",
+  "finserv": "BaFin crypto securities registrar and qualified custodian under eWpG; tight partnership with 21X for the trading venue. Backed by Helaba, Block.one, BMH, TechQuartier, Futury Capital.",
+  "team": "Operator team with regulated-securities DNA. Strategic investors are exactly the mix that matters for German institutional distribution (Helaba = public-sector bank, Block.one = capital).",
+  "thesis": "Cashlink sits at exactly the infrastructure chokepoint BG cares about: every eWpG-issued tokenised bond or fund needs a regulated registrar, and Cashlink has first-mover BaFin clearance. Pair it with 21X as the venue and Tangany as the custodian and you have Europe's first end-to-end tokenised-securities rail.",
+  "evidence": [
+    [
+      "Cashlink",
+      "https://cashlink.de/en/"
+    ],
+    [
+      "Cashlink + 21X partnership",
+      "https://cashlink.de/en/news/cashlink-21x/"
+    ]
+  ],
+  "score": 95,
+  "bars": {
+    "gap": [
+      31,
+      35
+    ],
+    "finserv": [
+      23,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      13,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

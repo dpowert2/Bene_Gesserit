@@ -1,0 +1,38 @@
+{
+  "slug": "tendi",
+  "name": "Tendi",
+  "url": "https://tendi.ai",
+  "oneliner": "AI-powered personal financial advisor trained to outperform on the CFP exam, connected to 12,000+ financial institutions",
+  "gap": "Personal Agent",
+  "stage": "Seed",
+  "geo": "USA / Global",
+  "finserv": "Trained specifically on financial planning; scores higher than all other AI models on CFP exam; connected to 12,000+ institutions",
+  "team": "Limited public data on founding team",
+  "thesis": "Tendi represents a pure-play personal finance agent that could serve as a 'front door' connecting consumers to You's infrastructure. The CFP-level training and 12,000+ institution connections demonstrate serious finserv commitment.",
+  "evidence": [
+    [
+      "Tendi",
+      "https://tendi.ai/"
+    ]
+  ],
+  "score": 74,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      8,
+      20
+    ]
+  },
+  "run_date": "2026-03-09"
+}

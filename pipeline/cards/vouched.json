@@ -1,0 +1,42 @@
+{
+  "slug": "vouched",
+  "name": "Vouched",
+  "url": "https://www.vouched.id/",
+  "oneliner": "Vouched builds the Know Your Agent (KYA) identity platform — Agent Checkpoint for AI agent identification and permissioning, Agent Detect for real-time agent detection, and Agent Govern via MCP-Identity.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Series A ($17M)",
+  "geo": "Seattle, USA",
+  "finserv": "Won 'Identity Verification Solution of the Year' at 2026 FinTech Breakthrough Awards. Core product expanded from human IDV to agent IDV with dedicated KYA suite. MCP-Identity integration positions at protocol layer.",
+  "team": "Seattle-based. Series A led by Spring Rock Ventures, bringing total to $22M. KnowThat.ai community-driven agent trust directory adds network effects.",
+  "thesis": "KYA is the regulatory vocabulary the thesis identifies as structurally equivalent to KYC — whoever defines the standard earliest has a SWIFT-like durable advantage. Vouched is the first pure-play KYA platform with fintech recognition and MCP integration. The risk is stage (Series A $17M is borderline) and whether human IDV origins make the agent pivot seem bolted-on rather than native.",
+  "evidence": [
+    [
+      "BusinessWire — Vouched FinTech Breakthrough Award",
+      "https://www.businesswire.com/news/home/20260319516472/en/Vouched-Wins-Identity-Verification-Solution-of-the-Year-Designation-in-2026-FinTech-Breakthrough-Awards-Program"
+    ],
+    [
+      "TechFundingNews — Vouched $17M",
+      "https://techfundingnews.com/vouched-17m-series-a-ai-human-identity-verification/"
+    ]
+  ],
+  "score": 83,
+  "bars": {
+    "gap": [
+      32,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      14,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-14"
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "basis",
+  "name": "Basis",
+  "url": "https://www.getbasis.ai/",
+  "oneliner": "AI agent platform for accounting firms that automates end-to-end tax, audit, and advisory workflows — including the first AI-completed 1065 tax return.",
+  "gap": "Agent Orchestration",
+  "stage": "Series B ($100M)",
+  "geo": "San Francisco, CA",
+  "finserv": "Strong. Basis already partners with approximately 30% of the top 25 US accounting firms, including Boulay PLLP, Clark Nuber PS, MarksNelson LLC, and UHY LLC. The platform processes highly regulated financial data — tax filings, audit evidence, reconciliations — placing it squarely in the regulated-data tier of agentic AI infrastructure.",
+  "team": "Co-founded in 2023 by Matthew Harpe (CEO) and Mitchell Troyanovsky. Series B led by Accel Partners and GV (Google Ventures), with participation from Lloyd Blankfein (former Goldman Sachs CEO), Khosla Ventures, and notable angels including Adam D'Angelo (Quora), Amjad Masad (Replit), and Clem Delangue (Hugging Face).",
+  "thesis": "Basis validates the thesis that regulated professional services are the fastest adoption path for agentic AI: accounting firms face extreme labour shortages and are willing to delegate structured, rule-bound tasks to agents. As the regulated infrastructure layer, your position could be the data and compliance backbone that Basis-style agents connect to — supplying verified financial records, audit trails, and regulatory mappings rather than competing in the workflow layer.",
+  "evidence": [
+    [
+      "Basis Raises $100M at a $1.15B Valuation",
+      "https://www.businesswire.com/news/home/20260224020999/en/Basis-Raises-$100M-at-a-$1.15B-Valuation-as-Accounting-Firms-Adopt-End-to-End-Agents-Across-Accounting-Tax-and-Audit"
+    ],
+    [
+      "AI accounting startup Basis secures $100M at $1.15B valuation",
+      "https://siliconangle.com/2026/02/24/ai-accounting-startup-basis-secures-100m-1-15b-valuation-firms-adopt-agent-based-workflows/"
+    ]
+  ],
+  "score": 79,
+  "bars": {
+    "gap": [
+      27,
+      35
+    ],
+    "finserv": [
+      22,
+      25
+    ],
+    "stage": [
+      16,
+      20
+    ],
+    "team": [
+      14,
+      20
+    ]
+  },
+  "run_date": "2026-04-14"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "kimpton-ai",
+  "name": "Kimpton AI",
+  "url": "https://kimpton.ai/home",
+  "oneliner": "AI-native investment research — autonomous research across 120K+ assets with agentic charting, backtesting, prediction markets, and structured trade proposals.",
+  "gap": "Research & Signal Intelligence",
+  "stage": "YC P26 (Pre-seed)",
+  "geo": "San Francisco, US",
+  "team": "Ex-Goldman Sachs quant fund operators. Ran $10M fund before age 23. YC P26.",
+  "finserv": "Built by ex-quant fund operators. 120K+ assets, real-time data.",
+  "thesis": "Kimpton AI is the most product-complete Research & Signal Intelligence specialist in this batch — autonomous research across 120K+ assets with backtesting and structured trade proposals. The Goldman quant pedigree and YC P26 backing de-risk execution. As a front-line research agent, it would consume verified financial data and regulatory context from an infrastructure layer to produce auditable investment recommendations.",
+  "evidence": [
+    [
+      "Kimpton AI — YC",
+      "https://www.ycombinator.com/companies/kimpton-ai"
+    ]
+  ],
+  "score": 80,
+  "bars": {
+    "gap": [
+      26,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      16,
+      20
+    ]
+  },
+  "run_date": "2026-04-15"
+}

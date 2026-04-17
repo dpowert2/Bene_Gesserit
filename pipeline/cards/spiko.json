@@ -1,0 +1,42 @@
+{
+  "slug": "spiko",
+  "name": "Spiko",
+  "url": "https://www.spiko.io/",
+  "oneliner": "AMF-approved tokenised euro and dollar money-market funds with 24/7 on-chain redemption \u2014 the first European answer to Ondo and BUIDL. ~$1B AUM.",
+  "gap": "Tokenization \u2014 tokenised MMFs",
+  "stage": "Series A \u2014 ~$1B AUM",
+  "geo": "Paris, France",
+  "finserv": "French AMF-approved tokenised MMF issuer \u2014 the first in the EU. Integrations with Amundi, CACEIS, and SG-Forge's EURCV / USDCV stablecoins. MiCA CASP-ready.",
+  "team": "Paris fintech founders; institutional distribution partnerships (Amundi, CACEIS) signal serious financial-services credibility early in the life of the company.",
+  "thesis": "Tokenised cash is the gateway drug for every other RWA flow. Spiko is the European benchmark for tokenised MMFs, with AMF approval and AMF-grade partners \u2014 meaning it can plug directly into custodians, PSPs, and wallets as a regulated yield primitive across the EU. ~$1B AUM inside ~18 months of launch is extraordinary.",
+  "evidence": [
+    [
+      "Spiko",
+      "https://www.spiko.io/"
+    ],
+    [
+      "AMF tokenised MMF approval",
+      "https://www.spiko.io/blog"
+    ]
+  ],
+  "score": 95,
+  "bars": {
+    "gap": [
+      30,
+      35
+    ],
+    "finserv": [
+      23,
+      25
+    ],
+    "stage": [
+      17,
+      20
+    ],
+    "team": [
+      15,
+      20
+    ]
+  },
+  "run_date": "2026-04-17"
+}

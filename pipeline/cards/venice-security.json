@@ -1,0 +1,42 @@
+{
+  "slug": "venice-security",
+  "name": "Venice Security",
+  "url": "https://siliconangle.com/2026/02/19/venice-security-launches-33m-bring-access-management-enterprise/",
+  "oneliner": "Adaptive privileged access management platform for the AI era — unified identity governance across human, machine, and AI agent identities in enterprise environments.",
+  "gap": "Agent Authentication & Security",
+  "stage": "Series A ($33M)",
+  "geo": "Israel / USA",
+  "finserv": "Fortune 500 customers in finance explicitly confirmed; displacing CyberArk at F500 banking and insurance firms. Emerged from stealth Feb 2026 with live production deployments.",
+  "team": "Rotem Lurie (CEO, Forbes 30 Under 30, ex-Axis Security Head of Product); Or Vaknin (CTO, Transmit Security + Flow Security). Wiz founders (Assaf Rappaport) as angels. Backed by IVP + Index Ventures.",
+  "thesis": "Venice is the most finserv-validated agent identity company seen yet at Series A — Fortune 500 finance clients already displacing CyberArk, founded by ex-Axis Security veterans with Wiz founders as angels, running the same playbook that turned Wiz into a $32B exit.",
+  "evidence": [
+    [
+      "Venice Security launches with $33M",
+      "https://siliconangle.com/2026/02/19/venice-security-launches-33m-bring-access-management-enterprise/"
+    ],
+    [
+      "Venice Security Launches with $33M to Redefine PAM",
+      "https://www.indexventures.com/perspectives/venice-security-emerges-from-stealth-with-33m-in-funding-to-redefine-enterprise-privileged-access-management-in-the-ai-era/"
+    ]
+  ],
+  "score": 96,
+  "bars": {
+    "gap": [
+      32,
+      35
+    ],
+    "finserv": [
+      18,
+      25
+    ],
+    "stage": [
+      18,
+      20
+    ],
+    "team": [
+      18,
+      20
+    ]
+  },
+  "run_date": "2026-04-02"
+}
