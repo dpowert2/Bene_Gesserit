@@ -355,7 +355,19 @@
 
   
     /* ── Password Gate ── */
-</style>
+
+    /* P2 — run groups & theme chips */
+    .run-group-header { display: flex; align-items: baseline; gap: 12px; margin-top: 20px; margin-bottom: 8px; padding: 0 2px; }
+    .run-group-date { font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--text-heading); }
+    .run-group-meta { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .run-card-grouped { margin-left: 16px; }
+    .run-theme { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 100px; background: var(--brown-light); }
+    .run-theme-emoji { font-size: 0.9rem; }
+    .run-theme-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; color: var(--brown-dark); }
+    .run-card.latest .run-theme { background: var(--accent-light); }
+    .run-card.latest .run-theme-label { color: var(--accent-dark); }
+
+  </style>
 </head>
 <body>
 <nav class="site-nav">
@@ -417,212 +429,32 @@
     </div>
 
     <div class="run-grid">
-      <a class="run-card latest" href="2026-04-17b.html">
-        <div class="run-date">Apr 17 Europe <small>LATEST</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-17.html">
-        <div class="run-date">Apr 17 AM Run</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-15b.html">
-        <div class="run-date">Apr 15 Full Cycle</div>
-        <div class="run-stats">1 new &middot; 5 votes &middot; eToro App Store</div>
-      </a>
-      <a class="run-card" href="2026-04-15.html">
-        <div class="run-date">Apr 15</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">9</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">5</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-14.html">
-        <div class="run-date">Apr 14</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">10</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-12.html">
-        <div class="run-date">Apr 12</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-10.html">
-        <div class="run-date">Apr 10</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-09.html">
-        <div class="run-date">Apr 9</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-07.html">
-        <div class="run-date">Apr 7</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">17</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">5</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-06.html">
-        <div class="run-date">Apr 6</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-04.html">
-        <div class="run-date">Apr 4</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-02.html">
-        <div class="run-date">Apr 2</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">16</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-01.html">
-        <div class="run-date">Apr 1</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-26.html">
-        <div class="run-date">Mar 26</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-22.html">
-        <div class="run-date">Mar 22</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-20.html">
-        <div class="run-date">Mar 20</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-19.html">
-        <div class="run-date">Mar 19</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-18.html">
-        <div class="run-date">Mar 18 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-15.html">
-        <div class="run-date">Mar 15 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-12.html">
-        <div class="run-date">Mar 12 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-11.html">
-        <div class="run-date">Mar 11 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-10.html">
-        <div class="run-date">Mar 10 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-09.html">
-        <div class="run-date">Mar 9 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">11</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">13</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-    </div>
+      <div class="run-group-header"><span class="run-group-date">Apr 17</span><span class="run-group-meta">2 runs · 14 signals · 15 new</span></div>
+      <a class="run-card latest run-card-grouped" href="2026-04-17b.html"><div class="run-date"><span class="run-theme"><span class="run-theme-emoji">🇪🇺</span><span class="run-theme-label">Europe focus</span></span></div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card run-card-grouped" href="2026-04-17.html"><div class="run-date"><span class="run-theme"><span class="run-theme-emoji">🌅</span><span class="run-theme-label">Morning scan</span></span></div><div class="run-stats"><div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <div class="run-group-header"><span class="run-group-date">Apr 15</span><span class="run-group-meta">2 runs · 9 signals · 5 new</span></div>
+      <a class="run-card run-card-grouped" href="2026-04-15b.html"><div class="run-date"><span class="run-theme"><span class="run-theme-emoji">🔄</span><span class="run-theme-label">Full cycle</span></span></div><div class="run-stats">1 new &middot; 5 votes &middot; eToro App Store</div><span class="run-card-arrow">→</span></a>
+      <a class="run-card run-card-grouped" href="2026-04-15.html"><div class="run-date"><span class="run-theme"><span class="run-theme-emoji">🌐</span><span class="run-theme-label">Standard scan</span></span></div><div class="run-stats"><div class="run-stat"><span class="stat-num">9</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">5</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-14.html"><div class="run-date">Apr 14</div><div class="run-stats"><div class="run-stat"><span class="stat-num">10</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">6</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-12.html"><div class="run-date">Apr 12</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-10.html"><div class="run-date">Apr 10</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-09.html"><div class="run-date">Apr 9</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-07.html"><div class="run-date">Apr 7</div><div class="run-stats"><div class="run-stat"><span class="stat-num">17</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">5</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-06.html"><div class="run-date">Apr 6</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-04.html"><div class="run-date">Apr 4</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-02.html"><div class="run-date">Apr 2</div><div class="run-stats"><div class="run-stat"><span class="stat-num">16</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-04-01.html"><div class="run-date">Apr 1</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-26.html"><div class="run-date">Mar 26</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-22.html"><div class="run-date">Mar 22</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-20.html"><div class="run-date">Mar 20</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">1</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-19.html"><div class="run-date">Mar 19</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-18.html"><div class="run-date">Mar 18</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-15.html"><div class="run-date">Mar 15</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-12.html"><div class="run-date">Mar 12</div><div class="run-stats"><div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-11.html"><div class="run-date">Mar 11</div><div class="run-stats"><div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-10.html"><div class="run-date">Mar 10</div><div class="run-stats"><div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      <a class="run-card" href="2026-03-09.html"><div class="run-date">Mar 9</div><div class="run-stats"><div class="run-stat"><span class="stat-num">11</span><span class="stat-label">Signals</span></div><div class="run-stat"><span class="stat-num">13</span><span class="stat-label">New Startups</span></div><div class="run-stat"><span class="stat-num">3</span><span class="stat-label">Research</span></div></div><span class="run-card-arrow">→</span></a>
+      </div>
 
     <a class="pipeline-cta" href="pipeline.html">
       <div class="pipeline-cta-text">
