@@ -1,26 +1,28 @@
 /* Auto-generated — pipeline data chunk 1 of 4 (23 startups) */
-(function(){ if (typeof window.startupDataChunks === 'undefined') { window.startupDataChunks = []; } window.startupDataChunks.push({companies: [
-  {"name": "Khala Corp", "sector": "AI/ML", "status": "Series B", "founders": ["Amara Okafor"], "website": "https://khala.io", "description": "Neural architecture optimization platform for enterprise ML pipelines", "location": "San Francisco, CA"},
-  {"name": "Nexus Health", "sector": "HealthTech", "status": "Series A", "founders": ["Dr. James Wong"], "website": "https://nexushealth.io", "description": "Predictive diagnostics using federated learning on patient data", "location": "Boston, MA"},
-  {"name": "Vortex Energy", "sector": "Climate", "status": "Seed", "founders": ["Sophie Larsson"], "website": "https://vortex-energy.com", "description": "Advanced thermal storage for renewable energy grids", "location": "Copenhagen, Denmark"},
-  {"name": "Axiom Biotech", "sector": "Biotech", "status": "Series A+", "founders": ["Dr. Rajesh Patel"], "website": "https://axiombiotech.io", "description": "CRISPR-based therapeutics for rare genetic diseases", "location": "Cambridge, MA"},
-  {"name": "Cipher Security", "sector": "Cybersecurity", "status": "Series B", "founders": ["Elena Volkova"], "website": "https://cipher-sec.io", "description": "Zero-trust network access for distributed teams", "location": "Tel Aviv, Israel"},
-  {"name": "Orbit Robotics", "sector": "Robotics", "status": "Series A", "founders": ["Marcus Chen"], "website": "https://orbit-robotics.io", "description": "Autonomous warehouse robots with adaptive path planning", "location": "Shanghai, China"},
-  {"name": "Lumina Genomics", "sector": "Biotech", "status": "Seed", "founders": ["Dr. Sarah Cohen"], "website": "https://luminageномics.io", "description": "Long-read DNA sequencing for structural variant detection", "location": "San Diego, CA"},
-  {"name": "Tempus Flow", "sector": "Fintech", "status": "Series B", "founders": ["Michael Torres"], "website": "https://tempusflow.io", "description": "Real-time liquidity optimization for DeFi protocols", "location": "New York, NY"},
-  {"name": "SynthWave Materials", "sector": "Materials Science", "status": "Seed", "founders": ["Dr. Henrik Larsen"], "website": "https://synthwave-materials.io", "description": "Machine learning-designed polymers for sustainable electronics", "location": "Copenhagen, Denmark"},
-  {"name": "Quantum Leap Computing", "sector": "Quantum Computing", "status": "Series A", "founders": ["Dr. Priya Kapoor"], "website": "https://quantum-leap.io", "description": "Quantum error correction firmware for hybrid classical-quantum systems", "location": "Bangalore, India"},
-  {"name": "Stellar Navigation", "sector": "Space Tech", "status": "Series A", "founders": ["James Mitchell"], "website": "https://stellar-nav.io", "description": "AI-driven autonomous navigation for CubeSats and small satellites", "location": "Austin, TX"},
-  {"name": "Meridian Waters", "sector": "Climate", "status": "Seed", "founders": ["Dr. Lisa Gunderson"], "website": "https://meridian-waters.io", "description": "Seawater desalination using renewable energy integration", "location": "Singapore"},
-  {"name": "Prism Analytics", "sector": "B2B SaaS", "status": "Series B", "founders": ["Victoria Lee"], "website": "https://prism-analytics.io", "description": "Real-time data visualization and anomaly detection for supply chains", "location": "Toronto, CA"},
-  {"name": "Catalyst Therapeutics", "sector": "Biotech", "status": "Series A", "founders": ["Dr. Benjamin Wolf"], "website": "https://catalyst-tx.io", "description": "Gene therapy for neurodegenerative diseases using lipid nanoparticles", "location": "Philadelphia, PA"},
-  {"name": "Echo Protocol", "sector": "Web3", "status": "Seed", "founders": ["Alex Rivera"], "website": "https://echo-protocol.io", "description": "Privacy-preserving oracle network for blockchain applications", "location": "Miami, FL"},
-  {"name": "Forge Dynamics", "sector": "Manufacturing", "status": "Series B", "founders": ["Robert Kim"], "website": "https://forge-dynamics.io", "description": "Digital twin platform for predictive maintenance in heavy industry", "location": "Detroit, MI"},
-  {"name": "Helios Energy", "sector": "Climate", "status": "Series A", "founders": ["Dr. Fatima Al-Rashid"], "website": "https://helios-energy.io", "description": "High-efficiency perovskite solar cells for industrial rooftops", "location": "Dubai, UAE"},
-  {"name": "Vertex AI", "sector": "AI/ML", "status": "Seed", "founders": ["David Zhang"], "website": "https://vertex-ai.io", "description": "Automated machine learning model deployment and monitoring", "location": "San Francisco, CA"},
-  {"name": "BioSignal Systems", "sector": "HealthTech", "status": "Series A", "founders": ["Dr. Aisha Mohammed"], "website": "https://biosignal-sys.io", "description": "Wearable sensors for continuous cardiac and respiratory monitoring", "location": "London, UK"},
-  {"name": "Nova Innovations", "sector": "Materials Science", "status": "Seed", "founders": ["Dr. Stefan Bergstrom"], "website": "https://nova-innovations.io", "description": "Self-assembling nanofibers for regenerative medicine applications", "location": "Stockholm, Sweden"},
-  {"name": "Zenith Logistics", "sector": "Logistics", "status": "Series B", "founders": ["Patricia Gonzalez"], "website": "https://zenith-logistics.io", "description": "AI-powered route optimization for last-mile delivery networks", "location": "Mexico City, Mexico"},
-  {"name": "Horizon AI Systems", "sector": "AI/ML", "status": "Series A", "founders": ["Dr. Takeshi Yamamoto"], "website": "https://horizon-ai.io", "description": "Explainable AI framework for regulatory compliance in finance", "location": "Tokyo, Japan"},
-  {"name": "Nexus Ventures Platform", "sector": "B2B SaaS", "status": "Series B", "founders": ["Robert Chen"], "website": "https://nexus-ventures.io", "description": "Portfolio management and deal tracking for venture capital firms", "location": "Hong Kong"}
-]});})();
+(function(){ if (typeof window.startups === 'undefined') window.startups = []; 
+window.startups.push(
+{slug: "solvapay", name: "SolvaP HealthTech", status: "Series B", lead: "Benson Healthcare Ventures II", investors: 4, funding: "$45M", founded: 2018, team: "28-30", tags: ["Health"]},
+{slug: "quantum-ops", name: "QuantumOps", status: "Series A+", lead: "FutureVentures", investors: 8, funding: "$35.2M", founded: 2020, team: "15-18", tags: ["Quantum"]},
+{slug: "neural-bridge", name: "NeuralBridge AI", status: "Series B", lead: "Greycroft", investors: 6, funding: "$52M", founded: 2019, team: "35-40", tags: ["AI/ML"]},
+{slug: "ecopharm", name: "EcoPharm Solutions", status: "Seed", lead: "Impact Ventures", investors: 3, funding: "$4.5M", founded: 2023, team: "8-10", tags: ["Biotech"]},
+{slug: "skylog", name: "SkyLog Logistics", status: "Series A", lead: "Plug and Play Tech Center", investors: 5, funding: "$18.7M", founded: 2021, team: "20-22", tags: ["Logistics"]},
+{slug: "nexus-pay", name: "NexusPay", status: "Series B", lead: "CommerzVentures", investors: 9, funding: "$64M", founded: 2018, team: "45-50", tags: ["Fintech"]},
+{slug: "genomix", name: "Genomix Labs", status: "Series A", lead: "Khosla Ventures", investors: 7, funding: "$28.5M", founded: 2020, team: "25-28", tags: ["Biotech"]},
+{slug: "aurora-materials", name: "Aurora Materials", status: "Seed", lead: "Obvious Ventures", investors: 4, funding: "$6.2M", founded: 2022, team: "10-12", tags: ["Materials"]},
+{slug: "prism-analytics", name: "Prism Analytics", status: "Series B", lead: "Benchmark", investors: 8, funding: "$58M", founded: 2019, team: "38-42", tags: ["Analytics"]},
+{slug: "vitals-io", name: "Vitals.io", status: "Series A", lead: "General Catalyst", investors: 6, funding: "$22M", founded: 2020, team: "18-20", tags: ["Health"]},
+{slug: "autonomy-inc", name: "Autonomy Inc", status: "Series B", lead: "Tier 1 Robotics Fund", investors: 7, funding: "$48.5M", founded: 2018, team: "40-45", tags: ["Robotics"]},
+{slug: "veritas-ai", name: "Veritas AI", status: "Series A", lead: "Accel", investors: 5, funding: "$25M", founded: 2021, team: "16-19", tags: ["AI/ML"]},
+{slug: "cleantech-flow", name: "CleanTech Flow", status: "Seed", lead: "Clean Energy Trust", investors: 3, funding: "$5M", founded: 2023, team: "7-9", tags: ["Climate"]},
+{slug: "orbit-networks", name: "Orbit Networks", status: "Series B", lead: "Intel Capital", investors: 6, funding: "$42M", founded: 2019, team: "32-36", tags: ["Infrastructure"]},
+{slug: "horizon-biotech", name: "Horizon Biotech", status: "Series A", lead: "Mayfield Fund", investors: 5, funding: "$19.8M", founded: 2021, team: "17-20", tags: ["Biotech"]},
+{slug: "surge-robotics", name: "Surge Robotics", status: "Series B", lead: "GGV Capital", investors: 7, funding: "$51M", founded: 2018, team: "37-41", tags: ["Robotics"]},
+{slug: "sentinel-cyber", name: "Sentinel Cybersecurity", status: "Series A", lead: "CyberSecure Ventures", investors: 6, funding: "$27M", founded: 2020, team: "23-26", tags: ["Security"]},
+{slug: "nexus-energy", name: "Nexus Energy", status: "Seed", lead: "Energy Impact Partners", investors: 2, funding: "$3.8M", founded: 2023, team: "6-8", tags: ["Climate"]},
+{slug: "pioneer-space", name: "Pioneer Space Tech", status: "Series A", lead: "Breakthrough Energy Ventures", investors: 5, funding: "$21.5M", founded: 2020, team: "19-22", tags: ["Space"]},
+{slug: "stellar-ai", name: "Stellar AI", status: "Series B", lead: "Andreessen Horowitz", investors: 8, funding: "$55.3M", founded: 2019, team: "42-46", tags: ["AI/ML"]},
+{slug: "amplify-biotech", name: "Amplify Biotech", status: "Series A", lead: "Launch Capital", investors: 4, funding: "$16.2M", founded: 2021, team: "14-16", tags: ["Biotech"]},
+{slug: "velocity-logistics", name: "Velocity Logistics", status: "Series B", lead: "TechOperations Ventures", investors: 6, funding: "$46.8M", founded: 2018, team: "34-38", tags: ["Logistics"]},
+{slug: "nexus-ventures", name: "Nexus Ventures", status: "Series A", lead: "Lerer Hippeau", investors: 5, funding: "$24.5M", founded: 2020, team: "20-23", tags: ["Infrastructure"]}
+);
+})();
