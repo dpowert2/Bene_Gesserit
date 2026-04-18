@@ -1,734 +1,811 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bene Gesserit — Agentic AI Startup Signals</title>
-<meta content="A curated radar of startups, research, and signals shaping the agentic AI ecosystem in financial services." name="description"/>
-<meta content="#F0EBE3" name="theme-color"/>
-<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Bene Gesserit Works</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-    :root {
-      --bg: #F0EBE3;
-      --bg-page: #F7F4EF;
-      --bg-card: #FFFFFF;
-      --bg-card-hover: #FDFCFA;
-      --border: #E2DDD5;
-      --border-strong: #D4CEC4;
-      --text: #3D3A36;
-      --text-heading: #1A1816;
-      --text-muted: #8C857B;
-      --text-light: #A9A29A;
-      --accent: #6B8F71;
-      --accent-light: #E8F0E9;
-      --accent-dark: #4A6B4F;
-      --brown: #8B6F54;
-      --brown-light: #F3EDE7;
-      --brown-dark: #6B5340;
-      --coral: #C4716E;
-      --coral-light: #F8EDEC;
-      --blue: #6B849A;
-      --blue-light: #ECF0F4;
-      --amber: #B8944A;
-      --amber-light: #F6F0E2;
-    }
+:root {
+  --bg: #E2E6ED;
+  --surface: #FFFFFF;
+  --surface-muted: #F3F4F6;
+  --border: #E5E8EE;
+  --text-primary: #111827;
+  --text-body: #374151;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
+  --accent: #E84B3C;
+  --accent-light: #FEF2F0;
+  --data-blue: #7B9BB5;
+  --data-coral: #E84B3C;
+  --data-dark: #1C1C2C;
+  --data-grey: #D1D5DB;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --serif: 'Instrument Serif', Georgia, serif;
+}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
-      background: var(--bg-page);
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
-      line-height: 1.65;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-    }
+body {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
 
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+/* ── Page shell ─────────────────────────────── */
+.page-shell {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  margin: 20px;
+  min-height: calc(100vh - 40px);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
 
-    /* ============================================================ */
-    /* HEADER                                                       */
-    /* ============================================================ */
-    header {
-      padding: 60px 0 44px;
-      background: var(--bg-page);
-    }
+/* ── Hero ────────────────────────────────────── */
+.hero {
+  background: var(--data-dark);
+  color: #fff;
+  padding: 100px 48px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(232,75,60,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 800px; position: relative; z-index: 1; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 28px;
+}
+.hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 600px;
+  line-height: 1.7;
+}
 
-    .title-row {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      margin-bottom: 4px;
-    }
+/* ── Section layout ─────────────────────────── */
+.section {
+  padding: 80px 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section + .section { border-top: 1px solid var(--border); }
+.section-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.section p { margin-bottom: 18px; }
+.section p:last-child { margin-bottom: 0; }
 
-    header h1 {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 3.2rem;
-      font-weight: 400;
-      color: var(--text-heading);
-      letter-spacing: -1.5px;
-      line-height: 1;
-    }
+/* ── Pull quote ─────────────────────────────── */
+.pull-quote {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.45;
+  padding: 32px 0;
+  margin: 28px 0;
+  border-top: 2px solid var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
 
-    .edition-badge {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      font-weight: 500;
-      color: var(--accent-dark);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      background: var(--accent-light);
-      padding: 4px 10px;
-      border-radius: 100px;
-    }
+/* ── Cards / callout boxes ──────────────────── */
+.callout {
+  background: var(--surface-muted);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.callout-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
 
-    header .description {
-      color: var(--text-muted);
-      font-size: 1rem;
-      font-weight: 400;
-      margin-top: 10px;
-      max-width: 500px;
-      line-height: 1.55;
-    }
+/* ── Stat row ───────────────────────────────── */
+.stat-row {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 32px 0;
+}
+.stat-cell {
+  flex: 1;
+  padding: 24px 28px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.stat-cell:last-child { border-right: none; }
+.stat-label { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
+.stat-value { font-size: 2.4rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+.stat-note { font-size: 12px; color: var(--text-faint); margin-top: 6px; }
 
-    .meta-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 28px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
+/* ── Diagram container ──────────────────────── */
+.diagram-wrap {
+  margin: 40px 0;
+  padding: 40px 32px;
+  background: var(--surface-muted);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+.diagram-wrap svg { display: block; margin: 0 auto; }
+.diagram-caption {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 16px;
+  font-weight: 500;
+}
 
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+/* ── Category grid ──────────────────────────── */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+.cat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+.cat-card .cat-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.cat-card .cat-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.cat-card .cat-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.cat-card .cat-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.cat-badge.every { background: #FEF2F0; color: var(--accent); }
+.cat-badge.high { background: #FEF9E7; color: #B45309; }
+.cat-badge.medium { background: #EFF6FF; color: #2563EB; }
+.cat-badge.monitor { background: var(--surface-muted); color: var(--text-faint); }
 
-    .meta-item .meta-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.58rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--text-light);
-    }
+/* ── Timeline ───────────────────────────────── */
+.timeline { margin: 32px 0; padding-left: 28px; border-left: 2px solid var(--border); }
+.timeline-item { margin-bottom: 28px; position: relative; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -34px; top: 6px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--data-blue);
+  border: 2px solid var(--surface);
+}
+.timeline-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.timeline-text { font-size: 0.92rem; color: var(--text-body); margin-top: 4px; }
 
-    .meta-item .meta-value {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.4rem;
-      color: var(--text-heading);
-      line-height: 1.2;
-    }
+/* ── Stack grid ─────────────────────────────── */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+.stack-item {
+  background: var(--data-dark);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+}
+.stack-item .si-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 6px;
+}
+.stack-item .si-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.stack-item .si-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
 
-    /* ============================================================ */
-    /* SECTIONS                                                     */
-    /* ============================================================ */
-    section {
-      padding: 44px 0;
-    }
+/* ── Footer ─────────────────────────────────── */
+.footer {
+  padding: 48px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.footer p { font-size: 0.82rem; color: var(--text-faint); }
 
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-header h2 {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: var(--text-heading);
-      letter-spacing: -0.5px;
-    }
-
-    .section-header .count {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      font-weight: 500;
-      color: var(--text-light);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    /* ============================================================ */
-    /* SITE NAVIGATION */
-    /* ============================================================ */
-    .site-nav {
-      background: var(--bg-page);
-      border-bottom: 1px solid var(--border);
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .site-nav .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .site-nav-brand {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: var(--text-heading);
-      text-decoration: none;
-      letter-spacing: -0.3px;
-    }
-    .site-nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .site-nav-link {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-decoration: none;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 5px 12px;
-      transition: all 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
-    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
-    .site-nav-date {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--text-heading);
-      font-weight: 500;
-      margin: 0 4px;
-    }
-
-    /* ============================================================ */
-    /* RUN CARDS ON HUB */
-    /* ============================================================ */
-    .run-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
-    .run-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 24px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .run-card:hover { border-color: var(--brown); box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
-    .run-date {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.5rem;
-      color: var(--text-heading);
-      min-width: 90px;
-    }
-    .run-date small { display: block; font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-light); font-style: normal; margin-top: 2px; }
-    .run-stats { display: flex; gap: 20px; flex: 1; }
-    .run-stat { text-align: center; }
-    .run-stat .stat-num { font-family: 'DM Mono', monospace; font-size: 1.4rem; font-weight: 500; color: var(--text-heading); display: block; }
-    .run-stat .stat-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-    .run-card-arrow { font-size: 1.1rem; color: var(--text-light); transition: transform 0.2s, color 0.2s; }
-    .run-card:hover .run-card-arrow { color: var(--brown); transform: translateX(3px); }
-    .run-card.latest { border-color: var(--accent); }
-    .run-card.latest .run-date small { color: var(--accent-dark); }
-
-    .pipeline-cta {
-      margin-top: 40px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .pipeline-cta:hover { border-color: var(--brown); box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
-    .pipeline-cta-text h3 { font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; color: var(--text-heading); margin-bottom: 4px; }
-    .pipeline-cta-text p { font-size: 0.85rem; color: var(--text-muted); }
-    .pipeline-cta-arrow { font-size: 1.5rem; color: var(--text-light); transition: transform 0.2s, color 0.2s; }
-    .pipeline-cta:hover .pipeline-cta-arrow { color: var(--brown); transform: translateX(4px); }
-
-    /* ============================================================ */
-    /* FOOTER                                                       */
-    /* ============================================================ */
-    footer {
-      padding: 44px 0;
-      border-top: 1px solid var(--border);
-      background: var(--bg-page);
-    }
-
-    footer p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    footer strong { color: var(--text-heading); font-weight: 600; }
-
-    /* ============================================================ */
-    /* CHART                                                        */
-    /* ============================================================ */
-    .chart-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 24px 20px;
-      margin-top: 40px;
-    }
-
-    .chart-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .chart-title {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: var(--text-heading);
-    }
-
-    .chart-legend {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-family: 'DM Mono', monospace;
-      color: var(--text-muted);
-    }
-
-    .legend-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .chart-wrap {
-      position: relative;
-      height: 180px;
-    }
-
-    /* ============================================================ */
-    /* RESPONSIVE                                                   */
-    /* ============================================================ */
-    @media (max-width: 640px) {
-      header { padding: 40px 0 32px; }
-      header h1 { font-size: 2.4rem; }
-      .title-row { flex-direction: column; gap: 8px; }
-      .meta-strip { gap: 16px; }
-      .meta-item .meta-value { font-size: 1.1rem; }
-      .chart-header { flex-direction: column; gap: 10px; }
-      .chart-wrap { height: 150px; }
-    }
-
-  
-    /* ── Password Gate ── */
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  .page-shell { margin: 8px; border-radius: var(--radius-lg); }
+  .hero { padding: 60px 24px 50px; }
+  .section { padding: 48px 24px; }
+  .stat-row { flex-direction: column; }
+  .stat-cell { border-right: none; border-bottom: 1px solid var(--border); }
+  .stat-cell:last-child { border-bottom: none; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .stack-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
-<nav class="site-nav">
-  <div class="container">
-    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
-    <div class="site-nav-links">
-      <a class="site-nav-link active" href="index.html">Radar</a>
-      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
-      <a class="site-nav-link" href="changelog.html">Changelog</a>
-      <a class="site-nav-link" href="archive.html">Archive</a>
+
+<div class="page-shell">
+
+<!-- ════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span> System Architecture</div>
+    <h1>How <em>Bene Gesserit</em> works</h1>
+    <p class="hero-sub">An AI-powered startup intelligence system that learns what you're looking for — and gets sharper with every decision you make.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     01 — THE PROBLEM
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">01 — The Problem</div>
+  <h2>Startup scouting doesn't learn</h2>
+  <p>Corporate innovation teams scan hundreds of startups a week. They use spreadsheets, Google Alerts, analyst reports, and gut feel. When they pass on a company, the reasoning disappears. When they like something, the pattern is never captured. Next week, they start from scratch.</p>
+  <p>The result is a process that is expensive, inconsistent, and — most critically — <strong>static</strong>. A human analyst gets better over time, but the system around them doesn't. The search terms don't adapt. The scoring criteria don't evolve. The thesis stays frozen in whatever slide deck launched the initiative.</p>
+
+  <div class="pull-quote">What if the scouting system itself could learn from every decision — getting more precise with each thumbs-up, each thumbs-down, each "close but not quite"?</div>
+
+  <p>That's what Bene Gesserit does. It's a recursive intelligence system where every human judgment makes the next search sharper, the next score more accurate, and the thesis more refined. The system doesn't just find startups — it learns what "good" means to <em>you</em>, and it keeps learning.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     02 — THE ARCHITECTURE
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">02 — The Architecture</div>
+  <h2>Six phases, strict dependency order</h2>
+  <p>Bene Gesserit runs as a single orchestrated pipeline where each phase's output feeds the next. Nothing runs out of order. The system can be triggered manually or on a schedule — either way, the phases execute in strict sequence, ensuring the radar never runs with stale search terms and the thesis never updates without the latest vote data.</p>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 760 540" width="760" height="540" xmlns="http://www.w3.org/2000/svg" style="font-family: Inter, sans-serif;">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#E84B3C"/>
+        </marker>
+      </defs>
+
+      <!-- Phase 1: LEARN -->
+      <rect x="20" y="20" width="220" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="40" y="44" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 1</text>
+      <text x="40" y="62" font-size="14" font-weight="700" fill="#fff">Learn</text>
+      <text x="40" y="78" font-size="10" fill="#9CA3AF">Process votes + feedback</text>
+
+      <!-- Arrow 1→2 -->
+      <line x1="240" y1="56" x2="276" y2="56" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Phase 2: STRATEGISE -->
+      <rect x="280" y="20" width="220" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="300" y="44" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 2</text>
+      <text x="300" y="62" font-size="14" font-weight="700" fill="#fff">Strategise</text>
+      <text x="300" y="78" font-size="10" fill="#9CA3AF">Update thesis.md</text>
+
+      <!-- Arrow 2→3 -->
+      <line x1="500" y1="56" x2="536" y2="56" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Phase 3: ARM -->
+      <rect x="540" y="20" width="200" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="560" y="44" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 3</text>
+      <text x="560" y="62" font-size="14" font-weight="700" fill="#fff">Arm</text>
+      <text x="560" y="78" font-size="10" fill="#9CA3AF">Regenerate search terms</text>
+
+      <!-- Arrow 3→4 (drops down) -->
+      <path d="M 640 92 L 640 124" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Phase 4: SCOUT -->
+      <rect x="540" y="128" width="200" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="560" y="152" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 4</text>
+      <text x="560" y="170" font-size="14" font-weight="700" fill="#fff">Scout</text>
+      <text x="560" y="186" font-size="10" fill="#9CA3AF">Web scan + score + briefing</text>
+
+      <!-- Arrow 4→5 (goes left) -->
+      <line x1="540" y1="164" x2="504" y2="164" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Phase 5: PUBLISH -->
+      <rect x="280" y="128" width="220" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="300" y="152" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 5</text>
+      <text x="300" y="170" font-size="14" font-weight="700" fill="#fff">Publish</text>
+      <text x="300" y="186" font-size="10" fill="#9CA3AF">Push to GitHub Pages</text>
+
+      <!-- Arrow 5→6 (goes left) -->
+      <line x1="280" y1="164" x2="244" y2="164" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- Phase 6: REPORT -->
+      <rect x="20" y="128" width="220" height="72" rx="12" fill="#1C1C2C"/>
+      <text x="40" y="152" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 6</text>
+      <text x="40" y="170" font-size="14" font-weight="700" fill="#fff">Report</text>
+      <text x="40" y="186" font-size="10" fill="#9CA3AF">Append to discovery log</text>
+
+      <!-- Feedback loop arrow from Report back to Human -->
+      <path d="M 130 200 L 130 240" stroke="#E84B3C" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+
+      <!-- Human node -->
+      <rect x="20" y="244" width="720" height="56" rx="12" fill="#E84B3C"/>
+      <text x="380" y="268" text-anchor="middle" font-size="10" font-weight="700" fill="rgba(255,255,255,0.7)" letter-spacing="0.08em">HUMAN JUDGMENT</text>
+      <text x="380" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Vote on startups + Leave strategic feedback + Flag for follow-up</text>
+
+      <!-- Loop-back arrow from Human to Phase 1 -->
+      <path d="M 380 300 L 380 340 L 8 340 L 8 56 L 20 56" fill="none" stroke="#E84B3C" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arr)"/>
+      <text x="16" y="360" font-size="10" font-weight="600" fill="#6B7280">Next cycle starts with fresh human signals</text>
+
+      <!-- Knowledge base files (right side annotation) -->
+      <rect x="20" y="400" width="720" height="120" rx="12" fill="#F3F4F6" stroke="#E5E8EE" stroke-width="1"/>
+      <text x="40" y="424" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.1em">SHARED KNOWLEDGE BASE — READ AND WRITTEN BY EVERY PHASE</text>
+
+      <rect x="40" y="440" width="120" height="32" rx="6" fill="#fff" stroke="#E5E8EE"/>
+      <text x="100" y="460" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">thesis.md</text>
+
+      <rect x="172" y="440" width="120" height="32" rx="6" fill="#fff" stroke="#E5E8EE"/>
+      <text x="232" y="460" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">preferences.md</text>
+
+      <rect x="304" y="440" width="140" height="32" rx="6" fill="#fff" stroke="#E5E8EE"/>
+      <text x="374" y="460" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">search-terms.md</text>
+
+      <rect x="456" y="440" width="130" height="32" rx="6" fill="#fff" stroke="#E5E8EE"/>
+      <text x="521" y="460" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">near-misses.md</text>
+
+      <rect x="598" y="440" width="130" height="32" rx="6" fill="#fff" stroke="#E5E8EE"/>
+      <text x="663" y="460" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">discovery-log.md</text>
+
+      <text x="380" y="500" text-anchor="middle" font-size="10" fill="#9CA3AF">All files are plain markdown — human-readable, agent-writable, git-versioned</text>
+    </svg>
+    <div class="diagram-caption">The full pipeline. Six phases in strict order, closing the loop through human judgment.</div>
+  </div>
+
+  <p>The human reviews the published results, votes, leaves feedback. The next cycle starts with those fresh signals. The loop closes — and the system converges.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     03 — THE LIVING THESIS
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">03 — The Living Thesis</div>
+  <h2>Strategy as a document that evolves</h2>
+  <p>At the centre of the system is <code>thesis.md</code> — a living strategic document that defines what the system is searching for, why, and what "good" looks like. It's not a static brief. It's the system's understanding of the investment thesis, updated automatically based on what the human decision-maker reinforces or rejects.</p>
+
+  <p>The thesis contains the strategic vision (what kind of companies matter and why), a gap map (the specific technology categories being scouted), quality criteria (stage, geography, team, architecture preferences), learned preferences (patterns derived from voting data), and signals that challenge the thesis (competitive moves, regulatory shifts, market events that could invalidate assumptions).</p>
+
+  <div class="callout">
+    <div class="callout-label">Key insight</div>
+    <p style="margin:0">The thesis is both the input and the output of the system. It drives what gets searched and how results are scored — but it also absorbs every new signal and human judgment, meaning the strategy itself improves recursively. The thesis you write on day one will be unrecognisable by month three, shaped by hundreds of micro-decisions you've made along the way.</p>
+  </div>
+
+  <p>Version control is built in. The thesis carries a version log showing what changed and why — so you can trace the evolution of your strategic thinking over time.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     04 — THE SEARCH ENGINE
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">04 — The Search Engine</div>
+  <h2>160 queries that rewrite themselves</h2>
+  <p>Most scouting tools use fixed search terms. Bene Gesserit generates its own. The Search Terms Agent reads the current thesis and produces a structured query set — organised by gap category, tagged by priority, and complete with negative filters to exclude noise.</p>
+
+  <div class="stat-row">
+    <div class="stat-cell">
+      <div class="stat-label">Search queries</div>
+      <div class="stat-value">160</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Gap categories</div>
+      <div class="stat-value">12</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Scan frequency</div>
+      <div class="stat-value">2d</div>
+      <div class="stat-note">Every 2 days</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Terms refresh</div>
+      <div class="stat-value">2x</div>
+      <div class="stat-note">Per week</div>
     </div>
   </div>
-</nav>
 
-<header>
-<div class="container">
-<div class="title-row">
-<h1>Bene Gesserit</h1>
-<span class="edition-badge">Signals Digest</span>
-</div>
-<p class="description">A curated radar of startups, research, and market signals shaping the agentic AI ecosystem in financial services. Updated every two days.</p>
-<div class="meta-strip">
-<div class="meta-item">
-<span class="meta-label">Last Run</span>
-<span class="meta-value">2026-04-17</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">Runs</span>
-<span class="meta-value">18</span>
-</div>
-<div class="meta-item">
-<span class="meta-label">Startups</span>
-<span class="meta-value">76</span>
-</div>
-</div>
-</div>
-</header>
+  <p>Each category has a priority level that determines scan frequency. Critical categories are searched every scan. High-priority categories every other scan. Medium categories weekly. Monitor categories bi-weekly. This ensures the system concentrates effort where signal density is highest.</p>
 
-<main>
-  <div class="container">
-
-    <div class="chart-card">
-      <div class="chart-header">
-        <span class="chart-title">Activity over time</span>
-        <div class="chart-legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#8B6F54;"></div>Signals</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#6B8F71;"></div>Startups</div>
-          <div class="legend-item"><div class="legend-dot" style="background:#6B849A;"></div>Research</div>
-        </div>
-      </div>
-      <div class="chart-wrap">
-        <canvas id="activityChart"></canvas>
-      </div>
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-num">01</div>
+      <div class="cat-name">Personal Financial Agent</div>
+      <div class="cat-desc">Front-door agents that understand customer goals and orchestrate specialist conversations.</div>
+      <span class="cat-badge every">Every scan</span>
     </div>
-
-    <div style="margin-top:40px;">
-      <h2 style="font-family:'Instrument Serif',serif;font-size:1.8rem;font-weight:400;color:var(--text-heading);margin-bottom:4px;">Radar Runs</h2>
-      <p style="color:var(--text-muted);font-size:0.85rem;">Each run captures new signals, startups, and research for that date.</p>
+    <div class="cat-card">
+      <div class="cat-num">02</div>
+      <div class="cat-name">Pre-Trade Compliance</div>
+      <div class="cat-desc">Suitability checks, concentration limits, restricted lists — the gate before execution.</div>
+      <span class="cat-badge every">Every scan</span>
     </div>
-
-    <div class="run-grid">
-      <a class="run-card latest" href="2026-04-17.html">
-        <div class="run-date">Apr 17 <small>LATEST</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-15b.html">
-        <div class="run-date">Apr 15 Full Cycle</div>
-        <div class="run-stats">1 new &middot; 5 votes &middot; eToro App Store</div>
-      </a>
-      <a class="run-card" href="2026-04-15.html">
-        <div class="run-date">Apr 15</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">9</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">5</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-14.html">
-        <div class="run-date">Apr 14</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">10</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-12.html">
-        <div class="run-date">Apr 12</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-10.html">
-        <div class="run-date">Apr 10</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-09.html">
-        <div class="run-date">Apr 9</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-07.html">
-        <div class="run-date">Apr 7</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">17</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">5</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-06.html">
-        <div class="run-date">Apr 6</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-04.html">
-        <div class="run-date">Apr 4</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-02.html">
-        <div class="run-date">Apr 2</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">16</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">12</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-04-01.html">
-        <div class="run-date">Apr 1</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-26.html">
-        <div class="run-date">Mar 26</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-22.html">
-        <div class="run-date">Mar 22</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-20.html">
-        <div class="run-date">Mar 20</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-      <a class="run-card" href="2026-03-19.html">
-        <div class="run-date">Mar 19</div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-18.html">
-        <div class="run-date">Mar 18 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-15.html">
-        <div class="run-date">Mar 15 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-            <a class="run-card" href="2026-03-12.html">
-        <div class="run-date">Mar 12 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">8</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-11.html">
-        <div class="run-date">Mar 11 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">4</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">1</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-10.html">
-        <div class="run-date">Mar 10 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
-
-      <a class="run-card" href="2026-03-09.html">
-        <div class="run-date">Mar 9 <small>2026</small></div>
-        <div class="run-stats">
-          <div class="run-stat"><span class="stat-num">11</span><span class="stat-label">Signals</span></div>
-          <div class="run-stat"><span class="stat-num">13</span><span class="stat-label">New Startups</span></div>
-          <div class="run-stat"><span class="stat-num">3</span><span class="stat-label">Research</span></div>
-        </div>
-        <span class="run-card-arrow">→</span>
-      </a>
+    <div class="cat-card">
+      <div class="cat-num">03</div>
+      <div class="cat-name">Tax Optimisation</div>
+      <div class="cat-desc">Portfolio-integrated tax-loss harvesting, gain deferral, asset location.</div>
+      <span class="cat-badge high">High</span>
     </div>
-
-    <a class="pipeline-cta" href="pipeline.html">
-      <div class="pipeline-cta-text">
-        <h3>Full Pipeline</h3>
-        <p>All 85 startups tracked across all runs — filter, compare scores, and rate candidates.</p>
-      </div>
-      <span class="pipeline-cta-arrow">→</span>
-    </a>
-
-    <a class="pipeline-cta" href="changelog.html" style="margin-top: 12px;">
-      <div class="pipeline-cta-text">
-        <h3>Changelog</h3>
-        <p>Every substantive change to the thesis, preferences, and search terms — with evidence.</p>
-      </div>
-      <span class="pipeline-cta-arrow">→</span>
-    </a>
-
+    <div class="cat-card">
+      <div class="cat-num">04</div>
+      <div class="cat-name">Agent Orchestration</div>
+      <div class="cat-desc">Multi-agent workflow routing, scheduling, and governance for financial services.</div>
+      <span class="cat-badge medium">Medium</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">05</div>
+      <div class="cat-name">AI Safety & Guardrails</div>
+      <div class="cat-desc">Agent behaviour supervision, hallucination prevention, boundary enforcement.</div>
+      <span class="cat-badge high">High</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">06</div>
+      <div class="cat-name">Agent Auth & Identity</div>
+      <div class="cat-desc">Know Your Agent — permissions, secrets, identity delegation for non-human actors.</div>
+      <span class="cat-badge every">Every scan</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">07</div>
+      <div class="cat-name">Agent Payment Rails</div>
+      <div class="cat-desc">Settlement infrastructure and credential standards for agent-initiated transactions.</div>
+      <span class="cat-badge high">High</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">08</div>
+      <div class="cat-name">Agent Memory & Context</div>
+      <div class="cat-desc">Persistent state, cross-session context, and consent-managed data sharing.</div>
+      <span class="cat-badge medium">Medium</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">09</div>
+      <div class="cat-name">Audit & Explainability</div>
+      <div class="cat-desc">"Why did the agent do this?" — auditable, regulator-ready explanation.</div>
+      <span class="cat-badge high">High</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">10</div>
+      <div class="cat-name">Dispute Resolution</div>
+      <div class="cat-desc">Agent liability, insurance, certification, and accountability frameworks.</div>
+      <span class="cat-badge medium">Medium</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">11</div>
+      <div class="cat-name">Agentic Commerce</div>
+      <div class="cat-desc">Middleware connecting product catalogues to LLM conversations.</div>
+      <span class="cat-badge monitor">Monitor</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">12</div>
+      <div class="cat-name">Agent Monetisation</div>
+      <div class="cat-desc">Results-based billing and pricing infrastructure for agent-mediated services.</div>
+      <span class="cat-badge monitor">Monitor</span>
+    </div>
   </div>
-</main>
 
-<footer style="margin-top: 64px;">
-<div class="container">
-<p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar.</p>
-<p>Powered by Claude. Published on GitHub Pages. Refreshed every two days.</p>
+  <p>Crucially, the search terms also carry <strong>negative filters</strong> — learned exclusions derived from downvoted companies. When the human rejects a tax-filing company (because the thesis seeks portfolio-integrated tax intelligence, not e-filing), the system learns to exclude "tax filing", "tax preparation", and "bookkeeping automation" from future Tax Optimisation searches. The noise floor drops with every rejection.</p>
 </div>
-</footer>
 
-<script>
-(function () {
-  const labels = ['Mar 9', 'Mar 10', 'Mar 11', 'Mar 12', 'Mar 15', 'Mar 18', 'Mar 19', 'Mar 20', 'Mar 22', 'Mar 26', 'Apr 1', 'Apr 2', 'Apr 4', 'Apr 6', 'Apr 7', 'Apr 9', 'Apr 10', 'Apr 12', 'Apr 14', 'Apr 15', 'Apr 17'];
-  const signals   = [11, 7, 6, 8, 8, 8, 7, 7, 8, 16, 7, 16, 7, 7, 17, 8, 7, 8, 10, 9, 6];
-  const startups  = [13, 0, 4, 4, 3, 3, 2, 1, 2, 12, 2, 12, 4, 2, 12, 0, 3, 4, 6, 5, 3];
-  const research  = [3,  0, 1, 0, 1, 0, 1, 1, 0, 0,  0, 0,  0, 0, 5,  0, 0, 0, 0, 0, 0];
+<!-- ════════════════════════════════════════════
+     05 — THE LEARNING SYSTEM
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">05 — The Learning System</div>
+  <h2>Every vote teaches the model something</h2>
+  <p>This is the heart of what makes Bene Gesserit different from a search tool. The system maintains three learning mechanisms that turn human judgments into scoring improvements.</p>
 
-  const brown  = '#8B6F54';
-  const green  = '#6B8F71';
-  const blue   = '#6B849A';
-  const gridColor = 'rgba(0,0,0,0.06)';
-  const font  = "'DM Sans', sans-serif";
+  <h3>Preference learning</h3>
+  <p>Every vote (1-5 stars) updates a <code>preferences.md</code> file — a structured record of what the system has learned about the decision-maker's tastes. Upvotes generate positive signals with point bonuses. Downvotes generate negative signals with point penalties. Neutral votes are tracked as ambiguous signals requiring further calibration. The preferences file feeds directly into the scoring algorithm — startups in subsequent scans are scored against these learned preferences, not just against the static thesis.</p>
 
-  const makeDataset = (label, data, color) => ({
-    label,
-    data,
-    borderColor: color,
-    backgroundColor: color + '18',
-    pointBackgroundColor: color,
-    pointBorderColor: '#fff',
-    pointBorderWidth: 2,
-    pointRadius: 5,
-    pointHoverRadius: 7,
-    borderWidth: 2.5,
-    tension: 0.35,
-    fill: false,
-  });
+  <h3>Exposure normalisation</h3>
+  <p>Raw vote counts are misleading. If the radar surfaces 20 compliance startups and 4 agent-auth startups, and 3 get upvoted in each category, the naive signal is "equal interest." But the real signal is a 15% hit rate for compliance vs. 75% for agent-auth — a five-to-one preference that raw counts completely obscure.</p>
+  <p>The learning system normalises all preference signals by exposure — the number of startups surfaced per category, not just the number voted on. Categories are ranked by <strong>hit rate</strong> (upvotes ÷ exposures) and <strong>rejection rate</strong> (downvotes ÷ exposures), not by absolute volume. This prevents high-volume categories from drowning out genuine preferences in low-volume ones.</p>
 
-  new Chart(document.getElementById('activityChart'), {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        makeDataset('Signals',   signals,  brown),
-        makeDataset('Startups',  startups, green),
-        makeDataset('Research',  research, blue),
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#fff',
-          borderColor: '#E2DDD5',
-          borderWidth: 1,
-          titleColor: '#1A1816',
-          bodyColor: '#8C857B',
-          titleFont: { family: font, size: 12, weight: '600' },
-          bodyFont: { family: "'DM Mono', monospace", size: 11 },
-          padding: 12,
-          cornerRadius: 8,
-          boxPadding: 4,
-          callbacks: {
-            title: (items) => items[0].label,
-            label: (item) => `  ${item.dataset.label}: ${item.parsed.y}`,
-          }
-        }
-      },
-      scales: {
-        x: {
-          grid: { color: gridColor, drawTicks: false },
-          border: { display: false },
-          ticks: {
-            font: { family: "'DM Mono', monospace", size: 11 },
-            color: '#A9A29A',
-            padding: 8,
-          }
-        },
-        y: {
-          beginAtZero: true,
-          grid: { color: gridColor, drawTicks: false },
-          border: { display: false, dash: [3, 3] },
-          ticks: {
-            font: { family: "'DM Mono', monospace", size: 11 },
-            color: '#A9A29A',
-            padding: 8,
-            stepSize: 2,
-            maxTicksLimit: 7,
-          }
-        }
-      }
-    }
-  });
-})();
-</script>
+  <h3>Thesis anchoring</h3>
+  <p>Exposure normalisation solves the volume problem but introduces a new risk: the system could still drift away from the stated investment thesis if vote patterns happen to diverge from strategic intent. The thesis anchoring mechanism prevents this.</p>
+  <p>After computing normalised preferences, the system cross-references the results against the thesis priority map. Three outcomes are possible. <strong>Aligned</strong>: vote signal confirms a thesis priority — the system boosts confidence. <strong>Divergent</strong>: a non-thesis category is rising in the rankings — the system flags it as "volume-driven, not yet thesis-confirmed" and holds the score weight steady until the decision-maker explicitly confirms it. <strong>Data-starved</strong>: a thesis priority has little or no vote data — the system flags it as needing votes rather than letting it silently lose rank.</p>
+  <p>The net effect: the system learns from behaviour but doesn't overwrite strategy. Only an explicit human signal — a direct vote pattern with high hit rate <em>and</em> supporting vote notes, or a thesis feedback override — can shift the scoring weights away from the stated thesis.</p>
+
+  <h3>Near-miss analysis</h3>
+  <p>The most informative data points aren't the obvious hits or obvious misses — they're the <strong>near misses</strong>. A near miss is a startup that scored above 60 on the relevance model but received a downvote (2 stars or below). These are the cases where the system was confidently wrong, and they reveal what the model is getting wrong.</p>
+
+  <div class="callout">
+    <div class="callout-label">Example near miss</div>
+    <p style="margin:0"><strong>Stacks</strong> scored 82 (Agent Orchestration category) but received 2 stars. The human note: "Not really looking for accounting services. This is too small." The model had classified Stacks as a strong orchestration match without detecting that its primary product was accounting automation — bookkeeping and accounts payable — rather than financial services agentic infrastructure. The scoring model learned a new distinction: within Agent Orchestration, "finserv agentic workflow infrastructure" is preferred; "accounting/bookkeeping automation" is not.</p>
+  </div>
+
+  <h3>Blind spot tracking</h3>
+  <p>Near misses are categorised into blind spot types. When the same blind spot appears three times, the system proposes a formal scoring adjustment — a new soft factor with a specific point penalty or bonus, supported by the evidence that triggered it. This threshold prevents over-fitting to individual judgments while ensuring genuine patterns are captured.</p>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 700 200" width="700" height="200" xmlns="http://www.w3.org/2000/svg" style="font-family: Inter, sans-serif;">
+      <!-- Flow: Vote → Near Miss Detection → Blind Spot Tracker → Soft Factor Proposal -->
+      <rect x="10" y="60" width="140" height="80" rx="10" fill="#1C1C2C"/>
+      <text x="80" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.06em">VOTE</text>
+      <text x="80" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Score &gt; 60</text>
+      <text x="80" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#E84B3C">Stars ≤ 2</text>
+
+      <line x1="150" y1="100" x2="186" y2="100" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <rect x="190" y="60" width="140" height="80" rx="10" fill="#1C1C2C"/>
+      <text x="260" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.06em">NEAR MISS</text>
+      <text x="260" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Root cause</text>
+      <text x="260" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">analysis</text>
+
+      <line x1="330" y1="100" x2="366" y2="100" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <rect x="370" y="60" width="140" height="80" rx="10" fill="#1C1C2C"/>
+      <text x="440" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#9CA3AF" letter-spacing="0.06em">BLIND SPOT</text>
+      <text x="440" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Occurrence</text>
+      <text x="440" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">counter</text>
+
+      <line x1="510" y1="100" x2="546" y2="100" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
+
+      <rect x="550" y="60" width="140" height="80" rx="10" fill="#E84B3C"/>
+      <text x="620" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="rgba(255,255,255,0.7)" letter-spacing="0.06em">SOFT FACTOR</text>
+      <text x="620" y="106" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">New scoring</text>
+      <text x="620" y="122" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">rule proposed</text>
+
+      <!-- Threshold label -->
+      <text x="440" y="160" text-anchor="middle" font-size="10" font-weight="600" fill="#6B7280">Triggers at 3 occurrences</text>
+    </svg>
+    <div class="diagram-caption">Near-miss analysis pipeline. Confident errors are the highest-value learning data.</div>
+  </div>
+
+  <p>The learning system also tracks <strong>thesis drift</strong> — weekly observations about how the strategic landscape is changing, which gaps are generating signal vs. noise, and which emerging themes might warrant new gap categories. These observations are logged but not applied to scoring until confirmed by vote data. The system distinguishes between intelligence it has gathered and intelligence the human has validated.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     06 — THE PIPELINE
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">06 — The Pipeline</div>
+  <h2>From signal to scored card</h2>
+  <p>When the Radar Agent finds a startup that passes the relevance threshold, it generates a structured intelligence card. Each card contains the company name, a one-line description, funding stage and amount, investor names, geography, the gap category it maps to, a relevance score (0-100), and the specific signals that triggered the match.</p>
+
+  <p>Cards are published to a web-based pipeline interface where the decision-maker can browse, filter, vote (1-5 stars), leave notes, flag for follow-up, or archive. The interface groups companies by gap category and sorts by score, giving an instant view of where the strongest candidates sit across the thesis.</p>
+
+  <div class="stat-row">
+    <div class="stat-cell">
+      <div class="stat-label">Companies found</div>
+      <div class="stat-value">86</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Gap categories</div>
+      <div class="stat-value">12</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Votes cast</div>
+      <div class="stat-value">8</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Weeks running</div>
+      <div class="stat-value">5</div>
+    </div>
+  </div>
+
+  <p>The scoring algorithm combines gap fit (does this company address a thesis gap?), stage match (is it at the right funding stage?), geographic fit, financial services readiness (evidence of regulated-industry traction), team signal (domain expertise, prior exits), and all learned preferences from the voting data. Each factor has a weight, and those weights shift as more votes accumulate — the system starts with reasonable defaults and converges on the decision-maker's actual priorities through use.</p>
+
+  <p>Importantly, each scan also produces a <strong>discovery log</strong> — an append-only record of what the system learned that week. Which search terms produced noise. Which gaps are generating hits vs. silence. What regulatory or competitive signals emerged. What changed in the market that might challenge the thesis. This log becomes a knowledge asset — a time-stamped history of how the landscape evolved.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     07 — THE FEEDBACK LOOP
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">07 — The Feedback Loop</div>
+  <h2>Three channels of human input</h2>
+  <p>The system accepts human judgment through three channels, each feeding a different part of the loop.</p>
+
+  <h3>1. Votes</h3>
+  <p>Star ratings (1-5) on individual startup cards. These are the primary calibration signal. An upvote teaches the system what a good match looks like. A downvote teaches what to avoid. A neutral vote reveals ambiguity that needs resolution. The vote note is as important as the stars — it captures the <em>why</em>, which the preference learning engine uses to extract sub-domain distinctions the scoring model can't derive from the rating alone.</p>
+
+  <h3>2. Strategic feedback</h3>
+  <p>A feedback form attached to the pipeline where the decision-maker can give high-level strategic commentary: "The thesis needs to focus more on X," or "Stop surfacing companies in category Y," or "The search terms for Z are too broad." This feeds directly into the Strategy Agent's thesis review.</p>
+
+  <h3>3. Implicit signals</h3>
+  <p>Which cards get opened, which get archived without reading, which trigger follow-up flags. These signals don't carry the weight of an explicit vote, but they're tracked as weak preferences that can be promoted to formal signals if patterns emerge.</p>
+
+  <div class="pull-quote">The system treats the human decision-maker as the ground truth. Every other agent in the loop exists to serve, interpret, and act on that truth more effectively over time.</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     08 — THE STACK
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">08 — The Stack</div>
+  <h2>Built on simple infrastructure</h2>
+  <p>Bene Gesserit runs on a deliberately simple stack. There's no custom ML model. No training pipeline. No GPU cluster. The intelligence comes from the recursive loop design and the quality of the prompts that drive each agent — not from bespoke infrastructure.</p>
+
+  <div class="stack-grid">
+    <div class="stack-item">
+      <div class="si-label">AI Engine</div>
+      <div class="si-name">Claude</div>
+      <div class="si-desc">Powers all six phases. Thesis review, search term generation, radar scanning, scoring, preference learning, and reporting all run as structured prompts against a shared knowledge base.</div>
+    </div>
+    <div class="stack-item">
+      <div class="si-label">Data Layer</div>
+      <div class="si-name">Supabase</div>
+      <div class="si-desc">PostgreSQL database for votes, feedback, and pipeline state. Row-level security for access control. Real-time subscriptions for live updates.</div>
+    </div>
+    <div class="stack-item">
+      <div class="si-label">Auth & Edge</div>
+      <div class="si-name">Cloudflare Workers</div>
+      <div class="si-desc">Server-side authentication gateway. HMAC-signed session cookies. Proxies all requests to the static site after validating auth.</div>
+    </div>
+    <div class="stack-item">
+      <div class="si-label">Frontend</div>
+      <div class="si-name">Static HTML</div>
+      <div class="si-desc">No framework. No build step. Plain HTML, CSS, and vanilla JavaScript. Published to GitHub Pages and served through the Cloudflare auth layer.</div>
+    </div>
+    <div class="stack-item">
+      <div class="si-label">Knowledge Base</div>
+      <div class="si-name">Markdown Files</div>
+      <div class="si-desc">thesis.md, preferences.md, search-terms.md, near-misses.md, discovery-log.md. Git-versioned. Human-readable. Agent-writable.</div>
+    </div>
+    <div class="stack-item">
+      <div class="si-label">Orchestration</div>
+      <div class="si-name">Scheduled Tasks</div>
+      <div class="si-desc">A single master task — <code>bg-full-cycle</code> — runs all six phases in strict dependency order: Learn → Strategise → Arm → Scout → Publish → Report. No phase starts until its predecessor completes.</div>
+    </div>
+  </div>
+
+  <p>The knowledge base is plain markdown because agents need to read and write it, humans need to read and edit it, and version control needs to track changes to it. Every format decision optimises for this three-way constraint. There's no database schema for the thesis — it's a document that evolves in natural language, because strategy is expressed in natural language.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     09 — WHAT IT LEARNED
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">09 — What It Learned</div>
+  <h2>From 8 votes, the system extracted this</h2>
+  <p>Bene Gesserit has been running for five weeks. In that time, the decision-maker cast 8 votes — 4 upvotes, 2 downvotes, 2 neutrals. From those 8 data points, the system extracted a surprising amount of signal.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Strong positive</div>
+      <div class="timeline-text"><strong>Agent Authentication & AI Safety</strong> have a 100% upvote rate (4/4 at 4-5 stars). The system learned that the decision-maker's strongest preference is for infrastructure-layer trust technology — products that other agents connect <em>to</em>, not products that use agents to do tasks.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Sub-domain precision</div>
+      <div class="timeline-text">Both downvotes revealed the same pattern: right category, wrong product type. "Agent Orchestration" matched an accounting automation tool. "Tax Optimisation" matched a tax-filing app. The system learned to distinguish sub-domains within gaps — and added negative filters to prevent re-surfacing these types.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dual failure modes</div>
+      <div class="timeline-text">Two neutral votes in the Compliance category revealed two distinct failure paths: wrong sub-domain (KYC/AML framing when the preference is AI governance) and undifferentiated execution (correct framing but no architectural moat). The system now tracks these as separate blind spots.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Scope expansion</div>
+      <div class="timeline-text">The system started with 6 gap categories and 50 search queries. After learning from radar results and drift analysis, it expanded to 12 categories and 160 queries — doubling its search surface and immediately finding companies in previously uncovered areas.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Self-awareness</div>
+      <div class="timeline-text">The system tracks its own data starvation. It knows that 91% of its pipeline is unvoted and explicitly recommends which specific votes would provide the highest marginal calibration value — acting as its own research advisor.</div>
+    </div>
+  </div>
+
+  <p>This is the recursive learning flywheel in action. Eight votes produced dozens of scoring adjustments, search term refinements, negative filters, blind spot trackers, and thesis drift observations — each of which makes the next scan more precise. The system doesn't need thousands of data points because it treats each human judgment as a high-value signal and extracts maximum information from it.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     10 — WHY IT WORKS
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">10 — Why It Works</div>
+  <h2>The compounding advantage</h2>
+  <p>Traditional scouting is linear: more effort in, proportionally more results out. Bene Gesserit is compounding: every cycle makes every future cycle more effective. The thesis sharpens. The search terms focus. The scoring model calibrates. The noise floor drops. The hit rate rises.</p>
+
+  <p>After five weeks, the system finds companies in categories it didn't know existed when it started. It rejects companies it would have surfaced in week one. It asks for specific votes on specific companies because it knows which data points would resolve specific ambiguities in its model. It writes its own weekly intelligence briefings that track market shifts the decision-maker hasn't had time to monitor.</p>
+
+  <p>The key insight is that <strong>startup scouting is a preference learning problem</strong>, not a search problem. Finding startups is easy — the internet is full of them. The hard part is knowing which ones matter to <em>you</em>, for <em>your</em> thesis, at <em>this</em> moment. That's a problem that only gets solved by a system that watches what you do, learns from it, and adapts.</p>
+
+  <div class="pull-quote">The best search tool isn't the one with the most data. It's the one that knows what you're actually looking for — and keeps getting closer.</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ -->
+<div class="footer">
+  <p>Bene Gesserit — Built with Claude, Supabase, and Cloudflare Workers</p>
+</div>
+
+</div><!-- /page-shell -->
 
 </body>
 </html>
