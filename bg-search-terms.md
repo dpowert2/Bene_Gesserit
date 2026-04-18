@@ -1,586 +1,454 @@
 # Bene Gesserit — Search Terms
-## April 2026 Revision v3.2 (21 categories + 2 tracks)
 
-*Updated 2026-04-15. v3.1 EUROPEAN REBALANCE: ~30 European-focused and multilingual queries added across all categories. European accelerators, VCs, regulators, and city hubs now represented. Multilingual queries in German, French, and Spanish added. Previous: v3.0 REBALANCE: 9 new specialist agent categories added (Research, Portfolio, Trade Structuring, Options, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis). Platform infrastructure categories (Auth, Safety, Orchestration) downgraded from CRITICAL/HIGH to MEDIUM/MONITOR.*
-
-Organised by gap category. Each query is designed for web search. Rotate through these across scan runs to avoid repetition. Priority categories should be searched every scan; medium categories every other scan; monitor categories bi-weekly.
-
-**GLOBAL NEGATIVE FILTERS — Skip results matching ANY of these:**
-- Internal workflow automation
-- Back-office efficiency / operations
-- Employee productivity tool
-- CFO / finance department tool
-- Bookkeeping / accounting automation
-- Expense management
-- Accounts payable / accounts receivable
-- Tax filing / tax preparation / tax return
-- KYC verification / AML screening (unless part of broader agent governance)
-- Series B, Series C, or later-stage funding (unless explicitly innovative)
+*Last updated: 2026-04-17 | Revision: v4.0 — Full rebuild against thesis v2.2. Reflects the 11 specialist agent + 7 platform infrastructure taxonomy, S2–S11 specialist agent desert, AI Safety gap reopened (Overmind archived), S1 fully validated, Dispute Resolution partially addressed, eToro App Store launch.*
 
 ---
 
-# SPECIALIST AGENTS (THE APPS) — PRIMARY SCOUTING FOCUS
+## Operating Instructions
 
-These categories represent the agent types that deliver the actual customer experience inside the app store. They are the unscouted frontier. Most have ZERO pipeline coverage.
+**Stage bias:** Pre-seed, seed, and early Series A only. Series B is "too late" (vote-confirmed: linx-security 2★, april 3★, basis 1★, armadin 2★). Append `seed OR "Series A" -"Series B" -"Series C"` where useful.
 
----
+**Geography bias:** Europe preferred (compliance-native by default). London, Berlin, Paris, Dublin, Barcelona, Amsterdam, Zurich, Stockholm, Madrid. Global acceptable if governance-native. Append `Europe OR UK OR EU` to rotate.
 
-## S1. Research & Signal Intelligence Agent 🔴 EVERY SCAN
-- "AI investment research agent startup seed 2026"
-- "alternative data intelligence agent startup seed series A"
-- "AI equity research platform startup seed"
-- "agentic sentiment analysis financial markets startup"
-- "institutional flow tracking AI startup seed"
-- "AI earnings analysis agent startup seed series A"
-- "alternative data startup fintech seed 2026"
-- "AI catalyst identification investment startup"
-- "agentic financial research API startup seed"
-- "AI signal generation trading startup seed series A Europe"
-- "satellite data investment intelligence startup seed"
-- "AI research agent wealth management startup"
-- "KI Agent Finanzanalyse Startup Seed 2026"
-- "agent IA recherche financière startup seed Europe"
-- "AI investment research startup Europe seed Stockholm Berlin"
-- "alternative data startup fintech London seed 2026"
+**External vs internal — THE decisive filter.** Every query must surface startups building for **third-party agents in a regulated marketplace**, not for internal institutional workflows. Hard-filtered categories (auto-reject in scoring, –50 pts each):
+- Internal workflow / back-office tools (16 past rejections, 0 exceptions)
+- Accounting / bookkeeping / CFO automation (5 past rejections)
 
-### What we're looking for
-Startups building deep research intelligence that agents can draw on — alternative data feeds, earnings analysis, sentiment analysis, institutional flow tracking, catalyst identification. The knowledge layer that generates ideas and validates theses. Must be API-accessible or agent-callable, not a dashboard for human analysts.
+Exclude in queries where helpful: `-"internal workflow" -"back-office" -"finance department" -"CFO tools" -bookkeeping -accounting -"AP automation"`.
 
-### Negative filters
-- Internal research desk tools
-- Business intelligence dashboards
-- General purpose data analytics
+**Agents, not AI-models.** Agent-level governance, identity, and safety — not model interpretability, red-teaming, or jailbreak-resistance. Mindgard 2★ note ("AI, not agents") is the precedent.
 
----
+**Quality filter:** Skip roundups/listicles. Append `-list -roundup -"top 10" -"best AI"`. Prefer primary sources: press releases, funding announcements, founder interviews, IETF / Linux Foundation standards drafts.
 
-## S2. Portfolio Construction & Risk Agent 🔴 EVERY SCAN
-- "AI portfolio construction startup seed 2026"
-- "portfolio risk agent API startup seed series A"
-- "factor exposure analysis AI startup seed"
-- "AI portfolio optimisation startup fintech seed"
-- "position sizing AI agent startup seed"
-- "portfolio scenario analysis agent startup seed series A"
-- "correlation modelling AI investment startup seed"
-- "risk budgeting agent startup seed Europe"
-- "AI rebalancing trigger agent startup seed"
-- "portfolio concentration analysis AI startup seed"
-- "AI asset allocation agent startup seed series A"
-- "multi-asset portfolio agent API startup seed"
-- "KI Portfoliokonstruktion Startup Seed Europa"
-- "AI portfolio risk startup Europe Zurich Amsterdam seed"
-- "agent IA gestion de portefeuille startup seed"
-
-### What we're looking for
-Startups that can answer "what does adding this position do to the whole portfolio?" — concentration analysis, factor exposure, scenario modelling, position sizing, rebalancing triggers. Must operate on live portfolios in real time, not just backtest historical data. Agent-callable API, not a dashboard.
-
-### Negative filters
-- Robo-advisors (passive allocation, not active construction)
-- Backtesting-only platforms
-- Internal risk management tools
-
----
-
-## S3. Trade Structuring & Account Optimisation Agent 🟡 HIGH
-- "AI trade structuring startup seed 2026"
-- "options vs equity structuring AI startup seed"
-- "cross-account investment optimisation AI startup seed"
-- "asset location optimisation agent startup seed series A"
-- "IRA Roth taxable account selection AI startup"
-- "investment vehicle selection agent API startup seed"
-- "multi-account portfolio structuring startup seed"
-- "AI trade expression optimisation startup seed"
-- "defined risk structure agent startup seed Europe"
-- "KI Handelsstrukturierung Startup Seed Europa"
-- "ISA SIPP account optimisation AI startup UK seed"
-
-### What we're looking for
-"How should I express this thesis?" — equity vs options vs pairs vs ETFs. "Which account?" — taxable vs IRA vs Roth vs 529. The agent that structures the optimal expression of a trade given the client's full account picture.
-
----
-
-## S4. Options & Derivatives Strategy Agent 🟡 HIGH
-- "AI options strategy startup seed 2026"
-- "options trading agent API startup seed series A"
-- "covered call income strategy AI startup seed"
-- "AI volatility trading startup seed"
-- "options spread strategy agent startup seed"
-- "protective put strategy AI startup seed Europe"
-- "collar strategy agent automated startup seed"
-- "AI options analytics startup retail investor seed"
-- "derivatives strategy AI wealth management startup seed"
-- "options income agent startup seed series A"
-- "AI Optionsstrategie Startup Seed Europa"
-- "options derivatives AI startup Europe London seed"
-
-### What we're looking for
-Deep specialist knowledge in options and derivatives — covered calls for income, protective puts, spreads for defined risk, volatility strategies. This is expertise most retail investors can't access today. Must be agent-accessible or API-first.
-
----
-
-## S5. Execution Quality Agent 🟡 HIGH
-- "AI execution algorithm startup seed 2026"
-- "smart order routing startup fintech seed series A"
-- "execution quality AI startup seed"
-- "algorithmic trading startup retail seed"
-- "VWAP TWAP execution agent startup seed"
-- "best execution AI startup seed Europe"
-- "dark pool routing startup seed series A"
-- "slippage minimisation AI startup seed"
-- "execution analytics agent startup seed"
-- "AI order routing optimisation startup seed"
-- "best execution AI startup Europe MiFID seed"
-- "smart order routing startup Europe seed 2026"
-
-### What we're looking for
-Professional-grade execution for everyone. Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart order routing, slippage minimisation. The gap between clicking "buy" on an app and how institutions actually execute.
-
-### Negative filters
-- High-frequency trading firms
-- Prop trading infrastructure
-- Internal execution desks
-
----
-
-## S6. Position Monitoring & Thesis Tracking Agent 🟠 MEDIUM
-- "AI portfolio monitoring agent startup seed 2026"
-- "investment thesis tracking agent startup seed"
-- "catalyst monitoring AI startup seed series A"
-- "AI stop loss profit target agent startup seed"
-- "position alerting agent startup seed Europe"
-- "AI earnings surprise monitoring startup seed"
-- "portfolio watchdog agent startup seed"
-- "continuous investment monitoring AI startup seed"
-- "KI Positionsüberwachung Startup Seed Europa"
-
-### What we're looking for
-"Is my trade still working?" — continuous thesis monitoring, stop-loss/profit-target management, catalyst tracking, earnings surprise detection. Initiates new conversations when conditions change.
-
----
-
-## S7. Financial Planning Agent 🟠 MEDIUM
-- "AI financial planning agent startup seed 2026"
-- "goals-based investing agent startup seed series A"
-- "retirement planning AI agent startup seed"
-- "life event financial modelling agent startup seed"
-- "AI income generation strategy retirement startup seed"
-- "estate planning AI agent startup seed Europe"
-- "holistic financial planning agent API startup seed"
-- "AI wealth planning agent startup seed series A"
-- "agent IA planification financière startup seed Europe"
-- "Altersvorsorge KI Agent Startup Europa Seed"
-
-### What we're looking for
-The long-term guardrail — goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. Ensures no short-term trade decision undermines long-term objectives.
-
-### Negative filters
-- Generic budgeting apps
-- Expense tracking tools
-
----
-
-## S8. Behavioural Coaching Agent ⚪ MONITOR
-- "AI behavioural finance coaching startup seed 2026"
-- "investor behavioural AI agent startup seed"
-- "market panic prevention AI startup seed"
-- "investment discipline agent startup seed"
-- "AI investor psychology startup seed series A"
-- "drawdown coaching AI startup seed"
-
-### What we're looking for
-Panic prevention, discipline enforcement, drawdown perspective. The agent that stops you selling at the bottom. Behavioural psychology applied to finance.
-
----
-
-## S9. Post-Trade Analysis & Learning Agent ⚪ MONITOR
-- "AI trade journal startup seed 2026"
-- "portfolio attribution analysis agent startup seed"
-- "AI trade performance analysis startup seed series A"
-- "investment pattern recognition agent startup seed"
-- "post-trade analytics AI startup seed"
-- "AI strategy refinement investment startup seed"
-
-### What we're looking for
-Trade journaling, attribution analysis (stock selection vs sector allocation vs timing), pattern recognition across closed positions. The feedback loop that makes the system smarter over time.
-
----
-
-# PLATFORM INFRASTRUCTURE (THE GARDEN) — MAINTENANCE SCOUTING
-
-These categories cover the infrastructure that makes the agent marketplace safe, compliant, and trustworthy. Most have strong candidates or POC partners. Continued scouting is maintenance, not primary.
-
----
-
-## 1. Personal Financial Agent 🟡 HIGH (downgraded from 🔴)
-- "personal AI financial agent startup 2026 seed"
-- "autonomous wealth management agent startup series A"
-- "AI agent wealth as a service platform startup"
-- "agentic personal finance assistant startup funding seed"
-- "AI financial advisor agent startup seed series A Europe"
-- "personal AI investment agent third party marketplace"
-- "agentic robo-advisor startup seed funding"
-- "conversational wealth agent startup 2026"
-- "AI portfolio agent goal-seeking autonomous startup"
-- "finance agent marketplace platform startup"
-- "external financial agent ecosystem startup"
-- "AI Finanzagent Startup Seed Europa 2026"
-- "agent IA finance personnelle startup seed Europe"
-- "personal AI finance agent startup Europe London Berlin seed"
-
-### Reference companies (track, don't re-scan every time)
-- Arta Finance
-- Finley AI
-- Rogo AI
-- GrowthHQ
-- Bank of Bots (4★ upvote)
-
----
-
-## 2. Pre-Trade Compliance Agent 🟡 HIGH (downgraded from 🔴)
-- "pre-trade compliance AI agent startup 2026"
-- "investment compliance automation agent API startup"
-- "suitability check AI agent fintech startup seed"
-- "regulatory reasoning agent financial services startup"
-- "compliance as a service API startup funding seed series A"
-- "agent-callable compliance rules engine startup"
-- "pre-trade risk check agent startup seed"
-- "best execution compliance agent AI startup"
-- "concentration limit agent-ready API startup"
-- "restricted list screening agent startup seed"
-- "MiFID suitability AI agent startup Europe"
-- "SEC FINRA compliance automation AI startup seed series A"
-- "third party agent compliance gateway startup"
-- "DORA-native compliance agent startup Europe seed"
-- "PSD3 FiDA compliance AI startup Europe seed 2026"
-- "BaFin compliant AI agent startup seed"
-- "ESMA AI agent compliance startup Europe seed"
-
----
-
-## 3. Tax Optimisation Agent 🟡 HIGH
-- "dynamic tax-loss harvesting AI agent startup seed"
-- "real-time asset location optimisation startup seed series A"
-- "tax-aware portfolio rebalancing API startup"
-- "after-tax return optimisation agent startup"
-- "tax-efficient investing AI agent startup funding seed"
-- "holding period optimisation agent portfolio startup"
-- "capital gains planning AI agent startup seed"
-- "multi-account tax coordination AI startup"
-- "direct indexing tax agent startup seed series A"
-- "advisor tax planning AI startup embedded"
-- "portfolio tax strategy agent investor startup"
-- "tax-loss harvesting agent callable API startup"
-
-### Negative filters (STRICT — skip results matching these)
-- tax filing
-- tax preparation software
-- tax compliance automation
-- tax return automation
-- bookkeeping automation
-- accounting AP/AR
-- expense management
-- CPA workflow (confirmed by juno 2★)
-
----
-
-## 4. Agent Orchestration & Workflow ⚪ MONITOR (downgraded from 🟠 — Jentic POC partner)
-- "multi-agent orchestration third party agents fintech startup"
-- "agent workflow engine external agents financial services"
-- "agentic workflow governance third party startup"
-- "MCP server financial services startup seed"
-- "agent-to-agent communication protocol fintech startup"
-- "multi-agent financial services middleware external agents"
-- "A2A protocol fintech startup seed series A"
-- "agent marketplace orchestration startup"
-- "external agent routing governance startup fintech"
-
-### Jentic competitor watch
-- "agentic sandbox third party agents enterprise startup"
-- "API enrichment AI agent startup seed"
-- "agent workflow deterministic execution external startup"
-
-### Negative filters (CRITICAL — this category generates highest internal-workflow noise)
-- internal workflow
-- back-office automation
-- employee productivity
-- accounting automation
-- process improvement
-- internal operations AI
-
----
-
-## 5. AI Safety & Guardrails 🟡 HIGH (re-elevated from 🟠 — Overmind declined participation 2026-04-15)
-- "agentic security startup 2026 seed series A"
-- "agent safety monitoring regulated industries startup seed"
-- "agent behaviour guardrails finance startup"
-- "EU AI Act agent compliance tooling startup funding seed"
-- "agent evaluation framework financial services startup"
-- "agent monitoring production regulated startup seed"
-- "confidence scoring agent financial decisions startup"
-- "human-in-the-loop agent escalation startup"
-- "agent supervision regulated startup Europe seed"
-- "KI Sicherheit Agent Finanzdienstleistungen Startup Seed"
-- "safe actioning financial services agent startup"
-- "agentic AI security startup third party agents"
-- "autonomous agent risk mitigation startup seed"
-
-### Negative filters (CRITICAL — must be AGENT safety, not AI/model safety)
-- AI model safety (use "agent safety" instead)
-- LLM red teaming (unless specifically agent-focused)
-- AI interpretability (confirmed by goodfire 2★, mindgard 2★)
-- prompt injection defense (unless agent-specific)
-- internal AI security tool
-- IT security automation
-
----
-
-## 6. Agent Authentication & Identity 🟠 MEDIUM (downgraded from 🔴 — multiple strong candidates)
-- "AI agent authentication startup 2026 seed"
-- "agent identity management platform startup seed series A"
-- "delegated authorisation AI agent startup"
-- "know your agent KYA fintech startup seed"
-- "non-human identity management startup funding seed series A"
-- "agent IAM startup seed series A"
-- "MCP authentication agent security startup seed"
-- "agent credential management fintech startup"
-- "runtime agent access control startup seed"
-- "agent-to-service authentication startup"
-- "SPIFFE agent identity startup fintech"
-- "OAuth agent delegation startup fintech seed"
-- "third party agent verification startup"
-- "agent identity trust layer startup seed"
-- "KI Agent Identität Startup Europa Seed"
-- "agent identity startup Europe Copenhagen Stockholm seed"
-
-### Incumbent watch (not startups — track their moves)
-- Ping Identity "Identity for AI"
-- Auth0 / Okta agent authentication
-- Composio agent auth
-- Cloudflare Web Bot Auth
-- IETF draft-klrc-aiagent-auth
-
----
-
-## 7. Agent Payment Rails 🟡 HIGH
-- "agent-initiated payment startup seed series A"
-- "AI agent payment infrastructure fintech startup seed"
-- "tokenised credential agent transaction startup"
-- "agentic settlement infrastructure startup seed"
-- "agent-driven securities transaction startup"
-- "payment primitive AI agent startup seed"
-- "agent payment authorisation fintech startup"
-- "programmable payment agent startup seed"
-- "agent commerce governance startup"
-- "third party agent payment rails startup"
-- "agent transaction escrow startup seed 2026"
-- "AI agent dispute resolution payment startup seed"
-
-### Ecosystem tracking
-- "Visa Intelligent Commerce startup integration 2026"
-- "Mastercard Agent Pay fintech startup"
-- "Stripe agentic commerce suite startup"
-- "Trusted Agent Protocol startup"
-- Skyfire, Nekuda, PayOS (Visa VIC partners)
-
----
-
-## 8. Agent Memory & Context Infrastructure 🟠 MEDIUM
-- "agent memory infrastructure startup seed"
-- "persistent context AI agent startup seed series A"
-- "user preference management agent platform startup"
-- "cross-session agent state startup seed"
-- "consent-managed data sharing agents startup"
-- "agent context protocol startup seed"
-- "long-term memory AI agent startup seed"
-- "financial profile agent persistence startup"
-- "agent state persistence financial services startup"
-- "agent knowledge graph financial startup seed"
-
----
-
-## 9. Audit & Explainability 🟡 HIGH
-- "AI explainability financial services startup 2026 seed"
-- "agent audit trail startup regulated seed series A"
-- "agent decision explanation fintech startup"
-- "EU AI Act explainability tooling startup funding seed"
-- "DORA AI audit compliance startup seed"
-- "regulatory audit AI agent financial startup seed"
-- "agent decision traceability startup seed"
-- "explainable agent investment decisions startup"
-- "agent reasoning transparency financial startup"
-- "audit-grade agent logging startup seed"
-- "third party agent audit trail startup"
-- "EU AI Act audit trail agent startup Europe seed"
-- "agent Erklärbarkeit Audit Startup Europa Seed"
-
----
-
-## 10. Dispute Resolution & Agent Liability 🟠 MEDIUM
-- "AI agent liability framework fintech startup seed"
-- "agent error dispute resolution startup seed"
-- "AI transaction dispute insurance startup seed"
-- "agentic commerce liability startup seed"
-- "agent mistake remediation financial startup"
-- "AI agent insurance indemnification startup seed"
-- "autonomous agent error correction startup"
-- "agent-initiated transaction reversal startup"
-- "AI liability fintech startup Europe seed"
-- "agent accountability framework startup"
-- "third party agent liability insurance startup"
-
----
-
-## 11. Agentic Commerce Infrastructure ⚪ MONITOR
-- "agentic commerce infrastructure startup 2026 seed"
-- "conversational commerce middleware AI startup seed"
-- "AI agent shopping infrastructure startup seed"
-- "commerce inside AI conversations startup"
-- "brand visibility AI agent platform startup seed"
-
-### Reference (pattern signals, not direct thesis)
-- Lemrock
-- Stripe Agentic Commerce Suite
-
----
-
-## 12. Agent Monetisation & Business Models ⚪ MONITOR
-- "AI agent monetisation startup 2026 seed"
-- "results-based billing AI agent startup seed"
-- "agent pricing infrastructure startup seed"
-- "service as software business model AI startup seed"
-- "value-based pricing autonomous agent startup"
-- "agent metering billing platform startup seed"
-
-### Reference
-- Paid AI (4★ pipeline entry)
-
----
-
-## Competitive Intelligence 🔴 EVERY SCAN
-
-Track incumbents and large companies whose agentic finance moves shape the market:
-
-- "Visa Intelligent Commerce update 2026" / "Visa Agentic Ready"
-- "Mastercard Agent Pay update 2026" / "Mastercard agentic commerce"
-- "FIS agentic commerce banking 2026"
-- "JPMorgan agentic AI 2026" / "JPMorgan AI agent"
-- "HSBC AI agent 2026"
-- "Revolut AI agent 2026"
-- "Klarna AI agent commerce 2026"
-- "eToro agent portfolios update 2026"
-- "Public.com agentic brokerage update 2026"
-- "Arta Finance AI agents wealth 2026"
-- "Rogo AI financial agents 2026"
-
----
-
-## Standards & Protocols 🟡 HIGH
-
-Track emerging standards weekly:
-
-- "IETF AI agent authentication standard 2026" / "draft-klrc-aiagent-auth"
-- "Model Context Protocol MCP update 2026"
-- "A2A agent-to-agent protocol update 2026"
-- "Arazzo specification update 2026"
-- "Visa Trusted Agent Protocol update 2026"
-- "Google Agent Payments Protocol AP2 update 2026"
-- "EU AI Act financial services enforcement 2026"
-- "DORA enforcement update AI 2026"
-- "PSD3 FiDA open finance update 2026"
-- "NIST AI agent standards 2026"
-
----
-
-## Research Papers
-
-Academic and research signals (search monthly):
-
-- "agentic AI financial services" site:arxiv.org
-- "multi-agent systems finance" site:arxiv.org
-- "agent safety degradation" site:arxiv.org
-- "autonomous agent compliance" site:arxiv.org
-- "agent identity authentication" site:arxiv.org
-- "agent delegation authorisation" site:arxiv.org
-- "AI agent liability" site:ssrn.com
-- "personal AI agent trust" site:arxiv.org
-- "agent-to-agent payment" site:arxiv.org
-
----
-
-## News & General Signals
-
-Catch-all for signals that don't fit a category:
-
-- "agentic AI financial services startup 2026 seed"
-- "AI agent fintech funding round 2026 seed series A"
-- "agentic finance startup Europe 2026"
-- "AI agent startup seed round fintech 2026"
-- "agentic AI startup fintech accelerator 2026"
-- "third party financial agent startup 2026"
-- "agent marketplace financial services startup 2026"
-- "agentic AI fintech startup Berlin 2026"
-- "agentic AI fintech startup Stockholm Copenhagen 2026"
-- "agentic AI fintech startup Amsterdam Zurich 2026"
-- "agentic AI fintech startup Paris 2026"
-- "agente IA fintech startup Europa seed 2026"
-- "KI Agent Fintech Startup Seed Europa 2026"
-- "agent IA fintech startup seed Europe 2026"
-- "Forge London fintech accelerator agentic AI 2026"
-- "EQT Ventures fintech AI agent investment 2026"
-- "Plug and Play Europe fintech AI agent 2026"
-- "Ada Ventures fintech AI agent seed 2026"
-- "Seedcamp fintech agentic AI portfolio 2026"
-- "Earlybird fintech AI agent investment Europe 2026"
+**Composability preference:** Favour startups exposing agent-callable APIs / MCP servers over dashboard-only products. Search signal: "MCP server", "agent-callable API", "agent SDK".
 
 ---
 
 ## Scan Priority Matrix
 
-| Priority | Categories | Frequency |
-|----------|-----------|-----------|
-| 🔴 Critical | S1 (Research & Signal), S2 (Portfolio & Risk), Competitive Intel | Every scan |
-| 🟡 High | S3 (Trade Structuring), S4 (Options), S5 (Execution), 1 (Personal Agent), 2 (Pre-Trade Compliance), 3 (Tax), 5 (Safety — re-elevated), 7 (Payment Rails), 9 (Audit), Standards | Every other scan |
-| 🟠 Medium | S6 (Position Monitoring), S7 (Financial Planning), 6 (Auth/Identity), 8 (Memory), 10 (Disputes) | Weekly |
-| ⚪ Monitor | S8 (Behavioural Coaching), S9 (Post-Trade Analysis), 4 (Orchestration), 11 (Commerce Pattern), 12 (Monetisation) | Bi-weekly |
-| 📄 Research | Papers | Monthly |
+| Priority | Categories | Rationale |
+|---|---|---|
+| 🔴 EVERY SCAN | Pre-Trade Compliance, Audit & Explainability, AI Safety & Guardrails, Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10, S11) | Genuine market gaps (thesis) + Overmind archived + specialist desert confirmed structural |
+| 🟡 HIGH | Dispute Resolution & Agent Liability, Agent Monetisation, Personal Financial Agent (S-Front), Research & Signal Intelligence (European replacements) | Partially addressed; looking for better fits / European equivalents |
+| 🟠 MEDIUM | Agent Orchestration, Agent Authentication & Identity (KYA), Agent Payment Rails | Strong candidates in place (Jentic, Vouched, Nava) — better options may exist |
+| ⚪ MONITOR | Tax Optimisation (Alomana 5★), S1 incumbents (AgentSmyth/Serafis/Kimpton) | Confirmed match — watch for follow-on entries |
 
 ---
 
-*Last updated: 2026-04-15 (v3.2 — AI Safety re-elevated, agent exposure signal)*
-*Previous version: v3.1 (European geographic rebalance, ~280 queries)*
-*This version: 21 categories + 2 tracks, ~280 queries*
+## Highest signal-to-noise sources (hit directly every scan)
 
-### Change Log (v3.1 → v3.2)
-- **AI Safety & Guardrails re-elevated from 🟠 MEDIUM to 🟡 HIGH** — Overmind declined participation; gap reopened
-- Scan priority matrix updated accordingly
-- No new search terms required; existing queries adequate for the gap
+Use `site:` operators — historically the strongest producers of thesis-aligned signals.
 
-### Change Log (v3 → v3.1)
-- **EUROPEAN GEOGRAPHIC REBALANCE:** ~30 new queries added across all categories
-- European city hub queries: Berlin, Stockholm, Copenhagen, Zurich, Amsterdam, Paris, London
-- Multilingual queries added: German ("KI Agent", "Finanzanalyse", "Portfoliokonstruktion", "Optionsstrategie", "Positionsüberwachung", "Altersvorsorge", "Erklärbarkeit", "Sicherheit", "Identität"), French ("agent IA", "recherche financière", "gestion de portefeuille", "planification financière"), Spanish ("agente IA fintech")
-- European regulator monitoring: BaFin, ESMA, DORA-native, PSD3/FiDA
-- European accelerator/VC tracking: Forge London, EQT Ventures, Plug and Play EU, Ada Ventures, Seedcamp, Earlybird
-- UK-specific: ISA/SIPP account optimisation, MiFID best execution
-- Rationale: Pipeline was 61% US vs 24% EU; only 4.6% of queries referenced Europe despite thesis stating "Europe preferred". Rebalance ensures European startups are surfaced without excluding US
+- `site:fintech.global agentic AI 2026`
+- `site:techcrunch.com "AI agent" fintech seed 2026`
+- `site:eu-startups.com "AI agent" OR "agentic" fintech 2026`
+- `site:sifted.eu "agentic AI" OR "AI agent" fintech 2026`
+- `site:siliconangle.com agentic AI financial services 2026`
+- `site:pymnts.com "AI agent" startup 2026`
+- `site:fintechfutures.com "agentic AI" 2026`
+- `site:businesswire.com "AI agent" fintech raises 2026`
+- `site:prnewswire.com "agentic AI" financial services 2026`
+- `site:finovate.com "AI agent" 2026`
+- `site:altfi.com "AI agent" OR "agentic" 2026`
+- `site:tech.eu "agentic" OR "AI agent" fintech 2026`
 
-### Change Log (v2 → v3)
-- **MAJOR REBALANCE:** 9 new specialist agent categories added (S1–S9) with ~95 new search queries
-- S1 Research & Signal Intelligence and S2 Portfolio Construction & Risk elevated to 🔴 CRITICAL
-- S3 Trade Structuring, S4 Options & Derivatives, S5 Execution Quality elevated to 🟡 HIGH
-- Category 6 (Auth/Identity) downgraded 🔴→🟠 — multiple strong candidates in pipeline
-- Category 5 (Safety) downgraded 🟡→🟠 — Overmind is strong candidate
-- Category 4 (Orchestration) downgraded 🟠→⚪ — Jentic is POC partner
-- Category 1 (Personal Agent) downgraded 🔴→🟡
-- Category 2 (Pre-Trade Compliance) downgraded 🔴→🟡
-- Rationale: platform infrastructure is largely addressed; specialist agents are the unscouted frontier
+---
 
-### Change Log (v1 → v2)
-- Added "third party agent" / "external agent" qualifiers across Categories 1, 2, 4, 5, 6, 7, 9, 10, 11
-- Added "seed" / "series A" stage qualifiers to most searches (confirmed by linx-security 2★, april 3★)
-- Expanded global negative filters (internal workflow, accounting, tax filing, KYC/AML)
-- Category 4 (Orchestration): added CRITICAL negative filters for internal workflow — this category produced 6+ false positives in vote data
-- Category 5 (Safety): replaced "AI safety" with "agentic security" / "agent safety" — confirmed by mindgard 2★ "AI, not agents"
-- Category 3 (Tax): added "CPA workflow" to negative filters (confirmed by juno 2★)
-- Removed Santander, Mistral, Ping Identity from competitive intel (less relevant to current thesis focus)
-- Added eToro, Public.com, Bank-of-Bots references
-- Added NIST agent standards to Standards track
+# 🔴 EVERY SCAN — Genuine Market Gaps
+
+## Pre-Trade Compliance Agent *(Gap #8 — market gap, Hadrius closest signal)*
+
+Thesis anchor: "Agent checks suitability, concentration limits, restricted lists before every trade." Nobody is building this finserv-native. Hadrius (YC, SEC/FINRA native) is the reference.
+
+- `"pre-trade compliance" AI agent startup seed 2026`
+- `"suitability check" AI agent broker-dealer startup 2026`
+- `"agent pre-trade" compliance SEC OR FINRA seed 2026`
+- `"restricted list" AI agent compliance startup 2026`
+- `"best execution" AI agent startup seed 2026`
+- `"investment adviser compliance" AI agent 2026`
+- `"concentration limits" AI agent portfolio seed 2026`
+- `"agentic compliance" broker-dealer startup 2026`
+- `"SEC compliance" AI agent seed OR "Series A" 2026 -"KYC" -"AML"`
+- `"FINRA compliance" AI agent startup 2026`
+- `"MiFID II" AI agent compliance startup 2026`
+- `site:ycombinator.com "pre-trade" OR "investment adviser" AI`
+
+**Reference companies to track:** Hadrius, ValidMind (adjacent).
+**Negative filters:** `-"KYC-only" -"AML-only" -"tax filing" -"internal audit"`.
+
+---
+
+## Audit & Explainability *(Gap #10 — first entry: Alinia, vote pending)*
+
+Thesis anchor: "'Why did the agent do this?' — auditable, regulator-ready explanation." Alinia (Barcelona, Mouro/Santander) is the first entry. Need more, especially EU-based.
+
+- `"AI agent audit trail" financial services startup seed 2026`
+- `"agent explainability" fintech OR broker-dealer startup 2026`
+- `"regulator-ready AI" audit agent seed 2026`
+- `"AI agent reasoning log" compliance startup 2026`
+- `"agentic decision audit" seed OR pre-seed 2026`
+- `"AI decision explainability" investment OR brokerage 2026`
+- `"backend compliance controller" AI agent seed 2026`
+- `"AI provenance" financial services startup 2026`
+- `"LLM audit" regulated industry startup seed 2026`
+- `"agent observability" fintech seed OR Series A 2026`
+- `"EU AI Act" explainability startup seed 2026`
+- `site:eu-startups.com "AI audit" OR "explainability" fintech`
+
+**Reference companies to track:** Alinia, ValidMind.
+**Negative filters:** `-"model interpretability" -"ML explainability research"` (want agent-level, not model-level).
+
+---
+
+## AI Safety & Guardrails *(Gap #2 — REOPENED, priority re-elevated)*
+
+Thesis anchor: Overmind archived 2026-04-14 ("They aren't interested in participating"). Manifold (5★) and Kai (4★) provide partial coverage. Actively scouting for agent-specific (not model-level) safety companies, European preferred.
+
+- `"AI agent guardrails" financial services seed 2026`
+- `"agent supervision" fintech OR broker startup 2026`
+- `"agent behaviour monitoring" seed OR pre-seed 2026`
+- `"agent boundary enforcement" startup 2026`
+- `"runtime agent safety" fintech seed 2026`
+- `"autonomous agent risk" controls startup 2026`
+- `"agent deviation detection" seed 2026`
+- `"multi-agent security" finserv startup seed 2026`
+- `"agent guardrail" European OR UK seed 2026`
+- `"AI control plane" agent finserv seed 2026`
+- `site:sifted.eu "AI safety" OR "agent governance" fintech`
+- `"agentic runtime" governance seed OR "Series A" 2026`
+
+**Reference companies to track:** Manifold, Kai, Keycard, Resistant AI, Trent AI.
+**Negative filters:** `-"model red-teaming" -"jailbreak" -"LLM alignment research" -"AI interpretability"` (Mindgard/Goodfire lesson: AI ≠ agents).
+
+---
+
+## Specialist Agent Desert — S2–S11 *(Structural gap, two cycles with zero results)*
+
+Web search exhausted for these categories. Continue attempting but supplement with alt-sourcing (Crunchbase/PitchBook mining, YC/Antler/EF batch reviews, academic spinout tracking, fintech pivots). Pre-seed and research-stage criteria may be appropriate here.
+
+### S2 — Portfolio Construction & Risk Agent
+
+- `"AI portfolio construction" agent startup seed 2026`
+- `"factor exposure agent" investment startup 2026`
+- `"portfolio risk AI agent" seed OR pre-seed 2026`
+- `"correlation modelling agent" finserv startup 2026`
+- `"position sizing AI" Kelly OR risk-budget seed 2026`
+- `"scenario analysis" AI agent portfolio startup 2026`
+- `"rebalancing agent" investment startup seed 2026`
+- `"agent-callable portfolio API" startup 2026`
+- `site:arxiv.org "agent portfolio construction" 2026`
+
+### S3 — Trade Structuring Agent
+
+- `"trade structuring" AI agent startup seed 2026`
+- `"options vs equity" AI agent advisor 2026`
+- `"account selection" AI agent taxable OR IRA 2026`
+- `"pairs trade AI agent" seed OR pre-seed 2026`
+- `"asset location" AI agent startup 2026`
+- `"thesis expression" AI agent trading seed 2026`
+
+### S5 — Options & Derivatives Strategy Agent
+
+- `"options strategy AI agent" startup seed 2026`
+- `"covered call AI agent" retail startup 2026`
+- `"volatility trading AI" agent seed OR pre-seed 2026`
+- `"protective put AI advisor" startup 2026`
+- `"derivatives AI agent" retail seed 2026`
+- `"options agent API" startup 2026`
+
+### S6 — Execution Agent
+
+- `"smart order routing" AI agent startup seed 2026`
+- `"VWAP TWAP AI agent" retail startup 2026`
+- `"algorithmic execution" AI agent seed OR pre-seed 2026`
+- `"dark pool routing" AI agent retail startup 2026`
+- `"implementation shortfall" AI agent startup 2026`
+- `"execution algo AI" retail investor startup 2026`
+
+### S7 — Position Monitoring & Thesis Tracking Agent
+
+- `"thesis tracking" AI agent investment startup seed 2026`
+- `"stop loss AI agent" automated startup 2026`
+- `"catalyst monitoring" AI agent startup seed 2026`
+- `"position monitoring" AI agent fintech 2026`
+- `"earnings surprise AI agent" seed 2026`
+- `"thesis milestone" AI agent startup 2026`
+
+### S8 — Financial Planning Agent
+
+- `"AI financial planning agent" goals-based seed 2026`
+- `"retirement projection AI agent" startup 2026`
+- `"life event modelling" AI agent wealth seed 2026`
+- `"estate planning AI agent" seed OR pre-seed 2026`
+- `"income generation AI" retiree agent 2026`
+- `"agent-callable planning API" startup 2026`
+
+### S9 — Behavioural Coaching Agent
+
+- `"behavioural coaching AI" investor startup seed 2026`
+- `"panic prevention" AI agent investment 2026`
+- `"behavioural finance AI agent" seed OR pre-seed 2026`
+- `"drawdown coaching" AI agent startup 2026`
+- `"investor psychology AI agent" startup 2026`
+
+### S10 — Post-Trade Analysis & Learning Agent
+
+- `"post-trade analysis AI agent" startup seed 2026`
+- `"trade journal AI" attribution startup 2026`
+- `"attribution analysis AI agent" seed 2026`
+- `"trade review AI agent" startup 2026`
+- `"maximum adverse excursion AI" startup 2026`
+
+### S11 — (Reserved — post-trade + learning overlaps)
+
+Covered by S10 queries; monitor for dedicated learning-loop startups.
+
+**Alt-sourcing queries (all S-categories):**
+- `site:ycombinator.com/companies "investment" OR "trading" AI agent`
+- `site:crunchbase.com "AI agent" investing pre-seed 2026`
+- `site:pitchbook.com "agent-callable" fintech seed 2026`
+- `"Antler" OR "Entrepreneur First" investment AI agent 2026`
+- `"academic spinout" AI agent investing 2026`
+- `"fintech pivot" AI agent investing seed 2026`
+
+**Negative filters for S-category queries:** `-"hedge fund internal" -"portfolio manager tool" -"trader productivity" -"back-office"`.
+
+---
+
+# 🟡 HIGH — Partial Coverage, Actively Looking
+
+## Dispute Resolution & Agent Liability *(Gap #11 — Mount 5★, Klaimee 4★; still only 2 pipeline companies)*
+
+Thesis anchor: "When an agent trade goes wrong, who pays?" AIUC ($15M seed, Nat Friedman) predicts $500B market by 2030. Armilla (Lloyds-backed) tracked.
+
+- `"AI agent insurance" startup seed OR "Series A" 2026`
+- `"agent liability" coverage startup 2026`
+- `"agent certification" insurance startup seed 2026`
+- `"AI accountability framework" startup 2026`
+- `"autonomous agent underwriting" insurance startup 2026`
+- `"agentic dispute resolution" finserv seed 2026`
+- `"AI economy insurance" startup 2026`
+- `"AI agent bond" OR "AI agent warranty" startup 2026`
+- `"Lloyd's AI" OR "Lloyd's agent" insurance startup 2026`
+- `"agent audit certification" startup 2026`
+- `site:sifted.eu "AI insurance" OR "agent liability" 2026`
+- `"AIUC-1" OR "agent insurance standard" 2026`
+
+**Reference companies to track:** Mount, Klaimee, Armilla, AIUC.
+
+---
+
+## Agent Monetisation *(Gap #13 — Paid AI pattern signal only)*
+
+Thesis anchor: "How each specialist agent gets paid — results-based billing, revenue sharing." Paid AI ($33M seed) is the lone entry.
+
+- `"results-based billing" AI agent startup seed 2026`
+- `"service-as-software" billing platform seed 2026`
+- `"AI agent monetisation" fintech startup 2026`
+- `"usage-based billing" AI agent seed OR pre-seed 2026`
+- `"agent revenue sharing" marketplace startup 2026`
+- `"AI agent payments" subscription startup 2026`
+- `"outcome-based pricing" AI agent seed 2026`
+- `"agent pricing API" startup 2026`
+- `"agent commerce billing" finserv startup 2026`
+
+**Reference companies to track:** Paid AI.
+**Negative filters:** `-"SaaS billing" -"enterprise subscription management"` (want agent-specific, not generic).
+
+---
+
+## Personal Financial Agent *(S-Front — Partial coverage)*
+
+Thesis anchor: The front door. Mistral (infrastructure only), Finley AI (FCA spotlight), Arta Finance (US+Singapore) are partials. No European startup building an agent-callable personal financial agent specifically — regulation makes it hard to ship fast.
+
+- `"AI personal finance agent" pre-seed OR seed 2026`
+- `"agentic wealth assistant" Europe OR UK seed 2026`
+- `"conversational investing agent" startup launch 2026`
+- `"AI wealth concierge" seed OR pre-seed Europe 2026`
+- `"personal financial agent" API OR MCP 2026`
+- `"AI financial copilot" consumer seed 2026`
+- `"agentic retail investing" startup seed 2026`
+- `"robo-advisor agent" natural language seed 2026`
+- `site:eu-startups.com personal finance AI agent 2026`
+- `"FCA sandbox" AI agent wealth 2026`
+
+**Reference companies to track:** Finley AI, Arta Finance, Mistral (infrastructure).
+**Negative filters:** `-"internal adviser tool" -"RIA back-office" -"wealth manager CRM"`.
+
+---
+
+## Research & Signal Intelligence — European Replacements *(S1 — validated US trio, need EU equivalents)*
+
+Thesis anchor: Serafis note — "Can we also find things like this in the EU?" AgentSmyth, Serafis, Kimpton AI all US-based. Actively seeking European equivalents.
+
+- `"alternative data AI agent" fintech seed Europe 2026`
+- `"AI investment research agent" Europe OR UK seed 2026`
+- `"agentic equity research" startup seed Europe 2026`
+- `"earnings analysis AI agent" European startup 2026`
+- `"sentiment analysis agent" finserv Europe seed 2026`
+- `"institutional flow AI agent" European fintech 2026`
+- `"AI research platform" agent-callable Europe seed 2026`
+- `"catalyst identification AI" investment Europe 2026`
+- `"macro AI agent" research startup Europe 2026`
+- `site:sifted.eu AI investment research agent 2026`
+- `site:eu-startups.com alternative data agent 2026`
+
+**Reference companies to track:** AgentSmyth, Serafis, Kimpton AI (US — for comparison).
+**Negative filters:** `-"internal research tool" -"analyst productivity"`.
+
+---
+
+# 🟠 MEDIUM — Existing Candidates, Better Options May Exist
+
+## Agent Orchestration *(Gap #1 — Jentic POC partner, BG Score 95)*
+
+- `"multi-agent orchestration" financial services seed 2026`
+- `"agentic workflow" regulated industry seed 2026`
+- `"governed agent execution" startup 2026`
+- `"agent routing" finserv startup seed 2026`
+- `"agentic sandbox" compliance startup 2026`
+- `"Arazzo workflow" OR "OpenAPI agent" startup 2026`
+- `"agent credential management" finserv seed 2026`
+- `site:ycombinator.com agent orchestration financial`
+
+**Reference companies to track:** Jentic (POC), Pluvo, Gradient Labs.
+**Negative filters:** `-"accounting automation" -"AP automation" -"RPA" -"ETL"` (accounting stacks 2★ lesson; Hard Filter applies).
+
+---
+
+## Agent Authentication & Identity (KYA) *(Gap #4 — Vouched 5★ KYA platform)*
+
+- `"Know Your Agent" KYA startup seed 2026`
+- `"agent identity" finserv startup seed 2026`
+- `"MCP identity" OR "agent credentialing" startup 2026`
+- `"non-human identity" financial services seed 2026`
+- `"agent authentication" regulated industry startup 2026`
+- `"agent permissions" finserv seed OR "Series A" 2026`
+- `"IETF aiagent-auth" startup 2026`
+- `"agent IAM" finserv seed 2026`
+
+**Reference companies to track:** Vouched, Keycard, Runlayer, Aembit, Astrix Security.
+**Negative filters:** `-"KYC-only" -"AML-only" -"customer onboarding"` (KYC/AML ≠ KYA; KYC/AML has its own –15 pt soft factor).
+
+---
+
+## Agent Payment Rails *(Gap #11b — Nava 5★, Natural 4★)*
+
+- `"agent escrow" payment startup seed 2026`
+- `"agent dispute resolution" payment startup 2026`
+- `"agent intent verification" payment seed 2026`
+- `"agentic commerce middleware" fintech seed 2026`
+- `"AP2" OR "ATXP" OR "TAP" agent payment startup 2026`
+- `"agent-initiated payment" regulated startup 2026`
+- `"Visa Intelligent Commerce" OR "Mastercard Agent Pay" startup 2026`
+- `"machine payments protocol" startup seed 2026`
+
+**Reference companies to track:** Nava, Natural, Ralio, Lemrock, Crossmint, Circuit & Chisel.
+**Negative filters:** `-"crypto-only" -"wallet management"` (unless agent-first).
+
+---
+
+# ⚪ MONITOR — Strong Candidates Already Identified
+
+## Tax Optimisation Agent *(Gap #7 — Alomana 5★ CONFIRMED match)*
+
+Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT tax filing, NOT e-filing, NOT CPA firm tools** (Juno 2★, TaxDown 2★ precedents — Hard Filter applies).
+
+- `"tax-loss harvesting" AI agent portfolio seed 2026`
+- `"tax-aware rebalancing" AI startup seed 2026`
+- `"asset location AI agent" wealth seed 2026`
+- `"wash sale prevention" AI agent startup 2026`
+- `"capital gains optimisation" AI agent seed 2026`
+- `"lot-level tax" AI agent portfolio startup 2026`
+- `"embedded tax API" wealth management seed 2026`
+- `"Roth conversion AI" agent advisor seed 2026`
+- `"after-tax portfolio returns" AI agent startup 2026`
+
+**Reference companies to track:** Alomana.
+**Strict negative filters:** `-"tax filing" -"tax return" -"e-filing" -"tax compliance" -"CPA tools" -"accounting"`. Any result matching these is auto-reject.
+
+---
+
+# Cross-Cutting Tracks
+
+## Regulatory & Standards Signals
+
+- `FCA "AI agent" OR "agentic AI" 2026`
+- `SEC "AI agent" OR "investment adviser AI" 2026`
+- `FINRA "agentic" OR "AI agent" broker 2026`
+- `"EU AI Act" financial services agent 2026`
+- `"DORA" AI agent resilience 2026`
+- `"MAS" AI agent fintech Singapore 2026`
+- `"NIST" AI agent identity standard 2026`
+- `"IETF aiagent-auth" 2026`
+- `"MCP" Linux Foundation 2026`
+- `"AIUC-1" OR "agent insurance standard" 2026`
+
+## Competitive Intelligence (thesis compression signals)
+
+- `eToro "App Store" OR "Agent Portfolios" developer 2026`
+- `Public.com "Agentic Brokerage" agents 2026`
+- `"JPMorgan" agent compliance platform 2026`
+- `"Visa Intelligent Commerce" launch 2026`
+- `"Mastercard Agent Pay" bank launch 2026`
+- `"Santander" AI agent launch 2026`
+- `"OpenAI" acquires fintech OR finserv 2026`
+- `"Arta Finance" OR "Wealth as a Service" partner bank 2026`
+
+## YC / Accelerator / Early-Stage Circuit
+
+- `site:ycombinator.com/companies "AI agent" fintech`
+- `"YC W26" OR "Y Combinator W26" finance agent`
+- `"YC S26" OR "Y Combinator S26" AI agent finance`
+- `"Entrepreneur First" "AI agent" fintech 2026`
+- `"Antler" "AI agent" fintech 2026`
+- `"Techstars" agentic AI fintech 2026`
+- `"a16z" OR "Andreessen Horowitz" AI agent fintech seed 2026`
+- `"Mouro Capital" OR "Santander InnoVentures" AI agent 2026`
+- `"Ribbit Capital" agent seed 2026`
+- `"LocalGlobe" OR "Accel Europe" AI agent fintech 2026`
+
+## Research Signals (arxiv / SSRN)
+
+- `"multi-agent finance" OR "agentic investing" site:arxiv.org 2026`
+- `"agent safety financial" site:arxiv.org 2026`
+- `"pre-trade compliance agent" site:arxiv.org 2026`
+- `"agent explainability finance" site:arxiv.org 2026`
+- `"AI agents wealth management" site:scholar.google.com 2026`
+- `"agentic portfolio construction" site:ssrn.com 2026`
+
+## Geography Rotation (European-first)
+
+- `site:sifted.eu "AI agent" OR "agentic" fintech 2026`
+- `site:eu-startups.com "AI agent" fintech 2026`
+- `site:tech.eu "agentic" fintech seed 2026`
+- `"agentic AI" seed London OR UK fintech 2026`
+- `"agentic AI" Berlin OR Frankfurt fintech 2026`
+- `"agentic AI" Paris OR "Station F" fintech 2026`
+- `"agentic AI" Dublin OR Amsterdam fintech 2026`
+- `"agentic AI" Barcelona OR Madrid fintech 2026`
+- `"agentic AI" Zurich OR Stockholm fintech 2026`
+
+---
+
+## Master Negative Filter (append globally where relevant)
+
+```
+-"internal workflow" -"back-office" -"finance department" -"CFO tools"
+-bookkeeping -accounting -"AP automation" -"expense management"
+-"tax filing" -"tax return" -"e-filing" -"tax compliance"
+-"KYC-only" -"AML-only"
+-"model interpretability" -"jailbreak" -"LLM alignment research"
+-list -roundup -"top 10" -"best AI"
+-"Series B" -"Series C" -"Series D"
+```
+
+---
+
+## Change Log
+
+- **v4.0 (2026-04-17)** — Full rebuild against thesis v2.2. New taxonomy: 11 specialist agent categories (S-Front + S1–S10) + 7 platform infrastructure categories. Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10) elevated to 🔴 EVERY SCAN with alt-sourcing queries. AI Safety re-elevated (Overmind archived). Audit & Explainability priority raised after Alinia entry. Pre-Trade Compliance remains highest-gap. European-equivalent queries added for S1 (Serafis feedback). Composability / agent-callable API signal prioritised. Master negative filter consolidated from hard-filter and soft-factor learnings (62 vote corpus).
+- v3.2 (2026-04-15) — AI Safety re-elevated to HIGH after Overmind decline.
+- v3.0–v3.1 (2026-04-14/15) — Expanded to 21 categories, specialist-agent categories added.
+- v2 (2026-04-14) — External/third-party qualifiers added, stage qualifiers added, orchestration negative filters.
+- v1 (2026-03-10) — Initial 6-gap search terms.
