@@ -12,6 +12,7 @@ A "near miss" is a startup that scored above 60 on the relevance model but recei
 | 2026-04-05 | 0 | 2 | — |
 | 2026-04-12 | 0 | 2 | — |
 | **2026-04-14** | **22** | **24** | **Internal workflow blind spot (14/22)** |
+| 2026-04-27 | 0 | 24 | — (solvapay 0★ is accidental; excluded) |
 
 ---
 
