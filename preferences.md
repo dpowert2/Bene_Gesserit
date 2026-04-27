@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-15 (cycle 3) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) | v3.2 update: 5 new votes this cycle: serafis 5★, kimpton-ai 5★, agentsmyth 5★, mount-insurance 5★, klaimee 4★. FIRST SPECIALIST AGENT VOTES: Research & Signal Intelligence (S1) 3/3 upvotes = 100% hit rate. Dispute Resolution gap validated: mount 5★ + klaimee 4★. "Agent exposure" preference signal emerging: Dave wants companies to expose intelligence as an agent/API. Overmind archived — "They aren't interested in participating."*
+*Last updated: 2026-04-27 (cycle 8 — second master-orchestrator run of the day) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | No new meaningful votes since cycle 3 (2026-04-15) — Supabase unreachable from sandbox this run; cached votes.json is stale; preferences carried forward from cycle 7 unchanged. "Agent exposure" API-callable preference still at 2/3 threshold. Solvapay re-vote still pending.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
