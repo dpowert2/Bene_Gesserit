@@ -1,6 +1,6 @@
 # Bene Gesserit — Living Investment Thesis
 
-*Last updated: 2026-04-15 | Version: 3.0 — scouting rebalanced from platform infrastructure toward specialist agents*
+*Last updated: 2026-04-17 | Version: 2.2 — Cycle 3 update: S1 specialist agents validated, Dispute Resolution addressed, Overmind archived, eToro App Store launched*
 
 ---
 
@@ -87,74 +87,32 @@ Fidelity needs compliance-native technology. European startups build that way by
 
 ---
 
-## Scouting Priority Shift (v3.0)
-
-**The platform infrastructure side is largely addressed.** Agent Auth, AI Safety, Orchestration, and Compliance each have strong candidates or POC partners. The system's exposure bias — flooding the pipeline with security/auth companies because search terms favoured them — created a false signal that these were the highest-priority gaps. They were the *most visible* gaps, not the most important remaining ones.
-
-**The specialist agents are the unscouted frontier.** The thesis describes 14 stages of how elite traders work and maps 11 specialist agent types to them. But only 2 have any pipeline coverage (Personal Financial Agent, Tax Optimisation). The other 9 — Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis — have zero search terms, zero pipeline companies, and zero scoring signals.
-
-**These specialist agents are what makes the app store worth using.** The garden can have perfect identity, perfect safety, perfect compliance — but if there are no brilliant specialist agents operating inside it, there's no customer value. The infrastructure is the enabler. The agents are the product.
-
-**Rebalanced scouting allocation:**
-
-| Category | Previous Priority | New Priority | Rationale |
-|----------|------------------|-------------|-----------|
-| Research & Signal Intelligence | Not scouted | 🔴 CRITICAL | Core value proposition — no pipeline coverage |
-| Portfolio Construction & Risk | Not scouted | 🔴 CRITICAL | Core value proposition — no pipeline coverage |
-| Trade Structuring & Account Optimisation | Not scouted | 🟡 HIGH | Differentiated capability — no pipeline coverage |
-| Execution Quality | Not scouted | 🟡 HIGH | Professional-grade execution for retail — no coverage |
-| Options & Derivatives Strategy | Not scouted | 🟡 HIGH | Deep specialist knowledge gap — no coverage |
-| Position Monitoring & Thesis Tracking | Not scouted | 🟠 MEDIUM | Continuous intelligence — no coverage |
-| Financial Planning | Not scouted | 🟠 MEDIUM | Goals-based guardrail — no coverage |
-| Behavioural Coaching | Not scouted | ⚪ MONITOR | Emerging category — fewer startups expected |
-| Post-Trade Analysis & Learning | Not scouted | ⚪ MONITOR | Feedback loop — fewer startups expected |
-| Agent Auth & Security | 🔴 CRITICAL | 🟠 MEDIUM | Strong candidates exist (Keycard, Resistant AI, etc.) |
-| AI Safety & Guardrails | 🟡 HIGH | 🟠 MEDIUM | Strong candidate (Overmind). Box ticked. |
-| Agent Orchestration | 🟠 MEDIUM | ⚪ MONITOR | POC partner (Jentic). Covered. |
-| Pre-Trade Compliance | 🔴 CRITICAL | 🟡 HIGH | Still a genuine gap but narrower scope |
-
----
-
 ## Gap Map: Reimagining Brokerage Infrastructure for Agents
 
-Every function a brokerage performs today — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each of these must be reimagined. The gap map below covers BOTH sides: the specialist agents that deliver the customer experience AND the platform infrastructure that makes the garden safe.
+Every function a brokerage performs today — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each of these must be reimagined. KYC becomes KYA (Know Your Agent). Pre-trade compliance checks must happen in milliseconds against agent-initiated orders. Audit trails must capture agent reasoning, not just human sign-off. Dispute resolution must account for a new actor in the value chain.
 
-### Specialist Agents (The Apps) — PRIMARY SCOUTING FOCUS
+The gap map below identifies the infrastructure layers needed to build the app store. For each, we ask: is there a startup building this through an agentic, financial-services-specific lens?
 
-| Agent Type | Investment Stage | What It Does | Status |
-|-----------|-----------------|-------------|--------|
-| Research & Signal Intelligence | Stages 1, 2, 3 | Alternative data, earnings analysis, sentiment, institutional flow tracking | ❌ **Not scouted — highest priority** |
-| Portfolio Construction & Risk | Stages 4, 5, 11 | Concentration, factor exposure, scenario analysis, position sizing, rebalancing | ❌ **Not scouted — highest priority** |
-| Trade Structuring | Stage 6 | Equity vs options vs pairs, account selection across taxable/IRA/Roth | ❌ **Not scouted** |
-| Tax Optimisation | Stage 7 | Lot-level TLH, gain deferral, asset location, wash sale prevention | ⚠️ Scouting — Alomana 5★ first confirmed match |
-| Options & Derivatives Strategy | Stages 6, 10 | Covered calls, protective puts, spreads, volatility strategies | ❌ **Not scouted** |
-| Execution Quality | Stage 9 | Algorithm selection, dark pool routing, slippage minimisation | ❌ **Not scouted** |
-| Position Monitoring | Stage 10 | Thesis tracking, stop-loss management, catalyst monitoring | ❌ **Not scouted** |
-| Personal Financial Agent | Stages 1, 13, 14 | Front door — intent translation, orchestration across specialists | ⚠️ Partial (Bank of Bots 4★) |
-| Financial Planning | Stage 14 | Goals-based planning, retirement, life events, estate | ❌ **Not scouted** |
-| Behavioural Coaching | Stage 13 | Panic prevention, discipline enforcement, drawdown perspective | ❌ **Not scouted** |
-| Post-Trade Analysis | Stage 12 | Trade journaling, attribution, pattern recognition, strategy refinement | ❌ **Not scouted** |
+| Layer | Traditional Brokerage Function | Agent-First Reimagining | Status |
+|-------|-------------------------------|------------------------|--------|
+| Agent Orchestration | Workflow management | Route, schedule, and govern multi-agent workflows | ✅ Jentic (POC partner) |
+| AI Safety & Guardrails | Risk controls | Supervise agent behaviour, enforce boundaries, prevent hallucination | ⚠️ Gap reopened — Overmind declined; Manifold 5★ and Kai 4★ remain |
+| Pre-Trade Compliance | Suitability, best execution | Agent checks suitability, concentration limits, restricted lists before every trade | ❌ **Market gap** — Hadrius (YC) closest signal |
+| Agent Authentication | KYC / identity | KYA — Know Your Agent. Permissions, secrets, identity delegation for non-human actors | ✅ Vouched (5★, KYA platform) |
+| Audit & Explainability | Regulatory reporting | "Why did the agent do this?" — auditable, regulator-ready explanation | ⚠️ First entry — Alinia (vote pending) |
+| Dispute Resolution | Customer complaints | When an agent trade goes wrong, who pays? Insurance, certification, accountability | ✅ Mount (5★), Klaimee (4★) — partially addressed |
+| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ✅ Alomana (5★) — first confirmed match |
+| Research & Signal Intelligence (S1) | Idea generation | Alternative data, earnings, sentiment, flow — agent-callable intelligence | ✅ AgentSmyth (5★), Serafis (5★), Kimpton AI (5★) — 100% hit rate |
+| Agent Monetisation | Fee schedules | Results-based billing for agent-mediated services | ✅ Paid AI (pattern signal) |
+| Agent Payment Rails | Settlement | Escrow, intent verification, dispute resolution for agent transactions | ✅ Nava (5★), Natural (4★) |
 
-### Platform Infrastructure (The Garden) — MAINTENANCE SCOUTING
-
-| Layer | What It Does | Status |
-|-------|-------------|--------|
-| Agent Orchestration | Route, schedule, govern multi-agent workflows | ✅ Jentic (POC partner) |
-| AI Safety & Guardrails | Supervise agent behaviour, enforce boundaries | ✅ Overmind (strong candidate) |
-| Agent Authentication & Identity | KYA — permissions, secrets, identity delegation | ⚠️ Multiple candidates (Keycard, Resistant AI, Vouched) |
-| Pre-Trade Compliance | Suitability, concentration, restricted lists, best execution | ❌ Genuine gap (Hadrius closest) |
-| Audit & Explainability | Auditable agent reasoning for regulators | ❌ Gap (ValidMind closest) |
-| Dispute Resolution & Liability | Insurance, certification, accountability | ❌ Gap (Armilla, AIUC embryonic) |
-| Agent Payment Rails | Agent-initiated financial transactions | ⚠️ Emerging (Nava, Natural, Crossmint) |
-| Agent Monetisation | Results-based billing for agent services | ✅ Paid AI (pattern signal) |
-
-### Pipeline Coverage (Platform Infrastructure — Largely Addressed)
+### Gaps With European Startup Coverage
 
 **1. Agent Orchestration & Workflow** ✅ POC Partner
 Jentic (Dublin, pre-seed $4.5M). Arazzo workflows, agentic sandboxes, centralised credentials, governed execution. Governance-native architecture. BG Score: 95.
 
-**2. AI Safety & Guardrails** ✅ Strong Candidate
-Overmind (London, seed €2.3M). Ex-MI5 founder. AI agent supervision for regulated industries. Fintech explicit target. BG Score: 100.
+**2. AI Safety & Guardrails** ⚠️ Gap Reopened
+Previous lead Overmind (London, seed €2.3M, ex-MI5 founder, BG Score 100) archived 2026-04-14 — *"They aren't interested in participating."* Manifold (5★ "Similar to Geordie") and Kai (4★) remain as partial coverage. Priority re-elevated from MEDIUM to HIGH — active scouting for agent-specific (not AI-model-level) safety companies.
 
 **3. Compliance — Customer Operations** ✅ Reference Architecture
 Gradient Labs (London, Series A $13M). SOP-following agents in regulated banking. Deployed at a major UK bank, 98% CSAT. LHV Bank POC signed. The architectural pattern — procedure-based, auditable, deterministic — is the template for how agents should behave inside the walled garden. BG Score: 82.
@@ -171,7 +129,7 @@ Paid AI (London, seed $33M). Results-based billing for AI agents. Directly relev
 **7. Cross-Border Compliance** ✅ Adjacent
 Outpost (London, seed $17.5M). Ex-Revolut founders, Ribbit Capital. Cross-border payments and tax compliance. BG Score: 58.
 
-### Remaining Platform Infrastructure Gaps
+### Genuine Market Gaps (Highest Priority for Scouting)
 
 **8. Pre-Trade Compliance Agent** ❌ FCAT's Most Actionable Insight
 Nobody building this. When an AI agent in the marketplace wants to trade, who checks: is this suitable for the client? Does it violate concentration limits? Is the security on a restricted list? Is this best execution? In a world where Public.com ships "describe your intent, we execute" without suitability checks, the company that builds the pre-trade compliance agent owns the governance layer for every agentic brokerage — including the app store. Hadrius (YC, SEC/FINRA native) is the closest signal.
@@ -182,8 +140,11 @@ Ping Identity shipped "Identity for AI" GA. IETF standard being written (draft-k
 **10. Audit & Explainability** ❌ No Purpose-Built Startup
 Regulators require explainability for AI-driven financial decisions — and so will customers. ValidMind is closest. Nobody building "why did the agent recommend this trade?" as an auditable service. This is the app store's transparency layer.
 
-**11. Dispute Resolution & Agent Liability** ❌ Completely Unsolved
-Visa exec: "Now there is a fifth player in the value chain." Armilla (Lloyds-backed AI insurance) and AIUC (agent certification) are embryonic. No framework, no insurance product with traction. This is the app store's consumer protection layer — and it doesn't exist.
+**10b. Audit & Explainability** ⚠️ First Entry
+Alinia (Barcelona, seed $7.5M, Mouro Capital/Santander). Backend compliance controller for high-stake AI agents. First entry in this previously empty category — vote pending. ValidMind also tracked. The regulatory-grade explainability layer is now partially scouted.
+
+**11. Dispute Resolution & Agent Liability** ✅ Partially Addressed
+Previously "completely unsolved." Now validated by Mount Insurance (5★ "Reduces risk — excellent") and Klaimee (4★ "Not quite as good as Mount"). Mount's "insurer for the agent economy" model is the archetype. Armilla (Lloyds-backed) and AIUC ($15M seed, Nat Friedman, predicts $500B market by 2030) round out the category. Still only 2 pipeline companies — continued scouting HIGH priority.
 
 ### Partial Coverage
 
@@ -280,25 +241,30 @@ These are the startups building the technology that makes the agent marketplace 
 ## What "Good" Looks Like
 
 - **Stage:** Seed to Series A (we want to shape what the startup is building, not adopt a finished product)
-- **Geography:** Europe preferred (active scoring bonus: +5 points for European HQ or significant European operations). Global acceptable but European startups are the primary scouting target. European regulatory environment (GDPR, DORA, MiFID II, EU AI Act) produces compliance-native architecture by default.
+- **Geography:** Europe preferred, global acceptable
 - **FinServ readiness:** Evidence of financial services traction, customers, or regulated-industry DNA
 - **Team:** Domain expertise in financial services, AI/ML, or security. Prior startup experience valued
 - **Architecture:** API-first, platform thinking, not point solutions
 - **Governance-native:** Compliance, audit, and explainability as foundational design — not bolted on
 
-### Learned Preferences (from 56 votes — 19 upvotes, 8 neutral, 29 downvotes)
+### Learned Preferences (from 61 votes — 24 upvotes, 8 neutral, 29 downvotes)
 
 **THE DECISIVE DIMENSION: External vs Internal**
 The single most predictive attribute is whether the product serves external/third-party agents in a marketplace or improves internal institutional workflows. 16 internal workflow companies received 1–2★ with zero exceptions. This is now a Hard Filter. Dave's words: *"I'm looking for solutions that mitigate risk of third party agents"* (lema-ai 1★). *"This works as long as it also works for external agents"* (ralio 5★).
 
-- **Trust infrastructure dominates:** Agent Auth & Security (6/6 upvotes, 100%) and AI Safety & Guardrails (5/5 upvotes, 100%). Strongest signal across all gaps. Keycard 5★ ("Spot on"), resistant-ai 5★ ("Novel and love the agentic security angle"), manifold 5★, complyance 5★.
+- **Trust infrastructure dominates:** Agent Auth & Security (7/11 upvotes, 64%) and AI Safety & Guardrails (6/14 upvotes, 43% — suppressed by internal-workflow false positives now filtered). Keycard 5★ ("Spot on"), resistant-ai 5★ ("Novel and love the agentic security angle"), manifold 5★, complyance 5★.
+- **Specialist agents validated (NEW — Cycle 3):** Research & Signal Intelligence (S1) is the first specialist agent category with vote data: AgentSmyth 5★ (*"This is what we are looking for. Shame we didn't find them sooner."*), Serafis 5★, Kimpton AI 5★ — 3/3 hit rate, 100%. Combined with previous cycle's nava/vouched/alomana at 5★, scout-to-upvote conversion is 6/6 across two cycles.
+- **Dispute Resolution validated (NEW — Cycle 3):** Mount 5★ (*"Reduces risk — excellent"*) and Klaimee 4★ move this gap from "completely unsolved" to "partially addressed." Agent insurance / liability infrastructure is thesis-aligned.
+- **"Agent exposure" preference EMERGING:** Dave wants intelligence exposed as agent-callable APIs, not dashboard-only products. *"Better if it exposed an agent"* appears in 2 of 3 S1 votes (serafis, kimpton-ai). Composability > UI.
+- **European preference REINFORCED:** Serafis 5★ note *"Can we also find things like this in the EU?"* — Dave explicitly wants European equivalents of strong US research companies. Continues the compliance-native European supply chain thesis.
 - **Internal workflow = automatic rejection:** 16 companies at 1–2★. No exceptions. Hard Filter applied.
 - **Agents, not AI:** The distinction between agent-level security and AI/model-level security is critical. Mindgard (2★, "AI, not agents") and goodfire (2★) miss despite being in the right gap category.
 - **Stage: Seed to Series A only.** Series B is "too late" (linx-security 2★, april 3★). Over-funded = "for procurement, not innovation" (armadin 2★).
 - **Sub-domain precision matters:** Tax filing ≠ tax efficiencies (juno 2★). KYC/AML ≠ compliance governance (vivox-ai 2★). Accounting ≠ agent orchestration (stacks 2★).
 - **Compliance requires differentiation:** Complyance 5★ and norm-ai 4★ prove the gap is live. Sphinx 3★ ("not exactly groundbreaking") and bretton-ai 3★ show generic execution or wrong sub-domain fails.
+- **Portfolio-integrated tax intelligence confirmed:** Alomana 5★ resolves the Tax Optimisation gap. Autonomous portfolio rebalancing + TLH is thesis-aligned. Tax *filing* is not.
 - **Finserv specificity required:** Certivo 3★ ("Had this been for Finserv I would have been interested") — horizontal products without finserv signal score lower.
-- **Agent Payment Rails confirmed:** Natural 4★ with followup request validates agent payment infrastructure as a real gap.
+- **Agent Payment Rails confirmed:** Natural 4★ and Nava 5★ (agent escrow / dispute resolution) validate payment infrastructure as a real gap.
 - **Marketplace concepts resonate:** Bank-of-Bots 4★ ("Love this concept. Looks like something I'd like to play with") validates the platform/marketplace thesis directly.
 
 ---
@@ -310,6 +276,8 @@ The single most predictive attribute is whether the product serves external/thir
 3. **Horizontal players moving into finserv** — Okta launched "Identity for AI Agents." AI safety companies are being acquired by platform incumbents (OpenAI/Promptfoo, SentinelOne/Prompt Security, Check Point/Lakera). The window for finserv-specific startups to establish themselves is compressing.
 4. **Agents bypassing brokerages entirely** — If eToro and Public.com build their own execution infrastructure and succeed without traditional brokerage rails, the "agents must come through us" thesis weakens.
 5. **AI-level safety commoditisation** — Goodfire ($1.25B unicorn) received 2★. The AI interpretability/model safety layer may be commoditised. The surviving opportunity is agent-specific security (keycard 5★, resistant-ai 5★).
+6. **eToro App Store launched (2026-04-15)** — third-party developer marketplace with APIs, MCP server, revenue sharing. This is *exactly* the "app store for financial agents" model the thesis describes. Dual signal: (a) powerful validation — the thesis is correct and a major brokerage agrees; (b) timeline compression — infrastructure startups must establish themselves before eToro defines the de facto standard. Monitor whether they build or buy governance infrastructure.
+7. **Specialist agent desert (structural, Cycle 3 finding)** — S2–S9 (Portfolio, Trade Structuring, Options, Execution, Monitoring, Planning, Behavioural, Post-Trade) produced zero seed-stage thesis-matching startups across two consecutive full-cycle scans. This is a supply-side market reality, not a search-terms failure. The "apps" layer of the app store may lag the infrastructure layer by 12–18 months. Sourcing strategy must shift: startup database mining, accelerator batch reviews, academic spinouts, fintech pivots. Stage criteria may need to expand to pre-seed / research-stage for these categories.
 
 ---
 
@@ -320,8 +288,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 1.0 | 2026-03-10 | Initial setup | 6 gap categories, basic criteria |
 | 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research, competitive landscape, agentic brokerage race, gap mapping | 13 gaps, "app store for financial agents" thesis, European supply chain rationale, competitive intelligence, learned anti-patterns, challenge signals |
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
-| 3.0 | 2026-04-15 | Exposure bias correction — scouting rebalanced | Platform infrastructure (Auth, Safety, Orchestration) downgraded from CRITICAL to MEDIUM/MONITOR — strong candidates exist. 9 specialist agent categories added to scouting: Research & Signal Intelligence, Portfolio Construction & Risk, Trade Structuring, Options & Derivatives Strategy, Execution Quality, Position Monitoring, Financial Planning, Behavioural Coaching, Post-Trade Analysis. These are the agents that make the app store worth using — the unscouted frontier. |
-| 3.1 | 2026-04-15 | 3 new votes (nava 5★, vouched 5★, alomana 5★) — all scout finds validated | Tax Optimisation gap partially resolved: Alomana 5★ confirms portfolio-integrated tax intelligence is thesis-aligned. Agent Payment Rails strengthened: Nava 5★ (2nd upvote in category). Coverage audit reveals 12/20 thesis categories have 0 pipeline companies. Specialist agent scouting now mandatory. |
-| 3.2 | 2026-04-15 | European geographic rebalance | Pipeline was 61% US vs 24% EU despite thesis stating "Europe preferred". ~30 European-focused and multilingual search queries added (German, French, Spanish). European accelerators/VCs added to monitoring (Forge, EQT, Seedcamp, Earlybird, Ada Ventures). European regulator monitoring expanded (BaFin, ESMA, DORA-native, PSD3/FiDA). Geography scoring bonus added: +5 points for European HQ. US not excluded — just ensuring Europe is properly represented in pipeline. |
+| 2.2 | 2026-04-17 | Cycle 3 roll-up: 8 new votes processed (53→61), 2 new companies scouted (Alinia, specialist-agent trio confirmation), eToro App Store launch | S1 (Research & Signal Intelligence) validated at 100% hit rate (agentsmyth/serafis/kimpton-ai all 5★); Dispute Resolution upgraded from "unsolved" to "partially addressed" (Mount 5★, Klaimee 4★); Overmind archived — AI Safety gap reopened; Audit & Explainability gets first entry (Alinia); "agent exposure" preference emerging; European preference reinforced ("find things like this in the EU?"); eToro App Store added as dual validation/compression signal; specialist agent desert documented as structural S2–S9 finding |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
