@@ -335,8 +335,8 @@
     {
       "gap": "Personal Agent",
       "theme": "AI-Powered Advisor and Consumer Finance Agents",
-      "count": 5,
-      "companies": ["mine-moneygpt", "tendi", "unique-ai", "natural", "samaya"],
+      "count": 6,
+      "companies": ["mine-moneygpt", "tendi", "unique-ai", "natural", "samaya", "astor"],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
@@ -344,9 +344,10 @@
         {"name": "Multi-institution connectivity agents", "companies": ["tendi"], "status": "ongoing"},
         {"name": "Vertical agentic AI for wealth/asset management", "companies": ["unique-ai"], "status": "ongoing", "vote_signal": "4★"},
         {"name": "Agentic payment rails for consumers/SMBs", "companies": ["natural"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "AI research agents for investment professionals", "companies": ["samaya"], "status": "ongoing"}
+        {"name": "AI research agents for investment professionals", "companies": ["samaya"], "status": "ongoing"},
+        {"name": "Regulated retail AI investment advisor (RIA-licensed, brokerage-integrated, paying retail customers)", "companies": ["astor"], "status": "new", "vote_signal": "pending"}
       ],
-      "notes": "Unique AI 4★ ('maybe a little late for a chat') confirms late-Series A is borderline. Natural 4★ reinforces agent payment rails."
+      "notes": "Astor (YC W26, Monashees-led $5M seed) added 2026-04-27. First Personal Agent in pipeline to combine paying retail customers (~4,000 at $15–$40/mo), Series 65/RIA licensure, and brokerage integration. Architecturally a consumer chatbot today; regulatory surface is exactly what the app store's front-door layer needs. Score 69 reflects consumer-chatbot framing risk — re-rate up if Astor exposes an MCP server or agent-callable API. Founder pedigree strong: Bruno Koba (ex-Nubank/Monashees), Daniel Tulha (ex-Stripe/Robinhood)."
     },
     {
       "gap": "Personal Agent",
@@ -481,6 +482,19 @@
     }
   ],
   "emerging_cross_gap_themes": [
+    {
+      "theme": "YC W26 as Specialist-Agent Supply Source",
+      "status": "new — first cycle observation",
+      "companies": ["cohesion", "astor"],
+      "external_signals": [
+        "Cohesion (S1, YC W26) — agentic teammate for public-equities hedge funds, alt-data tracking",
+        "Astor (S-Front, YC W26 + Monashees $5M) — RIA-licensed retail AI investment advisor with paying customers",
+        "Both detected in the same 24-hour window (2026-04-27)",
+        "First cycle where a single accelerator batch produced multiple thesis-aligned specialist agents"
+      ],
+      "notes": "Validates the alt-sourcing hypothesis floated 2026-04-17: web-search may be exhausted for S2–S9, but accelerator-batch monitoring is productive. Recommendation: schedule a dedicated YC W26 batch sweep against S2–S9 vocabulary before next radar. If a third W26 specialist agent surfaces in the next sweep, this becomes a formal sourcing channel.",
+      "first_seen": "2026-04-27"
+    },
     {
       "theme": "European Agent Payment Rails Cluster",
       "status": "activating — 3 companies in 72 hours",
