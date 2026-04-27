@@ -1,6 +1,6 @@
 # Bene Gesserit — Search Terms
 
-*Last updated: 2026-04-17 | Revision: v4.0 — Full rebuild against thesis v2.2. Reflects the 11 specialist agent + 7 platform infrastructure taxonomy, S2–S11 specialist agent desert, AI Safety gap reopened (Overmind archived), S1 fully validated, Dispute Resolution partially addressed, eToro App Store launch.*
+*Last updated: 2026-04-27 (cycle 8 confirms v4.1) | Revision: v4.1 — Refresh against thesis v2.2 + 2026-04-27 weekly radar findings. Tightens orchestration/compliance vocabulary against internal-workflow noise, elevates accelerator-batch sweeps in response to YC W26 detection signal (Cohesion → S1, Astor → S-Front), adds "regulated retail agent front-door" sub-track, adds Okta for AI Agents (April 30 GA) as compression signal. Cycle 8 (afternoon orchestrator run) carries v4.1 forward unchanged — focuses scan effort on the Phase 0 blind spots (S3, S5, S6, S7, S8, S9, S10, Agent Monetisation) using accelerator + YC W26 vocabulary.*
 
 ---
 
@@ -16,11 +16,15 @@
 
 Exclude in queries where helpful: `-"internal workflow" -"back-office" -"finance department" -"CFO tools" -bookkeeping -accounting -"AP automation"`.
 
+**"Third-party agent" qualifier (NEW v4.1).** The 2026-04-27 radar identified that bare "agentic AI compliance" / "agent governance" queries continue surfacing internal-workflow false positives that the Hard Filter then rejects — wasted scan budget. Where a query targets governance, compliance, safety, or orchestration, append at least one of: `"third-party agent"`, `"external agent"`, `"agent marketplace"`, `"BYOA" OR "bring-your-own-agent"`, or `"agent ecosystem"`. The lema-ai 1★ note ("solutions that mitigate risk of third party agents") is the canonical phrasing.
+
 **Agents, not AI-models.** Agent-level governance, identity, and safety — not model interpretability, red-teaming, or jailbreak-resistance. Mindgard 2★ note ("AI, not agents") is the precedent.
 
 **Quality filter:** Skip roundups/listicles. Append `-list -roundup -"top 10" -"best AI"`. Prefer primary sources: press releases, funding announcements, founder interviews, IETF / Linux Foundation standards drafts.
 
 **Composability preference:** Favour startups exposing agent-callable APIs / MCP servers over dashboard-only products. Search signal: "MCP server", "agent-callable API", "agent SDK".
+
+**Accelerator-batch sweeps (PROMOTED v4.1).** The 2026-04-27 radar found that S2–S11 specialist agents are surfacing from YC W26 batches (Cohesion → S1, Astor → S-Front) rather than from web-search vocabulary. The structural-supply-side-desert framing was wrong: it's a *search-strategy* problem, not a market-supply problem. Run batch sweeps against YC W26, YC S26, EF, Antler, Techstars, and Mouro/Santander InnoVentures every scan — not just rotation.
 
 ---
 
@@ -28,9 +32,9 @@ Exclude in queries where helpful: `-"internal workflow" -"back-office" -"finance
 
 | Priority | Categories | Rationale |
 |---|---|---|
-| 🔴 EVERY SCAN | Pre-Trade Compliance, Audit & Explainability, AI Safety & Guardrails, Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10, S11) | Genuine market gaps (thesis) + Overmind archived + specialist desert confirmed structural |
-| 🟡 HIGH | Dispute Resolution & Agent Liability, Agent Monetisation, Personal Financial Agent (S-Front), Research & Signal Intelligence (European replacements) | Partially addressed; looking for better fits / European equivalents |
-| 🟠 MEDIUM | Agent Orchestration, Agent Authentication & Identity (KYA), Agent Payment Rails | Strong candidates in place (Jentic, Vouched, Nava) — better options may exist |
+| 🔴 EVERY SCAN | Pre-Trade Compliance, Audit & Explainability, AI Safety & Guardrails, Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10, S11), **Accelerator-Batch Sweeps (NEW)** | Genuine market gaps + accelerator batches confirmed primary sourcing path for S-categories |
+| 🟡 HIGH | Dispute Resolution & Agent Liability, Agent Monetisation, Personal Financial Agent (S-Front, **incl. Regulated-Retail-Front-Door sub-track**), Research & Signal Intelligence (European replacements) | Partially addressed; looking for better fits / European equivalents / new sub-shape |
+| 🟠 MEDIUM | Agent Orchestration, Agent Authentication & Identity (KYA), Agent Payment Rails | Strong candidates in place (Jentic, Vouched, Nava); Agent Orchestration 1/10 hit rate after Hard Filter — keep medium, don't elevate |
 | ⚪ MONITOR | Tax Optimisation (Alomana 5★), S1 incumbents (AgentSmyth/Serafis/Kimpton) | Confirmed match — watch for follow-on entries |
 
 ---
@@ -60,21 +64,23 @@ Use `site:` operators — historically the strongest producers of thesis-aligned
 
 Thesis anchor: "Agent checks suitability, concentration limits, restricted lists before every trade." Nobody is building this finserv-native. Hadrius (YC, SEC/FINRA native) is the reference.
 
-- `"pre-trade compliance" AI agent startup seed 2026`
-- `"suitability check" AI agent broker-dealer startup 2026`
+**v4.1 update:** Tightened with "third-party agent" / "external agent" qualifiers — the 2026-04-27 radar found bare compliance queries returned zero relevant signals while surfacing internal-workflow noise.
+
+- `"pre-trade compliance" "third-party agent" startup seed 2026`
+- `"suitability check" "external agent" broker-dealer startup 2026`
 - `"agent pre-trade" compliance SEC OR FINRA seed 2026`
-- `"restricted list" AI agent compliance startup 2026`
-- `"best execution" AI agent startup seed 2026`
-- `"investment adviser compliance" AI agent 2026`
+- `"restricted list" "third-party agent" compliance startup 2026`
+- `"best execution" "agent marketplace" startup seed 2026`
+- `"investment adviser compliance" "external agent" 2026`
 - `"concentration limits" AI agent portfolio seed 2026`
-- `"agentic compliance" broker-dealer startup 2026`
-- `"SEC compliance" AI agent seed OR "Series A" 2026 -"KYC" -"AML"`
-- `"FINRA compliance" AI agent startup 2026`
-- `"MiFID II" AI agent compliance startup 2026`
+- `"agentic compliance" broker-dealer "third-party" 2026`
+- `"SEC compliance" "agent ecosystem" seed OR "Series A" 2026 -"KYC" -"AML"`
+- `"FINRA compliance" "agent marketplace" startup 2026`
+- `"MiFID II" "third-party agent" compliance startup 2026`
 - `site:ycombinator.com "pre-trade" OR "investment adviser" AI`
 
 **Reference companies to track:** Hadrius, ValidMind (adjacent).
-**Negative filters:** `-"KYC-only" -"AML-only" -"tax filing" -"internal audit"`.
+**Negative filters:** `-"KYC-only" -"AML-only" -"tax filing" -"internal audit" -"internal workflow"`.
 
 ---
 
@@ -82,21 +88,23 @@ Thesis anchor: "Agent checks suitability, concentration limits, restricted lists
 
 Thesis anchor: "'Why did the agent do this?' — auditable, regulator-ready explanation." Alinia (Barcelona, Mouro/Santander) is the first entry. Need more, especially EU-based.
 
-- `"AI agent audit trail" financial services startup seed 2026`
+**v4.1 update:** Added "third-party" / "external agent" qualifiers; removed bare "agent observability" (was producing devops noise).
+
+- `"AI agent audit trail" "third-party agent" financial services seed 2026`
 - `"agent explainability" fintech OR broker-dealer startup 2026`
-- `"regulator-ready AI" audit agent seed 2026`
+- `"regulator-ready AI" "external agent" audit seed 2026`
 - `"AI agent reasoning log" compliance startup 2026`
 - `"agentic decision audit" seed OR pre-seed 2026`
 - `"AI decision explainability" investment OR brokerage 2026`
 - `"backend compliance controller" AI agent seed 2026`
 - `"AI provenance" financial services startup 2026`
-- `"LLM audit" regulated industry startup seed 2026`
-- `"agent observability" fintech seed OR Series A 2026`
-- `"EU AI Act" explainability startup seed 2026`
+- `"LLM audit" regulated industry "third-party" startup 2026`
+- `"agent observability" finserv OR brokerage seed 2026`
+- `"EU AI Act" explainability "agent marketplace" startup 2026`
 - `site:eu-startups.com "AI audit" OR "explainability" fintech`
 
 **Reference companies to track:** Alinia, ValidMind.
-**Negative filters:** `-"model interpretability" -"ML explainability research"` (want agent-level, not model-level).
+**Negative filters:** `-"model interpretability" -"ML explainability research" -"DevOps observability"` (want agent-level, not model-level or infra-level).
 
 ---
 
@@ -104,37 +112,39 @@ Thesis anchor: "'Why did the agent do this?' — auditable, regulator-ready expl
 
 Thesis anchor: Overmind archived 2026-04-14 ("They aren't interested in participating"). Manifold (5★) and Kai (4★) provide partial coverage. Actively scouting for agent-specific (not model-level) safety companies, European preferred.
 
-- `"AI agent guardrails" financial services seed 2026`
-- `"agent supervision" fintech OR broker startup 2026`
-- `"agent behaviour monitoring" seed OR pre-seed 2026`
-- `"agent boundary enforcement" startup 2026`
-- `"runtime agent safety" fintech seed 2026`
-- `"autonomous agent risk" controls startup 2026`
-- `"agent deviation detection" seed 2026`
-- `"multi-agent security" finserv startup seed 2026`
-- `"agent guardrail" European OR UK seed 2026`
-- `"AI control plane" agent finserv seed 2026`
+**v4.1 update:** Strict "third-party / external agent" qualifier on every query. Generic "AI safety" queries removed (commoditised post-acquisition wave; produced 0 thesis-aligned candidates in 2026-04-20 → 2026-04-27 window).
+
+- `"AI agent guardrails" "third-party agent" financial services seed 2026`
+- `"agent supervision" "external agent" fintech OR broker startup 2026`
+- `"agent behaviour monitoring" "agent marketplace" seed 2026`
+- `"agent boundary enforcement" "third-party" startup 2026`
+- `"runtime agent safety" fintech "third-party agent" seed 2026`
+- `"autonomous agent risk" "external agent" controls startup 2026`
+- `"agent deviation detection" "agent ecosystem" seed 2026`
+- `"multi-agent security" finserv "BYOA" startup seed 2026`
+- `"agent guardrail" European OR UK "third-party" seed 2026`
+- `"AI control plane" "external agent" finserv seed 2026`
 - `site:sifted.eu "AI safety" OR "agent governance" fintech`
-- `"agentic runtime" governance seed OR "Series A" 2026`
+- `"agentic runtime" governance "third-party agent" seed OR "Series A" 2026`
 
 **Reference companies to track:** Manifold, Kai, Keycard, Resistant AI, Trent AI.
-**Negative filters:** `-"model red-teaming" -"jailbreak" -"LLM alignment research" -"AI interpretability"` (Mindgard/Goodfire lesson: AI ≠ agents).
+**Negative filters:** `-"model red-teaming" -"jailbreak" -"LLM alignment research" -"AI interpretability" -"internal workflow"` (Mindgard/Goodfire lesson: AI ≠ agents).
 
 ---
 
-## Specialist Agent Desert — S2–S11 *(Structural gap, two cycles with zero results)*
+## Specialist Agent Desert — S2–S11 *(Web-search-exhausted, ACCELERATOR-BATCH-DISCOVERABLE)*
 
-Web search exhausted for these categories. Continue attempting but supplement with alt-sourcing (Crunchbase/PitchBook mining, YC/Antler/EF batch reviews, academic spinout tracking, fintech pivots). Pre-seed and research-stage criteria may be appropriate here.
+**v4.1 reframing.** The 2026-04-27 radar revised the hypothesis: S2–S11 are not a structural market-supply gap, they're a *search-strategy* gap. Both new specialist agents detected this week (Cohesion → S1, Astor → S-Front) came from YC W26 batches, not Crunchbase / web search. Web-search queries here are kept as a low-yield rotation; the **Accelerator-Batch Sweeps section below is now the primary path** for these categories.
 
 ### S2 — Portfolio Construction & Risk Agent
 
-- `"AI portfolio construction" agent startup seed 2026`
+- `"AI portfolio construction" "third-party agent" startup seed 2026`
 - `"factor exposure agent" investment startup 2026`
-- `"portfolio risk AI agent" seed OR pre-seed 2026`
+- `"portfolio risk AI agent" "external" seed OR pre-seed 2026`
 - `"correlation modelling agent" finserv startup 2026`
 - `"position sizing AI" Kelly OR risk-budget seed 2026`
 - `"scenario analysis" AI agent portfolio startup 2026`
-- `"rebalancing agent" investment startup seed 2026`
+- `"rebalancing agent" "agent-callable" investment seed 2026`
 - `"agent-callable portfolio API" startup 2026`
 - `site:arxiv.org "agent portfolio construction" 2026`
 
@@ -203,15 +213,47 @@ Web search exhausted for these categories. Continue attempting but supplement wi
 
 Covered by S10 queries; monitor for dedicated learning-loop startups.
 
-**Alt-sourcing queries (all S-categories):**
-- `site:ycombinator.com/companies "investment" OR "trading" AI agent`
-- `site:crunchbase.com "AI agent" investing pre-seed 2026`
-- `site:pitchbook.com "agent-callable" fintech seed 2026`
-- `"Antler" OR "Entrepreneur First" investment AI agent 2026`
-- `"academic spinout" AI agent investing 2026`
-- `"fintech pivot" AI agent investing seed 2026`
+**Negative filters for S-category queries:** `-"hedge fund internal" -"portfolio manager tool" -"trader productivity" -"back-office" -"CIO dashboard"`.
 
-**Negative filters for S-category queries:** `-"hedge fund internal" -"portfolio manager tool" -"trader productivity" -"back-office"`.
+---
+
+## Accelerator-Batch Sweeps *(PROMOTED v4.1 — primary path for S2–S11 + S-Front)*
+
+The 2026-04-27 radar identified that web-search exhaustion is being broken by accelerator batches. Run these every scan, not on rotation. Both new entries this week (Cohesion, Astor) came from YC W26 batch surveillance. Treat each accelerator's most recent batch as a list to walk — pull ALL fintech / AI-agent / investing companies, score each against thesis.
+
+**YC (highest yield this cycle):**
+- `site:ycombinator.com/companies "W26" investment OR trading OR brokerage`
+- `site:ycombinator.com/companies "W26" "AI agent" OR "agentic" wealth`
+- `site:ycombinator.com/companies "W26" portfolio OR options OR execution`
+- `site:ycombinator.com/companies "W26" "tax" OR "compliance" agent`
+- `site:ycombinator.com/companies "S26" investment OR trading agent`
+- `site:ycombinator.com/companies "S25" "AI agent" finance`
+- `"YC W26" launch finance OR investing OR brokerage agent`
+- `"YC S26" launch finance OR investing AI agent`
+
+**Entrepreneur First (London/Berlin/Paris):**
+- `"Entrepreneur First" "AI agent" finance OR investing 2026`
+- `"EF cohort" 2026 fintech OR investing agent`
+- `site:joinef.com fintech OR investing AI agent 2026`
+
+**Antler:**
+- `"Antler" "AI agent" finance OR investing seed 2026`
+- `"Antler London" OR "Antler Amsterdam" fintech AI agent 2026`
+- `site:antler.co fintech AI agent 2026`
+
+**Techstars / Plug and Play / Tenity:**
+- `"Techstars" agentic AI fintech 2026 cohort`
+- `"Plug and Play" AI agent investing 2026`
+- `"Tenity" Zurich AI agent fintech 2026`
+
+**Strategic-VC batch trackers (Mouro, Ribbit, Anthemis, Speedinvest):**
+- `"Mouro Capital" OR "Santander InnoVentures" AI agent 2026 portfolio`
+- `"Ribbit Capital" agent seed 2026 portfolio`
+- `"Anthemis" AI agent fintech seed 2026 portfolio`
+- `"Speedinvest" AI agent finserv 2026 portfolio`
+- `"LocalGlobe" OR "Phoenix Court" AI agent fintech 2026`
+
+**Action note:** When walking these, score each candidate against the 11-specialist + 7-platform taxonomy explicitly. Specialist agents are typically 2–4 person teams, pre-seed to seed, tend NOT to use the term "agentic" in batch summaries — search by domain (portfolio, options, execution, tax, planning, behavioural) instead.
 
 ---
 
@@ -257,9 +299,13 @@ Thesis anchor: "How each specialist agent gets paid — results-based billing, r
 
 ---
 
-## Personal Financial Agent *(S-Front — Partial coverage)*
+## Personal Financial Agent *(S-Front — Partial coverage; new sub-track v4.1)*
 
 Thesis anchor: The front door. Mistral (infrastructure only), Finley AI (FCA spotlight), Arta Finance (US+Singapore) are partials. No European startup building an agent-callable personal financial agent specifically — regulation makes it hard to ship fast.
+
+**v4.1 sub-track: "Regulated-Retail Front-Door."** Astor (YC W26, 2026-04-27 detection) combines retail consumer + RIA registration + brokerage integration in a single shape — distinct from institutional-facing personal agents (Mistral) and from BYOA platforms (eToro). If a second Astor-shaped company surfaces, formally split this as its own sub-category. Until then, track via dedicated queries below.
+
+**Core S-Front queries:**
 
 - `"AI personal finance agent" pre-seed OR seed 2026`
 - `"agentic wealth assistant" Europe OR UK seed 2026`
@@ -272,14 +318,23 @@ Thesis anchor: The front door. Mistral (infrastructure only), Finley AI (FCA spo
 - `site:eu-startups.com personal finance AI agent 2026`
 - `"FCA sandbox" AI agent wealth 2026`
 
-**Reference companies to track:** Finley AI, Arta Finance, Mistral (infrastructure).
+**Regulated-Retail Front-Door sub-track (v4.1):**
+
+- `"RIA AI agent" retail consumer startup seed 2026`
+- `"registered investment adviser" AI agent retail seed 2026`
+- `"brokerage integration" AI agent consumer launch 2026`
+- `"retail wealth agent" RIA OR fiduciary startup 2026`
+- `"consumer RIA agent" seed OR pre-seed 2026`
+- `"Schwab" OR "Alpaca" OR "DriveWealth" AI agent integration 2026`
+
+**Reference companies to track:** Finley AI, Arta Finance, Mistral (infrastructure), Astor (YC W26 — sub-track archetype).
 **Negative filters:** `-"internal adviser tool" -"RIA back-office" -"wealth manager CRM"`.
 
 ---
 
 ## Research & Signal Intelligence — European Replacements *(S1 — validated US trio, need EU equivalents)*
 
-Thesis anchor: Serafis note — "Can we also find things like this in the EU?" AgentSmyth, Serafis, Kimpton AI all US-based. Actively seeking European equivalents.
+Thesis anchor: Serafis note — "Can we also find things like this in the EU?" AgentSmyth, Serafis, Kimpton AI all US-based. Cohesion (YC W26, 2026-04-27 detection) is also US — search must continue to bias EU.
 
 - `"alternative data AI agent" fintech seed Europe 2026`
 - `"AI investment research agent" Europe OR UK seed 2026`
@@ -293,7 +348,7 @@ Thesis anchor: Serafis note — "Can we also find things like this in the EU?" A
 - `site:sifted.eu AI investment research agent 2026`
 - `site:eu-startups.com alternative data agent 2026`
 
-**Reference companies to track:** AgentSmyth, Serafis, Kimpton AI (US — for comparison).
+**Reference companies to track:** AgentSmyth, Serafis, Kimpton AI, Cohesion (US — for comparison).
 **Negative filters:** `-"internal research tool" -"analyst productivity"`.
 
 ---
@@ -302,27 +357,31 @@ Thesis anchor: Serafis note — "Can we also find things like this in the EU?" A
 
 ## Agent Orchestration *(Gap #1 — Jentic POC partner, BG Score 95)*
 
-- `"multi-agent orchestration" financial services seed 2026`
-- `"agentic workflow" regulated industry seed 2026`
-- `"governed agent execution" startup 2026`
-- `"agent routing" finserv startup seed 2026`
-- `"agentic sandbox" compliance startup 2026`
+**v4.1 note:** 23 detected, 1/10 hit rate after Hard Filter. The 2026-04-27 radar recommended keeping at 🟠 (not elevating); accounting/RPA negative filters are doing the right work. Tightened with "third-party agent" qualifier to suppress remaining noise.
+
+- `"multi-agent orchestration" "third-party agent" financial services seed 2026`
+- `"agentic workflow" "external agent" regulated industry seed 2026`
+- `"governed agent execution" "agent marketplace" startup 2026`
+- `"agent routing" finserv "third-party" startup seed 2026`
+- `"agentic sandbox" compliance "BYOA" startup 2026`
 - `"Arazzo workflow" OR "OpenAPI agent" startup 2026`
 - `"agent credential management" finserv seed 2026`
 - `site:ycombinator.com agent orchestration financial`
 
 **Reference companies to track:** Jentic (POC), Pluvo, Gradient Labs.
-**Negative filters:** `-"accounting automation" -"AP automation" -"RPA" -"ETL"` (accounting stacks 2★ lesson; Hard Filter applies).
+**Negative filters:** `-"accounting automation" -"AP automation" -"RPA" -"ETL" -"internal workflow"` (accounting stacks 2★ lesson; Hard Filter applies).
 
 ---
 
 ## Agent Authentication & Identity (KYA) *(Gap #4 — Vouched 5★ KYA platform)*
 
-- `"Know Your Agent" KYA startup seed 2026`
-- `"agent identity" finserv startup seed 2026`
-- `"MCP identity" OR "agent credentialing" startup 2026`
+**v4.1 note:** Okta for AI Agents goes GA April 30 — see Competitive Intelligence track. Doesn't displace Vouched (finserv-specific) but compresses the window for non-finserv-specific agent-auth startups. Bias queries toward finserv specificity.
+
+- `"Know Your Agent" KYA "financial services" startup seed 2026`
+- `"agent identity" finserv OR brokerage startup seed 2026`
+- `"MCP identity" OR "agent credentialing" finserv startup 2026`
 - `"non-human identity" financial services seed 2026`
-- `"agent authentication" regulated industry startup 2026`
+- `"agent authentication" regulated industry "third-party" 2026`
 - `"agent permissions" finserv seed OR "Series A" 2026`
 - `"IETF aiagent-auth" startup 2026`
 - `"agent IAM" finserv seed 2026`
@@ -386,6 +445,10 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 
 ## Competitive Intelligence (thesis compression signals)
 
+**v4.1 additions:** Okta for AI Agents (April 30 GA), eToro App Store ongoing coverage.
+
+- `"Okta for AI Agents" launch OR GA 2026`
+- `"Okta" "Identity for AI Agents" enterprise 2026`
 - `eToro "App Store" OR "Agent Portfolios" developer 2026`
 - `Public.com "Agentic Brokerage" agents 2026`
 - `"JPMorgan" agent compliance platform 2026`
@@ -394,15 +457,15 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 - `"Santander" AI agent launch 2026`
 - `"OpenAI" acquires fintech OR finserv 2026`
 - `"Arta Finance" OR "Wealth as a Service" partner bank 2026`
+- `"Ping Identity" "Identity for AI" enterprise 2026`
 
 ## YC / Accelerator / Early-Stage Circuit
+
+*See "Accelerator-Batch Sweeps" above for the primary, every-scan version. Queries below are kept as legacy rotation.*
 
 - `site:ycombinator.com/companies "AI agent" fintech`
 - `"YC W26" OR "Y Combinator W26" finance agent`
 - `"YC S26" OR "Y Combinator S26" AI agent finance`
-- `"Entrepreneur First" "AI agent" fintech 2026`
-- `"Antler" "AI agent" fintech 2026`
-- `"Techstars" agentic AI fintech 2026`
 - `"a16z" OR "Andreessen Horowitz" AI agent fintech seed 2026`
 - `"Mouro Capital" OR "Santander InnoVentures" AI agent 2026`
 - `"Ribbit Capital" agent seed 2026`
@@ -439,6 +502,7 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 -"tax filing" -"tax return" -"e-filing" -"tax compliance"
 -"KYC-only" -"AML-only"
 -"model interpretability" -"jailbreak" -"LLM alignment research"
+-"DevOps observability" -"infra observability"
 -list -roundup -"top 10" -"best AI"
 -"Series B" -"Series C" -"Series D"
 ```
@@ -447,7 +511,8 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 
 ## Change Log
 
-- **v4.0 (2026-04-17)** — Full rebuild against thesis v2.2. New taxonomy: 11 specialist agent categories (S-Front + S1–S10) + 7 platform infrastructure categories. Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10) elevated to 🔴 EVERY SCAN with alt-sourcing queries. AI Safety re-elevated (Overmind archived). Audit & Explainability priority raised after Alinia entry. Pre-Trade Compliance remains highest-gap. European-equivalent queries added for S1 (Serafis feedback). Composability / agent-callable API signal prioritised. Master negative filter consolidated from hard-filter and soft-factor learnings (62 vote corpus).
+- **v4.1 (2026-04-27)** — Refresh against thesis v2.2 + 2026-04-27 weekly radar findings. (1) Strict "third-party agent" / "external agent" / "agent marketplace" / "BYOA" qualifiers added across Pre-Trade Compliance, Audit & Explainability, AI Safety, Orchestration, KYA — addresses internal-workflow false-positive noise the Hard Filter was wasting cycles rejecting. (2) **Accelerator-Batch Sweeps** promoted from rotation to first-class 🔴 EVERY SCAN section in response to YC W26 detection signal (Cohesion → S1, Astor → S-Front) — the Specialist Agent Desert is reframed from structural-supply problem to search-strategy problem. (3) **Regulated-Retail Front-Door** sub-track added under Personal Financial Agent capturing the Astor archetype (retail consumer + RIA + brokerage integration). (4) Okta for AI Agents (April 30 GA) and Ping Identity added to Competitive Intelligence as compression signals for KYA. (5) Generic "AI safety" queries removed (commoditised post-acquisition wave; produced zero thesis-aligned candidates 2026-04-20 → 2026-04-27). (6) "agent observability" tightened with finserv qualifier to suppress DevOps noise; `-"DevOps observability"` added to master negative filter. (7) Cohesion added to S1 reference companies. Supabase `bg_thesis_feedback` query unavailable (connection timeout); no new search-terms-specific feedback to incorporate.
+- v4.0 (2026-04-17) — Full rebuild against thesis v2.2. New taxonomy: 11 specialist agent categories (S-Front + S1–S10) + 7 platform infrastructure categories. Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10) elevated to 🔴 EVERY SCAN with alt-sourcing queries. AI Safety re-elevated (Overmind archived). Audit & Explainability priority raised after Alinia entry. Pre-Trade Compliance remains highest-gap. European-equivalent queries added for S1 (Serafis feedback). Composability / agent-callable API signal prioritised. Master negative filter consolidated from hard-filter and soft-factor learnings (62 vote corpus).
 - v3.2 (2026-04-15) — AI Safety re-elevated to HIGH after Overmind decline.
 - v3.0–v3.1 (2026-04-14/15) — Expanded to 21 categories, specialist-agent categories added.
 - v2 (2026-04-14) — External/third-party qualifiers added, stage qualifiers added, orchestration negative filters.
