@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Apr 18, 2026 Run</title>
+<meta content="Signals, startups, and research from the Apr 18, 2026 agentic AI radar run." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================ */
+    /* SITE NAVIGATION */
+    /* ============================================================ */
+    .site-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .site-nav-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin: 0 4px;
+    }
+
+    /* ============================================================ */
+    /* HEADER                                                       */
+    /* ============================================================ */
+    header {
+      padding: 32px 0 24px;
+      background: var(--bg-page);
+    }
+
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .edition-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      background: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    /* ============================================================ */
+    /* SECTIONS                                                     */
+    /* ============================================================ */
+    section {
+      padding: 44px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+    }
+
+    .section-header .count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ============================================================ */
+    /* TAGS                                                         */
+    /* ============================================================ */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .tag.gap {
+      background: var(--brown-light);
+      color: var(--brown-dark);
+    }
+
+    .tag.reinforces {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .tag.challenges {
+      background: var(--coral-light);
+      color: var(--coral);
+    }
+
+    .tag.new-signal {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .tag.market-signal {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .tag.stage {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .tag.geo {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================ */
+    /* BRIEFING                                                     */
+    /* ============================================================ */
+    .briefing-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .briefing-item:last-child { border-bottom: none; }
+
+    .briefing-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .briefing-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .briefing-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .briefing-item .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+    }
+
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    /* ============================================================ */
+    /* STARTUP CARDS                                                */
+    /* ============================================================ */
+    .startup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .startup-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: var(--border-strong);
+    }
+
+    .startup-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .startup-top h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    .score-badge {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+
+    .score-badge .num {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .score-badge .of {
+      font-size: 0.5rem;
+      color: inherit;
+      opacity: 0.6;
+      margin-top: 1px;
+    }
+
+    .score-badge.high {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+    }
+
+    .score-badge.mid {
+      background: var(--amber-light);
+      color: var(--amber);
+    }
+
+    .score-badge.low {
+      background: #EEEDEB;
+      color: var(--text-muted);
+    }
+
+    .startup-oneliner {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .startup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .startup-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .detail-block {}
+
+    .detail-block .detail-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .detail-block .detail-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .thesis-note {
+      background: var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+
+    .thesis-note .note-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+
+    .thesis-note p {
+      font-size: 0.88rem;
+      color: var(--accent-dark);
+      line-height: 1.5;
+    }
+
+    .score-bars {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+    }
+
+    .bar-track {
+      width: 100%;
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--amber);
+      border-radius: 3px;
+      transition: width 0.2s;
+    }
+
+    .bar-val {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.54rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    /* Evidence */
+    .startup-evidence {
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: var(--brown-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .evidence-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .evidence-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .evidence-links li a {
+      font-size: 12px;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .evidence-links li a:hover { text-decoration: underline; }
+
+    /* ============================================================ */
+    /* VOTING                                                       */
+    /* ============================================================ */
+    .vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .star {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: var(--border-strong);
+      padding: 0 1px;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+
+    .star:hover {
+      color: var(--amber);
+      transform: scale(1.1);
+    }
+
+    .star.active {
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .note-toggle {
+      background: none;
+      border: none;
+      color: var(--brown);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .note-toggle:hover { color: var(--brown-dark); }
+
+    .note-area {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .note-area textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .note-area textarea:focus {
+      outline: none;
+      border-color: var(--brown);
+    }
+
+    .vote-badge {
+      flex-shrink: 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .vote-status {
+      font-size: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: 8px;
+    }
+
+    .vote-status.saving { color: var(--blue); }
+    .vote-status.saved { color: var(--accent-dark); }
+    .vote-status.error { color: var(--coral); }
+
+    .followup-btn, .archive-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--brown);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .followup-btn:hover, .archive-btn:hover {
+      border-color: var(--brown);
+      color: var(--brown-dark);
+    }
+    .followup-btn.active {
+      background: var(--amber-light);
+      border-color: var(--amber);
+      color: var(--amber);
+      font-weight: 600;
+    }
+    .archive-btn.active {
+      background: var(--text-heading);
+      border-color: var(--text-heading);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .startup-card.followup {
+      border-left: 3px solid var(--amber);
+    }
+
+    .startup-card.archived {
+      opacity: 0.5;
+    }
+
+    .btn-secondary {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    .vote-attr {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+    }
+
+    /* ============================================================ */
+    /* FOOTER                                                       */
+    /* ============================================================ */
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ============================================================ */
+    /* SETTINGS MODAL                                               */
+    /* ============================================================ */
+    #settings-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+
+    .settings-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .settings-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    #settings-msg {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .settings-form-group {
+      margin-bottom: 20px;
+    }
+
+    .settings-form-group label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .settings-form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .settings-form-group input:focus {
+      outline: none;
+      border-color: var(--brown);
+    }
+
+    .settings-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .settings-buttons button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    #btn-save-settings {
+      background: var(--text-heading);
+      border: 1px solid var(--text-heading);
+      color: #fff;
+    }
+
+    #btn-save-settings:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+    }
+
+    #btn-cancel-settings {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    #btn-cancel-settings:hover {
+      border-color: var(--brown);
+      color: var(--brown);
+    }
+
+    #settings-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+      padding: 8px;
+    }
+
+    #settings-btn:hover { color: var(--brown); }
+    #settings-btn.connected { color: var(--accent-dark); }
+
+    /* ============================================================ */
+    /* RESPONSIVE                                                   */
+    /* ============================================================ */
+    @media (max-width: 640px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 1.8rem; }
+      .startup-details { grid-template-columns: 1fr; }
+      .score-bars { flex-wrap: wrap; gap: 12px; }
+      .bar-item { min-width: calc(50% - 8px); }
+      .startup-card { padding: 20px; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .startup-card,
+    .briefing-item {
+      animation: slideUp 0.35s ease-out both;
+    }
+
+    .startup-card:nth-child(2) { animation-delay: 0.05s; }
+    .startup-card:nth-child(3) { animation-delay: 0.1s; }
+    .startup-card:nth-child(4) { animation-delay: 0.15s; }
+    .startup-card:nth-child(5) { animation-delay: 0.2s; }
+
+
+    /* ── Password Gate ── */
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="2026-04-17.html">← Apr 17</a>
+      <span class="site-nav-date">Apr 18, 2026</span>
+      <a class="site-nav-link active" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Bene Gesserit — Apr 18, 2026</h1>
+    <p>7 signals, 3 new startups. Capsule Security exits stealth ($7M, Tel Aviv) filling the gap Overmind left in AI Safety & Guardrails — runtime agent trust layer with zero-day vulns in Copilot Studio and Salesforce Agentforce, RSAC 2026 finalist. Spektr's $20M Series A for KYC/AML agents lands in the contested compliance sub-domain. Public.com's "Agentic Brokerage" move compresses the window for third-party specialist agents in S-Front categories — infrastructure layers and domain intelligence become the safer thesis position. Specialist agent desert continues: S2–S11 categories returned zero clean signals for the third consecutive scan.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Competitive Intelligence</h2>
+    </div>
+    <div id="briefing">
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">AI Safety & Guardrails (#2 — Reopened)</span>
+          <span class="tag new-signal">New Signal</span>
+        </div>
+        <h3>Capsule Security exits stealth with $7M runtime agent trust layer</h3>
+        <p>Israeli security startup Capsule Security (Tel Aviv, founded 2025) has emerged from stealth with $7M seed led by Lama Partners and Forgepoint Capital International to build a "runtime trust layer" for agentic AI. The platform enforces guardrails inside the execution path itself — the window between when an agent receives a prompt and when it acts — without requiring proxies, gateways, or SDKs. Concurrent with the launch, Capsule disclosed two zero-day vulnerabilities: ShareLeak in Microsoft Copilot Studio (CVE-2026-21520) and PipeLeak in Salesforce Agentforce, demonstrating deep embedding in the enterprise stacks regulated institutions actually deploy. Founded by ex-Unit 8200/F5 CEO and ex-Transmit Security CTO; advisory board includes Jim Routh, former CISO at multiple Fortune 500 financial enterprises. Named a finalist at RSAC 2026 accelerator out of ~1,000 startups. This is the strongest new AI Safety signal since Overmind was archived. New startup profile: capsule-security.</p>
+        <a class="source-link" href="https://siliconangle.com/2026/04/15/capsule-security-launches-7m-secure-ai-agents-runtime/" target="_blank">Capsule Security launches $7M — SiliconANGLE →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Compliance — KYC/KYB</span>
+          <span class="tag reinforces">Reinforces (contested sub-domain)</span>
+        </div>
+        <h3>Spektr raises $20M Series A for AI compliance agents (Copenhagen)</h3>
+        <p>Copenhagen-based Spektr raised $20M led by NEA (with Northzone, Seedcamp) to deploy networks of specialised AI agents automating KYC/KYB processes for Tier 1 financial institutions, with Santander Leasing as a named client. The founders previously built HelloFlow and sold it to Trulioo for $50M+ in under two years. The sub-domain (KYC/AML automation) has been explicitly penalised in the scoring model — bretton-ai (3★) and vivox-ai (2★) established the precedent — though Spektr's agentic architecture and high-calibre team are notable. The round reinforces that institutional compliance automation is extremely well-funded without yet providing the external agent governance layer the thesis calls for. New startup profile: spektr.</p>
+        <a class="source-link" href="https://tech.eu/2026/04/16/spektr-raises-20m-series-a-to-streamline-financial-compliance/" target="_blank">Spektr raises $20M Series A — Tech.eu →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Specialist Agent — Personal Financial / S-Front</span>
+          <span class="tag challenges">Challenges (incumbent action)</span>
+        </div>
+        <h3>Public.com becomes "first Agentic Brokerage" with AI portfolio agents</h3>
+        <p>Public, the US retail investment platform, began rolling out Agents on March 31, 2026, letting investors define intent-based portfolio strategies that AI agents carry out autonomously. Rather than clicking to place trades, users specify conditions, triggers, and strategies, and agents execute continuously. Public is explicitly calling itself the "world's first Agentic Brokerage." This is a meaningful competitive intelligence signal: incumbents are building the front-end specialist agent experience themselves, compressing the window for third-party specialist agents to establish distribution. The thesis may need to focus even more sharply on infrastructure layers (safety, audit, identity, payment rails) and on specialist domain intelligence that brokerages will still need to buy rather than build (research, options structuring, tax optimisation).</p>
+        <a class="source-link" href="https://www.prnewswire.com/news-releases/public-becomes-the-first-brokerage-to-introduce-ai-agents-for-your-portfolio-302729050.html" target="_blank">Public becomes first brokerage with AI agents — PRNewswire →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Specialist Agent — Commercial Lending</span>
+          <span class="tag reinforces">Reinforces (incumbent validation)</span>
+        </div>
+        <h3>nCino unveils AI credit analyst agent for commercial lending</h3>
+        <p>nCino launched its "Analyst Digital Partner," a role-based AI agent for credit professionals managing relationship reviews and portfolio risk, built on 14 years of banking-specific lending data. Early institutions report 60–70% effort reduction on credit analysis tasks. Not a startup signal — nCino is a NASDAQ-listed company — but a strong reinforcing signal that specialist lending AI agents are delivering measurable results in production at financial institutions. This validates that the commercial credit analysis category (adjacent to S2 Portfolio Construction) is moving from pilot to production at scale. No startup has yet captured this as an independent agent marketplace offering.</p>
+        <a class="source-link" href="https://fintech.global/2026/04/16/ncino-unveils-ai-credit-analyst-agent-to-transform-commercial-lending/" target="_blank">nCino AI credit analyst agent — Fintech.global →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Agent Payment Rails (#11b)</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>Lobster.cash integrates Mastercard Agent Pay for AI agent purchases</h3>
+        <p>Lobster.cash, an AI agent payment solution built by Crossmint (already in the pipeline), announced integration with Mastercard Agent Pay and Verifiable Intent. AI agents can now make secure purchases using consumers' existing Mastercard cards, with Mastercard Agent Pay already live at Santander, Commonwealth Bank of Australia, DBS, and UOB. This is the Crossmint product story rather than a new company — reinforces that agentic payment rails are accelerating into production at major global banks. Nava's escrow model and Crossmint/Lobster.cash's card-based model represent two distinct architectures for the same payment authorisation problem; the card rails approach is now live in production at Tier 1 institutions.</p>
+        <a class="source-link" href="https://fintech.global/2026/04/16/lobster-cash-partners-with-mastercard-for-ai-agent-payments/" target="_blank">Lobster.cash + Mastercard Agent Pay — Fintech.global →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Agent Orchestration (#1)</span>
+          <span class="tag reinforces">Reinforces (likely Hard Filter candidate)</span>
+        </div>
+        <h3>Primitive launches AI agent OS for regulated financial institutions</h3>
+        <p>Derek White (ex-BBVA Global Head of Client Solutions) launched Primitive, an AI agent operating system purpose-built for regulated financial institutions, with seed funding from Fin Capital and Pelion Venture Partners. The platform offers pre-built agent templates across commercial lending, risk and compliance, and regulatory oversight, helping banks move "from fragmented pilots to governed production-scale deployment." The product appears institution-native: banks deploy Primitive to run their own agents, not to participate in a third-party agent marketplace. The Hard Filter precedent (obin-ai 1★, sycamore 1★) applies — the decisive test is whether Primitive governs external/third-party agents or the institution's own. Based on current positioning, this appears to be the latter. Notable as a competitive signal: experienced bank executives are moving into agentic infrastructure, suggesting the category is maturing.</p>
+        <a class="source-link" href="https://www.finextra.com/newsarticle/47576/banking-and-fintech-vet-derek-white-launches-primitive-ai-agent-operating-system" target="_blank">Primitive AI agent OS launch — Finextra →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Specialist Agent — Consumer Lending (S-adjacent)</span>
+          <span class="tag new-signal">New Signal (boundary-ambiguous)</span>
+        </div>
+        <h3>Veritus raises $10.1M to deploy voice AI agents for consumer lenders</h3>
+        <p>YC S25 startup Veritus ($10.1M seed, Crosslink + Threshold + Emergence Capital) builds voice-first AI agents that handle regulated borrower conversations across phone, text, email, and chat for consumer lenders. Agents are live with fintechs, a major servicer, and a UK bank, handling application-funnel conversion and early-stage delinquency management. The boundary question: Veritus agents are customer-facing (external borrowers) but deployed exclusively by and for institutions to serve the institution's commercial objectives (conversion, debt collection). This maps closer to institutional workflow than to a third-party specialist agent in an open marketplace — but the regulated, voice-first, external-borrower-interaction angle is novel. Profile created for review. New startup profile: veritus.</p>
+        <a class="source-link" href="https://www.fintechfutures.com/venture-capital-funding/exclusive-veritus-raises-10-1m-seed-funding-to-power-voice-first-ai-agents-for-lenders" target="_blank">Veritus $10.1M seed — FintechFutures →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>New Startups</h2>
+      <span class="count">3 new</span>
+    </div>
+    <div id="startup-cards"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Research</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new research papers detected in this run.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar.</p>
+    <p>You can rate and follow startups by setting your name in the settings panel (gear icon, top right). Your votes are saved and help identify which companies merit deeper diligence.</p>
+  </div>
+</footer>
+
+<div id="settings-modal" hidden="" style="display:none">
+  <div class="settings-panel">
+    <h2>Settings</h2>
+    <div id="settings-msg"></div>
+    <div class="settings-form-group">
+      <label for="voter-name-input">Your name</label>
+      <input id="voter-name-input" type="text" placeholder="e.g., Alex" />
+    </div>
+    <div class="settings-buttons">
+      <button id="btn-save-settings">Save</button>
+      <button id="btn-cancel-settings">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ────────────────────────────────────────────────────────────── */
+/* STARTUP DATA FOR THIS RUN (Apr 18, 2026) */
+const startups = [
+  {
+    slug: "capsule-security",
+    name: "Capsule Security",
+    url: "https://capsule.security",
+    oneliner: "Runtime trust layer for agentic AI that monitors and enforces guardrails on agent behaviour in real time — stopping agents from being manipulated, misbehaving, or silently exfiltrating data. $7M seed, Tel Aviv. RSAC 2026 finalist.",
+    gap: "AI Safety & Guardrails",
+    stage: "Seed — $7M",
+    geo: "Tel Aviv, Israel",
+    finserv: "Advisory board includes Jim Routh, former CISO at multiple Fortune 500 financial services enterprises (MassMutual, CVS Health, JPMorgan among listed tenures). Named one of six finalists in the CrowdStrike/AWS/NVIDIA Startup Accelerator at RSA 2026, beating ~1,000 startups. Disclosed zero-day vulnerabilities in Microsoft Copilot Studio (CVE-2026-21520) and Salesforce Agentforce — proving they are embedded in the enterprise stacks financial institutions actually deploy.",
+    team: "Naor Paz (CEO) — ex-F5, Unit 8200 (elite Israeli intelligence unit). Lidan Hazout (CTO) — former VP R&D at Securedtouch and Transmit Security (identity/fraud security background). Backed by Lama Partners and Forgepoint Capital International (specialist cybersecurity VC).",
+    thesis: "Overmind was archived in April 2026, reopening the AI Safety gap. Capsule addresses exactly the same need: supervised agent operation where the platform enforces controls between the moment an agent receives a prompt and the moment it acts. Unlike model-level AI safety, Capsule is explicitly agent-level — monitoring multi-step execution, enforcing guardrails, preventing manipulation. The runtime gap (prompt → action window) is precisely where financial agents are most exposed. 'No proxies, gateways or SDKs required' means low friction adoption — critical for regulated institutions.",
+    evidence: [
+      ["Capsule Security exits stealth with $7M — SiliconANGLE", "https://siliconangle.com/2026/04/15/capsule-security-launches-7m-secure-ai-agents-runtime/"],
+      ["BusinessWire announcement", "https://www.businesswire.com/news/home/20260415670902/en/Capsule-Security-Exits-Stealth-With-$7M-to-Stop-AI-Agents-From-Going-Rogue-at-Runtime"],
+      ["SecurityWeek coverage", "https://www.securityweek.com/capsule-security-emerges-from-stealth-with-7-million-in-funding/"]
+    ],
+    score: 89,
+    bars: {gap: [30, 35], finserv: [15, 25], stage: [19, 20], team: [16, 20]}
+  },
+  {
+    slug: "spektr",
+    name: "Spektr",
+    url: "https://www.spektr.com",
+    oneliner: "Networks of specialised AI agents automating KYC/KYB compliance — from onboarding through ongoing monitoring — for banks and Tier 1 financial institutions. $20M Series A led by NEA. Santander Leasing as named client.",
+    gap: "Compliance — KYC/KYB",
+    stage: "Series A — $20M",
+    geo: "Copenhagen, Denmark",
+    finserv: "Clients include Santander Leasing, Pleo, Phantom, Mercuryo, and major US marketplaces. The founders previously built HelloFlow, a digital onboarding startup sold to Trulioo (Canadian identity verification leader) in under two years for more than $50M — deeply inside the KYC ecosystem. Round backed by NEA (lead), Northzone, and Seedcamp.",
+    team: "Repeat founders with a successful exit into KYC infrastructure (HelloFlow → Trulioo). Backed by NEA (lead, Series A), Northzone, Seedcamp, and PSV Tech. European roots with clear US expansion ambition.",
+    thesis: "Spektr is building agentic AI specifically for the compliance workflows banks cannot avoid. The compliance gap has shown mixed results in the pipeline (complyance 5★ for differentiated approach, bretton-ai 3★ for generic KYC/AML focus). Spektr lands squarely in the KYC/AML subfocus that receives the explicit penalty. With a $20M Series A and Santander Leasing as a named client, it is a well-funded competitor in a contested space. The thesis wants agent-level compliance governance for external/third-party agents, not for verifying human customers. Score reflects KYC/AML penalty applied.",
+    evidence: [
+      ["Spektr raises $20M Series A — Tech.eu", "https://tech.eu/2026/04/16/spektr-raises-20m-series-a-to-streamline-financial-compliance/"],
+      ["Crunchbase profile", "https://news.crunchbase.com/venture/fintech-compliance-founders-20m-seriesa-spektr/"],
+      ["Spektr targets KYC bottleneck — Fintech.global", "https://fintech.global/2026/04/16/spektr-targets-kyc-bottleneck-with-20m-series-a-raise/"]
+    ],
+    score: 56,
+    bars: {gap: [20, 35], finserv: [22, 25], stage: [14, 20], team: [15, 20]}
+  },
+  {
+    slug: "veritus",
+    name: "Veritus",
+    url: "https://www.veritus.com",
+    oneliner: "Voice-first AI agents that handle regulated borrower conversations across phone, text, email, and chat — deployed by lenders for application-funnel conversion and early-stage delinquency management. $10.1M seed, YC S25.",
+    gap: "Specialist Agent — Consumer Lending",
+    stage: "Seed — $10.1M (YC S25)",
+    geo: "San Francisco, US",
+    finserv: "Live customers include fintechs, a major loan servicer, and a UK bank. YC S25 backed. Integration with lender loan-management systems. Handles regulated conversations (TCPA, FDCPA compliance implied). Funded by Crosslink, Threshold, Emergence Capital, and Surge Point.",
+    team: "Joshua March (CEO) — founder background in enterprise AI communications. David Schlesinger and Joey Stein — former Divvy Homes engineers (proptech/fintech DNA). Y Combinator S25 batch.",
+    thesis: "Veritus builds AI agents that lenders deploy to communicate with borrowers — converting applicants and engaging delinquent accounts. The key tension: the product is B2B-for-institutions, where the lender controls agents to serve its own commercial objectives. This maps closer to the institution's internal capability than to a third-party specialist agent in an open marketplace. Pace (1★) and Enfi established a pattern of caution around lending-specific institutional tools. ⚠️ BOUNDARY FLAG: warrants review before voting — does Veritus expose APIs that other agents in a marketplace can call, or is it a closed B2B platform?",
+    evidence: [
+      ["Veritus bags $10.1M seed — FintechFutures", "https://www.fintechfutures.com/venture-capital-funding/exclusive-veritus-raises-10-1m-seed-funding-to-power-voice-first-ai-agents-for-lenders"],
+      ["AI Insider coverage", "https://theaiinsider.tech/2026/02/11/veritus-secures-10-1m-seed-round-to-deploy-ai-agents-across-consumer-lending/"],
+      ["YC profile", "https://www.ycombinator.com/companies/veritus"]
+    ],
+    score: 52,
+    bars: {gap: [22, 35], finserv: [20, 25], stage: [18, 20], team: [14, 20]}
+  }
+];
+
+/* Render startup cards */
+function renderPipelineCards() {
+  const container = document.getElementById('startup-cards');
+  if (!container) return;
+  container.innerHTML = '';
+
+  startups.forEach(startup => {
+    const scoreClass = startup.score >= 75 ? 'high' : (startup.score >= 50 ? 'mid' : 'low');
+    const card = document.createElement('div');
+    card.className = 'startup-card';
+    card.id = `startup-${startup.slug}`;
+    card.innerHTML = `
+      <div class="startup-top">
+        <h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3>
+        <div class="score-badge ${scoreClass}">
+          <span class="num">${startup.score}</span>
+          <span class="of">/100</span>
+        </div>
+      </div>
+      <p class="startup-oneliner">${startup.oneliner}</p>
+      <div class="startup-tags">
+        <span class="tag gap">${startup.gap}</span>
+        <span class="tag stage">${startup.stage}</span>
+        <span class="tag geo">${startup.geo}</span>
+      </div>
+      <div class="startup-details">
+        <div class="detail-block">
+          <div class="detail-label">FinServ Signal</div>
+          <div class="detail-value">${startup.finserv}</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Team</div>
+          <div class="detail-value">${startup.team}</div>
+        </div>
+      </div>
+      <div class="thesis-note">
+        <div class="note-label">Why this matters</div>
+        <p>${startup.thesis}</p>
+      </div>
+      <div class="startup-evidence">
+        <div class="evidence-label">Evidence</div>
+        <ul class="evidence-links">
+          ${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}
+        </ul>
+      </div>
+      <div class="vote-row" data-slug="${startup.slug}">
+        <div class="stars">
+          <button class="star" data-val="1" title="1 star">★</button>
+          <button class="star" data-val="2" title="2 stars">★</button>
+          <button class="star" data-val="3" title="3 stars">★</button>
+          <button class="star" data-val="4" title="4 stars">★</button>
+          <button class="star" data-val="5" title="5 stars">★</button>
+        </div>
+        <button class="note-toggle">+ Add note</button>
+        <button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button>
+        <button class="archive-btn" title="Archive this startup">↓ Archive</button>
+        <span class="vote-status"></span>
+        <div class="note-area" hidden="">
+          <textarea placeholder="Why this rating? What would need to change?"></textarea>
+        </div>
+      </div>
+      <div class="score-bars">
+        <div class="bar-item">
+          <span class="bar-label">Gap Fit</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">FinServ</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Stage</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Team</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${Math.min(startup.bars.team[0] / startup.bars.team[1] * 100, 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  wireVoting();
+}
+
+/* ────────────────────────────────────────────────────────────── */
+/* VOTING SYSTEM */
+/* ────────────────────────────────────────────────────────────── */
+const SUPABASE_URL = 'https://iyoseurwycryykrnlbig.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_I0wauPO7nUiSKbSKnwpK1g_FciHMlSN';
+const SB_HEADERS = {'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json'};
+const WORKER_URL = '__SUPABASE_SHIM__';
+(function(){
+  const _origFetch = window.fetch.bind(window);
+  async function _fetchVotes() {
+    const r = await _origFetch(`${SUPABASE_URL}/rest/v1/bg_votes?select=*`, {headers: SB_HEADERS});
+    if (!r.ok) throw new Error('supabase GET ' + r.status);
+    const rows = await r.json();
+    const votes = {};
+    rows.forEach(row => { votes[row.slug] = {stars: row.stars||0, note: row.note||'', voter: row.voter||'', followup: !!row.followup, archived: !!row.archived, voted_at: row.voted_at}; });
+    return votes;
+  }
+  window.fetch = async function(input, init) {
+    const url = typeof input === 'string' ? input : (input && input.url) || '';
+    if (url.indexOf('__SUPABASE_SHIM__/votes') !== -1) {
+      const method = (init && init.method) || 'GET';
+      try {
+        if (method === 'GET') {
+          const votes = await _fetchVotes();
+          return new Response(JSON.stringify({votes}), {status: 200, headers: {'Content-Type': 'application/json'}});
+        }
+        if (method === 'PUT') {
+          const body = JSON.parse(init.body);
+          const payload = {slug: body.slug, stars: body.stars ?? 0, note: body.note ?? '', voter: body.voter || 'anonymous', followup: !!body.followup, archived: !!body.archived, voted_at: new Date().toISOString()};
+          const r = await _origFetch(`${SUPABASE_URL}/rest/v1/bg_votes`, {method: 'POST', headers: {...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal'}, body: JSON.stringify(payload)});
+          if (!r.ok) return new Response(JSON.stringify({error: await r.text()}), {status: r.status, headers: {'Content-Type':'application/json'}});
+          const votes = await _fetchVotes();
+          return new Response(JSON.stringify({votes}), {status: 200, headers: {'Content-Type': 'application/json'}});
+        }
+      } catch (e) {
+        return new Response(JSON.stringify({error: String(e)}), {status: 502, headers: {'Content-Type': 'application/json'}});
+      }
+    }
+    return _origFetch(input, init);
+  };
+})();
+function _readVoter() {
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
+  return 'Dave';
+}
+let voter = _readVoter();
+try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } catch(e) {}
+let votes = {};
+let _pendingVote = null;
+
+async function loadVotes() {
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`);
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || {};
+  } catch (e) {
+    console.warn('loadVotes:', e);
+    votes = {};
+  }
+  renderAll();
+}
+
+async function saveVote(slug) {
+  const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
+  const st = card.querySelector('.vote-status');
+  st.textContent = 'Saving…';
+  st.className = 'vote-status saving';
+
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        slug,
+        stars: votes[slug]?.stars ?? 0,
+        note: votes[slug]?.note ?? '',
+        voter: voter || 'anonymous',
+        followup: votes[slug]?.followup ?? false,
+        archived: votes[slug]?.archived ?? false,
+      }),
+    });
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || votes;
+    renderAll();
+    st.textContent = 'Saved ✓';
+    st.className = 'vote-status saved';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
+  } catch (e) {
+    console.error('saveVote:', e);
+    st.textContent = 'Error';
+    st.className = 'vote-status error';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
+  }
+}
+
+function setStars(slug, val) {
+  if (!voter) {
+    _pendingVote = { slug, val };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].stars = val === (votes[slug].stars || 0) ? 0 : val;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setNote(slug, text) {
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].note = text;
+  votes[slug].voted_at = new Date().toISOString();
+}
+
+function setFollowUp(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'followup' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].followup = !votes[slug].followup;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setArchive(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'archive' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].archived = !votes[slug].archived;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function renderCard(slug) {
+  const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+  if (!row) return;
+  const v = votes[slug] || {};
+  const stars = v.stars || 0;
+  const card = row.closest('.startup-card');
+
+  row.querySelectorAll('.star').forEach(btn =>
+    btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars)
+  );
+
+  const ta = row.querySelector('textarea');
+  if (ta && !ta._focused) ta.value = v.note || '';
+
+  let attr = row.querySelector('.vote-attr');
+  if (v.voter && v.voted_at) {
+    if (!attr) {
+      attr = document.createElement('span');
+      attr.className = 'vote-attr';
+      row.querySelector('.vote-status').insertAdjacentElement('beforebegin', attr);
+    }
+    const d = new Date(v.voted_at);
+    const fmt = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+    attr.textContent = `${v.voter} · ${fmt}`;
+  } else if (attr) {
+    attr.remove();
+  }
+
+  const top = card.querySelector('.startup-top');
+  let badge = top.querySelector('.vote-badge');
+  if (stars > 0) {
+    if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
+    badge.textContent = '★'.repeat(stars);
+  } else if (badge) {
+    badge.remove();
+  }
+
+  card.classList.toggle('voted-low', stars > 0 && stars <= 2);
+  const fb = row.querySelector('.followup-btn');
+  if (fb) fb.classList.toggle('active', !!v.followup);
+  card.classList.toggle('followup', !!v.followup);
+  const ab = row.querySelector('.archive-btn');
+  if (ab) ab.classList.toggle('active', !!v.archived);
+  card.classList.toggle('archived', !!v.archived);
+}
+
+function renderAll() {
+  document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug));
+}
+
+function wireVoting() {
+  document.querySelectorAll('.star').forEach(btn =>
+    btn.addEventListener('click', function () {
+      setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
+    })
+  );
+
+  document.querySelectorAll('.note-toggle').forEach(btn =>
+    btn.addEventListener('click', function () {
+      const row = this.closest('.vote-row');
+      const area = row.querySelector('.note-area');
+      const open = area.hidden;
+      area.hidden = !open;
+      this.textContent = open ? '− Hide note' : '+ Add note';
+      if (open) row.querySelector('textarea').focus();
+    })
+  );
+
+  document.querySelectorAll('.note-area textarea').forEach(ta => {
+    ta.addEventListener('focus', function () { this._focused = true; });
+    ta.addEventListener('blur', function () {
+      this._focused = false;
+      const slug = this.closest('.vote-row').dataset.slug;
+      setNote(slug, this.value);
+      if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
+    });
+  });
+  document.querySelectorAll('.followup-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setFollowUp(this.closest('.vote-row').dataset.slug); })
+  );
+  document.querySelectorAll('.archive-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setArchive(this.closest('.vote-row').dataset.slug); })
+  );
+}
+
+function openSettings(msg) {
+  const m = document.getElementById('settings-modal');
+  m.removeAttribute('hidden');
+  m.style.display = 'flex';
+  const msgEl = document.getElementById('settings-msg');
+  if (msgEl) { msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none'; }
+  const inp = document.getElementById('voter-name-input');
+  if (inp) { inp.value = voter; inp.focus(); }
+}
+
+function closeSettings() {
+  const m = document.getElementById('settings-modal');
+  m.setAttribute('hidden', '');
+  m.style.display = 'none';
+}
+
+function saveSettings() {
+  try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
+  try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } } catch(e) {}
+  closeSettings();
+  updateGearState();
+  if (_pendingVote && voter) {
+    const { slug, val, action } = _pendingVote;
+    _pendingVote = null;
+    if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);
+  }
+}
+
+function updateGearState() {
+  const gear = document.getElementById('settings-btn');
+  if (!gear) return;
+  gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution';
+  gear.classList.toggle('connected', !!voter);
+}
+
+/* Init */
+document.addEventListener('DOMContentLoaded', () => {
+  renderPipelineCards();
+  updateGearState();
+
+  document.getElementById('settings-modal').addEventListener('click', e => {
+    if (e.target.id === 'settings-modal') closeSettings();
+  });
+  document.getElementById('voter-name-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') saveSettings();
+  });
+  document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+  document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+
+  loadVotes();
+});
+</script>
+
+</body>
+</html>
