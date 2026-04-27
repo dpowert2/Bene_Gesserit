@@ -1,11 +1,166 @@
 {
   "current": {
-    "gap_fit": 35,
+    "gap_fit": 30,
     "finserv_readiness": 25,
-    "stage_match": 20,
+    "stage_match": 25,
     "team_signal": 20
   },
-  "soft_factors": [],
+  "soft_factors": [
+    {
+      "name": "internal_workflow_hard_filter",
+      "type": "hard_filter",
+      "condition": "Primary value proposition is improving internal processes, back-office efficiency, employee productivity, or in-house workflows",
+      "value": -50,
+      "evidence": "16 rejections (appzen, haast, lyzr, obin-ai, pace, sycamore, galdera, meridian-ai, interloom, opencfo, numos, kaaj, harvey, lema-ai, nexus, octonomy); 0 upvotes across 16+ appearances",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "accounting_cfo_hard_filter",
+      "type": "hard_filter",
+      "condition": "Bookkeeping automation, accounts payable/receivable, CFO tools, expense management, small business finance operations",
+      "value": -50,
+      "evidence": "stacks 2★, basis 1★, opencfo 1★, numos 1★, kaaj 1★; 0 upvotes in 5 appearances",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "external_agent_governance",
+      "type": "positive",
+      "condition": "Product governs, secures, authenticates, or monitors EXTERNAL/third-party agents in a marketplace or ecosystem (not internal institutional ops)",
+      "value": 15,
+      "evidence": "ralio 5★ ('works as long as external agents'), lema-ai 1★ ('looking for solutions that mitigate risk of third party agents'), openbox-ai 3★ ('could be interesting for third party agents rather than internal workflows'); 16 internal rejections confirm the inverse",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "agent_auth_security",
+      "type": "positive",
+      "condition": "Agent identity standards, NHI management, zero-trust per-tool-call authorisation, agentic security against agent-specific attack vectors",
+      "value": 15,
+      "evidence": "t54-labs 5★, oasis-security 5★, keycard 5★ ('Spot on'), resistant-ai 5★ ('Novel and love the agentic security angle'), venice-security 4★, imper-ai 4★; 6/6 upvotes (100%) — strongest gap signal in corpus",
+      "weeks_active": 6,
+      "status": "active"
+    },
+    {
+      "name": "dispute_resolution_agent_liability",
+      "type": "positive",
+      "condition": "Agent risk evaluation, ADR certifications (SOC 2 for AI agents), liability coverage when AI agents cause harm, agent insurance",
+      "value": 15,
+      "evidence": "mount-insurance 5★ ('Reduces risk — excellent'), klaimee 4★ ('Not quite as good as Mount'); 2/2 upvotes (100%)",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "research_signal_intelligence_S1",
+      "type": "positive",
+      "condition": "Alternative data / investment intelligence exposed as agent-callable API or agent, serving external agents or end investors (not internal research desks)",
+      "value": 18,
+      "evidence": "agentsmyth 5★ ('This is what we are looking for'), serafis 5★, kimpton-ai 5★; 3/3 upvotes (100%) — highest-conviction specialist agent category; highest single bonus in system",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "portfolio_integrated_tax",
+      "type": "positive",
+      "condition": "Portfolio-integrated tax intelligence: TLH, tax-aware rebalancing, after-tax portfolio optimisation (NOT compliance/filing)",
+      "value": 12,
+      "evidence": "alomana 5★ (autonomous rebalancing + TLH); taxdown 2★ and juno 2★ confirm the boundary (compliance = bad, efficiencies = good)",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "agent_payment_rails",
+      "type": "positive",
+      "condition": "Infrastructure enabling agents to initiate, authorise, and settle financial transactions with proper governance — escrow, intent verification, dispute resolution",
+      "value": 12,
+      "evidence": "nava 5★, natural 4★; 2/2 positive",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "ai_safety_guardrails_agent_specific",
+      "type": "positive",
+      "condition": "Agent-level safety (not model-level): agentic behaviour monitoring, supervised agent operation in regulated contexts, compliance-as-code for agent governance",
+      "value": 12,
+      "evidence": "overmind 5★ (archived), manifold 5★, complyance 5★, kai 4★, norm-ai 4★; 5/5 upvotes when agent-specific; 3/3 downvotes when model-level (mindgard, goodfire, armorcode)",
+      "weeks_active": 6,
+      "status": "active"
+    },
+    {
+      "name": "marketplace_platform_concept",
+      "type": "positive",
+      "condition": "Agent marketplace infrastructure, curated agent ecosystems, platforms where multiple agents can be discovered and deployed",
+      "value": 8,
+      "evidence": "bank-of-bots 4★ ('Love this concept. Looks like something I'd like to play with'); 1 data point — emerging",
+      "weeks_active": 2,
+      "status": "emerging"
+    },
+    {
+      "name": "compliance_differentiated",
+      "type": "positive",
+      "condition": "Compliance companies that are architecturally differentiated, novel in approach, and finserv-specific (not generic execution or KYC/AML)",
+      "value": 8,
+      "evidence": "complyance 5★ (differentiated), norm-ai 4★ vs sphinx 3★ ('not exactly groundbreaking'), bretton-ai 3★ (wrong sub-domain)",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "tax_filing_compliance_penalty",
+      "type": "negative",
+      "condition": "Primary product is tax filing, tax return preparation, tax compliance, CPA-style workflow (NOT tax strategies, TLH, or portfolio optimisation)",
+      "value": -20,
+      "evidence": "taxdown 2★ ('not interested in EU tax products or tax filing'), juno 2★ ('not tax compliance, tax efficiencies')",
+      "weeks_active": 6,
+      "status": "active"
+    },
+    {
+      "name": "kyc_aml_penalty",
+      "type": "negative",
+      "condition": "Primary positioning is financial crime compliance, AML screening, KYC verification, sanctions checking",
+      "value": -15,
+      "evidence": "bretton-ai 3★ ('not so interested in KYC and AML'), vivox-ai 2★ ('not interested in AML/KYC right now'); 0 upvotes in 2 explicit exposures",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "series_b_plus_penalty",
+      "type": "negative",
+      "condition": "Series B or later, or large raise signalling the company is beyond seed/early-Series-A shaping stage",
+      "value": -15,
+      "evidence": "linx-security 2★ ('Just too late at series B'; score 94→2★ — most extreme near-miss in corpus), april 3★ ('Series B too late'), armadin 2★ ('raised too much'), basis 1★ ('raised too much')",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "ai_not_agent_level_penalty",
+      "type": "negative",
+      "condition": "AI/LLM/model-level safety, interpretability, prompt injection, AI red-teaming — without specific agent governance framing",
+      "value": -15,
+      "evidence": "mindgard 2★ ('AI, not agents'), goodfire 2★ ($1.25B unicorn, no upvote), armorcode 2★ ('internal support, not breaking innovation'); 3/3 explicit AI-level rejections",
+      "weeks_active": 2,
+      "status": "active"
+    },
+    {
+      "name": "non_finserv_penalty",
+      "type": "negative",
+      "condition": "No finserv signal — targeting IT, DevOps, general enterprise, or other verticals exclusively",
+      "value": -10,
+      "evidence": "certivo 3★ ('Had this been for Finserv I would have been interested'), novee 1★ ('Not trying to solve problems for IT professionals')",
+      "weeks_active": 2,
+      "status": "active"
+    }
+  ],
+  "soft_factors_pending": [
+    {
+      "name": "agent_exposure_api_callable",
+      "type": "positive",
+      "condition": "Company exposes intelligence/capability as an agent-callable API or MCP server (not dashboard-only)",
+      "proposed_value": 8,
+      "evidence": "serafis 5★ ('this would be better if it exposed an agent'), kimpton-ai 5★ ('better if it exposed an agent'); 2/3 occurrences required for formal soft factor — ONE MORE VOTE NEEDED",
+      "status": "emerging — 2/3 threshold"
+    }
+  ],
   "history": [
     {
       "date": "2026-03-09",
@@ -15,8 +170,34 @@
         "stage_match": 20,
         "team_signal": 20
       },
-      "soft_factors": [],
+      "soft_factors_count": 0,
       "note": "Initial configuration. No votes yet."
+    },
+    {
+      "date": "2026-04-27",
+      "weights": {
+        "gap_fit": 30,
+        "finserv_readiness": 25,
+        "stage_match": 25,
+        "team_signal": 20
+      },
+      "soft_factors_count": 16,
+      "changes": [
+        {
+          "dimension": "gap_fit",
+          "from": 35,
+          "to": 30,
+          "rationale": "Gap category alone was necessary but not sufficient to predict vote outcome — 22 near-misses in a single cycle proved that gap_fit was over-weighted relative to its true predictive power. The Hard Filters (internal_workflow, accounting_cfo) now handle the dominant misprediction. Freed 5 points redistributed to stage_match."
+        },
+        {
+          "dimension": "stage_match",
+          "from": 20,
+          "to": 25,
+          "rationale": "Stage was under-weighted relative to its predictive power. Explicitly cited in 4+ rejections. Linx-Security (score 94, 2★ 'Just too late at series B') is the clearest example: a near-perfect gap_fit score was immediately overridden by stage. Stage should carry as much weight as finserv_readiness."
+        }
+      ],
+      "soft_factors_bootstrapped": true,
+      "bootstrap_note": "First calibration run (61 votes > 50 threshold). Soft factors established across 6 previous cycles were never serialised to this file. This entry bootstraps the full corpus of vote-evidenced soft factors: 2 hard filters, 9 positive bonuses (7 active + 2 emerging), 5 negative penalties. No new soft factors from this cycle's near-miss analysis (0 new near-misses). 1 pending soft factor: agent_exposure_api_callable at 2/3 evidence threshold — will formalise when third data point arrives."
     }
   ]
 }
