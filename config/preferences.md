@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-15 (cycle 2) | Based on 56 votes (19 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) | v3.0 rebalance: specialist agent categories added to scoring, platform infrastructure bonuses capped to prevent continued bias. 3 new votes this cycle: nava 5★, vouched 5★, alomana 5★ — all with followup requested.*
+*Last updated: 2026-04-27 (cycle 7) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | No new meaningful votes since cycle 3 (2026-04-15). This cycle: FIRST CALIBRATION RUN — 61 votes exceeds 50-vote threshold; scoring-weights.json bootstrapped with all established soft factors; stage_match weight increased 20→25; gap_fit decreased 35→30. No structural preference changes — corpus unchanged. "Agent exposure" API-callable preference still at 2/3 threshold (not yet formal soft factor). Solvapay needs re-vote before next cycle.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
@@ -52,10 +52,12 @@ You can edit this file directly at any time to override or supplement the system
 
 ### Specialist Agent Bonuses (NEW — highest scouting priority)
 
-**Research & Signal Intelligence Agent** (+18 points, PRIORITY)
+**Research & Signal Intelligence Agent** (+18 points, PRIORITY — CONFIRMED BY 3 UPVOTES)
 - Alternative data for investment decisions, earnings analysis, sentiment analysis, institutional flow tracking, catalyst identification
 - Must serve external agents or end investors, not internal research desks
 - The "idea generation" layer — Stages 1, 2, 3 of the investment process
+- **Vote confirmation (2026-04-15):** agentsmyth 5★ ("This is what we are looking for. Shame we didn't find them sooner."), serafis 5★ ("Looks really interesting for us. Can we also find things like this in the EU?"), kimpton-ai 5★ ("Definitely worth a look. Again, better if it exposed an agent."). 3/3 exposures upvoted = 100% hit rate. This is the FIRST validated specialist agent category.
+- **"Agent exposure" preference:** Dave explicitly wants these companies to expose their intelligence as an agent/API ("better if it exposed an agent" appears in 2 of 3 votes). Dashboard-only research tools will score lower.
 
 **Portfolio Construction & Risk Agent** (+18 points, PRIORITY)
 - Concentration analysis, factor exposure modelling, correlation analysis, position sizing, scenario analysis, rebalancing triggers
@@ -108,7 +110,9 @@ The bonuses below for platform infrastructure categories (Auth, Safety, Complian
 - **Key attribute:** Infrastructure-layer positioning — the product is something other agents connect *to* for trust anchoring. Must be about AGENTS specifically, not AI model security generally (mindgard 2★ "AI, not agents").
 - **Minimum score boost:** Apply when core product directly addresses "who authorises the agent" or "how do agents prove identity" or "how do we detect malicious agent behaviour"
 
-### 2. AI Safety & Guardrails for Regulated Industries (+12 points, CAPPED — strong candidate exists)
+### 2. AI Safety & Guardrails for Regulated Industries (+12 points, UNCAPPED — Overmind declined participation)
+
+- **STATUS CHANGE (2026-04-15):** Overmind, previously the strongest candidate (5★, 100 BG Score), has been archived by Dave with the note "They aren't interested in participating." This reopens the AI Safety gap. The category's priority should be re-elevated from MEDIUM toward HIGH until a replacement candidate is identified.
 
 - **Evidence:** overmind 5★, manifold 5★ ("Similar to Geordie"), complyance 5★ ("Would need to talk to them to understand whether they could help us with our use case"), kai 4★ ("good but a little early"), norm-ai 4★
 - **Vote rate in gap:** 5/5 upvotes (100%)
@@ -142,7 +146,15 @@ The bonuses below for platform infrastructure categories (Auth, Safety, Complian
 - **What scores well:** Infrastructure enabling agents to initiate, authorise, and settle financial transactions with proper governance. Escrow, intent verification, dispute resolution for agent transactions (nava).
 - **Nava 5★ signal:** Dave gave maximum score + followup to an agent payment escrow/dispute company. This confirms payment rails as a genuine gap with high conviction. Combined with natural 4★, the payment infrastructure layer is now a validated thesis category.
 
-### 6. Marketplace/Platform Concepts (+8 points, NEW)
+### 6. Dispute Resolution & Agent Liability (+15 points, CONFIRMED BY 2 UPVOTES)
+
+- **Evidence:** mount-insurance 5★ ("Reduces risk — excellent", followup requested), klaimee 4★ ("Not quite as good as Mount")
+- **Vote rate in gap:** 2/2 upvotes (100%) — previously completely unsolved with 0 votes
+- **What scores well:** Agent risk evaluation, ADR certifications (SOC 2 for AI agents), liability coverage when AI agents cause harm, agent insurance
+- **Key signal:** Mount Insurance validated the "insurer for the agent economy" model. Dave's note "Reduces risk" confirms that risk-reduction infrastructure for the agent marketplace is highly thesis-aligned.
+- **Scoring note:** This gap was previously flagged as "Completely Unsolved" in the thesis. It is now partially addressed but still has only 2 pipeline companies — continued scouting is HIGH priority.
+
+### 7. Marketplace/Platform Concepts (+8 points)
 
 - **Evidence:** bank-of-bots 4★ ("Love this concept. Looks like something I'd like to play with", followup requested)
 - **What scores well:** Agent marketplace infrastructure, curated agent ecosystems, platforms where multiple agents can be discovered and deployed
@@ -229,6 +241,12 @@ onyx-security 3★ ("Too far away in SF"), hybridity 3★ ("Maybe they come to t
 
 ## Emerging Preferences (< 5 data points — tracking, not yet applied)
 
+**"Better if it exposed an agent" — API/Agent-Callable Preference (2 occurrences, STRONG)**
+- serafis 5★ — "this would be better if it exposed an agent"
+- kimpton-ai 5★ — "Again, better if it exposed an agent"
+- Dave is signalling that even highly-rated research intelligence companies should expose their capabilities as an agent-callable API, not just as a dashboard. This is consistent with the app store thesis: the agents need to be composable. Companies that are API-first or agent-callable should receive a scoring boost; dashboard-only products should be flagged.
+- **Approaching formal soft factor threshold (2/3 required).**
+
 **"Looks like something I'd like to play with" as engagement signal (1 occurrence)**
 - bank-of-bots 4★ — hands-on engagement desire suggests a preference for products with demonstrable, tangible experiences rather than abstract infrastructure concepts.
 
@@ -272,17 +290,29 @@ onyx-security 3★ ("Too far away in SF"), hybridity 3★ ("Maybe they come to t
 
 **Alomana 5★ resolves Tax Optimisation gap:** The previous cycle flagged alomana with "HIGH UNCERTAINTY on internal/external boundary." Dave's 5★ resolves this — autonomous portfolio rebalancing + TLH is thesis-aligned even though the company operates at the portfolio level. This validates the specialist agent thesis: deep domain intelligence that can be called by other agents in the marketplace.
 
-**Exposure-normalised metrics (56 votes, 2026-04-15):**
-| Gap | Exposures | Upvotes | Downvotes | Hit Rate | Rejection Rate |
-|---|---|---|---|---|---|
-| Agent Auth | 11 | 7 | 2 | 64% | 18% |
-| AI Safety | 14 | 6 | 5 | 43% | 36% |
-| Payment Rails | 1 | 1 | 0 | 100% | 0% |
-| Market Data | 1 | 1 | 0 | 100% | 0% |
-| Personal Agent | 8 | 2 | 4 | 25% | 50% |
-| Tax Optimisation | 6 | 1 | 2 | 17% | 33% |
-| Compliance | 14 | 2 | 4 | 14% | 29% |
-| Orchestration | 14 | 1 | 9 | 7% | 64% |
-| S1–S9 | 0 | 0 | 0 | Newly scouted — awaiting votes | — |
+**Exposure-normalised metrics (61 votes, 2026-04-15 cycle 3):**
+| Gap | Exposures | Upvotes | Downvotes | Hit Rate | Rejection Rate | Trend |
+|---|---|---|---|---|---|---|
+| Research & Signal Intel (S1) | 3 | 3 | 0 | 100% | 0% | 🔥 NEW — first specialist agent data |
+| Dispute Resolution | 2 | 2 | 0 | 100% | 0% | 🔥 NEW — gap validated |
+| Agent Auth | 11 | 7 | 2 | 64% | 18% | Stable |
+| Payment Rails | 1 | 1 | 0 | 100% | 0% | Stable (low data) |
+| Market Data | 1 | 1 | 0 | 100% | 0% | Stable (low data) |
+| AI Safety | 14 | 6 | 5 | 43% | 36% | ⚠️ Overmind archived — gap reopened |
+| Personal Agent | 8 | 2 | 4 | 25% | 50% | Stable |
+| Tax Optimisation | 6 | 1 | 2 | 17% | 33% | Stable |
+| Compliance | 14 | 2 | 4 | 14% | 29% | Stable |
+| Orchestration | 14 | 1 | 9 | 7% | 64% | Stable |
+| S2–S9 | 0 | 0 | 0 | Not yet scouted — awaiting pipeline companies | — | Blind spots |
+
+**Specialist agent thesis POWERFULLY validated (2026-04-15 cycle 3):** The first 3 specialist agent companies to receive votes ALL got 5★ with followup. AgentSmyth ("This is what we are looking for"), Serafis, and Kimpton AI prove that Research & Signal Intelligence agents are exactly what Dave wants. Combined with the previous cycle's 3/3 validation (nava, vouched, alomana), the scout-to-upvote rate for categories with good scoring calibration is now 6/6 across two cycles.
+
+**Dispute Resolution gap RESOLVED from "Completely Unsolved" to "Partially Addressed":** Mount Insurance 5★ and Klaimee 4★ validate the agent liability/insurance model. Mount is the first strong candidate in this previously empty gap.
+
+**AI Safety gap REOPENED:** Overmind (previously the strongest candidate, BG Score 100) has been archived — "They aren't interested in participating." The thesis should re-elevate AI Safety scouting priority. Manifold (5★) and Kai (4★) remain but neither is as strong as Overmind was.
+
+**European scouting preference REINFORCED:** Serafis 5★ note: "Can we also find things like this in the EU?" — Dave explicitly wants European equivalents of US research intelligence companies.
+
+**"Agent exposure" as architectural preference EMERGING:** 2/3 S1 votes include "better if it exposed an agent" — Dave values agent-callable APIs over dashboard-only research tools. This aligns with the composable agent marketplace thesis.
 
 *All observations are now grounded in vote evidence unless explicitly marked "radar signal."*
