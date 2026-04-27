@@ -4,6 +4,116 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## 2026-04-27 — Weekly Radar
+
+### Thesis Drift Detection
+
+**Which gaps are generating the most shortlists vs. passes?** No formal shortlist movement this week — all 100 pipeline companies remain in detected. Cumulative vote signals unchanged: S1 (3/3 = 100%) and Dispute Resolution (2/2 = 100%) lead hit rate; Agent Orchestration (1/10 = 10%) trails after the internal-workflow Hard Filter. The cumulative pattern hasn't shifted because no new votes were cast across the 2026-04-20 → 2026-04-27 window.
+
+**Are any search terms producing noise?** Not visibly this cycle — both new entries (Cohesion → S1, Astor → S-Front) are clean specialist-agent hits. The 🔴 every-scan queries for Pre-Trade Compliance, AI Safety, and Audit & Explainability returned zero new candidates. That's signal-poverty, not noise. Proposed replacement: tighten the orchestration and compliance vocabularies with a strict "third-party agent" qualifier; the term "agentic AI compliance" continues to surface internal-workflow false positives that the Hard Filter then rejects — work the system shouldn't have to do.
+
+**Are there new themes that don't fit existing gaps?** No. Both new entries fit existing categories. The only candidate "new theme" worth tracking is "regulated retail agent front-door" — Astor combines retail consumers + RIA + brokerage integration, which is a different shape than the institutional-facing personal agents. If a second regulated-retail front-door surfaces, split it out as a sub-theme of S-Front. Not yet a category proposal.
+
+**Are any gaps candidates for deprioritisation?** Two:
+- **Tax Optimisation:** already at maintenance-only since Alomana 5★. No change recommended.
+- **Agent Orchestration:** 23 detected, 1/10 hit rate, Hard Filter rejecting most new candidates. Recommend dropping from 🔴 every-scan to 🟠 monitor for the next cycle and re-allocating that scan budget to YC/Antler/EF batch mining for S2–S9 vocabulary.
+
+**Any signals that challenge or complicate the thesis?** Two:
+1. **Okta for AI Agents launches in three days (April 30).** First major incumbent identity product to GA in this category. Doesn't displace Vouched (5★, finserv-specific KYA) but compresses the window for non-finserv-specific agent-auth startups.
+2. **Specialist agents are appearing from accelerator batches, not from Crunchbase searches.** Both new entries this week are YC W26. This contradicts the "structural supply-side desert" framing by 50%. Challenge signal #7 in the thesis may need a v2.3 amendment: "S2–S9 are web-search-exhausted but accelerator-discoverable." A dedicated YC W26 batch sweep against S2–S9 vocabulary should be run before next radar.
+
+### What I Learned This Week
+
+The system entered its first observed cooldown period — eight days without new votes, seven weeks without new research papers, and the first cycle since launch where the briefing feed went idle for a full week. That stillness is itself the signal: the calibration sprint that ended on 2026-04-17 created a backlog of unvoted candidates (Capsule Security, Spektr, Veritus, Alinia, plus the new Cohesion and Astor) that the system can't act on without Dave returning to the vote queue. The two new YC W26 detections matter less for what they add to the pipeline and more for what they reveal about sourcing: both arrived through accelerator-batch monitoring rather than the web-search vocabulary, and both fit cleanly into specialist agent categories the "structural supply-side desert" framing said wouldn't have candidates. The desert hypothesis needs to be revised — it's a search-strategy problem, not a market-supply problem. Next cycle's highest-leverage action is a dedicated YC W26 batch sweep against S2–S9 vocabulary, paired with surfacing the vote queue so the calibration loop can restart.
+
+---
+
+## Search Terms Update — 2026-04-17
+
+### Context
+Full rebuild of `config/bg-search-terms.md` (created as v4.0) against thesis v2.2. Canonical search-terms file did not previously exist at the config/ path — only a legacy copy in `.claude/worktrees/great-chebyshev/config/search-terms.md` with the original 6-gap v1 structure. This update aligns search terms to the current 11 specialist + 7 platform infrastructure taxonomy.
+
+### Changes Made
+- **Priority matrix introduced** — four tiers (🔴 EVERY SCAN / 🟡 HIGH / 🟠 MEDIUM / ⚪ MONITOR) mapped directly to thesis gap-map statuses and scouting priorities.
+- **Master negative filter consolidated** — drew from the near-misses file's two Hard Filters (internal workflow, accounting/bookkeeping) and six soft factors (tax filing, KYC/AML-only, AI-vs-agents, Series B+, non-finserv, geography) into a single reusable append block.
+- **Composability signal surfaced** — added "MCP server", "agent-callable API", "agent SDK" across categories, reflecting Dave's stated "better if it exposed an agent" preference from serafis/kimpton-ai 5★ notes.
+- **Pre-Trade Compliance** elevated to permanent 🔴 top-of-scan with 12 SEC/FINRA/MiFID-specific queries — Hadrius-closest-signal, no seed-stage competitor yet.
+- **Audit & Explainability** expanded from first-entry (Alinia) to 12 queries; EU AI Act deadline (Aug 2) and "agent-level, not model-level" signal added.
+- **AI Safety & Guardrails** re-elevated from 🟠 MEDIUM to 🔴 EVERY SCAN with new European-focused queries and Mindgard-lesson negative filters ("-model red-teaming, -jailbreak, -LLM alignment research").
+- **Dispute Resolution & Agent Liability** promoted to 🟡 HIGH with 12 queries spanning Lloyd's / AIUC-1 / insurance / certification angles.
+- **Agent Monetisation** added as first-class 🟡 HIGH category (was not in v1 at all) with Paid-AI-style results-based-billing vocabulary.
+
+### New Categories Added
+- **Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10)** — dedicated query blocks for Portfolio Construction & Risk, Trade Structuring, Options & Derivatives, Execution, Position Monitoring, Financial Planning, Behavioural Coaching, and Post-Trade Analysis. Previous search terms had zero coverage of these. Acknowledges structural market reality (two cycles with zero results despite mandatory Phase 0 overrides) with alt-sourcing queries (Crunchbase, PitchBook, YC/Antler/EF batches, academic spinouts, fintech pivots).
+- **Personal Financial Agent (S-Front)** — elevated as a standalone 🟡 HIGH category with explicit European-equivalent framing and FCA-sandbox query.
+- **Research & Signal Intelligence — European Replacements** — separate block for 🟡 HIGH scouting of EU equivalents to the validated US trio (AgentSmyth / Serafis / Kimpton AI), responding to Serafis note "Can we also find things like this in the EU?".
+- **Pre-Trade Compliance Agent** — first-class 🔴 category (previously absent from the v1 file entirely).
+- **Audit & Explainability** — first-class 🔴 category (previously absent).
+- **Agent Monetisation** — first-class 🟡 category (previously absent).
+- **Dispute Resolution & Agent Liability** — first-class 🟡 category (previously absent).
+- **Agent Payment Rails** — first-class 🟠 category (previously buried in Auth).
+- **Competitive Intelligence track** — dedicated queries on eToro App Store, Public.com, JPMorgan, Visa/Mastercard, OpenAI acquisitions, Arta Finance (compression signals).
+
+### Categories Removed
+- **Generic "Tax Optimisation" broad queries** — narrowed sharply. Moved to ⚪ MONITOR tier (Alomana confirmed match); dropped any query that could surface tax filing or CPA tools; added strict negative filters (`-"tax filing" -"tax return" -"e-filing" -"tax compliance" -"CPA tools" -"accounting"`). Applies the Juno 2★ / TaxDown 2★ lesson.
+- **Generic "AI safety / governance" queries without finserv or agent qualifier** — removed; all Safety queries now require either "financial services", "fintech", "broker", "regulated industry", or agent-specific framing. Applies Mindgard 2★ / Goodfire 2★ lesson.
+- **Horizontal "AI agent compliance" without sub-domain specificity** — split into Pre-Trade Compliance, Audit & Explainability, and Agent Authentication — each with its own vocabulary.
+
+### Effectiveness Notes
+- **Working well (keep):** Tax Optimisation negative filters (vote-validated), geography-specific European queries, site: operators to fintech.global / sifted.eu / eu-startups.com, YC/accelerator queries.
+- **Producing noise (now filtered):** Horizontal AI safety terms (commoditised post-acquisition wave); generic "compliance" without SEC/FINRA/MiFID qualifier; Agent Orchestration queries without accounting/RPA negative filters (stacks 2★ lesson).
+- **New to monitor:** "Composability / agent-callable API / MCP server" signal — untested at query level but vote-supported. "European-equivalent" framing for S1 categories is a first-time experiment. Alt-sourcing queries for S2–S10 (Crunchbase, PitchBook, Antler, EF, academic spinouts) need evaluation after next scan — web search alone confirmed exhausted.
+- **Structural finding carried forward:** S2–S10 web-search strategy will probably continue to yield zero. The alt-sourcing queries are a deliberate pivot; if they also return empty next cycle, the system should formally expand stage criteria to pre-seed / research-stage for specialist agents per thesis challenge signal #7.
+
+### Supabase Feedback
+- `bg_thesis_feedback WHERE feedback_type = 'search_terms'` returned zero rows. No user feedback specific to search terms has been logged.
+
+### Confidence
+- **High** on the priority-matrix alignment to thesis v2.2 (direct 1:1 mapping to gap-map statuses).
+- **High** on the negative-filter consolidation (derived directly from 62-vote corpus, two Hard Filters, six soft factors).
+- **Medium** on the Specialist Agent Desert alt-sourcing query set (untested; first attempt at non-web-search sourcing via queries rather than direct database access).
+- **Medium** on the "European-equivalent" S1 framing (untested as a standalone search thread).
+
+---
+
+## Thesis Review — 2026-04-17
+
+### Feedback Processed
+- `bg_thesis_feedback` table: 1 entry, a 2026-04-14 test row ("Test feedback — verifying table works"). No strategic feedback since last review.
+
+### Vote Signals
+- **1 new vote since Cycle 3 (2026-04-15):** solvapay — 0 stars, no note, followup=true, not archived, voted 2026-04-17 09:37 UTC. Inconclusive: a 0-star vote with followup=true looks like an incomplete/accidental submission. Flagged for re-vote rather than treated as signal.
+- No other votes cast since the last strategic review (Cycle 3 on 2026-04-15 processed agentsmyth/serafis/kimpton-ai/mount-insurance/klaimee/overmind-archived).
+
+### Thesis Changes
+The thesis file on disk was staged at v2.1 but had NOT absorbed Cycle 3 (2026-04-15) learnings. This review rolls them in as v2.2:
+
+- **Vote count + preference header refreshed** — 53 → 61 votes; 17 → 24 upvotes; 28 → 29 downvotes.
+- **S1 specialist agents validated** — new Learned Preferences bullet documenting agentsmyth 5★, serafis 5★, kimpton-ai 5★ (3/3, 100% hit rate); first specialist agent category with vote data; scout-to-upvote conversion now 6/6 across two cycles.
+- **Dispute Resolution upgraded** — gap map status changed from "❌ Unsolved" to "✅ Mount (5★), Klaimee (4★) — partially addressed." Added bullet to Learned Preferences.
+- **AI Safety gap reopened** — Overmind archived ("They aren't interested in participating"); gap map status changed to "⚠️ Gap reopened." Narrative block updated. Priority re-elevated MEDIUM → HIGH.
+- **Audit & Explainability gap gets first entry** — Alinia (Barcelona, Mouro/Santander). Gap map status "❌ No finserv startup" → "⚠️ First entry — Alinia (vote pending)."
+- **Tax Optimisation gap resolved** — Alomana 5★ moves it from "⚠️ Likely internal build" to "✅ Alomana (5★) — first confirmed match."
+- **Agent Authentication gap resolved** — Vouched 5★ is the KYA platform the gap called for; status "❌ No finserv startup" → "✅ Vouched (5★, KYA platform)."
+- **Agent Payment Rails added to gap map** — previously only in narrative; now an explicit row with Nava (5★) and Natural (4★).
+- **Research & Signal Intelligence added to gap map** — previously only in specialist-agent section; now a first-class row with the S1 trio.
+- **"Agent exposure" preference documented** — Dave wants intelligence exposed as agent-callable APIs, not dashboard-only products (serafis, kimpton-ai notes).
+- **European preference reinforced** — Serafis note "Can we also find things like this in the EU?" added as explicit signal.
+- **eToro App Store added as challenge signal #6** — dual validation/compression finding; major brokerage shipped the thesis model 2026-04-15.
+- **Specialist agent desert added as challenge signal #7** — S2–S9 structural supply-side gap; two consecutive cycles with zero new companies despite mandatory Phase 0 overrides. Sourcing strategy and stage criteria may need to change.
+- **Versioning table** — added v2.2 entry.
+
+### Confidence
+- **Med.** The Cycle 3 signals themselves are high-confidence (all 5 new votes had clear notes and followed the scout→vote pattern established in Cycle 2). Confidence is capped at medium only because no *additional* votes or feedback have arrived in the 48 hours since Cycle 3 — this update is mostly a belated file-sync of changes already reasoned about in the discovery log.
+
+### Next-Review Priorities
+1. Re-solicit a vote on **solvapay** — current 0-star entry looks accidental.
+2. Watch for first vote on **Alinia** (Audit & Explainability) — will calibrate whether "backend compliance controllers for agents" is thesis-aligned.
+3. Continue S2–S9 alt-sourcing (accelerator batches, academic spinouts, fintech pivots) — web search is exhausted.
+4. Scout AI Safety replacement for Overmind — agent-specific, finserv-focused, European preferred.
+
+---
+
 2026-03-11: 6 new signals found. Searches used: "AI guardrails fintech safety startup 2026", "personal AI wealth advisor startup 2026 seed funding", "agentic AI compliance fintech startup 2026 funding", "AI agent authentication startup 2026 funding", "European AI agent startup funding 2026", "AI tax loss harvesting startup 2026". Signals: Bretton AI $75M Series B (Compliance), Avantos $25M Series A (Personal Agent), Rogo $75M Series C (Agent Orchestration), Overmind €2.3M seed (Agent Auth & Security), TaxDown €4M BBVA Spark (Tax Optimisation), Escape $18M Series A (AI Safety & Guardrails).
 2026-03-11: Portal published. Current briefing: 2026-03-11. Archived: 2026-03-10 (displayed in archive tab), 2026-03-09 (in briefings/archive/).
 
@@ -224,6 +334,106 @@ The most important insight is that Dave's thesis is far more precisely defined t
 
 ---
 
+## 2026-04-15 — Full Cycle #3 (Phases 0–6)
+
+### Run Context
+Third full end-to-end cycle. Second cycle with Phase 0 (Coverage Audit). 5 new votes processed (agentsmyth 5★, serafis 5★, kimpton-ai 5★, mount-insurance 5★, overmind 1★). 1 new company scouted (Alinia). Specialist agent vs infrastructure split: 0% specialist agents (0/1), 100% infrastructure (1/1). Major competitive intelligence signal: eToro launches App Store — exactly the thesis model.
+
+### Phase 0: Coverage Audit
+- **8 specialist agent categories (S2–S9) remain at ZERO pipeline coverage** — confirmed blind spots for third consecutive cycle
+- S1 (Research & Signal Intelligence) graduated from blind spot to well-covered (3 companies, all 5★)
+- **3 platform infrastructure categories underrepresented:** Audit & Explainability (0), Agent Monetisation (0), Dispute Resolution (2 but partially addressed)
+- AI Safety reclassified: Overmind declined participation → gap reopened despite 2 remaining candidates (Manifold 5★, Kai 4★)
+- Well-covered categories unchanged: Orchestration (14), Safety (14), Compliance (14), Auth (11)
+- Mandatory scan overrides applied to all 8 specialist agent blind spots + Audit & Explainability + Agent Monetisation
+- Coverage audit binding constraints: prioritise S2–S9 scans, de-prioritise well-covered infrastructure categories
+
+### Phase 1: LEARN
+- 5 new votes processed (56 → 61 total)
+- 24 upvotes, 8 neutral, 29 downvotes
+- New votes: agentsmyth 5★ (S1), serafis 5★ (S1), kimpton-ai 5★ (S1), mount-insurance 5★ (Dispute Resolution), overmind 1★ (AI Safety)
+- All 5 are companies from previous cycle's Phase 4 scout — 100% of scout finds voted
+- S1 (Research & Signal Intelligence) now has 3 votes, ALL 5★ — 100% hit rate, highest in the system
+- Overmind 1★ triggered significant cascading changes: declined participation → strongest AI Safety candidate lost
+- Dispute Resolution partially validated: Mount 5★ confirms thesis alignment
+- Exposure-normalised metrics: S1 hit rate 100% (3/3), Dispute Resolution 100% (1/1), Agent Auth 64%, AI Safety 43%
+- No new near-misses (4 votes are 5★, 1 is 1★)
+
+### Phase 2: STRATEGISE
+- Thesis v3.0 → v3.3 (three incremental updates in one cycle)
+- S1 status upgraded: "Not scouted — highest priority" → "3 candidates — AgentSmyth 5★, Serafis 5★, Kimpton AI 5★"
+- AI Safety status downgraded: "Overmind (strong candidate)" → "Overmind declined participation — gap reopened"
+- Dispute Resolution upgraded: "Gap (embryonic)" → "Partially addressed — Mount 5★, Klaimee 4★"
+- AI Safety priority re-elevated from MEDIUM to HIGH
+- Pipeline coverage updated for Overmind: ACTIVE → ARCHIVED
+- Vote count updated to 61
+
+### Phase 3: ARM
+- Search terms v3.1 → v3.2
+- AI Safety (Category 5) priority re-elevated from 🟠 MEDIUM to 🟡 HIGH
+- Rationale: Overmind declined participation, reopening the gap despite Manifold and Kai remaining
+- Scan priority matrix updated: Safety moved from Medium to High row
+- ~252 queries maintained across 21 categories + 2 tracks
+
+### Phase 4: SCOUT — 1 New Company + Competitive Intelligence
+**New company:**
+1. **Alinia** (Score 83) — Audit & Explainability. Seed $7.5M. Mouro Capital (Santander). Backend compliance controller for high-stake AI agents. Barcelona, Spain. European founder. FIRST ENTRY IN AUDIT & EXPLAINABILITY.
+
+**Competitive Intelligence (major signal):**
+- **eToro launches App Store** — third-party developer marketplace with APIs, MCP server, revenue sharing. This is EXACTLY the "app store for financial agents" model described in the BG thesis. Validates the thesis but compresses the competitive timeline significantly.
+- Public.com Agents continue rolling out — "world's first Agentic Brokerage" positioning maintained
+- OpenAI/Hiro acquisition continues reshaping the landscape
+
+**Specialist Agent Desert (structural finding):**
+- Intensive searches across all 8 blind spot categories (S2–S9) produced ZERO new thesis-matching startups
+- Categories searched: Portfolio Construction & Risk, Trade Structuring, Options & Derivatives, Execution & Routing, Position Monitoring, Financial Planning & Advice, Behavioural Coaching, Post-Trade & Settlement
+- This is a supply-side problem, not a search-terms problem — there are very few seed-stage startups building agent-callable APIs for these specialist functions
+- Implication: the specialist agent layer of the app store thesis may require longer time horizons or different sourcing strategies (incubation, academic spinouts, fintech pivots)
+
+### Specialist Agent vs Infrastructure Split
+- New companies this cycle: 0 specialist agents (0%), 1 infrastructure (100%)
+- Cumulative pipeline: specialist agent representation remains critically low — only S1 has coverage (3 companies)
+- S2–S9 have been searched in two consecutive cycles with zero results — this is now a confirmed structural gap in the market, not a scouting failure
+- The app store thesis requires both infrastructure AND specialist agents — the infrastructure layer is well-scouted but the apps themselves barely exist at seed stage
+
+### Phase 0 Effectiveness
+- S2–S9 (all specialist agent categories): MANDATORY scan overrides → 0 companies found ❌ (second consecutive cycle)
+- Audit & Explainability: MANDATORY scan override → 1 company found (Alinia) ✅
+- Agent Monetisation: Searched but no new entries ❌
+- AI Safety: Re-elevated to HIGH but no new companies found beyond existing pipeline ❌
+- **Conclusion:** Phase 0 overrides are effective for categories where startups exist (Audit & Explainability this cycle, S1 and Dispute Resolution last cycle). The S2–S9 desert is confirmed as a market reality. Future cycles should shift S2–S9 strategy from broad web search to targeted approaches: startup database mining, accelerator batch reviews, academic lab spinout tracking, and monitoring for fintech companies pivoting to agent-callable APIs.
+
+### Thesis Drift Observations
+1. **S1 fully validated** — 3/3 votes at 5★ makes Research & Signal Intelligence the highest-conviction specialist agent category. The internal/external boundary concern from Cycle #2 was resolved: institutional-serving research agents ARE thesis-aligned.
+2. **Overmind decline is a significant loss** — strongest AI Safety candidate exiting reopens a critical infrastructure gap. Manifold and Kai provide partial coverage but the category needs fresh scouting.
+3. **eToro App Store is the most important competitive signal since project inception** — a major brokerage building exactly the thesis model compresses the timeline for infrastructure startups to establish themselves.
+4. **Specialist agent desert confirmed** — two consecutive full cycles with mandatory overrides have produced zero S2–S9 companies. This is structural, not tactical.
+5. **European search reinforced** — Alinia (Barcelona, Mouro/Santander) continues the European pipeline strength. 3 of last 6 companies are European.
+6. **Dispute Resolution partially resolved** — Mount 5★ validates the category. Gap status upgraded from "embryonic" to "partially addressed."
+
+### Search Term Effectiveness
+- Audit & Explainability queries productive: 1 company found (Alinia) — first result ever in this category
+- AI Safety queries: re-elevated priority but no new seed-stage companies found. Existing pipeline (Manifold, Kai) may be sufficient if one converts.
+- S2–S9 queries: second consecutive cycle with zero results across ~80 queries. Recommend supplementing web search with startup database queries in next cycle.
+- Competitive intelligence queries (eToro, Public.com) highly productive — surfaced the most important thesis-validation signal to date.
+
+### Pipeline State
+- Previous: 74 companies
+- Added: 1 (Alinia)
+- Current: 75 companies
+- Voted: 61/75 (81%)
+- Unvoted new entry: alinia (needs vote)
+- **Priority votes needed:** Alinia (first Audit & Explainability entry — will validate or reject the gap category)
+
+### Recommendations
+1. **Vote on Alinia** — first and only Audit & Explainability entry. Critical for calibrating whether backend compliance controllers for agents are thesis-aligned.
+2. **Shift S2–S9 strategy** — web searches are exhausted. Next cycle should try: (a) startup database searches (Crunchbase, PitchBook), (b) YC/accelerator batch reviews, (c) academic lab spinout tracking, (d) monitoring fintech pivots to agent-callable APIs.
+3. **Scout for AI Safety replacements** — Overmind's departure reopens the gap. Look for agent-specific safety companies (not general AI safety).
+4. **Track eToro App Store evolution** — monitor developer adoption, API capabilities, and whether they build or buy governance infrastructure. This is the closest real-world implementation of the thesis.
+5. **Consider extending specialist agent thesis timeline** — the desert finding suggests the "apps" layer may lag the "infrastructure" layer by 12–18 months. Adjust expectations and potentially expand stage criteria for S2–S9 to include pre-seed or research-stage companies.
+
+---
+
 ## 2026-04-15 — Full Cycle #2 (Phases 0–6)
 
 ### Run Context
@@ -335,3 +545,23 @@ Any signals that challenge or complicate the thesis? (1) Visa Intelligent Commer
 ### What I Learned This Week
 
 The most important insight from this week is that the thesis scope was too narrow. The April 7 full scan with expanded search terms immediately surfaced companies across six new categories — Agent Memory, Dispute Resolution & Liability, Pre-Trade Compliance, Audit & Explainability, Agent Monetisation, and Agent Payment Rails — revealing that the regulated infrastructure layer beneath agentic AI in financial services is significantly wider and deeper than the original six-gap framing captured. The second insight is that incumbents are no longer building toward agentic commerce — they are operationalising it at continental scale: Visa's protocol-agnostic Intelligent Commerce Connect, Amex's ACE developer kit, FIS's KYA framework, Mastercard's live transactions with six banks in Hong Kong, and JPMorgan's 450+ active agentic use cases. The gap between "agents can transact" and "agents are governed while transacting" is now the defining infrastructure opportunity, and it is a gap incumbents are explicitly not filling. The third insight is that the academic community has finally caught up: five new papers broke a five-week drought, and the most important (ClawSafety) proves what the thesis assumed — safe models become unsafe agents, making agent-level safety infrastructure non-negotiable for regulated deployment. The uncomfortable truth remains: the pipeline grew 41% (61→86) while votes remained frozen at 8. The model is now 91% untested.
+
+---
+
+## 2026-04-17 — Weekly Radar
+
+### Thesis Drift Detection
+
+Which gaps are generating the most shortlists vs. passes? No formal shortlisting has occurred — all 92 companies remain in detected. Using votes as a proxy, Research & Signal Intelligence (S1) leads at 100% hit rate (3/3), followed by Dispute Resolution at 100% (2/2), Agent Auth at 64% (7/11), and AI Safety at 43% (6/14). Agent Orchestration leads passes at 64% rejection rate (9/14), driven by internal-workflow rejections. The Hard Filter created last cycle is now doing its job — internal-workflow companies that would previously have scored 75–94 are being filtered at scoring time rather than at voting time.
+
+Are any search terms producing noise? Propose replacements. Yes — but the dominant noise has already been filtered via the internal-workflow Hard Filter. Residual noise this week: Agent Orchestration queries continue to surface enterprise-broad BPO-replacement tools (AppZen, Octonomy, Pace) that fail the third-party-agent test. Proposed replacements: tighten orchestration queries with "marketplace", "third-party agents", "MCP-native" qualifiers; add "external agent" as a required phrase; continue aggressive negative filters on "finance department", "back office", "workflow automation". AI Safety queries also need narrower framing — the horizontal AI red-teaming and AI interpretability vocabulary continues to surface commoditised horizontal players. Add mandatory "broker", "investment adviser", "SEC", "FINRA", or "FCA" qualifiers to AI Safety queries. Research & Signal Intelligence: add explicit European site: operators (sifted.eu, eu-startups.com, tech.eu, fintech.global) to fulfil the Serafis "find things like this in the EU?" mandate.
+
+Are there new themes that don't fit existing gaps? Propose a new category if warranted. One candidate: **Multi-Gap Agent Controls Architecture**. Nava (Safety + Payment Rails + Dispute Resolution) is the first concrete example; Vouched (Auth + MCP-Identity) and SolvaPay (Payment Rails + Auth DNA) are secondary. This is not yet a formal gap — two datapoints do not make a category — but it is worth monitoring. If a third multi-gap company emerges and votes 4–5★, promote to cross-gap theme. A second candidate is **Regulated-Industry Agentic OS** — Notch and Sycamore already anchor it, but Sycamore's 1★ vote suggests these are seen as internal workflow platforms rather than marketplace infrastructure. Not warranted at this time.
+
+Are any gaps candidates for deprioritisation? Tax Optimisation should move to maintenance-only scouting (Alomana 5★ has effectively closed it; continued queries produce tax filing noise). Agent Monetisation remains at 1 pipeline company (Paid AI) — not a deprioritisation candidate yet but the low signal volume is worth noting. Personal Agent scouting should narrow: the Mastercard Virtual C-Suite, Amex ACE, and eToro App Store signals suggest the front-door opportunity is being claimed by incumbents faster than seed-stage startups can establish themselves.
+
+Any signals that challenge or complicate the thesis? Three. First, incumbent protocol-agnostic layers — Visa Intelligent Commerce Connect supports all four agent payment protocols simultaneously; if Visa becomes the neutral clearing layer, the startup opportunity narrows to the governance overlay above it. Second, Oracle's FI-grade agent compliance product — Oracle + Lucinity is the first single-vendor, single-stack agent compliance pitch aimed at regulated FIs and competes directly with the independent infrastructure thesis. Third, specialist agent desert confirmed as structural — S2–S9 produced one marginal result (Pillar, adjacent) across two cycles of intensive Phase 0 scouting. The "apps" layer of the app store thesis may lag the "infrastructure" layer by 12–18 months, and the stage criteria may need to expand to pre-seed / research-stage for these categories.
+
+### What I Learned This Week
+
+This was the cycle where the thesis stopped being a hypothesis and started being a calibrated instrument. The 45-vote backlog processing on April 14 produced a single, overwhelming signal — that the external-vs-internal boundary is more predictive than gap category, team quality, funding amount, or geography — and that signal has now been encoded as the system's highest-weight Hard Filter. The follow-on Cycle 2 and Cycle 3 scout rounds then delivered six consecutive 5★ scout-to-vote conversions (nava, vouched, alomana, agentsmyth, serafis, kimpton-ai) plus mount-insurance 5★ and klaimee 4★ — proving the recalibrated model works in practice, not just in theory. The uncomfortable counterweight is the specialist agent desert: two consecutive intensive Phase 0 scans across S2–S9 produced essentially zero seed-stage companies, and Pillar's commodity-hedging pitch is the closest the market has gotten to the pattern. The app store thesis holds on the infrastructure side, but the "apps" layer may be 12–18 months behind supply-side reality — which is itself a scouting finding worth acting on. The week's final positive signal is European-cluster activation in Agent Payment Rails: SolvaPay, Ralio, and Nava forming a three-company cohort in 72 hours, with SolvaPay's ex-FIS/BoA/Lehman/Handelsbanken team directly answering the Serafis European-equivalent mandate.
