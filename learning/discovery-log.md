@@ -4,6 +4,42 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Search Terms Update — 2026-04-28
+
+### Context
+Targeted refinement of `config/bg-search-terms.md` from v4.1 → v4.2 against the cycle 8 PM (2026-04-27) discovery-log recommendations. Thesis v2.2 itself unchanged since 2026-04-17 — no thesis drift to absorb. The prompt for change came from cycle 8 PM's three concrete recommendations: drop crypto-execution vocabulary from S6, add regulated-securities qualifiers to S2/S5/S6, and confirm vocabulary calibration after the Paygentic find.
+
+### Changes Made
+- **S6 Execution decrypto-fied** — every S6 query now carries either `"broker-dealer"`, `"regulated securities"`, `"listed"`, or `"equity"` qualifier; new `-crypto -DeFi -tokenized -"digital assets" -"perpetual swap" -"DEX aggregator" -"on-chain"` category-specific negative filter introduced. Direct response to cycle 8 PM precedent: Sequence Markets ($20M YC W26) and Fere AI surfaced as accelerator-batch false positives because the regulated-securities qualifier was missing.
+- **S2 (Portfolio Construction) and S5 (Options & Derivatives)** received the same crypto-exclusion treatment at lower severity — preventive, since the same noise pattern would emerge as accelerator searches scale. New S-Category Specific Negative Filter block added below master filter.
+- **Agent Monetisation reframed** — Paygentic ($2M pre-seed, MiddleGame Ventures, ex-Sulu) added as the second confirmed entry alongside Paid AI. Paygentic was sourced 2026-04-27 PM through the exact v4.1 "agent commerce billing finserv" query line — vocabulary is calibrated and producing hits. Section header changed from "Paid AI pattern signal only" to "vocabulary calibrated post-Paygentic." One MiddleGame/Sulu founder-network angle query added.
+- **YC W26 follow-on cluster** — Sponge / Maven / Orthogonal added to accelerator-batch YC query block as pending-card candidates per cycle 8 PM recommendation #4.
+- **AIUC + Armilla European-presence query** added to Dispute Resolution per cycle 8 PM recommendation #5 — both are reference companies in v4.1; their European entry plans, if any, would warrant pipeline cards.
+- **Accelerator-batch action note** expanded with calibration warning: when scoring against S2/S5/S6, auto-skip candidates whose primary venue is a crypto exchange/DEX. Crypto-only execution doesn't translate to a regulated brokerage context.
+
+### New Categories Added
+None. v4.2 is a refinement, not a new architecture. The 11-specialist + 7-platform taxonomy is unchanged.
+
+### Categories Removed
+None.
+
+### Effectiveness Notes
+- **Working well (keep):** v4.1's "third-party agent" qualifier across governance/compliance categories continues to suppress internal-workflow false positives. v4.1's "agent commerce billing finserv" Agent Monetisation query produced Paygentic — strongest evidence to date that the v4.x vocabulary tightening is increasing precision. Accelerator-batch sweeps continue producing detections (Cohesion, Astor, Paygentic adjacencies).
+- **Producing noise (now filtered):** S6 Execution queries without regulated-securities qualifier surface crypto/DeFi execution venues. v4.2 negative filter and qualifier should suppress this on next scan.
+- **Signal-poor categories (track):** S3 Trade Structuring, S5 Options & Derivatives, S7 Position Monitoring, S8 Financial Planning, S9 Behavioural Coaching, S10 Post-Trade Analysis still showed zero qualifying finds in cycle 8 PM despite mandatory accelerator-batch overrides. v4.2 cleaner queries may help marginally on next scan; if signal-poverty persists for 2+ more cycles in S5/S7/S8/S9/S10 specifically, recommend formally expanding stage criteria to pre-seed / research-stage per thesis challenge signal #7.
+- **Validated working hypothesis:** The cycle 8 PM finding that "Paygentic was sourced via the v4.1 query line" is the cleanest evidence that the v4.x search-terms refactor is paying off. The query-to-candidate trace is now documented end-to-end.
+
+### Supabase Feedback
+- `bg_thesis_feedback WHERE feedback_type = 'search_terms'` query failed with connection timeout (2 attempts, third consecutive cycle of timeout failures). Same query returned zero rows on 2026-04-17 when reachable. No user feedback specific to search terms has been processed; no signal indicating the timeout hides new feedback.
+
+### Confidence
+- **High** on the S6 crypto-exclusion refinement — directly traces to two documented cycle 8 PM false positives (Sequence Markets, Fere AI) and to the explicit cycle 8 PM recommendation. The negative filter is conservative (scoped to S2/S5/S6 only) so collateral damage is bounded.
+- **High** on the Paygentic vocabulary calibration — empirically validated by the query-to-candidate trace.
+- **Medium** on the S2/S5 preventive crypto exclusion — applies the cycle 8 PM logic to adjacent categories that didn't show the noise pattern this cycle but plausibly will at scale.
+- **Medium** on the YC W26 follow-on additions — Sponge/Maven/Orthogonal are mentioned in cycle 8 PM as company-level details too thin for a card; tracking them in search terms is appropriate but the actual cards must wait for next cycle.
+
+---
+
 ## 2026-04-27 (PM) — Cycle 8 Master Orchestrator (full-stack, second run of the day)
 
 ### Phase 0 — Coverage Audit
