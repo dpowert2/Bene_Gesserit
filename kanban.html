@@ -105,6 +105,47 @@
     max-width: 620px;
   }
 
+  /* ---------- REGION FILTER ---------- */
+  .region-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+    align-items: center;
+  }
+  .region-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    border-radius: 100px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .region-btn:hover { border-color: var(--brown); color: var(--brown); }
+  .region-btn.active {
+    background: var(--text-heading);
+    border-color: var(--text-heading);
+    color: #fff;
+  }
+  .region-btn .region-count {
+    font-size: 0.62rem;
+    background: rgba(0,0,0,0.06);
+    border-radius: 100px;
+    padding: 1px 7px;
+    color: inherit;
+    opacity: 0.85;
+  }
+  .region-btn.active .region-count { background: rgba(255,255,255,0.18); }
+
   /* ---------- BOARD ---------- */
   .kanban-board {
     display: flex;
@@ -588,6 +629,12 @@
   <div class="container-wide">
     <h1>Kanban</h1>
     <p class="description">Outreach pipeline. Cards tagged for follow-up start in the first column. Drag to move, or click any card to open the full profile, leave a history note, and change stage.</p>
+    <div class="region-filter" id="region-filter">
+      <button class="region-btn active" data-region="all">All <span class="region-count" data-region-count="all">0</span></button>
+      <button class="region-btn" data-region="us">🇺🇸 US <span class="region-count" data-region-count="us">0</span></button>
+      <button class="region-btn" data-region="europe">🇪🇺 Europe <span class="region-count" data-region-count="europe">0</span></button>
+      <button class="region-btn" data-region="asia">🌏 Asia <span class="region-count" data-region-count="asia">0</span></button>
+    </div>
     <div id="kanban-status" class="kanban-status"></div>
   </div>
 </header>
@@ -703,6 +750,9 @@ let voter = (function () {
   return 'Dave';
 })();
 let activeSlug = null;
+let activeRegion = (function () {
+  try { return localStorage.getItem('bg_kanban_region') || 'all'; } catch (e) { return 'all'; }
+})();
 
 /* ============================================================
    FETCH VOTES
@@ -774,6 +824,11 @@ function startupBySlug(slug) {
 /* ============================================================
    RENDER BOARD
    ============================================================ */
+function regionMatches(geo, region) {
+  if (region === 'all') return true;
+  return regionsFor(geo).includes(region);
+}
+
 function renderBoard() {
   STAGES.forEach(stage => {
     const list = document.querySelector(`[data-cards="${stage}"]`);
@@ -781,11 +836,21 @@ function renderBoard() {
   });
 
   const counts = { followup: 0, contacted: 0, talked_to: 0, accepted: 0, rejected: 0 };
+  const regionCounts = { all: 0, us: 0, europe: 0, asia: 0 };
 
   // Collect kanban cards: any startup whose stage resolves to a column
-  const onBoard = startups
+  const onBoardAll = startups
     .map(s => ({ s, stage: stageOf(s.slug) }))
     .filter(x => x.stage !== null);
+
+  // Tally region counts (across the whole board, regardless of active filter)
+  onBoardAll.forEach(({ s }) => {
+    regionCounts.all++;
+    regionsFor(s.geo).forEach(r => { if (regionCounts[r] !== undefined) regionCounts[r]++; });
+  });
+
+  // Filter by active region
+  const onBoard = onBoardAll.filter(x => regionMatches(x.s.geo, activeRegion));
 
   // Sort by score desc within each column
   onBoard.sort((a, b) => (b.s.score || 0) - (a.s.score || 0));
@@ -801,10 +866,32 @@ function renderBoard() {
     if (counts[stage] === 0) {
       const empty = document.createElement('div');
       empty.className = 'kanban-empty';
-      empty.textContent = stage === 'followup' ? 'Tag cards in Pipeline →' : 'No cards yet';
+      let msg = 'No cards yet';
+      if (stage === 'followup' && activeRegion === 'all') msg = 'Tag cards in Pipeline →';
+      else if (activeRegion !== 'all') msg = 'None in this region';
+      empty.textContent = msg;
       list.appendChild(empty);
     }
     document.querySelector(`[data-count="${stage}"]`).textContent = counts[stage];
+  });
+
+  // Update region filter counts and active state
+  Object.entries(regionCounts).forEach(([r, n]) => {
+    const el = document.querySelector(`[data-region-count="${r}"]`);
+    if (el) el.textContent = n;
+  });
+  document.querySelectorAll('.region-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.region === activeRegion);
+  });
+}
+
+function wireRegionFilter() {
+  document.querySelectorAll('.region-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeRegion = btn.dataset.region;
+      try { localStorage.setItem('bg_kanban_region', activeRegion); } catch (e) {}
+      renderBoard();
+    });
   });
 }
 
@@ -1072,6 +1159,7 @@ async function init() {
   try {
     await ensureSchema();
     votes = await fetchVotes();
+    wireRegionFilter();
     renderBoard();
     wireDragDrop();
     const onBoardCount = startups.filter(s => stageOf(s.slug) !== null).length;
