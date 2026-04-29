@@ -127,9 +127,6 @@
     .filter-bar { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
     .filter-btn { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 100px; background: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
     .filter-btn:hover { border-color: var(--brown); color: var(--brown); }
-    .category-select { padding: 6px 28px 6px 14px; border: 1px solid var(--border-strong); border-radius: 100px; background: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: all 0.2s; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
-    .category-select:hover, .category-select:focus { border-color: var(--brown); color: var(--brown); outline: none; }
-    .category-select.active { background-color: var(--brown-light); border-color: var(--brown); color: var(--brown-dark); }
     .filter-btn.active { background: var(--brown-light); border-color: var(--brown); color: var(--brown-dark); }
     .filter-count { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 500; background: var(--bg); padding: 1px 6px; border-radius: 100px; color: var(--text-light); }
     .filter-btn.active .filter-count { background: var(--brown); color: #fff; }
@@ -380,9 +377,6 @@
       <button class="filter-btn" data-filter="unvoted">Unrated <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="followup" style="border-color:var(--coral);color:var(--coral);">↗ Follow Up <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="archived" style="border-color:var(--border-strong);color:var(--text-muted);">↓ Archived <span class="filter-count">0</span></button>
-      <select id="category-filter" class="category-select">
-        <option value="">All categories</option>
-      </select>
       <span class="filter-divider"></span>
       <button class="filter-btn" data-team="Research" title="Research team — alternative data, signal intelligence, market analysis">Research <span class="filter-count">0</span></button>
       <button class="filter-btn" data-team="Studio" title="Studio team — voice AI, predictive agents, intelligent tax">Studio <span class="filter-count">0</span></button>
@@ -413,7 +407,7 @@
   </div>
 </div>
 
-<script src="startups-data.js?v=20260429e"></script>
+<script src="startups-data.js?v=20260429f"></script>
 <script>
 /* startups & SLUG_DATES loaded from startups-data.js (script tag in <head>) */
 
@@ -454,12 +448,6 @@ function renderPipelineCards() {
     container.appendChild(card);
   });
   wireVoting();
-  /* Populate category dropdown dynamically from startup data */
-  const gaps = [...new Set(startups.map(s => s.gap))].sort();
-  const sel = document.getElementById('category-filter');
-  sel.innerHTML = '<option value="">All categories</option>';
-  gaps.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = `${g} (${startups.filter(s => s.gap === g).length})`; sel.appendChild(o); });
-  sel.addEventListener('change', () => { sel.classList.toggle('active', !!sel.value); applyFilter(); });
   /* Dynamic header count */
   const countEl = document.querySelector('.section-header .count');
   if (countEl) countEl.textContent = `${startups.length} candidates`;
@@ -676,7 +664,6 @@ function toggleTeam(team) {
 
 function applyFilter(f) {
   if (f) activeFilter = f;
-  const categoryVal = (document.getElementById('category-filter') || {}).value || '';
   document.querySelectorAll('.filter-btn').forEach(b => {
     if (b.dataset.team) {
       // Team pill — independent toggle state, not tied to activeFilter
@@ -700,8 +687,6 @@ function applyFilter(f) {
     if (activeFilter === 'unvoted') show = !voted && !isArchived;
     if (activeFilter === 'followup') show = !!(slug && votes[slug]?.followup) && !isArchived;
     if (activeFilter === 'archived') show = isArchived;
-    /* Category filter — applies on top of status filter */
-    if (show && categoryVal) show = card.dataset.gap === categoryVal;
     /* Team filter — applies on top of everything */
     if (show && activeTeam) {
       const teams = (card.dataset.team || '').split(' ').filter(Boolean);
