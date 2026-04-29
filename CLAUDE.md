@@ -22,7 +22,7 @@ Dave Power. Running Bene Gesserit — a personal deal-scouting system for agenti
 | Component | Detail |
 |-----------|--------|
 | Hosting | Cloudflare Workers auth gateway → GitHub Pages content |
-| Voting | Supabase (bg_votes table) |
+| Voting | Turso (libSQL) — bg_votes table at bg-votes-dpowert2.aws-eu-west-1.turso.io. Migrated from Supabase 2026-04-29 (Supabase free tier auto-paused after 1 week of inactivity, silently dropping saves). localStorage fallback layer added at the same time so votes persist even if remote is unreachable. |
 | Design system | Warm beige/cream, Instrument Serif / DM Sans / DM Mono |
 | Scheduled tasks | 15 tasks covering radar, publish, thesis, search terms, learning, watchdog |
 
