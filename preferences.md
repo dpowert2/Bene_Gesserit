@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-27 (cycle 8 — second master-orchestrator run of the day) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | No new meaningful votes since cycle 3 (2026-04-15) — Supabase unreachable from sandbox this run; cached votes.json is stale; preferences carried forward from cycle 7 unchanged. "Agent exposure" API-callable preference still at 2/3 threshold. Solvapay re-vote still pending.*
+*Last updated: 2026-04-29 (cycle 9 — full-cycle orchestrator run) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | No new meaningful votes since cycle 3 (2026-04-15) — Supabase unreachable from sandbox for the FIFTH consecutive cycle; cached votes.json predates the 61-vote corpus; preferences carried forward from cycle 8 unchanged. "Agent exposure" API-callable preference still at 2/3 threshold. Solvapay re-vote still pending.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
