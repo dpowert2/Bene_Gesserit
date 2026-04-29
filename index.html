@@ -419,42 +419,13 @@
         <span class="chart-title">Pipeline funnel</span>
         <span style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--text-light);text-transform:uppercase;letter-spacing:1.2px;">Live · refreshes every page load</span>
       </div>
-      <div id="funnel-body" style="padding:18px 4px 6px;">
+      <div id="funnel-body" style="padding:18px 4px 6px; min-height:480px;">
         <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--text-light);">Loading live counts from Turso…</div>
       </div>
       <div id="funnel-footer" style="padding:10px 4px 0;border-top:1px solid var(--border);margin-top:14px;font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;display:none;">
         <span id="funnel-snapshot-ts"></span>
       </div>
     </div>
-
-    <style>
-      .funnel-row {
-        display: grid;
-        grid-template-columns: 180px 1fr 64px 64px;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 6px;
-        font-size: 0.84rem;
-      }
-      .funnel-row + .funnel-row { border-top: 1px dashed var(--border); }
-      .funnel-row.estimated { color: var(--text-light); }
-      .funnel-row.estimated .funnel-bar-fill { background: repeating-linear-gradient(135deg, var(--brown-light) 0 6px, transparent 6px 12px); border: 1px dashed var(--border-strong); }
-      .funnel-stage { font-weight: 500; color: var(--text-heading); display: flex; align-items: center; gap: 8px; }
-      .funnel-row.estimated .funnel-stage { color: var(--text-muted); font-style: italic; }
-      .funnel-stage-tag { font-family: 'DM Mono', monospace; font-size: 0.5rem; text-transform: uppercase; letter-spacing: 1px; padding: 2px 6px; border-radius: 100px; background: var(--brown-light); color: var(--brown-dark); }
-      .funnel-stage-tag.live { background: var(--accent-light); color: var(--accent-dark); }
-      .funnel-stage-tag.est { background: var(--amber-light); color: var(--amber); }
-      .funnel-bar-track { height: 14px; background: var(--bg); border-radius: 100px; overflow: hidden; }
-      .funnel-bar-fill { height: 100%; background: var(--accent); border-radius: 100px; transition: width 0.6s; }
-      .funnel-count { font-family: 'DM Mono', monospace; font-size: 0.95rem; color: var(--text-heading); text-align: right; font-weight: 500; }
-      .funnel-row.estimated .funnel-count { color: var(--text-light); }
-      .funnel-pct { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-light); text-align: right; }
-      @media (max-width: 720px) {
-        .funnel-row { grid-template-columns: 1fr; gap: 4px; }
-        .funnel-bar-track { display: none; }
-        .funnel-count, .funnel-pct { text-align: left; }
-      }
-    </style>
 
     <div style="margin-top:40px;">
       <h2 style="font-family:'Instrument Serif',serif;font-size:1.8rem;font-weight:400;color:var(--text-heading);margin-bottom:4px;">Radar Runs</h2>
@@ -732,7 +703,7 @@
 </footer>
 
 <!-- ────────── PIPELINE FUNNEL — live counts from Turso + startups-data.js ────────── -->
-<script src="startups-data.js?v=20260429m"></script>
+<script src="startups-data.js?v=20260429n"></script>
 <script>
 (function() {
   const TURSO_URL = 'https://bg-votes-dpowert2.aws-eu-west-1.turso.io';
@@ -788,51 +759,184 @@
     ];
   }
 
-  function widthPct(count, max) {
-    if (typeof count === 'string') {
-      // Estimated string like "~30,000–40,000" → use the high-end for sizing
-      const m = count.match(/([\d,]+)/g);
-      if (!m) return 100;
-      const high = parseInt(m[m.length - 1].replace(/,/g, ''));
-      return Math.min(100, Math.max(2, (high / max) * 100));
-    }
-    return Math.min(100, Math.max(2, (count / max) * 100));
+  // Pull a numeric value from either a number or a "~30,000-40,000" range string
+  function numericFor(count) {
+    if (typeof count === 'number') return count;
+    const m = String(count).match(/[\d,]+/g);
+    if (!m) return 0;
+    const nums = m.map(s => parseInt(s.replace(/,/g, ''), 10));
+    // For ranges, use the midpoint
+    return nums.reduce((a, b) => a + b, 0) / nums.length;
   }
 
   function render(stages) {
     const body = document.getElementById('funnel-body');
     body.innerHTML = '';
-    // Use the highest estimate as 100%
-    const max = 40000;
 
+    // Geometry
+    const W = 760;
+    const ROW_H = 46;
+    const PAD_TOP = 16;
+    const H = PAD_TOP + stages.length * ROW_H + 12;
+    const cx = W / 2;
+    const maxBarW = W * 0.62;   // funnel never wider than this
+    const minBarW = 28;          // smallest visible bar (for 0-count stages)
+
+    // Sqrt-scale widths so 4-orders-of-magnitude range fits on one canvas
+    // and the visual "funnel" actually narrows progressively.
+    const counts = stages.map(s => numericFor(s.count));
+    const maxC = Math.max(...counts);
+    const widths = counts.map(c => {
+      if (c <= 0) return minBarW;
+      const w = Math.sqrt(c / maxC) * maxBarW;
+      return Math.max(minBarW, w);
+    });
+
+    // Find the carded-ever baseline for percentage labels on live stages
+    const cardedIdx = stages.findIndex(s => s.stage === 'Carded (ever)');
+    const cardedBaseline = cardedIdx >= 0 ? counts[cardedIdx] : null;
+
+    // Build SVG
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('style', 'max-width:760px;display:block;margin:0 auto;');
+
+    // Diagonal hatch pattern for estimated stages
+    const defs = document.createElementNS(svgNS, 'defs');
+    defs.innerHTML = `
+      <pattern id="estPattern" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+        <rect width="3" height="6" fill="#D4CEC4" opacity="0.45"/>
+      </pattern>
+      <linearGradient id="liveFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7FA08A"/>
+        <stop offset="100%" stop-color="#5C7E68"/>
+      </linearGradient>
+      <linearGradient id="liveFillTop" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#9BB5A4"/>
+        <stop offset="100%" stop-color="#7FA08A"/>
+      </linearGradient>
+    `;
+    svg.appendChild(defs);
+
+    // Render trapezoids — each stage's bottom edge connects to the next stage's top edge
+    // for a smooth funnel shape.
     stages.forEach((s, i) => {
-      const pct = widthPct(s.count, max);
-      const liveTag = s.estimated
-        ? '<span class="funnel-stage-tag est">est</span>'
-        : '<span class="funnel-stage-tag live">live</span>';
-      const countDisplay = (typeof s.count === 'string') ? s.count : s.count.toLocaleString();
+      const y = PAD_TOP + i * ROW_H;
+      const wTop = widths[i];
+      const wBottom = (i < widths.length - 1) ? widths[i + 1] : wTop * 0.85;
+      const x1 = cx - wTop / 2;
+      const x2 = cx + wTop / 2;
+      const xn1 = cx - wBottom / 2;
+      const xn2 = cx + wBottom / 2;
+      const barH = ROW_H - 6;
 
-      // Compute % of "carded ever" baseline for live rows (so user sees relative magnitudes)
+      // The trapezoid (filled funnel segment)
+      const poly = document.createElementNS(svgNS, 'polygon');
+      poly.setAttribute('points',
+        `${x1},${y} ${x2},${y} ${xn2},${y + barH} ${xn1},${y + barH}`);
+      if (s.estimated) {
+        poly.setAttribute('fill', 'url(#estPattern)');
+        poly.setAttribute('stroke', '#D4CEC4');
+        poly.setAttribute('stroke-width', '1');
+        poly.setAttribute('stroke-dasharray', '3,3');
+      } else {
+        // Lighter green at top (carded), darker as we drop
+        const liveOrder = stages.slice(cardedIdx).indexOf(s);
+        const t = liveOrder / Math.max(1, stages.length - cardedIdx - 1);
+        const r = 127 - Math.round(35 * t);
+        const g = 160 - Math.round(30 * t);
+        const b = 138 - Math.round(28 * t);
+        poly.setAttribute('fill', `rgb(${r},${g},${b})`);
+      }
+      svg.appendChild(poly);
+
+      // Stage label (left side, outside funnel)
+      const labelX = Math.min(x1 - 14, 240);
+      const label = document.createElementNS(svgNS, 'text');
+      label.setAttribute('x', labelX);
+      label.setAttribute('y', y + barH / 2 + 4);
+      label.setAttribute('text-anchor', 'end');
+      label.setAttribute('font-family', "'DM Sans', sans-serif");
+      label.setAttribute('font-size', '13');
+      label.setAttribute('font-weight', s.estimated ? '400' : '500');
+      label.setAttribute('fill', s.estimated ? '#A9A29A' : '#1A1816');
+      label.textContent = s.stage;
+      svg.appendChild(label);
+
+      // Tag (est/live) — left of label
+      const tag = document.createElementNS(svgNS, 'text');
+      tag.setAttribute('x', 12);
+      tag.setAttribute('y', y + barH / 2 + 3);
+      tag.setAttribute('font-family', "'DM Mono', monospace");
+      tag.setAttribute('font-size', '9');
+      tag.setAttribute('font-weight', '500');
+      tag.setAttribute('letter-spacing', '1');
+      tag.setAttribute('fill', s.estimated ? '#B8944A' : '#4A6B4F');
+      tag.textContent = s.estimated ? 'EST' : 'LIVE';
+      svg.appendChild(tag);
+
+      // Count (right side, outside funnel)
+      const countX = Math.max(x2 + 14, W - 200);
+      const countText = document.createElementNS(svgNS, 'text');
+      countText.setAttribute('x', countX);
+      countText.setAttribute('y', y + barH / 2 + 4);
+      countText.setAttribute('font-family', "'DM Mono', monospace");
+      countText.setAttribute('font-size', '14');
+      countText.setAttribute('font-weight', '500');
+      countText.setAttribute('fill', s.estimated ? '#A9A29A' : '#1A1816');
+      countText.textContent = (typeof s.count === 'string') ? s.count : s.count.toLocaleString();
+      svg.appendChild(countText);
+
+      // Conversion / baseline % (small, right of count)
       let pctText = '';
-      if (!s.estimated) {
-        const carded = stages.find(x => x.stage === 'Carded (ever)').count;
-        if (typeof carded === 'number' && carded > 0 && typeof s.count === 'number') {
-          if (s.stage === 'Carded (ever)') pctText = '100% baseline';
-          else pctText = `${Math.round((s.count / carded) * 100)}% of carded`;
+      if (!s.estimated && cardedBaseline) {
+        if (s.stage === 'Carded (ever)') pctText = 'baseline';
+        else pctText = `${Math.round((counts[i] / cardedBaseline) * 100)}% of carded`;
+      } else if (s.estimated && i > 0) {
+        // Show drop-rate from previous stage (rough)
+        const prev = counts[i - 1];
+        if (prev > 0) {
+          pctText = `${Math.round((counts[i] / prev) * 100)}% pass`;
         }
       }
-
-      const row = document.createElement('div');
-      row.className = 'funnel-row' + (s.estimated ? ' estimated' : '');
-      row.title = s.note;
-      row.innerHTML = `
-        <div class="funnel-stage">${liveTag}<span>${s.stage}</span></div>
-        <div class="funnel-bar-track"><div class="funnel-bar-fill" style="width:${pct}%"></div></div>
-        <div class="funnel-count">${countDisplay}</div>
-        <div class="funnel-pct">${pctText}</div>
-      `;
-      body.appendChild(row);
+      if (pctText) {
+        const pct = document.createElementNS(svgNS, 'text');
+        pct.setAttribute('x', W - 12);
+        pct.setAttribute('y', y + barH / 2 + 4);
+        pct.setAttribute('text-anchor', 'end');
+        pct.setAttribute('font-family', "'DM Mono', monospace");
+        pct.setAttribute('font-size', '9');
+        pct.setAttribute('letter-spacing', '0.5');
+        pct.setAttribute('fill', '#A9A29A');
+        pct.textContent = pctText;
+        svg.appendChild(pct);
+      }
     });
+
+    // Faint vertical centerline for visual anchor
+    const line = document.createElementNS(svgNS, 'line');
+    line.setAttribute('x1', cx);
+    line.setAttribute('y1', PAD_TOP - 2);
+    line.setAttribute('x2', cx);
+    line.setAttribute('y2', H - 8);
+    line.setAttribute('stroke', '#E2DDD5');
+    line.setAttribute('stroke-width', '1');
+    line.setAttribute('stroke-dasharray', '2,4');
+    line.setAttribute('opacity', '0.5');
+    svg.insertBefore(line, svg.firstChild.nextSibling);
+
+    // Mobile fallback: also render a compact text list below the SVG
+    const wrap = document.createElement('div');
+    wrap.appendChild(svg);
+    body.appendChild(wrap);
+
+    // Legend / scale note
+    const note = document.createElement('div');
+    note.style.cssText = 'margin-top:12px;font-family:DM Mono,monospace;font-size:0.6rem;color:var(--text-light);text-align:center;letter-spacing:0.5px;';
+    note.innerHTML = 'Width &propto; &radic;count &mdash; sqrt scaling so 4 orders of magnitude fit on one canvas. Estimated stages are hatched.';
+    body.appendChild(note);
 
     // Footer with timestamp
     const footer = document.getElementById('funnel-footer');
