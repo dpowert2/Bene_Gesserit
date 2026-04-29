@@ -703,7 +703,7 @@
 </footer>
 
 <!-- ────────── PIPELINE FUNNEL — live counts from Turso + startups-data.js ────────── -->
-<script src="startups-data.js?v=20260429n"></script>
+<script src="startups-data.js?v=20260429o"></script>
 <script>
 (function() {
   const TURSO_URL = 'https://bg-votes-dpowert2.aws-eu-west-1.turso.io';
@@ -777,24 +777,56 @@
     const W = 760;
     const ROW_H = 46;
     const PAD_TOP = 16;
-    const H = PAD_TOP + stages.length * ROW_H + 12;
+    const SECTION_GAP = 18;
     const cx = W / 2;
-    const maxBarW = W * 0.62;   // funnel never wider than this
-    const minBarW = 28;          // smallest visible bar (for 0-count stages)
+    const maxBarW = W * 0.62;
 
-    // Sqrt-scale widths so 4-orders-of-magnitude range fits on one canvas
-    // and the visual "funnel" actually narrows progressively.
+    // Find sections — estimated stages first, live stages second
+    const estStages = stages.filter(s => s.estimated);
+    const liveStages = stages.filter(s => !s.estimated);
+    const cardedIdx = stages.findIndex(s => s.stage === 'Carded (ever)');
+    const cardedBaseline = cardedIdx >= 0 ? numericFor(stages[cardedIdx].count) : 1;
+
+    // Compute counts and widths PER SECTION so each section has its own visible taper.
+    // Section A (estimated): sqrt-scaled relative to its own max → widest at top, narrowing
+    //   from 100% of maxBarW down to ~28% across 4 stages.
+    // Section B (live): linear-scaled relative to "carded ever" baseline → carded row at
+    //   42% of maxBarW so it sits visually below the estimated funnel's neck, then
+    //   tapers proportionally (98→73→31→4→0) over 5 more stages with linear narrowing.
     const counts = stages.map(s => numericFor(s.count));
-    const maxC = Math.max(...counts);
-    const widths = counts.map(c => {
-      if (c <= 0) return minBarW;
-      const w = Math.sqrt(c / maxC) * maxBarW;
-      return Math.max(minBarW, w);
+
+    const estMax = Math.max(...estStages.map(s => numericFor(s.count)));
+    const ESTW_TOP = maxBarW;          // widest estimated bar
+    const ESTW_BOTTOM_TARGET = maxBarW * 0.30; // narrowest estimated bar — visible taper
+    const estWidths = estStages.map((s, i) => {
+      const c = numericFor(s.count);
+      // sqrt for visible taper across orders of magnitude
+      const t = Math.sqrt(c / estMax);
+      // Map t (0..1) so the smallest estimate doesn't shrink to nothing
+      return ESTW_BOTTOM_TARGET + (ESTW_TOP - ESTW_BOTTOM_TARGET) * t;
     });
 
-    // Find the carded-ever baseline for percentage labels on live stages
-    const cardedIdx = stages.findIndex(s => s.stage === 'Carded (ever)');
-    const cardedBaseline = cardedIdx >= 0 ? counts[cardedIdx] : null;
+    const LIVEW_TOP = maxBarW * 0.42;   // carded baseline width (clearly narrower than estimates)
+    const liveWidths = liveStages.map(s => {
+      const c = numericFor(s.count);
+      // Linear scaling — carded=baseline=100%, others as fraction
+      const frac = cardedBaseline > 0 ? c / cardedBaseline : 0;
+      // Min visible width for non-zero stages
+      const w = LIVEW_TOP * frac;
+      if (c === 0) return 0; // pinch to zero at the bottom
+      return Math.max(8, w);
+    });
+
+    // Stitch widths back into a single index-aligned array
+    const widths = [];
+    let ei = 0, li = 0;
+    stages.forEach(s => {
+      if (s.estimated) widths.push(estWidths[ei++]);
+      else widths.push(liveWidths[li++]);
+    });
+
+    // Total height: stages + a section gap between estimated and live
+    const H = PAD_TOP + stages.length * ROW_H + SECTION_GAP + 12;
 
     // Build SVG
     const svgNS = 'http://www.w3.org/2000/svg';
@@ -821,11 +853,21 @@
     svg.appendChild(defs);
 
     // Render trapezoids — each stage's bottom edge connects to the next stage's top edge
-    // for a smooth funnel shape.
+    // for a smooth funnel shape. The section gap between estimated and live shows the
+    // scale-break clearly.
+    const lastEstIdx = estStages.length - 1;
     stages.forEach((s, i) => {
-      const y = PAD_TOP + i * ROW_H;
+      // Add SECTION_GAP after the last estimated row
+      const yOffset = (i > lastEstIdx) ? SECTION_GAP : 0;
+      const y = PAD_TOP + i * ROW_H + yOffset;
       const wTop = widths[i];
-      const wBottom = (i < widths.length - 1) ? widths[i + 1] : wTop * 0.85;
+      // Bottom edge connects to next stage. If we're crossing the section break,
+      // pinch the bottom of the estimated funnel and re-open the top of the live
+      // funnel separately — don't let one trapezoid span the gap.
+      const isLastEst = (i === lastEstIdx);
+      const wBottom = isLastEst
+        ? widths[i] * 0.4   // taper sharply at the bottom of the estimated funnel
+        : (i < widths.length - 1) ? widths[i + 1] : wTop * 0.0;
       const x1 = cx - wTop / 2;
       const x2 = cx + wTop / 2;
       const xn1 = cx - wBottom / 2;
@@ -915,17 +957,29 @@
       }
     });
 
-    // Faint vertical centerline for visual anchor
-    const line = document.createElementNS(svgNS, 'line');
-    line.setAttribute('x1', cx);
-    line.setAttribute('y1', PAD_TOP - 2);
-    line.setAttribute('x2', cx);
-    line.setAttribute('y2', H - 8);
-    line.setAttribute('stroke', '#E2DDD5');
-    line.setAttribute('stroke-width', '1');
-    line.setAttribute('stroke-dasharray', '2,4');
-    line.setAttribute('opacity', '0.5');
-    svg.insertBefore(line, svg.firstChild.nextSibling);
+    // Section divider label between estimated and live funnels
+    const dividerY = PAD_TOP + estStages.length * ROW_H + SECTION_GAP / 2;
+    const divLine = document.createElementNS(svgNS, 'line');
+    divLine.setAttribute('x1', 60);
+    divLine.setAttribute('x2', W - 60);
+    divLine.setAttribute('y1', dividerY);
+    divLine.setAttribute('y2', dividerY);
+    divLine.setAttribute('stroke', '#D4CEC4');
+    divLine.setAttribute('stroke-width', '1');
+    divLine.setAttribute('stroke-dasharray', '4,4');
+    svg.appendChild(divLine);
+    const divLabel = document.createElementNS(svgNS, 'text');
+    divLabel.setAttribute('x', cx);
+    divLabel.setAttribute('y', dividerY - 5);
+    divLabel.setAttribute('text-anchor', 'middle');
+    divLabel.setAttribute('font-family', "'DM Mono', monospace");
+    divLabel.setAttribute('font-size', '9');
+    divLabel.setAttribute('letter-spacing', '1.5');
+    divLabel.setAttribute('fill', '#A9A29A');
+    divLabel.textContent = '— SCALE BREAK: estimates above, live counts below —';
+    svg.appendChild(divLabel);
+
+    // No central line — would conflict with the section break
 
     // Mobile fallback: also render a compact text list below the SVG
     const wrap = document.createElement('div');
@@ -935,7 +989,7 @@
     // Legend / scale note
     const note = document.createElement('div');
     note.style.cssText = 'margin-top:12px;font-family:DM Mono,monospace;font-size:0.6rem;color:var(--text-light);text-align:center;letter-spacing:0.5px;';
-    note.innerHTML = 'Width &propto; &radic;count &mdash; sqrt scaling so 4 orders of magnitude fit on one canvas. Estimated stages are hatched.';
+    note.innerHTML = 'Two funnels, two scales: top half is sqrt-scaled across the estimated range (~30,000 &rarr; ~300); bottom half is linear from carded baseline (134) tapering to 0. The scale break is necessary &mdash; 6 orders of magnitude can&rsquo;t taper smoothly on one continuous funnel.';
     body.appendChild(note);
 
     // Footer with timestamp
