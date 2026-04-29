@@ -539,12 +539,12 @@ async function loadVotes() {
     if (!r.ok) throw new Error(`${r.status}`);
     const data = await r.json();
     if (data.votes && Object.keys(data.votes).length > 0) {
-      // Merge: prefer Supabase data but keep local keys Supabase doesn't have
+      // Merge: prefer Turso data but keep local keys Turso doesn't have
       votes = Object.assign({}, local, data.votes);
     }
     _saveLocalVotes();
   } catch (e) {
-    console.warn('loadVotes (Supabase unavailable, using local backup):', e);
+    console.warn('loadVotes (Turso unavailable, using local backup):', e);
   }
   renderAll();
 }
