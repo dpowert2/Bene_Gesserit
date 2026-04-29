@@ -130,6 +130,66 @@ def main():
     print(f"  ★★★★★ {fives}  ★★★★ {fours}  ★★★ {threes}  ★★ {twos}  ★ {ones}", file=sys.stderr)
     print(f"  notes: {notes}  follow-ups: {followups}  archived: {archives}", file=sys.stderr)
 
+    # ────────────────────────────────────────────────────────────────────
+    # Funnel snapshot — write the current pipeline state into search-state.json
+    # so the Radar page can show historical evolution AND the per-cycle deltas
+    # are part of the persistent memory, not just live fetches.
+    # ────────────────────────────────────────────────────────────────────
+    import re
+    from datetime import datetime
+    state_path = os.path.join(REPO_ROOT, "config", "search-state.json")
+    sd_path = os.path.join(REPO_ROOT, "startups-data.js")
+
+    # Count current pipeline cards
+    try:
+        with open(sd_path) as f:
+            sd_text = f.read()
+        live_pipeline = len(re.findall(r'slug: "([^"]+)"', sd_text))
+    except Exception:
+        live_pipeline = 0
+
+    # Kanban stages
+    def ks(stage):
+        return sum(1 for v in sorted_votes.values() if v.get("kanban_stage") == stage)
+
+    funnel_snapshot = {
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "live_pipeline": live_pipeline,
+        "voted": sum(1 for v in sorted_votes.values() if v.get("stars", 0) > 0),
+        "stars": {"5": fives, "4": fours, "3": threes, "2": twos, "1": ones},
+        "with_notes": notes,
+        "follow_up_flagged": followups,
+        "archived_by_user": archives,
+        "kanban": {
+            "followup": ks("followup"),
+            "contacted": ks("contacted"),
+            "talked_to": ks("talked_to"),
+            "accepted": ks("accepted"),
+            "rejected": ks("rejected"),
+        },
+        "meeting_arranged_or_outreach": followups + ks("contacted") + ks("talked_to"),
+    }
+
+    # Merge into search-state.json under "funnel_history" array (append-only)
+    try:
+        with open(state_path) as f:
+            state = json.load(f)
+    except Exception:
+        state = {}
+
+    history = state.setdefault("funnel_history", [])
+    history.append(funnel_snapshot)
+    # Keep last 30 snapshots; older snapshots compress into the changelog
+    state["funnel_history"] = history[-30:]
+    state["latest_funnel"] = funnel_snapshot
+    state["_last_updated"] = datetime.utcnow().date().isoformat()
+
+    with open(state_path, "w") as f:
+        json.dump(state, f, indent=2)
+        f.write("\n")
+    print(f"Wrote funnel snapshot to {state_path}", file=sys.stderr)
+    print(f"  live_pipeline: {live_pipeline}  voted: {funnel_snapshot['voted']}  outreach: {funnel_snapshot['meeting_arranged_or_outreach']}  accepted: {funnel_snapshot['kanban']['accepted']}", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()
