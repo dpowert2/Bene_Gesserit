@@ -885,9 +885,9 @@ async function saveVote(slug) {
     setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
   } catch (e) {
     console.error('saveVote:', e);
-    st.textContent = 'Error';
+    st.textContent = 'Error ' + (e.message || '');
     st.className = 'vote-status error';
-    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 8000);
   }
 }
 
