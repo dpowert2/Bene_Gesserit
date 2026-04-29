@@ -372,3 +372,62 @@ const startups = [
 ];
 
 const SLUG_DATES = {"autonomous":"2026-04-29","sponge":"2026-04-29","orthogonal":"2026-04-29","maven":"2026-04-29","era":"2026-04-28","panta":"2026-04-28","paygentic":"2026-04-27","cohesion":"2026-04-27","trata":"2026-04-27","astor":"2026-04-27","capsule-security":"2026-04-18","spektr":"2026-04-18","veritus":"2026-04-18","solvapay":"2026-04-17","pillar":"2026-04-17","alter":"2026-03-09","dyna-ai":"2026-03-09","guardrails-ai":"2026-03-09","hive-tax-ai":"2026-03-09","mezzi":"2026-03-09","mine-moneygpt":"2026-03-09","natural-payments":"2026-03-09","overmind":"2026-03-09","stacks":"2026-03-09","t54-labs":"2026-03-09","tendi":"2026-03-09","trace":"2026-03-09","unit21":"2026-03-09","uptiq":"2026-03-09","bretton-ai":"2026-03-11","oasis-security":"2026-03-11","taxdown":"2026-03-11","kai":"2026-03-12","lyzr":"2026-03-12","sapiom":"2026-03-12","sphinx":"2026-03-12","complyance":"2026-03-15","jetstream-security":"2026-03-15","onyx-security":"2026-03-15","armorcode":"2026-03-18","certivo":"2026-03-18","goodfire":"2026-03-18","april":"2026-03-19","manifold":"2026-03-19","steward":"2026-03-20","armadin":"2026-03-22","obin-ai":"2026-03-22","harvey":"2026-03-26","imper-ai":"2026-03-26","opencfo":"2026-03-26","zoven":"2026-03-26","hybridity":"2026-04-01","norm-ai":"2026-04-01","aether-datahub":"2026-04-02","interloom":"2026-04-02","kaaj":"2026-04-02","keycard":"2026-04-02","linx-security":"2026-04-02","mindgard":"2026-04-02","natural":"2026-04-02","novee":"2026-04-02","sycamore":"2026-04-02","unique-ai":"2026-04-02","venice-security":"2026-04-02","vivox-ai":"2026-04-02","bank-of-bots":"2026-04-04","numos":"2026-04-04","openbox-ai":"2026-04-04","pace":"2026-04-04","lema-ai":"2026-04-06","meridian-ai":"2026-04-06","galdera":"2026-04-10","haast":"2026-04-10","juno":"2026-04-10","appzen":"2026-04-12","nexus":"2026-04-12","octonomy":"2026-04-12","resistant-ai":"2026-04-12","basis":"2026-04-14","ralio":"2026-04-14","nava":"2026-04-14","trent-ai":"2026-04-14","vouched":"2026-04-14","alomana":"2026-04-14","agentsmyth":"2026-04-15","serafis":"2026-04-15","kimpton-ai":"2026-04-15","mount-insurance":"2026-04-15","klaimee":"2026-04-15"};
+
+/* ============================================================
+   Geographic flag helper
+   Maps a startup's `geo` string (e.g. "Tel Aviv, Israel / USA")
+   to up to 2 flag emoji. Used by pipeline.html and kanban.html.
+   ============================================================ */
+function _bgSingleFlag(s) {
+  const g = (s || '').toUpperCase();
+  if (/EUROPE\b|EUROPEAN/.test(g)) return '🇪🇺';
+  if (/\bEU\b/.test(g)) return '🇪🇺';
+  if (/\bUSA\b|UNITED STATES|\bU\.S\.|\bUS\b/.test(g)) return '🇺🇸';
+  if (/SAN FRANCISCO|NEW YORK|SEATTLE|FORT LAUDERDALE|SAN DIEGO|SAN JOSE|PALO ALTO|BOSTON|AUSTIN|CHICAGO|MIAMI|DENVER|ATLANTA/.test(g)) return '🇺🇸';
+  if (/\bCA\b|\bNY\b|\bWA\b|\bFL\b|\bTX\b|\bMA\b|\bIL\b|\bCO\b|\bGA\b/.test(g)) return '🇺🇸';
+  if (/UNITED KINGDOM|\bUK\b|LONDON|ENGLAND|SCOTLAND|BRITAIN|LANCASTER|MANCHESTER/.test(g)) return '🇬🇧';
+  if (/GERMANY|BERLIN|MUNICH|HAMBURG/.test(g)) return '🇩🇪';
+  if (/FRANCE|PARIS/.test(g)) return '🇫🇷';
+  if (/SPAIN|MADRID|BARCELONA/.test(g)) return '🇪🇸';
+  if (/NETHERLANDS|AMSTERDAM/.test(g)) return '🇳🇱';
+  if (/SWEDEN|STOCKHOLM/.test(g)) return '🇸🇪';
+  if (/DENMARK|COPENHAGEN/.test(g)) return '🇩🇰';
+  if (/NORWAY|OSLO/.test(g)) return '🇳🇴';
+  if (/FINLAND|HELSINKI/.test(g)) return '🇫🇮';
+  if (/IRELAND|DUBLIN/.test(g)) return '🇮🇪';
+  if (/SWITZERLAND|ZURICH|GENEVA/.test(g)) return '🇨🇭';
+  if (/AUSTRIA|VIENNA/.test(g)) return '🇦🇹';
+  if (/BELGIUM|BRUSSELS/.test(g)) return '🇧🇪';
+  if (/CZECH|PRAGUE/.test(g)) return '🇨🇿';
+  if (/POLAND|WARSAW/.test(g)) return '🇵🇱';
+  if (/PORTUGAL|LISBON/.test(g)) return '🇵🇹';
+  if (/ITALY|MILAN|ROME/.test(g)) return '🇮🇹';
+  if (/ISRAEL|TEL AVIV/.test(g)) return '🇮🇱';
+  if (/CANADA|TORONTO|VANCOUVER|MONTREAL/.test(g)) return '🇨🇦';
+  if (/AUSTRALIA|SYDNEY|MELBOURNE/.test(g)) return '🇦🇺';
+  if (/INDIA|BANGALORE|BENGALURU|MUMBAI|DELHI/.test(g)) return '🇮🇳';
+  if (/SINGAPORE/.test(g)) return '🇸🇬';
+  if (/HONG KONG/.test(g)) return '🇭🇰';
+  if (/KOREA|SEOUL/.test(g)) return '🇰🇷';
+  if (/JAPAN|TOKYO/.test(g)) return '🇯🇵';
+  if (/CHINA|BEIJING|SHANGHAI|SHENZHEN/.test(g)) return '🇨🇳';
+  if (/BRAZIL|SAO PAULO/.test(g)) return '🇧🇷';
+  if (/MEXICO/.test(g)) return '🇲🇽';
+  if (/UAE|DUBAI|ABU DHABI/.test(g)) return '🇦🇪';
+  if (/SAUDI ARABIA|RIYADH/.test(g)) return '🇸🇦';
+  if (/GLOBAL/.test(g)) return '🌐';
+  return '';
+}
+
+function flagFor(geoStr) {
+  if (!geoStr) return '';
+  if (/^\s*unknown\s*$/i.test(geoStr)) return '🌐';
+  const parts = String(geoStr).split('/').map(p => p.trim()).filter(Boolean);
+  const flags = [];
+  for (const part of parts) {
+    const f = _bgSingleFlag(part);
+    if (f && !flags.includes(f)) flags.push(f);
+    if (flags.length >= 2) break;
+  }
+  return flags.length ? flags.join('') : '🌐';
+}
