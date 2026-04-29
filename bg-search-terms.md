@@ -1,6 +1,6 @@
 # Bene Gesserit — Search Terms
 
-*Last updated: 2026-04-29 | Revision: v4.6 — Operational notes updated to reflect the Supabase → Turso migration. Vote pipeline now reads from Turso bg_votes table (bg-votes-dpowert2.aws-eu-west-1.turso.io), which doesn't auto-pause; the v4.1 / v4.2 / v4.3 change-log entries below all flagged "Supabase bg_thesis_feedback query unavailable" — that root cause is now resolved. Preference model can re-process votes cast since 2026-04-15. localStorage fallback layer added client-side. v4.5 prior changes still in force: three Research vocabulary sub-blocks (Consumer behaviour, Investable Everything, Wealth-Generation Reinvention); three structural improvement blocks (Investor-Portfolio Walks, Reverse-Archetype Queries, Negative-Space Audit Protocol). Cycle 10 should run against v4.6 with the live preference signal restored.*
+*Last updated: 2026-04-29 | Revision: v4.7 — Three new structural improvements addressing the failure mode that recurred four times this session ("thesis expanded, vocabulary didn't keep up"): (1) 🔶 **Thesis-Vocabulary Alignment Audit** — codified protocol that walks every thesis sub-area and verifies a corresponding query block exists. Catches "category in thesis with no search for it" before the cycle runs. (2) 🔷 **Thesis-Diff Trigger** — every thesis version bump now triggers an immediate scoped sweep against what's NEW since the prior version. This is what happened ad-hoc today and worked (Studio sweep after v2.4, Research sweep after v2.6); v4.7 makes it a required step. (3) ⬜ **persistent search-state.json** — new file at `config/search-state.json` tracking last-run timestamps per category, hit-rates per query, dedup-collision rates, empty-cells, per-sub-area card counts over time. Lets the orchestrator prioritise underexplored areas across cycles instead of re-running the same queries blindly. Plus a fourth addition: **🌐 Multilingual European Queries** — scoped to the existing European-preferred geography rotation. v4.6 prior changes still in force: Turso migration propagated, preference model can re-engage with live vote signal. Cycle 10 should run against v4.7.*
 
 ---
 
@@ -669,6 +669,105 @@ After every sweep, before publishing, run a 5-minute negative-space audit. The g
 
 ---
 
+## 🔶 Thesis-Vocabulary Alignment Audit *(new v4.7)*
+
+The negative-space audit catches categories where queries run but find nothing. The alignment audit catches categories that exist in the thesis but have **no queries searching for them at all** — the failure mode that recurred four times this session (Research consumer-behaviour starvation; Investable Everything not in vocabulary until v4.5; Wealth-Generation Reinvention not in vocabulary until v4.5; Supabase resolution not propagated through ops notes).
+
+**Audit protocol:**
+
+1. **Walk the thesis.** For each numbered section / sub-area in `config/thesis.md` (especially the Research / Studio / Greens team mandate rows in The Three Teams table), enumerate it.
+2. **Verify a query block exists.** For each enumerated thesis sub-area, search this document for a matching block. A "matching block" is a section header (`##` or `###`) whose name or scope clearly covers the sub-area, with at least one query line that contains a distinguishing keyword from the thesis sub-area.
+3. **Flag misalignments.** Any thesis sub-area without a matching block is flagged for immediate vocabulary-block creation in the next revision. Any vocabulary block without a corresponding thesis sub-area is flagged for review (could be vestigial from an earlier thesis version).
+4. **Run on every thesis bump.** Always run the alignment audit immediately after a thesis version bump. The audit is the gate between "thesis updated" and "next cycle ready to run."
+
+**Current alignment state (v4.7 baseline):**
+
+| Thesis Sub-Area (v2.7) | Vocabulary Block | Status |
+|---|---|---|
+| Research — Consumer behaviour & market analysis | "Research Team Vocabulary" block (v4.4) | ✅ aligned |
+| Research — Investable Everything: Product Inversion & Access | "Investable Everything — Product Inversion & Access" (v4.5) | ✅ aligned |
+| Research — Investable Everything: Tokenization & Fractionalization | "Investable Everything — Tokenization & Fractionalization" (v4.5) | ✅ aligned |
+| Research — Wealth-Generation Reinvention | "Wealth-Generation Reinvention" (v4.5) | ✅ aligned |
+| Studio — Voice AI through Estate Planning | Personal Agent / S-Front Regulated Retail Front-Door | ✅ aligned (organic) |
+| Studio — Nostradamus predictive framework | "Forecasting / Nostradamus / JTBD-for-agents" (v4.4) | ✅ aligned |
+| Studio — Intelligent Tax Agent | Tax Optimisation Agent block | ✅ aligned |
+| Greens — KYA / Compliance / Audit / Orchestration / Payments | All gap-category blocks | ✅ aligned |
+
+All thesis sub-areas now have matching vocabulary blocks. Future revisions: re-run after every thesis bump.
+
+---
+
+## 🔷 Thesis-Diff Trigger *(new v4.7)*
+
+Every thesis version bump triggers an immediate scoped sweep against what's NEW since the prior version. This formalises a process that ran ad-hoc today (Studio sweep after thesis v2.4, Research sweep after v2.6) and worked.
+
+**Protocol:**
+
+1. **Compute the diff.** When `config/thesis.md` is updated, identify what's new in the version-table row vs. the prior version. New sub-areas, new gap categories, new reference archetypes.
+2. **Run the alignment audit.** Per above — confirm vocabulary blocks exist for all new content, or create them in the same revision.
+3. **Sweep the diff.** Run targeted queries scoped only to what's new. Don't re-run unchanged categories.
+4. **Card the hits.** Add new cards to startups-data.js with appropriate `bgTeam` tags reflecting the new sub-areas.
+5. **Update search-state.json.** Record the diff-sweep run, which categories produced hits, and which produced none.
+
+**Why this matters:** without an explicit trigger, a thesis change can sit "in the docs but not in the search" for cycles, which is the failure mode that left Research at 8 cards while Studio was at 20. The diff trigger ensures every thesis movement causes immediate search movement.
+
+---
+
+## 🌐 Multilingual European Queries *(new v4.7)*
+
+Anglo press is biased toward US/UK fintech. Continental Europe gets covered first in non-English outlets. Given BG's European-preferred bias (compliance-native by default), running queries in local languages closes a real coverage gap.
+
+### German (Germany / Austria / Switzerland)
+- `KI-Agenten Fintech Startup Seed Series A 2026 Berlin München`
+- `agentic AI Vermögensverwaltung Plattform Startup 2026 Finanzierung`
+- `KI-native Bank Compliance Audit Startup 2026 Seed`
+
+### French (France / Belgium / Luxembourg / Switzerland)
+- `agents IA fintech startup levée de fonds 2026 Paris`
+- `IA agentique gestion de patrimoine plateforme startup 2026`
+- `conformité réglementaire IA startup fintech France 2026 seed Series A`
+
+### Spanish (Spain / LatAm)
+- `agentes IA fintech startup ronda semilla 2026 Madrid Barcelona`
+- `IA agéntica gestión de patrimonio plataforma startup 2026 financiación`
+- `cumplimiento normativo IA startup fintech 2026 ronda Serie A`
+
+### Italian
+- `agenti IA fintech startup seed Series A 2026 Milano Roma`
+- `IA agentica gestione patrimoniale piattaforma startup 2026 finanziamento`
+
+### Portuguese (Portugal / Brazil)
+- `agentes IA fintech startup seed Series A 2026 Lisboa Porto`
+- `IA agêntica gestão patrimonial plataforma startup 2026 financiamento`
+
+**Cadence:** run multilingual block once per quarter, scoped to the European geography rotation. If hits appear, port the relevant English phrasing into the standard vocabulary blocks for ongoing coverage.
+
+---
+
+## ⬜ Persistent Search State *(new v4.7)*
+
+A new file at `config/search-state.json` tracks per-cycle search performance so the orchestrator can prioritise underexplored areas across cycles instead of re-running the same queries blindly. Without this, every cycle is a clean slate and we don't learn from what didn't work.
+
+**Tracked per query category:**
+- `last_run_at` — timestamp of last execution
+- `hits_per_run` — count of new (non-dedup) candidates surfaced over recent runs
+- `dedup_collision_rate` — fraction of results that were already in pipeline
+- `empty_run_streak` — consecutive cycles producing zero new candidates
+- `card_count` — current pipeline depth in this category
+
+**Tracked per team / sub-area:**
+- `card_count` — current Research/Studio/Greens count and per-sub-area count
+- `target` — gating threshold (e.g. Research ≥15 within 3 cycles)
+- `next_cycle_targets` — empty cells flagged by negative-space audit
+
+**Auto-deprecation rule:** any query with `empty_run_streak >= 3` is moved to a `quarantined_queries` list for review. Either deprecate or rephrase.
+
+**Auto-promotion rule:** any query with `dedup_collision_rate < 0.2` and `hits_per_run >= 1` over 3 consecutive cycles is marked as `high_yield` and run every cycle.
+
+The file is initialised in this revision with seed data from the v4.7 audit (Research at 21 cards, four under-represented sub-areas, etc.) — see `config/search-state.json`.
+
+---
+
 ## Master Negative Filter (append globally where relevant)
 
 ```
@@ -695,6 +794,7 @@ Cycle 8 PM precedent: Sequence Markets ($20M YC W26) and Fere AI both surfaced a
 
 ## Change Log
 
+- **v4.7 (2026-04-29)** — Four new structural improvements addressing the failure mode that recurred four times in this session ("thesis expanded, vocabulary didn't keep up"). (1) 🔶 **Thesis-Vocabulary Alignment Audit** — codified protocol that walks every thesis sub-area and verifies a corresponding query block exists. Catches "category in thesis with no search for it" before the cycle runs. Includes a current-state alignment table showing all v2.7 thesis sub-areas have matching vocabulary blocks. (2) 🔷 **Thesis-Diff Trigger** — every thesis version bump now triggers an immediate scoped sweep against what's NEW since the prior version. Formalises the ad-hoc process that worked today. (3) ⬜ **Persistent Search State** — new file at `config/search-state.json` tracks per-query-category hit rates, dedup-collision rates, empty-cells, per-team coverage, per-sub-area card counts. Auto-deprecation rule: queries with empty_run_streak ≥ 3 are quarantined for review. Auto-promotion rule: queries with low collision rate and consistent hits are run every cycle. (4) 🌐 **Multilingual European Queries** — query block in German / French / Spanish / Italian / Portuguese, scoped to the existing European-preferred geography rotation. Cadence: run once per quarter; if hits appear, port relevant English phrasing into standard blocks. Cycle 10 should run against v4.7 with the alignment audit as a gating check before the sweep begins.
 - **v4.6 (2026-04-29)** — Operational notes updated for Supabase → Turso migration. Header rewritten to point at the Turso endpoint (bg-votes-dpowert2.aws-eu-west-1.turso.io). Earlier change-log entries (v4.1, v4.2, v4.3) flagged "Supabase bg_thesis_feedback query unavailable" — that root cause is now resolved (Supabase free-tier auto-pause; resolved by migration). The next full cycle should re-process any votes cast since 2026-04-15 — the date the Supabase pipeline last produced fresh data. No vocabulary edits this revision.
 - **v4.5 (2026-04-29)** — Two-part update. **Part 1: Vocabulary expansion.** Added three new sub-blocks under Research Team Vocabulary covering Caroline Federal's Investable Everything mandate (Product Inversion & Access; Tokenization & Fractionalization) and the v2.6 Wealth-Generation Reinvention vector (AI-native RIAs, family-office OS, retail private markets, novel asset-class access). Manual sweep this cycle added 7 Research-tagged cards (Versus, Noise, TYTL, Seeds, Willow Wealth, Asseta AI, Marloo) plus dual-tagged Astor and Era as Studio+Research; Research went from 8 → 21 cards. **Part 2: Structural improvements.** Three new structural blocks added beyond category vocabulary: (i) 🟣 **Investor-Portfolio Walks** — query templates for high-conviction lead investors (Paradigm, Bessemer, ICONIQ, Felicis, Nyca, Motive, Blackbird, Square Peg, Mistral Venture Partners, Mouro, Anthemis, MiddleGame, YC) so each strong card surfaces adjacent plays; (ii) 🟢 **Reverse-Archetype Queries** — "alternatives to X" / "competitors to X" lookups against bene-gesserit-card skill reference signals (Kalshi, Polymarket, Robinhood, Securitize, Republic, Rally, Compound, Long Angle, Vise, Wealth.com, Mantic, Sooth Labs, Astor, Era, Trusty); (iii) 🟡 **Negative-Space Audit Protocol** — codified end-of-cycle checklist with per-team count targets, per-sub-area card counts, per-archetype coverage check, investor-portfolio coverage check, geography rotation, time-window granularity. Output: a "Next-Cycle Targets" sub-section in each cycle's changelog. The v4.5 audit identifies 4 empty/under-represented cells the next cycle must address: alternative data for life events (0), frontier-research vendors for regulated environments (0), Tokenization (1, needs second), Consumer behaviour × health × wealth × mental (1, needs second). Cycle 9 was the last full carry-forward; cycle 10 should run against v4.5.
 - **v4.4 (2026-04-29)** — Three-team architecture (thesis v2.4) absorbed. New 🔵 Research Team Vocabulary block added covering five sub-areas: consumer-behaviour AI × health × wealth × mental, alternative data for life events, forecasting / Nostradamus / JTBD-for-agents, frontier-research vendors for regulated environments, agent-callable signal infrastructure. Reference companies enumerated (Mantic, Sooth Labs, Nayya, Octen, AgentSmyth/Serafis/Kimpton AI, Aether DataHub, Cohesion/Trata). Target set: Research-tagged cards ≥15 within 3 cycles. Trigger for the change: 2026-04-29 thesis-update review surfaced Research underrepresentation (8 cards vs Studio 20 / Greens 63) — manual Studio sweep this same cycle added 9 cards (Trusty, Wealth.com, Avantos, Mantic, Savvy Wealth, Vise, Nayya, Sooth Labs, Octen) bringing totals to Studio 27 / Research 12 / Greens 63. Studio vocabulary already covered organically through Personal Agent / Tax Optimisation / front-door queries — no new Studio-specific block needed. Greens vocabulary already covered through compliance / KYA / orchestration / payment rails.
