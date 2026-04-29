@@ -105,15 +105,41 @@
     max-width: 620px;
   }
 
-  /* ---------- REGION FILTER ---------- */
-  .region-filter {
+  /* ---------- FILTERS (region + team) ---------- */
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    margin-top: 18px;
+  }
+  .filter-group {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .filter-group-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-light);
+    margin-right: 4px;
+  }
+  .filter-divider {
+    width: 1px;
+    align-self: stretch;
+    background: var(--border);
+  }
+  .region-filter { /* legacy class — kept for backward compatibility */
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 18px;
     align-items: center;
   }
-  .region-btn {
+  .region-btn, .team-btn {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     font-weight: 500;
@@ -136,7 +162,7 @@
     border-color: var(--text-heading);
     color: #fff;
   }
-  .region-btn .region-count {
+  .region-btn .region-count, .team-btn .team-count {
     font-size: 0.62rem;
     background: rgba(0,0,0,0.06);
     border-radius: 100px;
@@ -144,7 +170,38 @@
     color: inherit;
     opacity: 0.85;
   }
-  .region-btn.active .region-count { background: rgba(255,255,255,0.18); }
+  .region-btn.active .region-count, .team-btn.active .team-count { background: rgba(255,255,255,0.18); }
+
+  /* Team pills — colour-coded per team */
+  .team-btn[data-team="Research"] { border-color: var(--blue); color: var(--blue); }
+  .team-btn[data-team="Research"]:hover { background: var(--blue-light); }
+  .team-btn[data-team="Research"].active { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .team-btn[data-team="Studio"] { border-color: var(--coral); color: var(--coral); }
+  .team-btn[data-team="Studio"]:hover { background: var(--coral-light); }
+  .team-btn[data-team="Studio"].active { background: var(--coral); border-color: var(--coral); color: #fff; }
+  .team-btn[data-team="Greens"] { border-color: var(--accent); color: var(--accent-dark); }
+  .team-btn[data-team="Greens"]:hover { background: var(--accent-light); }
+  .team-btn[data-team="Greens"].active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* Team accent on cards — coloured left edge */
+  .kanban-card { position: relative; }
+  .kanban-card[data-team-primary]::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 14px 0 0 14px;
+    background: var(--text-light);
+  }
+  .kanban-card[data-team-primary="Research"]::before { background: var(--blue); }
+  .kanban-card[data-team-primary="Studio"]::before { background: var(--coral); }
+  .kanban-card[data-team-primary="Greens"]::before { background: var(--accent); }
+  .kanban-card[data-team-primary="multi"]::before {
+    background: linear-gradient(180deg, var(--coral) 0%, var(--coral) 50%, var(--blue) 50%, var(--blue) 100%);
+  }
+  .kanban-card-meta .kanban-card-tag.team-Research { background: var(--blue-light); color: var(--blue); border-color: var(--blue-light); }
+  .kanban-card-meta .kanban-card-tag.team-Studio { background: var(--coral-light); color: var(--coral); border-color: var(--coral-light); }
+  .kanban-card-meta .kanban-card-tag.team-Greens { background: var(--accent-light); color: var(--accent-dark); border-color: var(--accent-light); }
 
   /* ---------- BOARD ---------- */
   .kanban-board {
@@ -629,11 +686,21 @@
   <div class="container-wide">
     <h1>Kanban</h1>
     <p class="description">Outreach pipeline. Cards tagged for follow-up start in the first column. Drag to move, or click any card to open the full profile, leave a history note, and change stage.</p>
-    <div class="region-filter" id="region-filter">
-      <button class="region-btn active" data-region="all">All <span class="region-count" data-region-count="all">0</span></button>
-      <button class="region-btn" data-region="us">🇺🇸 US <span class="region-count" data-region-count="us">0</span></button>
-      <button class="region-btn" data-region="europe">🇪🇺 Europe <span class="region-count" data-region-count="europe">0</span></button>
-      <button class="region-btn" data-region="asia">🌏 Asia <span class="region-count" data-region-count="asia">0</span></button>
+    <div class="filters-bar">
+      <div class="filter-group" id="region-filter">
+        <span class="filter-group-label">Region</span>
+        <button class="region-btn active" data-region="all">All <span class="region-count" data-region-count="all">0</span></button>
+        <button class="region-btn" data-region="us">🇺🇸 US <span class="region-count" data-region-count="us">0</span></button>
+        <button class="region-btn" data-region="europe">🇪🇺 Europe <span class="region-count" data-region-count="europe">0</span></button>
+        <button class="region-btn" data-region="asia">🌏 Asia <span class="region-count" data-region-count="asia">0</span></button>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filter-group" id="team-filter">
+        <span class="filter-group-label">Team</span>
+        <button class="team-btn" data-team="Research" title="Research — alternative data, signal intelligence, market analysis">Research <span class="team-count" data-team-count="Research">0</span></button>
+        <button class="team-btn" data-team="Studio" title="Studio — voice AI, predictive agents, intelligent tax">Studio <span class="team-count" data-team-count="Studio">0</span></button>
+        <button class="team-btn" data-team="Greens" title="Greens — regulated rails, KYA, compliance, audit, payment infrastructure">Greens <span class="team-count" data-team-count="Greens">0</span></button>
+      </div>
     </div>
     <div id="kanban-status" class="kanban-status"></div>
   </div>
@@ -680,7 +747,7 @@
   </div>
 </div>
 
-<script src="startups-data.js?v=20260429b"></script>
+<script src="startups-data.js?v=20260429c"></script>
 <script>
 /* ============================================================
    TURSO CONFIG (same as pipeline.html)
@@ -750,6 +817,9 @@ let voter = (function () {
   return 'Dave';
 })();
 let activeSlug = null;
+let activeTeam = (function () {
+  try { return localStorage.getItem('bg_kanban_team') || null; } catch (e) { return null; }
+})();
 let activeRegion = (function () {
   try { return localStorage.getItem('bg_kanban_region') || 'all'; } catch (e) { return 'all'; }
 })();
@@ -835,6 +905,14 @@ function regionMatches(geo, region) {
   return _regions(geo).includes(region);
 }
 
+function _teams(s) {
+  return Array.isArray(s.bgTeam) ? s.bgTeam : [];
+}
+function teamMatches(s, team) {
+  if (!team) return true;
+  return _teams(s).includes(team);
+}
+
 function renderBoard() {
   STAGES.forEach(stage => {
     const list = document.querySelector(`[data-cards="${stage}"]`);
@@ -843,20 +921,28 @@ function renderBoard() {
 
   const counts = { followup: 0, contacted: 0, talked_to: 0, accepted: 0, rejected: 0 };
   const regionCounts = { all: 0, us: 0, europe: 0, asia: 0 };
+  const teamCounts = { Research: 0, Studio: 0, Greens: 0 };
 
   // Collect kanban cards: any startup whose stage resolves to a column
   const onBoardAll = startups
     .map(s => ({ s, stage: stageOf(s.slug) }))
     .filter(x => x.stage !== null);
 
-  // Tally region counts (across the whole board, regardless of active filter)
+  // Tally region counts within the active team filter (so the region count shifts
+  // when a team is selected — matches Dave's mental model: "how many EU Studio cards?")
+  // Tally team counts within the active region (likewise).
   onBoardAll.forEach(({ s }) => {
-    regionCounts.all++;
-    _regions(s.geo).forEach(r => { if (regionCounts[r] !== undefined) regionCounts[r]++; });
+    if (teamMatches(s, activeTeam)) {
+      regionCounts.all++;
+      _regions(s.geo).forEach(r => { if (regionCounts[r] !== undefined) regionCounts[r]++; });
+    }
+    if (regionMatches(s.geo, activeRegion)) {
+      _teams(s).forEach(t => { if (teamCounts[t] !== undefined) teamCounts[t]++; });
+    }
   });
 
-  // Filter by active region
-  const onBoard = onBoardAll.filter(x => regionMatches(x.s.geo, activeRegion));
+  // Filter by active region AND active team (both apply)
+  const onBoard = onBoardAll.filter(x => regionMatches(x.s.geo, activeRegion) && teamMatches(x.s, activeTeam));
 
   // Sort by score desc within each column
   onBoard.sort((a, b) => (b.s.score || 0) - (a.s.score || 0));
@@ -873,7 +959,9 @@ function renderBoard() {
       const empty = document.createElement('div');
       empty.className = 'kanban-empty';
       let msg = 'No cards yet';
-      if (stage === 'followup' && activeRegion === 'all') msg = 'Tag cards in Pipeline →';
+      if (stage === 'followup' && activeRegion === 'all' && !activeTeam) msg = 'Tag cards in Pipeline →';
+      else if (activeTeam && activeRegion !== 'all') msg = `None — ${activeTeam} × ${activeRegion}`;
+      else if (activeTeam) msg = `None for ${activeTeam}`;
       else if (activeRegion !== 'all') msg = 'None in this region';
       empty.textContent = msg;
       list.appendChild(empty);
@@ -889,6 +977,15 @@ function renderBoard() {
   document.querySelectorAll('.region-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.region === activeRegion);
   });
+
+  // Update team filter counts and active state
+  Object.entries(teamCounts).forEach(([t, n]) => {
+    const el = document.querySelector(`[data-team-count="${t}"]`);
+    if (el) el.textContent = n;
+  });
+  document.querySelectorAll('.team-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.team === activeTeam);
+  });
 }
 
 function wireRegionFilter() {
@@ -896,6 +993,20 @@ function wireRegionFilter() {
     btn.addEventListener('click', () => {
       activeRegion = btn.dataset.region;
       try { localStorage.setItem('bg_kanban_region', activeRegion); } catch (e) {}
+      renderBoard();
+    });
+  });
+}
+
+function wireTeamFilter() {
+  document.querySelectorAll('.team-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle: clicking the active team clears the filter
+      activeTeam = (activeTeam === btn.dataset.team) ? null : btn.dataset.team;
+      try {
+        if (activeTeam) localStorage.setItem('bg_kanban_team', activeTeam);
+        else localStorage.removeItem('bg_kanban_team');
+      } catch (e) {}
       renderBoard();
     });
   });
@@ -909,10 +1020,16 @@ function buildCardEl(s) {
   card.draggable = true;
   card.dataset.slug = s.slug;
 
+  // Team — coloured left edge + chip; multi-team cards get a striped edge
+  const teams = _teams(s);
+  if (teams.length === 1) card.dataset.teamPrimary = teams[0];
+  else if (teams.length > 1) card.dataset.teamPrimary = 'multi';
+
   // Card name link uses the actual startup URL — clickable as the user requested
   const nameLink = `<a href="${escapeAttr(s.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${escapeText(s.name)}</a>`;
 
   const tags = [];
+  teams.forEach(t => tags.push(`<span class="kanban-card-tag team-${t}" title="${t} team">${t}</span>`));
   if (v.stars) tags.push(`<span class="kanban-card-tag stars">${'★'.repeat(v.stars)}</span>`);
   if (v.note && v.note.trim()) tags.push(`<span class="kanban-card-tag note-flag">note</span>`);
   if (s.gap) tags.push(`<span class="kanban-card-tag" title="${escapeAttr(s.gap)}">${escapeText(truncate(s.gap, 28))}</span>`);
@@ -969,6 +1086,7 @@ function openCardModal(slug) {
       </div>
     </div>
     <div class="modal-tags">
+      ${_teams(s).map(t => `<span class="modal-tag team-${t}" style="${t==='Studio'?'background:var(--coral-light);color:var(--coral);':t==='Research'?'background:var(--blue-light);color:var(--blue);':'background:var(--accent-light);color:var(--accent-dark);'}">${t}</span>`).join('')}
       ${s.gap ? `<span class="modal-tag gap">${escapeText(s.gap)}</span>` : ''}
       ${s.stage ? `<span class="modal-tag stage">${escapeText(s.stage)}</span>` : ''}
       ${s.geo ? `<span class="modal-tag geo">${_flag(s.geo)} ${escapeText(s.geo)}</span>` : ''}
@@ -1166,6 +1284,7 @@ async function init() {
     await ensureSchema();
     votes = await fetchVotes();
     wireRegionFilter();
+    wireTeamFilter();
     renderBoard();
     wireDragDrop();
     const onBoardCount = startups.filter(s => stageOf(s.slug) !== null).length;
