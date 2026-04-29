@@ -321,6 +321,45 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="search-terms">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-search-terms">Search Terms v4.4</span>
+    <span class="entry-source">Manual — Dave (Research underrepresentation)</span>
+  </div>
+  <div class="entry-title">New Research Team Vocabulary block added; target ≥15 Research-tagged cards within 3 cycles</div>
+  <div class="entry-body">
+    <p>Trigger: the 2026-04-29 thesis-update review surfaced that Research was being starved by the existing search vocabulary — 8 cards vs Studio 20 / Greens 63 before this cycle. Root cause: gap-to-team mapping was too narrow (only "Research & Signal Intelligence", "Market Data", and "S2 — Portfolio Construction" routed to Research); the broader Research mandate per thesis v2.4 (consumer behaviour across financial / physical / mental health, alternative data for life events, JTBD validation, frontier-research vendors) had no dedicated query block.</p>
+    <p>v4.4 adds a 🔵 Research Team Vocabulary section covering five sub-areas: <em>consumer-behaviour AI × health × wealth × mental</em>, <em>alternative data for life events</em>, <em>forecasting / Nostradamus / JTBD-for-agents</em>, <em>frontier-research vendors for regulated environments</em>, and <em>agent-callable signal infrastructure</em>. Reference companies enumerated: Mantic, Sooth Labs, Nayya, Octen, AgentSmyth / Serafis / Kimpton AI, Aether DataHub, Cohesion / Trata. Studio vocabulary already covered organically through Personal Agent / Tax Optimisation / front-door queries — no new Studio block needed. Greens vocabulary already covered through compliance / KYA / orchestration / payment rails.</p>
+    <p>The first Phase 0 audit after this update should compare Research team count cycle-on-cycle.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    config/bg-search-terms.md updated: header bumped from v4.3 to v4.4; new Research Team Vocabulary block (~30 query lines across 5 sub-sections + competitive-intelligence watchlist) inserted before Master Negative Filter; change-log entry for v4.4 added describing trigger and vocabulary additions.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="scoring">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-scoring">Pipeline +9</span>
+    <span class="entry-source">Manual sweep — Studio + Research</span>
+  </div>
+  <div class="entry-title">Studio-focused sweep adds 9 new pipeline entries (90 → 99); Research uplift from 8 → 12 cards</div>
+  <div class="entry-body">
+    <p>First sweep run against the v2.4 three-team thesis. Targeted Studio's three 2026 focus projects (Voice AI through Estate Planning, Nostradamus predictive framework, Intelligent Tax Agent) and — after a mid-sweep review flagged Research underrepresentation — broadened to Research-shaped vocabulary as well. Nine new cards land on the radar:</p>
+    <p><strong>Voice AI / Estate Planning (Studio Project 1):</strong> <strong>Trusty</strong> ($1M pre-seed, conversational AI assistant Max + AI document analysis + video bequests; Uberflip founder; BG 78), <strong>Wealth.com</strong> ($65M Series B; Ester Intelligence — purpose-built deterministic AI for advisors; 50K advisors, 3 of top-5 banks; BG 85), <strong>Avantos</strong> ($25M Series A Bessemer + Vanguard + SEI + Guardian; AI-native operating system for client onboarding; BG 86).</p>
+    <p><strong>Nostradamus / Predictive (Studio Project 2 + Research):</strong> <strong>Mantic</strong> ($4M pre-seed, ex-DeepMind + Cambridge ML PhD, top-10 Metaculus; multi-team Studio+Research; BG 81), <strong>Sooth Labs</strong> (~$50M at $335M val, Felicis-led, Yann LeCun + Jeff Dean backing, Andrew Bosworth advising; multi-team; BG 83).</p>
+    <p><strong>Intelligent Tax / Reference Architecture (Studio Project 3):</strong> <strong>Savvy Wealth</strong> ($100M total, AI-native RIA, Savvy Intelligence with Tax Agent on roadmap; BG 80), <strong>Vise</strong> ($172M total, $80B platform AUM, AI direct indexing + options overlay + long/short for RIAs; BG 82).</p>
+    <p><strong>Research-team coverage:</strong> <strong>Nayya</strong> ($106M total, agentic AI health × wealth advisor, 5 of top 10 HR tech, ~4M employees; BG 78), <strong>Octen</strong> ($10M seed Square Peg, fastest agent search API at 60ms / 1M QPS, named finserv use case; BG 72).</p>
+    <p>Pipeline now 99 cards (was 90). Team distribution: <strong>Greens 63 / Studio 27 / Research 12</strong> (was 63 / 20 / 8). Multi-team cards: 3 — Autonomous (S-Front × S2 × S8 × Tax), Mantic (Studio + Research re-tag), Sooth Labs (Studio + Research). Five of the nine cards are past BG's Seed–Series A sweet spot (Wealth.com, Avantos, Savvy Wealth, Vise, Nayya) — flagged in their thesis notes as "benchmark / reference architecture" rather than seed-stage shaping candidates; Dave will calibrate via the vote.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    startups-data.js updated: 9 new entries inserted at the head of the startups array (newest-first), 9 SLUG_DATES entries prepended with date 2026-04-29. Per-team counts verified: Greens 63 unchanged; Studio 20 → 27; Research 8 → 12; multi-team 1 → 3. All new cards carry bgTeam arrays so the Pipeline + Kanban filter pills surface them under the right team. Sources span BusinessWire, Tech.eu, Bloomberg, Fortune, Fierce Healthcare, SiliconANGLE, Fintech Global, WealthManagement.com, BVP, PRNewswire — 27 evidence links across 9 cards.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
