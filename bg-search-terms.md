@@ -1,6 +1,6 @@
 # Bene Gesserit — Search Terms
 
-*Last updated: 2026-04-29 | Revision: v4.3 — Carry-forward of v4.2 with Cycle 9 Phase 0 Coverage Audit alignment confirmed. Phase 0 reconfirms the seven specialist-agent blind spots (S3, S5, S6, S7, S8, S9, S10) and the S2 underrepresentation already encoded in v4.2's Specialist Agent Desert section — vocabulary remains tuned. No vocabulary changes this cycle. (Cycle 8 PM v4.2 changes carried forward: S6 crypto/DeFi exclusions, regulated-securities qualifiers across S2/S5/S6, Paygentic vocabulary calibration, YC W26 follow-on cluster sweeps.) Thesis bumped to v2.3 (challenge signal #8 added: 5-cycle Supabase unreachable streak); no thesis-driven search-terms changes required.*
+*Last updated: 2026-04-29 | Revision: v4.4 — Three-team architecture (thesis v2.4) absorbed into vocabulary. New **Research Team Vocabulary** section added covering consumer-behaviour AI across financial × physical × mental health, alternative data for life events, JTBD/Four-Fits validation platforms, frontier-research vendors for regulated environments, and agent-callable signal infrastructure. Studio Team Vocabulary already covered organically through Personal Agent / Tax Optimisation / front-door specialist queries; Greens vocabulary already covered through compliance / KYA / orchestration / payment rails. Manual Studio sweep this cycle (Trusty, Wealth.com, Avantos, Mantic, Savvy Wealth, Vise, Nayya, Sooth Labs, Octen) closed Studio's pre-vocabulary gap; Research now has dedicated query block to prevent the underrepresentation that surfaced in the 2026-04-29 thesis-update review (Research at 8 cards vs Studio 20 / Greens 63 before this cycle).*
 
 ---
 
@@ -513,6 +513,67 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 
 ---
 
+## 🔵 Research Team Vocabulary *(new v4.4 — Caroline / Matt / Molly mandate)*
+
+The Research team's mandate per thesis v2.4: *forward-looking knowledge function — custom GPT-driven research into consumer behaviour across financial / physical / mental health, market analysis, fundamental research, problem-statement validation.* Reference Research-team companies in the pipeline: **Mantic** (forecasting, multi-team Studio+Research), **Sooth Labs** (predictive geopolitical/market events, multi-team), **Nayya** (health × wealth advisory), **Octen** (agent-callable signal infrastructure), **AgentSmyth / Serafis / Kimpton AI** (Research & Signal Intelligence — 5★ vote-validated trio), **Aether DataHub** (market data), **Cohesion / Trata** (S1 — institutional research).
+
+The first Phase 0 audit after this update should compare Research team count cycle-on-cycle. Target: ≥15 Research-tagged cards within 3 cycles.
+
+### Consumer-Behaviour AI × Health × Wealth × Mental
+*The financial × physical × mental health intersection Studio's research request to Research is asking about. Nayya is the production benchmark.*
+
+- `"consumer behaviour" AI agent "financial wellness" startup 2026`
+- `"health and wealth" agentic AI advisor benefits platform 2026 funding`
+- `"mental health" AND "financial planning" AI agent startup seed Series A 2026`
+- `"agentic AI" employee benefits health wealth Series A B 2026`
+- `"financial × health" OR "health and wealth" AI consumer research startup 2026`
+- `consumer-research API "financial services" agent-callable 2026 seed`
+
+### Alternative Data for Life Events
+*Predictive analytics that anticipate marriage / childbirth / job change / retirement / inheritance and trigger downstream financial workflows.*
+
+- `"life event" prediction AI agent "financial planning" startup 2026 seed`
+- `"alternative data" "life events" finserv agent API 2026`
+- `predictive analytics "financial planning" "12-18 months" AI startup 2026 funding`
+- `"household-level" AI agent advisor predictive life events 2026`
+- `"event prediction" finserv AI startup Felicis OR Bessemer OR a16z 2026`
+
+### Forecasting / Nostradamus / JTBD-for-agents
+*Mantic + Sooth Labs are the seed signals. Look for the next entrants on geopolitical / market / regulatory event prediction.*
+
+- `AI forecasting platform geopolitical market events "financial services" startup 2026`
+- `"superforecasting" OR "Metaculus" AI startup finserv 2026 funding`
+- `predictive AI multimodal "geopolitical" OR "macro" finserv enterprise 2026 seed`
+- `"problem statement validation" JTBD AI agent platform startup 2026 funding`
+- `"jobs to be done" AI research agent platform 2026 seed Series A`
+- `"Four Fits" OR "four-fits" methodology AI research validation platform 2026`
+
+### Frontier-Research Vendors for Regulated Environments
+*Research's collaboration partners on Mistral / Anthropic / academic spinouts. Look for governance-aware research vendors not just LLM wrappers.*
+
+- `"regulated environment" AI research partner Mistral OR Anthropic finserv 2026`
+- `frontier model "financial services" research collaboration startup 2026`
+- `"academic spinout" AI agent finserv 2026 seed`
+- `"AI for finance" research lab "human review" deterministic startup 2026`
+- `"compliance-native" AI research platform startup 2026 funding seed`
+
+### Agent-Callable Signal Infrastructure
+*Octen-class infrastructure exposed as APIs that Research agents can call. The 'agent exposure' preference (kimpton-ai 5★, serafis 5★) — composability over UI.*
+
+- `"agent-callable" search API "financial data" startup 2026 seed`
+- `"MCP server" finserv research data startup 2026 funding`
+- `"agent skills" market data research API finserv 2026 seed Series A`
+- `"composable" research agent infrastructure "financial services" startup 2026`
+
+### Competitive Intelligence — Research-team compression signals
+
+- Watch Wealth.com Ester Intelligence — 100K+ estate documents/year is a research-data moat.
+- Watch Savvy Wealth's "Relationship Monitor" agent — when it ships, it's a Research-team competitive read on consumer signal capture.
+- Watch Nayya's SuperAgent GA in 2026 — first integrated health-wealth agentic interface.
+- Watch Sooth Labs' API exposure — if predictions become callable, Research adoption follows.
+
+---
+
 ## Master Negative Filter (append globally where relevant)
 
 ```
@@ -539,6 +600,7 @@ Cycle 8 PM precedent: Sequence Markets ($20M YC W26) and Fere AI both surfaced a
 
 ## Change Log
 
+- **v4.4 (2026-04-29)** — Three-team architecture (thesis v2.4) absorbed. New 🔵 Research Team Vocabulary block added covering five sub-areas: consumer-behaviour AI × health × wealth × mental, alternative data for life events, forecasting / Nostradamus / JTBD-for-agents, frontier-research vendors for regulated environments, agent-callable signal infrastructure. Reference companies enumerated (Mantic, Sooth Labs, Nayya, Octen, AgentSmyth/Serafis/Kimpton AI, Aether DataHub, Cohesion/Trata). Target set: Research-tagged cards ≥15 within 3 cycles. Trigger for the change: 2026-04-29 thesis-update review surfaced Research underrepresentation (8 cards vs Studio 20 / Greens 63) — manual Studio sweep this same cycle added 9 cards (Trusty, Wealth.com, Avantos, Mantic, Savvy Wealth, Vise, Nayya, Sooth Labs, Octen) bringing totals to Studio 27 / Research 12 / Greens 63. Studio vocabulary already covered organically through Personal Agent / Tax Optimisation / front-door queries — no new Studio-specific block needed. Greens vocabulary already covered through compliance / KYA / orchestration / payment rails.
 - **v4.3 (2026-04-29)** — Cycle 9 carry-forward. Phase 0 Coverage Audit confirms v4.2 vocabulary remains tuned to the persistent gap pattern: 7 specialist-agent blind spots (S3, S5, S6, S7, S8, S9, S10) at 0 pipeline companies, plus S2 (Portfolio Construction & Risk) still at 1. No vocabulary edits — accelerator-batch sweeps remain primary path, S6 crypto-exclusion filter remains in force. Thesis bumped to v2.3 with new challenge signal #8 (vote-pipeline bottleneck — Supabase unreachable for 5 consecutive cycles, preference model frozen at 61 votes since 2026-04-15) — but this is an infrastructure issue, not a search-strategy issue, so no search-terms changes required. Supabase `bg_thesis_feedback` query still unavailable (fifth consecutive cycle).
 - **v4.2 (2026-04-28)** — Targeted refinement against cycle 8 PM (2026-04-27) findings. Three refinements, no architectural changes. (1) **S6 Execution decrypto-fied** — added `-crypto -DeFi -tokenized -"digital assets" -"perpetual swap" -"DEX aggregator" -"on-chain"` as category-specific negative filter and `"broker-dealer"` / `"regulated securities"` / `"listed"` / `"equity"` qualifiers to every S6 query. Cycle 8 precedent: Sequence Markets ($20M YC W26) and Fere AI false positives — both crypto-only execution. (2) **Regulated-securities qualifier added to S2 (Portfolio Construction) and S5 (Options & Derivatives)** — same crypto-noise pattern at lower severity; preventive. New **S-Category Specific Negative Filter** block added below master filter, scoped to S2/S5/S6. (3) **Agent Monetisation upgraded** from "lone entry" framing to "vocabulary calibrated post-Paygentic" — Paygentic ($2M pre-seed, MiddleGame Ventures, ex-Sulu) sourced 2026-04-27 PM via the v4.1 "agent commerce billing finserv" query, confirming v4.1 vocabulary is producing hits; added to reference companies; one query line added for MiddleGame/Sulu founder-network angle. (4) **YC W26 follow-on cluster (Sponge, Maven, Orthogonal)** added to accelerator-batch sweeps — flagged for next-cycle scoring per cycle 8 PM recommendation #4. (5) **AIUC + Armilla European-presence query** added to Dispute Resolution — cycle 8 PM flagged both for card scoring next cycle if European entry plans surface. (6) Accelerator-batch action note expanded with calibration warning: when scoring against S2/S5/S6, auto-skip if primary venue is crypto exchange/DEX. Supabase `bg_thesis_feedback` query unavailable (connection timeout — third consecutive cycle); no new search-terms-specific feedback to incorporate. Thesis v2.2 unchanged since 2026-04-17.
 - **v4.1 (2026-04-27)** — Refresh against thesis v2.2 + 2026-04-27 weekly radar findings. (1) Strict "third-party agent" / "external agent" / "agent marketplace" / "BYOA" qualifiers added across Pre-Trade Compliance, Audit & Explainability, AI Safety, Orchestration, KYA — addresses internal-workflow false-positive noise the Hard Filter was wasting cycles rejecting. (2) **Accelerator-Batch Sweeps** promoted from rotation to first-class 🔴 EVERY SCAN section in response to YC W26 detection signal (Cohesion → S1, Astor → S-Front) — the Specialist Agent Desert is reframed from structural-supply problem to search-strategy problem. (3) **Regulated-Retail Front-Door** sub-track added under Personal Financial Agent capturing the Astor archetype (retail consumer + RIA + brokerage integration). (4) Okta for AI Agents (April 30 GA) and Ping Identity added to Competitive Intelligence as compression signals for KYA. (5) Generic "AI safety" queries removed (commoditised post-acquisition wave; produced zero thesis-aligned candidates 2026-04-20 → 2026-04-27). (6) "agent observability" tightened with finserv qualifier to suppress DevOps noise; `-"DevOps observability"` added to master negative filter. (7) Cohesion added to S1 reference companies. Supabase `bg_thesis_feedback` query unavailable (connection timeout); no new search-terms-specific feedback to incorporate.
