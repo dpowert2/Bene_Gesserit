@@ -321,6 +321,27 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="search-terms">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-search-terms">Search Terms v4.7</span>
+    <span class="entry-source">Manual — Dave (search system improvements)</span>
+  </div>
+  <div class="entry-title">Four structural search improvements address the recurring "thesis expanded, vocabulary didn't keep up" failure mode</div>
+  <div class="entry-body">
+    <p>Today's session contained four interventions where the search vocabulary lagged the thesis: Research starvation (8 cards while Studio had 20), Investable Everything missing from vocabulary, Wealth-Generation Reinvention missing from vocabulary, Supabase resolution not propagated through ops notes. Each was caught manually. v4.7 ships four structural improvements to catch the same pattern automatically next time.</p>
+    <p>🔶 <strong>Thesis-Vocabulary Alignment Audit</strong> — codified protocol that walks every thesis sub-area and verifies a matching query block exists. Catches "category in thesis with no search for it" before the cycle runs. Includes a current-state alignment table showing all v2.7 thesis sub-areas (Research × 4, Studio × 3, Greens) have matching vocabulary blocks. The audit is the gate between "thesis updated" and "next cycle ready."</p>
+    <p>🔷 <strong>Thesis-Diff Trigger</strong> — every thesis version bump now triggers an immediate scoped sweep against what's NEW since the prior version. Formalises the ad-hoc process that ran four times today (Studio sweep after v2.4, Research sweep after v2.6, etc.) and worked. Without this trigger, a thesis change can sit "in the docs but not in the search" for cycles.</p>
+    <p>⬜ <strong>Persistent Search State</strong> — new file at <code>config/search-state.json</code> tracks per-query-category hit rates, dedup-collision rates, empty-cells, per-team coverage, per-sub-area card counts, infrastructure notes. Lets the orchestrator prioritise underexplored areas across cycles instead of re-running the same queries blindly. Auto-deprecation rule: queries with <code>empty_run_streak ≥ 3</code> are quarantined for review. Auto-promotion rule: queries with low collision rate and consistent hits are marked high-yield and run every cycle. Seeded with v4.7 baseline data: 6 next-cycle targets explicitly enumerated (Research × 4 sub-area gaps, Greens specialist desert × 6 sub-areas, multilingual first-run).</p>
+    <p>🌐 <strong>Multilingual European Queries</strong> — query block in German / French / Spanish / Italian / Portuguese, scoped to the existing European-preferred geography rotation. Cadence: run once per quarter; if hits appear, port relevant English phrasing into standard blocks. Closes a real coverage gap given Anglo press bias toward US/UK fintech.</p>
+    <p><strong>Queued for cycle 10 (not shipped this revision):</strong> (a) workflow change to spawn parallel subagents per sub-area instead of running queries serially — trades context budget for breadth; (b) re-engage preference model now that Turso is live, refresh Hard Filter list against any votes since 2026-04-15.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    config/bg-search-terms.md updated: header bumped v4.6 → v4.7; four new structural blocks added (Thesis-Vocabulary Alignment Audit with current-state alignment table; Thesis-Diff Trigger with 5-step protocol; Multilingual European Queries with 5 language blocks; Persistent Search State pointing at the new JSON file); change-log entry for v4.7 added. NEW FILE: config/search-state.json (schema v1.0, ~70 lines) with seed data for cycle 9 baseline — team coverage, per-sub-area card counts, six explicit next-cycle targets, infrastructure notes recording the Turso migration. Cycle 10 will be the first to run with the alignment audit as a gating check before the sweep begins.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="thesis">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
