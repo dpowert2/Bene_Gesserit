@@ -320,6 +320,38 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-system">Infrastructure</span>
+    <span class="entry-source">Manual — Dave</span>
+  </div>
+  <div class="entry-title">Voting infrastructure migrated from Supabase to Turso — all 27 run pages updated</div>
+  <div class="entry-body">
+    <p>Supabase free tier auto-pauses after 1 week of inactivity, causing the voting endpoint to go offline and silently drop all saves. Migrated the entire voting backend to <strong>Turso</strong> (libSQL, free tier, never pauses). All 62 existing votes migrated. The fetch shim across all 27 HTML files (run pages, pipeline, archive) now points to <code>bg-votes-dpowert2.aws-eu-west-1.turso.io</code> via the Turso HTTP API. A <strong>localStorage backup layer</strong> was also added: votes are written to localStorage on every save and loaded instantly on page open, providing a fallback if the remote is ever unreachable. Follow-up states and note fields are now durable across sessions.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Turso database: bg-votes (62 rows migrated from Supabase bg_votes table). Shim updated across 2026-03-09 through 2026-04-29, archive.html, pipeline.html. Supabase project archived.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-system">Data Fix</span>
+    <span class="entry-source">Manual — Dave</span>
+  </div>
+  <div class="entry-title">Nava URL corrected to navalabs.ai across all pages</div>
+  <div class="entry-body">
+    <p>Nava's header link on the 2026-04-14 and 2026-04-17 run pages was pointing to <code>nava.xyz</code> (a domain squatter). Corrected to <code>https://navalabs.ai/</code> in both run pages and the pipeline/detected/nava.md source file. Evidence links in those pages updated to match.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    2026-04-14.html, 2026-04-17.html, pipeline/detected/nava.md — URL field and evidence section corrected.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="scoring">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
