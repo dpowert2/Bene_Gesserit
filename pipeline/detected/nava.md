@@ -1,6 +1,6 @@
 # Nava
 
-**URL:** https://nava.xyz
+**URL:** https://navalabs.ai/
 **Gap:** Cat 5 / Cat 7 / Cat 10 — AI Safety + Agent Payment Rails + Dispute Resolution
 **Stage:** Seed
 **Geo:** US (stealth — no city confirmed)
