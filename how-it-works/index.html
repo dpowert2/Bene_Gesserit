@@ -474,21 +474,58 @@ body {
 </div>
 
 <!-- ════════════════════════════════════════════
+     03b — THE THREE TEAMS (added v2.4–v2.6)
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">03b — The Three Teams</div>
+  <h2>Three operating teams, three mandates, three time horizons</h2>
+  <p>Bene Gesserit isn't scouting "the platform" in the abstract. It's scouting on behalf of three operating teams, each with a distinct mandate, time horizon, and definition of "good." A startup that's wrong for one team can be exactly right for another. Every signal in the pipeline carries a team tag (Research / Studio / Greens, or cross-team), and the team filter sits alongside region in the Pipeline and Kanban UIs.</p>
+
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-num">R</div>
+      <div class="cat-name">Research</div>
+      <div class="cat-desc">Forward-looking knowledge function. Three sub-areas: <em>Consumer behaviour &amp; market analysis</em> across financial / physical / mental health; <em>Investable Everything</em> — Product Inversion (prediction-market mechanics, retail derivatives) and Tokenization &amp; Fractionalization (real estate, private equity, music IP, litigation finance); <em>Wealth-Generation Reinvention</em> — AI-native RIAs, family-office OS, novel asset-class access for retail. Time horizon: 12–24 months.</div>
+      <span class="cat-badge high">12–24mo</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">S</div>
+      <div class="cat-name">Studio</div>
+      <div class="cat-desc">The 0-to-1 venture team. Prototypes new ventures inside emerging tech (voice, agents, predictive frameworks) before they're ready for the core platform. Three 2026 focus projects: <em>Voice AI through Estate Planning</em>, <em>Nostradamus</em> (predictive agent framework), <em>Intelligent Tax Agent</em> (direct-indexing-aware TLH). Validates problems through a three-gate Venture Opportunity Evaluation Framework: ecosystem validation → internal board → external market validation by the Strategic Investment Committee. Time horizon: 6–18 months.</div>
+      <span class="cat-badge every">6–18mo</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">G</div>
+      <div class="cat-name">The Greens</div>
+      <div class="cat-desc">Execution and infrastructure. Owns the regulated rails — tax APIs, account structure, custody, brokerage operations. Where graduated ventures land for production deployment. Wants compliance-native primitives, agent-callable wrappers around existing capabilities, KYA (Know Your Agent), pre-trade compliance, audit infrastructure that lets the rails serve the agent marketplace safely. Time horizon: 0–12 months.</div>
+      <span class="cat-badge medium">0–12mo</span>
+    </div>
+  </div>
+
+  <p>The same gap map applies to every team, but the <em>priority</em> of each gap shifts depending on which team needs it next. A pre-trade compliance startup is critical for The Greens but not on Studio's roadmap. A voice-AI estate-planning platform is core to Studio Project 1 but a curiosity for The Greens. The team filter makes those routing decisions visible.</p>
+
+  <div class="callout">
+    <div class="callout-label">Key insight</div>
+    <p style="margin:0">Multi-team cards exist. A predictive agent framework (Nostradamus) is Studio's project but also serves Research's market-analysis mandate — so it gets dual-tagged. The pipeline's filter UI lets you see "Studio × EU" or "Research × on-target stage" or any other intersection, surfacing the cross-team signal that single-tag taxonomies hide.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
      04 — THE SEARCH ENGINE
      ════════════════════════════════════════════ -->
 <div class="section">
   <div class="section-number">04 — The Search Engine</div>
-  <h2>160 queries that rewrite themselves</h2>
-  <p>Most scouting tools use fixed search terms. Bene Gesserit generates its own. The Search Terms Agent reads the current thesis and produces a structured query set — organised by gap category, tagged by priority, and complete with negative filters to exclude noise.</p>
+  <h2>336 queries that rewrite themselves</h2>
+  <p>Most scouting tools use fixed search terms. Bene Gesserit generates its own. The Search Terms Agent reads the current thesis and produces a structured query set — organised by gap category, tagged by priority, by team mandate (Research / Studio / Greens), and by sub-area, complete with negative filters to exclude noise.</p>
 
   <div class="stat-row">
     <div class="stat-cell">
       <div class="stat-label">Search queries</div>
-      <div class="stat-value">160</div>
+      <div class="stat-value">336</div>
     </div>
     <div class="stat-cell">
       <div class="stat-label">Gap categories</div>
-      <div class="stat-value">12</div>
+      <div class="stat-value">22</div>
     </div>
     <div class="stat-cell">
       <div class="stat-label">Scan frequency</div>
@@ -721,8 +758,8 @@ body {
     </div>
     <div class="stack-item">
       <div class="si-label">Data Layer</div>
-      <div class="si-name">Supabase</div>
-      <div class="si-desc">PostgreSQL database for votes, feedback, and pipeline state. Row-level security for access control. Real-time subscriptions for live updates.</div>
+      <div class="si-name">Turso (libSQL)</div>
+      <div class="si-desc">Serverless SQLite at the edge for votes, feedback, kanban stage transitions, and pipeline state. Free tier never auto-pauses (migrated from Supabase 2026-04-29 after the auto-pause silently dropped saves). localStorage fallback layer ensures client-side durability if remote is briefly unreachable.</div>
     </div>
     <div class="stack-item">
       <div class="si-label">Auth & Edge</div>
@@ -772,15 +809,86 @@ body {
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Scope expansion</div>
-      <div class="timeline-text">The system started with 6 gap categories and 50 search queries. After learning from radar results and drift analysis, it expanded to 12 categories and 160 queries — doubling its search surface and immediately finding companies in previously uncovered areas.</div>
+      <div class="timeline-text">The system started with 6 gap categories and 50 search queries. As of mid-2026 it covers 22 gap categories and 336 search queries — the search surface tracking the thesis as it expands. The 2026-04-29 thesis bump to v2.7 added a three-team architecture (Research / Studio / Greens) with its own vocabulary blocks, including Caroline Federal's <em>Investable Everything</em> framework (Product Inversion + Tokenization) and <em>Wealth-Generation Reinvention</em>.</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Self-awareness</div>
-      <div class="timeline-text">The system tracks its own data starvation. It knows that 91% of its pipeline is unvoted and explicitly recommends which specific votes would provide the highest marginal calibration value — acting as its own research advisor.</div>
+      <div class="timeline-text">The system tracks its own data starvation. The persistent <code>config/search-state.json</code> file records per-team coverage, per-sub-area card counts, and "next-cycle targets" — empty cells the next sweep must fill. The negative-space audit runs at the end of every cycle and outputs a target list rather than letting blind spots silently persist.</div>
     </div>
   </div>
 
-  <p>This is the recursive learning flywheel in action. Eight votes produced dozens of scoring adjustments, search term refinements, negative filters, blind spot trackers, and thesis drift observations — each of which makes the next scan more precise. The system doesn't need thousands of data points because it treats each human judgment as a high-value signal and extracts maximum information from it.</p>
+  <p>This is the recursive learning flywheel in action. Each human judgment produces dozens of scoring adjustments, search term refinements, negative filters, blind spot trackers, and thesis drift observations — each of which makes the next scan more precise. The system doesn't need thousands of data points because it treats each vote as a high-value signal and extracts maximum information from it.</p>
+</div>
+
+<!-- ════════════════════════════════════════════
+     09b — CALIBRATION DISCIPLINE (added v4.7–v4.8)
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">09b — Calibration Discipline</div>
+  <h2>Hard gates, alignment audits, and post-mortems</h2>
+  <p>A recursive system can drift in both directions. The thesis can over-constrain ("we only buy seed-stage Europe"). It can also under-constrain — get rationalised, gate-widened, scope-crept. Bene Gesserit's calibration discipline addresses both with deterministic checks rather than vibes.</p>
+
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-num">G1</div>
+      <div class="cat-name">Stage HARD GATE</div>
+      <div class="cat-desc">Pre-seed, seed, early Series A only. Series B+ goes in Competitive Intelligence, not the pipeline. No "reference architecture" exception. Applied <em>pre-scoring</em>, not after-the-fact rationalisation.</div>
+      <span class="cat-badge every">Pre-scoring</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">G2</div>
+      <div class="cat-name">Adjacency HARD GATE</div>
+      <div class="cat-desc">A candidate must have a <em>primary</em> fit to a thesis sub-area. The financial / regulated-services dimension must be the lead, not a side-feature. Horizontal players, sidecar-finserv plays, and crypto-only execution venues are filtered before scoring.</div>
+      <span class="cat-badge every">Pre-scoring</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">A1</div>
+      <div class="cat-name">Thesis-Vocabulary Alignment Audit</div>
+      <div class="cat-desc">Walks every thesis sub-area and verifies a corresponding query block exists. Catches "category in thesis with no search for it" — the failure mode where the thesis expanded but vocabulary didn't keep up. Runs after every thesis bump.</div>
+      <span class="cat-badge high">Per thesis bump</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">A2</div>
+      <div class="cat-name">Thesis-Diff Trigger</div>
+      <div class="cat-desc">Every thesis version bump triggers an immediate scoped sweep against what's NEW since the prior version. New sub-areas don't sit idle in the document while the radar runs the old vocabulary.</div>
+      <span class="cat-badge high">Per thesis bump</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">A3</div>
+      <div class="cat-name">Negative-Space Audit</div>
+      <div class="cat-desc">End-of-cycle 6-step checklist: per-team count vs target, per-sub-area card count, per-archetype coverage, investor-portfolio coverage, geography rotation, time-window granularity. Output: a "Next-Cycle Targets" sub-section listing 3–5 empty cells the next sweep must fill.</div>
+      <span class="cat-badge high">Every cycle</span>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">A4</div>
+      <div class="cat-name">Investor-Portfolio Walks</div>
+      <div class="cat-desc">When a strong card surfaces, walk the lead investor's other 2025–26 portfolio for adjacent plays the press cycle missed. The fund's bets are usually thesis-aligned by definition. Run as the FINAL step of every sweep.</div>
+      <span class="cat-badge medium">End of every sweep</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Worked example — 2026-04-29 cull</div>
+    <p style="margin:0">A morning sweep added 16 cards. A calibration review flagged 8 as misfits — 5 Series B/C plays rationalised as "reference architecture," and 3 adjacency-mismatches (crypto-only attention market, horizontal search API, mass-market prediction app where financial was a side-feature). All 8 were culled. The pipeline went 106 → 98. The lesson — that gate-widening rationalisations get caught only if the gates are <em>hard</em> — was encoded in search-terms v4.8 as the new pre-scoring discipline. The same evening's re-run added 3 cards and 0 misfits.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     09c — PRIVACY & GOVERNANCE
+     ════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-number">09c — Privacy &amp; Governance</div>
+  <h2>A deterministic pre-publish gate</h2>
+  <p>Bene Gesserit ingests private materials — uploaded screenshots, internal hypothesis notes, partner contact lists — and produces a public website at GitHub Pages. The default is conservative: anything shared with the system is private unless explicitly cleared. The structural protection is a deterministic pre-publish gate, not a manual review.</p>
+
+  <p>The <code>scripts/privacy-check.sh</code> script greps the working tree against <code>config/redact-list.txt</code> using word-bounded regex. If any redacted term appears in a file that would be pushed to GitHub, the check exits non-zero and prints all hits with file paths and line numbers. The redact list itself is gitignored — never reaches GitHub. Operators add terms to the list; the check enforces them.</p>
+
+  <div class="callout">
+    <div class="callout-label">What's redacted by default</div>
+    <p style="margin:0">Personal names from private materials (internal team members, partner contacts whose names came from uploaded notes); internal initiative names; sensitive partner identifiers. <strong>Kept</strong>: factual public-record references (founder names from press coverage of pipeline startups), reference archetypes (Kalshi, Polymarket, Robinhood), and external partner companies that have public BG presence (Mistral, Anthropic, Mantic).</p>
+  </div>
+
+  <p>The pre-publish discipline is enforced by hard rule in <code>CLAUDE.md</code>: every push must run <code>scripts/privacy-check.sh</code> first. A failed check blocks publication until terms are redacted and the check re-runs clean.</p>
 </div>
 
 <!-- ════════════════════════════════════════════
@@ -802,7 +910,7 @@ body {
      FOOTER
      ════════════════════════════════════════════ -->
 <div class="footer">
-  <p>Bene Gesserit — Built with Claude, Supabase, and Cloudflare Workers</p>
+  <p>Bene Gesserit — Built with Claude, Turso, and Cloudflare Workers</p>
 </div>
 
 </div><!-- /page-shell -->
