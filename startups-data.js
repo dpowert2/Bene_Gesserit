@@ -431,3 +431,43 @@ function flagFor(geoStr) {
   }
   return flags.length ? flags.join('') : '🌐';
 }
+
+/* ============================================================
+   Region classifier — maps geo string to "us" | "europe" | "asia"
+   (multi-region geos return multiple). Used by kanban region filter.
+   ============================================================ */
+function _bgSingleRegion(s) {
+  const g = (s || '').toUpperCase();
+  if (/EUROPE\b|EUROPEAN|\bEU\b/.test(g)) return 'europe';
+  if (/UNITED KINGDOM|\bUK\b|LONDON|ENGLAND|SCOTLAND|BRITAIN|LANCASTER|MANCHESTER/.test(g)) return 'europe';
+  if (/GERMANY|BERLIN|MUNICH|HAMBURG/.test(g)) return 'europe';
+  if (/FRANCE|PARIS/.test(g)) return 'europe';
+  if (/SPAIN|MADRID|BARCELONA/.test(g)) return 'europe';
+  if (/NETHERLANDS|AMSTERDAM/.test(g)) return 'europe';
+  if (/SWEDEN|STOCKHOLM/.test(g)) return 'europe';
+  if (/DENMARK|COPENHAGEN/.test(g)) return 'europe';
+  if (/NORWAY|OSLO|FINLAND|HELSINKI/.test(g)) return 'europe';
+  if (/IRELAND|DUBLIN/.test(g)) return 'europe';
+  if (/SWITZERLAND|ZURICH|GENEVA/.test(g)) return 'europe';
+  if (/AUSTRIA|VIENNA|BELGIUM|BRUSSELS/.test(g)) return 'europe';
+  if (/CZECH|PRAGUE|POLAND|WARSAW|PORTUGAL|LISBON|ITALY|MILAN|ROME/.test(g)) return 'europe';
+  if (/\bUSA\b|UNITED STATES|\bU\.S\.|\bUS\b/.test(g)) return 'us';
+  if (/SAN FRANCISCO|NEW YORK|SEATTLE|FORT LAUDERDALE|SAN DIEGO|SAN JOSE|PALO ALTO|BOSTON|AUSTIN|CHICAGO|MIAMI|DENVER|ATLANTA/.test(g)) return 'us';
+  if (/\bCA\b|\bNY\b|\bWA\b|\bFL\b|\bTX\b|\bMA\b|\bIL\b|\bCO\b|\bGA\b/.test(g)) return 'us';
+  if (/INDIA|BANGALORE|BENGALURU|MUMBAI|DELHI/.test(g)) return 'asia';
+  if (/SINGAPORE|HONG KONG|JAPAN|TOKYO|CHINA|BEIJING|SHANGHAI|SHENZHEN|KOREA|SEOUL/.test(g)) return 'asia';
+  if (/SAUDI ARABIA|RIYADH|UAE|DUBAI|ABU DHABI/.test(g)) return 'asia';
+  if (/ISRAEL|TEL AVIV/.test(g)) return 'asia';
+  return null;
+}
+
+function regionsFor(geoStr) {
+  if (!geoStr) return [];
+  const parts = String(geoStr).split('/').map(p => p.trim()).filter(Boolean);
+  const out = new Set();
+  for (const part of parts) {
+    const r = _bgSingleRegion(part);
+    if (r) out.add(r);
+  }
+  return [...out];
+}
