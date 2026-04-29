@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — Kanban</title>
+<meta content="Kanban board for tracking outreach across the Bene Gesserit pipeline." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #F0EBE3;
+    --bg-page: #F7F4EF;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #FDFCFA;
+    --border: #E2DDD5;
+    --border-strong: #D4CEC4;
+    --text: #3D3A36;
+    --text-heading: #1A1816;
+    --text-muted: #8C857B;
+    --text-light: #A9A29A;
+    --accent: #6B8F71;
+    --accent-light: #E8F0E9;
+    --accent-dark: #4A6B4F;
+    --brown: #8B6F54;
+    --brown-light: #F3EDE7;
+    --brown-dark: #6B5340;
+    --coral: #C4716E;
+    --coral-light: #F8EDEC;
+    --blue: #6B849A;
+    --blue-light: #ECF0F4;
+    --amber: #B8944A;
+    --amber-light: #F6F0E2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg-page);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .container-wide { max-width: 1480px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- NAV (matches site) ---------- */
+  .site-nav {
+    background: var(--bg-page);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .site-nav-brand {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-heading);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+  .site-nav-links { display: flex; align-items: center; gap: 8px; }
+  .site-nav-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+  .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+
+  /* ---------- HEADER ---------- */
+  header { padding: 44px 0 20px; }
+  header h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: var(--text-heading);
+    letter-spacing: -1.2px;
+    line-height: 1;
+  }
+  header .description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 10px;
+    max-width: 620px;
+  }
+
+  /* ---------- BOARD ---------- */
+  .kanban-board {
+    display: flex;
+    gap: 14px;
+    padding: 24px 0 60px;
+    overflow-x: auto;
+    align-items: flex-start;
+    scroll-snap-type: x proximity;
+  }
+  .kanban-col {
+    flex: 0 0 280px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 12px 12px;
+    min-height: 200px;
+    scroll-snap-align: start;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .kanban-col.drop-target {
+    background: var(--accent-light);
+    border-color: var(--accent);
+  }
+  .kanban-col-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .kanban-col-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-heading);
+  }
+  .kanban-col-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 2px 8px;
+  }
+  /* Column accent stripes */
+  .kanban-col[data-stage="followup"]    .kanban-col-name { color: var(--coral); }
+  .kanban-col[data-stage="contacted"]   .kanban-col-name { color: var(--brown-dark); }
+  .kanban-col[data-stage="talked_to"]   .kanban-col-name { color: var(--blue); }
+  .kanban-col[data-stage="accepted"]    .kanban-col-name { color: var(--accent-dark); }
+  .kanban-col[data-stage="rejected"]    .kanban-col-name { color: var(--text-muted); }
+
+  .kanban-col-cards { display: flex; flex-direction: column; gap: 10px; min-height: 80px; }
+
+  /* ---------- CARD ---------- */
+  .kanban-card {
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 10px;
+    padding: 12px 12px 10px;
+    cursor: pointer;
+    transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+    position: relative;
+  }
+  .kanban-card:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-color: var(--border-strong);
+    border-left-color: var(--brown);
+    transform: translateY(-1px);
+  }
+  .kanban-card.dragging { opacity: 0.4; cursor: grabbing; }
+  .kanban-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .kanban-card-name {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    color: var(--text-heading);
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    flex: 1;
+    min-width: 0;
+  }
+  .kanban-card-name a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .kanban-card-name a:hover { border-bottom-color: var(--brown); color: var(--brown); }
+  .kanban-card-score {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 2px 7px;
+    flex-shrink: 0;
+    line-height: 1.1;
+  }
+  .kanban-card-score.high  { color: var(--accent-dark); border-color: var(--accent); background: var(--accent-light); }
+  .kanban-card-score.mid   { color: var(--amber); border-color: var(--amber); background: var(--amber-light); }
+  .kanban-card-score.low   { color: var(--text-muted); }
+  .kanban-card-summary {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  .kanban-card-meta {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .kanban-card-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 2px 7px;
+    border-radius: 100px;
+    background: var(--brown-light);
+    color: var(--brown-dark);
+  }
+  .kanban-card-tag.note-flag {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+  }
+  .kanban-card-tag.stars {
+    background: var(--amber-light);
+    color: var(--amber);
+  }
+
+  .kanban-empty {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-light);
+    text-align: center;
+    padding: 24px 8px;
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  /* ---------- TOP BAR (status / count) ---------- */
+  .kanban-status {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+    min-height: 1.2em;
+  }
+  .kanban-status.saving { color: var(--amber); }
+  .kanban-status.saved { color: var(--accent-dark); }
+  .kanban-status.error { color: var(--coral); }
+
+  /* ---------- MODAL ---------- */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.42);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  .modal-backdrop[hidden] { display: none; }
+  .modal-large {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px 32px 26px;
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 0 28px 64px rgba(0,0,0,0.22);
+    margin: 24px auto;
+  }
+  .modal-close {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+  .modal-close:hover { color: var(--text-heading); background: var(--bg-page); }
+
+  .modal-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .modal-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-heading);
+    letter-spacing: -0.7px;
+    line-height: 1.1;
+  }
+  .modal-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .modal-title a:hover { color: var(--brown); border-bottom-color: var(--brown); }
+  .modal-score {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px 11px;
+    flex-shrink: 0;
+  }
+  .modal-score.high { color: var(--accent-dark); border-color: var(--accent); background: var(--accent-light); }
+  .modal-score.mid  { color: var(--amber);       border-color: var(--amber);  background: var(--amber-light); }
+
+  .modal-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 18px; }
+  .modal-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .modal-tag.gap   { background: var(--brown-light); color: var(--brown-dark); }
+  .modal-tag.stage { background: var(--amber-light); color: var(--amber); }
+  .modal-tag.geo   { background: #EEEDEB; color: var(--text-muted); }
+
+  .modal-oneliner {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .modal-section {
+    background: var(--bg-page);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .modal-section .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .modal-section .value {
+    font-size: 0.84rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .modal-thesis {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 16px 0 12px;
+  }
+  .modal-thesis .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--accent-dark);
+    margin-bottom: 6px;
+  }
+  .modal-thesis p { font-size: 0.84rem; color: var(--text); line-height: 1.55; }
+
+  .modal-evidence { margin: 14px 0 22px; }
+  .modal-evidence .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .modal-evidence ul { list-style: none; padding: 0; }
+  .modal-evidence li { padding: 4px 0; font-size: 0.78rem; }
+  .modal-evidence a { color: var(--brown); text-decoration: none; border-bottom: 1px solid transparent; }
+  .modal-evidence a:hover { border-bottom-color: var(--brown); }
+
+  /* Stage controls */
+  .stage-controls {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .stage-controls .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .stage-buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+  .stage-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .stage-btn:hover { color: var(--text-heading); border-color: var(--brown); }
+  .stage-btn.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+  .stage-btn.remove { color: var(--coral); border-color: var(--coral-light); }
+  .stage-btn.remove:hover { background: var(--coral-light); color: var(--coral); border-color: var(--coral); }
+
+  /* History note */
+  .history-section {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .history-section .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .history-section .hint {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  .history-textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.84rem;
+    line-height: 1.55;
+    background: var(--bg-page);
+    color: var(--text);
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .history-textarea:focus { border-color: var(--brown); background: var(--bg-card); }
+  .history-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .btn-primary {
+    background: var(--text-heading);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--brown); }
+  .btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-secondary:hover { color: var(--text-heading); border-color: var(--brown); }
+  .save-status {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-light);
+    min-height: 1em;
+  }
+  .save-status.saving { color: var(--amber); }
+  .save-status.saved  { color: var(--accent-dark); }
+  .save-status.error  { color: var(--coral); }
+
+  /* ---------- LOADING / EMPTY ---------- */
+  .board-loading, .board-error {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .board-error { color: var(--coral); }
+
+  /* ---------- FOOTER ---------- */
+  footer { padding: 40px 0 60px; border-top: 1px solid var(--border); margin-top: 24px; }
+  footer p { color: var(--text-muted); font-size: 0.78rem; margin-bottom: 4px; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 720px) {
+    header h1 { font-size: 2rem; }
+    .modal-large { padding: 22px 18px 20px; }
+    .modal-title { font-size: 1.6rem; }
+    .kanban-col { flex-basis: 250px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container-wide">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link active" href="kanban.html">Kanban</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <a class="site-nav-link" href="archive.html">Archive</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container-wide">
+    <h1>Kanban</h1>
+    <p class="description">Outreach pipeline. Cards tagged for follow-up start in the first column. Drag to move, or click any card to open the full profile, leave a history note, and change stage.</p>
+    <div id="kanban-status" class="kanban-status"></div>
+  </div>
+</header>
+
+<section>
+  <div class="container-wide">
+    <div class="kanban-board" id="kanban-board">
+      <div class="kanban-col" data-stage="followup">
+        <div class="kanban-col-header"><span class="kanban-col-name">↗ Follow Up</span><span class="kanban-col-count" data-count="followup">0</span></div>
+        <div class="kanban-col-cards" data-cards="followup"></div>
+      </div>
+      <div class="kanban-col" data-stage="contacted">
+        <div class="kanban-col-header"><span class="kanban-col-name">→ Contacted</span><span class="kanban-col-count" data-count="contacted">0</span></div>
+        <div class="kanban-col-cards" data-cards="contacted"></div>
+      </div>
+      <div class="kanban-col" data-stage="talked_to">
+        <div class="kanban-col-header"><span class="kanban-col-name">◇ Talked To</span><span class="kanban-col-count" data-count="talked_to">0</span></div>
+        <div class="kanban-col-cards" data-cards="talked_to"></div>
+      </div>
+      <div class="kanban-col" data-stage="accepted">
+        <div class="kanban-col-header"><span class="kanban-col-name">✓ Accepted</span><span class="kanban-col-count" data-count="accepted">0</span></div>
+        <div class="kanban-col-cards" data-cards="accepted"></div>
+      </div>
+      <div class="kanban-col" data-stage="rejected">
+        <div class="kanban-col-header"><span class="kanban-col-name">✕ Rejected</span><span class="kanban-col-count" data-count="rejected">0</span></div>
+        <div class="kanban-col-cards" data-cards="rejected"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container-wide">
+    <p><strong>Bene Gesserit</strong> — outreach kanban tied to the live pipeline.</p>
+    <p>Stage changes and notes sync to the same store as the Pipeline page.</p>
+  </div>
+</footer>
+
+<!-- Card detail modal -->
+<div class="modal-backdrop" id="card-modal" hidden>
+  <div class="modal-large" id="modal-content">
+    <!-- populated dynamically -->
+  </div>
+</div>
+
+<script src="startups-data.js"></script>
+<script>
+/* ============================================================
+   TURSO CONFIG (same as pipeline.html)
+   ============================================================ */
+const TURSO_URL = 'https://bg-votes-dpowert2.aws-eu-west-1.turso.io';
+const TURSO_TOKEN = 'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3Nzc0NTg4MTIsImlkIjoiMDE5ZGQ4Y2MtMDgwMS03MTQ3LTk5YjQtYWQxNDhhNzA5NmUyIiwicmlkIjoiN2RjYzZjYzItOTkyOS00MDU5LWI5YjQtNGE0MzlkZTVhNWY3In0.PcZ5Qaz19H8nTZj7ZS5YapV4WoqxK5NiwSkEU1m1pGUNqBva_DT1Lij3JlrhhDJ130GfFIoSo4adcM8O2VjYAQ';
+
+async function tursoExec(sql, args) {
+  const r = await fetch(`${TURSO_URL}/v2/pipeline`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${TURSO_TOKEN}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      requests: [
+        { type: 'execute', stmt: { sql, args: args || [] } },
+        { type: 'close' }
+      ]
+    })
+  });
+  if (!r.ok) throw new Error('Turso ' + r.status);
+  return r.json();
+}
+
+function parseRows(data) {
+  const res = data.results[0];
+  if (res.type !== 'ok') throw new Error(res.error?.message || 'Turso error');
+  const { cols, rows } = res.response.result;
+  const names = cols.map(c => c.name);
+  return rows.map(row => {
+    const obj = {};
+    names.forEach((n, i) => { obj[n] = row[i]?.value ?? null; });
+    return obj;
+  });
+}
+
+/* ============================================================
+   ONE-TIME MIGRATION: add kanban_stage column
+   ============================================================ */
+async function ensureSchema() {
+  try {
+    await tursoExec("ALTER TABLE bg_votes ADD COLUMN kanban_stage TEXT");
+  } catch (e) {
+    /* "duplicate column name" expected after first run — ignore */
+  }
+}
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const STAGES = ['followup', 'contacted', 'talked_to', 'accepted', 'rejected'];
+const STAGE_LABELS = {
+  followup: '↗ Follow Up',
+  contacted: '→ Contacted',
+  talked_to: '◇ Talked To',
+  accepted: '✓ Accepted',
+  rejected: '✕ Rejected'
+};
+
+let votes = {};   // {slug: {stars, note, voter, followup, archived, kanban_stage, voted_at}}
+let voter = (function () {
+  try {
+    const ls = (localStorage.getItem('bg_voter_name') || '').trim();
+    if (ls) return ls;
+  } catch (e) {}
+  return 'Dave';
+})();
+let activeSlug = null;
+
+/* ============================================================
+   FETCH VOTES
+   ============================================================ */
+async function fetchVotes() {
+  const data = await tursoExec('SELECT * FROM bg_votes');
+  const rows = parseRows(data);
+  const out = {};
+  rows.forEach(row => {
+    out[row.slug] = {
+      stars: parseInt(row.stars) || 0,
+      note: row.note || '',
+      voter: row.voter || '',
+      followup: row.followup === '1' || row.followup === 1,
+      archived: row.archived === '1' || row.archived === 1,
+      kanban_stage: row.kanban_stage || null,
+      voted_at: row.voted_at
+    };
+  });
+  return out;
+}
+
+/* ============================================================
+   SAVE: stage / note / followup
+   Uses UPSERT — touches only the kanban-relevant columns on conflict
+   so existing stars/archived/etc. are preserved.
+   ============================================================ */
+async function saveCard(slug, patch) {
+  if (!votes[slug]) votes[slug] = {};
+  Object.assign(votes[slug], patch);
+  votes[slug].voted_at = new Date().toISOString();
+
+  const v = votes[slug];
+  const sql = `INSERT INTO bg_votes (slug, stars, note, voter, followup, archived, kanban_stage, voted_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+               ON CONFLICT(slug) DO UPDATE SET
+                 note = excluded.note,
+                 voter = excluded.voter,
+                 followup = excluded.followup,
+                 kanban_stage = excluded.kanban_stage,
+                 voted_at = excluded.voted_at`;
+  const args = [
+    { type: 'text',    value: slug },
+    { type: 'integer', value: String(v.stars || 0) },
+    { type: 'text',    value: v.note || '' },
+    { type: 'text',    value: voter || 'Dave' },
+    { type: 'integer', value: v.followup ? '1' : '0' },
+    { type: 'integer', value: v.archived ? '1' : '0' },
+    v.kanban_stage ? { type: 'text', value: v.kanban_stage } : { type: 'null', value: null },
+    { type: 'text',    value: v.voted_at }
+  ];
+  await tursoExec(sql, args);
+}
+
+/* ============================================================
+   STAGE LOGIC
+   ============================================================ */
+function stageOf(slug) {
+  const v = votes[slug] || {};
+  if (v.kanban_stage && STAGES.includes(v.kanban_stage)) return v.kanban_stage;
+  if (v.followup) return 'followup';
+  return null;
+}
+
+function startupBySlug(slug) {
+  return startups.find(s => s.slug === slug);
+}
+
+/* ============================================================
+   RENDER BOARD
+   ============================================================ */
+function renderBoard() {
+  STAGES.forEach(stage => {
+    const list = document.querySelector(`[data-cards="${stage}"]`);
+    list.innerHTML = '';
+  });
+
+  const counts = { followup: 0, contacted: 0, talked_to: 0, accepted: 0, rejected: 0 };
+
+  // Collect kanban cards: any startup whose stage resolves to a column
+  const onBoard = startups
+    .map(s => ({ s, stage: stageOf(s.slug) }))
+    .filter(x => x.stage !== null);
+
+  // Sort by score desc within each column
+  onBoard.sort((a, b) => (b.s.score || 0) - (a.s.score || 0));
+
+  onBoard.forEach(({ s, stage }) => {
+    counts[stage]++;
+    const list = document.querySelector(`[data-cards="${stage}"]`);
+    list.appendChild(buildCardEl(s));
+  });
+
+  STAGES.forEach(stage => {
+    const list = document.querySelector(`[data-cards="${stage}"]`);
+    if (counts[stage] === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'kanban-empty';
+      empty.textContent = stage === 'followup' ? 'Tag cards in Pipeline →' : 'No cards yet';
+      list.appendChild(empty);
+    }
+    document.querySelector(`[data-count="${stage}"]`).textContent = counts[stage];
+  });
+}
+
+function buildCardEl(s) {
+  const v = votes[s.slug] || {};
+  const scoreClass = s.score >= 75 ? 'high' : (s.score >= 50 ? 'mid' : 'low');
+  const card = document.createElement('div');
+  card.className = 'kanban-card';
+  card.draggable = true;
+  card.dataset.slug = s.slug;
+
+  // Card name link uses the actual startup URL — clickable as the user requested
+  const nameLink = `<a href="${escapeAttr(s.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${escapeText(s.name)}</a>`;
+
+  const tags = [];
+  if (v.stars) tags.push(`<span class="kanban-card-tag stars">${'★'.repeat(v.stars)}</span>`);
+  if (v.note && v.note.trim()) tags.push(`<span class="kanban-card-tag note-flag">note</span>`);
+  if (s.gap) tags.push(`<span class="kanban-card-tag" title="${escapeAttr(s.gap)}">${escapeText(truncate(s.gap, 28))}</span>`);
+
+  card.innerHTML = `
+    <div class="kanban-card-top">
+      <div class="kanban-card-name">${nameLink}</div>
+      <span class="kanban-card-score ${scoreClass}">${s.score}</span>
+    </div>
+    <div class="kanban-card-summary">${escapeText(s.oneliner || '')}</div>
+    ${tags.length ? `<div class="kanban-card-meta">${tags.join('')}</div>` : ''}
+  `;
+
+  card.addEventListener('click', () => openCardModal(s.slug));
+  card.addEventListener('dragstart', e => {
+    card.classList.add('dragging');
+    e.dataTransfer.setData('text/plain', s.slug);
+    e.dataTransfer.effectAllowed = 'move';
+  });
+  card.addEventListener('dragend', () => card.classList.remove('dragging'));
+
+  return card;
+}
+
+/* ============================================================
+   MODAL: full card detail + history note + stage controls
+   ============================================================ */
+function openCardModal(slug) {
+  activeSlug = slug;
+  const s = startupBySlug(slug);
+  if (!s) return;
+  const v = votes[slug] || {};
+  const scoreClass = s.score >= 75 ? 'high' : (s.score >= 50 ? 'mid' : 'low');
+  const currentStage = stageOf(slug);
+
+  const stageButtons = STAGES.map(stage =>
+    `<button class="stage-btn ${currentStage === stage ? 'active' : ''}" data-stage="${stage}">${STAGE_LABELS[stage]}</button>`
+  ).join('') + `<button class="stage-btn remove" data-stage="">Remove</button>`;
+
+  const evidenceList = (s.evidence || []).map(([name, url]) =>
+    `<li><a href="${escapeAttr(url)}" target="_blank" rel="noopener">${escapeText(name)}</a></li>`
+  ).join('');
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-top">
+      <h2 class="modal-title"><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeText(s.name)}</a></h2>
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <span class="modal-score ${scoreClass}">${s.score}/100</span>
+        <button class="modal-close" id="modal-close-btn">Close ✕</button>
+      </div>
+    </div>
+    <div class="modal-tags">
+      ${s.gap ? `<span class="modal-tag gap">${escapeText(s.gap)}</span>` : ''}
+      ${s.stage ? `<span class="modal-tag stage">${escapeText(s.stage)}</span>` : ''}
+      ${s.geo ? `<span class="modal-tag geo">${escapeText(s.geo)}</span>` : ''}
+    </div>
+    <p class="modal-oneliner">${escapeText(s.oneliner || '')}</p>
+
+    ${s.finserv ? `<div class="modal-section"><div class="label">FinServ Signal</div><div class="value">${escapeText(s.finserv)}</div></div>` : ''}
+    ${s.team ? `<div class="modal-section"><div class="label">Team</div><div class="value">${escapeText(s.team)}</div></div>` : ''}
+    ${s.thesis ? `<div class="modal-thesis"><div class="label">Why this matters</div><p>${escapeText(s.thesis)}</p></div>` : ''}
+    ${evidenceList ? `<div class="modal-evidence"><div class="label">Evidence</div><ul>${evidenceList}</ul></div>` : ''}
+
+    <div class="stage-controls">
+      <div class="label">Stage</div>
+      <div class="stage-buttons">${stageButtons}</div>
+    </div>
+
+    <div class="history-section">
+      <div class="label">History / Notes</div>
+      <div class="hint">A running record of what's happened. Use "+ Stamp date" to log an entry.</div>
+      <textarea class="history-textarea" id="history-textarea" placeholder="e.g. 2026-04-29 — Reached out via founder LinkedIn DM, no reply yet">${escapeText(v.note || '')}</textarea>
+      <div class="history-actions">
+        <button class="btn-primary" id="save-note-btn">Save note</button>
+        <button class="btn-secondary" id="stamp-date-btn">+ Stamp date</button>
+        <span class="save-status" id="save-status"></span>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('card-modal').hidden = false;
+  document.body.style.overflow = 'hidden';
+
+  // Wire events
+  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+  document.getElementById('save-note-btn').addEventListener('click', () => saveNoteFromModal());
+  document.getElementById('stamp-date-btn').addEventListener('click', () => stampDate());
+  document.querySelectorAll('.stage-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newStage = btn.dataset.stage;
+      transitionStage(slug, newStage);
+    });
+  });
+}
+
+function closeModal() {
+  document.getElementById('card-modal').hidden = true;
+  document.body.style.overflow = '';
+  activeSlug = null;
+}
+
+function stampDate() {
+  const ta = document.getElementById('history-textarea');
+  const today = new Date().toISOString().slice(0, 10);
+  const stamp = `${today} — `;
+  const cur = ta.value;
+  ta.value = (cur ? cur + '\n' : '') + stamp;
+  ta.focus();
+  ta.setSelectionRange(ta.value.length, ta.value.length);
+  ta.scrollTop = ta.scrollHeight;
+}
+
+async function saveNoteFromModal() {
+  if (!activeSlug) return;
+  const ta = document.getElementById('history-textarea');
+  const status = document.getElementById('save-status');
+  status.textContent = 'Saving…';
+  status.className = 'save-status saving';
+  try {
+    await saveCard(activeSlug, { note: ta.value });
+    status.textContent = 'Saved ✓';
+    status.className = 'save-status saved';
+    renderBoard();
+    setTimeout(() => { status.textContent = ''; status.className = 'save-status'; }, 2200);
+  } catch (e) {
+    status.textContent = 'Error: ' + (e.message || e);
+    status.className = 'save-status error';
+  }
+}
+
+async function transitionStage(slug, newStage) {
+  const status = document.getElementById('save-status');
+  if (status) {
+    status.textContent = 'Saving stage…';
+    status.className = 'save-status saving';
+  }
+  // Keep current note (read from textarea if open)
+  const noteFromUI = document.getElementById('history-textarea')?.value;
+  const patch = {};
+  if (typeof noteFromUI === 'string') patch.note = noteFromUI;
+
+  if (!newStage) {
+    // Remove from kanban entirely
+    patch.followup = false;
+    patch.kanban_stage = null;
+  } else if (newStage === 'followup') {
+    patch.followup = true;
+    patch.kanban_stage = null;
+  } else {
+    // Set to a non-followup stage. Keep followup flag as-is so pipeline page still shows it.
+    patch.kanban_stage = newStage;
+  }
+
+  try {
+    await saveCard(slug, patch);
+    if (status) {
+      status.textContent = 'Saved ✓';
+      status.className = 'save-status saved';
+      setTimeout(() => { status.textContent = ''; status.className = 'save-status'; }, 2200);
+    }
+    // Update active stage button highlights without rebuilding the whole modal
+    const stillOnBoard = stageOf(slug) !== null;
+    if (!stillOnBoard) {
+      closeModal();
+    } else {
+      document.querySelectorAll('.stage-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.stage === stageOf(slug));
+      });
+    }
+    renderBoard();
+  } catch (e) {
+    if (status) {
+      status.textContent = 'Error: ' + (e.message || e);
+      status.className = 'save-status error';
+    }
+  }
+}
+
+/* ============================================================
+   DRAG & DROP between columns
+   ============================================================ */
+function wireDragDrop() {
+  document.querySelectorAll('.kanban-col').forEach(col => {
+    col.addEventListener('dragover', e => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      col.classList.add('drop-target');
+    });
+    col.addEventListener('dragleave', e => {
+      // only remove if leaving the column entirely
+      if (!col.contains(e.relatedTarget)) col.classList.remove('drop-target');
+    });
+    col.addEventListener('drop', async e => {
+      e.preventDefault();
+      col.classList.remove('drop-target');
+      const slug = e.dataTransfer.getData('text/plain');
+      const newStage = col.dataset.stage;
+      if (!slug || !newStage) return;
+      if (stageOf(slug) === newStage) return;
+      // Apply the same logic as transitionStage but without modal context
+      const patch = {};
+      if (newStage === 'followup') {
+        patch.followup = true;
+        patch.kanban_stage = null;
+      } else {
+        patch.kanban_stage = newStage;
+      }
+      setTopStatus(`Moving "${slug}" to ${STAGE_LABELS[newStage]}…`, 'saving');
+      try {
+        await saveCard(slug, patch);
+        setTopStatus(`Saved — "${slug}" → ${STAGE_LABELS[newStage]}`, 'saved');
+        renderBoard();
+        setTimeout(() => setTopStatus('', ''), 2400);
+      } catch (err) {
+        setTopStatus('Save error: ' + (err.message || err), 'error');
+      }
+    });
+  });
+}
+
+function setTopStatus(msg, cls) {
+  const el = document.getElementById('kanban-status');
+  el.textContent = msg;
+  el.className = 'kanban-status' + (cls ? ' ' + cls : '');
+}
+
+/* ============================================================
+   UTIL
+   ============================================================ */
+function escapeText(str) {
+  return String(str || '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[ch]);
+}
+function escapeAttr(str) { return escapeText(str); }
+function truncate(str, n) {
+  str = String(str || '');
+  return str.length > n ? str.slice(0, n - 1) + '…' : str;
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+async function init() {
+  setTopStatus('Loading…', 'saving');
+  try {
+    await ensureSchema();
+    votes = await fetchVotes();
+    renderBoard();
+    wireDragDrop();
+    const onBoardCount = startups.filter(s => stageOf(s.slug) !== null).length;
+    setTopStatus(`${onBoardCount} card${onBoardCount === 1 ? '' : 's'} on the board.`, '');
+  } catch (e) {
+    console.error(e);
+    setTopStatus('Error loading: ' + (e.message || e), 'error');
+  }
+}
+
+// Modal: close on backdrop click + Esc
+document.getElementById('card-modal').addEventListener('click', e => {
+  if (e.target.id === 'card-modal') closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !document.getElementById('card-modal').hidden) closeModal();
+});
+
+init();
+</script>
+</body>
+</html>
