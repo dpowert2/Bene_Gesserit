@@ -1,6 +1,6 @@
 # Bene Gesserit — Living Investment Thesis
 
-*Last updated: 2026-04-17 | Version: 2.2 — Cycle 3 update: S1 specialist agents validated, Dispute Resolution addressed, Overmind archived, eToro App Store launched*
+*Last updated: 2026-04-29 | Version: 2.7 — Challenge Signal #8 (vote-pipeline bottleneck) RESOLVED. Vote pipeline migrated from Supabase to Turso (libSQL, bg-votes-dpowert2.aws-eu-west-1.turso.io); the 5-cycle Supabase-unreachable streak is over. Preference model now reads from Turso bg_votes table, which doesn't auto-pause and is reachable from both the orchestrator sandbox and the user's browser. localStorage fallback layer also added at the same time. Next cycle should re-process any votes Dave has cast since 2026-04-15. v2.6 prior changes still in force: Research mandate has three sub-areas (Consumer behaviour & market analysis; Investable Everything; Wealth-Generation Reinvention).*
 
 ---
 
@@ -204,6 +204,75 @@ The output is a better decision than any single agent — or most human advisors
 
 ---
 
+## The Three Teams: Research, Studio, Greens
+
+Bene Gesserit isn't scouting "the platform" in the abstract — it's scouting on behalf of three operating teams, each with a distinct mandate, time horizon, and definition of "good." A startup that's wrong for one team can be exactly right for another. The team filter is now part of how every signal is triaged.
+
+| Team | Mandate | Time Horizon | What It Wants From BG |
+|------|---------|--------------|------------------------|
+| **Research** | Forward-looking knowledge function. Three sub-areas: (a) **Consumer behaviour & market analysis** — custom GPT-driven research into consumer behaviour across financial / physical / mental health, fundamental research, problem-statement validation. (b) **Investable Everything** — scout startups that *democratise access* to financial products through Product Inversion (reimagining derivatives, options, structured products, and prediction-market mechanics for retail) and Tokenization / Fractionalization (compliant rights-clear infrastructure for previously illiquid assets — real estate, private equity, collectibles, IP rights). (c) **Wealth-Generation Reinvention** — anything that meaningfully reimagines wealth management or investing: AI-native RIAs that bypass the human-advisor stack, family-office-as-a-service democratisation, novel asset-class access for retail (royalties, litigation finance, life settlements, music IP), holistic wealth-CPA-attorney stack replacement, behavioural-coaching wealth platforms, retail private-market access. The criterion: a leap forward from the usual, not an incremental advisor tool. | 12–24 months | Signals from research labs, alternative-data vendors, academic spinouts, and frontier-model partners (Mistral, Anthropic) where regulated-environment research is non-trivial. PLUS: prediction-market platforms (Kalshi / Polymarket / Versus archetype), retail-friendly derivatives platforms (Robinhood options UX archetype), full-stack tokenization (Securitize / Republic / Rally / TYTL archetype), AI-native RIAs (Astor / Era / Autonomous archetype), family-office OS (Asseta AI archetype), AI-native advisor platforms (Marloo archetype), retail private markets (Willow Wealth / Moonfare archetype). |
+| **Studio** | The 0-to-1 venture team. Prototypes new ventures inside emerging tech (voice, agents, predictive frameworks) before they're ready for the core platform. Validates problems through a structured three-gate framework before ventures graduate. | 6–18 months | Reference architectures, voice infrastructure, agentic frameworks, fintech-AI startups in problem-spaces Studio is actively prototyping (estate planning, predictive intelligence, intelligent tax). |
+| **The Greens** | Execution and infrastructure. Owns the regulated rails — tax APIs, account structure, custody, brokerage operations. Where graduated ventures land for production deployment. | 0–12 months | Compliance-native primitives, agent-callable wrappers around existing capabilities, KYA / pre-trade compliance / audit infrastructure that lets the rails serve the marketplace safely. |
+
+Every signal in the BG pipeline now carries an implicit team tag — Research, Studio, Greens, or *cross-team*. The same gap map (above) applies, but the *priority* of each gap shifts depending on which team needs it next.
+
+---
+
+### Studio Team Hypothesis (v1.0 — 2026-01-19)
+
+**Mandate.** Studio is the 0-to-1 venture team. It prototypes new financial-services ventures using emerging technology — voice, agents, predictive intelligence — before they're ready for the platform. Studio doesn't sell. It builds reference architectures, runs PoCs with the Labs team and EIRs, validates problem statements with Research, and graduates ventures to The Greens once the gates are cleared.
+
+**Three Focus Projects for 2026.** Studio is concentrating capacity on three projects this year. Every Studio-tagged signal in the BG pipeline should pattern-match against one of them.
+
+1. **Voice AI through Estate Planning** *(internal estate-planning initiative collaboration with EIRs).* A constrained voice agent that helps a customer onboard — turning a decision tree into voice — explicitly *not* advice. Fundamental research questions: is voice personalisable? What type of voice (inclusive, single-voice, financial-services-appropriate)? Research into voice artists. The Labs team has an internal voice prototype that's the starting point. Ecosystem partners: Mistral and Anthropic on voice solutions for regulated environments. Potential extension into the research component for the internal estate-planning initiative's voice implementation.
+
+2. **Nostradamus — Predictive Agent Framework.** An agent framework for predictive intelligence across health, wealth, and physical domains. Studio is mapping what agent structures actually exist out there and how they can be integrated usefully. Ecosystem partners: MIT (validating problem statements through a Four-Fits / PoC project) and Mantic (a company specialising in AI-based future predictions). The "JTBD for agents" question — *what is the job an agent is being hired to do* — is the spine of this work.
+
+3. **Intelligent Tax Agent.** US financial products are very complex (e.g. direct indexing — investing in individual top constituents so investment losses can offset capital gains). Tax-loss harvesting is not just a per-position problem — it requires looking holistically across the client's full account picture, and tax varies state by state. Studio's hypothesis: a frontier-fintech intelligence layer — *"the accountant in your pocket"* — sitting on top of direct indexing and the broader portfolio, with state-by-state tax-harvesting logic. This ties directly to The Greens' existing tax APIs; Studio's role is the agent-ready intelligence wrapper.
+
+**Venture Opportunity Evaluation Framework.** Every Studio venture passes through three gates before graduating:
+
+1. **Ecosystem validation** — does the problem have third-party demand and architectural fit beyond a single internal sponsor?
+2. **Internal board approval** — does Strategy and Labs leadership commit to the build?
+3. **External market validation** — sign-off from the Strategic Investment Committee, applying *venture-capital* principles, not corporate-assurance methods. Senior leadership understanding that distinction matters: a corporate-assurance gate kills the venture; a VC gate sizes the bet.
+
+**Studio's Active Ecosystem Partners.**
+
+- **An academic research partner** — meeting scheduled around an upcoming offsite. Validating problem statements, mapping opportunities, the Future / Nostradamus framework, Four-Fits methodology, the PoC Project.
+- **An external collaboration partner** — discussion in progress; intro pending.
+- **Mantic** — AI-based future predictions; meeting scheduled to scope predictive intelligence collaboration.
+- **Mistral / Anthropic** — voice solutions for regulated environments; what are they looking at in this space?
+- **Labs and EIRs** — voice prototyping, internal-initiative integration.
+- **Research Team** — Custom GPT (Consumer) research into Financial / Physical / Mental health; outputs shared with Labs.
+
+**What Studio Wants from BG.** Pipeline signals that match one of the three focus projects. Specifically:
+
+- **Voice AI** — voice-first agents in regulated environments, voice cloning / personalisation infrastructure, decision-tree-to-voice tooling, voice identity, conversational onboarding for high-stakes financial moments (estate, retirement).
+- **Predictive / Nostradamus** — predictive AI for life events, health-wealth-physical agent frameworks, JTBD-driven agent companies (Mantic-class), agent orchestration patterns Studio can plug into the framework.
+- **Intelligent Tax** — direct-indexing-aware tax agents, multi-account tax-lot intelligence, US state-by-state tax-harvesting engines, frontier-fintech intelligence layers ("accountant in your pocket"). *Tax filing alone is not interesting (juno 2★ remains the canonical anti-pattern); portfolio-integrated, real-time tax intelligence is.*
+
+**Studio's Search Boundaries.**
+
+- **Private markets** — secondary search. Worth tracking, not the primary lens. A separate private-markets analysis stream is being led elsewhere as part of the offsite Labs / EIR session.
+- **Internal-workflow tools** — already excluded by the global Hard Filter (16 1–2★ companies, no exceptions). Studio inherits this filter.
+- **Stage** — Studio cares about Seed–Series A like the rest of BG; ventures Studio prototypes itself are pre-seed by definition.
+
+**Studio Operating Document — In Progress.** Long-form memo and visual representation of the Studio ecosystem modus operandi and operating model, to be shared with stakeholders. Drafted following the 19.01.26 hypothesis session.
+
+**Active Next Steps (per 19.01.26 session).**
+
+- Studio sponsor → introduce Studio leads to the external collaboration partner contact.
+- Studio co-lead → send and discuss problem statements / requirements for voice/agent solutions to the partner contact.
+- Studio sponsor → for the upcoming offsite, schedule a 1-hour session with Labs EIRs to introduce the team, discuss collaboration, and work through the private-markets analysis.
+- Studio sponsor → send Studio Strategy deck to the team.
+- Studio leads → create long-form memo and visual representation of ecosystem MO and operating model.
+- Studio leads → work with Research Team on custom research request: GPT usage in health, mental health, and financial health segments.
+- Studio leads → schedule MIT meetings during the upcoming visit with stakeholders working on AI agents.
+
+*Research and Greens team hypotheses to follow in subsequent thesis updates.*
+
+---
+
 ## What We're Scouting For
 
 Everything required to make the above flow real. This spans two categories: the **specialist agents** that deliver the customer experience, and the **platform infrastructure** that makes the garden safe.
@@ -277,7 +346,9 @@ The single most predictive attribute is whether the product serves external/thir
 4. **Agents bypassing brokerages entirely** — If eToro and Public.com build their own execution infrastructure and succeed without traditional brokerage rails, the "agents must come through us" thesis weakens.
 5. **AI-level safety commoditisation** — Goodfire ($1.25B unicorn) received 2★. The AI interpretability/model safety layer may be commoditised. The surviving opportunity is agent-specific security (keycard 5★, resistant-ai 5★).
 6. **eToro App Store launched (2026-04-15)** — third-party developer marketplace with APIs, MCP server, revenue sharing. This is *exactly* the "app store for financial agents" model the thesis describes. Dual signal: (a) powerful validation — the thesis is correct and a major brokerage agrees; (b) timeline compression — infrastructure startups must establish themselves before eToro defines the de facto standard. Monitor whether they build or buy governance infrastructure.
-7. **Specialist agent desert (structural, Cycle 3 finding)** — S2–S9 (Portfolio, Trade Structuring, Options, Execution, Monitoring, Planning, Behavioural, Post-Trade) produced zero seed-stage thesis-matching startups across two consecutive full-cycle scans. This is a supply-side market reality, not a search-terms failure. The "apps" layer of the app store may lag the infrastructure layer by 12–18 months. Sourcing strategy must shift: startup database mining, accelerator batch reviews, academic spinouts, fintech pivots. Stage criteria may need to expand to pre-seed / research-stage for these categories.
+7. **Specialist agent desert (structural, Cycle 3 finding — REFRAMED Cycle 7/8, RECONFIRMED Cycle 9)** — S2–S10 (Portfolio, Trade Structuring, Options, Execution, Monitoring, Planning, Behavioural, Post-Trade) produced zero seed-stage thesis-matching startups across multiple full-cycle web-search scans. **Cycle 7 reframed this from a supply-side desert to a search-strategy gap** after YC W26 batches surfaced Cohesion (S1), Astor (S-Front), Sponge, Maven, and Orthogonal — i.e. the candidates exist, they aren't discoverable via vocabulary-driven web search. Accelerator-batch sweeps (YC, EF, Antler, Mouro/Santander portfolios) are now the primary path. **Cycle 9 Coverage Audit (2026-04-29) confirms 7 blind spots persist (S3, S5, S6, S7, S8, S9, S10) plus S2 underrepresented (1 company).** The "apps" layer continues to lag the infrastructure layer.
+
+8. ~~**Vote pipeline bottleneck (Cycle 9)** — Supabase unreachable from the orchestrator sandbox for FIVE consecutive cycles.~~ **RESOLVED 2026-04-29 by migration to Turso.** Root cause was Supabase's free-tier auto-pause behaviour (instances pause after ~1 week of inactivity, silently dropping all writes). Turso (libSQL) doesn't auto-pause and is reachable from both the sandbox and the user's browser; bg-votes-dpowert2.aws-eu-west-1.turso.io is the new endpoint. All 62 prior votes were migrated. A localStorage fallback layer was added at the same time so votes persist client-side even if remote is briefly unreachable. The preference model can now re-process any votes cast since 2026-04-15.
 
 ---
 
@@ -289,5 +360,9 @@ The single most predictive attribute is whether the product serves external/thir
 | 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research, competitive landscape, agentic brokerage race, gap mapping | 13 gaps, "app store for financial agents" thesis, European supply chain rationale, competitive intelligence, learned anti-patterns, challenge signals |
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
 | 2.2 | 2026-04-17 | Cycle 3 roll-up: 8 new votes processed (53→61), 2 new companies scouted (Alinia, specialist-agent trio confirmation), eToro App Store launch | S1 (Research & Signal Intelligence) validated at 100% hit rate (agentsmyth/serafis/kimpton-ai all 5★); Dispute Resolution upgraded from "unsolved" to "partially addressed" (Mount 5★, Klaimee 4★); Overmind archived — AI Safety gap reopened; Audit & Explainability gets first entry (Alinia); "agent exposure" preference emerging; European preference reinforced ("find things like this in the EU?"); eToro App Store added as dual validation/compression signal; specialist agent desert documented as structural S2–S9 finding |
+| 2.3 | 2026-04-29 | Cycle 9 Coverage Audit + 5-cycle Supabase unreachable streak | Specialist Agent Desert challenge signal reframed as search-strategy (accelerator-batch primary), reconfirmed via Phase 0 Coverage Audit (S3/S5/S6/S7/S8/S9/S10 still 0; S2 still 1); new challenge signal added: vote-pipeline bottleneck (Supabase unreachable from sandbox 5 cycles running, preference model frozen since 2026-04-15) |
+| 2.7 | 2026-04-29 | Challenge Signal #8 RESOLVED via Supabase → Turso migration | Vote pipeline migrated from Supabase to Turso (libSQL, bg-votes-dpowert2.aws-eu-west-1.turso.io). Root cause: Supabase free-tier auto-pause after ~1 week of inactivity silently dropped writes — explaining the 5-cycle "unreachable" streak. Turso doesn't auto-pause and is reachable from sandbox + browser. All 62 prior votes migrated; localStorage fallback layer added. Challenge Signal #8 marked resolved with strikethrough. CLAUDE.md / preferences.md / search-terms.md operational notes updated. how-it-works stack diagram and pipeline.html code comments updated to reflect Turso. |
+| 2.6 | 2026-04-29 | Research mandate fully built out across three sub-areas | Research now has three explicit sub-areas in the three-teams table: (a) Consumer behaviour & market analysis (already in v2.4); (b) Investable Everything — Product Inversion & Access + Tokenization / Fractionalization (was queued as v2.5; rolled forward); (c) **Wealth-Generation Reinvention** — anything that meaningfully reimagines wealth management or investing; AI-native RIAs, family-office-as-a-service democratisation, novel asset-class access for retail, holistic wealth-stack replacement, behavioural-coaching platforms. The criterion: a leap forward from the usual, not an incremental advisor tool. Reference archetypes added: Astor, Era, Autonomous (AI-native RIA), Asseta AI (family office OS), Marloo (AI-native advisor platform), Willow Wealth / Moonfare (retail private markets), Seeds (personalised investing). v2.5 was queued mid-flight but consolidated into v2.6 to ship as one update. |
+| 2.4 | 2026-04-29 | Studio Hypothesis (19.01.26) ingested — three-team search architecture introduced | New section: **The Three Teams: Research, Studio, Greens** — every BG signal now triaged by team mandate, time horizon, and "what good looks like." Studio Team Hypothesis v1.0 added in full: three 2026 focus projects (Voice AI through Estate Planning with an internal estate-planning initiative; Nostradamus predictive agent framework with an academic research partner + Mantic; Intelligent Tax Agent on top of direct indexing with state-by-state TLH); three-gate Venture Opportunity Evaluation Framework (ecosystem validation → internal board → Strategic Investment Committee with VC-not-corporate-assurance principles); active ecosystem partners (academic research partner, external collaboration partner, Mantic, Mistral/Anthropic, Labs, EIRs, Research Team); search boundaries (private markets secondary, internal-workflow excluded). Research and Greens team hypotheses deferred to subsequent updates. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
