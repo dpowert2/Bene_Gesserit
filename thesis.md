@@ -1,6 +1,6 @@
 # Bene Gesserit — Living Investment Thesis
 
-*Last updated: 2026-04-29 | Version: 2.3 — Cycle 9 update: Coverage Audit confirms 7 specialist-agent blind spots persist (S3, S5–S10); accelerator-batch sweeps remain primary sourcing path; Supabase unreachable 5 consecutive cycles (vote pipeline bottleneck escalating)*
+*Last updated: 2026-04-29 | Version: 2.4 — Three-team search architecture (Research / Studio / Greens) introduced; Studio Team Hypothesis v1.0 added based on 19.01.26 session — voice AI for estate planning, Nostradamus predictive framework, intelligent tax agent. Three-gate Venture Opportunity Evaluation Framework documented.*
 
 ---
 
@@ -204,6 +204,75 @@ The output is a better decision than any single agent — or most human advisors
 
 ---
 
+## The Three Teams: Research, Studio, Greens
+
+Bene Gesserit isn't scouting "the platform" in the abstract — it's scouting on behalf of three operating teams, each with a distinct mandate, time horizon, and definition of "good." A startup that's wrong for one team can be exactly right for another. The team filter is now part of how every signal is triaged.
+
+| Team | Mandate | Time Horizon | What It Wants From BG |
+|------|---------|--------------|------------------------|
+| **Research** | Forward-looking knowledge function. Custom GPT-driven research into consumer behaviour across financial / physical / mental health, market analysis, fundamental research, problem-statement validation. Caroline, Matt, Molly. | 12–24 months | Signals from research labs, alternative-data vendors, academic spinouts, and frontier-model partners (Mistral, Anthropic) where regulated-environment research is non-trivial. |
+| **Studio** | The 0-to-1 venture team. Prototypes new ventures inside emerging tech (voice, agents, predictive frameworks) before they're ready for the core platform. Validates problems through a structured three-gate framework before ventures graduate. | 6–18 months | Reference architectures, voice infrastructure, agentic frameworks, fintech-AI startups in problem-spaces Studio is actively prototyping (estate planning, predictive intelligence, intelligent tax). |
+| **The Greens** | Execution and infrastructure. Owns the regulated rails — tax APIs, account structure, custody, brokerage operations. Where graduated ventures land for production deployment. | 0–12 months | Compliance-native primitives, agent-callable wrappers around existing capabilities, KYA / pre-trade compliance / audit infrastructure that lets the rails serve the marketplace safely. |
+
+Every signal in the BG pipeline now carries an implicit team tag — Research, Studio, Greens, or *cross-team*. The same gap map (above) applies, but the *priority* of each gap shifts depending on which team needs it next.
+
+---
+
+### Studio Team Hypothesis (v1.0 — 2026-01-19)
+
+**Mandate.** Studio is the 0-to-1 venture team. It prototypes new financial-services ventures using emerging technology — voice, agents, predictive intelligence — before they're ready for the platform. Studio doesn't sell. It builds reference architectures, runs PoCs with the Labs team and EIRs, validates problem statements with Research, and graduates ventures to The Greens once the gates are cleared.
+
+**Three Focus Projects for 2026.** Studio is concentrating capacity on three projects this year. Every Studio-tagged signal in the BG pipeline should pattern-match against one of them.
+
+1. **Voice AI through Estate Planning** *(Beyond Will collaboration with Mike & Pooja).* A constrained voice agent that helps a customer onboard — turning a decision tree into voice — explicitly *not* advice. Fundamental research questions: is voice personalisable? What type of voice (inclusive, single-voice, financial-services-appropriate)? Research into voice artists. The Labs team has a Brent-built voice prototype that's the starting point. Ecosystem partners: Mistral and Anthropic on voice solutions for regulated environments. Potential extension into the research component for Beyond Will voice implementation.
+
+2. **Nostradamus — Predictive Agent Framework.** An agent framework for predictive intelligence across health, wealth, and physical domains. Studio is mapping what agent structures actually exist out there and how they can be integrated usefully. Ecosystem partners: MIT (validating problem statements through a Four-Fits / PoC project) and Mantic (a company specialising in AI-based future predictions). The "JTBD for agents" question — *what is the job an agent is being hired to do* — is the spine of this work.
+
+3. **Intelligent Tax Agent.** US financial products are very complex (e.g. direct indexing — investing in individual top constituents so investment losses can offset capital gains). Tax-loss harvesting is not just a per-position problem — it requires looking holistically across the client's full account picture, and tax varies state by state. Studio's hypothesis: a frontier-fintech intelligence layer — *"the accountant in your pocket"* — sitting on top of direct indexing and the broader portfolio, with state-by-state tax-harvesting logic. This ties directly to The Greens' existing tax APIs; Studio's role is the agent-ready intelligence wrapper.
+
+**Venture Opportunity Evaluation Framework.** Every Studio venture passes through three gates before graduating:
+
+1. **Ecosystem validation** — does the problem have third-party demand and architectural fit beyond a single internal sponsor?
+2. **Internal board approval** — does Strategy and Labs leadership commit to the build?
+3. **External market validation** — sign-off from the Strategic Investment Committee, applying *venture-capital* principles, not corporate-assurance methods. Senior leadership understanding that distinction matters: a corporate-assurance gate kills the venture; a VC gate sizes the bet.
+
+**Studio's Active Ecosystem Partners.**
+
+- **MIT** — Jim Flynn meeting (Boston Trip week). Validating problem statements, mapping opportunities, the Future / Nostradamus framework, Four-Fits methodology, the PoC Project. February visit to schedule with MIT stakeholders working on AI agents.
+- **Whitespace (Paul Jenkins)** — Collective AI platform discussion; intro pending from Aaron.
+- **Mantic** — AI-based future predictions; meeting today to scope predictive intelligence collaboration.
+- **Mistral / Anthropic** — voice solutions for regulated environments; what are they looking at in this space?
+- **Labs (Brent et al.) and EIRs (Mike, Pooja)** — voice prototyping, Beyond Will integration, Future Horizons.
+- **Research Team (Caroline, Matt, Molly)** — Custom GPT (Consumer) research into Financial / Physical / Mental health; outputs shared with Labs.
+
+**What Studio Wants from BG.** Pipeline signals that match one of the three focus projects. Specifically:
+
+- **Voice AI** — voice-first agents in regulated environments, voice cloning / personalisation infrastructure, decision-tree-to-voice tooling, voice identity, conversational onboarding for high-stakes financial moments (estate, retirement).
+- **Predictive / Nostradamus** — predictive AI for life events, health-wealth-physical agent frameworks, JTBD-driven agent companies (Mantic-class), agent orchestration patterns Studio can plug into the framework.
+- **Intelligent Tax** — direct-indexing-aware tax agents, multi-account tax-lot intelligence, US state-by-state tax-harvesting engines, frontier-fintech intelligence layers ("accountant in your pocket"). *Tax filing alone is not interesting (juno 2★ remains the canonical anti-pattern); portfolio-integrated, real-time tax intelligence is.*
+
+**Studio's Search Boundaries.**
+
+- **Private markets** — secondary search. Worth tracking, not the primary lens. Aaron is leading a separate private-markets analysis stream as part of the Boston Trip Labs EIR session.
+- **Internal-workflow tools** — already excluded by the global Hard Filter (16 1–2★ companies, no exceptions). Studio inherits this filter.
+- **Stage** — Studio cares about Seed–Series A like the rest of BG; ventures Studio prototypes itself are pre-seed by definition.
+
+**Studio Operating Document — In Progress.** Long-form memo and visual representation of the Studio ecosystem modus operandi and operating model, to be shared with stakeholders. Drafted by Dave (with Magda) following the 19.01.26 hypothesis session.
+
+**Active Next Steps (per 19.01.26 session).**
+
+- Aaron → introduce Dave and Magdalena to Paul Jenkins at Whitespace (Collective AI platform).
+- Magda → send and discuss problem statements / requirements for voice/agent solutions to Naz.
+- Aaron → for Boston Trip, schedule a 1-hour session with Labs EIRs to introduce the team, discuss collaboration, and work through the private-markets analysis.
+- Aaron → send Studio Strategy deck to the team via Teams.
+- Dave → create long-form memo and visual representation of ecosystem MO and operating model.
+- Dave + Magda → work with Research Team (Caroline, Matt, Molly) on custom research request: GPT usage in health, mental health, and financial health segments.
+- Dave + Magda → schedule MIT meetings during February visit with stakeholders working on AI agents.
+
+*Research and Greens team hypotheses to follow in subsequent thesis updates.*
+
+---
+
 ## What We're Scouting For
 
 Everything required to make the above flow real. This spans two categories: the **specialist agents** that deliver the customer experience, and the **platform infrastructure** that makes the garden safe.
@@ -292,5 +361,6 @@ The single most predictive attribute is whether the product serves external/thir
 | 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
 | 2.2 | 2026-04-17 | Cycle 3 roll-up: 8 new votes processed (53→61), 2 new companies scouted (Alinia, specialist-agent trio confirmation), eToro App Store launch | S1 (Research & Signal Intelligence) validated at 100% hit rate (agentsmyth/serafis/kimpton-ai all 5★); Dispute Resolution upgraded from "unsolved" to "partially addressed" (Mount 5★, Klaimee 4★); Overmind archived — AI Safety gap reopened; Audit & Explainability gets first entry (Alinia); "agent exposure" preference emerging; European preference reinforced ("find things like this in the EU?"); eToro App Store added as dual validation/compression signal; specialist agent desert documented as structural S2–S9 finding |
 | 2.3 | 2026-04-29 | Cycle 9 Coverage Audit + 5-cycle Supabase unreachable streak | Specialist Agent Desert challenge signal reframed as search-strategy (accelerator-batch primary), reconfirmed via Phase 0 Coverage Audit (S3/S5/S6/S7/S8/S9/S10 still 0; S2 still 1); new challenge signal added: vote-pipeline bottleneck (Supabase unreachable from sandbox 5 cycles running, preference model frozen since 2026-04-15) |
+| 2.4 | 2026-04-29 | Studio Hypothesis (19.01.26) ingested — three-team search architecture introduced | New section: **The Three Teams: Research, Studio, Greens** — every BG signal now triaged by team mandate, time horizon, and "what good looks like." Studio Team Hypothesis v1.0 added in full: three 2026 focus projects (Voice AI through Estate Planning with Beyond Will; Nostradamus predictive agent framework with MIT + Mantic; Intelligent Tax Agent on top of direct indexing with state-by-state TLH); three-gate Venture Opportunity Evaluation Framework (ecosystem validation → internal board → Strategic Investment Committee with VC-not-corporate-assurance principles); active ecosystem partners (MIT, Whitespace, Mantic, Mistral/Anthropic, Labs, EIRs, Research Team); search boundaries (private markets secondary, internal-workflow excluded). Research and Greens team hypotheses deferred to subsequent updates. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
