@@ -203,6 +203,19 @@
     border-bottom: 1px solid var(--border-strong);
   }
   .kanban-card-name a:hover { border-bottom-color: var(--brown); color: var(--brown); }
+  .kanban-card-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .kanban-card-flag {
+    font-size: 0.78rem;
+    line-height: 1;
+    filter: saturate(1.05);
+    cursor: help;
+    user-select: none;
+  }
   .kanban-card-score {
     font-family: 'DM Mono', monospace;
     font-size: 0.62rem;
@@ -811,10 +824,14 @@ function buildCardEl(s) {
   if (v.note && v.note.trim()) tags.push(`<span class="kanban-card-tag note-flag">note</span>`);
   if (s.gap) tags.push(`<span class="kanban-card-tag" title="${escapeAttr(s.gap)}">${escapeText(truncate(s.gap, 28))}</span>`);
 
+  const flag = flagFor(s.geo);
   card.innerHTML = `
     <div class="kanban-card-top">
       <div class="kanban-card-name">${nameLink}</div>
-      <span class="kanban-card-score ${scoreClass}">${s.score}</span>
+      <div class="kanban-card-right">
+        ${flag ? `<span class="kanban-card-flag" title="${escapeAttr(s.geo || '')}">${flag}</span>` : ''}
+        <span class="kanban-card-score ${scoreClass}">${s.score}</span>
+      </div>
     </div>
     <div class="kanban-card-summary">${escapeText(s.oneliner || '')}</div>
     ${tags.length ? `<div class="kanban-card-meta">${tags.join('')}</div>` : ''}
@@ -861,7 +878,7 @@ function openCardModal(slug) {
     <div class="modal-tags">
       ${s.gap ? `<span class="modal-tag gap">${escapeText(s.gap)}</span>` : ''}
       ${s.stage ? `<span class="modal-tag stage">${escapeText(s.stage)}</span>` : ''}
-      ${s.geo ? `<span class="modal-tag geo">${escapeText(s.geo)}</span>` : ''}
+      ${s.geo ? `<span class="modal-tag geo">${flagFor(s.geo)} ${escapeText(s.geo)}</span>` : ''}
     </div>
     <p class="modal-oneliner">${escapeText(s.oneliner || '')}</p>
 
