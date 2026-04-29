@@ -324,6 +324,26 @@ footer p {
 <div class="changelog-entry" data-type="thesis">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-thesis">Thesis v2.7</span>
+    <span class="entry-source">Manual — Dave (migration cleanup)</span>
+  </div>
+  <div class="entry-title">Challenge Signal #8 RESOLVED — vote pipeline migration from Supabase to Turso propagated across all live-system pointers</div>
+  <div class="entry-body">
+    <p>The Supabase → Turso voting migration was completed earlier on 2026-04-29 (separate changelog entry below) — but several files across the repo were still pointing at Supabase as if the migration hadn't happened. This entry cleans those up and resolves the corresponding thesis Challenge Signal.</p>
+    <p><strong>Root cause of the original bottleneck</strong>: Supabase free tier auto-pauses after ~1 week of inactivity, which silently drops all writes. That explained the 5-cycle "unreachable from sandbox" streak Challenge Signal #8 was tracking — the instance had paused, not gone away. Turso (libSQL) doesn't auto-pause and is reachable from both the sandbox and the user's browser. New endpoint: <code>bg-votes-dpowert2.aws-eu-west-1.turso.io</code>. All 62 prior votes were migrated. A localStorage fallback layer was added at the same time so votes persist client-side even if the remote is briefly unreachable.</p>
+    <p><strong>What changed in this entry's scope</strong>: (1) <code>config/thesis.md</code> bumped v2.6 → v2.7; Challenge Signal #8 marked RESOLVED with strikethrough plus a paragraph explaining the root cause and the fix; v2.7 row added to the version table. (2) <code>config/preferences.md</code> header rewritten — the "FIFTH consecutive Supabase-unreachable cycle" framing replaced with "vote pipeline migrated from Supabase to Turso on 2026-04-29; preference model can re-process any votes cast since 2026-04-15." (3) <code>config/bg-search-terms.md</code> bumped v4.5 → v4.6 with operational notes updated; the v4.1/v4.2/v4.3 historical change-log entries left intact (they were accurate at the time) but the live header now points at Turso. (4) <code>CLAUDE.md</code> Voting row updated from "Supabase (bg_votes table)" to "Turso (libSQL) — bg-votes-dpowert2.aws-eu-west-1.turso.io" with migration context. (5) <code>how-it-works/index.html</code> stack diagram replaces the Supabase entry with Turso (libSQL); footer credit updated. (6) <code>pipeline.html</code> code comments and warning text updated from "Supabase" to "Turso".</p>
+    <p>Files explicitly NOT changed: the historical changelog entries from earlier in the cycle, and <code>learning/discovery-log.md</code>, both of which contain accurate at-the-time records of the bottleneck and should keep their Supabase mentions as historical narrative. The 2026-04-29 run page (<code>2026-04-29.html</code>) is also left intact for the same reason — it's a snapshot of that run's findings.</p>
+    <p>Practical effect for the next cycle: the preference model will re-engage with the live vote stream for the first time since 2026-04-15. Any votes Dave has cast in the BG Portal between 2026-04-15 and now will flow into the learning loop on the next full-cycle run.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Updated: config/thesis.md (header, Challenge Signal #8, version table); config/preferences.md (header); config/bg-search-terms.md (header, change log entry for v4.6); CLAUDE.md (Voting row); how-it-works/index.html (Data Layer stack item, footer); pipeline.html (Turso comment + warning text). Unchanged: changelog entries from earlier in the cycle, learning/discovery-log.md, 2026-04-29.html — all accurate at-the-time records of the bottleneck.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="thesis">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
     <span class="entry-badge badge-thesis">Thesis v2.6</span>
     <span class="entry-source">Manual — Dave (Investable Everything + Category Reinvention)</span>
   </div>
