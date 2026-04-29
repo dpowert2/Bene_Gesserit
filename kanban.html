@@ -105,16 +105,15 @@
     max-width: 620px;
   }
 
-  /* ---------- FILTERS (region + team) ---------- */
+  /* ---------- FILTERS (region + team — separate rows) ---------- */
   .filters-bar {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 14px;
+    flex-direction: column;
+    gap: 10px;
     margin-top: 18px;
   }
   .filter-group {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 6px;
@@ -127,11 +126,7 @@
     letter-spacing: 1.2px;
     color: var(--text-light);
     margin-right: 4px;
-  }
-  .filter-divider {
-    width: 1px;
-    align-self: stretch;
-    background: var(--border);
+    min-width: 56px;
   }
   .region-filter { /* legacy class — kept for backward compatibility */
     display: flex;
@@ -678,6 +673,7 @@
       <a class="site-nav-link active" href="kanban.html">Kanban</a>
       <a class="site-nav-link" href="changelog.html">Changelog</a>
       <a class="site-nav-link" href="archive.html">Archive</a>
+      <a class="site-nav-link" href="how-it-works/">How It Works</a>
     </div>
   </div>
 </nav>
@@ -694,7 +690,6 @@
         <button class="region-btn" data-region="europe">🇪🇺 Europe <span class="region-count" data-region-count="europe">0</span></button>
         <button class="region-btn" data-region="asia">🌏 Asia <span class="region-count" data-region-count="asia">0</span></button>
       </div>
-      <div class="filter-divider"></div>
       <div class="filter-group" id="team-filter">
         <span class="filter-group-label">Team</span>
         <button class="team-btn" data-team="Research" title="Research — alternative data, signal intelligence, market analysis">Research <span class="team-count" data-team-count="Research">0</span></button>
