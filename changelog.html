@@ -322,6 +322,27 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="thesis">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-thesis">Thesis v2.8</span>
+    <span class="entry-source">Cycle 10 — first run on live Turso votes</span>
+  </div>
+  <div class="entry-title">Live vote stream restored (73 votes vs 8-vote cache); Novelty becomes the lead criterion; 6 culls + 2 restorations + 1 add</div>
+  <div class="entry-body">
+    <p>Cycle 10 was the first to run against the live Turso vote stream. The new fetcher (<code>scripts/fetch-votes-from-turso.py</code>) pulled 73 votes vs the 8-vote stale cache from March that prior cycles had been running on. Absorbing the 65-vote delta produced an unambiguous signal: <strong>novelty is the lead criterion</strong>, and most of today's earlier additions failed it.</p>
+    <p><strong>Hard rejections (1-2★ on the live stream — culled):</strong> Avantos 1★ ("anything that bills itself as an operating system... not interested in workflow"); Marloo 1★ ("never looking for workflow management tools"); Asseta AI 1★ ("not a category reinvention. simply a SaaS tool for family offices. not novel"); Seeds 1★; IMTC 2★ ("looks more like a workflow automation tool"); Addition Wealth 2★ ("boring, done to death category. nothing innovative here. It just does basic things using AI"). Plus Wealth.com 1★ ("way too late. I'm seeking new and novelty. This is a major incumbent, not a startup") which had already been culled in the morning.</p>
+    <p><strong>Strong restorations (5★ on the live stream — re-added):</strong> Versus 5★ and Noise 5★ ("Love it"). Both had been culled in the morning's gate-widening cycle as "adjacency-mismatch" — that framing was wrong. Versus is a mass-market consumer prediction app where social, cultural, AND financial forecasting sit alongside each other, and the novelty (mass-market retail democratisation of prediction-market mechanics) is the dominant signal. Noise is genuinely creating a new tradeable instrument (cultural attention as an asset class) — Paradigm-led for a reason. The lesson encoded in v4.9: novelty trumps single-pillar adjacency tests when the candidate is genuinely category-defining at retail-democratisation scale.</p>
+    <p><strong>New on-target add:</strong> <strong>Aria Protocol</strong> ($15M seed+strategic at $50M val; Polychain + Neoclassic + Story Foundation; tokenizes music/art/film IP rights at retail; first token APL backed by Justin Bieber / Miley Cyrus / BLACKPINK / BTS royalties; founded by music industry veterans; BG 87). Clean novelty fit alongside TYTL — both are full-stack tokenization of previously locked asset classes for retail.</p>
+    <p><strong>Thesis bumped to v2.8 with two new HARD GATES:</strong> (1) NOVELTY GATE — if the candidate is best described as "operating system for X", "workflow management for X", or "AI-assisted SaaS for X", it does not enter the pipeline. (2) Internal-Workflow Filter extended to advisor-OS / family-office-OS / broker-OS — being for "external" advisors instead of internal staff doesn't redeem a workflow tool. Search-terms bumped to v4.9 with the same gates encoded; novelty replaces adjacency as the lead pre-scoring filter.</p>
+    <p>Pipeline went 101 → 97 (six culls) → 99 (versus + noise restorations) → 98 (one add: Aria; one removed slug from morning's earlier actions). Final state: <strong>98 cards</strong>, Greens 63 / Studio 24 / Research 16. Calibration discipline note for the day: today saw 16 cards added in the morning, 8 culled at lunchtime, 3 added in the re-run, then 6 more culled and 2 restored after the live vote signal arrived. Net: 3 net adds, but the lessons compound and they're now encoded into the thesis and search-terms vocabulary.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    NEW FILE: scripts/fetch-votes-from-turso.py (queries Turso /v2/pipeline endpoint with the public read/write token already embedded in BG HTML pages, parses rows, writes legacy-schema learning/votes.json sorted by voted_at desc; ~120 lines Python, no external deps). REFRESHED: learning/votes.json went from 8 votes (March) to 73 (live). UPDATED: config/thesis.md bumped v2.7 → v2.8 with novelty as the lead "What Good Looks Like" criterion and version-table v2.8 row; config/preferences.md header rewritten to reflect 73-vote live corpus and the new operating-system / workflow / SaaS-with-AI hard rejection pattern; config/bg-search-terms.md bumped v4.8 → v4.9 with NOVELTY GATE in Operating Instructions and revised adjacency framing; startups-data.js: 6 entries removed (avantos, asseta-ai, marloo, seeds, imtc, addition-wealth — all 1-2★ on live stream), 2 restored (versus, noise — both 5★), 1 added (aria-protocol). All operations passed the privacy check with the &amp;&amp; chain enforcing the gate.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="scoring">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
