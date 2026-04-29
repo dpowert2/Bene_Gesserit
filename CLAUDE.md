@@ -7,6 +7,8 @@ Dave Power. Running Bene Gesserit — a personal deal-scouting system for agenti
 | Rule | Why |
 |------|-----|
 | **Always invoke the publish skill** (`Skill tool, skill: "publish"`) before pushing ANY files to GitHub | Ensures consistent deployment, proper large-file handling, visible tracking |
+| **Run `scripts/privacy-check.sh` before EVERY publish/push** — if it fails, redact and re-run; never push past a failure | Prevents personal names from private materials leaking to public GitHub Pages. The redact list lives at `config/redact-list.txt` (gitignored — never pushed). |
+| **Anything Dave shares or uploads is private by default** | Personal names, internal initiative names, partner contact names from notes/screenshots/docs do NOT go into thesis.md, search-terms.md, startups-data.js, changelog.html, or any other publicly-served file. Use role labels ("Studio sponsor", "Research lead", "EIRs", "academic research partner") instead. Third-party founder names from press coverage of pipeline startups are OK. |
 | **Never use the word "Fidelity"** in generated HTML | Write in second person ("you", "your strategy") instead |
 | **Never use AskUserQuestion tool** with Dave | Causes stalling/empty responses — just proceed |
 | **Never use git CLI** (git add, git commit, git push) from the sandbox | They don't work — use the publish skill or GitHub MCP tools |
