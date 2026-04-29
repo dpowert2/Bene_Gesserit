@@ -321,6 +321,27 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="scoring">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-scoring">Pipeline -8 (cull)</span>
+    <span class="entry-source">Calibration review — 2026-04-29 sweep</span>
+  </div>
+  <div class="entry-title">Cull 8 misfit cards from today's sweep — 5 stage-mismatch + 3 adjacency-mismatch — and harden the stage / adjacency gates as pre-scoring HARD GATES (search-terms v4.8)</div>
+  <div class="entry-body">
+    <p>A calibration review of today's two sweeps (which added 16 cards taking the pipeline 90 → 106) flagged that 8 of the 16 were misfits. Pattern recognition: when a primary thesis vector produced too few sweet-spot candidates, the temptation to widen the gate ("benchmark / reference architecture", "adjacent fit") got rationalised — but the gate is hard, not advisory.</p>
+    <p><strong>Stage-mismatch culled (5):</strong> Wealth.com (Series B, $80B+ assets), Vise (Series C, $172M total, $80B+ platform assets), Savvy Wealth (Series B, $100M total, $6B AUM), Nayya (Series C, $106M total), Willow Wealth (Yieldstreet rebrand after $208M investor losses, $800M total). All five are past Series A — the BG vote history confirms this stage gate is hard (basis 1★, linx-security 2★, armadin 2★, april 3★). They belong in the Competitive Intelligence section of the thesis Gap Map, not the pipeline.</p>
+    <p><strong>Adjacency-mismatch culled (3):</strong> Noise (crypto-native attention market on Base — doesn't fit regulated-broker thesis), Octen (horizontal search API with one named finserv use case), Versus (mass-market prediction app where financial is a side-feature behind social and cultural). Adjacency requires a *primary* financial-services fit, not a sidecar.</p>
+    <p><strong>Kept (8 on-target from today's sweep):</strong> Trusty, Mantic, Avantos, Asseta AI, Marloo, Seeds, TYTL, Sooth Labs. All seed–Series A; all primary-fit to their thesis sub-area.</p>
+    <p>Pipeline now <strong>98 cards</strong>. Team distribution: Greens 63 / Studio 24 / Research 16 / multi-team 4.</p>
+    <p><strong>Search-terms v4.8</strong> encodes the calibration so this stops happening. Two new HARD GATES added to Operating Instructions: (1) <em>Stage gate applies pre-scoring</em> — no "reference architecture" exception; late-stage companies go in Competitive Intelligence, not the pipeline. (2) <em>Adjacency gate</em> — candidate must have a primary fit to a thesis sub-area, not an adjacent one. When a primary-fit search produces too few candidates, the right move is to flag the empty cell in the negative-space audit and let the next cycle's investor-portfolio walks and reverse-archetype queries surface true fits — not to widen the gate retroactively.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    startups-data.js: 8 entries removed (regex-matched from start of line through closing brace + trailing newline); 8 SLUG_DATES entries removed; per-team counts re-verified — Greens 63 unchanged, Studio 27 → 24, Research 21 → 16, multi-team 5 → 4. config/bg-search-terms.md updated: header bumped v4.7 → v4.8 with calibration framing; Operating Instructions section gained a "no reference architecture exception" paragraph and a new "Adjacency gate" paragraph; v4.8 change-log entry added describing the cull and the lesson. config/search-state.json updated with calibration_2026_04_29 block listing the 8 culled, 8 kept, and the encoded lesson.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="search-terms">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
