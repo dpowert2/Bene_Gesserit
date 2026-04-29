@@ -4,6 +4,106 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Full Cycle Run — 2026-04-29 (Cycle 9)
+
+### Phase 0 — Coverage Audit
+Pipeline at start: 86 companies. Audit produced this distribution against thesis gap categories:
+- **Blind spots (0 companies):** S3 Trade Structuring, S5 Options & Derivatives, S6 Execution, S7 Position Monitoring, S8 Financial Planning, S9 Behavioural Coaching, S10 Post-Trade Analysis. **All 7 specialist-agent blind spots from cycle 8 persist.** Mandatory ≥2 web searches each constraint applied to Phase 4.
+- **Underrepresented (1–2 companies):** S2 Portfolio Construction (1: Halia), Dispute Resolution & Agent Liability (2: Mount, Klaimee), Agent Monetisation (1: Paid AI), Agent Payment Rails (2: Nava, Cat-7 entry).
+- **Adequately covered (3–9):** S1 Research & Signal (5), Tax Optimisation (6).
+- **Well covered (10+):** Personal Agent / S-Front (10), Agent Authentication (11), Agent Orchestration (14), AI Safety (15, Overmind archived), Compliance (15).
+
+### Phase 1 — Learn from Votes
+**Supabase unreachable from sandbox for the FIFTH consecutive cycle.** Cached votes.json predates the 61-vote corpus (only 8 votes from March). No new vote data processed. Preferences carried forward from cycle 8 with header timestamp updated to "Cycle 9." This is now the dominant operational issue: the preference model has been frozen at 61 votes since 2026-04-15, while Dave is presumably still voting in the BG Portal.
+
+### Phase 2 — Strategise (Thesis v2.2 → v2.3)
+Two changes:
+1. Challenge signal #7 (Specialist Agent Desert) annotated with the cycle 7 reframe (search-strategy, not market-supply gap) and the cycle 9 Phase 0 reconfirmation. The desert pattern is now in its third consecutive cycle of confirmation.
+2. **NEW Challenge signal #8** added: vote-pipeline bottleneck. 5 cycles unreachable from sandbox; preference model frozen since 2026-04-15. Action item documented in thesis.
+
+### Phase 3 — Arm (Search Terms v4.2 → v4.3)
+Carry-forward only. v4.2 vocabulary remains tuned to the persistent gap pattern that Phase 0 reconfirmed. Thesis v2.3 changes are infrastructure (Supabase bottleneck) not search-strategy, so no vocabulary edits required. Change-log entry records the carry-forward decision.
+
+### Phase 4 — Scout
+**Categories scanned:**
+- Blind-spot mandate: S3, S5, S6, S7, S8, S9, S10 — at least 2 web searches each. Web-search vocabulary results: ZERO seed-stage finserv-specific candidates. Only established players (Public.com, Boldin, FP Alpha, Quod Financial, Overbond) and crypto-only execution startups that fail v4.2 negative filters. **The cycle 7 reframe holds: web-search vocabulary alone cannot crack S3–S10.**
+- Accelerator-batch sweeps: YC W26 follow-on cluster from cycle 8 PM card-pending list. **Hit rate from accelerator sweeps was high.**
+
+**Companies found, scored, carded:**
+
+| Slug | Name | Gap | BG Score | Stage |
+|---|---|---|---|---|
+| autonomous | Autonomous (ATG) | S-Front / S2 / S8 / Tax (multi-fit) | **92** | Pre-Seed $15M (Garry Tan / YC) |
+| sponge | Sponge | Cat 7 — Agent Payment Rails | 78 | Pre-Seed / YC W26 |
+| orthogonal | Orthogonal | Agent Monetisation | 64 | Pre-Seed / YC W26 |
+| maven | Maven | Agent Payment Rails (voice) | 55 | Pre-Seed / YC W26 |
+
+**Specialist agent vs platform infrastructure split:** 1 specialist (Autonomous, multi-fit) : 3 infrastructure (Sponge, Orthogonal, Maven). By absolute count this is still infra-heavy (25%), but by quality-weighted impact Autonomous lands a 92-score multi-fit specialist that touches 4 categories simultaneously — the most impactful single Phase 4 result since the AgentSmyth/Serafis/Kimpton trio in cycle 3.
+
+**Phase 0 effectiveness:**
+- S2 Portfolio Construction (underrepresented): Autonomous added (multi-fit). Coverage: 1 → 2.
+- S8 Financial Planning (blind spot): Autonomous added (multi-fit). Coverage: 0 → 1 — **first entry in this category.**
+- S-Front Personal Financial Agent (well covered): Autonomous added. Coverage: 10 → 11.
+- Tax Optimisation (well covered): Autonomous adds tax-aware-individual-stocks angle. Coverage: 6 → 7.
+- Agent Payment Rails (underrepresented): Sponge + Maven added. Coverage: 2 → 4.
+- Agent Monetisation (underrepresented): Orthogonal added. Coverage: 1 → 2.
+- S3, S5, S6, S7, S9, S10 (blind spots): no candidates surfaced. **6 of 7 blind spots survive.**
+
+**Notable signal: Autonomous as the multi-fit archetype.** This is the first time the radar has scored a single company at 92 across 4 distinct gap categories. The 0% advisory fee positioning and Paperspace founders make it both a thesis-validation signal (the regulated-retail-front-door model is real and well-funded) and a competitive-intelligence signal (if Autonomous ships their portfolio + planning + tax engine without exposing it as an agent-callable API, they'll close off a huge chunk of the BG app store's potential supply).
+
+### Phase 5 — Publish
+Files pushed to GitHub: index.html, pipeline.html, changelog.html, 2026-04-29.html, config/thesis.md, config/preferences.md, config/bg-search-terms.md (7 total). Pages already enabled (HTTP 409 expected). Live at https://dpowert2.github.io/Bene_Gesserit/. Changelog gained 4 new entries (Pipeline +4, Coverage Audit, Thesis v2.3, Search-Terms v4.3) at the top. SLUG_DATES updated with autonomous/sponge/orthogonal/maven at 2026-04-29.
+
+### Search Term Effectiveness (S1–S10)
+- **Web-search S-category queries (this cycle):** 0 thesis-aligned hits. Same as cycle 7 and cycle 8.
+- **Accelerator-batch S-category queries:** 1 high-value multi-fit (Autonomous) + 3 adjacent payment/monetisation infrastructure entries. Same yield pattern as cycle 7 (Cohesion → S1) and cycle 8 (Astor → S-Front).
+- **Conclusion:** v4.2's promotion of Accelerator-Batch Sweeps to first-class 🔴 EVERY SCAN status was the right call. The vocabulary-driven S-category queries should remain in the file as low-yield rotation but the accelerator path is doing the actual work.
+
+### Recommendations for Next Cycle
+1. **Highest-value vote to cast:** Autonomous (92) — the multi-fit specialist agent landing across S-Front + S2 + S8 + Tax simultaneously. A 5★ here would be the strongest specialist-agent vote since AgentSmyth and would unlock validation for 3 thesis categories at once.
+2. **Vote-pipeline bottleneck unblock:** highest-priority infrastructure action. Either get the sandbox network egress to Supabase fixed, or write a polling-mode scheduled task in the user's environment that fetches votes via the BG Portal worker URL (which IS reachable from the user's browser) and writes votes.json into the repo every 4 hours. Without this, the preference model continues to drift from reality.
+3. **YC W26 follow-on continued surveillance:** Sponge, Orthogonal, Maven are now carded. Watch for their first product traction signals over the next 2–4 weeks. Sponge in particular needs to be tracked against Nava (5★) and Natural (4★) — if any of the three opens an EU office or pivots to a fiat-first finserv positioning, re-score upward.
+4. **S3/S5/S6/S7/S9/S10 blind spots:** stop running web-search vocabulary against these. Reallocate that scan budget to deeper accelerator-batch walking — specifically EF, Antler London, Tenity, and Mouro/Santander portfolio reviews, none of which were exhausted this cycle.
+5. **Autonomous deep-dive:** treat as a candidate for outreach. The "agent-callable API" question is the thesis-defining question for this company.
+
+---
+
+## Search Terms Update — 2026-04-28
+
+### Context
+Targeted refinement of `config/bg-search-terms.md` from v4.1 → v4.2 against the cycle 8 PM (2026-04-27) discovery-log recommendations. Thesis v2.2 itself unchanged since 2026-04-17 — no thesis drift to absorb. The prompt for change came from cycle 8 PM's three concrete recommendations: drop crypto-execution vocabulary from S6, add regulated-securities qualifiers to S2/S5/S6, and confirm vocabulary calibration after the Paygentic find.
+
+### Changes Made
+- **S6 Execution decrypto-fied** — every S6 query now carries either `"broker-dealer"`, `"regulated securities"`, `"listed"`, or `"equity"` qualifier; new `-crypto -DeFi -tokenized -"digital assets" -"perpetual swap" -"DEX aggregator" -"on-chain"` category-specific negative filter introduced. Direct response to cycle 8 PM precedent: Sequence Markets ($20M YC W26) and Fere AI surfaced as accelerator-batch false positives because the regulated-securities qualifier was missing.
+- **S2 (Portfolio Construction) and S5 (Options & Derivatives)** received the same crypto-exclusion treatment at lower severity — preventive, since the same noise pattern would emerge as accelerator searches scale. New S-Category Specific Negative Filter block added below master filter.
+- **Agent Monetisation reframed** — Paygentic ($2M pre-seed, MiddleGame Ventures, ex-Sulu) added as the second confirmed entry alongside Paid AI. Paygentic was sourced 2026-04-27 PM through the exact v4.1 "agent commerce billing finserv" query line — vocabulary is calibrated and producing hits. Section header changed from "Paid AI pattern signal only" to "vocabulary calibrated post-Paygentic." One MiddleGame/Sulu founder-network angle query added.
+- **YC W26 follow-on cluster** — Sponge / Maven / Orthogonal added to accelerator-batch YC query block as pending-card candidates per cycle 8 PM recommendation #4.
+- **AIUC + Armilla European-presence query** added to Dispute Resolution per cycle 8 PM recommendation #5 — both are reference companies in v4.1; their European entry plans, if any, would warrant pipeline cards.
+- **Accelerator-batch action note** expanded with calibration warning: when scoring against S2/S5/S6, auto-skip candidates whose primary venue is a crypto exchange/DEX. Crypto-only execution doesn't translate to a regulated brokerage context.
+
+### New Categories Added
+None. v4.2 is a refinement, not a new architecture. The 11-specialist + 7-platform taxonomy is unchanged.
+
+### Categories Removed
+None.
+
+### Effectiveness Notes
+- **Working well (keep):** v4.1's "third-party agent" qualifier across governance/compliance categories continues to suppress internal-workflow false positives. v4.1's "agent commerce billing finserv" Agent Monetisation query produced Paygentic — strongest evidence to date that the v4.x vocabulary tightening is increasing precision. Accelerator-batch sweeps continue producing detections (Cohesion, Astor, Paygentic adjacencies).
+- **Producing noise (now filtered):** S6 Execution queries without regulated-securities qualifier surface crypto/DeFi execution venues. v4.2 negative filter and qualifier should suppress this on next scan.
+- **Signal-poor categories (track):** S3 Trade Structuring, S5 Options & Derivatives, S7 Position Monitoring, S8 Financial Planning, S9 Behavioural Coaching, S10 Post-Trade Analysis still showed zero qualifying finds in cycle 8 PM despite mandatory accelerator-batch overrides. v4.2 cleaner queries may help marginally on next scan; if signal-poverty persists for 2+ more cycles in S5/S7/S8/S9/S10 specifically, recommend formally expanding stage criteria to pre-seed / research-stage per thesis challenge signal #7.
+- **Validated working hypothesis:** The cycle 8 PM finding that "Paygentic was sourced via the v4.1 query line" is the cleanest evidence that the v4.x search-terms refactor is paying off. The query-to-candidate trace is now documented end-to-end.
+
+### Supabase Feedback
+- `bg_thesis_feedback WHERE feedback_type = 'search_terms'` query failed with connection timeout (2 attempts, third consecutive cycle of timeout failures). Same query returned zero rows on 2026-04-17 when reachable. No user feedback specific to search terms has been processed; no signal indicating the timeout hides new feedback.
+
+### Confidence
+- **High** on the S6 crypto-exclusion refinement — directly traces to two documented cycle 8 PM false positives (Sequence Markets, Fere AI) and to the explicit cycle 8 PM recommendation. The negative filter is conservative (scoped to S2/S5/S6 only) so collateral damage is bounded.
+- **High** on the Paygentic vocabulary calibration — empirically validated by the query-to-candidate trace.
+- **Medium** on the S2/S5 preventive crypto exclusion — applies the cycle 8 PM logic to adjacent categories that didn't show the noise pattern this cycle but plausibly will at scale.
+- **Medium** on the YC W26 follow-on additions — Sponge/Maven/Orthogonal are mentioned in cycle 8 PM as company-level details too thin for a card; tracking them in search terms is appropriate but the actual cards must wait for next cycle.
+
+---
+
 ## 2026-04-27 (PM) — Cycle 8 Master Orchestrator (full-stack, second run of the day)
 
 ### Phase 0 — Coverage Audit
