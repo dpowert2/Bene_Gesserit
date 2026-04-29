@@ -324,6 +324,42 @@ footer p {
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-system">UI — Kanban Board</span>
+    <span class="entry-source">Manual — Dave</span>
+  </div>
+  <div class="entry-title">Kanban outreach board added with five stages, click-to-expand cards, and history notes</div>
+  <div class="entry-body">
+    <p>New <code>kanban.html</code> page wired into the site nav. Five columns: <strong>Follow Up</strong> (auto-populated from any card already tagged for follow-up on the Pipeline page), <strong>Contacted</strong>, <strong>Talked To</strong>, <strong>Accepted</strong>, <strong>Rejected</strong>. Each card shows the company name as a clickable link to the startup URL, a one-line summary, and the BG score; clicking anywhere else on the card opens a full detail modal with the FinServ signal, team, thesis, and evidence list — the same content as the Pipeline-page card.</p>
+    <p>Each card has a <strong>history / notes</strong> textarea in the modal — backed by the same <code>note</code> field as the Pipeline page, so notes stay in sync between the two views. A "+ Stamp date" button appends a fresh dated line so the field acts as a running log of outreach activity. Cards can be dragged between columns or moved via stage buttons in the modal; "Remove" clears the card off the board entirely. Stage transitions persist to the existing Turso <code>bg_votes</code> table via a one-shot <code>ALTER TABLE</code> that adds a <code>kanban_stage</code> column on first load (idempotent — swallows the duplicate-column error on subsequent loads).</p>
+    <p>The 90-startup data array was extracted out of <code>pipeline.html</code> into a shared <code>startups-data.js</code> file so both pages share a single source of truth.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    New: kanban.html, startups-data.js. Updated: pipeline.html (extracted data), index.html / archive.html / changelog.html (Kanban added to nav). Schema: bg_votes table now carries kanban_stage TEXT (nullable). Existing voting flows untouched — Pipeline INSERT statement does not reference the new column, so kanban_stage is preserved across pipeline saves.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-system">UI — Flags &amp; Region Filter</span>
+    <span class="entry-source">Manual — Dave</span>
+  </div>
+  <div class="entry-title">Country flags added to every card; region filter (US / Europe / Asia) added to the kanban</div>
+  <div class="entry-body">
+    <p>Every card on the Pipeline page and the Kanban page now shows a small country flag derived from the <code>geo</code> field. Multi-region geos like <em>"Israel / USA"</em> or <em>"Singapore / Saudi Arabia"</em> render up to two flags. A new <code>flagFor()</code> helper in <code>startups-data.js</code> covers ~30 countries plus the EU and a globe-fallback for unknown / global entries. The kanban card shows the flag next to the score badge with the full geo string in the hover tooltip; the pipeline tag prepends the flag inline.</p>
+    <p>A region filter row was added to the top of the kanban with four pills: <strong>All</strong>, <strong>🇺🇸 US</strong>, <strong>🇪🇺 Europe</strong>, <strong>🌏 Asia</strong>. Each pill shows a count of on-board cards in that region. Multi-region cards (e.g. Israel / USA) appear under both filters — they don't disappear from either. Israel and the Gulf are folded into Asia. Selection persists to <code>localStorage</code> so reopening the page keeps your last region. A companion <code>regionsFor()</code> helper drives the classification.</p>
+    <p>Cache-busting query string (<code>?v=20260429b</code>) added to the <code>startups-data.js</code> script tag in both pages, plus defensive <code>typeof === 'function'</code> guards around all <code>flagFor</code> / <code>regionsFor</code> calls so a stale data file can't blow up the kanban initialisation.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Updated: startups-data.js (flagFor + regionsFor helpers, ~50 lines), pipeline.html (geo tag prepends flag), kanban.html (flag on card, flag in modal tag, region filter bar with persisted state). Region tally across the 90-company pipeline: US 64, Europe 21, Asia 9, Unknown 2 (multi-region cards counted in each region they touch).
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
     <span class="entry-badge badge-system">Infrastructure</span>
     <span class="entry-source">Manual — Dave</span>
   </div>
