@@ -1,12 +1,18 @@
 # Bene Gesserit — Search Terms
 
-*Last updated: 2026-04-28 | Revision: v4.2 — Targeted refinement against cycle 8 PM (2026-04-27) findings. Three changes: (1) S6 Execution negative filter blocks crypto/DeFi noise (Sequence Markets YC W26 false positive precedent); (2) "regulated securities" / "broker-dealer" qualifiers added across S2/S5/S6 to keep specialist-agent queries on regulated-brokerage rails; (3) Paygentic added as second confirmed Agent Monetisation entry alongside Paid AI — vocabulary calibrated. YC W26 follow-on cluster (Sponge, Maven, Orthogonal) and AIUC/Armilla card-pending signals incorporated into accelerator-batch sweeps. Thesis v2.2 unchanged since 2026-04-17.*
+*Last updated: 2026-04-29 | Revision: v4.8 — Stage gate and adjacency gate hardened. The 2026-04-29 sweep added 16 cards but 8 were misfits (5 stage-mismatch Series B/C plays added under "reference architecture" framing; 3 adjacency-mismatch — crypto / horizontal / mass-market-prediction — added because primary financial fit was loose). All 8 culled; pipeline went 106 → 98. Calibration learning encoded as a HARD GATE in the Operating Instructions: stage filter applies pre-scoring, no "reference architecture" exception, late-stage companies go in Competitive Intelligence section of the Gap Map (not the pipeline). Adjacency gate requires primary financial-services fit, not an adjacent one. v4.7 prior changes still in force.*
+
+*Earlier v4.7 framing — Three new structural improvements addressing the failure mode that recurred four times this session ("thesis expanded, vocabulary didn't keep up"): (1) 🔶 **Thesis-Vocabulary Alignment Audit** — codified protocol that walks every thesis sub-area and verifies a corresponding query block exists. Catches "category in thesis with no search for it" before the cycle runs. (2) 🔷 **Thesis-Diff Trigger** — every thesis version bump now triggers an immediate scoped sweep against what's NEW since the prior version. This is what happened ad-hoc today and worked (Studio sweep after v2.4, Research sweep after v2.6); v4.7 makes it a required step. (3) ⬜ **persistent search-state.json** — new file at `config/search-state.json` tracking last-run timestamps per category, hit-rates per query, dedup-collision rates, empty-cells, per-sub-area card counts over time. Lets the orchestrator prioritise underexplored areas across cycles instead of re-running the same queries blindly. Plus a fourth addition: **🌐 Multilingual European Queries** — scoped to the existing European-preferred geography rotation. v4.6 prior changes still in force: Turso migration propagated, preference model can re-engage with live vote signal. Cycle 10 should run against v4.7.*
 
 ---
 
 ## Operating Instructions
 
-**Stage bias:** Pre-seed, seed, and early Series A only. Series B is "too late" (vote-confirmed: linx-security 2★, april 3★, basis 1★, armadin 2★). Append `seed OR "Series A" -"Series B" -"Series C"` where useful.
+**Stage bias — HARD GATE applied PRE-SCORING:** Pre-seed, seed, and early Series A only. Series B is "too late" (vote-confirmed: linx-security 2★, april 3★, basis 1★, armadin 2★). Append `seed OR "Series A" -"Series B" -"Series C"` where useful.
+
+**No "reference architecture" exception.** A 2026-04-29 calibration cycle added 5 Series B/C cards (Wealth.com, Vise, Savvy Wealth, Nayya, Willow Wealth) under "benchmark / reference architecture" framing — all subsequently culled because the stage gate is hard, not advisory. Late-stage companies belong in the **Competitive Intelligence** section of the thesis Gap Map, not in the BG pipeline. If a candidate's stage is past Series A, do not card it; note it as competitive intelligence in the cycle changelog instead.
+
+**Adjacency gate.** A candidate must have a *primary* fit to a thesis sub-area, not an adjacent one. The 2026-04-29 cycle also added 3 adjacency-mismatch cards (Noise — crypto-native attention market; Octen — horizontal search with one finserv use case; Versus — mass-market prediction app where financial is a side-feature) — all culled. If the financial / regulated-services dimension isn't the *lead*, do not card.
 
 **Geography bias:** Europe preferred (compliance-native by default). London, Berlin, Paris, Dublin, Barcelona, Amsterdam, Zurich, Stockholm, Madrid. Global acceptable if governance-native. Append `Europe OR UK OR EU` to rotate.
 
@@ -513,6 +519,261 @@ Thesis anchor: Portfolio-integrated TLH, gain deferral, asset location. **NOT ta
 
 ---
 
+## 🔵 Research Team Vocabulary *(new v4.4)*
+
+The Research team's mandate per thesis v2.4: *forward-looking knowledge function — custom GPT-driven research into consumer behaviour across financial / physical / mental health, market analysis, fundamental research, problem-statement validation.* Reference Research-team companies in the pipeline: **Mantic** (forecasting, multi-team Studio+Research), **Sooth Labs** (predictive geopolitical/market events, multi-team), **Nayya** (health × wealth advisory), **Octen** (agent-callable signal infrastructure), **AgentSmyth / Serafis / Kimpton AI** (Research & Signal Intelligence — 5★ vote-validated trio), **Aether DataHub** (market data), **Cohesion / Trata** (S1 — institutional research).
+
+The first Phase 0 audit after this update should compare Research team count cycle-on-cycle. Target: ≥15 Research-tagged cards within 3 cycles.
+
+### Consumer-Behaviour AI × Health × Wealth × Mental
+*The financial × physical × mental health intersection Studio's research request to Research is asking about. Nayya is the production benchmark.*
+
+- `"consumer behaviour" AI agent "financial wellness" startup 2026`
+- `"health and wealth" agentic AI advisor benefits platform 2026 funding`
+- `"mental health" AND "financial planning" AI agent startup seed Series A 2026`
+- `"agentic AI" employee benefits health wealth Series A B 2026`
+- `"financial × health" OR "health and wealth" AI consumer research startup 2026`
+- `consumer-research API "financial services" agent-callable 2026 seed`
+
+### Alternative Data for Life Events
+*Predictive analytics that anticipate marriage / childbirth / job change / retirement / inheritance and trigger downstream financial workflows.*
+
+- `"life event" prediction AI agent "financial planning" startup 2026 seed`
+- `"alternative data" "life events" finserv agent API 2026`
+- `predictive analytics "financial planning" "12-18 months" AI startup 2026 funding`
+- `"household-level" AI agent advisor predictive life events 2026`
+- `"event prediction" finserv AI startup Felicis OR Bessemer OR a16z 2026`
+
+### Forecasting / Nostradamus / JTBD-for-agents
+*Mantic + Sooth Labs are the seed signals. Look for the next entrants on geopolitical / market / regulatory event prediction.*
+
+- `AI forecasting platform geopolitical market events "financial services" startup 2026`
+- `"superforecasting" OR "Metaculus" AI startup finserv 2026 funding`
+- `predictive AI multimodal "geopolitical" OR "macro" finserv enterprise 2026 seed`
+- `"problem statement validation" JTBD AI agent platform startup 2026 funding`
+- `"jobs to be done" AI research agent platform 2026 seed Series A`
+- `"Four Fits" OR "four-fits" methodology AI research validation platform 2026`
+
+### Frontier-Research Vendors for Regulated Environments
+*Research's collaboration partners on Mistral / Anthropic / academic spinouts. Look for governance-aware research vendors not just LLM wrappers.*
+
+- `"regulated environment" AI research partner Mistral OR Anthropic finserv 2026`
+- `frontier model "financial services" research collaboration startup 2026`
+- `"academic spinout" AI agent finserv 2026 seed`
+- `"AI for finance" research lab "human review" deterministic startup 2026`
+- `"compliance-native" AI research platform startup 2026 funding seed`
+
+### Agent-Callable Signal Infrastructure
+*Octen-class infrastructure exposed as APIs that Research agents can call. The 'agent exposure' preference (kimpton-ai 5★, serafis 5★) — composability over UI.*
+
+- `"agent-callable" search API "financial data" startup 2026 seed`
+- `"MCP server" finserv research data startup 2026 funding`
+- `"agent skills" market data research API finserv 2026 seed Series A`
+- `"composable" research agent infrastructure "financial services" startup 2026`
+
+### Competitive Intelligence — Research-team compression signals
+
+- Watch Wealth.com Ester Intelligence — 100K+ estate documents/year is a research-data moat.
+- Watch Savvy Wealth's "Relationship Monitor" agent — when it ships, it's a Research-team competitive read on consumer signal capture.
+- Watch Nayya's SuperAgent GA in 2026 — first integrated health-wealth agentic interface.
+- Watch Sooth Labs' API exposure — if predictions become callable, Research adoption follows.
+
+### Investable Everything — Product Inversion & Access *(new v4.5 — gap #8 in skill)*
+*Reimagining derivatives, options, structured products, and prediction-market mechanics for retail. Reference archetypes: Kalshi, Polymarket, eToro copy-trading, Robinhood options UX, Versus, Noise.*
+
+- `prediction market retail platform startup 2026 funding seed Series A`
+- `event contract CFTC retail derivatives platform startup 2026 seed`
+- `"democratising" OR "democratizing" derivatives options structured products startup 2026`
+- `retail-friendly options UX simplified startup seed Series A 2026`
+- `"prediction market mechanics" traditional finance startup 2026 funding`
+- `binary outcome derivatives retail platform startup 2026 seed`
+- `"event-based investing" OR "outcome-based investing" platform startup 2026`
+
+### Investable Everything — Tokenization & Fractionalization *(new v4.5 — gap #9 in skill)*
+*Compliant rights-clear infrastructure for previously illiquid/inaccessible assets. Full-stack coverage (issuance → custody → secondary market) scores highest. Reference archetypes: Securitize, Republic, Rally, TYTL, Polymath, Tokeny, InvestaX, BlockInvest.*
+
+- `tokenization platform "real estate" OR "private equity" compliant infrastructure startup 2026 seed Series A`
+- `fractional equity blockchain residential commercial property startup 2026 funding`
+- `"security token" issuance custody secondary market platform startup 2026 seed`
+- `tokenized "private credit" OR "private equity" retail access startup 2026 funding`
+- `"music royalty" OR "litigation finance" OR "life settlement" fractional retail platform 2026 seed`
+- `"IP rights" tokenization platform retail investor startup 2026 funding`
+- `MAS-licensed OR FCA-regulated tokenization platform startup 2026 funding seed`
+
+### Wealth-Generation Reinvention *(new v4.5 — full Research v2.6 mandate)*
+*Anything that meaningfully reimagines wealth management or investing — leaps forward from the usual, not incremental advisor tools. Reference archetypes: Astor, Era, Autonomous (AI-native RIA), Asseta AI (family office OS), Marloo / Avantos (AI-native advisor platforms), Range / Savvy Wealth (broad-mandate platforms), Seeds (personalised investing), Willow Wealth / Moonfare / OurCrowd (retail private markets).*
+
+- `AI-native RIA bypass advisor startup 2026 seed Series A`
+- `"family office as a service" OR "FOaaS" democratised mass affluent platform startup 2026 funding`
+- `"family office operating system" platform startup 2026 seed Series A`
+- `"reimagining" OR "rebuilding" wealth management investing startup 2026 funding`
+- `holistic wealth platform CPA attorney advisor stack startup 2026 seed`
+- `"behavioural coaching" OR "behavioral wealth" AI advisor platform startup 2026 funding`
+- `private markets retail access alternatives platform startup 2026 seed Series A`
+- `"AI replaces" OR "AI replaces advisor" wealth management platform startup 2026 seed`
+- `accredited-investor-only platform alternative assets startup 2026 funding`
+
+---
+
+## 🟣 Investor-Portfolio Walks *(new v4.5 structural improvement)*
+
+When a sweep surfaces a high-conviction card, walk the lead investor's portfolio for adjacent plays that didn't make the press cycle. The fund's other 2025–26 fintech bets are usually thesis-aligned by definition. Run these as the FINAL step of every cycle, after primary vocabulary has produced cards.
+
+- `Paradigm portfolio fintech 2025 2026 seed Series A` — Paradigm has surfaced Noise, Kalshi exposure, Tempo (with Stripe) — likely more.
+- `Bessemer portfolio fintech 2025 2026 fintech seed Series A` — Avantos surfaced; the BVP "doubling down" framing implies a thesis-anchored cluster.
+- `"ICONIQ Growth" portfolio AI fintech 2025 2026 seed Series A` — Nayya surfaced; ICONIQ's "wealth tech" focus is structural.
+- `"Felicis Ventures" portfolio AI fintech 2025 2026 seed Series A` — Sooth Labs + Nayya both have Felicis exposure.
+- `"Nyca Partners" OR "Motive Partners" portfolio fintech 2025 2026 seed Series A` — Asseta AI surfaced; Nyca + Motive only co-invest on category-defining plays.
+- `"Blackbird Ventures" portfolio fintech 2025 2026 seed Series A` — Marloo's lead; Australian/Commonwealth fintech beachhead.
+- `"Square Peg" portfolio fintech 2025 2026 seed Series A` — Octen's lead.
+- `"Mistral Venture Partners" portfolio fintech 2025 2026 seed` — Trusty's investor; LLM-aware finserv plays.
+- `"Mouro Capital" OR "Anthemis" OR "MiddleGame Ventures" portfolio fintech 2025 2026 seed Series A` — finserv-specialist VCs whose portfolios reliably yield BG-fit candidates.
+- `"YC W26" OR "YC S26" fintech AI agent batch 2026` — accelerator-batch sweep (this is already in the regular rotation but flagged here as part of the same structural pattern).
+
+---
+
+## 🟢 Reverse-Archetype Queries *(new v4.5 structural improvement)*
+
+The bene-gesserit-card skill enumerates reference signals for each gap. When a category produces too few candidates, run "alternatives to X" / "competitors to X" against those reference signals — the second-place runners-up often don't get the same press cycle but match the thesis as well.
+
+- `"alternatives to Kalshi" OR "Polymarket competitors" prediction market startup 2026`
+- `"Robinhood for" OR "alternatives to Robinhood" retail trading startup 2026 seed Series A`
+- `"competitors to Securitize" OR "alternatives to Republic" tokenization platform startup 2026`
+- `"alternatives to Compound" OR "Long Angle competitors" wealth management platform 2026`
+- `"alternatives to Vise" OR "Wealth.com competitors" AI wealth platform 2026 seed Series A`
+- `"alternatives to Mantic" OR "Sooth Labs competitors" predictive AI startup 2026`
+- `"Astor competitors" OR "alternatives to Era" AI RIA startup 2026 seed`
+- `"alternatives to Trusty" estate planning AI startup 2026 funding`
+- `"Wealthfront for X" OR "Betterment for X" segment-specific wealth platform 2026 seed`
+
+Cadence: run reverse-archetype queries at the end of any sweep where a primary category produced fewer than 3 candidates. Compare results against the dedup list before scoring.
+
+---
+
+## 🟡 Negative-Space Audit Protocol *(new v4.5 structural improvement)*
+
+After every sweep, before publishing, run a 5-minute negative-space audit. The goal is to identify which sub-categories the cycle's vocabulary missed entirely so the next run targets the empty cells.
+
+**Audit checklist:**
+
+1. **Per-team count delta vs target.** Research target: ≥15 cards within 3 cycles of v4.5 (currently 21 ✓). Studio target: ≥30 within 3 cycles (currently 27, on track). Greens: maintain 60+ (currently 63 ✓).
+2. **Per-sub-area count.** For each Research sub-area below, count cards. Empty/single-card sub-areas trigger a targeted re-query in the next cycle.
+   - Consumer behaviour × health × wealth × mental: Nayya (1) — under-represented; needs second card.
+   - Alternative data for life events: 0 — empty cell.
+   - Forecasting / Nostradamus / JTBD: Mantic, Sooth Labs (2) ✓.
+   - Frontier-research vendors for regulated environments: 0 — empty cell.
+   - Agent-callable signal infrastructure: Octen, AgentSmyth, Serafis, Kimpton AI (4) ✓.
+   - Product Inversion: Versus, Noise (2) ✓.
+   - Tokenization & Fractionalization: TYTL (1) — under-represented; needs second card.
+   - Wealth-Generation Reinvention: Astor, Era, Autonomous, Seeds, Willow Wealth, Asseta AI, Marloo (7) ✓.
+3. **Per-archetype check.** For each reference archetype (Kalshi, Polymarket, Robinhood options, Securitize, Republic, Rally, Compound, Long Angle, Range, Wealth.com, Vise), confirm at least one BG-pipeline analogue exists. Empty archetypes trigger a reverse-archetype query in the next cycle.
+4. **Investor-portfolio coverage.** Each high-conviction lead investor should produce at least one card per cycle they appear in. Run a portfolio walk for any fund that surfaced as a lead and didn't yield a second adjacent card.
+5. **Geography rotation.** European-preferred bias is hardcoded — but check whether US bias has crept in via single-cycle press surfacing. If EU share <40% of new cards, rotate next cycle through European-only queries.
+6. **Time-window granularity.** If a sweep produces stale results (more than ~3 months old), re-run with explicit `Q1 2026` / `April 2026` / `last 30 days` qualifiers.
+
+**Output of the audit:** a "Next-Cycle Targets" sub-section appended to the cycle's changelog entry, listing the 3–5 empty cells the next sweep must fill.
+
+---
+
+## 🔶 Thesis-Vocabulary Alignment Audit *(new v4.7)*
+
+The negative-space audit catches categories where queries run but find nothing. The alignment audit catches categories that exist in the thesis but have **no queries searching for them at all** — the failure mode that recurred four times this session (Research consumer-behaviour starvation; Investable Everything not in vocabulary until v4.5; Wealth-Generation Reinvention not in vocabulary until v4.5; Supabase resolution not propagated through ops notes).
+
+**Audit protocol:**
+
+1. **Walk the thesis.** For each numbered section / sub-area in `config/thesis.md` (especially the Research / Studio / Greens team mandate rows in The Three Teams table), enumerate it.
+2. **Verify a query block exists.** For each enumerated thesis sub-area, search this document for a matching block. A "matching block" is a section header (`##` or `###`) whose name or scope clearly covers the sub-area, with at least one query line that contains a distinguishing keyword from the thesis sub-area.
+3. **Flag misalignments.** Any thesis sub-area without a matching block is flagged for immediate vocabulary-block creation in the next revision. Any vocabulary block without a corresponding thesis sub-area is flagged for review (could be vestigial from an earlier thesis version).
+4. **Run on every thesis bump.** Always run the alignment audit immediately after a thesis version bump. The audit is the gate between "thesis updated" and "next cycle ready to run."
+
+**Current alignment state (v4.7 baseline):**
+
+| Thesis Sub-Area (v2.7) | Vocabulary Block | Status |
+|---|---|---|
+| Research — Consumer behaviour & market analysis | "Research Team Vocabulary" block (v4.4) | ✅ aligned |
+| Research — Investable Everything: Product Inversion & Access | "Investable Everything — Product Inversion & Access" (v4.5) | ✅ aligned |
+| Research — Investable Everything: Tokenization & Fractionalization | "Investable Everything — Tokenization & Fractionalization" (v4.5) | ✅ aligned |
+| Research — Wealth-Generation Reinvention | "Wealth-Generation Reinvention" (v4.5) | ✅ aligned |
+| Studio — Voice AI through Estate Planning | Personal Agent / S-Front Regulated Retail Front-Door | ✅ aligned (organic) |
+| Studio — Nostradamus predictive framework | "Forecasting / Nostradamus / JTBD-for-agents" (v4.4) | ✅ aligned |
+| Studio — Intelligent Tax Agent | Tax Optimisation Agent block | ✅ aligned |
+| Greens — KYA / Compliance / Audit / Orchestration / Payments | All gap-category blocks | ✅ aligned |
+
+All thesis sub-areas now have matching vocabulary blocks. Future revisions: re-run after every thesis bump.
+
+---
+
+## 🔷 Thesis-Diff Trigger *(new v4.7)*
+
+Every thesis version bump triggers an immediate scoped sweep against what's NEW since the prior version. This formalises a process that ran ad-hoc today (Studio sweep after thesis v2.4, Research sweep after v2.6) and worked.
+
+**Protocol:**
+
+1. **Compute the diff.** When `config/thesis.md` is updated, identify what's new in the version-table row vs. the prior version. New sub-areas, new gap categories, new reference archetypes.
+2. **Run the alignment audit.** Per above — confirm vocabulary blocks exist for all new content, or create them in the same revision.
+3. **Sweep the diff.** Run targeted queries scoped only to what's new. Don't re-run unchanged categories.
+4. **Card the hits.** Add new cards to startups-data.js with appropriate `bgTeam` tags reflecting the new sub-areas.
+5. **Update search-state.json.** Record the diff-sweep run, which categories produced hits, and which produced none.
+
+**Why this matters:** without an explicit trigger, a thesis change can sit "in the docs but not in the search" for cycles, which is the failure mode that left Research at 8 cards while Studio was at 20. The diff trigger ensures every thesis movement causes immediate search movement.
+
+---
+
+## 🌐 Multilingual European Queries *(new v4.7)*
+
+Anglo press is biased toward US/UK fintech. Continental Europe gets covered first in non-English outlets. Given BG's European-preferred bias (compliance-native by default), running queries in local languages closes a real coverage gap.
+
+### German (Germany / Austria / Switzerland)
+- `KI-Agenten Fintech Startup Seed Series A 2026 Berlin München`
+- `agentic AI Vermögensverwaltung Plattform Startup 2026 Finanzierung`
+- `KI-native Bank Compliance Audit Startup 2026 Seed`
+
+### French (France / Belgium / Luxembourg / Switzerland)
+- `agents IA fintech startup levée de fonds 2026 Paris`
+- `IA agentique gestion de patrimoine plateforme startup 2026`
+- `conformité réglementaire IA startup fintech France 2026 seed Series A`
+
+### Spanish (Spain / LatAm)
+- `agentes IA fintech startup ronda semilla 2026 Madrid Barcelona`
+- `IA agéntica gestión de patrimonio plataforma startup 2026 financiación`
+- `cumplimiento normativo IA startup fintech 2026 ronda Serie A`
+
+### Italian
+- `agenti IA fintech startup seed Series A 2026 Milano Roma`
+- `IA agentica gestione patrimoniale piattaforma startup 2026 finanziamento`
+
+### Portuguese (Portugal / Brazil)
+- `agentes IA fintech startup seed Series A 2026 Lisboa Porto`
+- `IA agêntica gestão patrimonial plataforma startup 2026 financiamento`
+
+**Cadence:** run multilingual block once per quarter, scoped to the European geography rotation. If hits appear, port the relevant English phrasing into the standard vocabulary blocks for ongoing coverage.
+
+---
+
+## ⬜ Persistent Search State *(new v4.7)*
+
+A new file at `config/search-state.json` tracks per-cycle search performance so the orchestrator can prioritise underexplored areas across cycles instead of re-running the same queries blindly. Without this, every cycle is a clean slate and we don't learn from what didn't work.
+
+**Tracked per query category:**
+- `last_run_at` — timestamp of last execution
+- `hits_per_run` — count of new (non-dedup) candidates surfaced over recent runs
+- `dedup_collision_rate` — fraction of results that were already in pipeline
+- `empty_run_streak` — consecutive cycles producing zero new candidates
+- `card_count` — current pipeline depth in this category
+
+**Tracked per team / sub-area:**
+- `card_count` — current Research/Studio/Greens count and per-sub-area count
+- `target` — gating threshold (e.g. Research ≥15 within 3 cycles)
+- `next_cycle_targets` — empty cells flagged by negative-space audit
+
+**Auto-deprecation rule:** any query with `empty_run_streak >= 3` is moved to a `quarantined_queries` list for review. Either deprecate or rephrase.
+
+**Auto-promotion rule:** any query with `dedup_collision_rate < 0.2` and `hits_per_run >= 1` over 3 consecutive cycles is marked as `high_yield` and run every cycle.
+
+The file is initialised in this revision with seed data from the v4.7 audit (Research at 21 cards, four under-represented sub-areas, etc.) — see `config/search-state.json`.
+
+---
+
 ## Master Negative Filter (append globally where relevant)
 
 ```
@@ -539,6 +800,12 @@ Cycle 8 PM precedent: Sequence Markets ($20M YC W26) and Fere AI both surfaced a
 
 ## Change Log
 
+- **v4.8 (2026-04-29)** — Stage gate and adjacency gate hardened after a calibration review of the day's sweep. 16 cards were added across two sweeps; 8 were culled as misfits (5 stage-mismatch Series B/C plays — Wealth.com / Vise / Savvy Wealth / Nayya / Willow Wealth — that I had rationalised as "reference architecture / benchmark" but the stage filter is hard, not advisory, per vote history; 3 adjacency-mismatch — Noise / Octen / Versus — where the primary financial-services fit was loose). Pipeline went 106 → 98. Two new HARD GATES added to Operating Instructions: (1) **Stage gate applies pre-scoring** — no "reference architecture" exception; late-stage companies go in the Competitive Intelligence section of the thesis Gap Map, not the pipeline; (2) **Adjacency gate** — candidate must have a *primary* fit to a thesis sub-area, not an adjacent one (financial / regulated-services dimension must be the lead, not a side-feature). Pattern flagged: when search produces too few primary-fit candidates, the temptation to widen the gate must be resisted; better to flag the empty cell in the negative-space audit and let the next cycle's investor-portfolio walks or reverse-archetype queries surface true fits. v4.7 prior structural improvements (Thesis-Vocabulary Alignment Audit / Thesis-Diff Trigger / persistent search-state.json / multilingual European queries) still in force.
+- **v4.7 (2026-04-29)** — Four new structural improvements addressing the failure mode that recurred four times in this session ("thesis expanded, vocabulary didn't keep up"). (1) 🔶 **Thesis-Vocabulary Alignment Audit** — codified protocol that walks every thesis sub-area and verifies a corresponding query block exists. Catches "category in thesis with no search for it" before the cycle runs. Includes a current-state alignment table showing all v2.7 thesis sub-areas have matching vocabulary blocks. (2) 🔷 **Thesis-Diff Trigger** — every thesis version bump now triggers an immediate scoped sweep against what's NEW since the prior version. Formalises the ad-hoc process that worked today. (3) ⬜ **Persistent Search State** — new file at `config/search-state.json` tracks per-query-category hit rates, dedup-collision rates, empty-cells, per-team coverage, per-sub-area card counts. Auto-deprecation rule: queries with empty_run_streak ≥ 3 are quarantined for review. Auto-promotion rule: queries with low collision rate and consistent hits are run every cycle. (4) 🌐 **Multilingual European Queries** — query block in German / French / Spanish / Italian / Portuguese, scoped to the existing European-preferred geography rotation. Cadence: run once per quarter; if hits appear, port relevant English phrasing into standard blocks. Cycle 10 should run against v4.7 with the alignment audit as a gating check before the sweep begins.
+- **v4.6 (2026-04-29)** — Operational notes updated for Supabase → Turso migration. Header rewritten to point at the Turso endpoint (bg-votes-dpowert2.aws-eu-west-1.turso.io). Earlier change-log entries (v4.1, v4.2, v4.3) flagged "Supabase bg_thesis_feedback query unavailable" — that root cause is now resolved (Supabase free-tier auto-pause; resolved by migration). The next full cycle should re-process any votes cast since 2026-04-15 — the date the Supabase pipeline last produced fresh data. No vocabulary edits this revision.
+- **v4.5 (2026-04-29)** — Two-part update. **Part 1: Vocabulary expansion.** Added three new sub-blocks under Research Team Vocabulary covering the Investable Everything mandate (Product Inversion & Access; Tokenization & Fractionalization) and the v2.6 Wealth-Generation Reinvention vector (AI-native RIAs, family-office OS, retail private markets, novel asset-class access). Manual sweep this cycle added 7 Research-tagged cards (Versus, Noise, TYTL, Seeds, Willow Wealth, Asseta AI, Marloo) plus dual-tagged Astor and Era as Studio+Research; Research went from 8 → 21 cards. **Part 2: Structural improvements.** Three new structural blocks added beyond category vocabulary: (i) 🟣 **Investor-Portfolio Walks** — query templates for high-conviction lead investors (Paradigm, Bessemer, ICONIQ, Felicis, Nyca, Motive, Blackbird, Square Peg, Mistral Venture Partners, Mouro, Anthemis, MiddleGame, YC) so each strong card surfaces adjacent plays; (ii) 🟢 **Reverse-Archetype Queries** — "alternatives to X" / "competitors to X" lookups against bene-gesserit-card skill reference signals (Kalshi, Polymarket, Robinhood, Securitize, Republic, Rally, Compound, Long Angle, Vise, Wealth.com, Mantic, Sooth Labs, Astor, Era, Trusty); (iii) 🟡 **Negative-Space Audit Protocol** — codified end-of-cycle checklist with per-team count targets, per-sub-area card counts, per-archetype coverage check, investor-portfolio coverage check, geography rotation, time-window granularity. Output: a "Next-Cycle Targets" sub-section in each cycle's changelog. The v4.5 audit identifies 4 empty/under-represented cells the next cycle must address: alternative data for life events (0), frontier-research vendors for regulated environments (0), Tokenization (1, needs second), Consumer behaviour × health × wealth × mental (1, needs second). Cycle 9 was the last full carry-forward; cycle 10 should run against v4.5.
+- **v4.4 (2026-04-29)** — Three-team architecture (thesis v2.4) absorbed. New 🔵 Research Team Vocabulary block added covering five sub-areas: consumer-behaviour AI × health × wealth × mental, alternative data for life events, forecasting / Nostradamus / JTBD-for-agents, frontier-research vendors for regulated environments, agent-callable signal infrastructure. Reference companies enumerated (Mantic, Sooth Labs, Nayya, Octen, AgentSmyth/Serafis/Kimpton AI, Aether DataHub, Cohesion/Trata). Target set: Research-tagged cards ≥15 within 3 cycles. Trigger for the change: 2026-04-29 thesis-update review surfaced Research underrepresentation (8 cards vs Studio 20 / Greens 63) — manual Studio sweep this same cycle added 9 cards (Trusty, Wealth.com, Avantos, Mantic, Savvy Wealth, Vise, Nayya, Sooth Labs, Octen) bringing totals to Studio 27 / Research 12 / Greens 63. Studio vocabulary already covered organically through Personal Agent / Tax Optimisation / front-door queries — no new Studio-specific block needed. Greens vocabulary already covered through compliance / KYA / orchestration / payment rails.
+- **v4.3 (2026-04-29)** — Cycle 9 carry-forward. Phase 0 Coverage Audit confirms v4.2 vocabulary remains tuned to the persistent gap pattern: 7 specialist-agent blind spots (S3, S5, S6, S7, S8, S9, S10) at 0 pipeline companies, plus S2 (Portfolio Construction & Risk) still at 1. No vocabulary edits — accelerator-batch sweeps remain primary path, S6 crypto-exclusion filter remains in force. Thesis bumped to v2.3 with new challenge signal #8 (vote-pipeline bottleneck — Supabase unreachable for 5 consecutive cycles, preference model frozen at 61 votes since 2026-04-15) — but this is an infrastructure issue, not a search-strategy issue, so no search-terms changes required. Supabase `bg_thesis_feedback` query still unavailable (fifth consecutive cycle).
 - **v4.2 (2026-04-28)** — Targeted refinement against cycle 8 PM (2026-04-27) findings. Three refinements, no architectural changes. (1) **S6 Execution decrypto-fied** — added `-crypto -DeFi -tokenized -"digital assets" -"perpetual swap" -"DEX aggregator" -"on-chain"` as category-specific negative filter and `"broker-dealer"` / `"regulated securities"` / `"listed"` / `"equity"` qualifiers to every S6 query. Cycle 8 precedent: Sequence Markets ($20M YC W26) and Fere AI false positives — both crypto-only execution. (2) **Regulated-securities qualifier added to S2 (Portfolio Construction) and S5 (Options & Derivatives)** — same crypto-noise pattern at lower severity; preventive. New **S-Category Specific Negative Filter** block added below master filter, scoped to S2/S5/S6. (3) **Agent Monetisation upgraded** from "lone entry" framing to "vocabulary calibrated post-Paygentic" — Paygentic ($2M pre-seed, MiddleGame Ventures, ex-Sulu) sourced 2026-04-27 PM via the v4.1 "agent commerce billing finserv" query, confirming v4.1 vocabulary is producing hits; added to reference companies; one query line added for MiddleGame/Sulu founder-network angle. (4) **YC W26 follow-on cluster (Sponge, Maven, Orthogonal)** added to accelerator-batch sweeps — flagged for next-cycle scoring per cycle 8 PM recommendation #4. (5) **AIUC + Armilla European-presence query** added to Dispute Resolution — cycle 8 PM flagged both for card scoring next cycle if European entry plans surface. (6) Accelerator-batch action note expanded with calibration warning: when scoring against S2/S5/S6, auto-skip if primary venue is crypto exchange/DEX. Supabase `bg_thesis_feedback` query unavailable (connection timeout — third consecutive cycle); no new search-terms-specific feedback to incorporate. Thesis v2.2 unchanged since 2026-04-17.
 - **v4.1 (2026-04-27)** — Refresh against thesis v2.2 + 2026-04-27 weekly radar findings. (1) Strict "third-party agent" / "external agent" / "agent marketplace" / "BYOA" qualifiers added across Pre-Trade Compliance, Audit & Explainability, AI Safety, Orchestration, KYA — addresses internal-workflow false-positive noise the Hard Filter was wasting cycles rejecting. (2) **Accelerator-Batch Sweeps** promoted from rotation to first-class 🔴 EVERY SCAN section in response to YC W26 detection signal (Cohesion → S1, Astor → S-Front) — the Specialist Agent Desert is reframed from structural-supply problem to search-strategy problem. (3) **Regulated-Retail Front-Door** sub-track added under Personal Financial Agent capturing the Astor archetype (retail consumer + RIA + brokerage integration). (4) Okta for AI Agents (April 30 GA) and Ping Identity added to Competitive Intelligence as compression signals for KYA. (5) Generic "AI safety" queries removed (commoditised post-acquisition wave; produced zero thesis-aligned candidates 2026-04-20 → 2026-04-27). (6) "agent observability" tightened with finserv qualifier to suppress DevOps noise; `-"DevOps observability"` added to master negative filter. (7) Cohesion added to S1 reference companies. Supabase `bg_thesis_feedback` query unavailable (connection timeout); no new search-terms-specific feedback to incorporate.
 - v4.0 (2026-04-17) — Full rebuild against thesis v2.2. New taxonomy: 11 specialist agent categories (S-Front + S1–S10) + 7 platform infrastructure categories. Specialist Agent Desert (S2, S3, S5, S6, S7, S8, S9, S10) elevated to 🔴 EVERY SCAN with alt-sourcing queries. AI Safety re-elevated (Overmind archived). Audit & Explainability priority raised after Alinia entry. Pre-Trade Compliance remains highest-gap. European-equivalent queries added for S1 (Serafis feedback). Composability / agent-callable API signal prioritised. Master negative filter consolidated from hard-filter and soft-factor learnings (62 vote corpus).
