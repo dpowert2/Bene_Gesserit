@@ -14,3 +14,9 @@ Thumbs.db
 # Privacy redact list — names and identifiers that must NEVER reach GitHub.
 # Read by scripts/privacy-check.sh before every publish.
 config/redact-list.txt
+
+# Wrangler dev/build cache — never push.
+.wrangler/
+
+# Project memory / working context for Claude — keep local only.
+CLAUDE.md
