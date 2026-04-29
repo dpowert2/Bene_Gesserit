@@ -321,6 +321,25 @@ footer p {
 <!-- ═══ CHANGELOG ENTRIES START ═══ -->
 <!-- New entries are inserted here by bg-full-cycle. Each entry is a .changelog-entry div. -->
 
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-04-29</span>
+    <span class="entry-badge badge-system">UI — Team Filter</span>
+    <span class="entry-source">Manual — Dave</span>
+  </div>
+  <div class="entry-title">Every pipeline card now tagged by thesis team (Research / Studio / Greens) with filter pills on Pipeline and Kanban</div>
+  <div class="entry-body">
+    <p>Following the v2.4 thesis update introducing the three-team search architecture, every entry in <code>startups-data.js</code> now carries a <code>bgTeam</code> array (one or more of Research, Studio, Greens). All 90 cards classified deterministically from their existing <code>gap</code> category. Distribution: <strong>63 Greens</strong> (regulated rails — KYA, compliance, audit, agent orchestration, payment infrastructure), <strong>20 Studio</strong> (voice AI, predictive agents, intelligent tax, front-door specialists, personal financial agents), <strong>8 Research</strong> (signal intelligence, alternative data, market data, portfolio research). One multi-fit card: Autonomous (Studio + Research).</p>
+    <p><strong>Pipeline page</strong> — three coloured team pills added to the filter bar (blue = Research, coral = Studio, green = Greens) after the existing category dropdown. Pills toggle independently of the rated/unrated/follow-up filters and stack on top of the category filter, so "Studio × Tax Optimisation" works as expected. Each card now displays its team as a coloured chip alongside the gap/stage/geo tags.</p>
+    <p><strong>Kanban board</strong> — filter strip restructured into two labelled groups ("Region" and "Team") separated by a thin divider, keeping everything on a single horizontal row. Region filters are unchanged. The new team pills are coloured to match each team's identity and toggle on click (clicking the active team clears the filter). Team selection persists in <code>localStorage</code> alongside region. Counts on each pill update live as filters interact: the Region counts reflect the active Team filter, and vice versa, so Dave can answer "how many EU Studio cards are in flight?" at a glance.</p>
+    <p><strong>Card identification</strong> — each Kanban card has a 3px coloured left edge keyed to its team (multi-team cards get a striped edge), plus a small team chip at the top of the meta row. The detail modal shows the team prominently as the first tag.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Updated: startups-data.js (90 records → all carry bgTeam: [...]), pipeline.html (filter pills, card chips, applyFilter / toggleTeam logic, count updates), kanban.html (filter-group restructure with Region + Team labels, wireTeamFilter, team-aware renderBoard with cross-counts, coloured card edge + chip, team chip in modal). Cache buster bumped to v=20260429c on both pages. Mapping: Compliance / AI Safety / Agent Orchestration / Agent Auth / Payment Rails / Monetisation / Dispute → Greens. Tax Optimisation / Personal Agent / S-Front specialists / voice / consumer-lending / insurance-brokerage → Studio. Research & Signal Intelligence / S2 Portfolio / Market Data → Research. Autonomous (S-Front × S2 × S8 × Tax multi-fit) → Studio + Research.
+  </div>
+</div>
+
 <div class="changelog-entry" data-type="thesis">
   <div class="entry-header">
     <span class="entry-date">2026-04-29</span>
