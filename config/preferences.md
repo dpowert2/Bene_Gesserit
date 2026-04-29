@@ -1,6 +1,6 @@
 ## Learned Preferences
 
-*Last updated: 2026-04-27 (cycle 8 — second master-orchestrator run of the day) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | No new meaningful votes since cycle 3 (2026-04-15) — Supabase unreachable from sandbox this run; cached votes.json is stale; preferences carried forward from cycle 7 unchanged. "Agent exposure" API-callable preference still at 2/3 threshold. Solvapay re-vote still pending.*
+*Last updated: 2026-04-29 (cycle 9 — full-cycle orchestrator run) | Based on 61 votes (24 upvotes ★★★★–★★★★★, 8 neutral ★★★, 29 downvotes ★★–★) + 1 accidental (solvapay 0★, flagged for re-vote) | **Vote pipeline migrated from Supabase to Turso on 2026-04-29.** The 5-cycle Supabase-unreachable streak is resolved — preference model now reads from Turso bg_votes table (bg-votes-dpowert2.aws-eu-west-1.turso.io), which doesn't auto-pause and is reachable from both the orchestrator sandbox and the user's browser. localStorage fallback layer also added so votes persist client-side. Next cycle should re-process any votes Dave has cast since 2026-04-15 (the date the Supabase pipeline last produced fresh data). "Agent exposure" API-callable preference still at 2/3 threshold. Solvapay re-vote still pending.*
 
 You can edit this file directly at any time to override or supplement the system's learned preferences. The morning/evening scan tasks read this file when scoring startups.
 
