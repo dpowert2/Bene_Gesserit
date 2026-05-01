@@ -4,6 +4,65 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Search Terms Update — 2026-05-01 (Cycle 11 minor refresh, v4.9 → v4.10)
+
+### Inputs
+- **Thesis:** v2.8, stable since 2026-04-29 — NOVELTY GATE in force as a HARD GATE, Internal-Workflow Filter extended to advisor-OS / family-office-OS / broker-OS.
+- **Current search terms:** v4.9, header already records the NOVELTY GATE in Operating Instructions but does not propagate it into the Master Negative Filter.
+- **Supabase `bg_thesis_feedback` (search_terms):** 0 rows — no new operator feedback since the table was wired up.
+- **Discovery log:** the immediately-prior 2026-05-01 thesis-review entry recommended a "minor cycle-11 refresh based on the v2.8 NOVELTY GATE language (negative-filter additions for 'operating system for X', 'workflow management', 'SaaS for X' framings)" — this update implements that recommendation literally.
+- **Near-misses:** no new entries since 2026-04-27. The 14 internal-workflow rejections from 2026-04-14 and the cycle-10 OS/workflow/SaaS-with-AI rejections (Avantos / Marloo / Asseta AI / IMTC / Addition Wealth) are the canonical anti-patterns.
+
+### Changes Made
+- **Header:** v4.9 → v4.10. Brief explanatory paragraph added; v4.9 framing carried forward.
+- **Master Negative Filter:** four new lines appended encoding the NOVELTY GATE as global negatives — `-"operating system for advisors" -"operating system for family offices" -"operating system for brokers" -"advisor OS" -"family office OS" -"broker OS"`, plus workflow-tool, SaaS-for-advisors, SaaS-for-family-offices, AI-assisted SaaS exclusions. Vote precedent annotation added.
+- **Wealth-Generation Reinvention block:** archetype list re-anchored. NOVELTY-shape 5★ archetypes (TYTL / Versus / Noise) called out explicitly; vote-validated 1★ rejections (Avantos / Marloo / Asseta AI / Seeds / Wealth.com / Addition Wealth / IMTC) listed under "Excluded archetypes." Block-specific negative filter added (advisor-OS / family-office-OS / advisor-productivity exclusions). The `"family office operating system"` query line **removed** — vote-validated as 1★ shape (Asseta AI archetype). Two new query lines added: `"category reinvention" wealth investing retail consumer` and `"new asset class" OR "novel asset surface"`.
+- **Investable Everything — Product Inversion block:** Versus and Noise highlighted as canonical NOVELTY-shape archetypes; Versus framed as "social/cultural/financial forecasting" multi-pillar consumer app to clarify that adjacency framing is *not* a rejection trigger when novelty is genuine.
+- **Investable Everything — Tokenization block:** TYTL highlighted as the canonical "novel asset class" shape (tokenized residential RE, full-stack).
+
+### New Categories Added
+- None. The v4.10 update is filter-hardening + archetype anchoring; no new query categories.
+
+### Categories Removed
+- One query line removed from Wealth-Generation Reinvention: `"family office operating system" platform startup 2026 seed Series A` — vote-validated as a 1★ shape via Asseta AI. The "family office as a service" / "FOaaS" / "democratised mass affluent" framings remain and now do the work this line was attempting.
+
+### Effectiveness Notes (carried forward from cycle 10 / 11)
+- **High-yield queries (do not change):** `"agent commerce billing" finserv startup` (sourced Paygentic in v4.1); accelerator-batch sweeps for YC W26 (sourced Cohesion → S1, Astor → S-Front, Sponge / Orthogonal / Maven / Autonomous in cycle 9); `site:eu-startups.com` and `site:sifted.eu` rotations for European bias.
+- **Low-yield queries (kept as legacy rotation):** S2–S10 specialist-agent web-search vocabulary — three consecutive cycles of zero thesis-aligned hits via web search; the accelerator path is doing the actual work for these categories.
+- **Producing noise (mitigated by v4.10):** generic wealth/advisor queries surfacing operating-system / workflow / SaaS-for-advisors framings. The new global negative-filter block should drop dedup-collision rate on the next cycle's Wealth-Generation Reinvention sweep meaningfully — measure via `config/search-state.json` after cycle 12.
+- **Confidence:** medium-high. Thesis stable, vote signal stable, feedback channel empty. The change is mechanical encoding of the v2.8 HARD GATE into the global filter — low-risk, high-leverage. No structural change to the file's architecture; v4.6's audits, v4.7's alignment + diff trigger + multilingual block, v4.8's stage gate, and v4.9's NOVELTY GATE in Operating Instructions remain unchanged.
+
+### Next-Cycle Targets (carry-forward from v4.5 negative-space audit, unchanged)
+- Consumer behaviour × health × wealth × mental: still 1 card (Nayya) — needs second.
+- Alternative data for life events: still 0 — empty cell.
+- Frontier-research vendors for regulated environments: still 0 — empty cell.
+- Tokenization & Fractionalization: 1 card (TYTL) — needs second; reverse-archetype query against Securitize / Republic suggested.
+- S3 / S5 / S6 / S7 / S9 / S10: web-search exhausted; reallocate scan budget to EF, Antler London, Tenity, Mouro/Santander portfolio walks (cycle 9 recommendation, still un-actioned).
+
+---
+
+## Thesis Review — 2026-05-01
+
+### Feedback Processed
+- `bg_thesis_feedback` (Supabase, project `iyoseurwycryykrnlbig`) returned 1 row total — the 2026-04-14 test entry ("Test feedback - verifying table works"). No new strategic feedback since the table was created. No `feedback_type='thesis'` rows have ever been logged.
+
+### Vote Signals
+- Live Turso fetch via `scripts/fetch-votes-from-turso.py`: **73 votes total** (19 ★★★★★ / 9 ★★★★ / 8 ★★★ / 15 ★★ / 22 ★). Latest vote: 2026-04-29 15:28 UTC (`addition-wealth` 2★).
+- **Vote corpus is identical to the one cycle 10 (2026-04-29) absorbed.** Zero new votes in the ~42-hour window since the v2.8 thesis update. The Supabase `bg_votes` table query returned 62 rows (now stale post-migration); the Turso source is canonical and has 73.
+- The supabase->turso migration documented in v2.7 + the 65-vote delta absorbed in v2.8 means the preference model and the live vote stream are now in sync for the first time since cycle 4.
+
+### Thesis Changes
+- **No changes — thesis stable at v2.8.** v2.8 was published yesterday (2026-04-29) with the cycle 10 absorption of the 65-vote delta against the live Turso stream. The two new HARD GATES from v2.8 (NOVELTY GATE + the extended Internal-Workflow filter for advisor-OS / family-office-OS / broker-OS) and the NOVELTY-AS-LEAD-CRITERION reframing are already in force. With no new votes and no new strategic feedback, there is no evidence base for further surgical edits this cycle.
+- The two existing learning-loop signals that I considered but rejected as triggering an update: (a) the v2.8 sample sizes for the new "novel category-reinvention" archetype (TYTL / Versus / Noise) are still n=3 — not enough to re-weight, but in line with the v2.8 framing; (b) the Specialist-Agent Desert challenge signal #7 is unchanged because no new accelerator-batch sweeps have run since cycle 9.
+
+### Confidence
+- **High** — vote stream is fresh, feedback channel is empty, thesis was just updated 42 hours ago against this exact corpus. Re-edit would be churn.
+
+### Action for Downstream Tasks
+- `bg-search-terms-update` (the next chained scheduled task) should treat thesis as unchanged and either carry-forward search terms v4.x or apply a minor cycle-11 refresh based on the v2.8 NOVELTY GATE language (negative-filter additions for "operating system for X", "workflow management", "SaaS for X" framings). That is the search-terms file's call to make, not a thesis change.
+
+---
+
 ## Full Cycle Run — 2026-04-29 (Cycle 9)
 
 ### Phase 0 — Coverage Audit
