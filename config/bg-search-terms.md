@@ -1,6 +1,8 @@
 # Bene Gesserit — Search Terms
 
-*Last updated: 2026-04-29 | Revision: v4.9 — **Novelty Gate added; adjacency framing revised after vote signal.** Cycle 10 ran the new Turso-fetcher against 73 live votes and the signal is unambiguous: novelty is the lead criterion. Cards described as "operating system / workflow / SaaS-with-AI" are 1★ rejections regardless of investor quality, stage match, or thesis-category fit (Avantos / Marloo / Asseta AI / IMTC / Addition Wealth). Cards that genuinely represent a category reinvention or new asset surface are 5★ (TYTL / Versus / Noise — the last two had been culled in the morning's gate-widening cycle as "adjacency-mismatch" and were vote-validated as 5★ on restoration). The morning's adjacency framing was over-strict: Versus is "social/cultural/financial forecasting" and that's the right shape — novelty trumps single-pillar adjacency tests when the candidate is genuinely category-defining at retail-democratisation scale. Two new HARD GATES encoded in Operating Instructions: NOVELTY GATE (no operating-system / workflow / SaaS-with-AI framings); revised adjacency notes (horizontal players still rejected, but novel-asset-class plays with multi-pillar consumer apps are *kept*). Search vocabulary updated to emphasise novel asset surfaces, retail democratisation patterns, and category-reinvention archetypes (TYTL, Versus, Noise as new reference signals).*
+*Last updated: 2026-05-01 | Revision: v4.10 — **Cycle 11 minor refresh: NOVELTY GATE encoded as global negative-filter lines.** Thesis stable at v2.8; vote stream stable at 73 (no new votes since cycle 10); `bg_thesis_feedback` (Supabase) returned zero `feedback_type='search_terms'` rows. Per the 2026-05-01 thesis-review recommendation in `learning/discovery-log.md`, this revision propagates the v2.8 NOVELTY GATE language from the Operating Instructions block down into the Master Negative Filter so every category query inherits the rejection of "operating system for X" / "workflow management for X" / "SaaS for X" framings without per-block restatement. New per-category negative line added to advisor / wealth / family-office / Research / Wealth-Generation Reinvention blocks where the OS/workflow framing surfaces most. Reference-archetype callouts (TYTL / Versus / Noise as the canonical novelty-shape 5★ signals) added to the Investable Everything and Wealth-Generation Reinvention blocks for vocabulary anchoring. No structural changes to query inventory or scan priorities. v4.9 prior gates remain in force.*
+
+*v4.9 carried forward — **Novelty Gate added; adjacency framing revised after vote signal.** Cycle 10 ran the new Turso-fetcher against 73 live votes and the signal is unambiguous: novelty is the lead criterion. Cards described as "operating system / workflow / SaaS-with-AI" are 1★ rejections regardless of investor quality, stage match, or thesis-category fit (Avantos / Marloo / Asseta AI / IMTC / Addition Wealth). Cards that genuinely represent a category reinvention or new asset surface are 5★ (TYTL / Versus / Noise — the last two had been culled in the morning's gate-widening cycle as "adjacency-mismatch" and were vote-validated as 5★ on restoration). The morning's adjacency framing was over-strict: Versus is "social/cultural/financial forecasting" and that's the right shape — novelty trumps single-pillar adjacency tests when the candidate is genuinely category-defining at retail-democratisation scale. Two HARD GATES encoded in Operating Instructions: NOVELTY GATE (no operating-system / workflow / SaaS-with-AI framings); revised adjacency notes (horizontal players still rejected, but novel-asset-class plays with multi-pillar consumer apps are *kept*). Search vocabulary updated to emphasise novel asset surfaces, retail democratisation patterns, and category-reinvention archetypes (TYTL, Versus, Noise as new reference signals).*
 
 *v4.8 carried forward — Stage gate and adjacency gate hardened. The 2026-04-29 sweep added 16 cards but 8 were misfits (5 stage-mismatch Series B/C plays added under "reference architecture" framing; 3 adjacency-mismatch — crypto / horizontal / mass-market-prediction — added because primary financial fit was loose). All 8 culled; pipeline went 106 → 98. Calibration learning encoded as a HARD GATE in the Operating Instructions: stage filter applies pre-scoring, no "reference architecture" exception, late-stage companies go in Competitive Intelligence section of the Gap Map (not the pipeline). Adjacency gate requires primary financial-services fit, not an adjacent one. v4.7 prior changes still in force.*
 
@@ -580,8 +582,8 @@ The first Phase 0 audit after this update should compare Research team count cyc
 - Watch Nayya's SuperAgent GA in 2026 — first integrated health-wealth agentic interface.
 - Watch Sooth Labs' API exposure — if predictions become callable, Research adoption follows.
 
-### Investable Everything — Product Inversion & Access *(new v4.5 — gap #8 in skill)*
-*Reimagining derivatives, options, structured products, and prediction-market mechanics for retail. Reference archetypes: Kalshi, Polymarket, eToro copy-trading, Robinhood options UX, Versus, Noise.*
+### Investable Everything — Product Inversion & Access *(new v4.5 — gap #8 in skill; v4.10 archetype anchoring)*
+*Reimagining derivatives, options, structured products, and prediction-market mechanics for retail. **NOVELTY-shape 5★ archetypes (cycle 10 vote-validated):** Versus ("Robinhood-meets-TikTok retail democratisation" — mass-market prediction app, Paradigm-backed), Noise ("attention market as new asset class" — Paradigm-backed). Versus is the canonical "social/cultural/financial forecasting" multi-pillar consumer app shape — novelty trumps single-pillar adjacency tests when the candidate is genuinely category-defining. Other archetypes: Kalshi, Polymarket, eToro copy-trading, Robinhood options UX.*
 
 - `prediction market retail platform startup 2026 funding seed Series A`
 - `event contract CFTC retail derivatives platform startup 2026 seed`
@@ -591,8 +593,8 @@ The first Phase 0 audit after this update should compare Research team count cyc
 - `binary outcome derivatives retail platform startup 2026 seed`
 - `"event-based investing" OR "outcome-based investing" platform startup 2026`
 
-### Investable Everything — Tokenization & Fractionalization *(new v4.5 — gap #9 in skill)*
-*Compliant rights-clear infrastructure for previously illiquid/inaccessible assets. Full-stack coverage (issuance → custody → secondary market) scores highest. Reference archetypes: Securitize, Republic, Rally, TYTL, Polymath, Tokeny, InvestaX, BlockInvest.*
+### Investable Everything — Tokenization & Fractionalization *(new v4.5 — gap #9 in skill; v4.10 archetype anchoring)*
+*Compliant rights-clear infrastructure for previously illiquid/inaccessible assets. Full-stack coverage (issuance → custody → secondary market) scores highest. **NOVELTY-shape 5★ archetype (cycle 10 vote-validated):** TYTL — tokenized residential real estate, full-stack new asset surface, the canonical "novel asset class" shape. Other archetypes: Securitize, Republic, Rally, Polymath, Tokeny, InvestaX, BlockInvest.*
 
 - `tokenization platform "real estate" OR "private equity" compliant infrastructure startup 2026 seed Series A`
 - `fractional equity blockchain residential commercial property startup 2026 funding`
@@ -602,18 +604,22 @@ The first Phase 0 audit after this update should compare Research team count cyc
 - `"IP rights" tokenization platform retail investor startup 2026 funding`
 - `MAS-licensed OR FCA-regulated tokenization platform startup 2026 funding seed`
 
-### Wealth-Generation Reinvention *(new v4.5 — full Research v2.6 mandate)*
-*Anything that meaningfully reimagines wealth management or investing — leaps forward from the usual, not incremental advisor tools. Reference archetypes: Astor, Era, Autonomous (AI-native RIA), Asseta AI (family office OS), Marloo / Avantos (AI-native advisor platforms), Range / Savvy Wealth (broad-mandate platforms), Seeds (personalised investing), Willow Wealth / Moonfare / OurCrowd (retail private markets).*
+### Wealth-Generation Reinvention *(new v4.5 — full Research v2.6 mandate; v4.10 negative-filter hardening)*
+*Anything that meaningfully reimagines wealth management or investing — leaps forward from the usual, not incremental advisor tools. **NOVELTY-shape 5★ archetypes (cycle 10 vote-validated):** TYTL (tokenized residential RE — full-stack new asset surface), Versus (mass-market prediction app — Robinhood-meets-TikTok retail democratisation), Noise (attention market as new asset class). **Excluded archetypes (vote-validated 1★ rejections):** Avantos, Marloo, Asseta AI, Seeds, Wealth.com, Addition Wealth, IMTC. Tracking only — Astor, Era, Autonomous, Range, Savvy Wealth, Willow Wealth, Moonfare, OurCrowd.*
 
 - `AI-native RIA bypass advisor startup 2026 seed Series A`
 - `"family office as a service" OR "FOaaS" democratised mass affluent platform startup 2026 funding`
-- `"family office operating system" platform startup 2026 seed Series A`
 - `"reimagining" OR "rebuilding" wealth management investing startup 2026 funding`
 - `holistic wealth platform CPA attorney advisor stack startup 2026 seed`
 - `"behavioural coaching" OR "behavioral wealth" AI advisor platform startup 2026 funding`
 - `private markets retail access alternatives platform startup 2026 seed Series A`
 - `"AI replaces" OR "AI replaces advisor" wealth management platform startup 2026 seed`
 - `accredited-investor-only platform alternative assets startup 2026 funding`
+- `"category reinvention" wealth investing retail consumer 2026 startup seed`
+- `"new asset class" OR "novel asset surface" retail consumer platform startup 2026 seed`
+
+**Reference companies to track (NOVELTY-shape):** TYTL, Versus, Noise.
+**Negative filters (v4.10 — block-specific reinforcement of NOVELTY GATE):** `-"operating system for advisors" -"operating system for family offices" -"advisor OS" -"family office OS" -"workflow tool for advisors" -"SaaS for advisors" -"SaaS for family offices" -"AI-assisted SaaS" -"advisor productivity"`. The "family office operating system" query line was removed in v4.10 — vote-validated as 1★ shape (Asseta AI archetype). Keep "family office as a service" / "democratised mass affluent" framings instead.
 
 ---
 
@@ -787,7 +793,14 @@ The file is initialised in this revision with seed data from the v4.7 audit (Res
 -"DevOps observability" -"infra observability"
 -list -roundup -"top 10" -"best AI"
 -"Series B" -"Series C" -"Series D"
+-"operating system for advisors" -"operating system for family offices"
+-"operating system for brokers" -"advisor OS" -"family office OS" -"broker OS"
+-"workflow management for advisors" -"workflow tool for"
+-"SaaS for advisors" -"SaaS for family offices" -"SaaS for wealth managers"
+-"AI-assisted SaaS"
 ```
+
+**v4.10 note (NOVELTY GATE propagation):** The last four lines encode the v2.8 NOVELTY GATE as a global negative-filter pattern — every query inherits the rejection of OS / workflow / SaaS-with-AI framings regardless of category. Vote precedent: Avantos 1★ ("operating system for advisors"), Marloo 1★ ("workflow tool"), Asseta AI 1★ ("simply a SaaS tool for family offices"), IMTC 2★ ("workflow automation tool"), Addition Wealth 2★ ("basic things using AI"). Where a query's category is most exposed to these framings (Wealth-Generation Reinvention, Personal Financial Agent / S-Front, Research consumer-behaviour, family-office adjacent) the per-block negative-filter line should restate at least the advisor-OS / family-office-OS / workflow-tool exclusions for belt-and-braces filtering.
 
 ## S-Category Specific Negative Filter (append to S2 / S5 / S6 queries — v4.2)
 
