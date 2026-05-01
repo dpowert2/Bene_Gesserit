@@ -1,6 +1,6 @@
 {
   "_schema_version": "1.0",
-  "_last_updated": "2026-04-29",
+  "_last_updated": "2026-05-01",
   "_seeded_in": "search-terms v4.7; calibration update v4.8",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
   "cycle": 9,
@@ -249,11 +249,34 @@
         "rejected": 1
       },
       "meeting_arranged_or_outreach": 31
+    },
+    {
+      "timestamp": "2026-05-01T14:05:54.539515Z",
+      "live_pipeline": 100,
+      "voted": 73,
+      "stars": {
+        "5": 19,
+        "4": 9,
+        "3": 8,
+        "2": 15,
+        "1": 22
+      },
+      "with_notes": 63,
+      "follow_up_flagged": 24,
+      "archived_by_user": 36,
+      "kanban": {
+        "followup": 0,
+        "contacted": 3,
+        "talked_to": 4,
+        "accepted": 0,
+        "rejected": 1
+      },
+      "meeting_arranged_or_outreach": 31
     }
   ],
   "latest_funnel": {
-    "timestamp": "2026-04-29T15:58:47.096580Z",
-    "live_pipeline": 98,
+    "timestamp": "2026-05-01T14:05:54.539515Z",
+    "live_pipeline": 100,
     "voted": 73,
     "stars": {
       "5": 19,
