@@ -4,6 +4,11 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Preference Learning — 2026-05-03
+Total votes: 73 (28 up, 37 down) | New near misses: 0 | New soft factors: none | Weight changes: none | Key insight: Vote corpus unchanged since cycle 10 (2026-04-29); all signals stable — outstanding gap is the NOVELTY GATE declared in preferences.md but not yet serialised in scoring-weights.json (2 standalone cases, needs 3+ to formalise) | Confidence: high
+
+---
+
 ## Search Terms Update — 2026-05-01 (Cycle 11 minor refresh, v4.9 → v4.10)
 
 ### Inputs
