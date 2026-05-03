@@ -13,6 +13,7 @@ A "near miss" is a startup that scored above 60 on the relevance model but recei
 | 2026-04-12 | 0 | 2 | — |
 | **2026-04-14** | **22** | **24** | **Internal workflow blind spot (14/22)** |
 | 2026-04-27 | 0 | 24 | — (solvapay 0★ is accidental; excluded) |
+| 2026-05-03 | 0 | 24 | — (vote corpus unchanged since cycle 10; no new votes to process) |
 
 ---
 
@@ -99,6 +100,7 @@ A "near miss" is a startup that scored above 60 on the relevance model but recei
 | Series B+ / over-funded | 4 (linx-security, april, armadin, basis) | **Soft factor active** | –15 points |
 | AI-level (not agent-level) security | 3 (mindgard, goodfire, armorcode) | **Soft factor active** | –15 points |
 | Non-finserv focus | 2 (certivo, novee) | Tracking | –10 points (emerging) |
+| SaaS-with-AI / non-novel (distinct from workflow) | 2 standalone (asseta-ai 1★, addition-wealth 2★) + willow-wealth 2★ (conflated with stage) | **Tracking — approaching threshold** | Declared "HARD FILTER cycle 10" in preferences.md header but not yet serialised in scoring-weights.json. Needs 3+ clean standalone occurrences. |
 | Company scale below interest threshold | 1 (stacks) | Tracking | Needs more data |
 | Geography (SF specifically negative) | 1 (onyx-security) | Tracking | Needs more data |
 
