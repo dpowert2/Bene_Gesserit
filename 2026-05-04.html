@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — May 4, 2026 Run</title>
+<meta content="Signals, startups, and research from the May 4, 2026 agentic AI radar run." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .site-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .site-nav-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin: 0 4px;
+    }
+
+    header {
+      padding: 32px 0 24px;
+      background: var(--bg-page);
+    }
+
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .edition-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      background: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    section { padding: 44px 0; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+    }
+
+    .section-header .count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .tag.gap { background: var(--brown-light); color: var(--brown-dark); }
+    .tag.reinforces { background: var(--accent-light); color: var(--accent-dark); }
+    .tag.challenges { background: var(--coral-light); color: var(--coral); }
+    .tag.new-signal { background: var(--blue-light); color: var(--blue); }
+    .tag.market-signal { background: var(--amber-light); color: var(--amber); }
+    .tag.stage { background: var(--amber-light); color: var(--amber); }
+    .tag.geo { background: #EEEDEB; color: var(--text-muted); }
+
+    .briefing-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .briefing-item:last-child { border-bottom: none; }
+    .briefing-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .briefing-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .briefing-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .briefing-item .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    .followup-btn, .archive-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--brown);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .followup-btn.active { background: var(--amber-light); border-color: var(--amber); color: var(--amber); font-weight: 600; }
+    .archive-btn.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; font-weight: 600; }
+
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    footer p:last-child { margin-bottom: 0; }
+
+    #settings-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    .settings-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+    .settings-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    #settings-msg {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: none;
+    }
+    .settings-form-group { margin-bottom: 20px; }
+    .settings-form-group label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .settings-form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .settings-form-group input:focus { outline: none; border-color: var(--brown); }
+    .settings-buttons { display: flex; gap: 12px; }
+    .settings-buttons button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #btn-save-settings { background: var(--text-heading); border: 1px solid var(--text-heading); color: #fff; }
+    #btn-save-settings:hover { background: var(--brown); border-color: var(--brown); }
+    #btn-cancel-settings { background: var(--bg-page); border: 1px solid var(--border); color: var(--text); }
+    #btn-cancel-settings:hover { border-color: var(--brown); color: var(--brown); }
+    #settings-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+      padding: 8px;
+    }
+    #settings-btn:hover { color: var(--brown); }
+    #settings-btn.connected { color: var(--accent-dark); }
+
+    @media (max-width: 640px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 1.8rem; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .briefing-item { animation: slideUp 0.35s ease-out both; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="2026-05-02.html">← May 2</a>
+      <span class="site-nav-date">May 4, 2026</span>
+      <a class="site-nav-link active" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Bene Gesserit — May 4, 2026</h1>
+    <p>7 signals, 0 new startups, 0 research. <strong>UK Government formally consults on AI agent payment services</strong> — the first government-level consultation anywhere explicitly addressing AI agents as payment initiators, validating that the regulatory infrastructure for an agentic commerce layer is now crystallising. <strong>DRCF Foresight Paper</strong> (CMA + FCA + ICO + Ofcom, March 2026) is the strongest single regulatory confirmation of the thesis to date: all four UK regulators aligned on the need for audit trails, consent frameworks, and dispute resolution — directly mapping to Gaps #10, #2, and #11. <strong>Freshfields FCA Mills Review</strong> analysis surfaces the FCA explicitly naming S2 (portfolio construction), S8 (financial planning), and S3 (trade structuring) as anticipated consumer-facing AI by 2030. <strong>Paradox Intelligence</strong> Alpha Agent MCP server flagged for follow-up — first alternative data vendor to expose its signal stack as an agent-callable endpoint. <strong>CMA consumer guidance</strong> anchors the regulatory case for the dispute resolution and agent liability gap. Pure regulatory validation run — Specialist:Infra split 2:5.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Competitive Intelligence</h2>
+      <span class="count">7 signals</span>
+    </div>
+    <div id="briefing">
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">S1 — Research &amp; Signal Intelligence</span>
+          <span class="tag new-signal">New Signal</span>
+        </div>
+        <h3>Paradox Intelligence Launches Alpha Agent with MCP Server for Alternative Data</h3>
+        <p>Paradox Intelligence has shipped Alpha Agent, an AI-driven alternative data platform that now exposes an MCP server — making its full signal stack queryable from any LLM-native toolchain. The platform monitors consumer search trends on Google, Amazon, and YouTube; social engagement on TikTok and Reddit; web and app traffic; Wikipedia pageviews; and news sentiment — all mapped to 13,000+ listed companies and themes. The MCP server integration is the key new development: signals that previously required a custom API integration are now callable by any agent with MCP support. This is the first alternative data vendor to explicitly expose its intelligence layer as an agent-callable endpoint, targeting institutional investors (hedge funds, quant funds, discretionary analysts). Flagged for follow-up — stage and founding details unconfirmed before creating a pipeline card.</p>
+        <a class="source-link" href="https://www.paradoxintelligence.com/blog/best-mcp-server-alternative-data-investors" target="_blank">Paradox Intelligence: Best MCP Server for Alternative Data →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">P5 — Agent Payment Rails</span>
+          <span class="tag reinforces">Reinforces ⚠️ Strong</span>
+        </div>
+        <h3>UK Government Formally Consults on Enabling AI Agents in Payment Services</h3>
+        <p>On 21 April 2026 the UK government announced a forthcoming consultation on reforming payment services regulation to "enable the safe adoption of AI agents to conduct payments on behalf of consumers and businesses." The government will specifically examine whether the PSRs 2017 consent and authentication framework needs updating to accommodate agentic AI payment initiation. This is the first government-level consultation anywhere that explicitly addresses AI agents as payment initiators — validating the thesis that the regulatory infrastructure for an agentic commerce layer is now crystallising. Startups building authenticated agent payment rails now have a credible regulatory pathway to reference in pitch materials and BD conversations.</p>
+        <a class="source-link" href="https://www.lewissilkin.com/insights/2026/04/28/stablecoins-ai-agents-and-open-banking-the-uks-vision-for-payment-services-reg-102mr1s" target="_blank">Lewis Silkin: Stablecoins, AI Agents and Open Banking — the UK's Vision for Payment Services Regulation →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Multi-gap — Safety, Audit, Dispute Resolution</span>
+          <span class="tag reinforces">Reinforces ⚠️ Strong</span>
+        </div>
+        <h3>DRCF Publishes "The Future of Agentic AI" Foresight Paper (CMA + FCA + ICO + Ofcom, March 2026)</h3>
+        <p>The UK's Digital Regulation Cooperation Forum — a joint body of CMA, FCA, ICO, and Ofcom — published a coordinated foresight paper on agentic AI on 31 March 2026. The paper explicitly identifies the risks that make the thesis categories valuable: when agents act autonomously, errors involving "financial decisions, contractual changes, or service disruption" carry real-world cost; hyper-personalisation by agents raises dark-pattern risk; and delegated authority creates accountability gaps. All four regulators are aligned on the need for audit trails, consent frameworks, and dispute resolution mechanisms — all directly mapping to Gaps #10, #2, and #11 respectively. This is the strongest single regulatory confirmation of the thesis gaps seen to date, coming from a cross-regulator unified position.</p>
+        <a class="source-link" href="https://www.drcf.org.uk/siteassets/drcf/pdf-files/drcf-the-future-of-agentic-ai-foresight-paper.pdf" target="_blank">DRCF: The Future of Agentic AI Foresight Paper →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">P6 — Dispute Resolution &amp; Agent Liability</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>UK CMA Publishes "Agentic AI and Consumers" Guidance (March 2026)</h3>
+        <p>The Competition and Markets Authority issued formal consumer-facing guidance on agentic AI in March 2026, flagging that "when agents act autonomously, any errors in performance could have costly real-world consequences, particularly where actions involve financial decisions." The CMA also called out that where agents optimise for commercial objectives, they may employ harmful choice architecture — dark patterns — against the consumer. This framing directly builds the regulatory and commercial case for the dispute resolution and liability coverage gap. The CMA guidance will likely feed directly into the FCA's forthcoming supervisory framework, making this the most citable regulatory anchor for the liability insurance category.</p>
+        <a class="source-link" href="https://www.gov.uk/government/publications/agentic-ai-and-consumers/agentic-ai-and-consumers" target="_blank">GOV.UK / CMA: Agentic AI and Consumers →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">Multi-gap — Audit, Safety, Pre-Trade Compliance</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>TSC Publishes Regulator Responses on AI in Financial Services (April 2026)</h3>
+        <p>The Treasury Select Committee published responses from the FCA, PRA, and Bank of England to its first report on AI in financial services. The FCA's response made explicit that audit trails and human-in-the-loop protocols for AI agents are likely to be included in guidance issued in 2026. This is the first regulatory signal that the audit-trail requirement will become mandatory rather than best-practice — a direct commercial catalyst for any entrants in Gap #10 (Audit &amp; Explainability). The PRA's response flagged operational resilience requirements for third-party AI providers, strengthening the case for certified agent safety infrastructure.</p>
+        <a class="source-link" href="https://www.regulationtomorrow.com/2026/04/tsc-publishes-regulator-responses-to-its-report-on-ai-in-financial-services/" target="_blank">Regulation Tomorrow: TSC Publishes Regulator Responses on AI in Financial Services →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">S1–S9 Specialist Agent Desert</span>
+          <span class="tag reinforces">Reinforces ⚠️ Strong</span>
+        </div>
+        <h3>Freshfields Analysis: FCA Mills Review Explicitly Names "Constructing Investment Strategy" as Agent Use Case (February 2026)</h3>
+        <p>The Freshfields post-publication analysis of the FCA Mills Review surfaced a specific passage that directly validates the specialist agent thesis: the review states that by 2030, AI agents acting on consumers' behalf could be "constructing investment strategy, comparing products and switching providers." This is the FCA itself naming the specialist agent categories — S2 (portfolio construction), S8 (financial planning), S3 (trade structuring) — as the anticipated consumer-facing AI deployments. The review also flags the risks of reduced consumer agency and reduced financial literacy if these agents are not designed with proper guardrails, reinforcing the safety and audit gap categories simultaneously.</p>
+        <a class="source-link" href="https://www.freshfields.com/en/our-thinking/briefings/2026/02/the-fca-looks-to-2030-key-takeaways-from-the-mills-review-on-ai-in-retail-financial-services" target="_blank">Freshfields: FCA Looks to 2030 — Key Takeaways from the Mills Review →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">S1 — Research &amp; Signal Intelligence</span>
+          <span class="tag reinforces">Reinforces</span>
+        </div>
+        <h3>Boosted.ai / BX Partners Advisor Ecosystem Partnership (January 2026)</h3>
+        <p>Boosted.ai's Alfa agentic research platform (trusted by 300+ institutions managing $5T+ AUM) announced a distribution partnership with BX Partners to bring its AI investment insights to advisors and asset managers across the BX ecosystem. This signals that institutionally validated AI investment research is moving from hedge fund / quant fund use cases into the advisor channel — the exact population a specialist agent marketplace would serve. Boosted.ai is a Series C-equivalent incumbent (&gt;$60M raised), not a pipeline candidate, but the partnership pattern is instructive: the advisor ecosystem is hungry for pluggable AI research layers, and the distribution channel is proving out.</p>
+        <a class="source-link" href="https://www.businesswire.com/news/home/20260113374926/en/BX-Partners-and-Boosted.ai-Bring-Advanced-AI-Powered-Insights-to-Advisors-and-Asset-Managers" target="_blank">BusinessWire: BX Partners and Boosted.ai Bring Advanced AI-Powered Insights to Advisors and Asset Managers →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>New Startups</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new startups were carded this cycle. Paradox Intelligence (Alpha Agent MCP, S1) is flagged for follow-up — stage and founding details unconfirmed, likely institutional-focus only; verify before creating a pipeline card.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Research</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new research papers detected in this run.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar.</p>
+    <p>You can rate and follow startups by setting your name in the settings panel (gear icon, top right). Your votes are saved and help identify which companies merit deeper diligence.</p>
+  </div>
+</footer>
+
+<div id="settings-modal" hidden="" style="display:none">
+  <div class="settings-panel">
+    <h2>Settings</h2>
+    <div id="settings-msg"></div>
+    <div class="settings-form-group">
+      <label for="voter-name-input">Your name</label>
+      <input id="voter-name-input" type="text" placeholder="e.g., Alex" />
+    </div>
+    <div class="settings-buttons">
+      <button id="btn-save-settings">Save</button>
+      <button id="btn-cancel-settings">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function _readVoter() {
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
+  return 'Dave';
+}
+let voter = _readVoter();
+try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } catch(e) {}
+
+function openSettings(msg) {
+  const m = document.getElementById('settings-modal');
+  m.removeAttribute('hidden');
+  m.style.display = 'flex';
+  const msgEl = document.getElementById('settings-msg');
+  if (msgEl) { msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none'; }
+  const inp = document.getElementById('voter-name-input');
+  if (inp) { inp.value = voter; inp.focus(); }
+}
+
+function closeSettings() {
+  const m = document.getElementById('settings-modal');
+  m.setAttribute('hidden', '');
+  m.style.display = 'none';
+}
+
+function saveSettings() {
+  try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
+  try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } } catch(e) {}
+  closeSettings();
+  updateGearState();
+}
+
+function updateGearState() {
+  const gear = document.getElementById('settings-btn');
+  if (!gear) return;
+  gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution';
+  gear.classList.toggle('connected', !!voter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGearState();
+  document.getElementById('settings-modal').addEventListener('click', e => {
+    if (e.target.id === 'settings-modal') closeSettings();
+  });
+  document.getElementById('voter-name-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') saveSettings();
+  });
+  document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+  document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+  document.getElementById('settings-btn').addEventListener('click', () => openSettings());
+});
+</script>
+
+</body>
+</html>
