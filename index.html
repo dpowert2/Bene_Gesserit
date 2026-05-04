@@ -382,11 +382,11 @@
 <div class="meta-strip">
 <div class="meta-item">
 <span class="meta-label">Last Run</span>
-<span class="meta-value">2026-05-02</span>
+<span class="meta-value">2026-05-04</span>
 </div>
 <div class="meta-item">
 <span class="meta-label">Runs</span>
-<span class="meta-value">25</span>
+<span class="meta-value">26</span>
 </div>
 <div class="meta-item">
 <span class="meta-label">Startups</span>
@@ -433,8 +433,17 @@
     </div>
 
     <div class="run-grid">
-      <a class="run-card latest" href="2026-05-02.html">
-        <div class="run-date">May 2 <small>LATEST</small></div>
+      <a class="run-card latest" href="2026-05-04.html">
+        <div class="run-date">May 4 <small>LATEST</small></div>
+        <div class="run-stats">
+          <div class="run-stat"><span class="stat-num">7</span><span class="stat-label">Signals</span></div>
+          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">New Startups</span></div>
+          <div class="run-stat"><span class="stat-num">0</span><span class="stat-label">Research</span></div>
+        </div>
+        <span class="run-card-arrow">→</span>
+      </a>
+      <a class="run-card" href="2026-05-02.html">
+        <div class="run-date">May 2</div>
         <div class="run-stats">
           <div class="run-stat"><span class="stat-num">6</span><span class="stat-label">Signals</span></div>
           <div class="run-stat"><span class="stat-num">2</span><span class="stat-label">New Startups</span></div>
@@ -721,7 +730,7 @@
 </footer>
 
 <!-- ────────── PIPELINE FUNNEL — live counts from Turso + startups-data.js ────────── -->
-<script src="startups-data.js?v=20260502a"></script>
+<script src="startups-data.js?v=20260504a"></script>
 <script>
 (function() {
   const TURSO_URL = 'https://bg-votes-dpowert2.aws-eu-west-1.turso.io';
@@ -1047,10 +1056,10 @@
 
 <script>
 (function () {
-  const labels = ['Mar 9', 'Mar 10', 'Mar 11', 'Mar 12', 'Mar 15', 'Mar 18', 'Mar 19', 'Mar 20', 'Mar 22', 'Mar 26', 'Apr 1', 'Apr 2', 'Apr 4', 'Apr 6', 'Apr 7', 'Apr 9', 'Apr 10', 'Apr 12', 'Apr 14', 'Apr 15', 'Apr 17', 'Apr 18', 'Apr 27', 'Apr 28', 'Apr 29', 'Apr 30', 'May 2'];
-  const signals   = [11, 7, 6, 8, 8, 8, 7, 7, 8, 16, 7, 16, 7, 7, 17, 8, 7, 8, 10, 9, 6, 7, 8, 6, 6, 7, 6];
-  const startups  = [13, 0, 4, 4, 3, 3, 2, 1, 2, 12, 2, 12, 4, 2, 12, 0, 3, 4, 6, 5, 3, 3, 3, 2, 4, 2, 2];
-  const research  = [3,  0, 1, 0, 1, 0, 1, 1, 0, 0,  0, 0,  0, 0, 5,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const labels = ['Mar 9', 'Mar 10', 'Mar 11', 'Mar 12', 'Mar 15', 'Mar 18', 'Mar 19', 'Mar 20', 'Mar 22', 'Mar 26', 'Apr 1', 'Apr 2', 'Apr 4', 'Apr 6', 'Apr 7', 'Apr 9', 'Apr 10', 'Apr 12', 'Apr 14', 'Apr 15', 'Apr 17', 'Apr 18', 'Apr 27', 'Apr 28', 'Apr 29', 'Apr 30', 'May 2', 'May 4'];
+  const signals   = [11, 7, 6, 8, 8, 8, 7, 7, 8, 16, 7, 16, 7, 7, 17, 8, 7, 8, 10, 9, 6, 7, 8, 6, 6, 7, 6, 7];
+  const startups  = [13, 0, 4, 4, 3, 3, 2, 1, 2, 12, 2, 12, 4, 2, 12, 0, 3, 4, 6, 5, 3, 3, 3, 2, 4, 2, 2, 0];
+  const research  = [3,  0, 1, 0, 1, 0, 1, 1, 0, 0,  0, 0,  0, 0, 5,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   const brown  = '#8B6F54';
   const green  = '#6B8F71';
