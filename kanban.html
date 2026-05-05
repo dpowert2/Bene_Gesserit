@@ -128,6 +128,81 @@
     margin-right: 4px;
     min-width: 56px;
   }
+
+  /* Search input — used in the filters bar */
+  .search-wrap { position: relative; display: inline-block; }
+  .search-input {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    padding: 7px 32px 7px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: 100px;
+    background: var(--bg-card);
+    color: var(--text);
+    outline: none;
+    width: 280px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .search-input::placeholder { color: var(--text-light); }
+  .search-input:focus {
+    border-color: var(--brown);
+    box-shadow: 0 0 0 3px var(--brown-light);
+  }
+  .search-clear {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    padding: 4px 9px;
+    border-radius: 100px;
+    line-height: 1;
+  }
+  .search-clear:hover { background: var(--bg-page); color: var(--text-heading); }
+  .search-info {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-left: 4px;
+  }
+  .search-info strong { color: var(--text-heading); font-weight: 600; }
+  .search-info .pipeline-link {
+    color: var(--brown);
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+  }
+  .search-info .pipeline-link:hover { color: var(--brown-dark); }
+  .pipeline-matches-panel {
+    margin-top: 6px;
+    padding: 10px 14px;
+    background: var(--blue-light);
+    border-left: 3px solid var(--blue);
+    border-radius: 8px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+  .pipeline-matches-panel .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--blue);
+    margin-bottom: 4px;
+  }
+  .pipeline-matches-panel a {
+    color: var(--text-heading);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .pipeline-matches-panel a:hover { border-bottom-color: var(--brown); color: var(--brown); }
+  .pipeline-matches-panel .sep { color: var(--text-light); margin: 0 6px; }
   .region-filter { /* legacy class — kept for backward compatibility */
     display: flex;
     flex-wrap: wrap;
@@ -782,6 +857,15 @@
     <h1>Kanban</h1>
     <p class="description">Outreach pipeline. Cards tagged for follow-up start in the first column. Drag to move, or click any card to open the full profile, leave a history note, and change stage.</p>
     <div class="filters-bar">
+      <div class="filter-group" id="search-group">
+        <span class="filter-group-label">Search</span>
+        <span class="search-wrap">
+          <input class="search-input" id="search-input" type="text" placeholder="Have I added this startup?" autocomplete="off"/>
+          <button class="search-clear" id="search-clear" hidden title="Clear search">✕</button>
+        </span>
+        <span class="search-info" id="search-info"></span>
+      </div>
+      <div id="pipeline-matches-panel" class="pipeline-matches-panel" hidden></div>
       <div class="filter-group" id="region-filter">
         <span class="filter-group-label">Region</span>
         <button class="region-btn active" data-region="all">All <span class="region-count" data-region-count="all">0</span></button>
@@ -937,6 +1021,7 @@ let activeTeam = (function () {
 let activeRegion = (function () {
   try { return localStorage.getItem('bg_kanban_region') || 'all'; } catch (e) { return 'all'; }
 })();
+let activeSearch = '';
 
 /* ============================================================
    FETCH VOTES
@@ -1112,6 +1197,19 @@ function regionMatches(geo, region) {
   return _regions(geo).includes(region);
 }
 
+function searchMatches(s, q) {
+  if (!q) return true;
+  const needle = q.toLowerCase();
+  const hay = [
+    s.name,
+    s.oneliner,
+    s.gap,
+    s.geo,
+    s.url,
+  ].filter(Boolean).join(' ').toLowerCase();
+  return hay.includes(needle);
+}
+
 function _teams(s) {
   return Array.isArray(s.bgTeam) ? s.bgTeam : [];
 }
@@ -1149,8 +1247,12 @@ function renderBoard() {
     }
   });
 
-  // Filter by active region AND active team (both apply)
-  const onBoard = onBoardAll.filter(x => regionMatches(x.s.geo, activeRegion) && teamMatches(x.s, activeTeam));
+  // Filter by active region AND active team AND search (all three apply)
+  const onBoard = onBoardAll.filter(x =>
+    regionMatches(x.s.geo, activeRegion) &&
+    teamMatches(x.s, activeTeam) &&
+    searchMatches(x.s, activeSearch)
+  );
 
   // Sort by score desc within each column
   onBoard.sort((a, b) => (b.s.score || 0) - (a.s.score || 0));
@@ -1167,7 +1269,8 @@ function renderBoard() {
       const empty = document.createElement('div');
       empty.className = 'kanban-empty';
       let msg = 'No cards yet';
-      if (stage === 'followup' && activeRegion === 'all' && !activeTeam) msg = 'Tag cards in Pipeline →';
+      if (activeSearch) msg = 'No matches';
+      else if (stage === 'followup' && activeRegion === 'all' && !activeTeam) msg = 'Tag cards in Pipeline →';
       else if (activeTeam && activeRegion !== 'all') msg = `None — ${activeTeam} × ${activeRegion}`;
       else if (activeTeam) msg = `None for ${activeTeam}`;
       else if (activeRegion !== 'all') msg = 'None in this region';
@@ -1176,6 +1279,9 @@ function renderBoard() {
     }
     document.querySelector(`[data-count="${stage}"]`).textContent = counts[stage];
   });
+
+  // Update search info: show on-board match count + off-board pipeline matches
+  updateSearchInfo(onBoard.length, onBoardAll);
 
   // Update region filter counts and active state
   Object.entries(regionCounts).forEach(([r, n]) => {
@@ -1218,6 +1324,74 @@ function wireTeamFilter() {
       renderBoard();
     });
   });
+}
+
+function wireSearch() {
+  const input = document.getElementById('search-input');
+  const clear = document.getElementById('search-clear');
+  if (!input) return;
+
+  let debounce;
+  input.addEventListener('input', () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      activeSearch = input.value.trim();
+      clear.hidden = activeSearch.length === 0;
+      renderBoard();
+    }, 120);
+  });
+  clear.addEventListener('click', () => {
+    input.value = '';
+    activeSearch = '';
+    clear.hidden = true;
+    renderBoard();
+    input.focus();
+  });
+  // "/" focus shortcut — common pattern, low surprise
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+  });
+}
+
+function updateSearchInfo(onBoardMatchCount, onBoardAll) {
+  const info = document.getElementById('search-info');
+  const panel = document.getElementById('pipeline-matches-panel');
+  if (!info || !panel) return;
+  if (!activeSearch) {
+    info.innerHTML = '';
+    panel.hidden = true;
+    panel.innerHTML = '';
+    return;
+  }
+
+  // Off-board matches: startups that match the search but aren't on the kanban.
+  const onBoardSlugs = new Set(onBoardAll.map(x => x.s.slug));
+  const offBoard = startups.filter(s => !onBoardSlugs.has(s.slug) && searchMatches(s, activeSearch));
+
+  // Concise inline summary
+  const onTxt = `<strong>${onBoardMatchCount}</strong> on board`;
+  const offTxt = offBoard.length > 0
+    ? ` · <strong>${offBoard.length}</strong> in pipeline (not on kanban)`
+    : '';
+  info.innerHTML = onTxt + offTxt;
+
+  // Detailed off-board panel
+  if (offBoard.length === 0) {
+    panel.hidden = true;
+    panel.innerHTML = '';
+    return;
+  }
+  const links = offBoard
+    .slice(0, 12)
+    .map(s => `<a href="pipeline.html#startup-${escapeAttr(s.slug)}" target="_blank" rel="noopener">${escapeText(s.name)}</a>`)
+    .join('<span class="sep">·</span>');
+  const more = offBoard.length > 12 ? `<span class="sep">·</span><span style="color:var(--text-light);">and ${offBoard.length - 12} more</span>` : '';
+  panel.innerHTML = `<div class="label">Already in your pipeline (not on kanban)</div>${links}${more}`;
+  panel.hidden = false;
 }
 
 function buildCardEl(s) {
@@ -1530,6 +1704,7 @@ async function init() {
     votes = await fetchVotes();
     wireRegionFilter();
     wireTeamFilter();
+    wireSearch();
     wireAddStartup();
     renderBoard();
     wireDragDrop();
