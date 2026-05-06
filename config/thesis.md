@@ -1,370 +1,223 @@
 # Bene Gesserit — Living Investment Thesis
-
-*Last updated: 2026-04-29 | Version: 2.8 — **Novelty as the lead criterion.** Cycle 10 ran the new Turso-fetcher against the live vote stream (73 votes, vs the 8-vote stale cache that prior cycles had been operating on) and the signal is unambiguous: cards described as "operating system / workflow / SaaS-with-AI" are 1★ rejections regardless of investor quality, stage match, or thesis-category fit. Cards that are genuinely category-reinventing — TYTL (tokenized residential RE), Versus (mass-market prediction app), Noise ("Love it") — are 5★. The criterion isn't what the company does, it's whether the company represents a leap forward, a new asset class, a category reinvention, or a novel mechanism. **Two new HARD GATES (cycle 10):** (1) NOVELTY GATE — if the candidate is best described as "an operating system for X", "workflow management for X", or "AI-assisted SaaS for X", it does not enter the pipeline. (2) The existing Internal-Workflow Hard Filter is extended to cover advisor-OS, family-office-OS, and broker-OS — being for "external" advisors instead of internal staff doesn't redeem a workflow tool. v2.7 prior changes still in force.*
-
----
-
-## Core Thesis
-
-**Fidelity wins by harnessing external innovation, not by trying to out-build it.**
-
-The new apps are agents. Just as mobile apps transformed how customers interacted with financial services, AI agents will become the primary interface for financial discovery, planning, and execution. The companies building these agents will move faster than any single institution — including Fidelity. That's not a threat. It's the opportunity.
-
-Fidelity should become the **app store for financial agents** — a trusted, regulated walled garden where external agents operate on behalf of customers, connecting to Fidelity's markets, execution infrastructure, and regulatory standing. Fidelity owns the marketplace, the review process, the safety net, and the rails. Startups build the agents that sit inside the garden and deliver a superior customer experience.
-
-By leaning into an ecosystem of agents rather than building a single proprietary one, Fidelity gains a structural advantage: **we will always have access to the latest and best agents.** When the next breakthrough in tax optimisation, portfolio construction, or financial planning arrives, it arrives inside our garden — not as a competitor. We don't risk obsolescence because the platform evolves as fast as the ecosystem does. The agents come to us.
-
-This requires assembling the technology stack that makes a regulated agent marketplace possible: orchestration, safety, identity, compliance, audit, and governance infrastructure. That's what we're scouting for.
-
-**What this is NOT:** Internal workflow optimisation. Back-office efficiency. Making life easier for the finance department. This is a major competitive strategy — building the platform that every financial agent needs, not building the agents themselves.
+*Last updated: 2026-05-07 | Version: 3.1 — Cycle 14. Three-team hypotheses uniformly structured (time horizon → numbered focus areas → reference signals → out-of-scope). Search architecture redesigned and protocol-fixed — Phase 4 of the radar now follows `task-prompts/radar-phase-4-blind-spot-protocol.md` for blind-spot cells (accelerator-batch sweeps + reverse-archetype + GitHub MCP, not vocabulary search). Schema upgraded with `audience_archetype` per gap and a top-level `audience_archetypes` block. All v2.9 hard gates remain in force.*
 
 ---
 
-## Why Now
+## Core thesis
 
-### The Agentic Brokerage Already Shipped
+The new apps are agents. AI agents will become the primary interface for financial discovery, planning, and execution — the way mobile apps reshaped customer interaction last cycle. The companies building these agents will move faster than any single institution. That isn't a threat. It's the opportunity.
 
-The agentic brokerage is no longer hypothetical. In the last two weeks of March 2026:
+The strategic move is to become the **app store for financial agents**: a trusted, regulated walled garden where external agents operate on behalf of customers, connecting to your markets, execution infrastructure, and regulatory standing. You own the marketplace, the review process, the safety net, and the rails. Startups build the agents that sit inside the garden and deliver the customer experience.
 
-- **eToro launched "Agent Portfolios" (March 26)** — bring-your-own-agent model. Users create a sub-portfolio, allocate capital ($200 minimum), connect their own AI agent via scoped API key. Developer-first. Building MCP integration. Extending social trading from "copy a human" to "copy an AI agent."
-- **Public.com launched "the world's first Agentic Brokerage" (March 31)** — natural language strategy definition. Users describe intent, the platform builds and executes the agent workflow. Passed eight Series 7 exams. $400M+ raised (Accel, Tiger Global), manages billions in assets.
+By leaning into an ecosystem of agents instead of building one internally, the platform always has access to the latest and best of them. When the next breakthrough in tax optimisation or portfolio construction arrives, it arrives inside the garden — not as a competitor. Obsolescence stops being a risk because the platform evolves as fast as the ecosystem does.
 
-Neither has a governance layer. Neither has pre-trade compliance. Neither has suitability checks, audit trails, or agent identity management. The infrastructure beneath these products — the part that makes them safe enough for a regulated brokerage — doesn't exist yet.
-
-That's the gap. That's the platform.
-
-### Fidelity Is Regulated — The Technology Must Be Too
-
-Fidelity operates under SEC, FINRA, FCA, and MiFID II obligations. Any agent that touches a customer account, recommends a trade, or executes on behalf of a client must meet the same compliance standards as a human advisor. That's not optional — it's the business.
-
-This means the technology stack powering the agent marketplace must be compliance-native from the ground up: suitability checks, audit trails, explainability, identity management, and human oversight. Off-the-shelf AI tooling built for general enterprise use won't meet the bar.
-
-**Why we scout in Europe:** European startups tend to build compliance, governance, and audit into their architecture by default — a product of operating in a heavily regulated environment (GDPR, DORA, MiFID II, and the incoming EU AI Act). This makes them naturally suited as technology partners for a regulated brokerage. US startups often bolt compliance on later. For Fidelity's purposes, the European supply chain is the better fit.
-
-### Agentic Commerce Went Live — Investment Is Next
-
-- **Visa Intelligent Commerce** produced hundreds of live agent-initiated transactions by December 2025 — world's first agent-completed purchases.
-- **Santander + Mastercard** completed Europe's first live AI agent payment on March 2 — first within a regulated banking framework.
-- **Santander + Visa** completed LatAm's first agent-powered payments across five markets on March 12.
-- **Visa launched "Agentic Ready" in Europe** — Barclays, Commerzbank, HSBC UK, Revolut, Santander signed up.
-- **Citi, US Bank, DBS, Westpac, Axis Bank, RBL Bank** all trialling Mastercard Agent Pay or Visa VIC.
-
-Commerce infrastructure (agent identity, payment rails, consent frameworks) is directly reusable for investment. JPMorgan's Mirakl partnership on agentic commerce checkout is the bridge. Public.com and eToro shipping agentic brokerage products compresses the timeline — the transfer from commerce to investment is happening now.
+What this is **not**: internal workflow optimisation, back-office efficiency, or tooling that improves life for the finance department. This is the platform that every financial agent needs — not the agents themselves.
 
 ---
 
-## What Others Are Doing (and Why We're Different)
+## Why now
 
-**Building internally:** JPMorgan ($20B tech budget, 450+ AI use cases), Goldman Sachs (Claude for compliance), Citi (182,000 employees with AI tools), Morgan Stanley (OpenAI partnership). Massive internal investment. None building an open agent marketplace.
+The agentic brokerage already shipped. In the last two weeks of March 2026, eToro launched Agent Portfolios (bring-your-own-agent, $200 minimum, scoped API key, MCP integration in build) and Public.com launched "the world's first Agentic Brokerage" (natural-language strategy definition, $400M+ raised, Series 7 passed). Neither has a governance layer, pre-trade compliance, suitability checks, audit trails, or agent identity management. The infrastructure beneath them — the part that makes them safe enough for a regulated brokerage — doesn't exist yet. That's the gap.
 
-**Partnering with frontier models:** Santander (OpenAI, 30,000 employees), HSBC (Mistral for custom LLMs). Faster than building, but still tied to a single provider's roadmap.
+Agentic commerce went live ahead of agentic investment. Visa Intelligent Commerce produced hundreds of live agent-initiated transactions by December 2025. Santander + Mastercard completed Europe's first live AI agent payment on March 2, 2026 — the first within a regulated banking framework. Santander + Visa shipped LatAm's first agent-powered payments across five markets on March 12. Visa Agentic Ready signed Barclays, Commerzbank, HSBC UK, Revolut, Santander. Citi, US Bank, DBS, Westpac, Axis Bank, RBL Bank are all trialling Mastercard Agent Pay or Visa VIC. Commerce-to-investment is the obvious next step.
 
-**Shipping consumer agentic products without governance:** eToro (Agent Portfolios — BYOA via API, developer-first), Public.com ("world's first Agentic Brokerage" — natural language to execution), Arta Finance ($92M — AI wealth management with "Wealth as a Service" for partner banks). All live. None have the compliance, identity, or audit infrastructure that a regulated brokerage requires.
+eToro App Store launched April 15 — a third-party developer marketplace with APIs, MCP server, and revenue sharing. Dual signal: the thesis is correct, and the timeline is compressing. Infrastructure startups need to establish themselves before eToro defines the de facto standard.
 
-**Nobody is building the platform.** Every approach above either builds agents internally, partners with a model provider, or ships consumer products without governance infrastructure. The regulated agent marketplace — where external agents are certified, governed, and executed safely — is unoccupied.
-
----
-
-## Our Differentiation
-
-### What Competitors Are Doing
-
-The industry is converging on two approaches, and we believe both are wrong:
-
-**Build it yourself.** JPMorgan is spending $20B and has 450+ AI use cases deployed internally. Goldman Sachs is deploying Anthropic Claude for compliance. Morgan Stanley partnered with OpenAI. Citi has 182,000 employees equipped with generative AI tools. These banks are building proprietary AI capabilities at massive scale — but they're building for internal efficiency, not for an ecosystem. When the next breakthrough agent arrives, it arrives at a startup, not inside JPMorgan.
-
-**Partner with a frontier model provider.** Santander partnered with OpenAI (30,000 employees on ChatGPT Enterprise). HSBC partnered with Mistral. This is faster than building, but it still ties innovation to a single provider's roadmap. And frontier model providers don't build brokerage infrastructure — they build general-purpose AI.
-
-### What We Believe
-
-Neither approach harnesses the full pace of external innovation. The winning strategy is to build the **platform** — the walled garden — and let the entire startup ecosystem compete to deliver superior customer experiences inside it. Fidelity doesn't need to pick the winning agent or the winning model. Fidelity needs to be the place where all of them operate.
-
-This is a fundamentally different bet. Our competitors are trying to build the best internal AI. We're trying to build the best environment for external AI.
-
-### Why European Startups
-
-Fidelity needs compliance-native technology. European startups build that way by default — governance, explainability, and audit baked into the architecture, not bolted on after. They're building for our requirements without us having to ask. That's why we scout primarily in Europe.
+European startups build compliance, governance, and audit by default — a product of operating under GDPR, DORA, MiFID II, and the incoming EU AI Act. They are naturally suited as technology partners for a regulated brokerage. US startups tend to bolt compliance on later. The European supply chain is the better fit for the platform.
 
 ---
 
-## Gap Map: Reimagining Brokerage Infrastructure for Agents
+## Where the competition is wrong
 
-Every function a brokerage performs today — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each of these must be reimagined. KYC becomes KYA (Know Your Agent). Pre-trade compliance checks must happen in milliseconds against agent-initiated orders. Audit trails must capture agent reasoning, not just human sign-off. Dispute resolution must account for a new actor in the value chain.
+| Approach | Examples | What it gets wrong |
+|---|---|---|
+| Build internally | JPMorgan ($20B tech budget, 450+ AI use cases), Goldman (Claude for compliance), Morgan Stanley (OpenAI partnership), Citi (182,000 employees with AI tools) | Builds for internal efficiency, not for an ecosystem. The next breakthrough agent arrives at a startup, not inside the bank. |
+| Partner with one frontier model | Santander + OpenAI (30,000 employees on ChatGPT Enterprise), HSBC + Mistral | Faster than building, but tied to one provider's roadmap. Frontier model providers don't build brokerage infrastructure. |
+| Ship consumer agentic products without governance | eToro Agent Portfolios, Public.com Agentic Brokerage, Arta Finance ($92M) | Live, but missing the compliance, identity, and audit infrastructure a regulated brokerage requires. |
 
-The gap map below identifies the infrastructure layers needed to build the app store. For each, we ask: is there a startup building this through an agentic, financial-services-specific lens?
+Nobody is building the platform. The regulated agent marketplace — where external agents are certified, governed, and executed safely — is unoccupied.
 
-| Layer | Traditional Brokerage Function | Agent-First Reimagining | Status |
-|-------|-------------------------------|------------------------|--------|
-| Agent Orchestration | Workflow management | Route, schedule, and govern multi-agent workflows | ✅ Jentic (POC partner) |
-| AI Safety & Guardrails | Risk controls | Supervise agent behaviour, enforce boundaries, prevent hallucination | ⚠️ Gap reopened — Overmind declined; Manifold 5★ and Kai 4★ remain |
-| Pre-Trade Compliance | Suitability, best execution | Agent checks suitability, concentration limits, restricted lists before every trade | ❌ **Market gap** — Hadrius (YC) closest signal |
-| Agent Authentication | KYC / identity | KYA — Know Your Agent. Permissions, secrets, identity delegation for non-human actors | ✅ Vouched (5★, KYA platform) |
-| Audit & Explainability | Regulatory reporting | "Why did the agent do this?" — auditable, regulator-ready explanation | ⚠️ First entry — Alinia (vote pending) |
-| Dispute Resolution | Customer complaints | When an agent trade goes wrong, who pays? Insurance, certification, accountability | ✅ Mount (5★), Klaimee (4★) — partially addressed |
-| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ✅ Alomana (5★) — first confirmed match |
-| Research & Signal Intelligence (S1) | Idea generation | Alternative data, earnings, sentiment, flow — agent-callable intelligence | ✅ AgentSmyth (5★), Serafis (5★), Kimpton AI (5★) — 100% hit rate |
+---
+
+## The three teams
+
+Bene Gesserit doesn't scout the platform in the abstract. It scouts on behalf of three operating teams, each with a distinct mandate, time horizon, and definition of "good." Every signal in the pipeline now carries an implicit team tag — Research, Studio, Greens, or cross-team. The same gap map applies; the priority of each gap shifts depending on which team needs it next.
+
+| Team | Mandate | Time horizon |
+|---|---|---|
+| Research | Forward-looking knowledge function. Three sub-areas: novel takes on old investment mechanisms, forward-looking signals on where investing is going, turning previously-uninvestable things into investable surfaces. | 12–24 months |
+| Studio | The 0-to-1 venture team. Prototypes new ventures inside emerging tech (voice, agents, predictive frameworks). Validates through three gates before graduating. | 6–18 months |
+| The Greens | Execution and infrastructure. Owns the regulated rails — tax APIs, account structure, custody, brokerage operations. Where graduated Studio ventures land for production. | 0–12 months |
+
+---
+
+### Research team hypothesis
+
+Time horizon: 12–24 months ahead.
+
+Research is looking for three things. Each one is forward-leaning and each one is about novelty — not incremental advisor tooling, not operational improvements, not workflow upgrades.
+
+**1. Novel takes on old investment mechanisms.** Established investment products — options, derivatives, structured products, prediction-market mechanics — reimagined for retail or for a buyer who's been locked out by capital, complexity, or geography. The bet isn't building another Robinhood. It's finding the company that takes a real institutional product and unwraps it for a wider audience in a way that's clearer, cheaper, or faster. The "inversion" has to genuinely simplify access; rebranding the same product doesn't count.
+*Reference signals:* Kalshi and Polymarket on prediction markets. Robinhood's options UX on retail derivatives. eToro's copy-trading on social investing.
+
+**2. Forward-looking signals on where investing is going.** Things that hint at how investing will actually pan out over the next decade — not the next quarter. New asset classes. New buyer behaviours. New advisor structures. AI-native RIAs that suggest the human-advisor layer collapses into software (Astor, Era, Autonomous). AI-native advisor platforms (Marloo). Behavioural-coaching wealth platforms. Frontier-model and academic partners doing regulated-environment research that's hard to do anywhere else.
+*The test:* if this exists at scale in 10 years, does the picture of who manages money and how look meaningfully different?
+
+**3. Turning previously-uninvestable things into investable surfaces.** Tokenization and fractionalization as compliant infrastructure for assets that have historically been off-limits to retail — real estate, private equity, collectibles, IP rights, royalties, litigation finance, life settlements, music IP.
+*Reference signals:* Securitize, Republic, Rally, TYTL, Willow Wealth, Moonfare. The strongest candidates have full-stack coverage — issuance, custody, and secondary market — with a rights model clear enough to survive regulatory scrutiny. Issuance-only plays with a fuzzy rights model score lower.
+
+**A note on the Versus revision.** Versus was originally one of the canonical 5★ retail-prediction-market exemplars. The May 2026 follow-up found it's actually a Kalshi product, not an independent seed-stage startup. The category (mass-market retail prediction app combining social, cultural, and financial forecasting) is still validated. The specific company is no longer a usable archetype reference. That triggered an entity-level rule in the broader thesis: verify a candidate is an independent seed/Series-A startup before treating it as a canonical archetype. Parent affiliation by an established company disqualifies the archetype claim, even when the underlying category is correct.
+
+---
+
+### Studio team hypothesis
+
+Time horizon: 6–18 months ahead.
+
+Studio is the 0-to-1 venture team. It prototypes new ventures inside emerging technology — voice, agents, predictive intelligence — before they're ready for the platform. Studio doesn't sell. It builds reference architectures, validates problem statements with academic and frontier-model partners, runs PoCs with Labs and EIRs, and graduates ventures to the Greens once three gates are cleared.
+
+Three focus projects for 2026.
+
+**1. Voice AI through estate planning.** A constrained voice agent that helps a customer onboard — turning a decision tree into voice, explicitly *not* advice. The fundamental questions are about voice itself: can it be personalised, what kind of voice fits a regulated environment, what does the voice-artist research look like. The internal voice prototype from Labs is the starting point. Potential extension into the research component for the internal estate-planning initiative's voice implementation.
+*Reference signals:* Mistral and Anthropic on voice solutions in regulated environments. The internal estate-planning initiative as the venue and EIRs as the collaborators.
+
+**2. Nostradamus — predictive agent framework.** An agent framework for predictive intelligence across health, wealth, and physical domains. The work is to map what agent structures actually exist and how they can be integrated usefully. The "JTBD for agents" question — *what is the job an agent is being hired to do* — is the spine.
+*Reference signals:* Mantic on AI-based future prediction. The academic research partner running a Four-Fits / PoC project for problem-statement validation.
+
+**3. Intelligent tax agent.** US financial products are complex (direct indexing as the cleanest case — investing in individual top constituents so investment losses can offset capital gains). Tax-loss harvesting is not a per-position problem; it requires looking holistically across the client's full account picture, and tax varies state by state. The hypothesis is a frontier-fintech intelligence layer — *"the accountant in your pocket"* — sitting on top of direct indexing and the broader portfolio, with state-by-state tax-harvesting logic running on top of the Greens' tax APIs.
+*Reference signals:* Alomana (autonomous portfolio rebalancing + TLH, 5★) on the agent side. The Greens' existing tax APIs on the rails side. *Tax filing alone is not interesting (juno 2★ remains the canonical anti-pattern); portfolio-integrated, real-time tax intelligence is.*
+
+**Studio's search boundaries.** Internal-workflow tools are excluded by the global hard filter. Private markets are secondary — a separate analysis stream is being led elsewhere. Stage discipline matches the rest of BG: seed to early Series A.
+
+**Three gates before a venture graduates.**
+- *Ecosystem validation* — third-party demand and architectural fit beyond a single internal sponsor.
+- *Internal board approval* — Strategy and Labs leadership commit to the build.
+- *External market validation* — Strategic Investment Committee sign-off applying *venture-capital* principles, not corporate-assurance methods. The distinction matters: a corporate-assurance gate kills the venture; a VC gate sizes the bet.
+
+---
+
+### Greens team hypothesis
+
+Time horizon: 0–12 months ahead.
+
+The Greens own the regulated rails — tax APIs, account structure, custody, brokerage operations. This is where graduated Studio ventures land for production deployment, and where every external agent eventually has to clear if it wants to act on a customer account. The Greens are looking for compliance-native primitives that wrap existing regulated capabilities into agent-callable services. The criterion is two parts in one: the primitive has to be safe enough for a regulated brokerage to expose, *and* it has to be agent-callable so the marketplace can actually use it.
+
+Three things that means in practice.
+
+**1. Know-Your-Agent (KYA) and pre-trade compliance as agent-ready services.** KYC was for human customers; KYA is for non-human actors acting on customer accounts. Pre-trade compliance — suitability, concentration limits, restricted-list checks, best-ex obligations — has to run in milliseconds against agent-initiated orders, not as a quarterly review of a human advisor. This is the app store's admission system and its trade gate.
+*Reference signals:* Vouched (5★, KYA platform). Hadrius (YC, SEC/FINRA-native pre-trade signal — the closest live candidate in a market that is otherwise empty).
+
+**2. Audit, explainability, and dispute resolution as marketplace infrastructure.** Regulators and customers will both ask "why did the agent recommend this?" and "who pays when the agent gets it wrong?" Explainability has to be agent-aware (not model-level — the line between Mindgard 2★ and the agent-specific space matters). Dispute resolution requires an insurance / liability frame, not an internal-risk frame.
+*Reference signals:* Alinia (Mouro/Santander seed, agent compliance controller — first entry in a previously-empty cell). Mount Insurance (5★ "reduces risk — excellent"). Klaimee (4★). Armilla (Lloyds-backed) and AIUC ($15M seed, Nat Friedman) round out the category.
+
+**3. Tax APIs and execution rails wrapped as agent-callable.** The rails already exist. The work is to make them callable by external agents in the marketplace — the agent calls a tax API, a compliance API, and an execution API, and the customer sees one outcome. This is also where Studio's Intelligent Tax venture lands.
+*Reference signals:* Alomana (5★) on the consumer-facing tax-agent side. Existing Greens tax APIs on the rails side.
+
+**Greens' search boundaries.** Workflow tooling for the Greens' own internal operations is excluded by the same hard filter that applies elsewhere. Bookkeeping, accounting, and CFO tools are excluded by the second hard filter. The "wrong kind of risk" pattern — internal enterprise risk versus external-agent risk — is a –15 penalty (lema-ai 1★).
+
+---
+
+## Gap map
+
+Every brokerage function — onboarding, compliance, trading, custody, reporting — was designed for human actors. In an agent-first world, each must be reimagined. KYC becomes KYA. Pre-trade compliance must run in milliseconds. Audit trails must capture agent reasoning. Dispute resolution must account for a new actor in the value chain.
+
+| Layer | Traditional function | Agent-first reimagining | Status |
+|---|---|---|---|
+| Agent Orchestration | Workflow management | Route, schedule, govern multi-agent workflows | ✅ Jentic (POC partner, BG 95) |
+| AI Safety & Guardrails | Risk controls | Supervise agent behaviour, enforce boundaries, prevent hallucination | ⚠️ Reopened — Overmind declined; Manifold 5★ + Kai 4★ remain |
+| Pre-Trade Compliance | Suitability, best execution | Agent-initiated trades cleared in milliseconds | ❌ Market gap — Hadrius (YC) closest signal |
+| Agent Authentication | KYC / identity | KYA — Know Your Agent. Permissions, secrets, identity delegation for non-human actors | ✅ Vouched (5★) |
+| Audit & Explainability | Regulatory reporting | "Why did the agent do this?" — auditable, regulator-ready | ⚠️ First entry — Alinia (vote pending) |
+| Dispute Resolution | Customer complaints | Insurance, certification, accountability for agent trades | ✅ Mount (5★), Klaimee (4★) |
+| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ✅ Alomana (5★) |
+| Research & Signal Intelligence | Idea generation | Alternative data, earnings, sentiment, flow as agent-callable intelligence | ✅ AgentSmyth, Serafis, Kimpton AI (3/3 at 5★) |
 | Agent Monetisation | Fee schedules | Results-based billing for agent-mediated services | ✅ Paid AI (pattern signal) |
 | Agent Payment Rails | Settlement | Escrow, intent verification, dispute resolution for agent transactions | ✅ Nava (5★), Natural (4★) |
-
-### Gaps With European Startup Coverage
-
-**1. Agent Orchestration & Workflow** ✅ POC Partner
-Jentic (Dublin, pre-seed $4.5M). Arazzo workflows, agentic sandboxes, centralised credentials, governed execution. Governance-native architecture. BG Score: 95.
-
-**2. AI Safety & Guardrails** ⚠️ Gap Reopened
-Previous lead Overmind (London, seed €2.3M, ex-MI5 founder, BG Score 100) archived 2026-04-14 — *"They aren't interested in participating."* Manifold (5★ "Similar to Geordie") and Kai (4★) remain as partial coverage. Priority re-elevated from MEDIUM to HIGH — active scouting for agent-specific (not AI-model-level) safety companies.
-
-**3. Compliance — Customer Operations** ✅ Reference Architecture
-Gradient Labs (London, Series A $13M). SOP-following agents in regulated banking. Deployed at a major UK bank, 98% CSAT. LHV Bank POC signed. The architectural pattern — procedure-based, auditable, deterministic — is the template for how agents should behave inside the walled garden. BG Score: 82.
-
-**4. Compliance + KYC + Research** ✅ Strong Candidate
-Unique AI (Zurich, Series A $30M, $53M total). 25 specialised finserv use cases. Deployed at Pictet, UBP, LGT, SIX, Partners Group. 30,000 users. $2.3T AUM across clients. CPO from Google DeepMind. MCP Hub for secure agent-to-system connections. BG Score: TBD — card pending.
-
-**5. Agentic Commerce Middleware** ✅ Pattern Signal
-Lemrock (Paris, seed €6M). Middleware connecting catalogues to LLMs. 60+ brands, 1B+ queries. Architecture transfers to financial product distribution through the marketplace. BG Score: 57.
-
-**6. Agent Monetisation** ✅ Pattern Signal
-Paid AI (London, seed $33M). Results-based billing for AI agents. Directly relevant — how does Fidelity charge when an agent in the marketplace generates a trade? BG Score: 53.
-
-**7. Cross-Border Compliance** ✅ Adjacent
-Outpost (London, seed $17.5M). Ex-Revolut founders, Ribbit Capital. Cross-border payments and tax compliance. BG Score: 58.
-
-### Genuine Market Gaps (Highest Priority for Scouting)
-
-**8. Pre-Trade Compliance Agent** ❌ FCAT's Most Actionable Insight
-Nobody building this. When an AI agent in the marketplace wants to trade, who checks: is this suitable for the client? Does it violate concentration limits? Is the security on a restricted list? Is this best execution? In a world where Public.com ships "describe your intent, we execute" without suitability checks, the company that builds the pre-trade compliance agent owns the governance layer for every agentic brokerage — including the app store. Hadrius (YC, SEC/FINRA native) is the closest signal.
-
-**9. Agent Authentication & Identity** ❌ No FinServ Startup
-Ping Identity shipped "Identity for AI" GA. IETF standard being written (draft-klrc-aiagent-auth, March 2026). Horizontal players exist (Composio, Nango, Strata, Runlayer, Aembit, Astrix). Nobody building "Know Your Agent" for financial services. This is the app store's certification system — without it, there's no marketplace.
-
-**10. Audit & Explainability** ❌ No Purpose-Built Startup
-Regulators require explainability for AI-driven financial decisions — and so will customers. ValidMind is closest. Nobody building "why did the agent recommend this trade?" as an auditable service. This is the app store's transparency layer.
-
-**10b. Audit & Explainability** ⚠️ First Entry
-Alinia (Barcelona, seed $7.5M, Mouro Capital/Santander). Backend compliance controller for high-stake AI agents. First entry in this previously empty category — vote pending. ValidMind also tracked. The regulatory-grade explainability layer is now partially scouted.
-
-**11. Dispute Resolution & Agent Liability** ✅ Partially Addressed
-Previously "completely unsolved." Now validated by Mount Insurance (5★ "Reduces risk — excellent") and Klaimee (4★ "Not quite as good as Mount"). Mount's "insurer for the agent economy" model is the archetype. Armilla (Lloyds-backed) and AIUC ($15M seed, Nat Friedman, predicts $500B market by 2030) round out the category. Still only 2 pipeline companies — continued scouting HIGH priority.
-
-### Partial Coverage
-
-**12. Personal Financial Agent** ⚠️
-Mistral (Paris, $13.7B) — infrastructure play, not a partner in the traditional sense. Finley AI (London, FCA spotlight) — financial AI agent API. Arta Finance ($92M, US+Singapore) — "Wealth as a Service" reference architecture. No European startup building a personal financial agent specifically — suitability regulation makes it harder to ship fast.
-
-**13. Tax Optimisation Agent** ⚠️ Likely Internal Build
-No startup found. Vanguard does daily autonomous TLH internally. This is probably a Fidelity capability question — The Greens has tax APIs, the opportunity is wrapping them agent-ready for the marketplace.
+| Trade Structuring (S3) | Account selection, options/equity | Asset location, after-tax routing, structure-aware advisor copilot | ❌ Empty until 2026-05-07 — seed pass surfaced Range, PortfolioPilot, Zeplyn |
+| Options Strategy (S5) | Derivatives access | Wheel / covered-call / income strategies for retail | ❌ Empty until 2026-05-07 — seed pass surfaced QuantWheel, OptionsPilot, Jenova AI |
+| Execution (S6) | Smart order routing | AI-native execution copilot, TCA agent | ❌ Empty until 2026-05-07 — seed pass surfaced big xyt, Tradefeedr, OneChronos |
+| Position Monitoring (S7) | Watchlists | Thesis tracker, earnings prep, agent-callable research data | ❌ Empty until 2026-05-07 — seed pass surfaced Quartr, Brightwave (track), Daloopa |
+| Post-Trade (S10) | Trade journals | AI-tagged trade journaling, attribution, coaching | ❌ Empty until 2026-05-07 — seed pass surfaced TraderSage, TradeLog Pro, JournalPlus |
 
 ---
 
-## The Hypothesis: How Agentic Investing Works
+## How the customer experience flows through specialist agents
 
-To understand what the app store needs, we need to understand how the very best investors actually make decisions — and then imagine each stage of that process as a specialist agent.
+A customer's personal agent says "I want more semiconductor exposure." The conversation cascades:
 
-### How Elite Traders Actually Work
+The **research agent** analyses the sector and surfaces candidates. The **portfolio agent** checks existing exposure and models the impact. The **sizing agent** recommends allocation against a risk budget. The **structuring agent** evaluates equity vs options vs pairs. The **tax agent** finds the optimal execution path across account types. The **compliance agent** gates the trade. The **execution agent** places the order. The **monitoring agent** watches the position. When conditions change, the conversation begins again.
 
-The best portfolio managers and traders don't just "buy a stock." They execute a multi-stage process that draws on deep, specialised knowledge at every step. Here's the real workflow:
-
-**1. Idea generation.** It starts with signals. Elite traders screen thousands of securities using quantitative filters — valuation metrics, growth rates, momentum signals, earnings revisions. But the edge comes from layering in alternative data that most investors never see: satellite imagery showing retail foot traffic, aggregated credit card transaction data, app download trends, supply chain shipping data, social sentiment analysis. The best funds combine multiple independent data sources because conviction rises when two unrelated signals point the same direction. They also tap human networks — broker research calls, management conversations, industry expert networks — and pattern-match against historical situations where similar setups produced outsized moves.
-
-**2. Research and thesis building.** Once a signal surfaces, the trader builds a thesis — a specific, falsifiable argument for why this security should move. This means deep fundamental analysis: revenue trajectory, margin dynamics, competitive moat, management quality, capital allocation decisions, insider buying patterns. It means identifying specific catalysts — earnings surprises, product launches, regulatory decisions, activist involvement, M&A potential — and structuring a time horizon around them. And it means understanding what the market consensus is and where it's wrong. The best trades are contrarian: the thesis must explain why the market is mispricing the security.
-
-**3. Sentiment and flow analysis.** Before committing capital, the trader reads the room. What's the short interest? What are institutional ownership flows showing — is smart money accumulating or distributing? What's the analyst consensus, and how crowded is it? Order flow analysis reveals whether recent trading has been buyer-initiated or seller-initiated, signalling institutional intent. This isn't just technical analysis — it's understanding the supply/demand dynamics of the security itself.
-
-**4. Portfolio impact assessment.** No trade exists in isolation. The trader calculates: what does adding this position do to the overall portfolio? Does it push sector concentration above limits? Does it introduce correlated risk (adding another semiconductor name when the portfolio is already overweight tech)? What's the marginal contribution to portfolio volatility? Factor analysis reveals hidden exposures — a "diversified" portfolio that's actually just a leveraged bet on interest rates. Scenario modelling shows what happens to the portfolio in a 2-sigma down day, a sector rotation, a liquidity crisis.
-
-**5. Position sizing.** This is where amateurs lose and professionals survive. The size of the position is a direct expression of conviction and risk tolerance. Elite traders work within a risk budget — typically risking 1-2% of capital per position. They use fractional Kelly criterion to determine optimal sizing based on win probability and payoff ratio. A high-conviction thesis with 3:1 risk-reward gets a larger allocation than a speculative idea at 2:1. The question is always: "If I'm completely wrong, how much am I willing to lose?" That answer IS the position size.
-
-**6. Trade structuring.** The trader decides HOW to express the thesis. Direct equity purchase? Options (calls for leverage, puts for hedging, spreads for defined risk)? A pairs trade (long the winner, short the loser in the same sector)? Each structure has different risk/reward profiles, capital requirements, and time decay characteristics. For a wealth management client, this also means deciding WHICH ACCOUNT to trade in — and this is where it gets complex. A high-turnover strategy belongs in a tax-sheltered IRA. A buy-and-hold position belongs in a taxable account. High-dividend stocks go in IRAs to avoid annual tax drag. A covered call programme for income generation might work in the taxable account where the underlying is already held. The optimal account selection depends on the client's entire financial picture.
-
-**7. Tax optimisation.** Before execution, the tax agent runs the numbers across the client's full account structure. If funding this purchase requires a sale, which lot should be sold? Lot #3 might be a short-term loss that offsets $4,200 in gains from January. But selling lot #1 — a long-term holding — triggers capital gains. Can we harvest losses elsewhere in the portfolio to offset? Is there a substantially identical security we can swap into to maintain exposure while capturing the tax benefit? What's the wash sale window? For a Roth conversion analysis, does it make sense to convert this year given the client's income? The difference between tax-aware and tax-unaware execution can be 1-2% of annual return — compounded over decades, that's transformative.
-
-**8. Pre-trade compliance.** The gate. Every proposed action must clear compliance before execution. Is this trade suitable for this client's risk profile, investment objectives, and time horizon? Does it violate concentration limits? Is the security on a restricted list (because the firm has material non-public information)? Does it meet best execution obligations? Are there counterparty risks? Position limits by sector, country, single issuer? What's the liquidity profile — if the client needs to exit quickly, how many days would liquidation take? Compliance is non-negotiable. Violations mean regulatory fines, potential criminal liability, and client harm.
-
-**9. Execution.** Professional execution is nothing like clicking "buy" on an app. The trader selects an execution algorithm matched to order size, urgency, and market conditions. VWAP algorithms spread orders across the day's expected volume to minimise market impact. TWAP distributes evenly over time. For larger orders, portions route to dark pools — private venues where orders are hidden from the public book, preventing information leakage. Smart order routers work across multiple venues simultaneously. The goal is minimising implementation shortfall — the gap between the decision price and the actual execution price. Five basis points of slippage on a large order is real money.
-
-**10. Position monitoring.** The trade is live. Now the thesis must be monitored continuously. Is the fundamental case still intact? Have earnings or guidance changed? Has a competitor made an unexpected announcement? Has the macro backdrop shifted? The trader watches specific thesis milestones — if the catalyst doesn't materialise by the expected date, the thesis may be broken. Stop-losses and profit targets enforce discipline: if the position hits 2-3x the initial risk, take profits. If it hits the stop, exit regardless of emotion. Maximum Favourable Excursion analysis tracks whether the trader is capturing enough of each move or leaving money on the table.
-
-**11. Rebalancing and exit.** Positions don't stay optimal. A winner that's outperformed now represents 8% of the portfolio instead of the target 3% — the trader must trim to maintain diversification. Correlations shift over time, creating hidden concentration. Rebalancing is mechanical and emotion-free — the portfolio must stay within risk parameters. Exits happen for specific reasons: catalyst realised and priced in, thesis broken, profit target hit, or portfolio rebalancing required. Each exit decision also loops back through the tax optimisation stage — is this the right time to realise this gain or loss?
-
-**12. Post-trade analysis and learning.** Every closed position gets a forensic review. Was the thesis correct? Was the entry well-timed? What was the maximum adverse excursion (worst drawdown)? Did the exit capture the optimal amount of the move? Over hundreds of trades, patterns emerge — which setups work, which market regimes favour the strategy, where the process breaks down. Trade journals, attribution analysis (how much return came from stock selection vs sector allocation vs timing), and systematic learning loops are what separate elite traders from everyone else.
-
-**13. Behavioural coaching.** For wealth management clients, the most valuable intervention is often preventing a bad decision. When markets crash 20%, the natural human response is to panic and sell at the bottom. The best advisors prepare clients in advance for drawdowns, provide perspective during volatility, and enforce discipline when emotions run high. This is a distinct skill from portfolio construction — it's behavioural psychology applied to finance.
-
-**14. Financial planning overlay.** Everything above operates within the context of the client's actual life. A 30-year-old accumulating wealth has a different optimal strategy than a 70-year-old in drawdown. Life events — marriage, children, job change, inheritance, retirement — require portfolio restructuring. Income generation (dividends, covered calls) matters for retirees. Estate planning (step-up-in-basis, trusts, charitable giving) matters for wealth transfer. The planning agent ensures that no short-term trade decision undermines the client's long-term objectives.
-
-### Now Imagine Every Stage as an Agent
-
-In the app store, each of these fourteen stages is handled by a specialist agent — or a constellation of agents — built by a startup that does one thing brilliantly. A customer's personal agent initiates a conversation that flows through these specialists:
-
-"I want more semiconductor exposure" triggers a cascade: the **research agent** analyses the sector and surfaces candidates. The **portfolio agent** checks existing exposure and models the impact. The **sizing agent** recommends allocation based on conviction and risk budget. The **structuring agent** evaluates equity vs options vs pairs. The **tax agent** finds the optimal execution path across account types. The **compliance agent** gates the trade. The **execution agent** places the order. The **monitoring agent** watches the position. And when conditions change, the conversation begins again.
-
-The output is a better decision than any single agent — or most human advisors — could produce, because it draws on deep specialist knowledge at every stage. And every step is auditable, explainable, and governed inside the garden.
-
-**This is the customer experience that the app store delivers.** Fidelity provides the garden. Startups provide the intelligence. The customer gets the combined brainpower of the entire ecosystem.
+The output is a better decision than any single agent — or most human advisors — could produce, because it draws on deep specialist knowledge at every stage. Every step is auditable, explainable, and governed inside the garden. The platform provides the garden; the startups provide the intelligence; the customer gets the combined brainpower of the entire ecosystem.
 
 ---
 
-## The Three Teams: Research, Studio, Greens
+## What good looks like
 
-Bene Gesserit isn't scouting "the platform" in the abstract — it's scouting on behalf of three operating teams, each with a distinct mandate, time horizon, and definition of "good." A startup that's wrong for one team can be exactly right for another. The team filter is now part of how every signal is triaged.
-
-| Team | Mandate | Time Horizon | What It Wants From BG |
-|------|---------|--------------|------------------------|
-| **Research** | Forward-looking knowledge function. Three sub-areas: (a) **Consumer behaviour & market analysis** — custom GPT-driven research into consumer behaviour across financial / physical / mental health, fundamental research, problem-statement validation. (b) **Investable Everything** — scout startups that *democratise access* to financial products through Product Inversion (reimagining derivatives, options, structured products, and prediction-market mechanics for retail) and Tokenization / Fractionalization (compliant rights-clear infrastructure for previously illiquid assets — real estate, private equity, collectibles, IP rights). (c) **Wealth-Generation Reinvention** — anything that meaningfully reimagines wealth management or investing: AI-native RIAs that bypass the human-advisor stack, family-office-as-a-service democratisation, novel asset-class access for retail (royalties, litigation finance, life settlements, music IP), holistic wealth-CPA-attorney stack replacement, behavioural-coaching wealth platforms, retail private-market access. The criterion: a leap forward from the usual, not an incremental advisor tool. | 12–24 months | Signals from research labs, alternative-data vendors, academic spinouts, and frontier-model partners (Mistral, Anthropic) where regulated-environment research is non-trivial. PLUS: prediction-market platforms (Kalshi / Polymarket / Versus archetype), retail-friendly derivatives platforms (Robinhood options UX archetype), full-stack tokenization (Securitize / Republic / Rally / TYTL archetype), AI-native RIAs (Astor / Era / Autonomous archetype), family-office OS (Asseta AI archetype), AI-native advisor platforms (Marloo archetype), retail private markets (Willow Wealth / Moonfare archetype). |
-| **Studio** | The 0-to-1 venture team. Prototypes new ventures inside emerging tech (voice, agents, predictive frameworks) before they're ready for the core platform. Validates problems through a structured three-gate framework before ventures graduate. | 6–18 months | Reference architectures, voice infrastructure, agentic frameworks, fintech-AI startups in problem-spaces Studio is actively prototyping (estate planning, predictive intelligence, intelligent tax). |
-| **The Greens** | Execution and infrastructure. Owns the regulated rails — tax APIs, account structure, custody, brokerage operations. Where graduated ventures land for production deployment. | 0–12 months | Compliance-native primitives, agent-callable wrappers around existing capabilities, KYA / pre-trade compliance / audit infrastructure that lets the rails serve the marketplace safely. |
-
-Every signal in the BG pipeline now carries an implicit team tag — Research, Studio, Greens, or *cross-team*. The same gap map (above) applies, but the *priority* of each gap shifts depending on which team needs it next.
+- **Novelty (lead criterion since cycle 10).** Genuinely category-reinventing, a new asset class, a leap forward from the usual, or a novel mechanism. *Not* "an operating system for X", *not* "workflow management for X", *not* "AI-assisted SaaS for X". Cards that fail the novelty gate are 1–2★ no matter how strong the team or investors.
+- **Entity-level archetype check (cycle 12).** Before treating any candidate as a canonical archetype, verify it is an independent seed/Series-A startup — not a product of an established company. Parent affiliation disqualifies the archetype claim even when the underlying category is correct (Versus/Kalshi as the precedent).
+- **Stage:** Seed to Series A. Series B+ is "too late" (Wealth.com 1★, linx-security 2★, april 3★).
+- **Geography:** Europe preferred, global acceptable.
+- **External over internal.** Products that govern, secure, authenticate, or monitor *external* agents in a marketplace, not products that improve internal institutional operations. This is the decisive dimension — 0 of 16 internal-workflow companies received an upvote.
+- **Agent-callable.** Even strong research / specialist intelligence companies score higher when the intelligence is exposed as an agent-callable API, not a dashboard. ("Better if it exposed an agent" appears in 2 of 3 S1 5★ votes.)
+- **Compliance-native architecture.** Governance, explainability, audit baked in — not bolted on.
 
 ---
 
-### Studio Team Hypothesis (v1.0 — 2026-01-19)
+## Learned preferences (78 votes — 19 ★★★★★ · 9 ★★★★ · 8 ★★★ · 15 ★★ · 22 ★ · 5 0★ outreach markers)
 
-**Mandate.** Studio is the 0-to-1 venture team. It prototypes new financial-services ventures using emerging technology — voice, agents, predictive intelligence — before they're ready for the platform. Studio doesn't sell. It builds reference architectures, runs PoCs with the Labs team and EIRs, validates problem statements with Research, and graduates ventures to The Greens once the gates are cleared.
+Hard filters in force:
+- *Internal workflow / back-office tools* — 16 companies at 1–2★, zero exceptions, –50 points and auto-archive.
+- *Accounting / bookkeeping / CFO tools* — 5/5 at 1–2★, –50 and auto-archive.
 
-**Three Focus Projects for 2026.** Studio is concentrating capacity on three projects this year. Every Studio-tagged signal in the BG pipeline should pattern-match against one of them.
+Soft factors:
+- Tax filing / compliance products: –20.
+- KYC/AML-focused compliance: –15.
+- Series B+ / over-funded: –15.
+- AI-level (not agent-level) security: –15.
+- Wrong-kind-of-risk (internal enterprise risk): –15.
+- Non-finserv focus: –10.
 
-1. **Voice AI through Estate Planning** *(internal estate-planning initiative collaboration with EIRs).* A constrained voice agent that helps a customer onboard — turning a decision tree into voice — explicitly *not* advice. Fundamental research questions: is voice personalisable? What type of voice (inclusive, single-voice, financial-services-appropriate)? Research into voice artists. The Labs team has an internal voice prototype that's the starting point. Ecosystem partners: Mistral and Anthropic on voice solutions for regulated environments. Potential extension into the research component for the internal estate-planning initiative's voice implementation.
+Specialist agent bonuses (highest-priority scouting target):
+- Research & Signal Intelligence (S1): +18, confirmed at 100% hit rate (3/3).
+- Portfolio Construction (S2): +18.
+- Trade Structuring (S3), Options (S5), Execution (S6): +15.
+- Position Monitoring (S7): +12.
+- Financial Planning (S8): +12.
+- Behavioural Coaching (S9): +8.
+- Post-Trade (S10): +8.
 
-2. **Nostradamus — Predictive Agent Framework.** An agent framework for predictive intelligence across health, wealth, and physical domains. Studio is mapping what agent structures actually exist out there and how they can be integrated usefully. Ecosystem partners: MIT (validating problem statements through a Four-Fits / PoC project) and Mantic (a company specialising in AI-based future predictions). The "JTBD for agents" question — *what is the job an agent is being hired to do* — is the spine of this work.
-
-3. **Intelligent Tax Agent.** US financial products are very complex (e.g. direct indexing — investing in individual top constituents so investment losses can offset capital gains). Tax-loss harvesting is not just a per-position problem — it requires looking holistically across the client's full account picture, and tax varies state by state. Studio's hypothesis: a frontier-fintech intelligence layer — *"the accountant in your pocket"* — sitting on top of direct indexing and the broader portfolio, with state-by-state tax-harvesting logic. This ties directly to The Greens' existing tax APIs; Studio's role is the agent-ready intelligence wrapper.
-
-**Venture Opportunity Evaluation Framework.** Every Studio venture passes through three gates before graduating:
-
-1. **Ecosystem validation** — does the problem have third-party demand and architectural fit beyond a single internal sponsor?
-2. **Internal board approval** — does Strategy and Labs leadership commit to the build?
-3. **External market validation** — sign-off from the Strategic Investment Committee, applying *venture-capital* principles, not corporate-assurance methods. Senior leadership understanding that distinction matters: a corporate-assurance gate kills the venture; a VC gate sizes the bet.
-
-**Studio's Active Ecosystem Partners.**
-
-- **An academic research partner** — meeting scheduled around an upcoming offsite. Validating problem statements, mapping opportunities, the Future / Nostradamus framework, Four-Fits methodology, the PoC Project.
-- **An external collaboration partner** — discussion in progress; intro pending.
-- **Mantic** — AI-based future predictions; meeting scheduled to scope predictive intelligence collaboration.
-- **Mistral / Anthropic** — voice solutions for regulated environments; what are they looking at in this space?
-- **Labs and EIRs** — voice prototyping, internal-initiative integration.
-- **Research Team** — Custom GPT (Consumer) research into Financial / Physical / Mental health; outputs shared with Labs.
-
-**What Studio Wants from BG.** Pipeline signals that match one of the three focus projects. Specifically:
-
-- **Voice AI** — voice-first agents in regulated environments, voice cloning / personalisation infrastructure, decision-tree-to-voice tooling, voice identity, conversational onboarding for high-stakes financial moments (estate, retirement).
-- **Predictive / Nostradamus** — predictive AI for life events, health-wealth-physical agent frameworks, JTBD-driven agent companies (Mantic-class), agent orchestration patterns Studio can plug into the framework.
-- **Intelligent Tax** — direct-indexing-aware tax agents, multi-account tax-lot intelligence, US state-by-state tax-harvesting engines, frontier-fintech intelligence layers ("accountant in your pocket"). *Tax filing alone is not interesting (juno 2★ remains the canonical anti-pattern); portfolio-integrated, real-time tax intelligence is.*
-
-**Studio's Search Boundaries.**
-
-- **Private markets** — secondary search. Worth tracking, not the primary lens. A separate private-markets analysis stream is being led elsewhere as part of the offsite Labs / EIR session.
-- **Internal-workflow tools** — already excluded by the global Hard Filter (16 1–2★ companies, no exceptions). Studio inherits this filter.
-- **Stage** — Studio cares about Seed–Series A like the rest of BG; ventures Studio prototypes itself are pre-seed by definition.
-
-**Studio Operating Document — In Progress.** Long-form memo and visual representation of the Studio ecosystem modus operandi and operating model, to be shared with stakeholders. Drafted following the 19.01.26 hypothesis session.
-
-**Active Next Steps (per 19.01.26 session).**
-
-- Studio sponsor → introduce Studio leads to the external collaboration partner contact.
-- Studio co-lead → send and discuss problem statements / requirements for voice/agent solutions to the partner contact.
-- Studio sponsor → for the upcoming offsite, schedule a 1-hour session with Labs EIRs to introduce the team, discuss collaboration, and work through the private-markets analysis.
-- Studio sponsor → send Studio Strategy deck to the team.
-- Studio leads → create long-form memo and visual representation of ecosystem MO and operating model.
-- Studio leads → work with Research Team on custom research request: GPT usage in health, mental health, and financial health segments.
-- Studio leads → schedule MIT meetings during the upcoming visit with stakeholders working on AI agents.
-
-*Research and Greens team hypotheses to follow in subsequent thesis updates.*
+Cycle 12 patterns being tracked (not yet formal):
+- *3★ + external-pivot intent → active-deal pathway.* Openbox-ai 3★ ("could be interesting if they would do the same for third-party agents") progressed to call held + NDA + demo booked. The 3★-with-pivot-hedge isn't always a polite rejection — sometimes it's an explicit invitation that the company will accept.
+- *Followup requests as high-conviction signal.* All 12 followup-requested companies are at 4★ or 5★.
 
 ---
 
-## What We're Scouting For
+## Signals that challenge the thesis
 
-Everything required to make the above flow real. This spans two categories: the **specialist agents** that deliver the customer experience, and the **platform infrastructure** that makes the garden safe.
-
-### Specialist Agents (The Apps)
-
-These are the startups building deep domain intelligence that agents can draw on. Each maps to one or more stages of the investment process above.
-
-1. **Personal Financial Agent** — The front door. Understands the customer's goals, translates intent into action, orchestrates the conversation across specialists. *(Stages 1, 13, 14)*
-2. **Research & Signal Intelligence Agent** — Alternative data, earnings analysis, sector research, catalyst identification, sentiment analysis, institutional flow tracking. The knowledge layer that generates ideas and validates theses. *(Stages 1, 2, 3)*
-3. **Portfolio Construction & Risk Agent** — Concentration analysis, factor exposure, correlation modelling, scenario analysis, position sizing, rebalancing triggers. Knows what you own and what adding or removing a position does to the whole. *(Stages 4, 5, 11)*
-4. **Trade Structuring Agent** — Equity vs options vs pairs vs ETFs. Account selection across taxable, IRA, Roth, 529. Structures the expression of a thesis for optimal risk/reward and tax efficiency. *(Stage 6)*
-5. **Tax Optimisation Agent** — Lot-level tax-loss harvesting, gain deferral, asset location, wash sale prevention, Roth conversion analysis. Operates on the live portfolio in real time across all account types. Not tax filing. *(Stage 7)*
-6. **Options & Derivatives Strategy Agent** — Covered calls for income, protective puts, spreads for defined risk, collar strategies, volatility trading. Deep specialist knowledge that most retail investors can't access today. *(Stages 6, 10)*
-7. **Execution Agent** — Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart order routing, slippage minimisation. Professional-grade execution for everyone. *(Stage 9)*
-8. **Position Monitoring & Thesis Tracking Agent** — Continuous monitoring of thesis milestones, stop-loss/profit-target management, catalyst tracking, earnings surprises, macro regime changes. Initiates new conversations when conditions change. *(Stage 10)*
-9. **Financial Planning Agent** — Goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. The long-term guardrail that prevents short-term decisions from undermining the client's actual objectives. *(Stage 14)*
-10. **Behavioural Coaching Agent** — Panic prevention, discipline enforcement, drawdown perspective, portfolio-consistent decision support. The agent that stops you selling at the bottom. *(Stage 13)*
-11. **Post-Trade Analysis & Learning Agent** — Trade journaling, attribution analysis, pattern recognition across closed positions, strategy refinement. The feedback loop that makes the entire system smarter over time. *(Stage 12)*
-
-### Platform Infrastructure (The Garden)
-
-These are the startups building the technology that makes the agent marketplace safe, compliant, and trustworthy.
-
-7. **Agent Orchestration** — Routes conversations between agents, manages workflows, enforces execution order. Jentic (Dublin, POC partner, BG Score: 95) is the current lead.
-8. **AI Safety & Guardrails** — Supervises agent behaviour, prevents hallucination, enforces boundaries. The referee. Overmind (London, BG Score: 100) is the strongest candidate.
-9. **Pre-Trade Compliance** — The gate. Checks suitability, concentration limits, restricted lists, best execution before any trade executes. Nobody is building this. Genuine market gap.
-10. **Agent Authentication & Identity (KYA)** — Know Your Agent. Every agent in the garden must be certified, permissioned, and accountable. The app store's admission system.
-11. **Audit & Explainability** — Records every agent conversation and decision. "Why did the agent recommend this?" must be answerable for regulators and customers.
-12. **Dispute Resolution & Agent Liability** — When the conversation produces a bad outcome, who's responsible? Insurance, certification, accountability frameworks. Completely unsolved.
-13. **Agent Monetisation** — How each specialist agent gets paid. Results-based billing, revenue sharing, subscription models for agent-mediated services. Paid AI (London, BG Score: 53) is a pattern signal.
+1. **Incumbents claiming agent infrastructure.** Visa Intelligent Commerce Connect is building protocol-agnostic agent payment infrastructure. Mastercard Virtual C-Suite positions them as the agentic intelligence layer. If payment networks own the agent rails, the platform's value proposition narrows.
+2. **Horizontal players moving into finserv.** Okta launched "Identity for AI Agents." AI safety companies are being acquired by platform incumbents (OpenAI/Promptfoo, SentinelOne/Prompt Security, Check Point/Lakera). The window for finserv-specific startups to establish themselves is compressing.
+3. **Agents bypassing brokerages entirely.** If eToro and Public.com build their own execution infrastructure and succeed without traditional brokerage rails, the "agents must come through us" thesis weakens.
+4. **AI-level safety commoditisation.** Goodfire ($1.25B unicorn) received 2★. The AI interpretability / model safety layer may be commoditised. The surviving opportunity is agent-specific security (Keycard 5★, Resistant-AI 5★).
+5. **eToro App Store launched (April 15).** Third-party developer marketplace with APIs, MCP server, revenue sharing. Dual signal: powerful validation that the thesis is correct; timeline compression because infrastructure startups must establish themselves before eToro defines the de facto standard.
+6. **Specialist agent desert — RESOLVED 2026-05-07 as a search-architecture problem.** S2–S10 produced zero seed-stage thesis-matches across multiple full-cycle web-search scans. Cycle 7 reframed this from supply-side desert to vocabulary-and-surface gap; cycle 13 confirmed the reframe with the v6.0 search redesign. The seed pass on five empty cells (S3, S5, S6, S7, S10) surfaced ~20 candidates in 30 minutes using customer-native vocabulary on audience-typed surfaces. The signal is downgraded from "structural challenge" to "operational backlog."
 
 ---
 
-## What "Good" Looks Like
+## Versioning
 
-- **Novelty (THE LEAD CRITERION as of cycle 10):** Genuinely category-reinventing, a new asset class, a leap forward from the usual, or a novel mechanism. *Not* "an operating system for X", *not* "workflow management for X", *not* "AI-assisted SaaS for X". Cards that fail the novelty gate are 1-2★ no matter how strong the team or investors. Vote evidence: Avantos 1★ ("anything that bills itself as an operating system... not interested in workflow"), Marloo 1★ ("never looking for workflow management tools"), Asseta AI 1★ ("simply a SaaS tool for family offices. not novel"), IMTC 2★ ("workflow automation tool"), Addition Wealth 2★ ("boring, done to death category. nothing innovative here. It just does basic things using AI"). Compare 5★ patterns: TYTL (tokenized residential RE — full-stack new asset surface), Versus (mass-market prediction app — Robinhood-meets-TikTok retail democratisation), Noise ("Love it" — attention market as new asset class).
-- **Stage:** Seed to Series A (we want to shape what the startup is building, not adopt a finished product). Series B+ is "too late" — Wealth.com 1★ ("way too late. I'm seeking new and novelty. This is a major incumbent, not a startup").
-- **Geography:** Europe preferred, global acceptable
-- **FinServ readiness:** Evidence of financial services traction, customers, or regulated-industry DNA
-- **Team:** Domain expertise in financial services, AI/ML, or security. Prior startup experience valued
-- **Architecture:** API-first, platform thinking, not point solutions
-- **Governance-native:** Compliance, audit, and explainability as foundational design — not bolted on
-
-### Learned Preferences (from 73 live votes — 19 ★★★★★, 9 ★★★★, 8 ★★★, 15 ★★, 22 ★ — Turso-fed cycle 10)
-
-**THE DECISIVE DIMENSION: External vs Internal**
-The single most predictive attribute is whether the product serves external/third-party agents in a marketplace or improves internal institutional workflows. 16 internal workflow companies received 1–2★ with zero exceptions. This is now a Hard Filter. Dave's words: *"I'm looking for solutions that mitigate risk of third party agents"* (lema-ai 1★). *"This works as long as it also works for external agents"* (ralio 5★).
-
-- **Trust infrastructure dominates:** Agent Auth & Security (7/11 upvotes, 64%) and AI Safety & Guardrails (6/14 upvotes, 43% — suppressed by internal-workflow false positives now filtered). Keycard 5★ ("Spot on"), resistant-ai 5★ ("Novel and love the agentic security angle"), manifold 5★, complyance 5★.
-- **Specialist agents validated (NEW — Cycle 3):** Research & Signal Intelligence (S1) is the first specialist agent category with vote data: AgentSmyth 5★ (*"This is what we are looking for. Shame we didn't find them sooner."*), Serafis 5★, Kimpton AI 5★ — 3/3 hit rate, 100%. Combined with previous cycle's nava/vouched/alomana at 5★, scout-to-upvote conversion is 6/6 across two cycles.
-- **Dispute Resolution validated (NEW — Cycle 3):** Mount 5★ (*"Reduces risk — excellent"*) and Klaimee 4★ move this gap from "completely unsolved" to "partially addressed." Agent insurance / liability infrastructure is thesis-aligned.
-- **"Agent exposure" preference EMERGING:** Dave wants intelligence exposed as agent-callable APIs, not dashboard-only products. *"Better if it exposed an agent"* appears in 2 of 3 S1 votes (serafis, kimpton-ai). Composability > UI.
-- **European preference REINFORCED:** Serafis 5★ note *"Can we also find things like this in the EU?"* — Dave explicitly wants European equivalents of strong US research companies. Continues the compliance-native European supply chain thesis.
-- **Internal workflow = automatic rejection:** 16 companies at 1–2★. No exceptions. Hard Filter applied.
-- **Agents, not AI:** The distinction between agent-level security and AI/model-level security is critical. Mindgard (2★, "AI, not agents") and goodfire (2★) miss despite being in the right gap category.
-- **Stage: Seed to Series A only.** Series B is "too late" (linx-security 2★, april 3★). Over-funded = "for procurement, not innovation" (armadin 2★).
-- **Sub-domain precision matters:** Tax filing ≠ tax efficiencies (juno 2★). KYC/AML ≠ compliance governance (vivox-ai 2★). Accounting ≠ agent orchestration (stacks 2★).
-- **Compliance requires differentiation:** Complyance 5★ and norm-ai 4★ prove the gap is live. Sphinx 3★ ("not exactly groundbreaking") and bretton-ai 3★ show generic execution or wrong sub-domain fails.
-- **Portfolio-integrated tax intelligence confirmed:** Alomana 5★ resolves the Tax Optimisation gap. Autonomous portfolio rebalancing + TLH is thesis-aligned. Tax *filing* is not.
-- **Finserv specificity required:** Certivo 3★ ("Had this been for Finserv I would have been interested") — horizontal products without finserv signal score lower.
-- **Agent Payment Rails confirmed:** Natural 4★ and Nava 5★ (agent escrow / dispute resolution) validate payment infrastructure as a real gap.
-- **Marketplace concepts resonate:** Bank-of-Bots 4★ ("Love this concept. Looks like something I'd like to play with") validates the platform/marketplace thesis directly.
-
----
-
-## Signals That Challenge the Thesis
-
-1. **Incumbents claiming agent infrastructure** — Visa Intelligent Commerce Connect is building protocol-agnostic agent payment infrastructure. Mastercard Virtual C-Suite positions them as the agentic intelligence layer. If payment networks own the agent rails, the app store's value proposition narrows.
-2. ~~**Governance becoming a platform feature** — Sycamore raised $65M for a "trusted agent OS."~~ **RESOLVED by vote:** Sycamore received 1★ ("Looks like more internal workflow stuff"). Dave does not view "trusted agent OS" platforms as competitive threats — he sees them as internal workflow tools. The governance opportunity remains standalone.
-3. **Horizontal players moving into finserv** — Okta launched "Identity for AI Agents." AI safety companies are being acquired by platform incumbents (OpenAI/Promptfoo, SentinelOne/Prompt Security, Check Point/Lakera). The window for finserv-specific startups to establish themselves is compressing.
-4. **Agents bypassing brokerages entirely** — If eToro and Public.com build their own execution infrastructure and succeed without traditional brokerage rails, the "agents must come through us" thesis weakens.
-5. **AI-level safety commoditisation** — Goodfire ($1.25B unicorn) received 2★. The AI interpretability/model safety layer may be commoditised. The surviving opportunity is agent-specific security (keycard 5★, resistant-ai 5★).
-6. **eToro App Store launched (2026-04-15)** — third-party developer marketplace with APIs, MCP server, revenue sharing. This is *exactly* the "app store for financial agents" model the thesis describes. Dual signal: (a) powerful validation — the thesis is correct and a major brokerage agrees; (b) timeline compression — infrastructure startups must establish themselves before eToro defines the de facto standard. Monitor whether they build or buy governance infrastructure.
-7. **Specialist agent desert (structural, Cycle 3 finding — REFRAMED Cycle 7/8, RECONFIRMED Cycle 9)** — S2–S10 (Portfolio, Trade Structuring, Options, Execution, Monitoring, Planning, Behavioural, Post-Trade) produced zero seed-stage thesis-matching startups across multiple full-cycle web-search scans. **Cycle 7 reframed this from a supply-side desert to a search-strategy gap** after YC W26 batches surfaced Cohesion (S1), Astor (S-Front), Sponge, Maven, and Orthogonal — i.e. the candidates exist, they aren't discoverable via vocabulary-driven web search. Accelerator-batch sweeps (YC, EF, Antler, Mouro/Santander portfolios) are now the primary path. **Cycle 9 Coverage Audit (2026-04-29) confirms 7 blind spots persist (S3, S5, S6, S7, S8, S9, S10) plus S2 underrepresented (1 company).** The "apps" layer continues to lag the infrastructure layer.
-
-8. ~~**Vote pipeline bottleneck (Cycle 9)** — Supabase unreachable from the orchestrator sandbox for FIVE consecutive cycles.~~ **RESOLVED 2026-04-29 by migration to Turso.** Root cause was Supabase's free-tier auto-pause behaviour (instances pause after ~1 week of inactivity, silently dropping all writes). Turso (libSQL) doesn't auto-pause and is reachable from both the sandbox and the user's browser; bg-votes-dpowert2.aws-eu-west-1.turso.io is the new endpoint. All 62 prior votes were migrated. A localStorage fallback layer was added at the same time so votes persist client-side even if remote is briefly unreachable. The preference model can now re-process any votes cast since 2026-04-15.
-
----
-
-## Thesis Versioning
-
-| Version | Date | Trigger | Key Change |
-|---------|------|---------|------------|
-| 1.0 | 2026-03-10 | Initial setup | 6 gap categories, basic criteria |
-| 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research, competitive landscape, agentic brokerage race, gap mapping | 13 gaps, "app store for financial agents" thesis, European supply chain rationale, competitive intelligence, learned anti-patterns, challenge signals |
-| 2.1 | 2026-04-14 | 45 new votes processed (8→53 total), preference model rebuilt | Internal workflow Hard Filter (16 companies rejected), stage filter (Series B = too late), AI-vs-agent distinction, compliance gap resolved (complyance 5★), Sycamore threat resolved (1★), agent payment rails confirmed (natural 4★) |
-| 2.2 | 2026-04-17 | Cycle 3 roll-up: 8 new votes processed (53→61), 2 new companies scouted (Alinia, specialist-agent trio confirmation), eToro App Store launch | S1 (Research & Signal Intelligence) validated at 100% hit rate (agentsmyth/serafis/kimpton-ai all 5★); Dispute Resolution upgraded from "unsolved" to "partially addressed" (Mount 5★, Klaimee 4★); Overmind archived — AI Safety gap reopened; Audit & Explainability gets first entry (Alinia); "agent exposure" preference emerging; European preference reinforced ("find things like this in the EU?"); eToro App Store added as dual validation/compression signal; specialist agent desert documented as structural S2–S9 finding |
-| 2.3 | 2026-04-29 | Cycle 9 Coverage Audit + 5-cycle Supabase unreachable streak | Specialist Agent Desert challenge signal reframed as search-strategy (accelerator-batch primary), reconfirmed via Phase 0 Coverage Audit (S3/S5/S6/S7/S8/S9/S10 still 0; S2 still 1); new challenge signal added: vote-pipeline bottleneck (Supabase unreachable from sandbox 5 cycles running, preference model frozen since 2026-04-15) |
-| 2.8 | 2026-04-29 | First cycle running against live Turso vote stream — 73 votes vs 8-vote stale cache | Cycle 10 absorbed the 65-vote delta. Signal: novelty is the lead criterion. Cards that are operating systems, workflow tools, or SaaS-with-AI (regardless of investor quality, stage match, or thesis-category fit) are 1★ rejections. Cards that represent category reinvention or new asset surfaces are 5★. Two new HARD GATES added: NOVELTY GATE (no operating-system / workflow / SaaS-with-AI framings); Internal-Workflow Filter extended to advisor-OS / family-office-OS / broker-OS. Pipeline 101 → 97 (removed 6 cards that the live vote stream rejected: Avantos 1★, Asseta AI 1★, Marloo 1★, Seeds 1★, IMTC 2★, Addition Wealth 2★). Restored 2 cards that the live vote stream loved: Versus 5★, Noise 5★ (both had been culled in the morning's gate-widening cycle). |
-| 2.7 | 2026-04-29 | Challenge Signal #8 RESOLVED via Supabase → Turso migration | Vote pipeline migrated from Supabase to Turso (libSQL, bg-votes-dpowert2.aws-eu-west-1.turso.io). Root cause: Supabase free-tier auto-pause after ~1 week of inactivity silently dropped writes — explaining the 5-cycle "unreachable" streak. Turso doesn't auto-pause and is reachable from sandbox + browser. All 62 prior votes migrated; localStorage fallback layer added. Challenge Signal #8 marked resolved with strikethrough. CLAUDE.md / preferences.md / search-terms.md operational notes updated. how-it-works stack diagram and pipeline.html code comments updated to reflect Turso. |
-| 2.6 | 2026-04-29 | Research mandate fully built out across three sub-areas | Research now has three explicit sub-areas in the three-teams table: (a) Consumer behaviour & market analysis (already in v2.4); (b) Investable Everything — Product Inversion & Access + Tokenization / Fractionalization (was queued as v2.5; rolled forward); (c) **Wealth-Generation Reinvention** — anything that meaningfully reimagines wealth management or investing; AI-native RIAs, family-office-as-a-service democratisation, novel asset-class access for retail, holistic wealth-stack replacement, behavioural-coaching platforms. The criterion: a leap forward from the usual, not an incremental advisor tool. Reference archetypes added: Astor, Era, Autonomous (AI-native RIA), Asseta AI (family office OS), Marloo (AI-native advisor platform), Willow Wealth / Moonfare (retail private markets), Seeds (personalised investing). v2.5 was queued mid-flight but consolidated into v2.6 to ship as one update. |
-| 2.4 | 2026-04-29 | Studio Hypothesis (19.01.26) ingested — three-team search architecture introduced | New section: **The Three Teams: Research, Studio, Greens** — every BG signal now triaged by team mandate, time horizon, and "what good looks like." Studio Team Hypothesis v1.0 added in full: three 2026 focus projects (Voice AI through Estate Planning with an internal estate-planning initiative; Nostradamus predictive agent framework with an academic research partner + Mantic; Intelligent Tax Agent on top of direct indexing with state-by-state TLH); three-gate Venture Opportunity Evaluation Framework (ecosystem validation → internal board → Strategic Investment Committee with VC-not-corporate-assurance principles); active ecosystem partners (academic research partner, external collaboration partner, Mantic, Mistral/Anthropic, Labs, EIRs, Research Team); search boundaries (private markets secondary, internal-workflow excluded). Research and Greens team hypotheses deferred to subsequent updates. |
+| v | Date | Trigger | Key change |
+|---|---|---|---|
+| 1.0 | 2026-03-10 | Initial setup | 6 gap categories, basic criteria. |
+| 2.0 | 2026-04-14 | Full rebuild from FCAT Q2 research | 13 gaps, "app store for financial agents" thesis, European supply chain rationale. |
+| 2.1 | 2026-04-14 | 45 new votes processed | Internal-workflow Hard Filter (16 companies rejected); stage filter; compliance gap resolved. |
+| 2.2 | 2026-04-17 | Cycle 3 roll-up + eToro App Store launch | S1 validated at 100% hit rate; Dispute Resolution upgraded; Audit & Explainability gets first entry (Alinia); specialist-agent desert documented. |
+| 2.3 | 2026-04-29 | Cycle 9 Coverage Audit + Supabase outage | Specialist-agent desert reframed as search-strategy gap; vote-pipeline bottleneck added as challenge signal. |
+| 2.4 | 2026-04-29 | Studio Hypothesis ingested | Three-team architecture introduced; Studio v1.0 hypothesis added. |
+| 2.6 | 2026-04-29 | Research mandate built out | Three Research sub-areas; archetype reference list. |
+| 2.7 | 2026-04-29 | Supabase → Turso migration | Vote pipeline migrated; localStorage fallback; challenge signal #8 resolved. |
+| 2.8 | 2026-04-29 | First cycle on live Turso vote stream | Novelty as lead criterion; Hard Filter extended to advisor-OS / family-office-OS / broker-OS. |
+| 2.9 | 2026-05-06 | Cycle 12 — 5 new votes + 2 re-votes | Versus revision absorbed; entity-level archetype rule added; openbox-ai 3★ → active-deal pattern documented. |
+| 3.0 | 2026-05-07 | Cycle 13 — structural cleanup | Research / Studio / Greens hypotheses uniformly structured. Why Now and Differentiation sections compressed. Search architecture redesigned in parallel (`search-strategy-redesign.md`, `empty-cells-seed-pass-2026-05-07.md`). Specialist-agent desert downgraded from structural challenge to operational backlog now that the v6.0 architecture is producing candidates. |
+| 3.1 | 2026-05-07 | Cycle 14 — execution-gap fix | Closer reading of how-it-works + discovery log revealed the v3.0 vocabulary critique was second-order; the primary cause of the persistent S3/S5/S6/S7/S10 zeros was an execution gap inside Phase 4 of the radar — the documented cure (accelerator-batch + reverse-archetype + GitHub MCP) had been carried as `next_cycle_target=true` for 4 cycles without firing. Authored `task-prompts/radar-phase-4-blind-spot-protocol.md` to bind that cure into Phase 4 directly. Schema upgraded with `audience_archetype` field per S3/S5/S6/S7/S10 plus top-level `audience_archetypes` block (5 archetypes × surface menus). Founder vocabulary for the 5 empty cells rewritten with founder-native phrasing replacing the synthetic "[topic] AI startup" exact-match strings. `task-prompts/thesis-writing-conventions.md` and `task-prompts/generate-search-terms-v6-spec.md` shipped to lock the cleanup against future bloat-creep. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
