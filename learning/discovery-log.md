@@ -4,6 +4,101 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Full Cycle Run — 2026-05-06 (Cycle 13, PM)
+
+### Phase 0 — Coverage Audit
+Pipeline at start: **104 companies** (up from 86 at Cycle 9). Audit produced this distribution against thesis gap categories:
+- **Blind spots (0 companies):** S3 Trade Structuring, S5 Execution, S6 Position Monitoring, S7 Financial Planning, S9 Post-Trade Analysis, Audit & Explainability. **All six blind spots from cycle 9 persist** seven days later. Mandatory ≥2 web searches each constraint applied to Phase 4.
+- **Underrepresented (1–2 companies):** S2 Portfolio Construction (2 incl. multi-fit Autonomous), S4 Options & Derivatives (1 — Elastics), S8 Behavioural Coaching (1 — Balanced Investor Club), Tokenization & Fractionalization (2 — TYTL, Aria), Agent Monetisation (2).
+- **Adequately covered (3–9):** Dispute Resolution & Liability (3 — Mount, Klaimee, Testudo), Agent Payment Rails (4), Tax Optimisation (6), S1 Research & Signal Intelligence (8).
+- **Well covered (10+):** Agent Authentication (11), Agent Orchestration (14), S-Front Personal Agent (15), Compliance (15), AI Safety (17 — Overmind archived).
+
+Modest progress in cycles 10–12: S2 went 1→2, S4 went 0→1, S8 went 0→1, Dispute Resolution 2→3, Tokenization 1→2. Net structural finding: **specialist-agent desert persists; infrastructure side is over-covered.** Personal Agent (15) + Compliance (15) + AI Safety (17) account for 47/104 = 45% of pipeline.
+
+### Phase 1 — Learn from Votes
+Live Turso fetch: **78 votes** (19 ★★★★★ / 9 ★★★★ / 8 ★★★ / 15 ★★ / 22 ★ / 5 outreach-marker 0★). **Identical to morning's Cycle 12 absorption** — no new votes in the ~7-hour window since 09:52. preferences.md unchanged from morning's run. `bg_thesis_feedback` (Supabase) returned 1 row total — only the 2026-04-14 test entry, no new strategic feedback. Phase 1 is a no-op verification step this cycle.
+
+### Phase 2 — Update Thesis
+**No changes — thesis stable at v2.9.** v2.9 was published this morning with the Versus revision and the new entity-level archetype rule. With no new votes and no new strategic feedback in the intervening hours, no evidence base for further surgical edits exists. Phase 0 confirms the same blind-spot constellation as cycle 9 — already encoded in challenge signal #7 (Specialist Agent Desert).
+
+### Phase 3 — Update Search Terms
+**No changes — search-terms stable at v5.1.** v5.1 was generated this morning aligned to thesis v2.8 plus the v2.9 entity-level rule (which doesn't change query vocabulary). Per morning's discovery log: "the minor v2.9 entity-level rule does not change the search-vocabulary surface area; if anything it tightens the *scoring* on candidates already surfaced rather than the *querying* itself." Carry-forward with no edits.
+
+### Phase 4 — Scout
+Mandatory ≥2 web searches across each Phase 0 blind-spot category executed. Vocabulary-driven web search for S3/S5/S6/S7/S9/Audit produced **zero seed-stage thesis-matching specialist agents** — consistent with cycle 9's reframing that this search surface is exhausted. The accelerator-batch path (EF, Antler London, Tenity, Mouro/Santander portfolios) is the right next move and remains un-actioned this cycle (time-bound to a single full-cycle run).
+
+**3 new pipeline cards added:**
+1. **Diligent AI** (Score 70) — Compliance/KYC/AML. London/Berlin. €2.1M ($2.5M) seed led by Speedinvest with Shapers and continued YC. Founders: Edoardo Maschio (ex-BCG, ex-Rocket Internet investor), Ahmed Gaber (ex-CTO Billie). Bank-CEO angel stack: N26, Allica Bank, IDnow, Billie, Cybersource. Autonomous AI compliance analysts (AML screening, sanctions, adverse-media). Positioned closer to Gradient Labs (5★) than to internal-workflow Spektr (56). Gap is well-covered (15 entries) but Diligent AI differentiates on agent autonomy.
+2. **Edge Hound** (Score 75) — S1 Research & Signal Intelligence. US (Axion Edge). Pre-seed/operating. Multi-agent retail market intelligence — explicit specialist sub-agents (narrative, sentiment, cross-market). CEO Peter Pavlov (8 yrs CS lecturing + trading); brother as co-founder (mathematician). **Resolves an existing 0★ outreach marker in the vote stream under typo'd slug 'egdehound'** — formalised this cycle as 'edgehound'. The typo'd vote slug needs reconciliation in a future cycle.
+3. **Hyperlayer** (Score 37) — Personal Agent / Infra. London. £30M Oct 2025 led by CDAM with Mouro Capital, Iona Star, Flintlock, Susquehanna. "Global programmable operating system for finance." **Two clean strikes:** (1) explicit OS framing trips v2.8 NOVELTY GATE; (2) £30M total raised with Tier 1 bank deployments puts it past the Seed-to-Series-A sweet spot. Carded with low score to make the rejection auditable. Useful as competitive-intel signal: Mouro Capital's continued move into agent-adjacent infrastructure.
+
+**Competitive Intelligence:**
+- **Olas / Polystrat** — autonomous agent that executed 4,200+ trades on Polymarket in a single month with returns up to 376% on individual trades. Confirms cycle 9's R1 signal and reinforces specialist execution agents (S5) as an underrepresented gap worth scouting harder.
+- **Laminar** — $3M seed (March 2026) for agent observability/debugging (LLM calls, tool use, browser actions). Horizontal not finserv-specific. Sits adjacent to BG Audit & Explainability gap. Important compression-risk signal: agent observability is being built at the framework layer; finserv-native vertical players need to land before horizontal players (Laminar, OpenLLMetry, LangSmith) extend down.
+
+### Phase 5 — Publish
+Files updated and pushed to dpowert2/Bene_Gesserit:
+- **NEW** `2026-05-06b.html` — Cycle 13 PM briefing with 5 signals + 3 startup cards
+- **UPDATED** `index.html` — 2026-05-06b.html promoted to "May 6 PM · LATEST"; 2026-05-06.html demoted to "May 6 AM"
+- **UPDATED** `startups-data.js` — 3 cards added at top of array; SLUG_DATES updated with `diligent-ai`, `edgehound`, `hyperlayer` at 2026-05-06
+- **UPDATED** `changelog.html` — Cycle 13 system entry inserted at top of changelog list
+
+Privacy-check passed (chained with `&&` per CLAUDE.md rules). Push completed via `push_to_github.py` with `--repo-root /Users/davidpower/BeneGesserit`.
+
+### Specialist Agent vs Infrastructure Split
+- New companies this cycle: **1 specialist agent (Edge Hound — S1) + 2 infrastructure (Diligent AI — Compliance, Hyperlayer — Personal Agent OS)** = 1:2 ratio.
+- Cumulative pipeline: specialist agents still dramatically underrepresented at the application layer. The "apps" layer continues to lag the "garden" layer.
+
+### Phase 0 Effectiveness
+- All six blind-spot categories searched. **Zero specialist-agent web-search hits.** This is consistent with cycle 9's reframing — vocabulary-driven web search is the wrong tool for these categories at the seed stage.
+- Underrepresented categories produced 1 hit (S1 — Edge Hound, formalising the existing 0★ marker).
+- Compliance KYC/AML produced 1 strong new hit (Diligent AI) but this is a well-covered category, not an underrepresented one — accelerator-batch sweep would have likely surfaced this faster (YC P26 batch).
+
+### Search Term Effectiveness
+- v5.1 carry-forward: produced new candidates in well-covered categories (Compliance) and one S1 entry (Edge Hound) that BG had partial signal on.
+- The S3/S5/S6/S7/S9 search vocabulary continues to produce zero results across now four consecutive full-cycle scans (cycles 7, 8, 9, 13). Recommendation re-iterated: stop investing scan budget in vocabulary-driven web search for these categories; reallocate to accelerator-batch portfolio walks.
+
+### Recommendations
+1. **Reconcile vote-side 'egdehound' slug** with the new 'edgehound' card in the next cycle's preference-learning step. This is a 1-line fix in `learning/votes.json` (or a manual Turso row update) but matters for vote-tying.
+2. **Schedule an EF / Antler London / Tenity portfolio walk** before the next thesis review. Cycle 9 noted this as un-actioned; it remains un-actioned through cycle 13. The accelerator-batch path is the only path that has produced specialist-agent hits historically (cycle 9's YC W26 batch surfaced Cohesion → S1, Astor → S-Front, Sponge / Orthogonal / Maven / Autonomous).
+3. **Vote on Diligent AI** — the buyer-side angel stack (N26, Allica, IDnow, Billie, Cybersource CEOs) is unusual enough to merit attention. Vote will tell whether the agent-autonomy framing makes this a Gradient Labs (5★) or a Spektr (56-class) candidate.
+4. **Vote on Edge Hound** under the new slug `edgehound`. The multi-agent retail differentiation is the most interesting attribute; vote will calibrate whether retail-side S1 differs from the institutional-side S1 (AgentSmyth/Serafis/Kimpton) that Dave previously rated 5★ across the board.
+5. **Hyperlayer scoring is a calibration test.** A 1★ vote on Hyperlayer would confirm the v2.8 NOVELTY GATE is operating correctly on auto-rejection of OS-framings. If Hyperlayer somehow attracts Dave's attention beyond 1★, the gate may need refining.
+
+---
+
+## Thesis Review — 2026-05-06
+
+### Feedback Processed
+- `bg_thesis_feedback` (Supabase, project `iyoseurwycryykrnlbig`) returned 1 row total — the original 2026-04-14 test entry. No new strategic feedback rows since the table was created. No `feedback_type='thesis'` rows have ever been logged. Note that vote data has fully migrated to Turso (per CLAUDE.md and v2.7 thesis change); the Supabase feedback table is the only Supabase channel this task still consults.
+
+### Vote Signals
+- Live Turso fetch: **78 votes** (19 ★★★★★ / 9 ★★★★ / 8 ★★★ / 15 ★★ / 22 ★ / plus 5 outreach-marker 0★ entries). Cycle 10 cut-off was 2026-04-29 15:28 UTC; the corpus has grown by 5 net-new entries since, plus 2 re-votes with revised notes.
+- **Five 0★ outreach markers (2026-05-05)** — revenium ("This came via the Research team. Meeting arranged for Wednesday 6th."), jentic, egdehound, trinigence, gradient-labs. All followup=True, all 0★. These are operational deal-flow markers, not star-rating signals; the underlying companies' strategic positions are unchanged.
+- **Versus 5★ revision (2026-05-05)** — *the* substantive signal of the cycle. Dave's follow-up note: "the platform is built by a company called 'Kalshi' founded in 2019 with which seems to be a rather big team. I think there could be better candidates than these guys in general." Star rating preserved on the archetype (mass-market retail prediction app combining social/cultural/financial); company itself disqualified as a canonical archetype reference because it's a product of an established company, not an independent seed-stage startup.
+- **openbox-ai 3★ progression (2026-05-05)** — re-voted with deal-flow note: "Had a call with them, NDA going out, demo booked." Star unchanged but the company is moving up the funnel because it's engaging on the external-agent pivot. Validates "3★ + external-pivot intent → active-deal" pathway as a real pattern.
+
+### Thesis Changes
+- **v2.8 → v2.9** (surgical edits, two locations):
+  - Lead paragraph rewritten to absorb the Versus revision. Canonical 5★ archetype trio (TYTL / Versus / Noise) reduced to a duo (TYTL / Noise) with Versus held as "category validated, company disqualified by parent affiliation." openbox-ai pathway noted.
+  - "What Good Looks Like — Novelty" criterion gained a new **entity-level rule**: verify that a candidate held up as a canonical archetype is an independent seed/Series-A startup before treating it as an exemplar. Parent affiliation by an established company disqualifies the archetype claim even when the underlying category is correct.
+  - Versioning table extended with a v2.9 row.
+- **No** gap-map changes. **No** new HARD GATES. **No** new challenge signals. **No** Studio / Research / Greens-team mandate edits — the vote signals are entity-level, not category-level.
+
+### Preferences Changes
+- `config/preferences.md` header rewritten to reflect 78-vote corpus, the Versus revision, the openbox-ai pathway, and the new entity-level rule.
+- Two new "Emerging Preferences" entries added: "Entity-level archetype scrutiny (cycle 12 — first occurrence)" and "3★ + external-pivot intent → active-deal pathway (cycle 12 — first occurrence)." Both at sample-of-one; will formalise into scoring once second cases appear.
+
+### Confidence
+- **High** on the Versus revision absorption — the note is unambiguous and the entity-level rule is a clean addition to the novelty criterion without disturbing other gates.
+- **Medium-high** on the openbox-ai pathway — sample-of-one, but the framing is precise and aligns with prior preference signals (external/third-party agent governance is the decisive dimension).
+- **Low** strategic risk in the changes — surgical and additive, no removals, no contradiction with v2.8 HARD GATES.
+
+### Action for Downstream Tasks
+- `bg-search-terms-update` should treat thesis as substantively unchanged on direction. The minor v2.9 entity-level rule does not change the search-vocabulary surface area; if anything it tightens the *scoring* on candidates already surfaced rather than the *querying* itself. A v4.10 → v4.11 carry-forward with a brief note in the change-log on the entity-level rule is sufficient. The Versus query lines, if any exist, can be retained — the archetype is still a valid search target; only the company itself is disqualified.
+
+---
+
 ## Preference Learning — 2026-05-03
 Total votes: 73 (28 up, 37 down) | New near misses: 0 | New soft factors: none | Weight changes: none | Key insight: Vote corpus unchanged since cycle 10 (2026-04-29); all signals stable — outstanding gap is the NOVELTY GATE declared in preferences.md but not yet serialised in scoring-weights.json (2 standalone cases, needs 3+ to formalise) | Confidence: high
 
