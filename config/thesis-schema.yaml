@@ -238,6 +238,7 @@ gaps:
       B2B, API-first. Quantitative finance + tax awareness. Could be a 2-person team
       with deep options/derivatives knowledge. Must serve external agents/platforms,
       not internal workflow. European or global pre-seed to Series A.
+    audience_archetype: ["B", "C"]  # Independent advisor + Bank/broker
     institutional_vocabulary:
       - "trade structuring AI startup"
       - "options strategy agent fintech"
@@ -245,23 +246,35 @@ gaps:
       - "investment structure optimisation"
       - "trade expression AI"
     founder_vocabulary:
-      - "trade structure API"
-      - "options vs equity agent"
-      - "account allocation tool"
-      - "trade expression engine"
-      - "tax-aware trade structuring"
-      - "how to express a thesis API"
+      - "asset location optimizer"
+      - "after-tax alpha"
+      - "tax-aware advisor copilot"
+      - "advisor copilot"
+      - "AI tax planning"
+      - "where should this trade sit"
+      - "structure-aware advisor agent"
+      - "account selection AI"
+      - "Roth vs taxable allocator"
+      - "tax-aware trade routing"
+      - "trade allocation engine"
     technical_vocabulary:
       - "options pricing API"
       - "trade structure SDK"
       - "account selection algorithm"
       - "options strategy github"
+      - "asset location SDK"
+      - "tax-lot optimization github"
     community_vocabulary:
-      - "Show HN trade structuring"
-      - "options strategy AI"
-      - "intelligent account selection"
-      - "tax-aware execution startup"
-    reference_archetypes: []
+      - "Kitces AdvisorTech"
+      - "T3 Tech Tools demo"
+      - "RIABiz feature"
+      - "ThinkAdvisor AI advisor"
+      - "Wealth Mosaic listing"
+      - "Future Proof exhibitor"
+    reference_archetypes:
+      - "Range — AI-native all-in-one wealth (planning + tax + estate)"
+      - "Holistiplan — incumbent reference for tax-aware advisor tooling"
+      - "Pulse360 — workflow incumbent (pattern reference, not target stage)"
     anti_archetypes:
       - "Options education platforms (no agent layer)"
       - "Trade execution tools (that's S6)"
@@ -357,6 +370,7 @@ gaps:
       B2B or B2B2C API. Deep options expertise. Could be ex-CBOE, ex-market-maker, or
       quant with options DNA. Democratising institutional-grade derivatives access
       via an agent-callable interface. Pre-seed to Series A.
+    audience_archetype: ["A", "E"]  # Retail investor + AI-native infrastructure
     institutional_vocabulary:
       - "options strategy AI startup"
       - "derivatives intelligence agent fintech"
@@ -364,26 +378,35 @@ gaps:
       - "covered call strategy agent"
       - "volatility trading AI startup"
     founder_vocabulary:
-      - "options strategy agent"
-      - "covered call generator API"
-      - "options flow API"
-      - "derivatives intelligence tool"
-      - "options screener API"
-      - "vol surface agent"
-      - "income generation agent"
+      - "the wheel on autopilot"
+      - "covered-call income engine"
+      - "your AI options trader"
+      - "vol selling for retail"
+      - "options brain"
+      - "income strategies on autopilot"
+      - "1% a week from premium"
+      - "options copilot"
+      - "AI for options"
+      - "covered call autopilot"
+      - "options income agent"
     technical_vocabulary:
       - "options pricing python"
       - "vol surface API"
       - "options strategy SDK github"
-      - "derivatives agent"
-      - "options screener API"
+      - "wheel strategy screener github"
+      - "covered call calculator open source"
     community_vocabulary:
-      - "Show HN options strategy"
+      - "Show HN wheel strategy"
       - "Product Hunt options AI"
-      - "retail derivatives startup"
-      - "AI options advisor"
-      - "volatility intelligence startup"
-    reference_archetypes: []
+      - "Reddit r/options AI tool"
+      - "Reddit r/thetagang"
+      - "FinTwit options copilot"
+      - "Discord theta gang"
+    reference_archetypes:
+      - "QuantWheel — wheel + covered-call screener with AI ranking (independent SaaS)"
+      - "OptionsPilot — AI strike finder for CCs and CSPs (independent app)"
+      - "Jenova AI — AI Options Income Strategy Agent (agent-positioned)"
+      - "OptionWheelTracker — wheel campaign management (independent)"
     anti_archetypes:
       - "Options education platforms (no execution layer)"
       - "Internal options risk tools for banks"
@@ -416,6 +439,7 @@ gaps:
       B2B, API-first execution infrastructure. Could be a team with ex-broker/exchange
       DNA. Agent-callable execution layer. NOT an order management system for fund ops.
       Must serve external agents and retail/wealth managers. Pre-seed to Series A.
+    audience_archetype: ["C", "E"]  # Bank/broker + AI-native infrastructure
     institutional_vocabulary:
       - "algorithmic execution startup"
       - "smart order routing AI"
@@ -423,23 +447,37 @@ gaps:
       - "VWAP agent startup"
       - "execution algorithm API"
     founder_vocabulary:
-      - "execution agent API"
-      - "smart order router SDK"
-      - "VWAP engine API"
-      - "execution quality tool"
-      - "slippage minimisation agent"
-      - "trade execution SDK"
+      - "execution copilot"
+      - "AI smart order router"
+      - "TCA copilot"
+      - "best-ex agent"
+      - "algo wheel selector"
+      - "venue selection AI"
+      - "agentic OMS"
+      - "execution analytics agent"
+      - "implementation shortfall AI"
+      - "agent-to-exchange protocol"
     technical_vocabulary:
       - "smart order routing python"
       - "execution algorithm github"
       - "VWAP implementation API"
       - "order routing SDK"
+      - "MCP execution server"
+      - "agent trading protocol"
     community_vocabulary:
-      - "Show HN execution algorithm"
-      - "smart order routing startup"
-      - "execution quality AI"
-      - "algorithmic trading API startup"
-    reference_archetypes: []
+      - "The Trade News execution"
+      - "Markets Media execution AI"
+      - "Waters Technology execution"
+      - "A-Team Insight TCA"
+      - "Risk.net execution"
+      - "TradeTech speaker"
+      - "FIA Boca execution"
+    reference_archetypes:
+      - "big xyt — natural-language AI on trading data (independent)"
+      - "Tradefeedr — agentic interface on analytics APIs (independent)"
+      - "OneChronos — venture-backed Smart Market platform"
+      - "BMLL Technologies — Level 3 data + AI layer (now Nordic Capital, archetype reference)"
+      - "APEX-Standard — open-source agent-to-exchange protocol (research_watch)"
     anti_archetypes:
       - "OMS (order management systems for fund ops)"
       - "HFT firms (wrong stage/model)"
@@ -472,6 +510,7 @@ gaps:
       B2B or B2B2C, API-first. Real-time event-driven architecture. Could be a 2-person
       team. The "always watching" agent layer that reacts when the thesis breaks.
       Agent-callable. NOT a portfolio monitoring dashboard. Pre-seed to Series A.
+    audience_archetype: ["A", "B"]  # Retail investor + Independent advisor
     institutional_vocabulary:
       - "portfolio monitoring AI agent"
       - "thesis tracking startup fintech"
@@ -479,24 +518,32 @@ gaps:
       - "catalyst monitoring agent"
       - "investment monitoring AI startup"
     founder_vocabulary:
-      - "thesis monitoring agent"
-      - "position alert API"
-      - "catalyst tracker SDK"
-      - "portfolio watchdog agent"
-      - "earnings alert agent"
-      - "stop loss agent"
-      - "macro trigger API"
+      - "thesis tracker"
+      - "earnings prep agent"
+      - "catalyst tracker"
+      - "AI watchlist"
+      - "smart price alerts"
+      - "thesis-aware alerts"
+      - "AI portfolio butler"
+      - "stop-loss intelligence"
+      - "investor copilot"
+      - "earnings copilot"
     technical_vocabulary:
       - "event-driven portfolio monitoring"
       - "catalyst tracking API"
       - "position monitor github"
-      - "thesis alert SDK"
+      - "earnings calls MCP server"
+      - "filings agent github"
     community_vocabulary:
-      - "Show HN portfolio monitoring"
-      - "investment thesis tracker"
-      - "catalyst alert startup"
-      - "AI position monitor"
-    reference_archetypes: []
+      - "Show HN AI watchlist"
+      - "Reddit r/SecurityAnalysis"
+      - "FinTwit thesis tracking"
+      - "Substack investor newsletter"
+      - "Kitces advisor research"
+    reference_archetypes:
+      - "Quartr — qualitative-research data API, agent-callable (700+ institutions)"
+      - "Brightwave — AI research + diligence platform (Series A, archetype reference)"
+      - "Daloopa — financial-data layer with Perplexity integration"
     anti_archetypes:
       - "Portfolio management dashboards"
       - "Watchlist tools without agent integration"
@@ -640,6 +687,7 @@ gaps:
       B2B or B2B2C, API-first. Analytics engine with learning loops. Could be a 2-person
       team building attribution infrastructure. Agent-callable performance analytics.
       Pre-seed to Series A.
+    audience_archetype: ["A", "C"]  # Retail trader + Bank/broker
     institutional_vocabulary:
       - "post-trade analytics AI startup"
       - "trade attribution AI fintech"
@@ -647,23 +695,34 @@ gaps:
       - "investment learning system"
       - "trade journal AI"
     founder_vocabulary:
-      - "trade attribution API"
+      - "AI trading journal"
+      - "trade attribution AI"
+      - "AI trading coach"
       - "post-trade analytics agent"
-      - "investment journal agent"
-      - "performance learning loop"
-      - "trade pattern recognition API"
-      - "portfolio learning agent"
+      - "your trading coach"
+      - "trade review AI"
+      - "MFE / MAE analyzer"
+      - "trade journal AI"
+      - "performance attribution agent"
+      - "trade replay AI"
     technical_vocabulary:
       - "trade attribution python"
       - "performance analytics API"
       - "post-trade analysis github"
-      - "investment attribution SDK"
+      - "trade journal SDK github"
+      - "broker integration trade journal"
     community_vocabulary:
       - "Show HN trade journal"
-      - "post-trade analytics startup"
-      - "investment learning AI"
-      - "trade attribution startup"
-    reference_archetypes: []
+      - "Product Hunt trading journal AI"
+      - "Reddit r/algotrading journal"
+      - "FinTwit trade review"
+      - "Markets Media TCA"
+      - "Risk.net post-trade"
+    reference_archetypes:
+      - "TraderSage — AI-powered journal with auto trade tagging (independent)"
+      - "TradeLog Pro — strategy + emotion tagging, AI Coach (independent)"
+      - "JournalPlus — AI analysis + broker integrations (independent)"
+      - "AI Trade Journal — pattern recognition for hidden performance factors"
     anti_archetypes:
       - "Dashboard-only performance analytics"
       - "Fund administration systems"
@@ -1339,6 +1398,154 @@ gaps:
       - "family office management SaaS"
 
 # ─────────────────────────────────────────────────────────
+# AUDIENCE ARCHETYPES
+# Surface menus per audience. Per-gap audience_archetype field
+# (added 2026-05-07) tags each gap with one or more archetype IDs;
+# the generate-search-terms skill takes the union of surfaces across
+# the listed archetypes when generating L2 / L3 queries for that gap.
+# Schema rationale lives in config/search-strategy-redesign.md.
+# ─────────────────────────────────────────────────────────
+
+audience_archetypes:
+
+  A:
+    name: "Retail Investor"
+    description: >
+      Self-directed traders, savers, mass-affluent. Founders go where retail
+      investors hang out — Reddit, X/FinTwit, TikTok, Discord, App Store, Show HN,
+      Product Hunt. Press coverage tends to lag user adoption by months.
+    trade_press:
+      - "site:bogleheads.org"
+    community_surfaces:
+      - "site:reddit.com/r/options"
+      - "site:reddit.com/r/wallstreetbets"
+      - "site:reddit.com/r/personalfinance"
+      - "site:reddit.com/r/Bogleheads"
+      - "site:reddit.com/r/algotrading"
+      - "site:reddit.com/r/SecurityAnalysis"
+      - "site:reddit.com/r/thetagang"
+    launch_surfaces:
+      - "site:news.ycombinator.com Show HN"
+      - "site:producthunt.com"
+      - "site:betalist.com"
+      - "site:indiehackers.com"
+    newsletter_podcasts:
+      - "Substack — fintech / investing creators"
+      - "FinTwit — relevant founder/personality lists"
+
+  B:
+    name: "Independent Advisor / RIA"
+    description: >
+      RIAs, family offices, hybrid advisors, wirehouse breakaways. Founders
+      sponsor Kitces, exhibit at T3 / Future Proof / Schwab IMPACT, get
+      featured in ThinkAdvisor / RIABiz / Wealth Mosaic. The audience reads
+      Kitces and FA Magazine before TechCrunch.
+    trade_press:
+      - "site:kitces.com"
+      - "site:thinkadvisor.com"
+      - "site:wealthmanagement.com"
+      - "site:riabiz.com"
+      - "site:fa-mag.com"
+      - "site:advisorhub.com"
+      - "site:wealthmosaic.com"
+      - "site:citywireria.com"
+      - "site:financial-planning.com"
+    conferences:
+      - "site:t3technologyhub.com"
+      - "Future Proof Wealth Festival exhibitor list"
+      - "Schwab IMPACT exhibitor list"
+      - "Wealthstack agenda"
+      - "FPA Annual exhibitor list"
+      - "NAPFA conference exhibitor list"
+      - "Barron's Top Advisor Summit"
+    newsletter_podcasts:
+      - "Kitces Financial Advisor Success podcast"
+      - "Wealth Mosaic newsletter"
+      - "Wealth Management Today newsletter"
+
+  C:
+    name: "Bank / Broker / Asset Manager"
+    description: >
+      OMS, EMS, trading desks, ops, treasurers. Founders pitch at Money 2020,
+      Finovate, Sibos / Innotribe, ISITC, SIFMA Ops, FIA Boca, TradeTech.
+      Coverage in Markets Media / Risk.net / The Trade News / Waters
+      Technology counts more than TechCrunch for this buyer.
+    trade_press:
+      - "site:thetradenews.com"
+      - "site:marketsmedia.com"
+      - "site:waterstechnology.com"
+      - "site:risk.net"
+      - "site:financemagnates.com"
+      - "site:a-teaminsight.com"
+      - "site:fnlondon.com"
+      - "site:americanbanker.com"
+      - "site:bankingdive.com"
+      - "site:finadium.com"
+    conferences:
+      - "Money 2020 startup zone"
+      - "Finovate finalists"
+      - "Sibos Innotribe finalists"
+      - "ISITC speaker / sponsor list"
+      - "SIFMA Ops vendor exhibitor list"
+      - "FIA Boca exhibitor list"
+      - "TradeTech speaker list"
+      - "IMpower / FundForum exhibitor list"
+    vendor_directories:
+      - "Coalition Greenwich vendor surveys"
+      - "Tabb Group vendor lists"
+
+  D:
+    name: "Compliance / Risk / RegTech Buyer"
+    description: >
+      CCOs, MLROs, risk officers, GRC. Founders show up at ACAMS, Compliance
+      Week, NSCP, RegTech FS Innovation Lab, FIA Boca compliance day, GARP.
+      Reg Reporter and Regulation Asia carry weight.
+    trade_press:
+      - "site:complianceweek.com"
+      - "site:regulationasia.com"
+      - "site:risk.net"
+      - "site:reg-reporter.com"
+      - "site:regtechafrica.com"
+    conferences:
+      - "ACAMS exhibitor list"
+      - "RegTech FS Innovation Lab finalists"
+      - "FIA Boca compliance day"
+      - "GARP Risk Convention"
+      - "NSCP National Conference"
+      - "AICPA Engage"
+      - "ABA RegTech"
+    industry_bodies:
+      - "SIFMA Compliance & Legal"
+      - "NSCP member directory"
+
+  E:
+    name: "AI-Native Infrastructure Builder"
+    description: >
+      ML platform teams, agent builders, AI engineers. Founders build in public,
+      ship to LangChain / Anthropic / OpenAI / Vercel customer pages, attend AI
+      Engineer Summit, post to Latent Space and AI Tinkerers.
+    trade_press:
+      - "site:latent.space"
+      - "site:aitinkerers.org"
+      - "site:swyx.io"
+    conferences:
+      - "AI Engineer Summit speaker / sponsor list"
+      - "Anthropic Builder Day showcase"
+      - "OpenAI DevDay showcase"
+      - "NeurIPS / ICML applied tracks"
+    customer_logo_pages:
+      - "site:langchain.com case study"
+      - "site:anthropic.com/customers"
+      - "site:openai.com/customer-stories"
+      - "site:vercel.com/customers"
+      - "site:vanta.com/customers"
+    community_surfaces:
+      - "site:news.ycombinator.com Show HN"
+      - "site:huggingface.co/spaces"
+      - "GitHub trending — AI agents topic"
+      - "Discord — LangChain / CrewAI builder communities"
+
+# ─────────────────────────────────────────────────────────
 # GLOBAL SEARCH CONFIGURATION
 # Applied as additional constraints to ALL generated queries
 # ─────────────────────────────────────────────────────────
@@ -1354,42 +1561,1374 @@ global_config:
     - "EF cohort"
     - "Antler"
 
-  # Geographic qualifiers appended to Europe-first queries
+  # Geographic qualifiers appended to Europe-first queries.
+  # Expanded to give CEE/Nordic/Iberian coverage that UK/DE/FR was previously
+  # squeezing out. The skill rotates these per gap so no single geography dominates.
   geo_qualifiers_eu:
+    # Western Europe
     - "Europe"
     - "UK startup"
     - "London"
-    - "Berlin"
-    - "Paris"
-    - "Amsterdam"
+    - "Cambridge UK"
+    - "Edinburgh"
+    - "Manchester"
     - "Dublin"
+    - "Berlin"
+    - "Munich"
+    - "Hamburg"
+    - "Paris"
+    - "Lyon"
+    - "Amsterdam"
+    - "Rotterdam"
+    - "Brussels"
+    - "Zurich"
+    - "Geneva"
+    - "Vienna"
+
+    # Iberia
+    - "Madrid"
     - "Barcelona"
+    - "Lisbon"
+    - "Porto"
+
+    # Italy
+    - "Milan"
+    - "Rome"
+
+    # Nordics
+    - "Stockholm"
+    - "Helsinki"
+    - "Copenhagen"
+    - "Oslo"
+    - "Reykjavik"
+
+    # CEE / Baltics — historically underweighted in our scans
+    - "Tallinn"
+    - "Estonia"
+    - "Riga"
+    - "Latvia"
+    - "Vilnius"
+    - "Lithuania"
+    - "Warsaw"
+    - "Krakow"
+    - "Wroclaw"
+    - "Poland"
+    - "Polish startup"
+    - "Prague"
+    - "Brno"
+    - "Czech Republic"
+    - "Bratislava"
+    - "Slovakia"
+    - "Budapest"
+    - "Hungary"
+    - "Bucharest"
+    - "Romania"
+    - "Sofia"
+    - "Bulgaria"
+    - "Zagreb"
+    - "Croatia"
+    - "Ljubljana"
+    - "Slovenia"
+    - "Belgrade"
+    - "Serbia"
+    - "Ljubljana"
+    - "Slovenia"
+    - "Bratislava"
+    - "Slovakia"
+    - "Athens"
+    - "Greece"
+    - "Greek startup"
+    - "Nicosia"
+    - "Cyprus"
+    - "Cypriot startup"
+    - "Kyiv"
+    - "Kiev"
+    - "Lviv"
+    - "Ukraine"
+    - "Ukrainian startup"
+    - "Reykjavik"
+    - "Iceland"
+    - "Luxembourg"
+    - "Luxembourg City"
+    - "Cork"
+    - "Galway"
+    - "Limerick"
+    - "Valletta"
+    - "Malta"
+    - "Tirana"
+    - "Sarajevo"
+    - "Skopje"
+    - "Pristina"
+    - "Podgorica"
+    - "Chisinau"
+
+  # Multilingual qualifiers — surface non-English language coverage in target geographies.
+  # The skill emits a small number of localised queries per cycle (rotates languages).
+  geo_qualifiers_multilingual:
+    polish: ["startup AI fintech", "polski startup", "AI agent finansowy"]
+    estonian: ["fintech idufirma", "Eesti fintech", "AI agent"]
+    czech: ["startup fintech AI", "český startup", "AI agent finanční"]
+    german: ["fintech Startup", "KI-Startup", "deutsche Gründer"]
+    french: ["startup fintech IA", "agent IA finance", "levée de fonds"]
+    spanish: ["startup fintech IA", "agente IA finanzas", "ronda semilla"]
+    portuguese: ["startup fintech IA", "agente IA finanças", "rodada semente"]
+    italian: ["startup fintech IA", "agente IA finanza", "round seed"]
 
   # Accelerator sources for Layer 4 sweeps (run as batch, not inline)
+  # NOTE: the generate-search-terms skill MUST iterate this full list — do not
+  # hardcode YC/EF in queries; build site: queries from every entry that has a url.
   accelerator_sources:
     - name: "YC current batch"
       url: "https://www.ycombinator.com/companies"
+      site: "ycombinator.com"
       filter_tags: ["fintech", "finance", "AI"]
     - name: "EF current cohort"
       url: "https://www.joinef.com/companies"
+      site: "joinef.com"
     - name: "Antler portfolio"
       url: "https://www.antler.co/portfolio"
+      site: "antler.co"
     - name: "Mouro Capital portfolio"
       url: "https://www.mourocapital.com/portfolio"
+      site: "mourocapital.com"
     - name: "Plug and Play Fintech"
       url: "https://www.plugandplaytechcenter.com"
+      site: "plugandplaytechcenter.com"
+    - name: "Techstars portfolio"
+      url: "https://www.techstars.com/portfolio"
+      site: "techstars.com"
+    - name: "Seedcamp portfolio"
+      url: "https://seedcamp.com/our-companies/"
+      site: "seedcamp.com"
+      filter_tags: ["European", "fintech"]
+    - name: "Notion Capital portfolio"
+      url: "https://notion.vc/portfolio/"
+      site: "notion.vc"
+      filter_tags: ["European", "B2B"]
+    - name: "Index Ventures portfolio"
+      url: "https://www.indexventures.com/companies/"
+      site: "indexventures.com"
+    - name: "Balderton portfolio"
+      url: "https://www.balderton.com/companies/"
+      site: "balderton.com"
+      filter_tags: ["European"]
+    - name: "Atomico portfolio"
+      url: "https://www.atomico.com/companies"
+      site: "atomico.com"
+      filter_tags: ["European"]
+    - name: "South Park Commons"
+      url: "https://www.southparkcommons.com/founder-fellowship"
+      site: "southparkcommons.com"
+    - name: "On Deck"
+      url: "https://www.beondeck.com/"
+      site: "beondeck.com"
+
+  # Press & funding sources for Layer 1b — high-quality outlets that cover
+  # European fintech, agentic AI, and finserv funding rounds.
+  # The skill generates 1 site:query per priority source per gap, in addition
+  # to the 4–6 generic queries already produced for Layer 1a.
+  # Priority calibrated against historical pipeline yield (see learning/discovery-log).
+  press_sources:
+    # ── Tier 1: highest historical yield (≥4 pipeline hits / quarter) ──
+    - name: "fintech.global"
+      site: "fintech.global"
+      priority: high
+      coverage: "Fintech funding rounds, deals — TOP yielder in current pipeline"
+    - name: "Sifted"
+      site: "sifted.eu"
+      priority: high
+      coverage: "European startups, fintech, deep-tech"
+    - name: "TechCrunch"
+      site: "techcrunch.com"
+      priority: high
+      coverage: "Global tech & funding rounds"
+    - name: "EU-Startups"
+      site: "eu-startups.com"
+      priority: high
+      coverage: "European startup news"
+    - name: "SiliconANGLE"
+      site: "siliconangle.com"
+      priority: high
+      coverage: "Enterprise tech & AI infrastructure"
+    - name: "tech.eu"
+      site: "tech.eu"
+      priority: high
+      coverage: "European tech ecosystem"
+    - name: "Finextra"
+      site: "finextra.com"
+      priority: high
+      coverage: "Financial services technology"
+    - name: "PYMNTS"
+      site: "pymnts.com"
+      priority: high
+      coverage: "Payments, fintech operations, AI in finserv"
+    - name: "Tech Funding News"
+      site: "techfundingnews.com"
+      priority: high
+      coverage: "Funding round announcements"
+    - name: "Crunchbase News"
+      site: "news.crunchbase.com"
+      priority: high
+      coverage: "Funding rounds & company news"
+
+    # ── Tier 2: medium-priority specialist & European outlets ──
+    - name: "FinTech Futures"
+      site: "fintechfutures.com"
+      priority: medium
+      coverage: "Fintech news, deals, partnerships"
+    - name: "The Information"
+      site: "theinformation.com"
+      priority: medium
+      coverage: "Premium tech & AI coverage"
+    - name: "Maddyness"
+      site: "maddyness.com"
+      priority: medium
+      coverage: "French startup ecosystem (FR/EN)"
+    - name: "Financial News London"
+      site: "fnlondon.com"
+      priority: medium
+      coverage: "UK financial services"
+    - name: "Risk.net"
+      site: "risk.net"
+      priority: medium
+      coverage: "Financial risk technology, regulated finserv"
+    - name: "Wealth Management"
+      site: "wealthmanagement.com"
+      priority: medium
+      coverage: "Wealth advisor industry — useful for S-FRONT/S-WEALTH gaps"
+    - name: "Banking Tech / Fintech Insider"
+      site: "bankingtech.com"
+      priority: medium
+      coverage: "Banking technology news"
+    - name: "Finews"
+      site: "finews.com"
+      priority: medium
+      coverage: "Swiss fintech & wealth management"
+
+    # ── Tier 3: press release wires (high-volume, low signal-density — sweep occasionally) ──
+    - name: "BusinessWire"
+      site: "businesswire.com"
+      priority: low
+      coverage: "Press release wire — funding announcements"
+    - name: "PR Newswire"
+      site: "prnewswire.com"
+      priority: low
+      coverage: "Press release wire"
+    - name: "GlobeNewswire"
+      site: "globenewswire.com"
+      priority: low
+      coverage: "Press release wire"
+    - name: "Yahoo Finance"
+      site: "finance.yahoo.com"
+      priority: low
+      coverage: "Mainstream financial news"
+
+    # ── Tier 4: regional / multilingual — Western Europe ──
+    - name: "Handelsblatt"
+      site: "handelsblatt.com"
+      priority: low
+      coverage: "German business (DE)"
+    - name: "Frankfurter Allgemeine"
+      site: "faz.net"
+      priority: low
+      coverage: "German finance (DE)"
+    - name: "Gründerszene"
+      site: "businessinsider.de"
+      priority: medium
+      coverage: "German startup news (DE)"
+    - name: "Deutsche Startups"
+      site: "deutsche-startups.de"
+      priority: medium
+      coverage: "German startup news (DE)"
+    - name: "Les Echos"
+      site: "lesechos.fr"
+      priority: low
+      coverage: "French business (FR)"
+    - name: "Frenchweb"
+      site: "frenchweb.fr"
+      priority: medium
+      coverage: "French tech (FR)"
+    - name: "American Banker"
+      site: "americanbanker.com"
+      priority: low
+      coverage: "US banking technology"
+    - name: "The Fintech Times"
+      site: "thefintechtimes.com"
+      priority: low
+      coverage: "Global fintech press"
+
+    # ── Tier 5: CEE / Baltic / SEE coverage — historically blind spots ──
+    - name: "Mam Startup"
+      site: "mamstartup.pl"
+      priority: high
+      coverage: "Polish startup ecosystem (PL)"
+      filter_tags: ["European", "CEE"]
+    - name: "Forbes Polska"
+      site: "forbes.pl"
+      priority: medium
+      coverage: "Polish business & funding (PL)"
+      filter_tags: ["European", "CEE"]
+    - name: "Spider's Web"
+      site: "spidersweb.pl"
+      priority: medium
+      coverage: "Polish tech news (PL)"
+      filter_tags: ["European", "CEE"]
+    - name: "150sec"
+      site: "150sec.com"
+      priority: high
+      coverage: "Central & Eastern European tech (EN)"
+      filter_tags: ["European", "CEE"]
+    - name: "TheRecursive"
+      site: "therecursive.com"
+      priority: high
+      coverage: "Balkans/CEE tech & VC news (EN)"
+      filter_tags: ["European", "CEE", "SEE"]
+    - name: "ITKey Media"
+      site: "itkeymedia.com"
+      priority: medium
+      coverage: "Czech/Slovak tech news (CZ/SK/EN)"
+      filter_tags: ["European", "CEE"]
+    - name: "Aripäev"
+      site: "aripaev.ee"
+      priority: medium
+      coverage: "Estonian business news (ET)"
+      filter_tags: ["European", "Baltic"]
+    - name: "Estonian World"
+      site: "estonianworld.com"
+      priority: medium
+      coverage: "Estonia in English"
+      filter_tags: ["European", "Baltic"]
+    - name: "e-Estonia"
+      site: "e-estonia.com"
+      priority: medium
+      coverage: "Estonian digital nation news"
+      filter_tags: ["European", "Baltic"]
+    - name: "Delfi (Baltic)"
+      site: "delfi.lt"
+      priority: low
+      coverage: "Baltic news (LT/LV/ET)"
+      filter_tags: ["European", "Baltic"]
+    - name: "HVG"
+      site: "hvg.hu"
+      priority: low
+      coverage: "Hungarian business (HU)"
+      filter_tags: ["European", "CEE"]
+    - name: "Innovation Origins"
+      site: "innovationorigins.com"
+      priority: medium
+      coverage: "Dutch & European deep-tech (EN)"
+      filter_tags: ["European"]
+
+    # ── Tier 6: Iberia ──
+    - name: "ElReferente"
+      site: "elreferente.es"
+      priority: medium
+      coverage: "Spanish startup news (ES)"
+      filter_tags: ["European", "Iberia"]
+    - name: "Forbes España"
+      site: "forbes.es"
+      priority: low
+      coverage: "Spanish business (ES)"
+      filter_tags: ["European", "Iberia"]
+    - name: "Startupxplore"
+      site: "startupxplore.com"
+      priority: medium
+      coverage: "Spanish startup database & news (ES/EN)"
+      filter_tags: ["European", "Iberia"]
+    - name: "Eco Inteligente / ECO"
+      site: "eco.sapo.pt"
+      priority: low
+      coverage: "Portuguese economic news (PT)"
+      filter_tags: ["European", "Iberia"]
+    - name: "Observador"
+      site: "observador.pt"
+      priority: low
+      coverage: "Portuguese tech & business (PT)"
+      filter_tags: ["European", "Iberia"]
+
+    # ── Tier 7: Italy ──
+    - name: "EconomyUp"
+      site: "economyup.it"
+      priority: medium
+      coverage: "Italian startup & innovation (IT)"
+      filter_tags: ["European"]
+    - name: "Startupbusiness"
+      site: "startupbusiness.it"
+      priority: medium
+      coverage: "Italian startup news (IT)"
+      filter_tags: ["European"]
+
+    # ── Tier 8: Nordics extended ──
+    - name: "Shifter"
+      site: "shifter.no"
+      priority: medium
+      coverage: "Norwegian startup news (NO)"
+      filter_tags: ["European", "Nordic"]
+    - name: "Breakit"
+      site: "breakit.se"
+      priority: medium
+      coverage: "Swedish tech & startup news (SV)"
+      filter_tags: ["European", "Nordic"]
+    - name: "Di Digital"
+      site: "di.se"
+      priority: low
+      coverage: "Swedish business — Dagens Industri digital (SV)"
+      filter_tags: ["European", "Nordic"]
+    - name: "Tech.fi"
+      site: "tech.fi"
+      priority: medium
+      coverage: "Finnish tech news (FI)"
+      filter_tags: ["European", "Nordic"]
+
+    # ── Tier 9: country-specific gap fills (Ireland, Luxembourg, Greece, Ukraine, Balkans) ──
+    - name: "Silicon Republic"
+      site: "siliconrepublic.com"
+      priority: high
+      coverage: "Ireland — leading Irish tech & startup news (EN)"
+      filter_tags: ["European", "Ireland"]
+    - name: "The Currency"
+      site: "thecurrency.news"
+      priority: medium
+      coverage: "Ireland — Irish business journalism (EN)"
+      filter_tags: ["European", "Ireland"]
+    - name: "Business Post"
+      site: "businesspost.ie"
+      priority: medium
+      coverage: "Ireland — Irish business weekly (EN)"
+      filter_tags: ["European", "Ireland"]
+    - name: "Paperjam"
+      site: "paperjam.lu"
+      priority: high
+      coverage: "Luxembourg — financial-services capital coverage (FR/EN)"
+      filter_tags: ["European", "Luxembourg"]
+    - name: "Delano"
+      site: "delano.lu"
+      priority: medium
+      coverage: "Luxembourg — English-language Luxembourg news"
+      filter_tags: ["European", "Luxembourg"]
+    - name: "Naftemporiki"
+      site: "naftemporiki.gr"
+      priority: medium
+      coverage: "Greece — Greek business daily (GR/EN)"
+      filter_tags: ["European", "Greece"]
+    - name: "ekathimerini"
+      site: "ekathimerini.com"
+      priority: medium
+      coverage: "Greece — Kathimerini English edition"
+      filter_tags: ["European", "Greece"]
+    - name: "AIN.ua"
+      site: "ain.ua"
+      priority: high
+      coverage: "Ukraine — leading Ukrainian tech & startup news (UA/EN)"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "dev.ua"
+      site: "dev.ua"
+      priority: medium
+      coverage: "Ukraine — Ukrainian tech industry news (UA)"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "Startit"
+      site: "startit.rs"
+      priority: high
+      coverage: "Serbia — Serbian startup news (SR)"
+      filter_tags: ["European", "Serbia", "SEE"]
+    - name: "Netokracija"
+      site: "netokracija.com"
+      priority: medium
+      coverage: "Serbia/Croatia — Adriatic tech news (HR/SR)"
+      filter_tags: ["European", "Serbia", "Croatia", "SEE"]
+    - name: "Trend.sk"
+      site: "trend.sk"
+      priority: medium
+      coverage: "Slovakia — Slovak business news (SK)"
+      filter_tags: ["European", "Slovakia", "CEE"]
+    - name: "Vísir"
+      site: "visir.is"
+      priority: low
+      coverage: "Iceland — Icelandic news (IS)"
+      filter_tags: ["European", "Nordic", "Iceland"]
+    - name: "Northstack"
+      site: "northstack.is"
+      priority: medium
+      coverage: "Iceland — Nordic tech ecosystem (EN)"
+      filter_tags: ["European", "Nordic", "Iceland"]
+    - name: "Cyprus Mail"
+      site: "cyprus-mail.com"
+      priority: low
+      coverage: "Cyprus — Cypriot business news (EN)"
+      filter_tags: ["European", "Cyprus"]
+    - name: "Times of Malta"
+      site: "timesofmalta.com"
+      priority: low
+      coverage: "Malta — Maltese business & tech (EN)"
+      filter_tags: ["European", "Malta"]
+    - name: "TechUkraine"
+      site: "techukraine.org"
+      priority: medium
+      coverage: "Ukraine — official Ukrainian tech ecosystem (EN)"
+      filter_tags: ["European", "Ukraine"]
+
+  # Innovation hub & ecosystem sources for Layer 1c — places that announce
+  # cohorts, residencies, demo days, partnerships. Sweep their news pages every cycle.
+  innovation_hub_sources:
+    - name: "Station F"
+      site: "stationf.co"
+      url: "https://stationf.co/news"
+      coverage: "Paris — largest startup campus in Europe"
+      filter_tags: ["European", "fintech"]
+    - name: "Level39"
+      site: "level39.co"
+      url: "https://level39.co/news"
+      coverage: "Canary Wharf fintech hub — UK"
+      filter_tags: ["European", "fintech"]
+    - name: "Rise by Barclays"
+      site: "rise.barclays"
+      url: "https://rise.barclays/news"
+      coverage: "Fintech accelerator/innovation lab"
+      filter_tags: ["fintech"]
+    - name: "Founders Factory"
+      site: "foundersfactory.com"
+      coverage: "London-based startup builder"
+      filter_tags: ["European"]
+    - name: "Plexal"
+      site: "plexal.com"
+      coverage: "London innovation hub — cyber/fintech"
+      filter_tags: ["European"]
+    - name: "Innovate UK"
+      site: "ukri.org"
+      url: "https://www.ukri.org/news/?_filtering_council=innovate-uk"
+      coverage: "UK government innovation grants — Smart Grants surface seed funding"
+      filter_tags: ["European", "grants"]
+    - name: "Founders Forum"
+      site: "foundersforum.com"
+      coverage: "UK tech founders ecosystem (formerly Tech Nation)"
+      filter_tags: ["European"]
+    - name: "Royal Academy of Engineering Enterprise Hub"
+      site: "raeng.org.uk"
+      url: "https://enterprisehub.raeng.org.uk"
+      coverage: "Deep-tech UK enterprise fellows"
+      filter_tags: ["European", "deep-tech"]
+    - name: "ImpactX (Endeavor)"
+      site: "endeavor.org"
+      coverage: "Global high-impact entrepreneur network"
+
+  # University & research-org spin-out sources for Layer 4c.
+  # Sweep monthly — these announce new ventures from their tech-transfer offices.
+  university_spinout_sources:
+    - name: "Oxford University Innovation"
+      site: "innovation.ox.ac.uk"
+      url: "https://innovation.ox.ac.uk/news/"
+      coverage: "UK — Oxford spin-outs"
+    - name: "Cambridge Enterprise"
+      site: "enterprise.cam.ac.uk"
+      url: "https://www.enterprise.cam.ac.uk/news/"
+      coverage: "UK — Cambridge commercialisation arm"
+    - name: "Imperial College Innovations"
+      site: "imperial.ac.uk"
+      url: "https://www.imperial.ac.uk/enterprise/business/spin-outs/"
+      coverage: "UK — Imperial spin-outs (deep-tech, AI)"
+    - name: "UCL Business"
+      site: "uclb.com"
+      url: "https://www.uclb.com/news"
+      coverage: "UK — UCL commercialisation"
+    - name: "Edinburgh Innovations"
+      site: "edinburgh-innovations.ed.ac.uk"
+      coverage: "UK — Edinburgh spin-outs (strong in AI)"
+    - name: "ETH Zurich Innovation"
+      site: "ethz.ch"
+      url: "https://ethz.ch/en/industry/start-ups.html"
+      coverage: "Switzerland — ETH spin-offs"
+    - name: "EPFL Innovation Park"
+      site: "epfl-innovationpark.ch"
+      coverage: "Switzerland — EPFL spin-offs"
+    - name: "TU Delft (YES!Delft)"
+      site: "yesdelft.com"
+      coverage: "Netherlands — TU Delft incubator"
+    - name: "TU Munich (UnternehmerTUM)"
+      site: "unternehmertum.de"
+      coverage: "Germany — TUM startup factory"
+    - name: "Karolinska Innovations"
+      site: "karolinskainnovations.ki.se"
+      coverage: "Sweden — KI spin-outs"
+    - name: "Aalto Startup Center"
+      site: "startupcenter.aalto.fi"
+      coverage: "Finland — Aalto spin-outs"
+    - name: "DTU Skylab"
+      site: "skylab.dtu.dk"
+      coverage: "Denmark — DTU innovation"
+    - name: "NovaUCD"
+      site: "ucd.ie"
+      url: "https://www.ucd.ie/innovation/news/"
+      coverage: "Ireland — UCD spin-outs"
+    - name: "Trinity Innovation"
+      site: "tcd.ie"
+      url: "https://www.tcd.ie/innovation/news/"
+      coverage: "Ireland — Trinity College Dublin"
+    - name: "Spinout.fyi"
+      site: "spinout.fyi"
+      coverage: "Aggregator — UK spin-out database"
+    - name: "TalTech (Tallinn University of Technology)"
+      site: "taltech.ee"
+      url: "https://taltech.ee/en/news"
+      coverage: "Estonia — TalTech innovation"
+      filter_tags: ["European", "Baltic"]
+    - name: "Warsaw University of Technology"
+      site: "pw.edu.pl"
+      coverage: "Poland — WUT spin-outs"
+      filter_tags: ["European", "CEE"]
+    - name: "AGH Krakow"
+      site: "agh.edu.pl"
+      coverage: "Poland — Krakow tech transfer"
+      filter_tags: ["European", "CEE"]
+    - name: "Charles University Innovations Prague"
+      site: "cuip.cuni.cz"
+      coverage: "Czech — Charles University spin-outs"
+      filter_tags: ["European", "CEE"]
+    - name: "Czech Technical University"
+      site: "cvut.cz"
+      coverage: "Czech — CTU spin-outs"
+      filter_tags: ["European", "CEE"]
+    - name: "BME (Budapest)"
+      site: "bme.hu"
+      coverage: "Hungary — Budapest U of Tech"
+      filter_tags: ["European", "CEE"]
+    - name: "Politecnico di Milano"
+      site: "polimi.it"
+      coverage: "Italy — PoliMi tech transfer"
+      filter_tags: ["European"]
+    - name: "IE Business School / IE University"
+      site: "ie.edu"
+      coverage: "Madrid — Spanish entrepreneurship hub"
+      filter_tags: ["European", "Iberia"]
+    - name: "IST Lisbon"
+      site: "tecnico.ulisboa.pt"
+      coverage: "Portugal — Instituto Superior Técnico"
+      filter_tags: ["European", "Iberia"]
+
+  # Startup competitions for Layer 4d — announce winners/finalists, often pre-funding.
+  # Sweep around event dates (most are seasonal).
+  startup_competition_sources:
+    - name: "Slush"
+      site: "slush.org"
+      url: "https://www.slush.org/news/"
+      coverage: "Helsinki — Slush 100 pitch competition"
+      filter_tags: ["European"]
+    - name: "Web Summit PITCH"
+      site: "websummit.com"
+      url: "https://websummit.com/blog"
+      coverage: "Lisbon — PITCH competition winners"
+      filter_tags: ["European"]
+    - name: "EIC Accelerator"
+      site: "eic.ec.europa.eu"
+      url: "https://eic.ec.europa.eu/news_en"
+      coverage: "European Innovation Council — €17.5M deep-tech grants"
+      filter_tags: ["European", "grants"]
+    - name: "Hello Tomorrow"
+      site: "hello-tomorrow.org"
+      coverage: "Deep-tech global challenge"
+      filter_tags: ["deep-tech"]
+    - name: "VivaTech"
+      site: "vivatechnology.com"
+      url: "https://vivatechnology.com/news"
+      coverage: "Paris — VivaTech awards"
+      filter_tags: ["European"]
+    - name: "TNW Conference"
+      site: "thenextweb.com"
+      coverage: "Amsterdam — TNW awards"
+      filter_tags: ["European"]
+    - name: "TechCrunch Disrupt Battlefield"
+      site: "techcrunch.com"
+      url: "https://techcrunch.com/category/startup-battlefield/"
+      coverage: "Global pitch competition winners"
+    - name: "F6S"
+      site: "f6s.com"
+      coverage: "Aggregator — open competitions, accelerators, grants"
+    - name: "Money 20/20 Startup Pitch"
+      site: "money2020.com"
+      coverage: "Fintech pitch competition (US + Europe)"
+      filter_tags: ["fintech"]
+    - name: "Banking Tech Awards"
+      site: "fintechfutures.com"
+      url: "https://www.fintechfutures.com/category/awards/"
+      coverage: "Banking tech awards & winners"
+      filter_tags: ["fintech"]
+    - name: "Latitude59"
+      site: "latitude59.ee"
+      coverage: "Tallinn — flagship Estonian/Baltic startup conference"
+      filter_tags: ["European", "Baltic"]
+    - name: "Wolves Summit"
+      site: "wolvessummit.com"
+      coverage: "Warsaw — CEE startup pitch event"
+      filter_tags: ["European", "CEE"]
+    - name: "Bits & Pretzels"
+      site: "bitsandpretzels.com"
+      coverage: "Munich — German/European startup festival"
+      filter_tags: ["European", "Germany"]
+    - name: "TechBBQ"
+      site: "techbbq.dk"
+      coverage: "Copenhagen — Nordic startup summit"
+      filter_tags: ["European", "Nordic"]
+    - name: "Vienna Up"
+      site: "viennaup.com"
+      coverage: "Vienna — Austrian/CEE startup festival"
+      filter_tags: ["European", "Austria"]
+    - name: "South Summit"
+      site: "southsummit.co"
+      coverage: "Madrid — Iberian/Latam startup competition"
+      filter_tags: ["European", "Iberia"]
+    - name: "How To Web"
+      site: "howtoweb.co"
+      coverage: "Bucharest — Romanian/SEE startup conference"
+      filter_tags: ["European", "SEE"]
+    - name: "Pirate Summit"
+      site: "piratesummit.com"
+      coverage: "Cologne — alt-startup conference"
+      filter_tags: ["European"]
+
+  # Seed-stage VC portfolios for Layer 4b — sweep portfolio pages and recent
+  # investment announcements. Includes fintech-specialist funds and generalist
+  # European seed funds.
+  vc_seed_sources:
+    # ── European generalist seed funds with strong fintech track records ──
+    - name: "LocalGlobe / Latitude"
+      site: "localglobe.vc"
+      coverage: "London — Europe's most active seed fund"
+      filter_tags: ["European"]
+    - name: "Hoxton Ventures"
+      site: "hoxtonventures.com"
+      coverage: "London — generalist seed"
+      filter_tags: ["European"]
+    - name: "Connect Ventures"
+      site: "connectventures.co"
+      coverage: "London — product-led seed"
+      filter_tags: ["European"]
+    - name: "Ada Ventures"
+      site: "adaventures.com"
+      coverage: "London — diverse founders, seed"
+      filter_tags: ["European"]
+    - name: "Episode 1 Ventures"
+      site: "episode1.com"
+      coverage: "London — UK seed"
+      filter_tags: ["European"]
+    - name: "Talis Capital"
+      site: "taliscapital.com"
+      coverage: "London — seed/Series A"
+      filter_tags: ["European"]
+    - name: "Stride.VC"
+      site: "stride.vc"
+      coverage: "Paris — French/European seed"
+      filter_tags: ["European"]
+    - name: "Partech"
+      site: "partechpartners.com"
+      coverage: "Paris — multi-stage, strong seed"
+      filter_tags: ["European"]
+    - name: "Daphni"
+      site: "daphni.com"
+      coverage: "Paris — French seed"
+      filter_tags: ["European"]
+    - name: "360 Capital"
+      site: "360cap.vc"
+      coverage: "Paris/Milan — European seed"
+      filter_tags: ["European"]
+    - name: "United Ventures"
+      site: "unitedventures.it"
+      coverage: "Milan — Italian/European seed"
+      filter_tags: ["European"]
+    - name: "Cherry Ventures"
+      site: "cherry.vc"
+      coverage: "Berlin — European seed"
+      filter_tags: ["European"]
+    - name: "Earlybird Venture Capital"
+      site: "earlybird.com"
+      coverage: "Berlin — European generalist"
+      filter_tags: ["European"]
+    - name: "Project A Ventures"
+      site: "project-a.com"
+      coverage: "Berlin — European B2B seed"
+      filter_tags: ["European"]
+    - name: "HV Capital"
+      site: "hvcapital.com"
+      coverage: "Munich — German seed/Series A"
+      filter_tags: ["European"]
+    - name: "Lakestar"
+      site: "lakestar.com"
+      coverage: "Switzerland — European multi-stage"
+      filter_tags: ["European"]
+    - name: "Northzone"
+      site: "northzone.com"
+      coverage: "Sweden — European multi-stage"
+      filter_tags: ["European"]
+    - name: "Creandum"
+      site: "creandum.com"
+      coverage: "Stockholm — Nordic seed"
+      filter_tags: ["European"]
+    - name: "EQT Ventures"
+      site: "eqtventures.com"
+      coverage: "Stockholm — European multi-stage"
+      filter_tags: ["European"]
+    - name: "byFounders"
+      site: "byfounders.vc"
+      coverage: "Copenhagen — Nordic/Baltic seed"
+      filter_tags: ["European"]
+    - name: "Inventure"
+      site: "inventure.fi"
+      coverage: "Helsinki — Nordic seed"
+      filter_tags: ["European"]
+    - name: "Frontline Ventures"
+      site: "frontline.vc"
+      coverage: "Dublin/London — Irish/UK seed"
+      filter_tags: ["European"]
+    - name: "Octopus Ventures"
+      site: "octopusventures.com"
+      coverage: "London — multi-stage UK fund"
+      filter_tags: ["European"]
+
+    # ── Fintech-specialist VCs ──
+    - name: "QED Investors"
+      site: "qedinvestors.com"
+      coverage: "Global fintech-specialist seed/Series A"
+      filter_tags: ["fintech"]
+    - name: "Ribbit Capital"
+      site: "ribbitcap.com"
+      coverage: "Global fintech-specialist"
+      filter_tags: ["fintech"]
+    - name: "Anthemis Group"
+      site: "anthemis.com"
+      coverage: "Fintech-specialist (UK/US)"
+      filter_tags: ["fintech", "European"]
+    - name: "Augmentum Fintech"
+      site: "augmentum.vc"
+      coverage: "London — fintech-specialist"
+      filter_tags: ["fintech", "European"]
+    - name: "Speedinvest"
+      site: "speedinvest.com"
+      coverage: "Vienna — strong fintech vertical"
+      filter_tags: ["fintech", "European"]
+    - name: "Mosaic Ventures"
+      site: "mosaicventures.com"
+      coverage: "London — fintech-friendly seed"
+      filter_tags: ["European"]
+
+    # ── CEE / Baltic / SEE — historically the biggest blind spot ──
+    - name: "Inovo Venture Partners"
+      site: "inovo.vc"
+      coverage: "Warsaw — leading Polish seed fund"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "OTB Ventures"
+      site: "otb.vc"
+      coverage: "Warsaw — Polish/CEE deep-tech"
+      filter_tags: ["European", "CEE", "Poland", "deep-tech"]
+    - name: "Czysta3.VC"
+      site: "czysta3.vc"
+      coverage: "Polish early-stage"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "Black Pearls VC"
+      site: "blackpearls.vc"
+      coverage: "Polish/CEE seed"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "ff Venture Capital"
+      site: "ffvc.com"
+      coverage: "US/Polish seed"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "Innovation Nest"
+      site: "innovationnest.com"
+      coverage: "Polish/CEE B2B SaaS seed"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "Bitspiration Booster"
+      site: "bitspiration.com"
+      coverage: "Polish acceleration"
+      filter_tags: ["European", "CEE", "Poland"]
+    - name: "Karma Ventures"
+      site: "karma.vc"
+      coverage: "Tallinn — leading Estonian seed/Series A"
+      filter_tags: ["European", "Baltic", "Estonia"]
+    - name: "Tera Ventures"
+      site: "teraventures.com"
+      coverage: "Tallinn — Estonian seed"
+      filter_tags: ["European", "Baltic", "Estonia"]
+    - name: "Trind VC"
+      site: "trind.vc"
+      coverage: "Estonia — early stage"
+      filter_tags: ["European", "Baltic", "Estonia"]
+    - name: "United Angels VC"
+      site: "uavc.eu"
+      coverage: "Estonian seed"
+      filter_tags: ["European", "Baltic", "Estonia"]
+    - name: "Change Ventures"
+      site: "changeventures.com"
+      coverage: "Riga — Baltic seed"
+      filter_tags: ["European", "Baltic"]
+    - name: "Practica Capital"
+      site: "practica.lt"
+      coverage: "Vilnius — Lithuanian seed"
+      filter_tags: ["European", "Baltic", "Lithuania"]
+    - name: "Open Circle Capital"
+      site: "opencirclecapital.com"
+      coverage: "Lithuania — seed"
+      filter_tags: ["European", "Baltic", "Lithuania"]
+    - name: "Credo Ventures"
+      site: "credoventures.com"
+      coverage: "Prague — leading Czech seed"
+      filter_tags: ["European", "CEE", "Czech"]
+    - name: "Reflex Capital"
+      site: "reflex.capital"
+      coverage: "Czech seed"
+      filter_tags: ["European", "CEE", "Czech"]
+    - name: "Kaya Ventures"
+      site: "kaya.vc"
+      coverage: "Prague — Czech/CEE seed"
+      filter_tags: ["European", "CEE", "Czech"]
+    - name: "J&T Ventures"
+      site: "jtventures.com"
+      coverage: "Czech early-stage"
+      filter_tags: ["European", "CEE", "Czech"]
+    - name: "Day One Capital"
+      site: "dayonecapital.com"
+      coverage: "Budapest — Hungarian seed"
+      filter_tags: ["European", "CEE", "Hungary"]
+    - name: "Hiventures"
+      site: "hiventures.hu"
+      coverage: "Hungarian state-backed seed"
+      filter_tags: ["European", "CEE", "Hungary"]
+    - name: "Earlybird Digital East"
+      site: "earlybird.com"
+      coverage: "Berlin/Istanbul — explicit CEE/East focus"
+      filter_tags: ["European", "CEE"]
+    - name: "3TS Capital Partners"
+      site: "3tscapital.com"
+      coverage: "CEE growth & late-seed"
+      filter_tags: ["European", "CEE"]
+    - name: "LAUNCHub Ventures"
+      site: "launchub.com"
+      coverage: "Sofia — Bulgarian/CEE seed"
+      filter_tags: ["European", "CEE", "Bulgaria"]
+    - name: "Eleven Ventures"
+      site: "11.vc"
+      coverage: "Sofia — Bulgarian seed"
+      filter_tags: ["European", "CEE", "Bulgaria"]
+    - name: "Catalyst Romania"
+      site: "catalystromania.com"
+      coverage: "Romanian/SEE seed"
+      filter_tags: ["European", "SEE", "Romania"]
+    - name: "Early Game Ventures"
+      site: "earlygame.vc"
+      coverage: "Romanian seed"
+      filter_tags: ["European", "SEE", "Romania"]
+    - name: "South Central Ventures"
+      site: "sc-ventures.com"
+      coverage: "Western Balkans seed"
+      filter_tags: ["European", "SEE", "Balkans"]
+    - name: "Fil Rouge Capital"
+      site: "filrougecapital.com"
+      coverage: "Croatian/Balkan seed"
+      filter_tags: ["European", "SEE", "Balkans"]
+
+    # ── Iberia ──
+    - name: "K Fund"
+      site: "kfund.vc"
+      coverage: "Madrid — leading Spanish seed"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "Samaipata"
+      site: "samaipata.vc"
+      coverage: "Madrid — pan-European seed"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "JME Ventures"
+      site: "jme.vc"
+      coverage: "Madrid — Spanish B2B seed"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "Kibo Ventures"
+      site: "kiboventures.com"
+      coverage: "Madrid — Spanish seed/Series A"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "All Iron Ventures"
+      site: "allironventures.com"
+      coverage: "Bilbao — Spanish seed"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "Bynd Venture Capital"
+      site: "byndvc.com"
+      coverage: "Lisbon — Portuguese seed"
+      filter_tags: ["European", "Iberia", "Portugal"]
+    - name: "Faber"
+      site: "faberventures.com"
+      coverage: "Lisbon — Portuguese seed"
+      filter_tags: ["European", "Iberia", "Portugal"]
+    - name: "Indico Capital Partners"
+      site: "indicocapital.com"
+      coverage: "Portuguese seed/Series A"
+      filter_tags: ["European", "Iberia", "Portugal"]
+    - name: "Mustard Seed MAZE"
+      site: "mustardseedmaze.com"
+      coverage: "Portuguese impact-tech seed"
+      filter_tags: ["European", "Iberia", "Portugal"]
+
+    # ── Norway / Belgium / NL ──
+    - name: "Alliance Venture"
+      site: "alliancevc.com"
+      coverage: "Oslo — Norwegian seed"
+      filter_tags: ["European", "Nordic", "Norway"]
+    - name: "Schibsted Ventures"
+      site: "schibstedventures.com"
+      coverage: "Norwegian/Nordic media & tech"
+      filter_tags: ["European", "Nordic", "Norway"]
+    - name: "Hummingbird Ventures"
+      site: "hummingbird-vc.com"
+      coverage: "Antwerp — Belgian/global seed"
+      filter_tags: ["European", "Belgium"]
+    - name: "Volta Ventures"
+      site: "volta.ventures"
+      coverage: "Antwerp — Benelux seed"
+      filter_tags: ["European", "Belgium"]
+    - name: "SmartFin Capital"
+      site: "smartfincapital.com"
+      coverage: "Belgian fintech-specialist"
+      filter_tags: ["European", "Belgium", "fintech"]
+    - name: "Curiosity VC"
+      site: "curiosityvc.com"
+      coverage: "Amsterdam — early-stage"
+      filter_tags: ["European", "Netherlands"]
+    - name: "Endeit Capital"
+      site: "endeit.com"
+      coverage: "Amsterdam/Hamburg — European growth"
+      filter_tags: ["European", "Netherlands"]
+
+    # ── Ireland — boost from light to strong ──
+    - name: "Atlantic Bridge Ventures"
+      site: "atlanticbridge.com"
+      coverage: "Dublin — Irish growth-stage tech"
+      filter_tags: ["European", "Ireland"]
+    - name: "Furthr Ventures"
+      site: "furthrventures.com"
+      coverage: "Dublin — Irish seed/Series A"
+      filter_tags: ["European", "Ireland"]
+    - name: "ACT Venture Capital"
+      site: "actvc.com"
+      coverage: "Dublin — Irish multi-stage tech"
+      filter_tags: ["European", "Ireland"]
+    - name: "Delta Partners"
+      site: "delta.ie"
+      coverage: "Dublin — Irish seed/Series A"
+      filter_tags: ["European", "Ireland"]
+    - name: "NDRC"
+      site: "ndrc.ie"
+      coverage: "Dublin — Irish pre-accelerator"
+      filter_tags: ["European", "Ireland"]
+
+    # ── Luxembourg — finserv capital, glaring previous miss ──
+    - name: "Expon Capital"
+      site: "exponcapital.com"
+      coverage: "Luxembourg — fintech/deep-tech seed"
+      filter_tags: ["European", "Luxembourg", "fintech"]
+    - name: "Encevo Capital"
+      site: "encevo.lu"
+      coverage: "Luxembourg — energy & fintech"
+      filter_tags: ["European", "Luxembourg"]
+    - name: "Luxinnovation"
+      site: "luxinnovation.lu"
+      coverage: "Luxembourg national agency — funding programmes"
+      filter_tags: ["European", "Luxembourg", "grants"]
+
+    # ── Greece — Pallma surfaced organically; add native funds ──
+    - name: "Marathon Venture Capital"
+      site: "marathon.vc"
+      coverage: "Athens — leading Greek seed (Pallma AI lead investor)"
+      filter_tags: ["European", "Greece"]
+    - name: "VentureFriends"
+      site: "venturefriends.vc"
+      coverage: "Athens — Greek/SEE seed/Series A"
+      filter_tags: ["European", "Greece", "SEE"]
+    - name: "Big Pi Ventures"
+      site: "bigpi.vc"
+      coverage: "Athens — Greek deep-tech seed"
+      filter_tags: ["European", "Greece"]
+    - name: "Velocity Partners"
+      site: "velocity.partners"
+      coverage: "Athens — Greek/Mediterranean seed"
+      filter_tags: ["European", "Greece"]
+
+    # ── Ukraine — pre-war tech ecosystem still active ──
+    - name: "Genesis Investments"
+      site: "genesis-investments.com"
+      coverage: "Kyiv — Ukrainian/CEE seed (largest UA tech investor)"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "SMRK VC"
+      site: "smrk.vc"
+      coverage: "Kyiv — Ukrainian seed"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "Roosh Ventures"
+      site: "roosh.com"
+      coverage: "Kyiv — Ukrainian AI-focused seed"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "AVentures Capital"
+      site: "aventurescapital.com"
+      coverage: "Kyiv — Ukrainian seed/Series A"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "Horizon Capital"
+      site: "horizoncapital.ua"
+      coverage: "Kyiv — Ukrainian/CEE growth"
+      filter_tags: ["European", "Ukraine", "CEE"]
+
+    # ── Serbia / Western Balkans — Belgrade tech scene ──
+    - name: "ICT Hub Venture"
+      site: "icthub.rs"
+      coverage: "Belgrade — Serbian seed"
+      filter_tags: ["European", "Serbia", "SEE"]
+    - name: "Stardust Capital"
+      site: "stardust.capital"
+      coverage: "Belgrade — Western Balkans seed"
+      filter_tags: ["European", "Serbia", "SEE"]
+
+    # ── Slovakia — explicit native fund (was implicit Czech) ──
+    - name: "Crowdberry"
+      site: "crowdberry.eu"
+      coverage: "Bratislava/Prague — Slovak/Czech crowd-VC"
+      filter_tags: ["European", "Slovakia", "CEE"]
+    - name: "Neulogy Ventures"
+      site: "neulogy.com"
+      coverage: "Bratislava — Slovak seed"
+      filter_tags: ["European", "Slovakia", "CEE"]
+
+    # ── Slovenia ──
+    - name: "Silicon Gardens Fund"
+      site: "silicongardens.com"
+      coverage: "Ljubljana — Slovenian/Adriatic seed"
+      filter_tags: ["European", "Slovenia", "SEE"]
+
+    # ── Iceland — Nordic completeness ──
+    - name: "Brunnur Ventures"
+      site: "brunnur.is"
+      coverage: "Reykjavik — Icelandic seed"
+      filter_tags: ["European", "Nordic", "Iceland"]
+    - name: "Crowberry Capital"
+      site: "crowberry.is"
+      coverage: "Reykjavik — Nordic/Icelandic seed (also covers SE/DK/NO)"
+      filter_tags: ["European", "Nordic", "Iceland"]
+    - name: "Frumtak Ventures"
+      site: "frumtak.is"
+      coverage: "Reykjavik — Icelandic Series A"
+      filter_tags: ["European", "Nordic", "Iceland"]
+
+    # ── Croatia (boost) + Cyprus + Latvia ──
+    - name: "Feelsgood Capital"
+      site: "feelsgood.capital"
+      coverage: "Zagreb — Croatian impact seed"
+      filter_tags: ["European", "Croatia", "SEE"]
+    - name: "33East Capital"
+      site: "33east.com"
+      coverage: "Limassol — Cypriot seed (broader CEE/SEE focus)"
+      filter_tags: ["European", "Cyprus", "SEE"]
+    - name: "ZGI Capital"
+      site: "zgi.lv"
+      coverage: "Riga — Latvian seed (only Latvia-specific fund)"
+      filter_tags: ["European", "Baltic", "Latvia"]
+
+    # ── Discovered via Phase-7 verification (real searches surfaced these) ──
+    - name: "MiddleGame Ventures"
+      site: "middlegame.vc"
+      coverage: "Dublin/Lux — fintech-specialist seed (led Paygentic round)"
+      filter_tags: ["European", "Ireland", "Luxembourg", "fintech"]
+    - name: "Anamcara Capital"
+      site: "anamcara.com"
+      coverage: "Dublin — Irish AI/deep-tech seed"
+      filter_tags: ["European", "Ireland"]
+    - name: "Aperture"
+      site: "aperture.vc"
+      coverage: "London/Dublin — early-stage tech"
+      filter_tags: ["European", "Ireland", "UK"]
+    - name: "SMOK Ventures"
+      site: "smok.vc"
+      coverage: "Warsaw — Polish/CEE seed (active in Ukrainian deals)"
+      filter_tags: ["European", "Poland", "CEE"]
+    - name: "SID Venture Partners"
+      site: "sidventures.com"
+      coverage: "Kyiv — Ukrainian AI-focused seed fund"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "1991 Ventures"
+      site: "1991.vc"
+      coverage: "Ukrainian seed (named in LetsData round)"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "N1 Fund"
+      site: "n1.fund"
+      coverage: "Ukrainian seed/Series A"
+      filter_tags: ["European", "Ukraine", "CEE"]
+    - name: "Tilia Impact Ventures"
+      site: "tilia.vc"
+      coverage: "Czech impact-tech seed"
+      filter_tags: ["European", "Czech", "CEE"]
+    - name: "Anthemis Insurance Innovation"
+      site: "anthemis.com"
+      coverage: "London/NY — insurtech specialist"
+      filter_tags: ["European", "fintech"]
+    - name: "Wayra"
+      site: "wayra.com"
+      coverage: "Madrid (Telefónica corporate VC) — global seed"
+      filter_tags: ["European", "Iberia", "Spain"]
+    - name: "Startup Wise Guys"
+      site: "startupwiseguys.com"
+      coverage: "Tallinn — B2B seed accelerator"
+      filter_tags: ["European", "Baltic", "Estonia"]
+
+    # ── Top US seed funds active in European deals ──
+    # (US funds are scanned via vc_seed_sources; aggregator databases like
+    # AngelList, F6S, Dealroom and Crunchbase are listed under
+    # `startup_databases` below — scan them on Layer 4e.)
+
+    - name: "Sequoia Capital"
+      site: "sequoiacap.com"
+      coverage: "US — surfaces European deals"
+    - name: "Andreessen Horowitz"
+      site: "a16z.com"
+      coverage: "US — fintech vertical, surfaces European deals"
+    - name: "Bessemer Venture Partners"
+      site: "bvp.com"
+      coverage: "US — fintech-strong"
+      filter_tags: ["fintech"]
+    - name: "Founders Fund"
+      site: "foundersfund.com"
+      coverage: "US — generalist seed/Series A"
+    - name: "Insight Partners"
+      site: "insightpartners.com"
+      coverage: "US — fintech-strong"
+      filter_tags: ["fintech"]
 
   # Product launch sources for Layer 2 queries
   layer2_sources:
     - "site:producthunt.com"
     - "site:news.ycombinator.com 'Show HN'"
+    - "site:betalist.com"
+    - "site:indiehackers.com"
 
   # Technical artifact sources for Layer 3 queries
   layer3_sources:
     - "site:github.com"
+    - "site:huggingface.co"
+    - "site:gitlab.com"
 
-  # Hard crypto exclusion terms (appended when gap has crypto_exclusion: true)
+  # Startup directories & discovery aggregators for Layer 4e.
+  # These are quasi-API databases: companies often appear here BEFORE press
+  # coverage (founders register on AngelList/F6S the day they incorporate).
+  # Sweep their European/fintech/AI filters every cycle.
+  startup_databases:
+    - name: "Wellfound (formerly AngelList Talent)"
+      site: "wellfound.com"
+      url: "https://wellfound.com/startups"
+      coverage: "Global startup database — founder profiles, jobs as company signal"
+      priority: high
+      filter_tags: ["seed-stage", "global"]
+    - name: "F6S"
+      site: "f6s.com"
+      url: "https://www.f6s.com/companies"
+      coverage: "Open competitions, accelerators, grants — pre-funding signal"
+      priority: high
+      filter_tags: ["competitions", "accelerators"]
+    - name: "Dealroom.co"
+      site: "dealroom.co"
+      url: "https://app.dealroom.co/companies"
+      coverage: "European-focused startup intelligence — strong CEE/Iberia coverage"
+      priority: high
+      filter_tags: ["European", "funding-data"]
+    - name: "Crunchbase"
+      site: "crunchbase.com"
+      url: "https://www.crunchbase.com/discover/organization.companies"
+      coverage: "Global company database — funding rounds, founders, investors"
+      priority: high
+      filter_tags: ["global", "funding-data"]
+    - name: "Tracxn"
+      site: "tracxn.com"
+      coverage: "Sector & geography taxonomies — strong on emerging tech themes"
+      priority: medium
+      filter_tags: ["sector-taxonomy"]
+    - name: "Beauhurst"
+      site: "beauhurst.com"
+      coverage: "UK private companies — high-growth filtering, spinout tracking"
+      priority: high
+      filter_tags: ["UK", "spinouts"]
+    - name: "PitchBook News"
+      site: "pitchbook.com"
+      url: "https://pitchbook.com/news"
+      coverage: "Premium VC data — free news section surfaces deals"
+      priority: medium
+      filter_tags: ["funding-data"]
+    - name: "SeedTable"
+      site: "seedtable.com"
+      coverage: "European startup database — fintech, AI, consumer"
+      priority: high
+      filter_tags: ["European"]
+    - name: "Startups.com / The Org"
+      site: "theorg.com"
+      coverage: "Org charts and founding teams — useful for team_signal scoring"
+      priority: medium
+      filter_tags: ["team-data"]
+    - name: "Startups Magazine"
+      site: "startupsmagazine.co.uk"
+      coverage: "UK/European startup directory & news"
+      priority: medium
+      filter_tags: ["UK", "European"]
+    - name: "EU-Startups Database"
+      site: "eu-startups.com"
+      url: "https://www.eu-startups.com/directory/"
+      coverage: "European startup directory (companion to the press site)"
+      priority: high
+      filter_tags: ["European"]
+    - name: "Sifted Startup Tracker"
+      site: "sifted.eu"
+      url: "https://sifted.eu/companies"
+      coverage: "Sifted's curated European company database"
+      priority: high
+      filter_tags: ["European"]
+    - name: "AngelMatch"
+      site: "angelmatch.com"
+      coverage: "Pre-seed angel investor / founder matching"
+      priority: low
+      filter_tags: ["pre-seed"]
+    - name: "StartupBlink"
+      site: "startupblink.com"
+      coverage: "Global startup ecosystem rankings — geography signal"
+      priority: low
+      filter_tags: ["geography"]
+
+  # Hard crypto exclusion — query-level keywords (appended to queries) AND
+  # post-filter chain-name list (applied to results since Solana/Base/etc.
+  # don't always say "crypto" in their description).
   crypto_exclusion_terms: "-crypto -DeFi -blockchain -web3 -NFT -token"
+  chain_exclusion_terms:
+    # Layer-1 chains
+    - "solana"
+    - "ethereum"
+    - "polygon"
+    - "avalanche"
+    - "cardano"
+    - "polkadot"
+    - "cosmos"
+    - "near protocol"
+    - "aptos"
+    - "sui"
+    - "tezos"
+    - "algorand"
+    # L2 / rollups
+    - "arbitrum"
+    - "optimism"
+    - "base network"
+    - "starknet"
+    - "zksync"
+    - "scroll"
+    - "linea"
+    # Generic chain idioms
+    - "onchain"
+    - "on-chain"
+    - "smart contract"
+    - "tokenomics"
+    - "liquidity pool"
+    - "L2 rollup"
+    - "stablecoin"
+  # Apply chain_exclusion_terms by checking each candidate's title + description;
+  # if any term appears (case-insensitive) AND gap has crypto_exclusion: true,
+  # drop the candidate before profiling.
+
+  # Hard signal-quality filters — applied BEFORE profiling, not as score deductions.
+  signal_quality_filters:
+    max_round_size_usd: 50_000_000          # signals >$50M raise are out of stage scope
+    max_signal_age_days: 90                  # if the source article is >90 days old, skip
+    min_round_size_usd: 250_000              # under $250k = friends-and-family, too thin
+    require_named_lead_investor: false       # advisory; some early signals lack a named lead
 
   # Global novelty antipatterns — reject ANY query result matching these
   global_novelty_antipatterns:
