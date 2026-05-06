@@ -324,6 +324,44 @@ footer p {
 
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
+    <span class="entry-date">2026-05-07</span>
+    <span class="entry-badge badge-system">Pipeline UI</span>
+    <span class="entry-source">pipeline.html — keyword search</span>
+  </div>
+  <div class="entry-title">Pipeline gets a keyword search bar — live filter across every visible card field, ANDs cleanly with the existing state and team filters</div>
+  <div class="entry-body">
+    <p><strong>What was added:</strong> A pill-shaped search bar above the existing filter row on the Pipeline page. Live (no-debounce) substring filter across the full searchable surface of each card: name, slug, one-liner, gap, stage, geo, FinServ signal, people, "Why this matters" thesis, team labels, and evidence sources. Multi-term queries AND together — typing <code>RIA seed</code> finds startups where both terms appear anywhere on the card.</p>
+    <p><strong>How it composes:</strong> Search ANDs with the existing All / Rated / Unrated / Follow Up / Archived state filters and the Research / Studio / Greens team pills. The "82 candidates" badge swaps to "X of 82 match" while a query is active; a match count also surfaces inside the search bar itself. An empty state ("No matches — Nothing in the pipeline matches…") shows when nothing hits.</p>
+    <p><strong>Keyboard:</strong> <code>/</code> from anywhere on the page focuses the search input. <code>Esc</code> clears. The <code>×</code> button clears too. Standard plumbing — no surprises.</p>
+    <p><strong>Why it matters:</strong> With 80+ cards in the pipeline and the count growing every cycle, the team / state filters alone weren't enough to find a specific company or theme quickly. Searching <code>MCP</code>, <code>tax-loss</code>, <code>RIA</code>, <code>Stripe</code>, or <code>compliance</code> now jumps straight to the matching cards regardless of which gap they sit in.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    UPDATED: pipeline.html (added .search-bar / .search-empty CSS, search input HTML above the filter row, searchQuery state, setSearch/wireSearch handlers, search-aware applyFilter() and updateFilterCounts(), card.dataset.search blob populated at render time). UPDATED: how-it-works/index.html (Section 06 — The Pipeline now mentions keyword search alongside the existing filter/vote/note/follow-up/archive surface).
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="thesis">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-07</span>
+    <span class="entry-badge badge-thesis">Research Hypothesis</span>
+    <span class="entry-source">research-team-hypothesis.md (extracted from thesis v2.9)</span>
+  </div>
+  <div class="entry-title">Research Team Hypothesis extracted into its own readable document — three sub-areas reframed in plainer voice, fluff cut</div>
+  <div class="entry-body">
+    <p><strong>What this is:</strong> The thesis (v2.9) packs the Research mandate into a single dense table-cell row alongside Studio and Greens, then promises "Research and Greens team hypotheses to follow in subsequent thesis updates." This is the first pass at that follow-up — a standalone, plain-prose extraction of what Research is actually scouting for, sitting at the repo root as <code>research-team-hypothesis.md</code>.</p>
+    <p><strong>The three sub-areas, reframed:</strong> (1) <strong>Novel takes on old investment mechanisms</strong> — established institutional products (options, derivatives, structured products, prediction-market mechanics) reimagined for retail or for buyers locked out by capital, complexity, or geography. Reference signals: Kalshi, Polymarket, Robinhood options UX, eToro copy-trading. (2) <strong>Forward-looking signals on where investing is going</strong> — new asset classes, new buyer behaviours, new advisor structures. AI-native RIAs (Astor / Era / Autonomous), AI-native advisor platforms (Marloo), behavioural-coaching wealth platforms, frontier-model and academic partners on regulated-environment research. The test: if this exists at scale in 10 years, does the picture of who manages money look meaningfully different? (3) <strong>Turning previously-uninvestable things into investable surfaces</strong> — tokenization and fractionalization as compliant infrastructure for assets that have historically been off-limits to retail (real estate, PE, collectibles, IP rights, royalties, litigation finance, life settlements, music IP). Reference signals: Securitize, Republic, Rally, TYTL, Willow Wealth, Moonfare. Full-stack coverage (issuance + custody + secondary market) with a clear rights model scores highest.</p>
+    <p><strong>What was cut:</strong> The "forward-looking knowledge function" tagline. The cross-team comparison framing (only the 12–24-month horizon survives — that's the one useful piece). The "Consumer Behaviour & Market Analysis" sub-area as previously framed (weak title, vague description, claim that outputs feed Studio's three focus projects — which isn't actually how it works). The seven-row archetype table at the bottom — folded inline into each section so each archetype sits next to the framing it supports.</p>
+    <p><strong>Status:</strong> The standalone document is the canonical Research Hypothesis for now. Next thesis update can absorb it back into <code>config/thesis.md</code> as a proper section parallel to the Studio Hypothesis (v1.0, 2026-01-19), replacing the cramped Research row in the Three Teams table with a full section.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    NEW: research-team-hypothesis.md (repo root). SOURCE: config/thesis.md v2.9 — Research row of the Three Teams table (line 213) plus the v2.6 changelog entry where the three sub-areas were originally consolidated. Pending: full integration as a §3-equivalent section inside config/thesis.md on the next thesis bump.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
     <span class="entry-date">2026-05-06</span>
     <span class="entry-badge badge-system">Cycle 13 (PM)</span>
     <span class="entry-source">Full Phases 0–6 — second cycle of the day</span>
