@@ -1,14 +1,14 @@
 {
   "_schema_version": "1.0",
-  "_last_updated": "2026-05-05",
-  "_seeded_in": "search-terms v4.7; calibration update v4.8",
-  "search_terms_version": "5.0",
-  "search_terms_generated": "2026-05-05",
+  "_last_updated": "2026-05-07",
+  "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06)",
+  "search_terms_version": "5.5",
+  "search_terms_generated": "2026-05-06",
   "search_terms_source": "config/thesis-schema.yaml v1.0",
-  "thesis_hash": "e1a0c83ca658c2249018fcb9091ae6d4132c41ae75e5d4b3ec2c31ce3f26c4e9",
+  "thesis_hash": "154021c7ef0cdd252e962e20bb18020d208bfa295971070ba6c2268bd7c35b59",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
-  "cycle": 9,
-  "cycle_completed_at": "2026-04-29",
+  "cycle": 14,
+  "cycle_completed_at": null,
   "team_coverage": {
     "Greens": {
       "card_count": 63,
@@ -219,12 +219,8 @@
     "Greens \u2014 Specialist agent desert: S3, S5, S6, S7, S9, S10 all empty (cycle 10 should focus accelerator-batch sweeps and reverse-archetype queries against Vise / Sequence Markets / Public.com / eToro)",
     "Multilingual European queries: first run scheduled \u2014 German/French/Spanish/Italian/Portuguese (v4.7 block)"
   ],
-  "high_yield_queries": [
-    "_pending_calibration_after_3_cycles"
-  ],
-  "quarantined_queries": [
-    "_none_yet"
-  ],
+  "high_yield_queries": [],
+  "quarantined_queries": [],
   "infrastructure_notes": {
     "vote_pipeline": "Turso (libSQL) \u2014 bg-votes-dpowert2.aws-eu-west-1.turso.io. Migrated from Supabase 2026-04-29.",
     "preference_model_status": "Live as of 2026-04-29. Re-engagement scheduled for cycle 10 \u2014 process votes since 2026-04-15 and refresh Hard Filter list.",
@@ -276,11 +272,80 @@
         "rejected": 1
       },
       "meeting_arranged_or_outreach": 31
+    },
+    {
+      "timestamp": "2026-05-06T09:49:31.838270Z",
+      "live_pipeline": 104,
+      "voted": 73,
+      "stars": {
+        "5": 19,
+        "4": 9,
+        "3": 8,
+        "2": 15,
+        "1": 22
+      },
+      "with_notes": 65,
+      "follow_up_flagged": 29,
+      "archived_by_user": 36,
+      "kanban": {
+        "followup": 0,
+        "contacted": 3,
+        "talked_to": 6,
+        "accepted": 3,
+        "rejected": 1
+      },
+      "meeting_arranged_or_outreach": 38
+    },
+    {
+      "timestamp": "2026-05-06T10:00:13.929835Z",
+      "live_pipeline": 104,
+      "voted": 73,
+      "stars": {
+        "5": 19,
+        "4": 9,
+        "3": 8,
+        "2": 15,
+        "1": 22
+      },
+      "with_notes": 65,
+      "follow_up_flagged": 29,
+      "archived_by_user": 36,
+      "kanban": {
+        "followup": 0,
+        "contacted": 3,
+        "talked_to": 6,
+        "accepted": 3,
+        "rejected": 1
+      },
+      "meeting_arranged_or_outreach": 38
+    },
+    {
+      "timestamp": "2026-05-06T23:45:49.523316Z",
+      "live_pipeline": 107,
+      "voted": 73,
+      "stars": {
+        "5": 19,
+        "4": 9,
+        "3": 8,
+        "2": 15,
+        "1": 22
+      },
+      "with_notes": 65,
+      "follow_up_flagged": 29,
+      "archived_by_user": 36,
+      "kanban": {
+        "followup": 0,
+        "contacted": 3,
+        "talked_to": 6,
+        "accepted": 3,
+        "rejected": 1
+      },
+      "meeting_arranged_or_outreach": 38
     }
   ],
   "latest_funnel": {
-    "timestamp": "2026-05-01T14:05:54.539515Z",
-    "live_pipeline": 100,
+    "timestamp": "2026-05-06T23:45:49.523316Z",
+    "live_pipeline": 107,
     "voted": 73,
     "stars": {
       "5": 19,
@@ -289,16 +354,105 @@
       "2": 15,
       "1": 22
     },
-    "with_notes": 63,
-    "follow_up_flagged": 24,
+    "with_notes": 65,
+    "follow_up_flagged": 29,
     "archived_by_user": 36,
     "kanban": {
       "followup": 0,
       "contacted": 3,
-      "talked_to": 4,
-      "accepted": 0,
+      "talked_to": 6,
+      "accepted": 3,
       "rejected": 1
     },
-    "meeting_arranged_or_outreach": 31
-  }
+    "meeting_arranged_or_outreach": 38
+  },
+  "query_blocks": {
+    "S-FRONT_layer1b_sifted": {
+      "first_added": "2026-05-06",
+      "hit_count": 3,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "S-FRONT_layer1b_mamstartup": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "S-FRONT_layer1b_therecursive": {
+      "first_added": "2026-05-06",
+      "hit_count": 3,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "S-FRONT_layer1b_150sec": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "S-FRONT_layer4e_dealroom": {
+      "first_added": "2026-05-06",
+      "hit_count": 2,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "S-FRONT_layer4e_wellfound": {
+      "first_added": "2026-05-06",
+      "hit_count": 1,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "S-FRONT_layer4b_inovo_vc": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "S-FRONT_layer4b_karma_vc": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "S-FRONT_layer4b_credo_ventures": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "S6_layer3_github_mcp": {
+      "first_added": "2026-05-06",
+      "hit_count": 4,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "portfolio_risk_layer3_github_mcp_stars10": {
+      "first_added": "2026-05-06",
+      "hit_count": 0,
+      "empty_run_streak": 1,
+      "status": "active"
+    },
+    "execution_layer3_github_mcp": {
+      "first_added": "2026-05-06",
+      "hit_count": 1,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    },
+    "S-AML_layer3_github_mcp": {
+      "first_added": "2026-05-06",
+      "hit_count": 1,
+      "empty_run_streak": 0,
+      "status": "active",
+      "last_hit": "2026-05-06"
+    }
+  },
+  "regen_pending": true,
+  "regen_pending_reason": "Thesis bumped v2.9 \u2192 v3.0 \u2192 v3.1 in cycle 14 (structural cleanup + Phase 4 blind-spot protocol + schema audience_archetype upgrade). schema-v1.0 is now schema-v1.1 in spirit; bg-search-terms.md v5.5 was generated against the prior schema and prior thesis. Full regen required when generate-search-terms skill is next invoked. Until then, Phase 4 follows task-prompts/radar-phase-4-blind-spot-protocol.md for blind-spot cells (this is the documented bypass)."
 }
