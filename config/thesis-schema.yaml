@@ -1,0 +1,1409 @@
+# Bene Gesserit — Thesis Schema
+# Machine-readable encoding of every gap definition.
+# This file is the single source of truth for search term generation.
+# DO NOT edit bg-search-terms.md directly — regenerate it via the generate-search-terms skill.
+#
+# Schema version: 1.0 | Last updated: 2026-05-05
+# Thesis version this tracks: 2.8
+#
+# Field definitions:
+#   id                        Gap identifier (S = specialist agent, P = platform, R = research)
+#   name                      Human-readable gap name
+#   team                      greens | studio | research | cross-team
+#   thesis_anchor             One-sentence definition of what this gap IS (institutional framing)
+#   target_company_shape      What the ideal startup looks like (size, model, market position)
+#   institutional_vocabulary  How analysts, press, and VCs describe this space
+#   founder_vocabulary        How founders describe this BEFORE they have press coverage
+#                             (Product Hunt pitch, Show HN title, GitHub repo description)
+#   technical_vocabulary      Terms found in GitHub repos, npm/pypi packages, API docs
+#   community_vocabulary      Terms found in accelerator batches, HN, r/MachineLearning, etc.
+#   reference_archetypes      Companies already in pipeline that define "what good looks like"
+#   anti_archetypes           Companies or framings that FAIL the gate (with reason)
+#   stage_gate                min/max funding stage accepted
+#   geo_preference            europe-first | global | us-ok
+#   specialist_bonus          BG Score bonus points for this gap
+#   gap_status                filled | partial | empty | market-gap
+#   crypto_exclusion          true = append "-crypto -DeFi -blockchain -web3" to all queries
+#   third_party_qualifier     true = must serve external/third-party agents, not internal staff
+#   novelty_signals           Phrases that indicate genuinely novel framing for this space
+#   novelty_antipatterns      Phrases that trigger the Novelty Gate rejection
+
+thesis_version: "2.8"
+schema_version: "1.0"
+generated_date: "2026-05-05"
+
+# ─────────────────────────────────────────────────────────
+# SPECIALIST AGENTS — The Apps
+# ─────────────────────────────────────────────────────────
+
+gaps:
+
+  - id: S-FRONT
+    name: "Personal Financial Agent"
+    team: cross-team
+    thesis_anchor: >
+      The front door. Understands the customer's goals, translates intent into action,
+      orchestrates the conversation across all specialist agents. Covers idea generation,
+      behavioural coaching, and financial planning overlay (stages 1, 13, 14).
+    target_company_shape: >
+      Consumer or B2B2C. API-first or agent-first. Regulatory-aware (FCA/SEC registered or
+      seeking registration). NOT a robo-advisor rebrand. NOT a chatbot wrapper over a static
+      allocation model. European pre-seed to Series A.
+    institutional_vocabulary:
+      - "personal finance AI agent"
+      - "AI financial advisor startup"
+      - "wealth management agent"
+      - "AI financial planning platform"
+      - "consumer financial AI"
+      - "autonomous financial agent"
+    founder_vocabulary:
+      - "AI money manager"
+      - "your AI financial advisor"
+      - "personal CFO agent"
+      - "agent for your finances"
+      - "financial agent API"
+      - "money agent"
+      - "financial planning agent"
+    technical_vocabulary:
+      - "financial agent SDK"
+      - "personal finance MCP"
+      - "wealth agent framework"
+      - "financial planning LLM"
+    community_vocabulary:
+      - "personal finance AI"
+      - "AI advisor for retail investors"
+      - "democratise financial advice"
+      - "FCA regulated AI"
+      - "AI financial coach"
+    reference_archetypes:
+      - "Finley AI (London, FCA spotlight) — financial AI agent API"
+      - "Arta Finance ($92M) — Wealth as a Service reference architecture"
+    anti_archetypes:
+      - "Marloo 1★ — AI-native advisor platform = workflow management tool"
+      - "Addition Wealth 2★ — basic AI-assisted SaaS for employees"
+      - "Any 'robo-advisor 2.0' framing"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 10
+    gap_status: partial
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals:
+      - "orchestrates multiple agents on your behalf"
+      - "agent-callable financial API"
+      - "intent-to-execution for retail"
+    novelty_antipatterns:
+      - "AI-powered financial planning app"
+      - "robo-advisor with AI"
+      - "chatbot for budgeting"
+
+  - id: S1
+    name: "Research & Signal Intelligence"
+    team: greens
+    thesis_anchor: >
+      Alternative data, earnings analysis, sector research, catalyst identification,
+      sentiment analysis, institutional flow tracking. The knowledge layer that generates
+      investment ideas and validates theses. Must be exposed as agent-callable endpoints,
+      not dashboard-only. Covers investment process stages 1, 2, 3.
+    target_company_shape: >
+      B2B, API-first. Alternative data vendor building for the agentic era — MCP server
+      or agent-callable API is a strong positive signal. 2–15 person team. Finserv DNA.
+      NOT a research dashboard. NOT a data aggregator without an API layer.
+    institutional_vocabulary:
+      - "alternative data startup fintech"
+      - "AI investment research platform"
+      - "financial signal intelligence startup"
+      - "earnings intelligence AI"
+      - "institutional alternative data API"
+      - "financial research agent"
+      - "AI analyst startup"
+    founder_vocabulary:
+      - "financial data MCP server"
+      - "earnings intelligence API"
+      - "alternative data for AI agents"
+      - "stock signals API"
+      - "financial research SDK"
+      - "market intelligence agent"
+      - "investment signal tool"
+      - "financial data agent"
+    technical_vocabulary:
+      - "financial MCP server"
+      - "earnings data API python"
+      - "alternative data SDK"
+      - "market intelligence agent github"
+      - "financial signals npm"
+      - "investment research API"
+    community_vocabulary:
+      - "Show HN alternative data"
+      - "Product Hunt financial data API"
+      - "YC alternative data startup"
+      - "financial intelligence agent"
+      - "AI research assistant for investors"
+    reference_archetypes:
+      - "AgentSmyth (5★) — agent-callable research intelligence"
+      - "Serafis (5★) — EU financial research API"
+      - "Kimpton AI (5★) — alternative data agent"
+    anti_archetypes:
+      - "Bloomberg terminal replacement (incumbents win on distribution)"
+      - "Research dashboard without API layer"
+      - "General-purpose data aggregator"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 18
+    gap_status: filled
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "MCP server"
+      - "agent-callable"
+      - "alternative data API"
+      - "exposed as tool/function for agents"
+    novelty_antipatterns:
+      - "research dashboard"
+      - "AI-powered Bloomberg"
+      - "data aggregation platform"
+
+  - id: S2
+    name: "Portfolio Construction & Risk Agent"
+    team: greens
+    thesis_anchor: >
+      Concentration analysis, factor exposure, correlation modelling, scenario analysis,
+      position sizing, rebalancing triggers. Knows what you own and what adding or removing
+      a position does to the whole portfolio. Covers investment process stages 4, 5, 11.
+    target_company_shape: >
+      B2B, API-first. Portfolio analytics engine designed to be called by other agents,
+      not just displayed on a dashboard. Quantitative finance DNA. Could be a two-person
+      team building an SDK. European pre-seed to Series A.
+    institutional_vocabulary:
+      - "portfolio construction AI startup"
+      - "risk management AI agent"
+      - "factor analysis startup fintech"
+      - "portfolio optimisation agent"
+      - "AI quant risk platform"
+      - "portfolio risk API"
+    founder_vocabulary:
+      - "portfolio risk API"
+      - "risk engine for AI agents"
+      - "portfolio construction SDK"
+      - "factor exposure tool"
+      - "rebalancing agent"
+      - "portfolio analytics agent"
+      - "risk as a service"
+    technical_vocabulary:
+      - "portfolio optimisation python library"
+      - "risk engine API"
+      - "factor model SDK"
+      - "portfolio analytics github"
+      - "asset allocation agent"
+    community_vocabulary:
+      - "Show HN portfolio risk engine"
+      - "Product Hunt portfolio construction"
+      - "YC quant fintech"
+      - "AI portfolio manager startup"
+    reference_archetypes:
+      - "Cohesion (YC W26) — portfolio construction agent"
+    anti_archetypes:
+      - "Robo-advisor rebrands"
+      - "Dashboard-only risk tools"
+      - "Internal-use risk systems for funds"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 18
+    gap_status: partial
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "agent-callable risk engine"
+      - "portfolio impact in real time"
+      - "API-first factor model"
+    novelty_antipatterns:
+      - "portfolio management SaaS"
+      - "AI-powered robo-advisor"
+      - "risk workflow platform"
+
+  - id: S3
+    name: "Trade Structuring Agent"
+    team: greens
+    thesis_anchor: >
+      Equity vs options vs pairs vs ETFs. Account selection across taxable, IRA, Roth,
+      529. Structures the expression of a thesis for optimal risk/reward and tax efficiency.
+      Covers investment process stage 6.
+    target_company_shape: >
+      B2B, API-first. Quantitative finance + tax awareness. Could be a 2-person team
+      with deep options/derivatives knowledge. Must serve external agents/platforms,
+      not internal workflow. European or global pre-seed to Series A.
+    institutional_vocabulary:
+      - "trade structuring AI startup"
+      - "options strategy agent fintech"
+      - "account selection AI"
+      - "investment structure optimisation"
+      - "trade expression AI"
+    founder_vocabulary:
+      - "trade structure API"
+      - "options vs equity agent"
+      - "account allocation tool"
+      - "trade expression engine"
+      - "tax-aware trade structuring"
+      - "how to express a thesis API"
+    technical_vocabulary:
+      - "options pricing API"
+      - "trade structure SDK"
+      - "account selection algorithm"
+      - "options strategy github"
+    community_vocabulary:
+      - "Show HN trade structuring"
+      - "options strategy AI"
+      - "intelligent account selection"
+      - "tax-aware execution startup"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Options education platforms (no agent layer)"
+      - "Trade execution tools (that's S6)"
+      - "Internal order management systems"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 15
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "agent decides HOW to express the thesis"
+      - "multi-account tax-aware structuring"
+      - "options vs equity decision engine"
+    novelty_antipatterns:
+      - "options trading platform"
+      - "trade management system"
+      - "order management workflow"
+
+  - id: S4
+    name: "Tax Optimisation Agent"
+    team: studio
+    thesis_anchor: >
+      Lot-level tax-loss harvesting, gain deferral, asset location optimisation,
+      wash sale prevention, Roth conversion analysis. Operates on the live portfolio
+      in real time across all account types. NOT tax filing. Portfolio-integrated,
+      continuous, and agent-callable. Covers investment process stage 7.
+    target_company_shape: >
+      B2B or B2B2C. API-first. Deep tax-lot accounting + agent architecture.
+      Could be a small team with ex-Vanguard, ex-Fidelity, or tax-tech DNA.
+      The "accountant in your pocket" archetype. US-focused due to complexity.
+      Pre-seed to Series A.
+    institutional_vocabulary:
+      - "tax loss harvesting AI startup"
+      - "portfolio tax optimisation agent"
+      - "direct indexing tax agent"
+      - "tax aware portfolio management AI"
+      - "real time TLH startup"
+    founder_vocabulary:
+      - "TLH agent"
+      - "tax harvesting API"
+      - "lot-level tax engine"
+      - "portfolio tax agent"
+      - "intelligent tax lot selection"
+      - "wash sale prevention API"
+      - "tax-aware rebalancing agent"
+      - "accountant in your pocket"
+    technical_vocabulary:
+      - "tax lot optimisation python"
+      - "TLH engine API"
+      - "wash sale algorithm github"
+      - "tax aware portfolio SDK"
+      - "direct indexing API"
+    community_vocabulary:
+      - "Show HN tax loss harvesting"
+      - "Product Hunt tax optimisation"
+      - "direct indexing startup"
+      - "intelligent TLH"
+      - "YC tax fintech"
+    reference_archetypes:
+      - "Alomana (5★) — autonomous portfolio rebalancing + TLH"
+    anti_archetypes:
+      - "Juno 2★ — tax FILING, not tax intelligence"
+      - "Tax preparation software"
+      - "Accounting automation (different category)"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 12
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "portfolio-integrated tax intelligence"
+      - "real-time lot selection across accounts"
+      - "multi-account TLH engine"
+    novelty_antipatterns:
+      - "tax filing AI"
+      - "automated tax preparation"
+      - "bookkeeping AI"
+
+  - id: S5
+    name: "Options & Derivatives Strategy Agent"
+    team: greens
+    thesis_anchor: >
+      Covered calls for income, protective puts, spreads for defined risk, collar strategies,
+      volatility trading. Deep specialist knowledge that most retail investors can't access
+      today. Agent-callable, not just educational. Covers investment process stages 6, 10.
+    target_company_shape: >
+      B2B or B2B2C API. Deep options expertise. Could be ex-CBOE, ex-market-maker, or
+      quant with options DNA. Democratising institutional-grade derivatives access
+      via an agent-callable interface. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "options strategy AI startup"
+      - "derivatives intelligence agent fintech"
+      - "retail options AI platform"
+      - "covered call strategy agent"
+      - "volatility trading AI startup"
+    founder_vocabulary:
+      - "options strategy agent"
+      - "covered call generator API"
+      - "options flow API"
+      - "derivatives intelligence tool"
+      - "options screener API"
+      - "vol surface agent"
+      - "income generation agent"
+    technical_vocabulary:
+      - "options pricing python"
+      - "vol surface API"
+      - "options strategy SDK github"
+      - "derivatives agent"
+      - "options screener API"
+    community_vocabulary:
+      - "Show HN options strategy"
+      - "Product Hunt options AI"
+      - "retail derivatives startup"
+      - "AI options advisor"
+      - "volatility intelligence startup"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Options education platforms (no execution layer)"
+      - "Internal options risk tools for banks"
+      - "Crypto options platforms"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 15
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "options as agent-callable service"
+      - "democratising institutional derivatives"
+      - "retail income generation engine"
+    novelty_antipatterns:
+      - "options trading app"
+      - "derivatives SaaS"
+      - "options education platform"
+
+  - id: S6
+    name: "Execution Agent"
+    team: greens
+    thesis_anchor: >
+      Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart order
+      routing, slippage minimisation. Professional-grade execution for everyone.
+      Covers investment process stage 9.
+    target_company_shape: >
+      B2B, API-first execution infrastructure. Could be a team with ex-broker/exchange
+      DNA. Agent-callable execution layer. NOT an order management system for fund ops.
+      Must serve external agents and retail/wealth managers. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "algorithmic execution startup"
+      - "smart order routing AI"
+      - "execution quality AI fintech"
+      - "VWAP agent startup"
+      - "execution algorithm API"
+    founder_vocabulary:
+      - "execution agent API"
+      - "smart order router SDK"
+      - "VWAP engine API"
+      - "execution quality tool"
+      - "slippage minimisation agent"
+      - "trade execution SDK"
+    technical_vocabulary:
+      - "smart order routing python"
+      - "execution algorithm github"
+      - "VWAP implementation API"
+      - "order routing SDK"
+    community_vocabulary:
+      - "Show HN execution algorithm"
+      - "smart order routing startup"
+      - "execution quality AI"
+      - "algorithmic trading API startup"
+    reference_archetypes: []
+    anti_archetypes:
+      - "OMS (order management systems for fund ops)"
+      - "HFT firms (wrong stage/model)"
+      - "Exchange technology"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 15
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "execution as agent-callable service"
+      - "professional execution for retail agents"
+      - "dark pool access API"
+    novelty_antipatterns:
+      - "trading platform"
+      - "brokerage infrastructure"
+      - "OMS for fund operations"
+
+  - id: S7
+    name: "Position Monitoring & Thesis Tracking Agent"
+    team: greens
+    thesis_anchor: >
+      Continuous monitoring of thesis milestones, stop-loss/profit-target management,
+      catalyst tracking, earnings surprises, macro regime changes. Initiates new
+      conversations when conditions change. Covers investment process stage 10.
+    target_company_shape: >
+      B2B or B2B2C, API-first. Real-time event-driven architecture. Could be a 2-person
+      team. The "always watching" agent layer that reacts when the thesis breaks.
+      Agent-callable. NOT a portfolio monitoring dashboard. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "portfolio monitoring AI agent"
+      - "thesis tracking startup fintech"
+      - "position alert AI"
+      - "catalyst monitoring agent"
+      - "investment monitoring AI startup"
+    founder_vocabulary:
+      - "thesis monitoring agent"
+      - "position alert API"
+      - "catalyst tracker SDK"
+      - "portfolio watchdog agent"
+      - "earnings alert agent"
+      - "stop loss agent"
+      - "macro trigger API"
+    technical_vocabulary:
+      - "event-driven portfolio monitoring"
+      - "catalyst tracking API"
+      - "position monitor github"
+      - "thesis alert SDK"
+    community_vocabulary:
+      - "Show HN portfolio monitoring"
+      - "investment thesis tracker"
+      - "catalyst alert startup"
+      - "AI position monitor"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Portfolio management dashboards"
+      - "Watchlist tools without agent integration"
+      - "Internal surveillance tools for compliance"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "agent-driven thesis monitoring"
+      - "event-triggered agent conversation"
+      - "autonomous position watchdog"
+    novelty_antipatterns:
+      - "portfolio monitoring dashboard"
+      - "alert notification platform"
+      - "investment tracking app"
+
+  - id: S8
+    name: "Financial Planning Agent"
+    team: research
+    thesis_anchor: >
+      Goals-based planning, retirement projections, life event modelling, income generation
+      strategy, estate considerations. The long-term guardrail that prevents short-term
+      decisions from undermining the client's actual objectives. Covers stage 14.
+    target_company_shape: >
+      B2B2C or consumer. FCA/SEC aware. Agent-first architecture that orchestrates
+      with specialist agents upstream. NOT a generic financial planning app. NOT
+      an estate planning software rebrand. European pre-seed to Series A.
+    institutional_vocabulary:
+      - "financial planning AI agent"
+      - "goals based planning startup"
+      - "retirement planning AI fintech"
+      - "life event financial agent"
+      - "estate planning AI startup"
+    founder_vocabulary:
+      - "financial planning agent"
+      - "goals-based AI planner"
+      - "retirement agent"
+      - "life events financial API"
+      - "long-term wealth agent"
+      - "holistic financial agent"
+    technical_vocabulary:
+      - "retirement planning SDK"
+      - "financial planning API"
+      - "goals engine python"
+      - "life event modelling agent"
+    community_vocabulary:
+      - "Show HN financial planning agent"
+      - "Product Hunt retirement planning AI"
+      - "AI financial planner startup"
+      - "estate planning agent"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Generic budgeting apps"
+      - "Traditional financial planning software"
+      - "Estate planning admin tools"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: false
+    third_party_qualifier: false
+    novelty_signals:
+      - "agent-orchestrated financial planning"
+      - "life event triggered rebalancing"
+      - "holistic goals-based agent"
+    novelty_antipatterns:
+      - "financial planning software"
+      - "budgeting app with AI"
+      - "estate planning platform"
+
+  - id: S9
+    name: "Behavioural Coaching Agent"
+    team: research
+    thesis_anchor: >
+      Panic prevention, discipline enforcement, drawdown perspective, portfolio-consistent
+      decision support. The agent that stops you selling at the bottom. Behavioural
+      psychology applied to finance as an agent-callable service. Covers stage 13.
+    target_company_shape: >
+      B2B2C or consumer. Behavioural science + AI. Novel framing required — NOT a
+      wellness app, NOT a "financial mindfulness" tool. Must be directly tied to
+      investment decisions and portfolio behaviour. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "behavioural finance AI startup"
+      - "investor coaching AI"
+      - "behavioural coaching agent fintech"
+      - "panic selling prevention AI"
+      - "financial behaviour AI"
+    founder_vocabulary:
+      - "investor behaviour agent"
+      - "don't panic sell agent"
+      - "portfolio discipline AI"
+      - "behavioural nudge API for investors"
+      - "drawdown coaching agent"
+      - "investor psychology API"
+    technical_vocabulary:
+      - "behavioural finance API"
+      - "investor nudge SDK"
+      - "portfolio discipline agent"
+    community_vocabulary:
+      - "Show HN investor behaviour"
+      - "behavioural finance startup"
+      - "AI stops you panic selling"
+      - "investor coaching AI"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Generic wellness / mindfulness apps"
+      - "Financial education platforms"
+      - "Generic behavioural health apps"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 8
+    gap_status: empty
+    crypto_exclusion: false
+    third_party_qualifier: false
+    novelty_signals:
+      - "portfolio-integrated behaviour agent"
+      - "investment decision psychology engine"
+      - "real-time investor coaching API"
+    novelty_antipatterns:
+      - "financial wellness app"
+      - "mindfulness for investors"
+      - "financial literacy platform"
+
+  - id: S10
+    name: "Post-Trade Analysis & Learning Agent"
+    team: greens
+    thesis_anchor: >
+      Trade journaling, attribution analysis, pattern recognition across closed positions,
+      strategy refinement. The feedback loop that makes the entire agent ecosystem smarter
+      over time. Agent-callable, not a dashboard. Covers investment process stage 12.
+    target_company_shape: >
+      B2B or B2B2C, API-first. Analytics engine with learning loops. Could be a 2-person
+      team building attribution infrastructure. Agent-callable performance analytics.
+      Pre-seed to Series A.
+    institutional_vocabulary:
+      - "post-trade analytics AI startup"
+      - "trade attribution AI fintech"
+      - "performance analytics agent"
+      - "investment learning system"
+      - "trade journal AI"
+    founder_vocabulary:
+      - "trade attribution API"
+      - "post-trade analytics agent"
+      - "investment journal agent"
+      - "performance learning loop"
+      - "trade pattern recognition API"
+      - "portfolio learning agent"
+    technical_vocabulary:
+      - "trade attribution python"
+      - "performance analytics API"
+      - "post-trade analysis github"
+      - "investment attribution SDK"
+    community_vocabulary:
+      - "Show HN trade journal"
+      - "post-trade analytics startup"
+      - "investment learning AI"
+      - "trade attribution startup"
+    reference_archetypes: []
+    anti_archetypes:
+      - "Dashboard-only performance analytics"
+      - "Fund administration systems"
+      - "Internal analytics for fund managers only"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 8
+    gap_status: empty
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "agent-callable performance attribution"
+      - "learning loop for investment agents"
+      - "autonomous trade journal"
+    novelty_antipatterns:
+      - "performance analytics dashboard"
+      - "trade reporting platform"
+      - "fund analytics SaaS"
+
+# ─────────────────────────────────────────────────────────
+# PLATFORM INFRASTRUCTURE — The Garden
+# ─────────────────────────────────────────────────────────
+
+  - id: P1
+    name: "Agent Orchestration"
+    team: greens
+    thesis_anchor: >
+      Routes conversations between agents, manages multi-agent workflows, enforces
+      execution order, governs agent-to-agent communication in a regulated context.
+      Platform infrastructure that makes the marketplace function.
+    target_company_shape: >
+      B2B, infrastructure layer. MCP-compatible preferred. Governance-native architecture
+      (not general-purpose LLM orchestration). Financial services DNA or finserv-specific
+      version. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "multi-agent orchestration startup"
+      - "AI agent workflow infrastructure"
+      - "agentic workflow platform fintech"
+      - "agent coordination layer"
+    founder_vocabulary:
+      - "multi-agent framework"
+      - "agent orchestration SDK"
+      - "agentic workflow engine"
+      - "agent router"
+      - "governed agent execution"
+      - "workflow for AI agents"
+    technical_vocabulary:
+      - "multi-agent orchestration github"
+      - "agent workflow SDK"
+      - "MCP compatible orchestrator"
+      - "agentic framework python"
+    community_vocabulary:
+      - "Show HN agent orchestration"
+      - "multi-agent framework startup"
+      - "YC agent infrastructure"
+    reference_archetypes:
+      - "Jentic (Dublin, pre-seed $4.5M, BG Score 95) — Arazzo workflows, governed execution"
+    anti_archetypes:
+      - "General enterprise workflow automation (not agent-specific)"
+      - "Internal-only orchestration tools"
+      - "Sycamore 1★ — trusted agent OS = internal workflow tool"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 0
+    gap_status: filled
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "governed multi-agent execution"
+      - "compliance-aware orchestration"
+      - "finserv-specific agent workflows"
+    novelty_antipatterns:
+      - "enterprise workflow automation"
+      - "AI operating system"
+      - "agent OS platform"
+
+  - id: P2
+    name: "AI Safety & Guardrails"
+    team: greens
+    thesis_anchor: >
+      Supervises agent behaviour, prevents hallucination, enforces boundaries, detects
+      anomalous or harmful agent actions in real time. Agent-level safety, NOT AI model
+      interpretability or model safety. The referee for the marketplace.
+    target_company_shape: >
+      B2B, infrastructure. Security/safety DNA. Must operate at the AGENT level
+      (runtime supervision), not the MODEL level (AI interpretability). Finserv or
+      regulated-industry focus preferred. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI agent safety startup"
+      - "AI guardrails platform fintech"
+      - "agentic security startup"
+      - "agent behaviour monitoring"
+      - "LLM safety runtime"
+    founder_vocabulary:
+      - "agent guardrails SDK"
+      - "AI safety runtime"
+      - "agent behaviour monitor"
+      - "hallucination prevention API"
+      - "agent policy enforcement"
+      - "AI safety layer for agents"
+    technical_vocabulary:
+      - "agent safety SDK github"
+      - "guardrails python"
+      - "agent policy enforcement API"
+      - "runtime safety layer"
+    community_vocabulary:
+      - "Show HN agent safety"
+      - "AI guardrails startup"
+      - "agentic security startup"
+      - "agent runtime security"
+    reference_archetypes:
+      - "Manifold (5★ 'Similar to Geordie') — agent safety"
+      - "Kai (4★) — partial coverage"
+      - "Keycard (5★) — 'Novel and love the agentic security angle'"
+      - "Resistant-AI (5★) — novel agent security framing"
+    anti_archetypes:
+      - "Mindgard 2★ — AI model safety, NOT agent safety"
+      - "Goodfire 2★ — AI interpretability layer, not agent-level"
+      - "Generic cybersecurity platforms"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "agent-level runtime safety"
+      - "supervises agent actions not model weights"
+      - "agentic security layer"
+    novelty_antipatterns:
+      - "AI model interpretability"
+      - "LLM safety training"
+      - "AI content moderation"
+
+  - id: P3
+    name: "Pre-Trade Compliance Agent"
+    team: greens
+    thesis_anchor: >
+      The gate. Checks suitability, concentration limits, restricted lists, best execution
+      obligations before any agent-initiated trade executes. The governance layer for every
+      agentic brokerage — including the app store. Nobody is building this. Genuine market gap.
+    target_company_shape: >
+      B2B, infrastructure for brokerages and wealth platforms. Compliance DNA (ex-FCA,
+      ex-SEC, ex-FINRA, ex-MiFID II). Pre-trade, not post-trade. API-first so agents
+      can call it as a gate before execution. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "pre-trade compliance AI startup"
+      - "suitability check AI fintech"
+      - "compliance gate for AI agents"
+      - "best execution AI"
+      - "MiFID compliance agent"
+      - "agent pre-trade gate"
+      - "regulatory compliance API"
+    founder_vocabulary:
+      - "pre-trade compliance API"
+      - "suitability check agent"
+      - "compliance gate API"
+      - "trade suitability engine"
+      - "regulatory check before execution"
+      - "compliance middleware for agents"
+      - "agent compliance layer"
+    technical_vocabulary:
+      - "pre-trade compliance API"
+      - "suitability check SDK"
+      - "compliance gate github"
+      - "MiFID II compliance API"
+      - "trade eligibility engine"
+    community_vocabulary:
+      - "Show HN pre-trade compliance"
+      - "compliance API for brokerages"
+      - "MiFID compliance startup"
+      - "agentic brokerage compliance"
+      - "suitability check startup"
+    reference_archetypes:
+      - "Hadrius (YC) — SEC/FINRA native compliance (closest signal)"
+    anti_archetypes:
+      - "Post-trade reporting tools"
+      - "KYC/AML platforms (different gate)"
+      - "Internal compliance management for fund ops"
+      - "Vivox-ai (KYC/AML framing missed the target)"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 20
+    gap_status: market-gap
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "pre-trade gate for AI agents"
+      - "suitability check as agent-callable API"
+      - "compliance layer between agent decision and execution"
+    novelty_antipatterns:
+      - "compliance management platform"
+      - "KYC automation"
+      - "post-trade reporting"
+
+  - id: P4
+    name: "Agent Authentication & Identity (KYA)"
+    team: greens
+    thesis_anchor: >
+      Know Your Agent. Every agent in the garden must be certified, permissioned, and
+      accountable. KYC redesigned for non-human actors. The app store's admission system.
+      Identity delegation, secrets management, and agent permissioning for financial services.
+    target_company_shape: >
+      B2B, infrastructure. Security/identity DNA. Must be finserv-specific — horizontal
+      identity platforms (Okta, Composio) don't meet the bar. IETF agent-auth draft
+      awareness preferred. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI agent identity startup"
+      - "Know Your Agent platform"
+      - "agent authentication fintech"
+      - "non-human identity finserv"
+      - "agent permissioning platform"
+      - "agent KYC startup"
+    founder_vocabulary:
+      - "agent identity API"
+      - "KYA platform"
+      - "non-human identity SDK"
+      - "agent auth SDK"
+      - "agent permissions manager"
+      - "identity for AI agents"
+      - "agent credential manager"
+    technical_vocabulary:
+      - "agent authentication github"
+      - "non-human identity API"
+      - "agent auth SDK"
+      - "IETF agent auth implementation"
+      - "agent secrets management"
+    community_vocabulary:
+      - "Show HN agent authentication"
+      - "identity for AI agents startup"
+      - "Know Your Agent platform"
+      - "non-human identity fintech"
+    reference_archetypes:
+      - "Vouched (5★, KYA platform) — agent authentication"
+    anti_archetypes:
+      - "Horizontal identity platforms (Okta etc)"
+      - "General API key management"
+      - "Human KYC platforms"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 15
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "KYA — Know Your Agent"
+      - "identity for non-human actors in finance"
+      - "agent certification system"
+    novelty_antipatterns:
+      - "KYC platform"
+      - "identity verification SaaS"
+      - "API key management"
+
+  - id: P5
+    name: "Audit & Explainability"
+    team: greens
+    thesis_anchor: >
+      Records every agent conversation and decision. "Why did the agent recommend this?"
+      must be answerable for regulators and customers. Auditable, regulator-ready
+      explanation of agent-driven financial decisions. The marketplace's transparency layer.
+    target_company_shape: >
+      B2B, infrastructure for regulated institutions. Regulatory-grade audit trail.
+      Finserv DNA or regulatory focus. NOT generic AI observability (Langsmith etc).
+      The key distinction: can generate a regulator-readable explanation, not just a log.
+      Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI audit trail fintech startup"
+      - "explainable AI finserv"
+      - "agent explainability platform"
+      - "regulatory AI audit"
+      - "AI decision audit startup"
+    founder_vocabulary:
+      - "agent audit trail API"
+      - "AI explainability SDK"
+      - "why did the agent do this API"
+      - "audit log for AI agents"
+      - "regulator-ready explanation engine"
+      - "agent decision recorder"
+    technical_vocabulary:
+      - "agent audit SDK github"
+      - "explainability API fintech"
+      - "LLM audit trail"
+      - "agent decision log"
+    community_vocabulary:
+      - "Show HN AI audit trail"
+      - "agent explainability startup"
+      - "regulatory AI compliance"
+      - "AI decision explanation"
+    reference_archetypes:
+      - "Alinia (Barcelona, seed $7.5M, Mouro Capital) — backend compliance controller for AI"
+      - "ValidMind — closest signal (also tracked)"
+    anti_archetypes:
+      - "Generic AI observability (Langsmith, Weights & Biases)"
+      - "Model monitoring platforms"
+      - "Internal logging tools"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 15
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "regulator-ready agent explanation"
+      - "financial decision audit trail"
+      - "agent reasoning recorder"
+    novelty_antipatterns:
+      - "AI observability platform"
+      - "model monitoring SaaS"
+      - "general logging infrastructure"
+
+  - id: P6
+    name: "Dispute Resolution & Agent Liability"
+    team: greens
+    thesis_anchor: >
+      When an agent trade goes wrong, who pays? Insurance, certification, accountability
+      frameworks for agent-mediated financial harm. A new category of fintech infrastructure
+      invented by the emergence of agentic brokerages.
+    target_company_shape: >
+      B2B insurance or infrastructure. Insurance/legal + AI DNA. Novel framing required —
+      "insurer for the agent economy" archetype. Not a generic insurance company. Not
+      a legal workflow tool. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI agent liability insurance startup"
+      - "agent risk insurance fintech"
+      - "agentic commerce liability"
+      - "AI liability platform"
+      - "agent accountability framework"
+    founder_vocabulary:
+      - "insurance for AI agents"
+      - "agent liability API"
+      - "AI indemnification platform"
+      - "when the agent gets it wrong"
+      - "agent certification and insurance"
+      - "agentic risk coverage"
+    technical_vocabulary:
+      - "agent liability SDK"
+      - "AI insurance API"
+      - "agent indemnification platform"
+    community_vocabulary:
+      - "Show HN AI agent insurance"
+      - "liability for AI agents"
+      - "agent accountability startup"
+      - "insurer for agent economy"
+    reference_archetypes:
+      - "Mount Insurance (5★) — 'insurer for the agent economy'"
+      - "Klaimee (4★) — agent liability claims"
+      - "Armilla (Lloyds-backed) — tracked"
+      - "AIUC ($15M seed, Nat Friedman) — $500B market prediction"
+    anti_archetypes:
+      - "General insurance comparison platforms"
+      - "Legal workflow tools"
+      - "Compliance management platforms"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "insurer for the agent economy"
+      - "AI-agent-specific liability coverage"
+      - "dispute resolution for agentic transactions"
+    novelty_antipatterns:
+      - "insurance technology platform"
+      - "claims management SaaS"
+      - "legal risk management tool"
+
+  - id: P7
+    name: "Agent Monetisation"
+    team: greens
+    thesis_anchor: >
+      How each specialist agent gets paid in a marketplace model. Results-based billing,
+      revenue sharing, subscription models for agent-mediated services. The economic
+      infrastructure for the app store.
+    target_company_shape: >
+      B2B, payments/billing infrastructure. Payments DNA + AI. Must handle
+      results-based / usage-based billing for non-human actors. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI agent billing startup"
+      - "agent monetisation platform"
+      - "results-based billing AI"
+      - "agentic payments infrastructure"
+      - "usage-based AI billing"
+    founder_vocabulary:
+      - "billing for AI agents"
+      - "results-based AI payments"
+      - "agent usage billing API"
+      - "pay-per-result for agents"
+      - "AI agent revenue sharing"
+    technical_vocabulary:
+      - "agent billing SDK"
+      - "usage based billing API"
+      - "results based payments github"
+    community_vocabulary:
+      - "Show HN agent billing"
+      - "monetise your AI agent"
+      - "agent marketplace billing"
+      - "pay-per-result startup"
+    reference_archetypes:
+      - "Paid AI (London, seed $33M) — results-based billing for AI agents"
+    anti_archetypes:
+      - "General SaaS billing platforms"
+      - "Payment gateways"
+      - "Subscription management tools"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: true
+    novelty_signals:
+      - "billing model designed for non-human actors"
+      - "results-based compensation for agents"
+      - "agent marketplace economics"
+    novelty_antipatterns:
+      - "SaaS billing platform"
+      - "subscription management"
+      - "payment processing"
+
+  - id: P8
+    name: "Agent Payment Rails"
+    team: greens
+    thesis_anchor: >
+      Escrow, intent verification, dispute resolution for agent-initiated financial
+      transactions. The settlement infrastructure for agent-mediated commerce and investment.
+    target_company_shape: >
+      B2B, payments infrastructure. Not a consumer payments app. Agent-specific design —
+      must handle non-human transaction initiation, escrow, and intent verification.
+      Pre-seed to Series A.
+    institutional_vocabulary:
+      - "agent payment infrastructure startup"
+      - "agentic transaction rails"
+      - "AI agent payments fintech"
+      - "agent escrow platform"
+      - "non-human payment rails"
+    founder_vocabulary:
+      - "payments for AI agents"
+      - "agent transaction API"
+      - "agent escrow SDK"
+      - "intent verification for agents"
+      - "agentic payment rail"
+      - "agent-initiated payments"
+    technical_vocabulary:
+      - "agent payment SDK github"
+      - "agentic transaction API"
+      - "agent escrow implementation"
+    community_vocabulary:
+      - "Show HN agent payments"
+      - "payments infrastructure for AI agents"
+      - "agent transaction startup"
+    reference_archetypes:
+      - "Nava (5★) — agent escrow"
+      - "Natural (4★) — agent payment rails"
+    anti_archetypes:
+      - "Consumer payment apps"
+      - "General payment gateways"
+      - "Crypto payment rails"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: europe-first
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals:
+      - "payment rails designed for non-human actors"
+      - "agent-initiated transaction infrastructure"
+      - "escrow for AI agent transactions"
+    novelty_antipatterns:
+      - "payment processing platform"
+      - "fintech payments app"
+      - "money transfer service"
+
+# ─────────────────────────────────────────────────────────
+# RESEARCH TEAM — Investable Everything & Wealth Reinvention
+# ─────────────────────────────────────────────────────────
+
+  - id: R1
+    name: "Product Inversion / Retail Derivatives"
+    team: research
+    thesis_anchor: >
+      Democratising access to financial products through Product Inversion — reimagining
+      derivatives, options, structured products, and prediction-market mechanics for
+      retail. Not simplifying them; reinventing the product form so it's native to retail.
+    target_company_shape: >
+      B2C or B2B2C. Novel product form required. Consumer fintech DNA. The Robinhood-meets-
+      TikTok model for derivatives. Prediction markets, structured payoffs, mass-market
+      access to instruments previously restricted to institutions. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "retail derivatives startup"
+      - "prediction market startup"
+      - "retail structured products fintech"
+      - "democratised options platform"
+      - "mass market derivatives"
+    founder_vocabulary:
+      - "prediction market app"
+      - "options for everyone"
+      - "retail derivatives app"
+      - "structured products for retail"
+      - "bet on anything financial"
+      - "mass-market prediction"
+    technical_vocabulary:
+      - "prediction market API"
+      - "derivatives for retail github"
+      - "structured payoff engine"
+    community_vocabulary:
+      - "Show HN prediction market"
+      - "Kalshi Polymarket competitor"
+      - "retail derivatives startup"
+      - "democratise options"
+    reference_archetypes:
+      - "Versus (5★) — mass-market prediction app, Robinhood-meets-TikTok"
+      - "Kalshi / Polymarket archetype"
+    anti_archetypes:
+      - "Options education platforms"
+      - "Traditional retail brokerage"
+      - "Crypto prediction markets"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals:
+      - "new product form for retail access to derivatives"
+      - "prediction market mechanic for investing"
+      - "structured payoff reinvented for mass market"
+    novelty_antipatterns:
+      - "options trading education"
+      - "retail brokerage with options"
+      - "trading app"
+
+  - id: R2
+    name: "Tokenization & Fractionalization"
+    team: research
+    thesis_anchor: >
+      Compliant, rights-clear infrastructure for previously illiquid assets — real estate,
+      private equity, collectibles, IP rights. Full-stack tokenization (Securitize/Republic/
+      Rally archetype). NOT crypto speculation. Fractionalization as democratisation.
+    target_company_shape: >
+      B2C or B2B2C. Regulatory compliant from day one. Novel asset class access.
+      Full-stack — not just the token infrastructure, but the rights framework and
+      secondary market. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "real estate tokenization startup"
+      - "asset tokenization platform"
+      - "fractionalized investment startup"
+      - "illiquid asset fractionalization"
+      - "tokenized private equity"
+    founder_vocabulary:
+      - "own a piece of anything"
+      - "fractional ownership app"
+      - "tokenized real estate"
+      - "fractional investing platform"
+      - "alternative asset access"
+      - "illiquid assets for retail"
+    technical_vocabulary:
+      - "asset tokenization github"
+      - "fractionalization SDK"
+      - "tokenized securities API"
+      - "real estate token protocol"
+    community_vocabulary:
+      - "Show HN asset tokenization"
+      - "fractional real estate startup"
+      - "tokenized private markets"
+      - "retail access to alternatives"
+    reference_archetypes:
+      - "TYTL (5★) — tokenized residential RE, full-stack new asset surface"
+      - "Securitize / Republic / Rally archetype"
+    anti_archetypes:
+      - "Crypto/DeFi tokens (speculation framing)"
+      - "NFT platforms"
+      - "DAO governance tools"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals:
+      - "new asset class for retail"
+      - "rights-clear tokenization of previously illiquid assets"
+      - "fractionalization with secondary market"
+    novelty_antipatterns:
+      - "NFT marketplace"
+      - "crypto investment platform"
+      - "DeFi yield platform"
+
+  - id: R3
+    name: "Wealth Management Reinvention"
+    team: research
+    thesis_anchor: >
+      Anything that meaningfully reimagines wealth management or investing: AI-native RIAs
+      that bypass the human-advisor stack, family-office-as-a-service democratisation,
+      novel asset-class access for retail (royalties, litigation finance, life settlements,
+      music IP), holistic wealth-CPA-attorney stack replacement, behavioural-coaching
+      wealth platforms, retail private-market access. Criterion: a leap forward, not
+      an incremental advisor tool.
+    target_company_shape: >
+      B2C or B2B2C. Novelty required — must represent a leap forward from the usual.
+      AI-native from day one. Either new asset surface OR new user experience paradigm
+      OR new advisor model. NOT an advisor workflow tool. Pre-seed to Series A.
+    institutional_vocabulary:
+      - "AI-native RIA startup"
+      - "wealth management reinvention"
+      - "holistic wealth platform AI"
+      - "retail private markets access"
+      - "family office democratisation"
+    founder_vocabulary:
+      - "wealth management for everyone"
+      - "AI wealth manager"
+      - "family office OS for retail"
+      - "invest in music royalties"
+      - "retail private equity access"
+      - "holistic money platform"
+      - "full-stack wealth agent"
+    technical_vocabulary:
+      - "wealth management API"
+      - "RIA technology startup"
+      - "private markets access SDK"
+    community_vocabulary:
+      - "Show HN wealth management reinvention"
+      - "AI-native wealth manager"
+      - "retail alternative investments"
+      - "family office for everyone"
+    reference_archetypes:
+      - "Noise (5★ 'Love it') — attention market as new asset class"
+      - "Astor / Era / Autonomous — AI-native RIA archetype"
+      - "Willow Wealth / Moonfare — retail private markets"
+    anti_archetypes:
+      - "Asseta AI 1★ — SaaS tool for family offices, not novel"
+      - "Marloo 1★ — workflow management for advisors"
+      - "Addition Wealth 2★ — boring, done to death"
+      - "Any product described as 'AI for advisors'"
+    stage_gate:
+      min: pre-seed
+      max: series-a
+    geo_preference: global
+    specialist_bonus: 0
+    gap_status: partial
+    crypto_exclusion: false
+    third_party_qualifier: false
+    novelty_signals:
+      - "new asset class or asset surface"
+      - "bypass the traditional advisor model"
+      - "AI-native from day one"
+      - "democratise family-office capabilities"
+    novelty_antipatterns:
+      - "AI for wealth advisors"
+      - "advisor workflow tool"
+      - "robo-advisor with better UI"
+      - "family office management SaaS"
+
+# ─────────────────────────────────────────────────────────
+# GLOBAL SEARCH CONFIGURATION
+# Applied as additional constraints to ALL generated queries
+# ─────────────────────────────────────────────────────────
+
+global_config:
+
+  # Stage qualifiers appended to Layer 1 queries
+  stage_qualifiers:
+    - "seed startup"
+    - "pre-seed"
+    - "Series A"
+    - "YC"
+    - "EF cohort"
+    - "Antler"
+
+  # Geographic qualifiers appended to Europe-first queries
+  geo_qualifiers_eu:
+    - "Europe"
+    - "UK startup"
+    - "London"
+    - "Berlin"
+    - "Paris"
+    - "Amsterdam"
+    - "Dublin"
+    - "Barcelona"
+
+  # Accelerator sources for Layer 4 sweeps (run as batch, not inline)
+  accelerator_sources:
+    - name: "YC current batch"
+      url: "https://www.ycombinator.com/companies"
+      filter_tags: ["fintech", "finance", "AI"]
+    - name: "EF current cohort"
+      url: "https://www.joinef.com/companies"
+    - name: "Antler portfolio"
+      url: "https://www.antler.co/portfolio"
+    - name: "Mouro Capital portfolio"
+      url: "https://www.mourocapital.com/portfolio"
+    - name: "Plug and Play Fintech"
+      url: "https://www.plugandplaytechcenter.com"
+
+  # Product launch sources for Layer 2 queries
+  layer2_sources:
+    - "site:producthunt.com"
+    - "site:news.ycombinator.com 'Show HN'"
+
+  # Technical artifact sources for Layer 3 queries
+  layer3_sources:
+    - "site:github.com"
+
+  # Hard crypto exclusion terms (appended when gap has crypto_exclusion: true)
+  crypto_exclusion_terms: "-crypto -DeFi -blockchain -web3 -NFT -token"
+
+  # Global novelty antipatterns — reject ANY query result matching these
+  global_novelty_antipatterns:
+    - "operating system for"
+    - "workflow management for"
+    - "AI-assisted SaaS"
+    - "advisor OS"
+    - "family office OS"
+    - "broker OS"
+
+  # Global hard filter — internal workflow tools
+  global_hard_filter:
+    - "internal workflow"
+    - "back office"
+    - "advisor productivity"
+    - "fund operations"
+    - "portfolio administration"
