@@ -124,6 +124,25 @@
     .section-header h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.8rem; font-weight: 400; color: var(--text-heading); letter-spacing: -0.5px; }
     .section-header .count { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 500; color: var(--text-light); text-transform: uppercase; letter-spacing: 1.5px; }
 
+    /* Search bar */
+    .search-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding: 8px 14px 8px 16px; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 100px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .search-bar:focus-within { border-color: var(--brown); box-shadow: 0 0 0 3px rgba(139, 111, 84, 0.08); }
+    .search-bar .search-icon { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.6px; color: var(--text-light); flex-shrink: 0; }
+    .search-bar input { flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: var(--text); padding: 4px 0; }
+    .search-bar input::placeholder { color: var(--text-light); }
+    .search-bar .search-meta { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 500; color: var(--text-light); letter-spacing: 1px; flex-shrink: 0; }
+    .search-bar .search-clear { background: var(--bg); border: 1px solid var(--border); border-radius: 100px; width: 22px; height: 22px; padding: 0; display: none; align-items: center; justify-content: center; cursor: pointer; color: var(--text-muted); font-size: 0.85rem; line-height: 1; flex-shrink: 0; transition: all 0.2s; }
+    .search-bar .search-clear:hover { background: var(--brown-light); border-color: var(--brown); color: var(--brown-dark); }
+    .search-bar.has-query .search-clear { display: inline-flex; }
+    .search-bar .kbd { font-family: 'DM Mono', monospace; font-size: 0.58rem; font-weight: 500; color: var(--text-light); padding: 2px 6px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); flex-shrink: 0; }
+    .search-bar.has-query .kbd { display: none; }
+    .search-empty { display: none; padding: 28px 24px; margin-bottom: 16px; text-align: center; background: var(--bg-card); border: 1px dashed var(--border-strong); border-radius: 16px; }
+    .search-empty.show { display: block; }
+    .search-empty h4 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.2rem; color: var(--text-heading); margin-bottom: 4px; font-weight: 400; }
+    .search-empty p { font-size: 0.85rem; color: var(--text-muted); }
+    .search-empty p code { font-family: 'DM Mono', monospace; color: var(--brown-dark); background: var(--brown-light); padding: 1px 6px; border-radius: 4px; font-size: 0.82rem; }
+    .startup-card mark.search-hit { background: var(--amber-light); color: var(--amber); padding: 0 2px; border-radius: 3px; font-weight: 500; }
+
     .filter-bar { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
     .filter-btn { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 100px; background: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
     .filter-btn:hover { border-color: var(--brown); color: var(--brown); }
@@ -372,6 +391,19 @@
       <span class="count">82 candidates</span>
     </div>
 
+    <div class="search-bar" id="search-bar">
+      <span class="search-icon">⌕ Search</span>
+      <input type="search" id="search-input" placeholder="Name, gap, geo, team, thesis…" autocomplete="off" spellcheck="false" />
+      <span class="search-meta" id="search-meta"></span>
+      <span class="kbd" title="Press / to focus">/</span>
+      <button class="search-clear" id="search-clear" type="button" title="Clear search (Esc)" aria-label="Clear search">×</button>
+    </div>
+
+    <div class="search-empty" id="search-empty">
+      <h4>No matches</h4>
+      <p>Nothing in the pipeline matches <code id="search-empty-q"></code>. Try a shorter query or a different angle.</p>
+    </div>
+
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All <span class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="voted">Rated <span class="filter-count">0</span></button>
@@ -443,6 +475,13 @@ function renderPipelineCards() {
     card.dataset.gap = startup.gap;
     const teams = Array.isArray(startup.bgTeam) ? startup.bgTeam : [];
     card.dataset.team = teams.join(' ');
+    /* Populate searchable text — lowercased blob covering every visible card field plus slug */
+    const evidenceText = (startup.evidence || []).map(e => Array.isArray(e) ? e[0] : '').join(' ');
+    card.dataset.search = [
+      startup.name, startup.slug, startup.oneliner, startup.gap, startup.stage,
+      startup.geo, startup.finserv, startup.team, startup.thesis,
+      teams.join(' '), evidenceText
+    ].filter(Boolean).join(' ').toLowerCase();
     const teamChips = teams.map(t => `<span class="tag team team-${t.toLowerCase()}">${t}</span>`).join('');
     card.id = `startup-${startup.slug}`;
     card.innerHTML = `<div class="startup-top"><h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3><div class="score-badge ${scoreClass}"><span class="num">${startup.score}</span><span class="of">/100</span></div></div><p class="startup-oneliner">${startup.oneliner}</p><div class="startup-tags">${teamChips}<span class="tag gap">${startup.gap}</span><span class="tag stage">${startup.stage}</span><span class="tag geo">${(typeof flagFor==='function'?flagFor(startup.geo):'')} ${startup.geo}</span></div><div class="startup-details"><div class="detail-block"><div class="detail-label">FinServ Signal</div><div class="detail-value">${startup.finserv}</div></div><div class="detail-block"><div class="detail-label">Team</div><div class="detail-value">${startup.team}</div></div></div><div class="thesis-note"><div class="note-label">Why this matters</div><p>${startup.thesis}</p></div><div class="startup-evidence"><div class="evidence-label">Evidence</div><ul class="evidence-links">${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}</ul></div><div class="vote-row" data-slug="${startup.slug}"><div class="stars"><button class="star" data-val="1" title="1 star">★</button><button class="star" data-val="2" title="2 stars">★</button><button class="star" data-val="3" title="3 stars">★</button><button class="star" data-val="4" title="4 stars">★</button><button class="star" data-val="5" title="5 stars">★</button></div><button class="note-toggle">+ Add note</button><button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button><button class="archive-btn" title="Archive this startup">↓ Archive</button><span class="vote-status"></span><div class="note-area" hidden=""><textarea placeholder="Why this rating? What would need to change?"></textarea></div></div><div class="score-bars"><div class="bar-item"><span class="bar-label">Gap Fit</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span></div><div class="bar-item"><span class="bar-label">FinServ</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span></div><div class="bar-item"><span class="bar-label">Stage</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span></div><div class="bar-item"><span class="bar-label">Team</span><div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.team[0] / startup.bars.team[1] * 100).toFixed(1)}%"></div></div><span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span></div></div>`;
@@ -663,6 +702,38 @@ function toggleTeam(team) {
   applyFilter();
 }
 
+/* ── Search ─────────────────────────────────────────────────────── */
+let searchQuery = '';
+let searchTerms = [];
+
+function setSearch(q) {
+  searchQuery = (q || '').trim().toLowerCase();
+  searchTerms = searchQuery ? searchQuery.split(/\s+/).filter(Boolean) : [];
+  const bar = document.getElementById('search-bar');
+  if (bar) bar.classList.toggle('has-query', !!searchQuery);
+  applyFilter();
+}
+
+function wireSearch() {
+  const input = document.getElementById('search-input');
+  const clear = document.getElementById('search-clear');
+  if (!input) return;
+  input.addEventListener('input', e => setSearch(e.target.value));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { input.value = ''; setSearch(''); input.blur(); }
+  });
+  if (clear) clear.addEventListener('click', () => { input.value = ''; setSearch(''); input.focus(); });
+  /* Global '/' shortcut to focus search */
+  document.addEventListener('keydown', e => {
+    if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    e.preventDefault();
+    input.focus();
+    input.select();
+  });
+}
+
 function applyFilter(f) {
   if (f) activeFilter = f;
   document.querySelectorAll('.filter-btn').forEach(b => {
@@ -692,6 +763,11 @@ function applyFilter(f) {
     if (show && activeTeam) {
       const teams = (card.dataset.team || '').split(' ').filter(Boolean);
       show = teams.includes(activeTeam);
+    }
+    /* Search filter — ANDs with everything else. Each whitespace-separated term must match. */
+    if (show && searchQuery) {
+      const blob = card.dataset.search || '';
+      show = searchTerms.every(t => blob.includes(t));
     }
     card.style.display = show ? '' : 'none';
     // Collapse archived cards in non-archived views; expand them in the archived view
@@ -749,6 +825,26 @@ function updateFilterCounts() {
   setStat('stat-reviewed', reviewed);
   setStat('stat-rejected', rejected);
   setStat('stat-followup', followup);
+
+  /* Search-aware UI: visible card count, count badge, empty state */
+  const visible = allCards.filter(c => c.style.display !== 'none').length;
+  const countEl = document.querySelector('.section-header .count');
+  if (countEl) {
+    if (searchQuery) {
+      countEl.textContent = `${visible} of ${allCards.length} match`;
+    } else {
+      countEl.textContent = `${allCards.length} candidates`;
+    }
+  }
+  const meta = document.getElementById('search-meta');
+  if (meta) meta.textContent = searchQuery ? `${visible} match${visible === 1 ? '' : 'es'}` : '';
+  const empty = document.getElementById('search-empty');
+  const emptyQ = document.getElementById('search-empty-q');
+  if (empty) {
+    const showEmpty = !!searchQuery && visible === 0;
+    empty.classList.toggle('show', showEmpty);
+    if (emptyQ) emptyQ.textContent = '"' + searchQuery + '"';
+  }
 }
 
 function wireVoting() {
@@ -770,6 +866,7 @@ function updateGearState() {const gear = document.getElementById('settings-btn')
 
 document.addEventListener('DOMContentLoaded', () => {
   renderPipelineCards();
+  wireSearch();
   updateGearState();
   document.getElementById('settings-modal').addEventListener('click', e => {if (e.target.id === 'settings-modal') closeSettings();});
   document.getElementById('voter-name-input').addEventListener('keydown', e => {if (e.key === 'Enter') saveSettings();});
