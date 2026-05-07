@@ -1,0 +1,63 @@
+{
+  "_comment": "BG scoring model. Four base dimensions sum to 100. Soft factors apply afterwards and the final score is clamped 0-100.",
+
+  "vertical_signal_label": "FinServ",
+
+  "base": {
+    "gap_fit": {
+      "max": 35,
+      "description": "How precisely does the product address one of the gap categories in your thesis? Purpose-built > adjacent. Infrastructure-layer > application-layer."
+    },
+    "vertical_signal": {
+      "max": 25,
+      "description": "Evidence of relevance to your vertical. Named customers (20-25), team DNA (12-18), generic enterprise (5-10), nothing (0-5)."
+    },
+    "stage_match": {
+      "max": 20,
+      "description": "Seed to Series B is sweet spot (16-20). Pre-seed or Series C+ (8-15)."
+    },
+    "team_signal": {
+      "max": 20,
+      "description": "Domain expertise, prior exits, notable investors/angels, team quality relative to stage."
+    }
+  },
+
+  "soft_factors": [
+    {
+      "id": "trust_infra",
+      "label": "Trust infrastructure layer",
+      "delta": 15,
+      "description": "Product directly addresses 'who authorises the agent' or 'how do agents prove identity'."
+    },
+    {
+      "id": "ai_safety_regulated",
+      "label": "AI Safety for regulated industries",
+      "delta": 12,
+      "description": "Purpose-built guardrails for regulated deployment (finserv, legal, healthcare), not horizontal generic LLM safety."
+    },
+    {
+      "id": "tax_intelligence_live",
+      "label": "Portfolio-integrated tax intelligence",
+      "delta": 10,
+      "description": "Operates on live portfolios to surface tax optimisation dynamically, not tax filing."
+    },
+    {
+      "id": "tax_filing",
+      "label": "Tax filing / e-filing",
+      "delta": -20,
+      "description": "Primary value proposition ends at tax submission."
+    },
+    {
+      "id": "accounting_automation",
+      "label": "Accounting automation / bookkeeping",
+      "delta": -20,
+      "description": "Bookkeeping, AP/AR, expense management, general finance back-office. Does NOT apply if orchestration runs on regulated workflows."
+    }
+  ],
+
+  "calibration": {
+    "high": "70-100 — strong candidate worth tracking closely. 90+ is rare and means thesis-perfect.",
+    "mid": "50-69 — interesting but significant gaps or thesis distance.",
+    "low": "below 50 — likely not thesis-relevant. Still card it; the score communicates this."
+  }
+}
