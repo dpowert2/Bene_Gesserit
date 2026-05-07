@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bene Gesserit — Wallace Finance</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #F0EBE3; --bg-page: #F7F4EF; --bg-card: #FFFFFF;
+  --border: #E2DDD5; --border-strong: #D4CEC4;
+  --text: #3D3A36; --text-heading: #1A1816;
+  --text-muted: #8C857B; --text-light: #A9A29A;
+  --accent: #6B8F71; --accent-light: #E8F0E9; --accent-dark: #4A6B4F;
+  --brown: #8B6F54; --brown-light: #F3EDE7; --brown-dark: #6B5340;
+  --coral: #C4716E; --coral-light: #F8EDEC;
+  --blue: #6B849A; --blue-light: #ECF0F4;
+  --amber: #B8944A; --amber-light: #F6F0E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg-page); font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.container { max-width: 680px; margin: 0 auto; padding: 32px 16px; }
+.bg-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 16px; }
+.startup-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+.startup-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 6px; }
+.startup-top h3 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.4rem; font-weight: 400; color: var(--text-heading); line-height: 1.2; letter-spacing: -0.3px; }
+.startup-top h3 a { color: inherit; text-decoration: none; }
+.startup-top h3 a:hover { text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+.score-badge { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; font-family: 'DM Mono', monospace; font-weight: 500; }
+.score-badge .num { font-size: 1.2rem; line-height: 1; }
+.score-badge .of { font-size: 0.5rem; opacity: 0.6; margin-top: 1px; }
+.score-badge.high { background: var(--accent-light); color: var(--accent-dark); }
+.score-badge.mid { background: var(--amber-light); color: var(--amber); }
+.score-badge.low { background: #eeedeb; color: var(--text-muted); }
+.startup-oneliner { font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px; }
+.startup-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.tag { display: inline-flex; align-items: center; font-family: 'DM Mono', monospace; font-size: 0.58rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 100px; }
+.tag.gap { background: var(--brown-light); color: var(--brown-dark); }
+.tag.stage { background: var(--amber-light); color: var(--amber); }
+.tag.geo { background: #eeedeb; color: var(--text-muted); }
+.startup-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.detail-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 4px; }
+.detail-value { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+.thesis-note { margin-top: 16px; padding: 14px 16px; background: var(--accent-light); border-radius: 10px; border: 1px solid rgba(107,143,113,0.15); }
+.thesis-note .note-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-dark); margin-bottom: 4px; }
+.thesis-note p { font-size: 0.88rem; color: var(--accent-dark); line-height: 1.5; }
+.pass-note { margin-top: 12px; padding: 12px 16px; background: var(--coral-light); border-radius: 10px; border: 1px solid rgba(196,113,110,0.15); }
+.pass-note .note-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--coral); margin-bottom: 4px; }
+.pass-note p { font-size: 0.88rem; color: var(--coral); line-height: 1.5; }
+.score-bars { display: flex; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.bar-item { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.bar-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-light); }
+.bar-track { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--amber); border-radius: 3px; }
+.bar-val { font-family: 'DM Mono', monospace; font-size: 0.54rem; font-weight: 500; color: var(--text-light); }
+.soft-factors { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.soft-factor { font-family: 'DM Mono', monospace; font-size: 0.54rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 9px; border-radius: 100px; }
+.soft-factor.positive { background: var(--accent-light); color: var(--accent-dark); }
+.soft-factor.negative { background: var(--coral-light); color: var(--coral); }
+.startup-evidence { margin-top: 16px; padding: 10px 14px; background: var(--brown-light); border-radius: 6px; border: 1px solid var(--border); }
+.evidence-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; color: var(--brown); margin-bottom: 6px; }
+.evidence-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.evidence-links li a { font-size: 0.78rem; color: var(--brown-dark); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+.evidence-links li a:hover { border-color: var(--brown); }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="bg-label">Bene Gesserit · Cycle 14b · S4 Tax Optimisation</div>
+
+<div class="startup-card">
+  <div class="startup-top">
+    <h3><a href="https://www.crowdfundinsider.com/2026/04/269179-alpaca-wallace-finance-partner-to-launch-direct-indexing-and-etfs-platform-for-retail-investors/">Wallace Finance</a></h3>
+    <div class="score-badge mid"><span class="num">56</span><span class="of">/100</span></div>
+  </div>
+  <p class="startup-oneliner">AI-powered fintech that partnered with Alpaca to bring advanced direct indexing and fully customisable ETF tools to retail investors — democratising the same direct-indexing + TLH workflow that has historically required $100K+ minimums on Wealthfront or RIA channels.</p>
+  <div class="startup-tags">
+    <span class="tag gap">S4 — Tax Optimisation</span>
+    <span class="tag stage">Pre-seed / indie — launched Mar 2026</span>
+    <span class="tag geo">United States</span>
+  </div>
+  <div class="startup-details">
+    <div class="detail-block">
+      <div class="detail-label">FinServ Signal</div>
+      <div class="detail-value">Consumer-side counterpart to Alphathena's RIA play: same underlying capability (direct indexing + TLH), opposite end of the customer spectrum. The Alpaca partnership is meaningful — Alpaca is the broker-tech rails (regulated US execution + custody) that makes a small consumer fintech credible without operating its own brokerage. Aligns with Cerulli's $1T projection for direct-indexing AUM by 2026.</div>
+    </div>
+    <div class="detail-block">
+      <div class="detail-label">Team</div>
+      <div class="detail-value">Founder profile not deeply public-facing at cycle-14b search pass. Verification pending. Investors: None disclosed publicly. Strategic partner: Alpaca.</div>
+    </div>
+  </div>
+  <div class="thesis-note">
+    <div class="note-label">Why this matters</div>
+    <p>Demonstrates that the retail-A archetype path for S4 is producing live products, not just B-archetype RIA infrastructure. Studio's "Intelligent Tax Agent" thesis explicitly looks for "the accountant in your pocket" — a consumer-facing tax-aware portfolio agent. Wallace Finance + Alpaca is the closest live retail-side proof point.</p>
+  </div>
+  <div class="pass-note">
+    <div class="note-label">Why you might pass</div>
+    <p>Thin founder profile and no disclosed funding makes verification hard. The "AI-powered" framing is generic consumer-marketing rather than category-reinventing. Compression risk is real — incumbents (Wealthfront, Public.com, eToro) can absorb the workflow as a default feature without paying. Track as a category-validation card rather than a primary candidate.</p>
+  </div>
+  <div class="score-bars">
+    <div class="bar-item">
+      <span class="bar-label">Gap fit</span>
+      <div class="bar-track"><div class="bar-fill" style="width:62.9%"></div></div>
+      <span class="bar-val">22 / 35</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">FinServ</span>
+      <div class="bar-track"><div class="bar-fill" style="width:48%"></div></div>
+      <span class="bar-val">12 / 25</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">Stage</span>
+      <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+      <span class="bar-val">17 / 20</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">Team</span>
+      <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+      <span class="bar-val">10 / 20</span>
+    </div>
+  </div>
+  <div class="soft-factors">
+    <span class="soft-factor positive">+10 Portfolio-integrated tax intelligence</span>
+    <span class="soft-factor positive">+12 S4 specialist-agent bonus</span>
+    <span class="soft-factor negative">-5 Generic consumer-marketing framing</span>
+  </div>
+  <div class="startup-evidence">
+    <div class="evidence-label">Sources</div>
+    <ul class="evidence-links">
+      <li><a href="https://www.crowdfundinsider.com/2026/04/269179-alpaca-wallace-finance-partner-to-launch-direct-indexing-and-etfs-platform-for-retail-investors/">Crowdfund Insider — Alpaca × Wallace Finance partnership</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
