@@ -325,6 +325,25 @@ footer p {
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
     <span class="entry-date">2026-05-07</span>
+    <span class="entry-badge badge-system">Kanban UI</span>
+    <span class="entry-source">kanban.html — new column</span>
+  </div>
+  <div class="entry-title">Kanban gets a "★ Shortlist" column between Follow Up and Contacted — captures the curated-for-outreach state that previously had no home</div>
+  <div class="entry-body">
+    <p><strong>What was added:</strong> A new kanban column titled <strong>★ Shortlist</strong>, sitting to the right of Follow Up and to the left of Contacted. The column uses amber as its accent colour (matching the existing <code>--amber</code> design-token), distinct from Follow Up's coral and Contacted's brown-dark. Drag-and-drop, the stage buttons in the card-detail modal, and the per-column counts all pick up the new stage automatically because they iterate the <code>STAGES</code> array — adding <code>'shortlist'</code> to the array between <code>'followup'</code> and <code>'contacted'</code> was the only JS change required.</p>
+    <p><strong>Why it matters:</strong> The kanban previously jumped from "interested" (Follow Up) straight to "we sent a message" (Contacted). The Shortlist column captures the in-between state — candidates that have cleared the bar to be reached out to but haven't yet been messaged. This is where a curation pass (e.g. weekly triage) would land its outputs before the actual outreach run. Without a dedicated column the curated-for-outreach state was implicit in the operator's head; now it's first-class state in Turso.</p>
+    <p><strong>Persistence:</strong> No DB migration required — <code>bg_votes.kanban_stage</code> is plain TEXT and accepts any string. The new value <code>'shortlist'</code> writes alongside the existing five (followup, contacted, talked_to, accepted, rejected) without schema change.</p>
+    <p><strong>Funnel update:</strong> <code>index.html</code>'s funnel logic now counts shortlist alongside the other active outreach stages. A new "Shortlisted" stage row sits between "Voted" and "Meeting arranged / outreach" so velocity through the curation step is visible. The "Meeting arranged / outreach" total now sums followup + shortlist + contacted + talked_to (was: followup + contacted + talked_to).</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    UPDATED: kanban.html (new column markup between followup and contacted; CSS color rule for <code>data-stage="shortlist"</code> using <code>var(--amber)</code>; <code>STAGES</code> array and <code>STAGE_LABELS</code> map both extended). UPDATED: index.html (buildStages() funnel logic adds shortlist count; new "Shortlisted" stage row; "Meeting arranged / outreach" total updated to include shortlist). UPDATED: changelog.html (this entry).
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-07</span>
     <span class="entry-badge badge-system">Cycle 14</span>
     <span class="entry-source">Full Phases 0–6 — execution-gap closure cycle</span>
   </div>
