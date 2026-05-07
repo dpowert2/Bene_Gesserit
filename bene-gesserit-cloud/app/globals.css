@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surfaces */
+  --cream: #f0ebe3;
+  --sand: #f7f4ef;
+  --canvas: #ffffff;
+  --canvas-hover: #fdfcfa;
+
+  /* Lines */
+  --line: #e2ddd5;
+  --line-strong: #d4cec4;
+
+  /* Text */
+  --ink: #3d3a36;
+  --ink-heading: #1a1816;
+  --ink-muted: #8c857b;
+  --ink-light: #a9a29a;
+
+  /* Accents */
+  --accent: #6b8f71;
+  --accent-light: #e8f0e9;
+  --accent-dark: #4a6b4f;
+  --brown: #8b6f54;
+  --brown-light: #f3ede7;
+  --brown-dark: #6b5340;
+  --coral: #c4716e;
+  --coral-light: #f8edec;
+  --blue: #6b849a;
+  --blue-light: #ecf0f4;
+  --amber: #b8944a;
+  --amber-light: #f6f0e2;
+
+  /* Type stacks */
+  --font-serif: "Instrument Serif";
+  --font-sans: "DM Sans";
+  --font-mono: "DM Mono";
+}
+
+html,
+body {
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+/* Common typography utilities — used across pages */
+.text-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+.text-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Pill — used for nav chips, filter buttons, badges */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  color: var(--ink-muted);
+  border-radius: 100px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.pill:hover {
+  border-color: var(--brown);
+  color: var(--brown);
+}
+.pill.active {
+  background: var(--ink-heading);
+  border-color: var(--ink-heading);
+  color: #fff;
+}
