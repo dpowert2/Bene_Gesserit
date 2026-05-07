@@ -485,7 +485,7 @@ body {
     <div class="cat-card">
       <div class="cat-num">R</div>
       <div class="cat-name">Research</div>
-      <div class="cat-desc">Forward-looking knowledge function. Three sub-areas: <em>Consumer behaviour &amp; market analysis</em> across financial / physical / mental health; <em>Investable Everything</em> — Product Inversion (prediction-market mechanics, retail derivatives) and Tokenization &amp; Fractionalization (real estate, private equity, music IP, litigation finance); <em>Wealth-Generation Reinvention</em> — AI-native RIAs, family-office OS, novel asset-class access for retail. Time horizon: 12–24 months.</div>
+      <div class="cat-desc">Forward-looking knowledge function (rewritten v3.0, 2026-05-07). Three sub-areas, all about novelty rather than incremental tooling: <em>Novel takes on old investment mechanisms</em> — established institutional products (options, derivatives, structured products, prediction-market mechanics) reimagined for retail or for buyers locked out by capital, complexity, or geography. Reference signals: Kalshi, Polymarket, Robinhood options UX, eToro copy-trading. <em>Forward-looking signals on where investing is going</em> — new asset classes, new buyer behaviours, new advisor structures. AI-native RIAs (Astor, Era, Autonomous), AI-native advisor platforms (Marloo), behavioural-coaching wealth platforms. <em>Turning previously-uninvestable things into investable surfaces</em> — tokenization and fractionalization as compliant infrastructure for assets historically off-limits to retail (real estate, PE, collectibles, IP rights, royalties, litigation finance, life settlements, music IP). Reference signals: Securitize, Republic, Rally, TYTL, Willow Wealth, Moonfare. Time horizon: 12–24 months.</div>
       <span class="cat-badge high">12–24mo</span>
     </div>
     <div class="cat-card">
@@ -617,6 +617,11 @@ body {
   </div>
 
   <p>Crucially, the search terms also carry <strong>negative filters</strong> — learned exclusions derived from downvoted companies. When the human rejects a tax-filing company (because the thesis seeks portfolio-integrated tax intelligence, not e-filing), the system learns to exclude "tax filing", "tax preparation", and "bookkeeping automation" from future Tax Optimisation searches. The noise floor drops with every rejection.</p>
+
+  <h3>Audience archetypes (added cycle 14)</h3>
+  <p>The schema upgrade landed alongside the Phase 4 blind-spot protocol gives every gap an <code>audience_archetype</code> tag — A (Retail Investor), B (Independent Advisor / RIA), C (Bank / Broker / Asset Manager), D (Compliance / RegTech), E (AI-Native Infrastructure). The top-level <code>audience_archetypes</code> block defines per-archetype surface menus: Kitces / T3 / Future Proof for B; The Trade News / Markets Media / Risk.net / Waters Technology for C; ACAMS / Compliance Week for D; Reddit / Show HN / FinTwit for A; LangChain / Anthropic customer pages for E. Categories that span audiences (e.g. S5 Options &amp; Derivatives is A + E; S3 Trade Structuring is B + C) get the union of surface menus.</p>
+
+  <p>The point: instead of every category running the same Sifted + StationF + tech-press menu, each cell now reads from the surfaces where its actual customers and founders hang out. The cycle-14 manual seed pass demonstrated the lift — five first-of-cell cards in 30 minutes from cells that had been empty for seven cycles. The full <code>generate-search-terms</code> regeneration against the new schema is queued; <code>bg-search-terms.md</code> v5.5 is currently flagged REGEN PENDING.</p>
 </div>
 
 <!-- ════════════════════════════════════════════
@@ -696,24 +701,28 @@ body {
   <h2>From signal to scored card</h2>
   <p>When the Radar Agent finds a startup that passes the relevance threshold, it generates a structured intelligence card. Each card contains the company name, a one-line description, funding stage and amount, investor names, geography, the gap category it maps to, a relevance score (0-100), and the specific signals that triggered the match.</p>
 
-  <p>Cards are published to a web-based pipeline interface where the decision-maker can browse, filter, vote (1-5 stars), leave notes, flag for follow-up, or archive. The interface groups companies by gap category and sorts by score, giving an instant view of where the strongest candidates sit across the thesis.</p>
+  <p>Cards are published to a web-based pipeline interface where the decision-maker can browse, search, filter, vote (1-5 stars), leave notes, flag for follow-up, or archive. The interface groups companies by gap category and sorts by score, giving an instant view of where the strongest candidates sit across the thesis. Keyword search runs across every visible card field — name, gap, geo, FinServ signal, team, and the "Why this matters" thesis — and ANDs cleanly with the state and team filters so a query like <code>RIA seed</code> narrows to exactly the intersection.</p>
 
   <div class="stat-row">
     <div class="stat-cell">
       <div class="stat-label">Companies found</div>
-      <div class="stat-value">86</div>
+      <div class="stat-value">112</div>
+      <div class="stat-note">Cycle 14 close</div>
     </div>
     <div class="stat-cell">
       <div class="stat-label">Gap categories</div>
-      <div class="stat-value">12</div>
+      <div class="stat-value">22</div>
+      <div class="stat-note">S-FRONT, S1–S10, P1–P8, R1–R3</div>
     </div>
     <div class="stat-cell">
       <div class="stat-label">Votes cast</div>
-      <div class="stat-value">8</div>
+      <div class="stat-value">78</div>
+      <div class="stat-note">19 ★★★★★ · 22 ★</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-label">Weeks running</div>
-      <div class="stat-value">5</div>
+      <div class="stat-label">Cycles run</div>
+      <div class="stat-value">14</div>
+      <div class="stat-note">~9 weeks since launch</div>
     </div>
   </div>
 
@@ -773,8 +782,8 @@ body {
     </div>
     <div class="stack-item">
       <div class="si-label">Knowledge Base</div>
-      <div class="si-name">Markdown Files</div>
-      <div class="si-desc">thesis.md, preferences.md, search-terms.md, near-misses.md, discovery-log.md. Git-versioned. Human-readable. Agent-writable.</div>
+      <div class="si-name">Markdown + YAML</div>
+      <div class="si-desc">thesis.md (v3.1), preferences.md, bg-search-terms.md, near-misses.md, discovery-log.md, plus thesis-schema.yaml — the structured single source of truth for search-term generation. Git-versioned. Human-readable. Agent-writable. The schema feeds the generate-search-terms skill; the markdown files are written by Phase 1 / 2 / 6 of bg-full-cycle.</div>
     </div>
     <div class="stack-item">
       <div class="si-label">Orchestration</div>
@@ -791,29 +800,45 @@ body {
      ════════════════════════════════════════════ -->
 <div class="section">
   <div class="section-number">09 — What It Learned</div>
-  <h2>From 8 votes, the system extracted this</h2>
-  <p>Bene Gesserit has been running for five weeks. In that time, the decision-maker cast 8 votes — 4 upvotes, 2 downvotes, 2 neutrals. From those 8 data points, the system extracted a surprising amount of signal.</p>
+  <h2>From 78 votes, the system has extracted this</h2>
+  <p>Bene Gesserit has been running for fourteen cycles, roughly nine weeks. In that time, the decision-maker has cast 78 votes — 19 ★★★★★, 9 ★★★★, 8 ★★★, 15 ★★, 22 ★, plus 5 outreach-marker 0★ entries that mark live deal-flow rather than a star rating. The system has compounded those votes into 16 active scoring rules — 2 hard filters (each at –50 points), 7 positive bonuses (+8 to +18), 5 negative penalties (–10 to –20), plus 2 emerging signals tracking toward formal status.</p>
 
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-date">Strong positive</div>
-      <div class="timeline-text"><strong>Agent Authentication & AI Safety</strong> have a 100% upvote rate (4/4 at 4-5 stars). The system learned that the decision-maker's strongest preference is for infrastructure-layer trust technology — products that other agents connect <em>to</em>, not products that use agents to do tasks.</div>
+      <div class="timeline-date">Decisive dimension</div>
+      <div class="timeline-text">The single most predictive attribute of vote outcome is whether the product serves <strong>external/third-party agents in a marketplace</strong> or improves <strong>internal institutional workflows</strong>. 16 internal-workflow companies received 1–2★ with <em>zero exceptions</em> — Hard Filter at –50 points and auto-archive. Dave's words on the inverse: "I'm looking for solutions that mitigate risk of third party agents" (lema-ai 1★); "this works as long as it also works for external agents" (ralio 5★).</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Trust infrastructure dominates</div>
+      <div class="timeline-text">Agent Authentication (6/11 upvotes, 64%) and AI Safety &amp; Guardrails (6/14 upvotes, 43%) are the strongest gaps. Keycard 5★ ("Spot on"), Resistant-AI 5★ ("Novel and love the agentic security angle"), Manifold 5★, Complyance 5★. The gap is "agent-level safety", not "AI/model-level safety" — Mindgard 2★ ("AI, not agents") and Goodfire 2★ ($1.25B unicorn, downvoted) confirm the boundary as a –15 penalty.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Specialist agents validated</div>
+      <div class="timeline-text">Research &amp; Signal Intelligence (S1) is the first specialist agent category with conviction-level data: AgentSmyth 5★ ("This is what we are looking for. Shame we didn't find them sooner."), Serafis 5★, Kimpton AI 5★ — 3/3 hit rate. Combined with Nava 5★ / Vouched 5★ / Alomana 5★ in the previous cycle, scout-to-upvote conversion is 6/6 across two cycles. The +18 specialist-agent bonus on S1 is the highest single bonus in the system.</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Sub-domain precision</div>
-      <div class="timeline-text">Both downvotes revealed the same pattern: right category, wrong product type. "Agent Orchestration" matched an accounting automation tool. "Tax Optimisation" matched a tax-filing app. The system learned to distinguish sub-domains within gaps — and added negative filters to prevent re-surfacing these types.</div>
+      <div class="timeline-text">Tax filing ≠ tax efficiencies (Juno 2★ "I'm not looking for tax compliance so much as tax efficiencies"). KYC/AML ≠ compliance governance (Bretton-AI 3★, Vivox-AI 2★ "Not really interested in AML/KYC right now"). Accounting ≠ agent orchestration (Stacks 2★). The system learned to distinguish sub-domains within gaps — Tax Filing carries a –20 penalty; KYC/AML a –15 penalty; Accounting and CFO tooling a hard filter.</div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-date">Dual failure modes</div>
-      <div class="timeline-text">Two neutral votes in the Compliance category revealed two distinct failure paths: wrong sub-domain (KYC/AML framing when the preference is AI governance) and undifferentiated execution (correct framing but no architectural moat). The system now tracks these as separate blind spots.</div>
+      <div class="timeline-date">Stage discipline</div>
+      <div class="timeline-text">Series B is "too late" — Linx-Security scored 94 then voted 2★ ("Just too late at series B") is the most extreme near-miss in the corpus. April 3★ ("Series B too late"). Armadin 2★ ("raised too much. for procurement, not innovation"). The –15 stage penalty is now formalised; Wealth.com 1★ ("way too late. major incumbent, not a startup") confirms the gate is hard.</div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-date">Scope expansion</div>
-      <div class="timeline-text">The system started with 6 gap categories and 50 search queries. As of mid-2026 it covers 22 gap categories and 336 search queries — the search surface tracking the thesis as it expands. The 2026-04-29 thesis bump to v2.7 added a three-team architecture (Research / Studio / Greens) with its own vocabulary blocks, including the <em>Investable Everything</em> framework (Product Inversion + Tokenization) and <em>Wealth-Generation Reinvention</em>.</div>
+      <div class="timeline-date">Novelty as lead criterion (cycle 10)</div>
+      <div class="timeline-text">The cycle 10 absorption of 65 votes against the live Turso stream surfaced novelty as the dominant factor: Avantos 1★ ("anything that bills itself as an operating system… not interested in workflow"), Marloo 1★, Asseta AI 1★ ("simply a SaaS tool for family offices. not novel"), IMTC 2★, Addition Wealth 2★ all reject the same framing. Compare 5★ patterns: TYTL (tokenized residential RE), Noise (attention market). New HARD GATE: operating-system / workflow-tool / SaaS-with-AI framings → automatic 1★ rejection regardless of stage, team, or investors.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Entity-level rule (cycle 12)</div>
+      <div class="timeline-text">Versus was originally one of the canonical 5★ retail-prediction-market exemplars. The 2026-05-05 follow-up note revealed Versus is built by Kalshi (founded 2019, "a rather big team") — not an independent seed-stage startup. The category is still validated; the company is no longer a usable archetype reference. New rule: verify a candidate is an independent seed/Series-A startup before treating it as a canonical archetype. Parent affiliation by an established company disqualifies the archetype claim.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Execution-gap closed (cycle 14)</div>
+      <div class="timeline-text">The five-cell specialist-agent desert (S3, S5, S6, S7, S10) had been documented as exhausted for vocabulary-driven web search since cycle 7 — accelerator-batch sweeps + reverse-archetype walks + GitHub MCP at scale were the documented cure, carried as <code>next_cycle_target=true</code> for four cycles without firing. Cycle 14 authored <code>config/task-prompts/radar-phase-4-blind-spot-protocol.md</code> binding the cure into Phase 4 by default and ran it manually — five first-of-cell cards in one pass (Range S3, QuantWheel S5, Tradefeedr S6, Quartr S7, Trader Sage S10). Pipeline 107 → 112.</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Self-awareness</div>
-      <div class="timeline-text">The system tracks its own data starvation. The persistent <code>config/search-state.json</code> file records per-team coverage, per-sub-area card counts, and "next-cycle targets" — empty cells the next sweep must fill. The negative-space audit runs at the end of every cycle and outputs a target list rather than letting blind spots silently persist.</div>
+      <div class="timeline-text">The system tracks its own data starvation. The persistent <code>config/search-state.json</code> file records per-team coverage, per-sub-area card counts, and "next-cycle targets" — empty cells the next sweep must fill. The negative-space audit runs at the end of every cycle and outputs a target list rather than letting blind spots silently persist. The <code>regen_pending</code> flag (added 2026-05-07) tracks when the schema has moved past the last search-terms regeneration.</div>
     </div>
   </div>
 
@@ -865,10 +890,21 @@ body {
       <div class="cat-desc">When a strong card surfaces, walk the lead investor's other 2025–26 portfolio for adjacent plays the press cycle missed. The fund's bets are usually thesis-aligned by definition. Run as the FINAL step of every sweep.</div>
       <span class="cat-badge medium">End of every sweep</span>
     </div>
+    <div class="cat-card">
+      <div class="cat-num">A5</div>
+      <div class="cat-name">Phase 4 Blind-Spot Protocol</div>
+      <div class="cat-desc">Authored cycle 14 to close a four-cycle execution gap. When Phase 0's Coverage Audit flags any cell as a blind spot (0 cards) or under-represented (1–2 cards), Phase 4 follows a structured protocol instead of running the default vocabulary search: skip vocabulary L1 for the affected cell, walk recent accelerator batches (YC, EF, Antler, Mouro, Tenity, Mastercard Start Path, Plug and Play Fintech, Barclays Rise, Fintech Sandbox, AI Grant), run a reverse-archetype query against the cell's canonical incumbents, run Layer 3 GitHub MCP at scale with no stars filter and a 60-day window, run archetype-typed L2/L3 surfaces (Kitces / T3 for advisor archetype; The Trade News / Markets Media for broker; ACAMS / Compliance Week for compliance; Reddit / Show HN for retail; LangChain / Anthropic customer pages for AI-infra), and log what was tried. Closed five empty specialist cells (S3, S5, S6, S7, S10) on first run.</div>
+      <span class="cat-badge every">Every cycle when blind spots exist</span>
+    </div>
   </div>
 
   <div class="callout">
-    <div class="callout-label">Worked example — 2026-04-29 cull</div>
+    <div class="callout-label">Worked example — 2026-05-07 cycle 14 (execution-gap closure)</div>
+    <p style="margin:0">The five-cell specialist-agent desert (S3 Trade Structuring, S5 Options &amp; Derivatives, S6 Execution, S7 Position Monitoring, S10 Post-Trade) had been empty since cycle 7. The discovery log had documented for four straight cycles that vocabulary-driven web search is exhausted for these cells and that accelerator-batch sweeps + reverse-archetype walks + GitHub MCP are the cure. The cure sat in <code>next_cycle_target=true</code> un-actioned each cycle. Cycle 14 authored the A5 Phase 4 Blind-Spot Protocol binding the cure into Phase 4 by default, and ran it once manually. <strong>Result:</strong> five first-of-cell cards in 30 minutes — Range (S3, Phoenix RIA, ~$700M AUM), QuantWheel (S5, US indie, AI-ranked wheel/CC screener), Tradefeedr (S6, London, agentic trading-analytics interface, BMLL partnership), Quartr (S7, Stockholm, Series A $23M agent-callable research API, customers include 4 of top 5 hedge funds + Perplexity), Trader Sage (S10, US indie, AI trading journal). The lesson: documented cures don't run themselves. Bind the cure into the default Phase 4 protocol or watch the recommendation rot for four cycles.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Earlier worked example — 2026-04-29 cull</div>
     <p style="margin:0">A morning sweep added 16 cards. A calibration review flagged 8 as misfits — 5 Series B/C plays rationalised as "reference architecture," and 3 adjacency-mismatches (crypto-only attention market, horizontal search API, mass-market prediction app where financial was a side-feature). All 8 were culled. The pipeline went 106 → 98. The lesson — that gate-widening rationalisations get caught only if the gates are <em>hard</em> — was encoded in search-terms v4.8 as the new pre-scoring discipline. The same evening's re-run added 3 cards and 0 misfits.</p>
   </div>
 </div>
