@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bene Gesserit — Alphathena</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #F0EBE3; --bg-page: #F7F4EF; --bg-card: #FFFFFF;
+  --border: #E2DDD5; --border-strong: #D4CEC4;
+  --text: #3D3A36; --text-heading: #1A1816;
+  --text-muted: #8C857B; --text-light: #A9A29A;
+  --accent: #6B8F71; --accent-light: #E8F0E9; --accent-dark: #4A6B4F;
+  --brown: #8B6F54; --brown-light: #F3EDE7; --brown-dark: #6B5340;
+  --coral: #C4716E; --coral-light: #F8EDEC;
+  --blue: #6B849A; --blue-light: #ECF0F4;
+  --amber: #B8944A; --amber-light: #F6F0E2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg-page); font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.container { max-width: 680px; margin: 0 auto; padding: 32px 16px; }
+.bg-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 16px; }
+.startup-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+.startup-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 6px; }
+.startup-top h3 { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.4rem; font-weight: 400; color: var(--text-heading); line-height: 1.2; letter-spacing: -0.3px; }
+.startup-top h3 a { color: inherit; text-decoration: none; }
+.startup-top h3 a:hover { text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+.score-badge { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; font-family: 'DM Mono', monospace; font-weight: 500; }
+.score-badge .num { font-size: 1.2rem; line-height: 1; }
+.score-badge .of { font-size: 0.5rem; opacity: 0.6; margin-top: 1px; }
+.score-badge.high { background: var(--accent-light); color: var(--accent-dark); }
+.score-badge.mid { background: var(--amber-light); color: var(--amber); }
+.score-badge.low { background: #eeedeb; color: var(--text-muted); }
+.startup-oneliner { font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px; }
+.startup-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.tag { display: inline-flex; align-items: center; font-family: 'DM Mono', monospace; font-size: 0.58rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 100px; }
+.tag.gap { background: var(--brown-light); color: var(--brown-dark); }
+.tag.stage { background: var(--amber-light); color: var(--amber); }
+.tag.geo { background: #eeedeb; color: var(--text-muted); }
+.startup-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.detail-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 4px; }
+.detail-value { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+.thesis-note { margin-top: 16px; padding: 14px 16px; background: var(--accent-light); border-radius: 10px; border: 1px solid rgba(107,143,113,0.15); }
+.thesis-note .note-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-dark); margin-bottom: 4px; }
+.thesis-note p { font-size: 0.88rem; color: var(--accent-dark); line-height: 1.5; }
+.pass-note { margin-top: 12px; padding: 12px 16px; background: var(--coral-light); border-radius: 10px; border: 1px solid rgba(196,113,110,0.15); }
+.pass-note .note-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: var(--coral); margin-bottom: 4px; }
+.pass-note p { font-size: 0.88rem; color: var(--coral); line-height: 1.5; }
+.score-bars { display: flex; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.bar-item { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.bar-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-light); }
+.bar-track { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--amber); border-radius: 3px; }
+.bar-val { font-family: 'DM Mono', monospace; font-size: 0.54rem; font-weight: 500; color: var(--text-light); }
+.soft-factors { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.soft-factor { font-family: 'DM Mono', monospace; font-size: 0.54rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 9px; border-radius: 100px; }
+.soft-factor.positive { background: var(--accent-light); color: var(--accent-dark); }
+.soft-factor.negative { background: var(--coral-light); color: var(--coral); }
+.startup-evidence { margin-top: 16px; padding: 10px 14px; background: var(--brown-light); border-radius: 6px; border: 1px solid var(--border); }
+.evidence-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; color: var(--brown); margin-bottom: 6px; }
+.evidence-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.evidence-links li a { font-size: 0.78rem; color: var(--brown-dark); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+.evidence-links li a:hover { border-color: var(--brown); }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="bg-label">Bene Gesserit · Cycle 14b · S4 Tax Optimisation</div>
+
+<div class="startup-card">
+  <div class="startup-top">
+    <h3><a href="https://alphathena.com/">Alphathena</a></h3>
+    <div class="score-badge high"><span class="num">79</span><span class="of">/100</span></div>
+  </div>
+  <p class="startup-oneliner">AI-enhanced direct indexing platform exposing personalised portfolio construction, automated tax-loss harvesting, optimised allocations, rules-based rebalancing, and portfolio transition tools as agent-callable services for RIAs and fintech.</p>
+  <div class="startup-tags">
+    <span class="tag gap">S4 — Tax Optimisation</span>
+    <span class="tag stage">Seed — $4M Dec 2024</span>
+    <span class="tag geo">United States</span>
+  </div>
+  <div class="startup-details">
+    <div class="detail-block">
+      <div class="detail-label">FinServ Signal</div>
+      <div class="detail-value">"Best Direct Indexing Platform" at the 2025 WealthManagement Industry Awards. Co-founder Tushad Driver named CTO of the Year at the 2025 ThinkAdvisor Luminaries Awards. Strategic partnership Feb 2026 with Bill Harris's Evergreen Wealth ($100M-AUM tax-focused AI-native RIA) — Evergreen runs Alphathena as its underlying engine. Targets RIAs, wealth managers, and fintech platforms; agent-callable framing is core, not retrofitted.</div>
+    </div>
+    <div class="detail-block">
+      <div class="detail-label">Team</div>
+      <div class="detail-value">Mohan Naidu (CEO, co-founder). Tushad Driver (CTO, co-founder, 2025 ThinkAdvisor CTO of the Year, DePaul alumnus). Investors: ETFS Capital (lead), Hyde Park Angels, DePaul University endowment.</div>
+    </div>
+  </div>
+  <div class="thesis-note">
+    <div class="note-label">Why this matters</div>
+    <p>Strongest live B-archetype match in the S4 cell — the agent-callable infrastructure layer for direct indexing and TLH that Dave's S1 votes signalled twice (Serafis 5★, Kimpton AI 5★ "better if it exposed an agent"). Portfolio-integrated tax intelligence is the validated 5★ pattern (Alomana). The Evergreen Wealth integration is a buyer-side endorsement worth more than press: a seasoned RIA-tech founder chose Alphathena as the engine rather than building. Stage signal is clean — $4M Dec 2024 sits inside the seed-to-Series-A window.</p>
+  </div>
+  <div class="pass-note">
+    <div class="note-label">Why you might pass</div>
+    <p>Third-party-qualifier ambiguity — sells to RIAs as the buyer rather than serving an arbitrary external-agent marketplace. Closer fit for Studio's "Intelligent Tax Agent" project than for the broader app-store-for-financial-agents platform thesis. US-only geography is a soft tiebreaker against the europe-first global preference.</p>
+  </div>
+  <div class="score-bars">
+    <div class="bar-item">
+      <span class="bar-label">Gap fit</span>
+      <div class="bar-track"><div class="bar-fill" style="width:88.6%"></div></div>
+      <span class="bar-val">31 / 35</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">FinServ</span>
+      <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+      <span class="bar-val">22 / 25</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">Stage</span>
+      <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+      <span class="bar-val">18 / 20</span>
+    </div>
+    <div class="bar-item">
+      <span class="bar-label">Team</span>
+      <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+      <span class="bar-val">16 / 20</span>
+    </div>
+  </div>
+  <div class="soft-factors">
+    <span class="soft-factor positive">+10 Portfolio-integrated tax intelligence</span>
+    <span class="soft-factor positive">+12 S4 specialist-agent bonus</span>
+    <span class="soft-factor negative">-8 Third-party-qualifier ambiguity</span>
+    <span class="soft-factor negative">-2 US-only geography</span>
+  </div>
+  <div class="startup-evidence">
+    <div class="evidence-label">Sources</div>
+    <ul class="evidence-links">
+      <li><a href="https://alphathena.com/">alphathena.com</a></li>
+      <li><a href="https://alphathena.com/agentic-workflows-will-disrupt-portfolio-management/">Agentic workflows thought-leadership</a></li>
+      <li><a href="https://www.wealthmanagement.com/artificial-intelligence/alphathena-s-ai-enabled-direct-indexing-tool-scores-4m-in-vc-funding">WealthManagement.com — $4M VC funding</a></li>
+      <li><a href="https://www.prweb.com/releases/alphathena-announces-strategic-partnership-with-evergreen-wealth-to-power-tax-aware-personalized-investing-302678357.html">Evergreen Wealth partnership (Feb 2026)</a></li>
+      <li><a href="https://www.businesswire.com/news/home/20240118233718/en/AI-enabled-Direct-Indexing-Platform-Alphathena-Receives-Strategic-Investment-from-ETFS-Capital-and-HPA">BusinessWire — ETFS Capital + HPA</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
