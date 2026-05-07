@@ -791,13 +791,14 @@
     const followup  = votes.filter(v => v.followup === 1 || v.followup === '1').length;
     // Kanban stages
     const ks = (s) => votes.filter(v => v.kanban_stage === s).length;
+    const shortlisted = ks('shortlist');
     const contacted  = ks('contacted');
     const talkedTo   = ks('talked_to');
     const accepted   = ks('accepted');
     const rejected   = ks('rejected');
 
-    // "Meeting arranged" = followup-flagged + contacted + talked_to (any active outreach state)
-    const meetingArranged = followup + contacted + talkedTo;
+    // "Meeting arranged" = follow-up + shortlist + contacted + talked_to (any active outreach state)
+    const meetingArranged = followup + shortlisted + contacted + talkedTo;
 
     return [
       { stage: 'Raw search results',         count: '~30,000–40,000', estimated: true,  note: 'queries × cycles × ~10 results, minus overlap' },
@@ -807,7 +808,8 @@
       { stage: 'Carded (ever)',              count: 134,              estimated: false, note: 'union of pipeline + archive + run pages' },
       { stage: 'Live in pipeline',           count: totalCarded,      estimated: false, note: 'after culls and archives' },
       { stage: 'Voted',                      count: voted,            estimated: false, note: '1–5 stars cast on Turso' },
-      { stage: 'Meeting arranged / outreach', count: meetingArranged, estimated: false, note: 'follow-up flagged + contacted + talked-to' },
+      { stage: 'Shortlisted',                count: shortlisted,      estimated: false, note: 'kanban stage shortlist — cleared the bar to be reached out to' },
+      { stage: 'Meeting arranged / outreach', count: meetingArranged, estimated: false, note: 'follow-up + shortlist + contacted + talked-to' },
       { stage: 'Talked to',                  count: talkedTo,         estimated: false, note: 'kanban stage talked_to' },
       { stage: 'Accepted',                   count: accepted,         estimated: false, note: 'kanban stage accepted' },
     ];
