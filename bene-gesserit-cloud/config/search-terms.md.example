@@ -1,0 +1,45 @@
+# Search Terms
+
+Keywords and queries the radar agent uses each run. The agent will combine these with date filters and source-specific patterns (YC launches, funding announcements, etc.) to find candidates.
+
+The system also evolves this file based on what's converting — when a search term consistently surfaces high-scoring candidates, the agent boosts it; when a term keeps returning duplicates or off-thesis hits, the agent retires or rewrites it. All such edits show up in the changelog.
+
+---
+
+## Primary Queries
+
+These are the high-signal queries the radar runs every cycle.
+
+- "agentic AI financial services"
+- "AI agent compliance"
+- "agentic personal finance"
+- "AI agent tax optimization portfolio"
+- "agent identity authentication"
+- "AI agent payment rails"
+
+## Source Channels
+
+The radar also sweeps these specific channels each run.
+
+- Y Combinator launches (current batch)
+- TechCrunch funding announcements (last 7 days)
+- Pitchbook / Crunchbase finserv-tagged seed rounds (last 30 days)
+- LinkedIn posts tagged #agenticai #fintech
+- ProductHunt launches in Finance / AI categories
+
+## Negative Filters
+
+Apply on title/description match — drop the candidate if matched.
+
+- "tax filing"
+- "tax preparation"
+- "bookkeeping"
+- "accounts payable" / "accounts receivable"
+- "expense reports"
+- "crypto wallet" (without fiat-rail story)
+
+## Notes
+
+- Edit in the **Settings** page in the running app, or here directly.
+- The agent reads this on every radar run.
+- If you make a major thesis pivot, retiring the old terms here is faster than waiting for the agent to evolve them.
