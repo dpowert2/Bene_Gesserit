@@ -422,6 +422,7 @@
   }
   /* Column accent stripes */
   .kanban-col[data-stage="followup"]    .kanban-col-name { color: var(--coral); }
+  .kanban-col[data-stage="shortlist"]   .kanban-col-name { color: var(--amber); }
   .kanban-col[data-stage="contacted"]   .kanban-col-name { color: var(--brown-dark); }
   .kanban-col[data-stage="talked_to"]   .kanban-col-name { color: var(--blue); }
   .kanban-col[data-stage="accepted"]    .kanban-col-name { color: var(--accent-dark); }
@@ -893,6 +894,10 @@
         <div class="kanban-col-header"><span class="kanban-col-name">↗ Follow Up</span><span class="kanban-col-count" data-count="followup">0</span></div>
         <div class="kanban-col-cards" data-cards="followup"></div>
       </div>
+      <div class="kanban-col" data-stage="shortlist">
+        <div class="kanban-col-header"><span class="kanban-col-name">★ Shortlist</span><span class="kanban-col-count" data-count="shortlist">0</span></div>
+        <div class="kanban-col-cards" data-cards="shortlist"></div>
+      </div>
       <div class="kanban-col" data-stage="contacted">
         <div class="kanban-col-header"><span class="kanban-col-name">→ Contacted</span><span class="kanban-col-count" data-count="contacted">0</span></div>
         <div class="kanban-col-cards" data-cards="contacted"></div>
@@ -997,9 +1002,10 @@ async function ensureSchema() {
 /* ============================================================
    STATE
    ============================================================ */
-const STAGES = ['followup', 'contacted', 'talked_to', 'accepted', 'rejected'];
+const STAGES = ['followup', 'shortlist', 'contacted', 'talked_to', 'accepted', 'rejected'];
 const STAGE_LABELS = {
   followup: '↗ Follow Up',
+  shortlist: '★ Shortlist',
   contacted: '→ Contacted',
   talked_to: '◇ Meeting Arranged',
   accepted: '✓ Accepted',
