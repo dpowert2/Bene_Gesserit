@@ -1,0 +1,52 @@
+# Your Thesis
+
+This is the most important file in your Bene Gesserit deployment. The radar agent reads it on every run; the scoring model uses it as its rubric. Be specific. Be opinionated. Iterate.
+
+The example below is for a hypothetical agentic-AI-in-financial-services radar — replace it entirely with your own.
+
+---
+
+## What I'm Hunting For
+
+I'm tracking startups building **agentic AI infrastructure for financial services**. Specifically, the layer between "an LLM produces an output" and "a regulated financial action is taken on a user's behalf."
+
+This breaks into a handful of categories:
+
+- **Personal Agent** — agentic personal finance assistants (discovery, planning, execution for retail investors / advisors).
+- **Compliance** — agent-native compliance tooling (supervision, audit trails, policy enforcement).
+- **Tax Optimisation** — after-tax optimisation agents (loss harvesting, capital gains, tax-aware rebalancing).
+- **Agent Orchestration** — multi-agent workflow infrastructure (tool routing, planning/execution loops).
+- **AI Safety & Guardrails** — hallucination prevention, evals, monitoring for high-stakes deployments.
+- **Agent Authentication & Security** — identity, authN/authZ, permissions for agents acting on behalf of users.
+- **Agent Payment Rails** — payment primitives, settlement, credential/authorisation for agent-initiated transactions.
+
+## What I'm Not Hunting For
+
+- Tax filing / e-filing software (value ends at submission)
+- General-ledger accounting / bookkeeping / AP/AR / expense management
+- Pure horizontal LLM tooling with no regulated-industry orientation
+- Crypto-only infrastructure with no fiat-rail story
+
+## Stage
+
+Pre-seed through Series B is the sweet spot. Earlier is fine if the team is exceptional. Later than B is usually too far along to be a watch-list candidate.
+
+## Geography
+
+US, Europe, Israel are the primary catchment. APAC entries are tracked but scored slightly lower for accessibility reasons.
+
+## Soft Factors
+
+These adjust the base score (positive or negative). Edit in `/settings` or `config/scoring-weights.json`.
+
+- **Trust infrastructure layer (+15)** — product directly addresses "who authorises the agent" or "how do agents prove identity"
+- **AI Safety for regulated industries (+12)** — purpose-built guardrails for finserv/legal/healthcare, not horizontal generic safety
+- **Portfolio-integrated tax intelligence (+10)** — operates on live portfolios, not tax-time only
+- **Tax filing / e-filing (-20)** — primary value ends at submission
+- **Accounting automation (-20)** — bookkeeping, AP/AR, generic finance back-office
+
+---
+
+## How to Edit This
+
+You can edit this file directly here OR via the **Settings** page in the running app. Both write to the same place (the `config` table). The UI is faster for ongoing tuning; this file is the canonical default a fresh deployment starts from.
