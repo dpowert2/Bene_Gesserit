@@ -4,6 +4,66 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Full Cycle Run — 2026-05-07 (Cycle 14)
+
+### Phase 0 — Coverage Audit
+Pipeline at start: 107 (cycle 13 PM close). Same six blind spots that have persisted since cycle 9 — S3 Trade Structuring (0), S5 Options & Derivatives (0), S6 Execution (0), S7 Position Monitoring (0), S9 Behavioural Coaching (0 dedicated; Balanced Investor Club tracked under S8/cross), S10 Post-Trade (0), Audit & Explainability (0 dedicated). The recommendation to fix these via accelerator-batch sweeps + reverse-archetype walks + Layer 3 GitHub MCP has been carried as `next_cycle_target=true` in `search-state.json` for cycles 9, 10, 12, 13 — un-actioned each time.
+
+### Phase 1 — Learn from Votes
+Live Turso fetch via `scripts/fetch-votes-from-turso.py`: **78 votes** (19 ★★★★★ / 9 ★★★★ / 8 ★★★ / 15 ★★ / 22 ★ / 5 outreach-marker 0★). Identical to cycle 13 corpus — no new votes since 2026-05-05. Preferences.md unchanged. Phase 1 is no-op verification.
+
+### Phase 2 — Strategise (Thesis v2.9 → v3.0 → v3.1)
+Two surgical passes:
+
+**v2.9 → v3.0 (structural cleanup).** Dave provided a clean Research-team-hypothesis rewrite as a template; Studio and Greens hypotheses rewritten in the same shape (time horizon → numbered focus areas → reference signals → out-of-scope). The sprawling "Why now" / "Differentiation" / "What others are doing" sections compressed and de-duplicated. Gap map kept as a table (no preamble repetition). The cycle-12 entity-level rule (Versus revision) and the openbox-ai 3★ pivot pattern preserved verbatim. All v2.9 hard gates remain in force. Versioning table extended with v3.0 row.
+
+**v3.0 → v3.1 (cycle-14 finding absorption).** Closer reading of the how-it-works microsite + four cycles of discovery log revealed that the v3.0 vocabulary critique was second-order. The primary cause of the persistent S3/S5/S6/S7/S10 zeros is an execution gap inside Phase 4 of the radar — the documented cure has been carried as `next_cycle_target=true` for four cycles without firing. v3.1 absorbs that finding into the version table.
+
+Thesis-writing conventions encoded in `config/task-prompts/thesis-writing-conventions.md` to prevent the auto-update from re-bloating the document. The conventions enforce: header is one paragraph (no version-history narrative), team hypotheses follow the uniform template, no "Fidelity" / first-person plural, no operational TODOs, ±15-line compression budget per cycle, structural changes deferred to manual review.
+
+### Phase 3 — Arm (Schema upgrade + REGEN PENDING)
+`config/thesis-schema.yaml` upgraded with a new `audience_archetype` field per gap (initially populated for S3 / S5 / S6 / S7 / S10) and a new top-level `audience_archetypes` block defining surface menus per archetype (A = Retail Investor, B = Independent Advisor / RIA, C = Bank / Broker / Asset Manager, D = Compliance / RegTech, E = AI-Native Infrastructure). Founder vocabulary for the 5 empty cells rewritten with founder-native phrasing replacing the synthetic `"[topic] AI startup"` exact-match strings (e.g. S5 now reads "the wheel on autopilot" / "covered-call income engine" / "your AI options trader" instead of "options strategy AI startup"). Reference archetypes filled in for the 5 empty cells using the candidates surfaced by the cycle-14 manual seed pass.
+
+`bg-search-terms.md` v5.5 marked **REGEN PENDING** at the top — a header note documents that the schema has changed and that the next `generate-search-terms` invocation must apply `task-prompts/generate-search-terms-v6-spec.md` (replace L1a–L4e with L0–L10; CNV as free-text terms not exact-match; archetype-typed L2/L3 surfaces). Until the regen runs, Phase 4 follows the new blind-spot protocol for the affected cells. `search-state.json` updated with the new thesis hash, cycle 14 marker, and `regen_pending=true` flag.
+
+### Phase 4 — Scout (Protocol-driven, not vocabulary-driven)
+Authored `config/task-prompts/radar-phase-4-blind-spot-protocol.md`. The protocol binds the cure that has been documented but un-executed for four cycles: when Phase 0 flags a blind spot, Phase 4 (a) skips vocabulary-driven web search for the affected cell, (b) walks recent accelerator batches (YC, EF, Antler, Mouro, Tenity, Mastercard Start Path, Plug and Play Fintech, Barclays Rise, Fintech Sandbox, AI Grant), (c) runs a reverse-archetype query against the cell's canonical incumbents, (d) runs Layer 3 GitHub MCP at scale with no stars filter and a 60-day window, (e) runs archetype-typed L2/L3 surfaces (Kitces / T3 for B; The Trade News / Markets Media for C; ACAMS / Compliance Week for D; Reddit / Show HN for A; LangChain customer pages for E), and (f) logs what was tried for visibility.
+
+The protocol was run manually against S3/S5/S6/S7/S10 and produced **3 new pipeline cards in 3 previously-empty cells**:
+
+1. **Quartr** (S7 — first entry; also S1 — Research & Signal Intelligence). Stockholm. Series A $23M total, $10M Aug 2025 led by Altos Ventures. Agent-callable qualitative-research API — earnings call transcripts, IR materials, structured for AI consumption. 700+ institutional clients including 4 of the world's 5 largest hedge funds (Quartr Pro), plus AI-native customers (Perplexity Computer integration, Brightwave research-platform partnership, Yahoo Finance, Fortune). ARR grew 300% YoY by Q1 2025. Direct archetype match for AgentSmyth / Serafis / Kimpton (all 5★) and specifically the European one Dave asked for in the Serafis 5★ note. Stage caveat: $23M total puts the company at the upper edge of the stage gate. **BG Score 78.**
+2. **Tradefeedr** (S6 — first entry). London. Founded 2018 by ex-Lehman quants Balraj Bassi and Alexei Jiltsov; Seth Johnson (former CEO of NEX Markets) is Chairman. Single $3M institutional round in 2020 from IPGL (Lord Michael Spencer's investment vehicle), founder-funded since. Agentic interface on FX and equities trading analytics APIs; pre- and post-trade execution analytics exposed for AI consumption. The March 2026 BMLL partnership (year-long pilot) extends the analytics layer beyond FX into equities and futures with a unified, AI-ready format. Stage profile is unusual (six years post-seed without Series A) — score reflects the uncertainty. **BG Score 64.**
+3. **QuantWheel** (S5 — first entry). US indie SaaS. Bootstrapped, single named founder Ivan Orehovec. AI-ranked wheel + covered-call screener for retail options sellers; scans 500+ tickers in under 5 minutes on DTE / delta / IV rank / yield with fundamentals layered in. Auto-syncs trades from 15+ brokers. Built October 2024, stress-tested through 2025 market volatility before opening publicly in 2026. Surfaced via the protocol's archetype-A path (Reddit r/thetagang, FinTwit, direct product domain) using customer-native vocabulary. Demonstrates the pattern that this category lives in indie SaaS with consumer-marketing framing, not VC-funded "options AI startup" press. **BG Score 58.**
+
+The seed pass also identified 17 more candidates across the same five cells (`config/empty-cells-seed-pass-2026-05-07.md`) — `[card]`-marked rows are the next round's targets; `[verify]` rows need entity-level checks; `[track]` rows are stage-out archetype references.
+
+### Phase 5 — Publish
+Files updated and pushed to dpowert2/Bene_Gesserit via the publish skill with `--repo-root /Users/davidpower/BeneGesserit`. Privacy check chained with `&&` per CLAUDE.md rules — passed clean.
+- **NEW:** `2026-05-07.html` (Cycle 14 daily briefing). `pipeline/detected/quartr.md`, `pipeline/detected/tradefeedr.md`, `pipeline/detected/quantwheel.md`. `config/search-strategy-redesign.md`. `config/empty-cells-seed-pass-2026-05-07.md`. `config/task-prompts/radar-phase-4-blind-spot-protocol.md`. `config/task-prompts/thesis-writing-conventions.md`. `config/task-prompts/generate-search-terms-v6-spec.md`.
+- **UPDATED:** `config/thesis.md` (v2.9 → v3.0 → v3.1). `config/thesis-schema.yaml` (audience_archetype tags + audience_archetypes block + strengthened founder_vocabulary on 5 cells). `config/bg-search-terms.md` (REGEN PENDING note). `config/search-state.json` (thesis hash bumped, regen_pending=true, cycle=14). `index.html` (May 7 promoted LATEST, May 6 PM demoted, Last Run / Runs / Startups counters updated). `startups-data.js` (3 cards prepended to top of array; SLUG_DATES updated with quartr / tradefeedr / quantwheel at 2026-05-07). `changelog.html` (Cycle 14 system entry inserted at top).
+
+### Phase 6 — Report (this entry)
+
+### Specialist Agent vs Infrastructure Split
+- New companies this cycle: **3 specialist agents (Quartr S7, Tradefeedr S6, QuantWheel S5)** + 0 infrastructure = 3:0 ratio. First cycle in BG history where new pipeline cards are exclusively specialist agents.
+- Cumulative pipeline: 107 → 110. The "apps" layer ratio improves marginally — but the structural fix is the protocol, not the three cards. The protocol will run again next cycle and again the cycle after.
+
+### Phase 0 Effectiveness — Cycle 14 vs Cycle 13
+- Cycle 13: vocabulary-driven web search across all six blind spots produced **zero seed-stage thesis-matching specialist agents** (consistent with cycles 9, 10, 12 results).
+- Cycle 14: protocol-driven Phase 4 across the same constellation produced **3 carded candidates plus 17 [card]/[verify]/[track] candidates**. The delta is the protocol.
+
+### Self-Critique — What Got Misdiagnosed Initially
+The first response to Dave's "startups missing from many categories" framing diagnosed the problem as broken search vocabulary and surface narrowness — which is real but second-order. The deeper read of the discovery log shows the system had correctly diagnosed the same problem since cycle 7 and prescribed the same cure (accelerator-batch + reverse-archetype + GitHub MCP). The cure wasn't running because no Phase 4 protocol bound it as default behaviour when Phase 0 flagged blind spots. The vocabulary fixes (schema upgrade, v6 search-terms spec, founder-native phrasing) land alongside the protocol but are second-order amplifiers — they tighten cells where vocabulary-driven search IS the right tool. The protocol IS the primary cure.
+
+### Recommendations Carried to Cycle 15
+1. Convert the remaining `[card]`-marked rows from `empty-cells-seed-pass-2026-05-07.md` (Range, PortfolioPilot, Zeplyn, OptionsPilot, OneChronos, big xyt, TraderSage, TradeLog Pro, JournalPlus) into pipeline cards — 9 candidates across S3, S5, S6, S7, S10. Each should pass through `bene-gesserit-card` skill for proper scoring.
+2. Apply the `radar-phase-4-blind-spot-protocol.md` to the actual `bene-gesserit-radar` SKILL.md at `~/Documents/Claude/Scheduled/bene-gesserit-radar/SKILL.md` so Phase 4 runs the protocol automatically. Until that bind happens, the protocol must be invoked manually each cycle.
+3. Apply `generate-search-terms-v6-spec.md` to the `generate-search-terms` skill so the next regen of `bg-search-terms.md` reads the new schema fields (`audience_archetype`, `audience_archetypes`) and applies the L0–L10 layer architecture.
+4. Write reverse-prompt files for S3, S5, S7, S10 (model on `config/reverse-prompts/S6-execution-agent-pitchbook.md`). Step C of the protocol depends on them.
+5. Vote on Quartr — the agent-callable / EU-based / S1-archetype-match profile is exactly the shape Dave's previous 5★ votes (AgentSmyth / Serafis / Kimpton AI) reinforce.
+
+---
+
 ## Full Cycle Run — 2026-05-06 (Cycle 13, PM)
 
 ### Phase 0 — Coverage Audit
