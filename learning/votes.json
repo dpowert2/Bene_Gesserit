@@ -1,4 +1,59 @@
 {
+  "openbox-ai": {
+    "stars": 3,
+    "note": "2026-05-05: Had a call with them, Dave will sent and NDA so that we can continue conversation end of this week in more detail\nCould be interesting if they would do the same for third party agents rather than internal workflows. \n- Booked demo",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T12:36:50.088Z",
+    "followup": true,
+    "kanban_stage": "talked_to"
+  },
+  "jentic": {
+    "stars": 0,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T10:17:06.857Z",
+    "followup": true,
+    "kanban_stage": "accepted"
+  },
+  "egdehound": {
+    "stars": 0,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T10:16:33.649Z",
+    "followup": true,
+    "kanban_stage": "accepted"
+  },
+  "trinigence": {
+    "stars": 0,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T10:15:59.044Z",
+    "followup": true,
+    "kanban_stage": "accepted"
+  },
+  "gradient-labs": {
+    "stars": 0,
+    "note": "",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T10:15:15.760Z",
+    "followup": true,
+    "kanban_stage": "talked_to"
+  },
+  "revenium": {
+    "stars": 0,
+    "note": "This came via the Research team. Meeting arranged for Wednesday 6th.",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T09:58:11.702Z",
+    "followup": true,
+    "kanban_stage": "talked_to"
+  },
+  "versus": {
+    "stars": 5,
+    "note": "2026-05-05: Just took a look and the platform is built by a company called \"Kalshi\" founded in 2019 with which seems to be a rather big team.\nI think there could be better candidates than these guys in general",
+    "voter": "Dave",
+    "voted_at": "2026-05-05T08:36:24.522Z",
+    "followup": true
+  },
   "addition-wealth": {
     "stars": 2,
     "note": "This is a pretty boring, done to death category. There's nothing innovative here. It just does basic things using AI. We are looking for novel.",
@@ -68,26 +123,11 @@
     "voted_at": "2026-04-29T13:09:33.506Z",
     "followup": true
   },
-  "versus": {
-    "stars": 5,
-    "note": "",
-    "voter": "Dave",
-    "voted_at": "2026-04-29T13:08:42.478Z",
-    "followup": true
-  },
   "ralio": {
     "stars": 5,
     "note": "This works as long as it also works for external agents\n- Booked demo",
     "voter": "Dave",
     "voted_at": "2026-04-29T11:48:21.790Z",
-    "followup": true,
-    "kanban_stage": "talked_to"
-  },
-  "openbox-ai": {
-    "stars": 3,
-    "note": "Could be interesting if they would do the same for third party agents rather than internal workflows. \n- Booked demo",
-    "voter": "Dave",
-    "voted_at": "2026-04-29T11:48:16.344Z",
     "followup": true,
     "kanban_stage": "talked_to"
   },
