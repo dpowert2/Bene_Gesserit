@@ -1,5 +1,5 @@
 # Bene Gesserit — Living Investment Thesis
-*Last updated: 2026-05-07 | Version: 3.1 — Cycle 14. Three-team hypotheses uniformly structured (time horizon → numbered focus areas → reference signals → out-of-scope). Search architecture redesigned and protocol-fixed — Phase 4 of the radar now follows `task-prompts/radar-phase-4-blind-spot-protocol.md` for blind-spot cells (accelerator-batch sweeps + reverse-archetype + GitHub MCP, not vocabulary search). Schema upgraded with `audience_archetype` per gap and a top-level `audience_archetypes` block. All v2.9 hard gates remain in force.*
+*Last updated: 2026-05-08 | Version: 3.2 — Cycle 15. Vote corpus grew 78 → 89 entries on 2026-05-07 (4 net-new star ratings + 7 new outreach markers). Tax Optimisation gap gains a second upvote (alphathena 4★, alongside alomana 5★). S7 Position Monitoring moves from blind-spot ❌ to ⚠️ contested-slot (Quartr 4★, but archetype-overlapped with Edgehound on S1). 3★ + external-agent-pivot pathway formalised at n=2 (openbox-ai, april). All v3.1 architecture intact.*
 
 ---
 
@@ -129,15 +129,15 @@ Every brokerage function — onboarding, compliance, trading, custody, reporting
 | Agent Authentication | KYC / identity | KYA — Know Your Agent. Permissions, secrets, identity delegation for non-human actors | ✅ Vouched (5★) |
 | Audit & Explainability | Regulatory reporting | "Why did the agent do this?" — auditable, regulator-ready | ⚠️ First entry — Alinia (vote pending) |
 | Dispute Resolution | Customer complaints | Insurance, certification, accountability for agent trades | ✅ Mount (5★), Klaimee (4★) |
-| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ✅ Alomana (5★) |
+| Tax Optimisation | Tax-lot accounting | Portfolio-integrated TLH, gain deferral, asset location as agent-callable services | ✅ Alomana (5★), Alphathena (4★) |
 | Research & Signal Intelligence | Idea generation | Alternative data, earnings, sentiment, flow as agent-callable intelligence | ✅ AgentSmyth, Serafis, Kimpton AI (3/3 at 5★) |
 | Agent Monetisation | Fee schedules | Results-based billing for agent-mediated services | ✅ Paid AI (pattern signal) |
 | Agent Payment Rails | Settlement | Escrow, intent verification, dispute resolution for agent transactions | ✅ Nava (5★), Natural (4★) |
 | Trade Structuring (S3) | Account selection, options/equity | Asset location, after-tax routing, structure-aware advisor copilot | ❌ Empty until 2026-05-07 — seed pass surfaced Range, PortfolioPilot, Zeplyn |
 | Options Strategy (S5) | Derivatives access | Wheel / covered-call / income strategies for retail | ❌ Empty until 2026-05-07 — seed pass surfaced QuantWheel, OptionsPilot, Jenova AI |
 | Execution (S6) | Smart order routing | AI-native execution copilot, TCA agent | ❌ Empty until 2026-05-07 — seed pass surfaced big xyt, Tradefeedr, OneChronos |
-| Position Monitoring (S7) | Watchlists | Thesis tracker, earnings prep, agent-callable research data | ❌ Empty until 2026-05-07 — seed pass surfaced Quartr, Brightwave (track), Daloopa |
-| Post-Trade (S10) | Trade journals | AI-tagged trade journaling, attribution, coaching | ❌ Empty until 2026-05-07 — seed pass surfaced TraderSage, TradeLog Pro, JournalPlus |
+| Position Monitoring (S7) | Watchlists | Thesis tracker, earnings prep, agent-callable research data | ⚠️ Quartr 4★ — but archetype-overlapped with Edgehound on S1 ("too similar... taken this slot"). Cell still needs an S7-specific entry not displaced by an S1 incumbent. |
+| Post-Trade (S10) | Trade journals | AI-tagged trade journaling, attribution, coaching | ❌ TraderSage carded then voted 2★ ("obvious implementation of AI") — novelty gate applies in empty cells. Cell still empty. |
 
 ---
 
@@ -163,7 +163,7 @@ The output is a better decision than any single agent — or most human advisors
 
 ---
 
-## Learned preferences (78 votes — 19 ★★★★★ · 9 ★★★★ · 8 ★★★ · 15 ★★ · 22 ★ · 5 0★ outreach markers)
+## Learned preferences (89 entries — 76 voted: 19 ★★★★★ · 11 ★★★★ · 8 ★★★ · 16 ★★ · 22 ★ · 13 0★ outreach markers)
 
 Hard filters in force:
 - *Internal workflow / back-office tools* — 16 companies at 1–2★, zero exceptions, –50 points and auto-archive.
@@ -186,9 +186,14 @@ Specialist agent bonuses (highest-priority scouting target):
 - Behavioural Coaching (S9): +8.
 - Post-Trade (S10): +8.
 
-Cycle 12 patterns being tracked (not yet formal):
-- *3★ + external-pivot intent → active-deal pathway.* Openbox-ai 3★ ("could be interesting if they would do the same for third-party agents") progressed to call held + NDA + demo booked. The 3★-with-pivot-hedge isn't always a polite rejection — sometimes it's an explicit invitation that the company will accept.
-- *Followup requests as high-conviction signal.* All 12 followup-requested companies are at 4★ or 5★.
+Patterns formalised (cycle 15):
+- *3★ + external-pivot intent → active-deal pathway* (n=2). Openbox-ai 3★ ("could be interesting if they would do the same for third-party agents") progressed to call held + NDA + demo booked. April 3★ ("Series B too late. Unless they are interested in providing this as an agent. Perhaps they are working on it") — same shape. The 3★-with-pivot-hedge is an explicit invitation, not a polite rejection. Treat such 3★s as pivot-candidates and probe for external-agent intent in outreach.
+- *Followup requests as high-conviction signal.* 4★/5★ companies request followup; outreach-marker 0★s are operational deal-flow markers, not strategic signals.
+
+Cycle 15 patterns being tracked (not yet formal):
+- *Archetype-slot displacement.* Quartr 4★ ("Good but too similar to Edgehound who have taken this slot") — when two candidates are archetype-adjacent, only one slot is filled even when both are thesis-aligned. Sample-of-one. Will formalise once a second occurrence appears. Operational implication: when carding a candidate, check the existing pipeline for archetype overlap and downweight if a slot-holder already exists.
+- *Radar→outreach walkback.* Autonomous BG Score 92 (cycle 9, multi-fit S2/S8/S-Front/Tax) → 0★ outreach with "style over substance right now" note. The radar's high-confidence prediction was partially walked back at outreach. Sample-of-one. Suggests scoring rubric may over-weight raise size + accelerator pedigree relative to product novelty for multi-fit candidates.
+- *TLH alone isn't novel.* Alomana revote caveat: "tax harvesting use case is generated by AI and just one of a hundred." The 5★ stands but the differentiator is portfolio-integration, not TLH per se. Reinforces the existing portfolio-integrated tax intelligence preference and tightens it: standalone TLH features score lower than full portfolio-integrated tax intelligence.
 
 ---
 
@@ -219,5 +224,6 @@ Cycle 12 patterns being tracked (not yet formal):
 | 2.9 | 2026-05-06 | Cycle 12 — 5 new votes + 2 re-votes | Versus revision absorbed; entity-level archetype rule added; openbox-ai 3★ → active-deal pattern documented. |
 | 3.0 | 2026-05-07 | Cycle 13 — structural cleanup | Research / Studio / Greens hypotheses uniformly structured. Why Now and Differentiation sections compressed. Search architecture redesigned in parallel (`search-strategy-redesign.md`, `empty-cells-seed-pass-2026-05-07.md`). Specialist-agent desert downgraded from structural challenge to operational backlog now that the v6.0 architecture is producing candidates. |
 | 3.1 | 2026-05-07 | Cycle 14 — execution-gap fix | Closer reading of how-it-works + discovery log revealed the v3.0 vocabulary critique was second-order; the primary cause of the persistent S3/S5/S6/S7/S10 zeros was an execution gap inside Phase 4 of the radar — the documented cure (accelerator-batch + reverse-archetype + GitHub MCP) had been carried as `next_cycle_target=true` for 4 cycles without firing. Authored `task-prompts/radar-phase-4-blind-spot-protocol.md` to bind that cure into Phase 4 directly. Schema upgraded with `audience_archetype` field per S3/S5/S6/S7/S10 plus top-level `audience_archetypes` block (5 archetypes × surface menus). Founder vocabulary for the 5 empty cells rewritten with founder-native phrasing replacing the synthetic "[topic] AI startup" exact-match strings. `task-prompts/thesis-writing-conventions.md` and `task-prompts/generate-search-terms-v6-spec.md` shipped to lock the cleanup against future bloat-creep. |
+| 3.2 | 2026-05-08 | Cycle 15 — 11 new vote entries (4 voted, 7 outreach) | Tax Optimisation gap gains alphathena 4★ as second upvote (alongside alomana 5★). S7 Position Monitoring moves from ❌ blind-spot to ⚠️ contested-slot (Quartr 4★, but archetype-overlapped with Edgehound on S1). S10 Post-Trade stays empty — TraderSage carded then voted 2★ confirming novelty gate applies in empty cells. 3★ + external-agent-pivot pattern formalised at n=2 (openbox-ai, april). Three new emerging patterns flagged: archetype-slot displacement (Quartr); radar→outreach walkback (Autonomous BG 92 → 0★ "style over substance"); TLH alone isn't novel (alomana caveat). All v3.1 architecture intact. |
 
 *This is a living document. The strategy agent reviews it bi-weekly against new vote data, market signals, and pipeline changes.*
