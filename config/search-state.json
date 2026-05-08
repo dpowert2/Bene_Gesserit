@@ -1,14 +1,14 @@
 {
   "_schema_version": "1.0",
-  "_last_updated": "2026-05-07",
-  "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06)",
+  "_last_updated": "2026-05-08",
+  "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06); cycle-14 hash-update 2026-05-08",
   "search_terms_version": "5.5",
   "search_terms_generated": "2026-05-06",
   "search_terms_source": "config/thesis-schema.yaml v1.0",
-  "thesis_hash": "154021c7ef0cdd252e962e20bb18020d208bfa295971070ba6c2268bd7c35b59",
+  "thesis_hash": "bf05cd159eff441a64a0ab4e2f75b61839e3ed2daca7b97d17a9862523c44b21",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
   "cycle": 14,
-  "cycle_completed_at": null,
+  "cycle_completed_at": "2026-05-08",
   "team_coverage": {
     "Greens": {
       "card_count": 63,
@@ -454,5 +454,19 @@
     }
   },
   "regen_pending": true,
-  "regen_pending_reason": "Thesis bumped v2.9 \u2192 v3.0 \u2192 v3.1 in cycle 14 (structural cleanup + Phase 4 blind-spot protocol + schema audience_archetype upgrade). schema-v1.0 is now schema-v1.1 in spirit; bg-search-terms.md v5.5 was generated against the prior schema and prior thesis. Full regen required when generate-search-terms skill is next invoked. Until then, Phase 4 follows task-prompts/radar-phase-4-blind-spot-protocol.md for blind-spot cells (this is the documented bypass)."
+  "regen_pending_reason": "Thesis bumped v2.9 \u2192 v3.0 \u2192 v3.1 in cycle 14 (structural cleanup + Phase 4 blind-spot protocol + schema audience_archetype upgrade). schema-v1.0 is now schema-v1.1 in spirit; bg-search-terms.md v5.5 was generated against the prior schema and prior thesis. Full regen required when generate-search-terms skill is next invoked. Until then, Phase 4 follows task-prompts/radar-phase-4-blind-spot-protocol.md for blind-spot cells (this is the documented bypass).",
+  "last_run": "2026-05-08",
+  "query_hits": {
+    "S1_layer4a_yc": 1,
+    "S3_layer4a_yc_w26": 1,
+    "P-compliance_layer4a_yc_w26": 1,
+    "P-auth_layer1a_generic": 1
+  },
+  "empty_gaps": {
+    "S5": 1,
+    "S6": 1,
+    "S7_no_new": 1,
+    "S9": 1,
+    "S10": 1
+  }
 }
