@@ -4,6 +4,54 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Preference Learning — 2026-05-10
+Total votes: 89 (30 up [4★+5★], 8 neutral [3★], 38 down [1★+2★]) | New near misses: 0 | New soft factors: novelty_gate_penalty (–10 pts) | Weight changes: none | Key insight: NOVELTY GATE reaches 3-occurrence threshold — tradersage 2★ ("obvious implementation of AI") in an empty cell is the confirming case; formalised as soft factor distinct from internal workflow hard filter | Confidence: high
+
+### Vote Corpus
+Stable at 89 entries (unchanged from cycle 15 processed 2026-05-08). 76 voted + 13 outreach-marker 0★. No new votes since 2026-05-07.
+
+### STEP 1 — Vote Pattern Analysis
+No new data to analyse. The dominant patterns remain those established in cycles 10–15:
+- Internal workflow hard filter (–50): 16 rejections, 0 upvotes — strongest rejection signal
+- External/third-party governance (+15): defining positive signal
+- Agent auth/security (+15): 6/6 upvotes (100%) — strongest positive gap
+- Stage gate (–15): 4+ explicit Series B rejections — stage_match weight remains appropriate at 25%
+- The key split: upvotes cluster in agent security, agent safety, external governance, and specialist agents; downvotes cluster in internal workflow, wrong sub-domain, and wrong stage. No change from cycle 15.
+
+### STEP 2 — Near-Miss Analysis
+No new near-misses. The 24 historical near-misses from cycles 1–6 remain the full record. All root causes are covered by active filters. No new blind spots to propose.
+
+### STEP 3 — Preferences Update
+Single structural change: **NOVELTY GATE formalised as Strong Negative Signal #7** (–10 points). Previously tracked in "Emerging Preferences" as a serialisation gap (declared in cycle 10, evidence base at 2 standalone cases through cycle 15). tradersage 2★ (cycle 14/15) is the third confirming case — threshold met.
+
+The novelty_gate_penalty is complementary, not redundant, with the internal_workflow_hard_filter:
+- **Hard Filter #1** answers: "Does this serve internal staff or external agents?" → if internal, –50
+- **novelty_gate_penalty** answers: "Is this a genuine category reinvention or an obvious AI application of an existing workflow?" → if obvious, –10
+
+A product can fail both (an obvious internal workflow tool) or either independently. The two signals cover different dimensions of the same broad failure mode (being uninteresting to BG).
+
+Emerging preferences NOVELTY GATE entry in preferences.md marked resolved and updated to point to Strong Negative Signals #7.
+
+### STEP 4 — Weight Calibration
+Corpus unchanged → no new predictive-power signal → no weight changes. The 2026-04-27 calibration (gap_fit 30%, finserv_readiness 25%, stage_match 25%, team_signal 20%) remains well-supported by the corpus. No candidate change flagged for next cycle. Soft factors now: 17 active (14 from prior cycles + novelty_gate_penalty) + 1 pending (agent_exposure_api_callable at 2/3).
+
+### Emerging Pattern Status Update
+| Pattern | Status |
+|---|---|
+| NOVELTY GATE (SaaS-with-AI non-novel) | **FORMALISED cycle 16** — soft factor active (–10 pts) |
+| agent_exposure_api_callable | Still pending at 2/3 — one more confirming vote needed |
+| Entity-level independence check | Still sample-of-one (versus revision) |
+| Archetype-slot displacement | Still sample-of-one (quartr/edgehound) |
+| Radar→outreach walkback | Still sample-of-one (autonomous) |
+
+### Files Changed
+- `learning/near-misses.md` — summary table +1 row; blind spot tracker NOVELTY GATE updated to SOFT FACTOR ACTIVE
+- `config/preferences.md` — header date + Strong Negative Signal #7 added; NOVELTY GATE emerging preference marked FORMALISED
+- `config/scoring-weights.json` — novelty_gate_penalty added to soft_factors; cycle 16 history entry added (no weight changes)
+- `learning/discovery-log.md` — this entry appended
+
+---
+
 ## Thesis Review — 2026-05-08 (Cycle 15)
 
 ### Feedback Processed
