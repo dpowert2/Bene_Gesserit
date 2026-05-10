@@ -149,6 +149,16 @@
       "evidence": "certivo 3★ ('Had this been for Finserv I would have been interested'), novee 1★ ('Not trying to solve problems for IT professionals')",
       "weeks_active": 2,
       "status": "active"
+    },
+    {
+      "name": "novelty_gate_penalty",
+      "type": "negative",
+      "condition": "Product is in a valid gap category but lacks architectural novelty — an obvious AI implementation of an existing workflow, not a category reinvention or leap forward",
+      "value": -10,
+      "evidence": "asseta-ai 1★ ('not a category reinvention, simply a SaaS tool for family offices'), addition-wealth 2★ ('boring, done to death category, nothing innovative, just does basic things using AI'), tradersage 2★ ('I don't see anything special here, obvious implementation of AI'); 3 clean standalone occurrences — threshold met cycle 16",
+      "weeks_active": 0,
+      "status": "active",
+      "note": "Distinct from internal_workflow_hard_filter (which tests who the product serves). This tests whether the approach is genuinely new. Both can apply simultaneously. Hard filter threshold (5 appearances) not yet met — serialised as soft factor at 3-occurrence threshold."
     }
   ],
   "soft_factors_pending": [
@@ -172,6 +182,18 @@
       },
       "soft_factors_count": 0,
       "note": "Initial configuration. No votes yet."
+    },
+    {
+      "date": "2026-05-10",
+      "weights": {
+        "gap_fit": 30,
+        "finserv_readiness": 25,
+        "stage_match": 25,
+        "team_signal": 20
+      },
+      "soft_factors_count": 17,
+      "changes": [],
+      "review_note": "Cycle 16 — vote corpus stable at 89 (unchanged from cycle 15). No new near-misses. No weight changes warranted — corpus unchanged means no new predictive-power signal to act on. Single structural change this cycle: NOVELTY GATE formalised as novelty_gate_penalty (–10 points) after the tradersage 2★ vote (cycle 15) pushed the standalone count to 3, meeting the soft-factor threshold. The new penalty is distinct from internal_workflow_hard_filter: it tests whether the product approach is genuinely new (not just whether it serves internal vs external agents). Soft factors now 17 active + 1 pending (agent_exposure_api_callable at 2/3 evidence threshold). Maximum 2 weight changes per cycle — none triggered this cycle."
     },
     {
       "date": "2026-05-03",
