@@ -6,7 +6,7 @@
   "search_terms_generated": "2026-05-08",
   "search_terms_source": "config/thesis-schema.yaml v1.0",
   "thesis_hash": "98cb6f16f79e3b11a0610deda0c5e8abf327b9142151427fb6187753704e7ca1",
-  "_purpose": "Persistent cycle memory — tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
+  "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
   "cycle": 14,
   "cycle_completed_at": "2026-05-08",
   "team_coverage": {
@@ -20,7 +20,7 @@
       "target_floor": 30,
       "target_at_cycle": 12,
       "status": "approaching_target",
-      "_note": "Was 27 before 2026-04-29 cull; -3 (Wealth.com, Savvy Wealth, Vise — Series B/C reference architectures, removed)"
+      "_note": "Was 27 before 2026-04-29 cull; -3 (Wealth.com, Savvy Wealth, Vise \u2014 Series B/C reference architectures, removed)"
     },
     "Research": {
       "card_count": 16,
@@ -31,11 +31,11 @@
     },
     "multi_team": {
       "card_count": 4,
-      "_note": "autonomous, mantic, astor, era — all dual-tagged Studio+Research. Sooth Labs retained as multi-team."
+      "_note": "autonomous, mantic, astor, era \u2014 all dual-tagged Studio+Research. Sooth Labs retained as multi-team."
     }
   },
   "_calibration_2026_04_29": {
-    "summary": "Sweep added 16 cards; 8 culled as misfits. Pipeline 106 → 98.",
+    "summary": "Sweep added 16 cards; 8 culled as misfits. Pipeline 106 \u2192 98.",
     "stage_mismatch_culled": [
       "wealth-com",
       "vise",
@@ -74,7 +74,7 @@
       "card_count": 0,
       "status": "empty",
       "next_cycle_target": true,
-      "_note": "Zero cards. Vocabulary exists in v4.4 but no hits yet — re-run with quarterly time-window slicing and investor-portfolio walks."
+      "_note": "Zero cards. Vocabulary exists in v4.4 but no hits yet \u2014 re-run with quarterly time-window slicing and investor-portfolio walks."
     },
     "forecasting_nostradamus_jtbd": {
       "card_count": 2,
@@ -115,7 +115,7 @@
       ],
       "status": "under_represented",
       "next_cycle_target": true,
-      "_note": "Only TYTL. Need a second card — likely in private-equity or music-IP or art tokenization adjacency."
+      "_note": "Only TYTL. Need a second card \u2014 likely in private-equity or music-IP or art tokenization adjacency."
     },
     "wealth_generation_reinvention": {
       "card_count": 7,
@@ -164,7 +164,7 @@
     }
   },
   "greens_specialist_blind_spots": {
-    "_note": "From thesis Challenge Signal #7 (Specialist Agent Desert) — these specialist-agent categories remain at 0 or 1 pipeline companies",
+    "_note": "From thesis Challenge Signal #7 (Specialist Agent Desert) \u2014 these specialist-agent categories remain at 0 or 1 pipeline companies",
     "S2_portfolio_construction_risk": {
       "card_count": 1,
       "cards": [
@@ -212,18 +212,18 @@
     }
   },
   "next_cycle_targets": [
-    "Research — Consumer behaviour × health × wealth × mental: needs second card (currently Nayya only)",
-    "Research — Alternative data for life events: needs first card (empty)",
-    "Research — Frontier-research vendors for regulated environments: needs first card (empty)",
-    "Research — Tokenization & Fractionalization: needs second card (currently TYTL only); look at PE / music-IP / art tokenization",
-    "Greens — Specialist agent desert: S3, S5, S6, S7, S9, S10 all empty (cycle 10 should focus accelerator-batch sweeps and reverse-archetype queries against Vise / Sequence Markets / Public.com / eToro)",
-    "Multilingual European queries: first run scheduled — German/French/Spanish/Italian/Portuguese (v4.7 block)"
+    "Research \u2014 Consumer behaviour \u00d7 health \u00d7 wealth \u00d7 mental: needs second card (currently Nayya only)",
+    "Research \u2014 Alternative data for life events: needs first card (empty)",
+    "Research \u2014 Frontier-research vendors for regulated environments: needs first card (empty)",
+    "Research \u2014 Tokenization & Fractionalization: needs second card (currently TYTL only); look at PE / music-IP / art tokenization",
+    "Greens \u2014 Specialist agent desert: S3, S5, S6, S7, S9, S10 all empty (cycle 10 should focus accelerator-batch sweeps and reverse-archetype queries against Vise / Sequence Markets / Public.com / eToro)",
+    "Multilingual European queries: first run scheduled \u2014 German/French/Spanish/Italian/Portuguese (v4.7 block)"
   ],
   "high_yield_queries": [],
   "quarantined_queries": [],
   "infrastructure_notes": {
-    "vote_pipeline": "Turso (libSQL) — bg-votes-dpowert2.aws-eu-west-1.turso.io. Migrated from Supabase 2026-04-29.",
-    "preference_model_status": "Live as of 2026-04-29. Re-engagement scheduled for cycle 10 — process votes since 2026-04-15 and refresh Hard Filter list.",
+    "vote_pipeline": "Turso (libSQL) \u2014 bg-votes-dpowert2.aws-eu-west-1.turso.io. Migrated from Supabase 2026-04-29.",
+    "preference_model_status": "Live as of 2026-04-29. Re-engagement scheduled for cycle 10 \u2014 process votes since 2026-04-15 and refresh Hard Filter list.",
     "supabase_status": "Archived 2026-04-29. All 62 prior votes migrated. Historical changelog entries reference Supabase as accurate at-the-time records."
   },
   "funnel_history": [
@@ -480,7 +480,7 @@
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active",
-      "_note": "Third-party qualifier anchor (API / SDK / external agents) — gates internal-tool false positives."
+      "_note": "Third-party qualifier anchor (API / SDK / external agents) \u2014 gates internal-tool false positives."
     },
     "S2_layer1d_third_party_anchor": {
       "first_added": "2026-05-08",
@@ -493,22 +493,26 @@
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active",
-      "_note": "Novelty antipattern negation — strips robo-advisor / planning-app rebrands."
+      "_note": "Novelty antipattern negation \u2014 strips robo-advisor / planning-app rebrands."
     }
   },
   "regen_pending": false,
-  "last_run": "2026-05-08",
+  "last_run": "2026-05-10",
   "query_hits": {
     "S1_layer4a_yc": 1,
     "S3_layer4a_yc_w26": 1,
     "P-compliance_layer4a_yc_w26": 1,
-    "P-auth_layer1a_generic": 1
+    "P-auth_layer1a_generic": 1,
+    "S-FRONT_layer1b_tech.eu": 1,
+    "S-FRONT_layer1b_eu-startups": 1,
+    "S-FRONT_layer1b_fintech.global": 2
   },
   "empty_gaps": {
-    "S5": 1,
-    "S6": 1,
+    "S5": 2,
+    "S6": 2,
     "S7_no_new": 1,
-    "S9": 1,
-    "S10": 1
+    "S9": 2,
+    "S10": 2,
+    "S3": 1
   }
 }

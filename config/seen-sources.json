@@ -425,9 +425,25 @@
     "https://venturebeat.com/business/capsule-security-exits-stealth-with-7m-to-stop-ai-agents-from-going-rogue-at-runtime",
     "https://www.morningstar.com/news/pr-newswire/20260422to39702/introducing-agent-launchpad-simcorps-agentic-ai-ecosystem-for-investment-managers",
     "https://www.astor.app/",
-    "https://www.investmentnews.com/fintech/y-combinator-backed-ai-robo-advisor-astor-raises-5-million/266329"
+    "https://www.investmentnews.com/fintech/y-combinator-backed-ai-robo-advisor-astor-raises-5-million/266329",
+    "https://tech.eu/2026/04/28/ai-partner-for-financial-advisers-marloo-closes-10m-seed-round/",
+    "https://fintech.global/2026/04/29/marloo-raises-10m-seed-to-transform-financial-advice/",
+    "https://techfundingnews.com/blackbird-leads-10m-round-in-marloo-to-free-financial-advisers-from-paperwork-using-ai/",
+    "https://www.eu-startups.com/2026/04/copenhagens-performativ-raises-e14-million-series-a-to-scale-its-ai-native-wealth-management-operating-system",
+    "https://www.globenewswire.com/news-release/2026/04/28/3282632/0/en/performativ-raises-14m-series-a-led-by-deutsche-borse-group-to-power-the-next-era-of-wealth-management.html",
+    "https://fintech.global/2026/03/25/flanks-launches-ai-financial-advisor-for-wealth-managers/",
+    "https://techfundingnews.com/8-uk-agentic-ai-startups-to-watch-in-2026/",
+    "https://fintech.global/2026/04/13/round-raises-6m-seed-to-automate-finance-teams-with-ai/",
+    "https://www.eu-startups.com/2026/04/londons-round-treasury-raises-e5-1-million-to-build-ai-powered-finance-automation-platform-for-modern-finance-teams/",
+    "https://thenextweb.com/news/round-6m-seed-ai-finance-automation-treasury-payroll",
+    "https://www.pymnts.com/acquisitions/2026/openai-buys-personal-finance-platform-hiro/",
+    "https://sifted.eu/articles/stripe-alumni-fintech-fundraise",
+    "https://www.marloo.com/",
+    "https://performativ.com/",
+    "https://www.flanks.io/",
+    "https://www.roundtreasury.com/"
   ],
   "last_updated": "2026-05-06",
   "note": "Append source URLs here after each radar scan run to prevent duplicate reporting across scans.",
-  "_last_updated": "2026-05-08"
+  "_last_updated": "2026-05-10"
 }
