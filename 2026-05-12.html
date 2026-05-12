@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(location.hostname==='dpowert2.github.io')location.replace('https://bg-votes.benegesserit.workers.dev'+location.pathname.replace('/Bene_Gesserit',''))</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bene Gesserit — May 12, 2026 (Cycle 15)</title>
+<meta content="Cycle 15 — 5 new profiles: Astrada (P8 agent payment rails, score 85), Avantos (P1 orchestration, score 64), Seapoint (S8 adj., score 48), Wealthyhood (R3, score 53), A-Cube (S4 adj., score 47). Astrada: Visa + Mastercard both strategic investors in a $3.8M seed. APEX Standard emerges as the FIX Protocol of the agentic trading era." name="description"/>
+<meta content="#F0EBE3" name="theme-color"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #F0EBE3;
+      --bg-page: #F7F4EF;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FDFCFA;
+      --border: #E2DDD5;
+      --border-strong: #D4CEC4;
+      --text: #3D3A36;
+      --text-heading: #1A1816;
+      --text-muted: #8C857B;
+      --text-light: #A9A29A;
+      --accent: #6B8F71;
+      --accent-light: #E8F0E9;
+      --accent-dark: #4A6B4F;
+      --brown: #8B6F54;
+      --brown-light: #F3EDE7;
+      --brown-dark: #6B5340;
+      --coral: #C4716E;
+      --coral-light: #F8EDEC;
+      --blue: #6B849A;
+      --blue-light: #ECF0F4;
+      --amber: #B8944A;
+      --amber-light: #F6F0E2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: var(--bg-page);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .site-nav {
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-nav-brand {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .site-nav-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .site-nav-link:hover { border-color: var(--brown); color: var(--brown); }
+    .site-nav-link.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; }
+    .site-nav-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-heading);
+      font-weight: 500;
+      margin: 0 4px;
+    }
+
+    header {
+      padding: 32px 0 24px;
+      background: var(--bg-page);
+    }
+
+    header h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .edition-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      background: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    section { padding: 44px 0; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+    }
+
+    .section-header .count {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .tag.gap { background: var(--brown-light); color: var(--brown-dark); }
+    .tag.reinforces { background: var(--accent-light); color: var(--accent-dark); }
+    .tag.challenges { background: var(--coral-light); color: var(--coral); }
+    .tag.new-signal { background: var(--blue-light); color: var(--blue); }
+    .tag.market-signal { background: var(--amber-light); color: var(--amber); }
+    .tag.stage { background: var(--amber-light); color: var(--amber); }
+    .tag.geo { background: #EEEDEB; color: var(--text-muted); }
+
+    .briefing-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .briefing-item:last-child { border-bottom: none; }
+    .briefing-tags {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .briefing-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .briefing-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .briefing-item .source-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .briefing-item .source-link:hover { color: var(--brown-dark); }
+
+    .startup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+    .startup-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: var(--border-strong);
+    }
+    .startup-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+    .startup-top h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+    .score-badge {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+    .score-badge .num { font-size: 1.2rem; line-height: 1; }
+    .score-badge .of { font-size: 0.5rem; color: inherit; opacity: 0.6; margin-top: 1px; }
+    .score-badge.high { background: var(--accent-light); color: var(--accent-dark); }
+    .score-badge.mid { background: var(--amber-light); color: var(--amber); }
+    .score-badge.low { background: #EEEDEB; color: var(--text-muted); }
+
+    .startup-oneliner {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .startup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .startup-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .detail-block .detail-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .detail-block .detail-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .thesis-note {
+      background: var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+    }
+    .thesis-note .note-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+    .thesis-note p {
+      font-size: 0.88rem;
+      color: var(--accent-dark);
+      line-height: 1.5;
+    }
+    .score-bars {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .bar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+    }
+    .bar-track {
+      width: 100%;
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--amber);
+      border-radius: 3px;
+      transition: width 0.2s;
+    }
+    .bar-val {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.54rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .startup-evidence {
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: var(--brown-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .evidence-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .evidence-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .evidence-links li a {
+      font-size: 12px;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .evidence-links li a:hover { text-decoration: underline; }
+
+    .vote-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .stars { display: flex; gap: 3px; }
+    .star {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: var(--border-strong);
+      padding: 0 1px;
+      line-height: 1;
+      transition: color 0.15s, transform 0.1s;
+    }
+    .star:hover { color: var(--amber); transform: scale(1.1); }
+    .star.active { color: var(--amber); font-weight: 600; }
+
+    .note-toggle {
+      background: none;
+      border: none;
+      color: var(--brown);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .note-toggle:hover { color: var(--brown-dark); }
+    .note-area { margin-top: 10px; width: 100%; }
+    .note-area textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 60px;
+    }
+    .note-area textarea:focus { outline: none; border-color: var(--brown); }
+
+    .vote-badge {
+      flex-shrink: 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--amber);
+      font-weight: 600;
+    }
+    .vote-status {
+      font-size: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+      margin-left: 8px;
+    }
+    .vote-status.saving { color: var(--blue); }
+    .vote-status.saved { color: var(--accent-dark); }
+    .vote-status.error { color: var(--coral); }
+
+    .followup-btn, .archive-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--brown);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 4px 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .followup-btn:hover, .archive-btn:hover { border-color: var(--brown); color: var(--brown-dark); }
+    .followup-btn.active { background: var(--amber-light); border-color: var(--amber); color: var(--amber); font-weight: 600; }
+    .archive-btn.active { background: var(--text-heading); border-color: var(--text-heading); color: #fff; font-weight: 600; }
+    .startup-card.followup { border-left: 3px solid var(--amber); }
+    .startup-card.archived { opacity: 0.5; }
+
+    .vote-attr {
+      font-size: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-light);
+    }
+
+    footer {
+      padding: 44px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-page);
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    footer p:last-child { margin-bottom: 0; }
+
+    #settings-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    .settings-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+    .settings-panel h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    #settings-msg {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: none;
+    }
+    .settings-form-group { margin-bottom: 20px; }
+    .settings-form-group label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.56rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .settings-form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .settings-form-group input:focus { outline: none; border-color: var(--brown); }
+    .settings-buttons { display: flex; gap: 12px; }
+    .settings-buttons button {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #btn-save-settings { background: var(--text-heading); border: 1px solid var(--text-heading); color: #fff; }
+    #btn-save-settings:hover { background: var(--brown); border-color: var(--brown); }
+    #btn-cancel-settings { background: var(--bg-page); border: 1px solid var(--border); color: var(--text); }
+    #btn-cancel-settings:hover { border-color: var(--brown); color: var(--brown); }
+    #settings-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+      padding: 8px;
+    }
+    #settings-btn:hover { color: var(--brown); }
+    #settings-btn.connected { color: var(--accent-dark); }
+
+    @media (max-width: 640px) {
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 1.8rem; }
+      .startup-details { grid-template-columns: 1fr; }
+      .score-bars { flex-wrap: wrap; gap: 12px; }
+      .bar-item { min-width: calc(50% - 8px); }
+      .startup-card { padding: 20px; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .startup-card, .briefing-item { animation: slideUp 0.35s ease-out both; }
+    .startup-card:nth-child(2) { animation-delay: 0.05s; }
+    .startup-card:nth-child(3) { animation-delay: 0.1s; }
+    .startup-card:nth-child(4) { animation-delay: 0.15s; }
+    .startup-card:nth-child(5) { animation-delay: 0.2s; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-nav-brand" href="index.html">Bene Gesserit</a>
+    <div class="site-nav-links">
+      <a class="site-nav-link" href="2026-05-10.html">← May 10</a>
+      <span class="site-nav-date">May 12, 2026</span>
+      <a class="site-nav-link active" href="index.html">Radar</a>
+      <a class="site-nav-link" href="pipeline.html">Pipeline</a>
+      <a class="site-nav-link" href="changelog.html">Changelog</a>
+      <button class="site-nav-link" id="settings-btn" title="Settings">⚙</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Bene Gesserit — May 12, 2026 <span class="edition-badge">Cycle 15</span></h1>
+    <p>5 new startups, 2 validation signals, 0 research. The standout signal of the cycle: <strong>Astrada</strong> — a $3.8M seed where both Visa and Mastercard participated as strategic investors, confirming agent payment rails (P8) is being taken seriously at card-network level. Most significant technical signal in BG history: <strong>APEX Standard</strong>, an open MCP-based protocol for AI agent-to-broker communication — FIX Protocol for the agentic trading era. S-gap desert persists: S3, S5, S6, S7, S9, S10 remain empty in public press.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Signals</h2>
+      <span class="count">8 signals (5 new + 1 technical artifact + 2 validation)</span>
+    </div>
+    <div id="briefing">
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">P8 — Agent Payment Rails</span>
+          <span class="tag new-signal">New Signal</span>
+          <span class="tag geo">USA</span>
+        </div>
+        <h3>Astrada — Data Layer for Autonomous Finance ($3.8M seed, Visa + Mastercard strategic)</h3>
+        <p>Astrada closed a $3.8M seed co-led by Bain Capital Ventures, QED Investors, and Nyca Partners — with Visa and Mastercard both participating as strategic investors. At $3.8M seed, having both card network giants in the cap table is nearly unprecedented; it means both have independently cleared Astrada through their enterprise risk and vendor review processes. Founded by Salman Syed (ex-Marqeta, led North America through IPO), the company provides a single API connecting finance platforms to all three major card networks for both human-directed and AI agent-driven spending. Already handling $750M+ in card spend and 3M+ transactions since 2024 launch, with Workday, Zoho, Payhawk, and Miter as customers. This is P8 incarnate — card-network-native payment rails for the agentic commerce era, not crypto, not DeFi — plain-vanilla card infrastructure built for agents. Score: 85/100.</p>
+        <a class="source-link" href="https://fintech.global/2026/05/05/astrada-raises-3-8m-seed-for-autonomous-finance/" target="_blank">FinTech Global: Astrada raises $3.8M seed →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">P1 — Agent Orchestration</span>
+          <span class="tag new-signal">New Signal</span>
+          <span class="tag geo">USA</span>
+        </div>
+        <h3>Avantos — AI Operating System for Financial Institutions ($25M Series A, Bessemer)</h3>
+        <p>Bessemer-led $25M Series A (total $35M raised) for an AI platform connecting custodians, CRMs, portfolio management tools, underwriting systems, and policy admin platforms with AI agents that transform onboarding and client servicing workflows. Investors include Vanguard, SEI, Guardian Life, and Mercer Advisors — among the most conservative institutional allocators in the world, signalling the product has passed real compliance vetting. Entry window has passed (Series A) and US-focus limits European access. But the Vanguard + SEI validator signal is material: it confirms P1 (orchestration) is investable at major institutions. Score: 64/100.</p>
+        <a class="source-link" href="https://www.wealthmanagement.com/financial-technology/ai-startup-avantos-raises-25m-led-by-bessemer" target="_blank">WealthManagement.com: Avantos raises $25M →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">S8 adj. — Financial Planning Agent</span>
+          <span class="tag new-signal">New Signal</span>
+          <span class="tag geo">UK / Ireland</span>
+        </div>
+        <h3>Seapoint — AI-Native Financial Home for Startup Founders (€7.5M seed, ex-Stripe)</h3>
+        <p>Ex-Stripe team (Sean Mullaney, former European CIO) building an AI-native financial ops platform for venture-backed startup founders — automated bookkeeping, payroll, treasury, expenses, invoicing. €10M total raised across pre-seed + seed with 13books Capital, Frontline, and Tapestry, with strong angel involvement (Stripe ex-COO, Revolut ex-UK CEO, Intercom co-founder). Weak BG gap fit — this is B2B fintech-ops for startup founders, not investment management. Logged as infrastructure reference and Irish/UK geo signal. Score: 48/100.</p>
+        <a class="source-link" href="https://sifted.eu/articles/stripe-alumni-fintech-fundraise" target="_blank">Sifted: Stripe alumni raise €7.5M for Seapoint →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">R3 — Wealth Management Reinvention</span>
+          <span class="tag new-signal">New Signal</span>
+          <span class="tag geo">UK / Greece</span>
+        </div>
+        <h3>Wealthyhood — AI Investment App for Younger European Investors (€6M Series A, Bank of Cyprus)</h3>
+        <p>Founded 2020 in Greece, now operating UK + Greece with 70,000+ users. €6M Series A led by Bank of Cyprus — a significant strategic validator from a regulated bank. AI investing features, fractional shares, recurring investment automation. Now adding B2B white-label distribution to banks. Not deeply agentic — closer to next-gen robo-advisor than autonomous agent. Most notable for BG as one of the very few investment-focused startups from Greece/Southeast Europe in the pipeline. Score: 53/100.</p>
+        <a class="source-link" href="https://blog.mean.ceo/startup-news-wealthyhood-6m-funding-insights-for-founders-2026/" target="_blank">blog.mean.ceo: Wealthyhood €6M Series A →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag gap">S4 adj. — Tax Optimisation</span>
+          <span class="tag new-signal">New Signal</span>
+          <span class="tag geo">Italy</span>
+        </div>
+        <h3>A-Cube — E-Invoicing and Real-Time Tax Compliance (€4M, P101 SGR)</h3>
+        <p>Founded 2018, API-first e-invoicing and real-time tax reporting platform. 70M+ invoices processed, 450+ customers, 10+ countries. Led by P101 SGR (leading Italian B2B tech VC) with Sella Direct Ventures. AI is on roadmap, not core today. Weak BG fit (business tax compliance ≠ investor tax optimisation), but notable as an Italian RegTech signal with real scale — one of the most under-represented geographies in the pipeline. VIDA directive tailwind is a genuine structural catalyst for expansion. Score: 47/100.</p>
+        <a class="source-link" href="https://www.eu-startups.com/2026/05/a-cube-lands-e4-million-to-support-e-invoicing-and-real-time-tax-reporting-expansion-from-italy/" target="_blank">EU-Startups: A-Cube lands €4M →</a>
+      </div>
+
+      <div class="briefing-item" style="background: var(--blue-light); border-radius: 12px; padding: 20px; margin-top: 8px; border-bottom: none;">
+        <div class="briefing-tags">
+          <span class="tag reinforces">Reinforces S6 — Execution Agent</span>
+          <span class="tag market-signal">Technical Artifact</span>
+        </div>
+        <h3>APEX Standard — Open Protocol for Agentic Trading (v0.1.0-alpha, MCP-based)</h3>
+        <p>The most significant technical signal in BG's history. APEX Standard is an open, MCP-based specification defining how AI agents communicate with brokers, exchanges, dealers, and other execution venues — "FIX for the agentic era." Created March 20, 2026; actively developed (last push May 9). Community-governed (CC-BY 4.0 / Apache 2.0), with 19 mandatory tools across five domains (session, account, orders, market data, risk), 167 conformance checks, and reference implementations in TypeScript, Rust, Go, and Java. <strong>Why this matters:</strong> APEX Standard's emergence is the S6 (Execution Agent) market's equivalent of FIX Protocol's 1992 launch — it signals practitioners believe the category is real enough to warrant a shared open standard before any single vendor locks it down. The startups that first build conformant implementations will be identifiable BG-stage targets. Watch for commercial entities that emerge from or align with this protocol.</p>
+        <a class="source-link" href="https://apexstandard.org/" target="_blank">APEX Standard official site →</a>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag reinforces">Reinforces P1 + S6</span>
+          <span class="tag market-signal">Validation Signal</span>
+        </div>
+        <h3>Broadridge Deploys Agentic AI at Institutional Scale (May 11, 2026)</h3>
+        <p>Broadridge announced full agentic AI deployment across capital markets and wealth operations — clearing, settlement, shareholder communications, advisor services. This is not a startup signal but a category confirmation: the world's largest financial services infrastructure company has committed to agentic AI as core operating model. Reinforces the P1 and S6 categories.</p>
+      </div>
+
+      <div class="briefing-item">
+        <div class="briefing-tags">
+          <span class="tag reinforces">Reinforces R3</span>
+          <span class="tag market-signal">Market Signal</span>
+        </div>
+        <h3>European WealthTech Deals Up 27% YoY in Q1 2026</h3>
+        <p>47 deals in Q1 2026 vs 37 in Q1 2025, though funding down 18% — more companies getting funded, smaller rounds. The UK took 43% of all European WealthTech deals in Q1. Seed deal volume down 44% overall in European tech — this means fewer but higher-conviction seed deals are being written. Selective market, not category death.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>New Startups</h2>
+      <span class="count">5 new</span>
+    </div>
+    <div id="startup-cards"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Research</h2>
+      <span class="count">0 new</span>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No new research papers detected in this run.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Bene Gesserit</strong> is an AI-powered startup signals radar.</p>
+    <p>You can rate and follow startups by setting your name in the settings panel (gear icon, top right). Your votes are saved and help identify which companies merit deeper diligence.</p>
+  </div>
+</footer>
+
+<div id="settings-modal" hidden="" style="display:none">
+  <div class="settings-panel">
+    <h2>Settings</h2>
+    <div id="settings-msg"></div>
+    <div class="settings-form-group">
+      <label for="voter-name-input">Your name</label>
+      <input id="voter-name-input" type="text" placeholder="e.g., Alex" />
+    </div>
+    <div class="settings-buttons">
+      <button id="btn-save-settings">Save</button>
+      <button id="btn-cancel-settings">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const startups = [
+  {
+    slug: "astrada",
+    name: "Astrada",
+    url: "https://www.astrada.com/",
+    oneliner: "The data layer for autonomous finance — a single API connecting finance platforms to all three major card networks for both human and AI agent-driven spend. $3.8M seed co-led by Bain Capital Ventures, QED, and Nyca Partners, with Visa and Mastercard as strategic investors.",
+    gap: "P8 — Agent Payment Rails",
+    stage: "Seed — $3.8M",
+    geo: "San Francisco, USA",
+    finserv: "Visa and Mastercard both participated as strategic investors — an exceptionally rare validator at this stage. Three of the most credible fintech seed funds (BCV, QED, Nyca) co-led. Already handling $750M+ in card spend and 3M+ transactions since launching in 2024. Customers include Workday, Zoho, Payhawk, and Miter — real enterprise fintech names, not a pilot list.",
+    team: "Founded by Salman Syed, an early employee at Marqeta who led the company's North America business through its Nasdaq IPO. Marqeta is the closest comparable company (card issuing infrastructure) — Syed is taking that lesson and applying it to AI-agent-native card infrastructure.",
+    thesis: "The core gap in the scouting thesis is the payment rails layer that lets AI agents spend money autonomously — authenticated, permissioned, real-time. Astrada positions itself as exactly that: 'the data layer for autonomous finance,' providing real-time data connectivity for both human and agent-driven spending across all three card networks via a single API. The Visa + Mastercard strategic participation signals the two largest card networks are placing a bet on Astrada as a potential standard-setter for this layer — the same pattern FIX followed in electronic trading.",
+    evidence: [
+      ["FinTech Global: Astrada raises $3.8M seed", "https://fintech.global/2026/05/05/astrada-raises-3-8m-seed-for-autonomous-finance/"],
+      ["PYMNTS: Astrada raises $3.8M", "https://www.pymnts.com/news/investment-tracker/2026/astrada-raises-3-8-million-to-expand-autonomous-finance-offering/"],
+      ["BusinessWire: Astrada seed round announcement", "https://www.businesswire.com/news/home/20260505235880/en/Astrada-Raises-Seed-Round-to-Build-the-Data-Layer-for-Autonomous-Finance"]
+    ],
+    score: 85,
+    bars: {gap: [30, 35], finserv: [24, 25], stage: [18, 20], team: [13, 20]}
+  },
+  {
+    slug: "avantos",
+    name: "Avantos",
+    url: "https://www.avantos.ai/",
+    oneliner: "An AI operating system for financial institutions — AI agents that connect custodians, CRMs, portfolio management tools, underwriting systems and policy admin platforms to transform client onboarding and servicing. $25M Series A led by Bessemer; Vanguard, SEI, Guardian Life, and Mercer Advisors as investors.",
+    gap: "P1 — Agent Orchestration",
+    stage: "Series A — $25M ($35M total)",
+    geo: "New York, USA",
+    finserv: "Investors Vanguard, SEI, Guardian Life, and Mercer Advisors all participated in the Series A — among the most conservative institutional capital allocators in the world. Vanguard and SEI endorsing an early-stage AI platform is an unusual signal; it means they've cleared Avantos through their own due diligence and vendor risk processes. Total raised: $35M ($10M seed in Sept 2024, $25M Series A led by Bessemer in Feb 2026).",
+    team: "Founded by Bassam Chaptini and Rabih Ramadi. Background in financial services; team includes engineers from Salesforce and enterprise fintech. Less visible than some founder profiles but the investor calibre more than compensates.",
+    thesis: "Avantos sits at the orchestration layer for financial institution AI — it connects the fragmented data environments that wealth managers, insurers, and asset managers operate in (custodian + CRM + portfolio management + policy admin) and surfaces AI agents on top. This maps to P1 (Agent Orchestration): not specialist execution but the connective tissue that enables agents to see and act across a firm's full data estate. The Vanguard/SEI/Guardian Life participation means this is already deployed in regulated, conservative finserv environments. Main concern for BG is that Series A has passed the ideal entry window.",
+    evidence: [
+      ["WealthManagement.com: Avantos raises $25M led by Bessemer", "https://www.wealthmanagement.com/financial-technology/ai-startup-avantos-raises-25m-led-by-bessemer"],
+      ["Daily Upside: Vanguard, SEI back Avantos", "https://www.thedailyupside.com/advisor/wealthtech/vanguard-sei-back-25m-funding-round-in-wealth-ai-startup-avantos/"],
+      ["Bessemer blog: Building the AI OS for financial services", "https://www.bvp.com/news/doubling-down-on-avantos-building-the-ai-operating-system-for-financial-services"]
+    ],
+    score: 64,
+    bars: {gap: [24, 35], finserv: [24, 25], stage: [10, 20], team: [6, 20]}
+  },
+  {
+    slug: "seapoint",
+    name: "Seapoint",
+    url: "https://www.seapoint.co/",
+    oneliner: "An AI-native financial home for European startup founders — automated bookkeeping, payroll, treasury, invoicing and reporting, built by ex-Stripe engineers. €7.5M seed led by 13books Capital; €10M total raised in ~18 months.",
+    gap: "S8 (Financial Planning Agent) — adjacent",
+    stage: "Seed — €7.5M (€10M total)",
+    geo: "Dublin / London, UK/Ireland",
+    finserv: "Raised by ex-Stripe (Sean Mullaney, former European CIO) with Claire Hughes Johnson (ex-COO, Stripe), Laurence Krieger (ex-UK CEO, Tide and ex-COO, Revolut), and Des Traynor (Intercom co-founder) as angels. Led by 13books Capital with Frontline Ventures and Tapestry VC returning from pre-seed. The Stripe-pedigree team is credible but the product serves startup founders doing their own operational finance, not investment management.",
+    team: "Sean Mullaney (former European CIO at Stripe) + 20-person team heavily drawn from Stripe and Tide alumni. Very strong infrastructure pedigree for a financial operations platform.",
+    thesis: "Seapoint is an AI-native financial operations product for startup founders — it automates the bookkeeping, payroll, expenses, and treasury functions a venture-backed company needs from day one. This is not investment management or wealth management; the gap fit against BG's core thesis (agents for investors) is weak. The strongest connection is S8 (Financial Planning Agent) but Seapoint serves startup founders as the end-user, not individual investors. Logged as an infrastructure reference signal — the AI-native financial ops category is maturing rapidly, and a similar architecture applied to personal wealth planning would be a strong BG fit.",
+    evidence: [
+      ["Sifted: Stripe alumni raise €7.5M for Seapoint", "https://sifted.eu/articles/stripe-alumni-fintech-fundraise"],
+      ["FinTech Global: Seapoint raises €7.5M seed", "https://fintech.global/2026/04/21/seapoint-raises-e7-5m-seed-to-build-founder-finance-hub/"],
+      ["The Next Web: Seapoint opens to UK and Irish founders", "https://thenextweb.com/news/seapoint-raises-e7-5m-and-opens-to-all-uk-and-irish-founders"]
+    ],
+    score: 48,
+    bars: {gap: [10, 35], finserv: [18, 25], stage: [13, 20], team: [7, 20]}
+  },
+  {
+    slug: "wealthyhood",
+    name: "Wealthyhood",
+    url: "https://wealthyhood.com/",
+    oneliner: "An app-based investment platform for younger European investors — fractional shares, recurring investments, AI-powered portfolio suggestions — now adding B2B banking distribution. €6M Series A led by Bank of Cyprus; 70,000+ users across UK and Greece.",
+    gap: "R3 — Wealth Management Reinvention",
+    stage: "Series A — €6M (~€9.6M total)",
+    geo: "London, UK / Athens, Greece",
+    finserv: "€6M Series A led by Bank of Cyprus — a significant strategic validator from a regulated European bank. 60,000+ users in UK, 10,000+ in Greece after local launch. Adding B2B services to offer the platform to banks and financial institutions as white-label. AI investing features cited but product is primarily automated recurring investment rather than agentic.",
+    team: "Founded 2020 by Alexandros Christodoulakis and Konstantinos Faliagkas, both Greek. Operating from London with market presence in UK and Greece. The Bank of Cyprus anchor gives regional credibility in Southeast Europe.",
+    thesis: "Wealthyhood sits in R3 (Wealth Management Reinvention) — democratising access to investment markets for younger retail investors with lower friction than legacy brokers. The AI component is present but not deeply agentic; this is closer to a next-gen robo-advisor than an autonomous investment agent. The B2B pivot (selling to banks) shifts it further from the direct-to-investor agentic experience BG is tracking. Most interesting as a Greek/Southeast European coverage signal — one of the few investment-focused startups from that region in the pipeline.",
+    evidence: [
+      ["blog.mean.ceo: Wealthyhood €6M Series A insights", "https://blog.mean.ceo/startup-news-wealthyhood-6m-funding-insights-for-founders-2026/"],
+      ["EU-Startups: Wealthyhood lands €3.6M to expand to Greece", "https://www.eu-startups.com/2025/04/fintech-startup-wealthyhood-lands-e3-6-million-investment-to-expand-to-greece/"],
+      ["Fintech Futures: Wealthyhood funding round-up", "https://www.fintechfutures.com/venture-capital-funding/icymi-fintech-funding-round-up-wealthyhood-payr-pluvo-and-more"]
+    ],
+    score: 53,
+    bars: {gap: [16, 35], finserv: [14, 25], stage: [13, 20], team: [10, 20]}
+  },
+  {
+    slug: "a-cube",
+    name: "A-Cube",
+    url: "https://www.a-cube.it/",
+    oneliner: "An API-first RegTech platform automating e-invoicing and real-time tax reporting across multi-jurisdictional compliance environments — 70M+ invoices processed, 450+ customers, 10+ countries. €4M led by P101 SGR. AI integration on roadmap.",
+    gap: "S4 (Tax Optimisation Agent) — adjacent",
+    stage: "Series A (inferred) — €4M",
+    geo: "Bologna / Milan, Italy",
+    finserv: "Founded 2018. 70M+ invoices processed since 2019, 450+ customers, 10+ countries, 120,000 connected entities. Led by P101 SGR (Italy's leading B2B tech VC) with Sella Direct Ventures (Banca Sella's fintech investment arm). The VIDA directive and continuous transaction control mandates across the EU are structural tailwinds — A-Cube is pre-positioned at the compliance infrastructure layer.",
+    team: "Long-standing team (founded 2018), deep Italian tax law and e-invoicing expertise. 8 years of operational scale is a strong signal of product-market fit. P101 SGR lead with Sella Direct Ventures backing.",
+    thesis: "A-Cube is B2B tax compliance infrastructure rather than a direct-to-investor tax optimisation agent (S4). The gap fit is weak — tax optimisation for investors is a different product from e-invoicing compliance for businesses. That said, Italy is one of the most under-represented geographies in the BG pipeline, P101 is a credible lead, and the VIDA directive is a genuinely large structural catalyst. Logged as a reference signal for the Italian RegTech/tax category. If A-Cube expands into investment-adjacent tax reporting (CGT, dividend withholding, cross-border portfolio compliance), it could become a stronger fit.",
+    evidence: [
+      ["EU-Startups: A-Cube lands €4M for e-invoicing expansion", "https://www.eu-startups.com/2026/05/a-cube-lands-e4-million-to-support-e-invoicing-and-real-time-tax-reporting-expansion-from-italy/"],
+      ["Tech.eu: A-Cube lands €4M to accelerate global expansion", "https://tech.eu/2026/05/04/a-cube-lands-eur4m-to-accelerate-global-expansion/"],
+      ["FinTech Global: P101 backs A-Cube in €4M RegTech round", "https://fintech.global/2026/05/06/p101-backs-a-cube-in-e4m-regtech-round/"]
+    ],
+    score: 47,
+    bars: {gap: [10, 35], finserv: [16, 25], stage: [12, 20], team: [9, 20]}
+  }
+];
+
+function renderPipelineCards() {
+  const container = document.getElementById('startup-cards');
+  if (!container) return;
+  container.innerHTML = '';
+
+  startups.forEach(startup => {
+    const scoreClass = startup.score >= 75 ? 'high' : (startup.score >= 50 ? 'mid' : 'low');
+    const card = document.createElement('div');
+    card.className = 'startup-card';
+    card.id = `startup-${startup.slug}`;
+    card.innerHTML = `
+      <div class="startup-top">
+        <h3><a href="${startup.url}" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border-strong);" target="_blank">${startup.name}</a></h3>
+        <div class="score-badge ${scoreClass}">
+          <span class="num">${startup.score}</span>
+          <span class="of">/100</span>
+        </div>
+      </div>
+      <p class="startup-oneliner">${startup.oneliner}</p>
+      <div class="startup-tags">
+        <span class="tag gap">${startup.gap}</span>
+        <span class="tag stage">${startup.stage}</span>
+        <span class="tag geo">${startup.geo}</span>
+      </div>
+      <div class="startup-details">
+        <div class="detail-block">
+          <div class="detail-label">FinServ Signal</div>
+          <div class="detail-value">${startup.finserv}</div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Team</div>
+          <div class="detail-value">${startup.team}</div>
+        </div>
+      </div>
+      <div class="thesis-note">
+        <div class="note-label">Why this matters</div>
+        <p>${startup.thesis}</p>
+      </div>
+      <div class="startup-evidence">
+        <div class="evidence-label">Evidence</div>
+        <ul class="evidence-links">
+          ${startup.evidence.map(([name, url]) => `<li><a href="${url}" style="color: var(--brown);" target="_blank">${name}</a></li>`).join('')}
+        </ul>
+      </div>
+      <div class="vote-row" data-slug="${startup.slug}">
+        <div class="stars">
+          <button class="star" data-val="1" title="1 star">★</button>
+          <button class="star" data-val="2" title="2 stars">★</button>
+          <button class="star" data-val="3" title="3 stars">★</button>
+          <button class="star" data-val="4" title="4 stars">★</button>
+          <button class="star" data-val="5" title="5 stars">★</button>
+        </div>
+        <button class="note-toggle">+ Add note</button>
+        <button class="followup-btn" title="Flag for follow-up">↗ Follow Up</button>
+        <button class="archive-btn" title="Archive this startup">↓ Archive</button>
+        <span class="vote-status"></span>
+        <div class="note-area" hidden="">
+          <textarea placeholder="Why this rating? What would need to change?"></textarea>
+        </div>
+      </div>
+      <div class="score-bars">
+        <div class="bar-item">
+          <span class="bar-label">Gap Fit</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.gap[0] / startup.bars.gap[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.gap[0]}/${startup.bars.gap[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">FinServ</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.finserv[0] / startup.bars.finserv[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.finserv[0]}/${startup.bars.finserv[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Stage</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${(startup.bars.stage[0] / startup.bars.stage[1] * 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.stage[0]}/${startup.bars.stage[1]}</span>
+        </div>
+        <div class="bar-item">
+          <span class="bar-label">Team</span>
+          <div class="bar-track"><div class="bar-fill" style="width: ${Math.min(startup.bars.team[0] / startup.bars.team[1] * 100, 100).toFixed(1)}%"></div></div>
+          <span class="bar-val">${startup.bars.team[0]}/${startup.bars.team[1]}</span>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  wireVoting();
+}
+
+const TURSO_URL = 'https://bg-votes-dpowert2.aws-eu-west-1.turso.io';
+const TURSO_TOKEN = 'eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3Nzc0NTg4MTIsImlkIjoiMDE5ZGQ4Y2MtMDgwMS03MTQ3LTk5YjQtYWQxNDhhNzA5NmUyIiwicmlkIjoiN2RjYzZjYzItOTkyOS00MDU5LWI5YjQtNGE0MzlkZTVhNWY3In0.PcZ5Qaz19H8nTZj7ZS5YapV4WoqxK5NiwSkEU1m1pGUNqBva_DT1Lij3JlrhhDJ130GfFIoSo4adcM8O2VjYAQ';
+const WORKER_URL = '__SUPABASE_SHIM__';
+(function(){
+  const _origFetch = window.fetch.bind(window);
+  async function _tursoExec(sql, args) {
+    const r = await _origFetch(`${TURSO_URL}/v2/pipeline`, {method: 'POST', headers: {'Authorization': `Bearer ${TURSO_TOKEN}`, 'Content-Type': 'application/json'}, body: JSON.stringify({requests: [{type: 'execute', stmt: {sql, args: args||[]}}, {type: 'close'}]})});
+    if (!r.ok) throw new Error('Turso ' + r.status);
+    return r.json();
+  }
+  function _parseTursoRows(data) {
+    const res = data.results[0];
+    if (res.type !== 'ok') throw new Error(res.error?.message || 'Turso error');
+    const {cols, rows} = res.response.result;
+    const names = cols.map(c => c.name);
+    return rows.map(row => { const obj = {}; names.forEach((n, i) => { obj[n] = row[i]?.value ?? null; }); return obj; });
+  }
+  async function _fetchVotes() {
+    const data = await _tursoExec('SELECT * FROM bg_votes');
+    const rows = _parseTursoRows(data);
+    const votes = {};
+    rows.forEach(row => { votes[row.slug] = {stars: parseInt(row.stars)||0, note: row.note||'', voter: row.voter||'', followup: row.followup==='1'||row.followup===1, archived: row.archived==='1'||row.archived===1, voted_at: row.voted_at}; });
+    return votes;
+  }
+  window.fetch = async function(input, init) {
+    const url = typeof input === 'string' ? input : (input && input.url) || '';
+    if (url.indexOf('__SUPABASE_SHIM__/votes') !== -1) {
+      const method = (init && init.method) || 'GET';
+      try {
+        if (method === 'GET') {
+          const votes = await _fetchVotes();
+          return new Response(JSON.stringify({votes}), {status: 200, headers: {'Content-Type': 'application/json'}});
+        }
+        if (method === 'PUT') {
+          const body = JSON.parse(init.body);
+          const args = [{type:'text',value:body.slug},{type:'integer',value:String(body.stars??0)},{type:'text',value:body.note??''},{type:'text',value:body.voter||'anonymous'},{type:'integer',value:body.followup?'1':'0'},{type:'integer',value:body.archived?'1':'0'},{type:'text',value:new Date().toISOString()}];
+          await _tursoExec('INSERT INTO bg_votes (slug,stars,note,voter,followup,archived,voted_at) VALUES (?,?,?,?,?,?,?) ON CONFLICT(slug) DO UPDATE SET stars=excluded.stars,note=excluded.note,voter=excluded.voter,followup=excluded.followup,archived=excluded.archived,voted_at=excluded.voted_at', args);
+          const votes = await _fetchVotes();
+          return new Response(JSON.stringify({votes}), {status: 200, headers: {'Content-Type': 'application/json'}});
+        }
+      } catch (e) {
+        return new Response(JSON.stringify({error: String(e)}), {status: 502, headers: {'Content-Type': 'application/json'}});
+      }
+    }
+    return _origFetch(input, init);
+  };
+})();
+function _readVoter() {
+  try { const ls = (localStorage.getItem('bg_voter_name') || '').trim(); if (ls) return ls; } catch(e) {}
+  try { const m = document.cookie.match(/bg_voter=([^;]+)/); if (m) { const v = decodeURIComponent(m[1]).trim(); if (v) return v; } } catch(e) {}
+  return 'Dave';
+}
+let voter = _readVoter();
+try { localStorage.setItem('bg_voter_name', voter); const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } catch(e) {}
+let votes = {};
+let _pendingVote = null;
+
+async function loadVotes() {
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`);
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || {};
+  } catch (e) {
+    console.warn('loadVotes:', e);
+    votes = {};
+  }
+  renderAll();
+}
+
+async function saveVote(slug) {
+  const card = document.querySelector(`.vote-row[data-slug="${slug}"]`).closest('.startup-card');
+  const st = card.querySelector('.vote-status');
+  st.textContent = 'Saving…';
+  st.className = 'vote-status saving';
+
+  try {
+    const r = await fetch(`${WORKER_URL}/votes`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        slug,
+        stars: votes[slug]?.stars ?? 0,
+        note: votes[slug]?.note ?? '',
+        voter: voter || 'anonymous',
+        followup: votes[slug]?.followup ?? false,
+        archived: votes[slug]?.archived ?? false,
+      }),
+    });
+    if (!r.ok) throw new Error(`${r.status}`);
+    const data = await r.json();
+    votes = data.votes || votes;
+    renderAll();
+    st.textContent = 'Saved ✓';
+    st.className = 'vote-status saved';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 2500);
+  } catch (e) {
+    console.error('saveVote:', e);
+    st.textContent = 'Error';
+    st.className = 'vote-status error';
+    setTimeout(() => { st.textContent = ''; st.className = 'vote-status'; }, 5000);
+  }
+}
+
+function setStars(slug, val) {
+  if (!voter) {
+    _pendingVote = { slug, val };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].stars = val === (votes[slug].stars || 0) ? 0 : val;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setNote(slug, text) {
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].note = text;
+  votes[slug].voted_at = new Date().toISOString();
+}
+
+function setFollowUp(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'followup' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].followup = !votes[slug].followup;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function setArchive(slug) {
+  if (!voter) {
+    _pendingVote = { slug, action: 'archive' };
+    openSettings('Set your name once and your votes will always be attributed to you.');
+    return;
+  }
+  if (!votes[slug]) votes[slug] = {};
+  votes[slug].archived = !votes[slug].archived;
+  votes[slug].voted_at = new Date().toISOString();
+  renderCard(slug);
+  saveVote(slug);
+}
+
+function renderCard(slug) {
+  const row = document.querySelector(`.vote-row[data-slug="${slug}"]`);
+  if (!row) return;
+  const v = votes[slug] || {};
+  const stars = v.stars || 0;
+  const card = row.closest('.startup-card');
+
+  row.querySelectorAll('.star').forEach(btn =>
+    btn.classList.toggle('active', parseInt(btn.dataset.val) <= stars)
+  );
+
+  const ta = row.querySelector('textarea');
+  if (ta && !ta._focused) ta.value = v.note || '';
+
+  let attr = row.querySelector('.vote-attr');
+  if (v.voter && v.voted_at) {
+    if (!attr) {
+      attr = document.createElement('span');
+      attr.className = 'vote-attr';
+      row.querySelector('.vote-status').insertAdjacentElement('beforebegin', attr);
+    }
+    const d = new Date(v.voted_at);
+    const fmt = d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+    attr.textContent = `${v.voter} · ${fmt}`;
+  } else if (attr) {
+    attr.remove();
+  }
+
+  const top = card.querySelector('.startup-top');
+  let badge = top.querySelector('.vote-badge');
+  if (stars > 0) {
+    if (!badge) { badge = document.createElement('div'); badge.className = 'vote-badge'; top.appendChild(badge); }
+    badge.textContent = '★'.repeat(stars);
+  } else if (badge) {
+    badge.remove();
+  }
+
+  card.classList.toggle('voted-low', stars > 0 && stars <= 2);
+  const fb = row.querySelector('.followup-btn');
+  if (fb) fb.classList.toggle('active', !!v.followup);
+  card.classList.toggle('followup', !!v.followup);
+  const ab = row.querySelector('.archive-btn');
+  if (ab) ab.classList.toggle('active', !!v.archived);
+  card.classList.toggle('archived', !!v.archived);
+}
+
+function renderAll() {
+  document.querySelectorAll('.vote-row').forEach(r => renderCard(r.dataset.slug));
+}
+
+function wireVoting() {
+  document.querySelectorAll('.star').forEach(btn =>
+    btn.addEventListener('click', function () {
+      setStars(this.closest('.vote-row').dataset.slug, parseInt(this.dataset.val));
+    })
+  );
+
+  document.querySelectorAll('.note-toggle').forEach(btn =>
+    btn.addEventListener('click', function () {
+      const row = this.closest('.vote-row');
+      const area = row.querySelector('.note-area');
+      const open = area.hidden;
+      area.hidden = !open;
+      this.textContent = open ? '− Hide note' : '+ Add note';
+      if (open) row.querySelector('textarea').focus();
+    })
+  );
+
+  document.querySelectorAll('.note-area textarea').forEach(ta => {
+    ta.addEventListener('focus', function () { this._focused = true; });
+    ta.addEventListener('blur', function () {
+      this._focused = false;
+      const slug = this.closest('.vote-row').dataset.slug;
+      setNote(slug, this.value);
+      if (this.value.trim() || votes[slug]?.stars) saveVote(slug);
+    });
+  });
+  document.querySelectorAll('.followup-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setFollowUp(this.closest('.vote-row').dataset.slug); })
+  );
+  document.querySelectorAll('.archive-btn').forEach(btn =>
+    btn.addEventListener('click', function () { setArchive(this.closest('.vote-row').dataset.slug); })
+  );
+}
+
+function openSettings(msg) {
+  const m = document.getElementById('settings-modal');
+  m.removeAttribute('hidden');
+  m.style.display = 'flex';
+  const msgEl = document.getElementById('settings-msg');
+  if (msgEl) { msgEl.textContent = msg || ''; msgEl.style.display = msg ? 'block' : 'none'; }
+  const inp = document.getElementById('voter-name-input');
+  if (inp) { inp.value = voter; inp.focus(); }
+}
+
+function closeSettings() {
+  const m = document.getElementById('settings-modal');
+  m.setAttribute('hidden', '');
+  m.style.display = 'none';
+}
+
+function saveSettings() {
+  try { const n = (document.getElementById('voter-name-input').value || '').trim(); if (n) voter = n; } catch (e) {}
+  try { if (voter) localStorage.setItem('bg_voter_name', voter); } catch (e) {}
+  try { if (voter) { const exp=new Date();exp.setFullYear(exp.getFullYear()+1);document.cookie=`bg_voter=${encodeURIComponent(voter)}; expires=${exp.toUTCString()}; path=/; Secure; SameSite=Lax`; } } catch(e) {}
+  closeSettings();
+  updateGearState();
+  if (_pendingVote && voter) {
+    const { slug, val, action } = _pendingVote;
+    _pendingVote = null;
+    if (action === 'followup') setFollowUp(slug); else if (action === 'archive') setArchive(slug); else setStars(slug, val);
+  }
+}
+
+function updateGearState() {
+  const gear = document.getElementById('settings-btn');
+  if (!gear) return;
+  gear.title = voter ? `Voting as: ${voter}` : 'Set your name for vote attribution';
+  gear.classList.toggle('connected', !!voter);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderPipelineCards();
+  updateGearState();
+
+  document.getElementById('settings-modal').addEventListener('click', e => {
+    if (e.target.id === 'settings-modal') closeSettings();
+  });
+  document.getElementById('voter-name-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') saveSettings();
+  });
+  document.getElementById('btn-save-settings').addEventListener('click', saveSettings);
+  document.getElementById('btn-cancel-settings').addEventListener('click', closeSettings);
+
+  loadVotes();
+});
+</script>
+
+</body>
+</html>
