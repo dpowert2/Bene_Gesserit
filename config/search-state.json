@@ -1,6 +1,6 @@
 {
   "_schema_version": "1.0",
-  "_last_updated": "2026-05-08",
+  "_last_updated": "2026-05-12",
   "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06); cycle-14 hash-update 2026-05-08; v5.6 regen (2026-05-08, scheduled task)",
   "search_terms_version": "5.6",
   "search_terms_generated": "2026-05-08",
@@ -372,30 +372,53 @@
         "rejected": 2
       },
       "meeting_arranged_or_outreach": 48
+    },
+    {
+      "timestamp": "2026-05-12T14:05:57.235496Z",
+      "live_pipeline": 135,
+      "voted": 76,
+      "stars": {
+        "5": 19,
+        "4": 11,
+        "3": 8,
+        "2": 16,
+        "1": 22
+      },
+      "with_notes": 74,
+      "follow_up_flagged": 39,
+      "archived_by_user": 37,
+      "kanban": {
+        "followup": 0,
+        "contacted": 2,
+        "talked_to": 7,
+        "accepted": 5,
+        "rejected": 2
+      },
+      "meeting_arranged_or_outreach": 48
     }
   ],
   "latest_funnel": {
-    "cycle": 15,
-    "date": "2026-05-12",
-    "candidates_found": 14,
-    "dropped_pre_profile": 9,
-    "new_profiles": 5,
-    "technical_signals": 1,
-    "top_gaps_hit": [
-      "P8",
-      "P1",
-      "S8-adj",
-      "R3",
-      "S4-adj"
-    ],
-    "gaps_still_empty": [
-      "S3",
-      "S5",
-      "S6",
-      "S7",
-      "S9",
-      "S10"
-    ]
+    "timestamp": "2026-05-12T14:05:57.235496Z",
+    "live_pipeline": 135,
+    "voted": 76,
+    "stars": {
+      "5": 19,
+      "4": 11,
+      "3": 8,
+      "2": 16,
+      "1": 22
+    },
+    "with_notes": 74,
+    "follow_up_flagged": 39,
+    "archived_by_user": 37,
+    "kanban": {
+      "followup": 0,
+      "contacted": 2,
+      "talked_to": 7,
+      "accepted": 5,
+      "rejected": 2
+    },
+    "meeting_arranged_or_outreach": 48
   },
   "query_blocks": {
     "S-FRONT_layer1b_sifted": {
