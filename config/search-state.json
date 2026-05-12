@@ -7,8 +7,8 @@
   "search_terms_source": "config/thesis-schema.yaml v1.0",
   "thesis_hash": "98cb6f16f79e3b11a0610deda0c5e8abf327b9142151427fb6187753704e7ca1",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
-  "cycle": 14,
-  "cycle_completed_at": "2026-05-08",
+  "cycle": 15,
+  "cycle_completed_at": "2026-05-12",
   "team_coverage": {
     "Greens": {
       "card_count": 63,
@@ -212,14 +212,22 @@
     }
   },
   "next_cycle_targets": [
-    "Research \u2014 Consumer behaviour \u00d7 health \u00d7 wealth \u00d7 mental: needs second card (currently Nayya only)",
-    "Research \u2014 Alternative data for life events: needs first card (empty)",
-    "Research \u2014 Frontier-research vendors for regulated environments: needs first card (empty)",
-    "Research \u2014 Tokenization & Fractionalization: needs second card (currently TYTL only); look at PE / music-IP / art tokenization",
-    "Greens \u2014 Specialist agent desert: S3, S5, S6, S7, S9, S10 all empty (cycle 10 should focus accelerator-batch sweeps and reverse-archetype queries against Vise / Sequence Markets / Public.com / eToro)",
-    "Multilingual European queries: first run scheduled \u2014 German/French/Spanish/Italian/Portuguese (v4.7 block)"
+    "S3/S5/S6 desert: consider reverse-archetype queries using APEX Standard + Broadridge ecosystem to find conformant implementation startups",
+    "APEX Standard: watch for commercial entities emerging from the protocol \u2014 GitHub org contributors or broker integration announcements",
+    "S9 (Behavioural Coaching): try academic spin-out queries (UCL, LSE behavioural finance labs) + Product Hunt",
+    "S10 (Post-Trade Analysis): try \"transaction cost analysis AI\" or \"TCA AI\" queries \u2014 different vocabulary than used before",
+    "CEE/Baltic: try Polish (mamstartup.pl) and Estonian (arcticstartup.com) in native query formats; switch to search in Polish for mamstartup",
+    "Italy second sweep: A-Cube opened the Italian track \u2014 try economyup.it and startupbusiness.it for more",
+    "L4a Accelerators: due for run (skipped last 2 cycles)",
+    "L4b Seed VCs: due for run (skipped last 2 cycles)",
+    "L2 Product launches: Product Hunt + Show HN \u2014 skipped this cycle"
   ],
-  "high_yield_queries": [],
+  "high_yield_queries": [
+    "fintech.global weekly roundup (L1b)",
+    "site:sifted.eu fintech AI startup funding (L1b)",
+    "GitHub: financial agent execution broker protocol (L3)",
+    "Avantos/Astrada type: wealthmanagement.com AI fintech startup (L4e)"
+  ],
   "quarantined_queries": [],
   "infrastructure_notes": {
     "vote_pipeline": "Turso (libSQL) \u2014 bg-votes-dpowert2.aws-eu-west-1.turso.io. Migrated from Supabase 2026-04-29.",
@@ -367,27 +375,27 @@
     }
   ],
   "latest_funnel": {
-    "timestamp": "2026-05-08T14:06:02.187061Z",
-    "live_pipeline": 126,
-    "voted": 76,
-    "stars": {
-      "5": 19,
-      "4": 11,
-      "3": 8,
-      "2": 16,
-      "1": 22
-    },
-    "with_notes": 74,
-    "follow_up_flagged": 39,
-    "archived_by_user": 37,
-    "kanban": {
-      "followup": 0,
-      "contacted": 2,
-      "talked_to": 7,
-      "accepted": 5,
-      "rejected": 2
-    },
-    "meeting_arranged_or_outreach": 48
+    "cycle": 15,
+    "date": "2026-05-12",
+    "candidates_found": 14,
+    "dropped_pre_profile": 9,
+    "new_profiles": 5,
+    "technical_signals": 1,
+    "top_gaps_hit": [
+      "P8",
+      "P1",
+      "S8-adj",
+      "R3",
+      "S4-adj"
+    ],
+    "gaps_still_empty": [
+      "S3",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S10"
+    ]
   },
   "query_blocks": {
     "S-FRONT_layer1b_sifted": {
@@ -497,7 +505,7 @@
     }
   },
   "regen_pending": false,
-  "last_run": "2026-05-10",
+  "last_run": "2026-05-12",
   "query_hits": {
     "S1_layer4a_yc": 1,
     "S3_layer4a_yc_w26": 1,
@@ -508,11 +516,14 @@
     "S-FRONT_layer1b_fintech.global": 2
   },
   "empty_gaps": {
-    "S5": 2,
-    "S6": 2,
-    "S7_no_new": 1,
-    "S9": 2,
-    "S10": 2,
-    "S3": 1
+    "persistent": [
+      "S3",
+      "S5",
+      "S6",
+      "S7",
+      "S9",
+      "S10"
+    ],
+    "note": "Six cycles of S-gap desert in public press. Recommend Show HN / Product Hunt / GitHub deep-scan next cycle."
   }
 }
