@@ -4,6 +4,33 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Thesis Review — 2026-05-12 (Cycle 17)
+
+### Feedback Processed
+- `bg_thesis_feedback` (Supabase, project `iyoseurwycryykrnlbig`) **unreachable again** — `execute_sql` returned "Connection terminated due to connection timeout" on each of the three attempts this cycle (full SELECT, count query, narrowed-column query). This is the fourth consecutive cycle the Supabase channel has timed out (cycles 14, 15, 16, 17). Prior cycles confirmed the table holds only the 2026-04-14 test row; no `feedback_type='thesis'` row has ever been logged. Treating as no-op and proceeding on vote signal alone. **Outstanding migration item:** the last Supabase dependency should be moved to Turso (or the channel deprecated) in a future cycle — the timeout has gone from "transient" to "persistent" and the dependency now contributes nothing.
+
+### Vote Signals
+- Live Turso fetch via `scripts/fetch-votes-from-turso.py`: **89 entries** (19 ★★★★★ / 11 ★★★★ / 8 ★★★ / 16 ★★ / 22 ★ + 13 outreach-marker 0★). Distribution **identical to cycle 16** (2026-05-10) — corpus has been stable for 48+ hours.
+- **Net delta since cycle 16: one (1) note edit.** `gradient-labs` 0★ outreach marker re-saved at 2026-05-11T08:01:38Z with the note expanded from "Aaron wants to take them in" to a version that adds a followup owner. Star rating unchanged (0★), strategic positioning unchanged (operational deal-flow marker), only the followup-owner name was added. This is an operational annotation, not a strategic signal.
+- No new star ratings. No new outreach markers. No re-votes on previously-rated entries. No new strategic feedback.
+
+### Thesis Changes
+**No changes — thesis stable at v3.2.** The corpus has not moved since cycle 16. All v3.2 architecture remains valid: three-team hypotheses intact, gap-map state intact (Tax gap dual-upvote, S7 contested-slot annotation, S10 still empty post-TraderSage rejection), Hard Filters and soft factors unchanged. The single note edit on `gradient-labs` is below the threshold for any thesis-level update — operational annotations on existing 0★ outreach markers are explicitly carved out as non-strategic per the cycle 15 finding ("the 0★+followup combination is operational deal-flow tracking, not strategic star-rating signal").
+
+### Preferences Changes
+**No changes — preferences stable at cycle 16.** The cycle 16 NOVELTY GATE formalisation (asseta-ai + addition-wealth + tradersage at n=3 → soft factor active at –10 pts) was the last structural change and remains the current state. No new emerging patterns reach the n=2 threshold; the three cycle-15 sample-of-one patterns (archetype-slot displacement, radar→outreach walkback, TLH-alone-not-novel) are still at sample-of-one.
+
+### Confidence
+- **High** on the no-op assessment — the vote distribution is byte-identical to cycle 16, and the only delta is a verifiable single-note edit on an existing outreach marker.
+- **High** on the Supabase deprecation recommendation — four consecutive timeouts with no successful read since the table contained anything other than the 2026-04-14 test row.
+- **Low** strategic risk in carrying forward — no edits to thesis or preferences, no contradictions surfaced.
+
+### Action for Downstream Tasks
+- `bg-search-terms-update` should treat the thesis as **unchanged**. No regeneration needed beyond whatever the v6 spec migration (still pending from cycle 14) requires when it runs. A pure carry-forward is sufficient for this cycle's downstream chain.
+- **Migration item flagged:** when next opportunity allows, retire the Supabase `bg_thesis_feedback` channel. Options: (a) recreate the table in Turso, (b) route strategic feedback through a different surface (in-portal form posting to Turso), or (c) declare the channel deprecated and remove the read step from this task. The channel has now produced zero useful data across four full cycles plus the original test entry.
+
+---
+
 ## Preference Learning — 2026-05-10
 Total votes: 89 (30 up [4★+5★], 8 neutral [3★], 38 down [1★+2★]) | New near misses: 0 | New soft factors: novelty_gate_penalty (–10 pts) | Weight changes: none | Key insight: NOVELTY GATE reaches 3-occurrence threshold — tradersage 2★ ("obvious implementation of AI") in an empty cell is the confirming case; formalised as soft factor distinct from internal workflow hard filter | Confidence: high
 
