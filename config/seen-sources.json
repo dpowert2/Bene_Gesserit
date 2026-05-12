@@ -441,9 +441,23 @@
     "https://www.marloo.com/",
     "https://performativ.com/",
     "https://www.flanks.io/",
-    "https://www.roundtreasury.com/"
+    "https://www.roundtreasury.com/",
+    "https://fintech.global/2026/05/05/astrada-raises-3-8m-seed-for-autonomous-finance/",
+    "https://www.pymnts.com/news/investment-tracker/2026/astrada-raises-3-8-million-to-expand-autonomous-finance-offering/",
+    "https://www.businesswire.com/news/home/20260505235880/en/Astrada-Raises-Seed-Round-to-Build-the-Data-Layer-for-Autonomous-Finance",
+    "https://www.wealthmanagement.com/financial-technology/ai-startup-avantos-raises-25m-led-by-bessemer",
+    "https://www.bvp.com/news/doubling-down-on-avantos-building-the-ai-operating-system-for-financial-services",
+    "https://techfundingnews.com/seapoint-7-5m-seed-ex-stripe-startup-banking-europe/",
+    "https://fintech.global/2026/04/21/seapoint-raises-e7-5m-seed-to-build-founder-finance-hub/",
+    "https://thenextweb.com/news/seapoint-raises-e7-5m-and-opens-to-all-uk-and-irish-founders",
+    "https://blog.mean.ceo/startup-news-wealthyhood-6m-funding-insights-for-founders-2026/",
+    "https://www.eu-startups.com/2026/05/a-cube-lands-e4-million-to-support-e-invoicing-and-real-time-tax-reporting-expansion-from-italy/",
+    "https://tech.eu/2026/05/04/a-cube-lands-eur4m-to-accelerate-global-expansion/",
+    "https://fintech.global/2026/05/06/p101-backs-a-cube-in-e4m-regtech-round/",
+    "https://apexstandard.org/",
+    "https://fintech.global/2026/05/08/fintech-funding-remains-strong-in-healthy-week-for-fintech-deals/"
   ],
-  "last_updated": "2026-05-06",
+  "last_updated": "2026-05-12",
   "note": "Append source URLs here after each radar scan run to prevent duplicate reporting across scans.",
   "_last_updated": "2026-05-10"
 }
