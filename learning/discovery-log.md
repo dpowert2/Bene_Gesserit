@@ -1184,3 +1184,44 @@ Combined hash mismatch — thesis bumped v2.8 → v3.2 across cycles 14 and 15 (
 ### What I Learned This Week
 
 The Phase-4 blind-spot protocol finally fired, and it worked exactly as the cycle-14 thesis said it would. Six previously-empty specialist cells (S3, S5, S6, S7, S9, S10) now each have at least one entry, surfaced through customer-native vocabulary on audience-typed surfaces and reverse-archetype walks from incumbents. The persistent zeros in those cells were never a market-supply problem — they were an execution gap inside the radar. That's a meaningful framing shift: the "specialist agent desert" challenge signal can now be downgraded from structural to operational, exactly as v3.1 anticipated. The next-order learning is about second entries: with one entry per cell, none of these new cells have enough vote evidence to drive scoring updates, and three new sample-of-one patterns (archetype-slot displacement, radar→outreach walkback, novelty-gate-in-empty-cells) are all waiting for second occurrences before they can become formal scoring rules. The strategic implication is that the next cycle's highest-leverage action is *second-entry hunting* in the cells that just got first entries, plus running the same protocol that worked here against the two cells where it hasn't yet been applied (S2 Portfolio Construction with Pillar still adjacent; S8 Financial Planning still empty).
+
+---
+
+## 2026-05-13 — Cycle 17 (bg-full-cycle)
+
+### Phase 0 — Coverage Audit
+Audit of thesis-v3.2 gap map against 115 active pipeline entries (135 SLUG_DATES, some superseded). No 0-company blind spots remain. **11 underrepresented categories** (1–2 companies each) flagged and elevated to mandatory ≥2-search allocation this cycle: S2 Portfolio Construction (1), S3 Trade Structuring (2), S5 Options (1), S6 Execution (1), S7 Position Monitoring (1, archetype-displaced), S8 Financial Planning (1 adjacent), S9 Behavioural Coaching (1), S10 Post-Trade (1, voted 2★), P5 Audit & Explainability (1), R1 Retail Derivatives (1, Elastics), Tokenization (2). Well-covered set (≥10): Personal Agent / S-Front (18), Compliance (19), AI Safety (18), Orchestration (16), Auth (12), S1 Research (10), Tax (10) — maintenance-mode for this cycle.
+
+### Phase 1 — Learn
+Vote corpus stable at 89 strategic ratings since cycle 16 (May 10). One new outreach marker only: `gradient-labs` 0★ on 2026-05-11 ("Aaron wants to take them in"). Per the cycle-15 convention, 0★+followup is operational deal-flow tracking, not a strategic preference signal. No new near-misses. No preference weight changes. preferences.md picks up a cycle-17 stamp; content otherwise unchanged.
+
+### Phase 2 — Strategise
+No thesis structural change. v3.2 architecture (May 8) remains intact. The cycle-17 versioning entry simply logs the audit result and reaffirms that the v3.0 operational backlog around specialist agents continues to be the primary scouting target. The fact that the underrepresented set has not shrunk since v3.2 confirms the underlying issue is supply-side seed scarcity for specialist agents, not a search-architecture problem.
+
+### Phase 3 — Arm
+No regeneration. bg-search-terms.md v5.6 (May 8) remains canonical. Added a cycle-17 override note at the top of the file noting the 11 elevated categories — override is binding for this cycle only.
+
+### Phase 4 — Scout
+Searched the 11 elevated categories plus a few maintenance categories. Most strong candidates that surfaced (Elastics, Autonomous, WealthAi, Marloo, Mogul, WarrenAI) were either already in pipeline, parent-affiliated (entity-level archetype check fail — WarrenAI is an Investing.com product), or filter-fail (WealthAi as wealth-management-OS, Mogul as artist-side tooling rather than retail investable surface).
+
+**Two new pipeline entries:**
+
+- **ANote Music** (R3 Tokenization, Luxembourg, EU) — score 70. European music royalty marketplace; €2M+ in royalties distributed in 2026 alone; 36 catalogues live; $4.9M total raised including Luxembourg Ministry of the Economy backing. Direct fit with Research mandate #3 (turning previously-uninvestable surfaces into investable surfaces). Second R3 candidate after Wealthyhood. Friction: founded 2018 (late-seed by age) and Algorand-adjacent stack may flag as crypto-adjacent.
+- **Skyfire** (KYA + Payment Rails, San Francisco, USA) — score 67. KYA-native payment rails with the KYAPay open standard. $9.5M total seed with Neuberger Berman, Inception Capital, Arrington Capital. Founded 2023. Flagged with archetype-slot displacement against Vouched (5★) and Nava (5★); the KYAPay open-standard angle is the genuine differentiator.
+
+**Specialist-agent vs platform-infrastructure split (this cycle's adds):** 0 specialist agents, 1 research-mandate / tokenization, 1 platform infrastructure (KYA + payment rails). The structural imbalance noted in v3.0 persists — specialist agent supply remains thin at seed.
+
+**Phase 0 effectiveness:** The audit successfully directed scout effort to underrepresented cells. R3 Tokenization gained ANote Music as a second entry. None of the S2–S10 underrepresented cells gained a second entry — confirming the supply-side scarcity diagnosis. The pattern continues: the radar is finding maintenance-category and infrastructure candidates at seed; specialist agents need a different sourcing strategy (accelerator batches, founder-vocabulary on Product Hunt / Show HN, technical-artefact-first GitHub scans).
+
+### Phase 5 — Publish
+8 files pushed to dpowert2/Bene_Gesserit in a single commit: 2026-05-13.html (new briefing), index.html (latest run card), startups-data.js (two new pipeline entries at top + SLUG_DATES update), changelog.html (4 cycle-17 entries — system, preferences, thesis, scoring), config/preferences.md (cycle-17 stamp), config/thesis.md (cycle-17 versioning entry), config/bg-search-terms.md (cycle-17 override note), learning/votes.json (refreshed vote cache, redacted). Privacy check passed pre-push after two name redactions in votes.json.
+
+### Drift signals
+- Specialist-agent supply-side scarcity at seed continues. Two consecutive cycles (16, 17) have produced zero specialist-agent adds. The v3.1 "execution-gap fix" worked for the May 7 seed pass but has not produced repeat yields. The Phase-4 blind-spot protocol surfaced no new specialist candidates this cycle.
+- Tokenization (R3 + R3-adjacent) is starting to coalesce as a coverage area: Wealthyhood (R3) + ANote Music (R3) + TYTL (Tokenization 5★ archetype) + Noise (5★) form a real cluster. Worth a dedicated R3 sweep next cycle.
+- Archetype-slot displacement now has a second confirming case (Skyfire flagged against Vouched/Nava at carding time, not at vote time). If Dave votes Skyfire 3–4★ with a slot-displacement note, the pattern formalises at n=2 and graduates to a formal scoring penalty.
+
+### Recommendations
+- **Highest-value votes to cast:** ANote Music and Skyfire are the only new entries; both worth a quick read. Skyfire is the more interesting test — does archetype-slot displacement actually depress the vote, or does the KYAPay open-standard angle redeem it?
+- **Emerging themes to watch:** prediction-market specialist agents (Elastics + Roundhill/Bitwise/GraniteShares ETF launch); KYA open standards (KYAPay, ERC-8004) as a sub-theme inside Agent Auth; music royalties as a clean Research-mandate-#3 sub-cluster.
+- **Next cycle's highest-leverage action:** dedicated R3 sweep (real estate + music royalty + private credit + collectibles), since the Tokenization gap now has 3 candidates and is showing cluster behaviour. Also re-run the Phase-4 blind-spot protocol against S2 and S8 — the two cells where it has not yet been applied with founder-vocabulary on Product Hunt / Show HN.
