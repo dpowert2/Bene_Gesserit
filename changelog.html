@@ -324,6 +324,75 @@ footer p {
 
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
+    <span class="entry-date">2026-05-13</span>
+    <span class="entry-badge badge-system">Cycle 17 — Coverage Audit</span>
+    <span class="entry-source">bg-full-cycle Phase 0</span>
+  </div>
+  <div class="entry-title">11 underrepresented thesis categories detected — all elevated to mandatory ≥2-search allocation this cycle</div>
+  <div class="entry-body">
+    <p>The cycle opened with a structural audit comparing the v3.2 thesis gap map against actual pipeline counts. No 0-company blind spots remain (every thesis category now has at least one entry), but 11 categories sit at 1–2 pipeline companies and were elevated to mandatory search allocation this cycle as a binding Phase-4 constraint.</p>
+    <p><strong>Underrepresented (1–2 companies):</strong> S2 Portfolio Construction (1), S3 Trade Structuring (2), S5 Options &amp; Derivatives (1), S6 Execution (1), S7 Position Monitoring (1 — archetype-displaced by Edgehound on S1), S8 Financial Planning (1 adjacent), S9 Behavioural Coaching (1), S10 Post-Trade (1, voted 2★), P5 Audit &amp; Explainability (1), R1 Retail Derivatives (1), Tokenization (2). All received at least 2 web searches this cycle regardless of normal scan frequency.</p>
+    <p><strong>Well-covered (≥10):</strong> Personal Agent / S-Front (18), Compliance (19), AI Safety (18), Orchestration (16), Auth &amp; Security (12), S1 Research &amp; Signal (10), Tax (10). These dropped to maintenance mode for this cycle.</p>
+    <p><strong>Override scope:</strong> binding for this cycle only. Does not change <code>config/bg-search-terms.md</code> permanently; the file picks up a cycle-stamp note at the top noting the elevation.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Gap-count extraction from <code>startups-data.js</code> (135 SLUG_DATES entries, 115 active pipeline entries). Counts cross-checked against thesis v3.2 gap map. Vote corpus stable at 89 strategic ratings (Turso fetch confirmed 19 ★★★★★ / 11 ★★★★ / 8 ★★★ / 16 ★★ / 22 ★).
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="preferences">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-13</span>
+    <span class="entry-badge badge-preferences">Preferences</span>
+    <span class="entry-source">bg-full-cycle Phase 1</span>
+  </div>
+  <div class="entry-title">No new strategic votes since cycle 16; one outreach marker added (gradient-labs 0★, 2026-05-11)</div>
+  <div class="entry-body">
+    <p>Vote corpus stable at 89 strategic ratings — no new star ratings, no new near-misses, no preference weight changes. One new 0★ outreach marker for <code>gradient-labs</code> ("Aaron wants to take them in, a colleague was supposed to followup"), which is operational deal-flow tracking per the cycle-15 0★+followup convention rather than a strategic preference signal.</p>
+    <p>The preferences.md file picks up a cycle-17 stamp noting the stability; no other content change.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    <code>scripts/fetch-votes-from-turso.py</code> output: "Got 89 rows. ★★★★★ 19  ★★★★ 11  ★★★ 8  ★★ 16  ★ 22 — notes: 74  follow-ups: 39  archived: 37." Most recent vote: gradient-labs 2026-05-11T08:01:38.880Z.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="thesis">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-13</span>
+    <span class="entry-badge badge-thesis">Thesis</span>
+    <span class="entry-source">bg-full-cycle Phase 2</span>
+  </div>
+  <div class="entry-title">v3.2 cycle-17 versioning entry — no structural change; underrepresentation logged as continuing operational backlog</div>
+  <div class="entry-body">
+    <p>No thesis structural change this cycle. The v3.2 architecture (May 8) remains fully intact: three-team mandate (Research / Studio / Greens), specialist agent vs platform infrastructure split, novelty gate as lead criterion, entity-level archetype check, hard filters in force. The cycle-17 versioning entry simply logs the coverage-audit result and reaffirms that the v3.0 operational backlog around specialist agents (S2/S3/S5/S6/S7/S8/S9/S10) continues to be the primary scouting target.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Phase 0 Coverage Report (this run). Underrepresented set has not shrunk since v3.2 was authored, confirming the underlying issue is supply-side scarcity at seed for specialist agents, not a search-architecture problem.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="scoring">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-13</span>
+    <span class="entry-badge badge-scoring">Pipeline Adds</span>
+    <span class="entry-source">bg-full-cycle Phase 4</span>
+  </div>
+  <div class="entry-title">Two new pipeline entries: ANote Music (R3 Tokenization, score 70) and Skyfire (KYA + Payment Rails, score 67, archetype-displaced)</div>
+  <div class="entry-body">
+    <p><strong>ANote Music</strong> (R3 — Tokenization &amp; Fractionalization, Luxembourg): European music royalty investment platform with full-stack coverage — issuance, marketplace, and secondary in one regulated EU vehicle. €2M+ in royalties distributed in 2026 alone; 36 catalogues live; $4.9M total raised including Luxembourg Ministry of the Economy backing. Direct fit with Research mandate #3 (turning previously-uninvestable surfaces into investable surfaces). Second R3 candidate after Wealthyhood. Score 70. Friction: founded 2018 (closer to late-seed than early); Algorand-adjacent stack could trip the crypto-adjacent filter.</p>
+    <p><strong>Skyfire</strong> (KYA + Payment Rails, San Francisco): KYA-native payment rails for the AI agent economy with the KYAPay open standard as a community-governed alternative to Visa TAP / Trulioo DPA / Sumsub / ERC-8004. $9.5M total seed with Neuberger Berman, Inception Capital, Arrington Capital. Score 67. <strong>Flagged with archetype-slot displacement:</strong> KYA already covered by Vouched (5★, $17M Series A March 2026) and Payment Rails by Nava (5★) + Natural (4★). The cycle-15 archetype-displacement pattern (Quartr 4★ vs Edgehound) predicts this candidate will likely score below merit because the slots are filled. The KYAPay open-standard angle is the differentiator — analogous to the APEX Standard signal in execution.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    ANote Music: <a href="https://www.anotemusic.com/news/articles/2-million-in-royalties-distributed-the-breakdown-behind-anote-musics-payout-growth">anotemusic.com royalty distribution announcement</a>; <a href="https://www.eu-startups.com/2020/07/luxembourg-based-anote-music-launches-its-music-royalties-investment-platform/">EU-Startups launch coverage</a>. Skyfire: <a href="https://techcrunch.com/2024/08/21/skyfire-lets-ai-agents-spend-your-money/">TechCrunch coverage</a>; <a href="https://stellagent.ai/insights/skyfire-kyapay-know-your-agent">Stellagent KYAPay framework explainer</a>; <a href="https://thefintechtimes.com/new-skyfire-solution-enables-ai-agents-to-authenticate-themselves-as-genuine-paying-customers/">The Fintech Times</a>.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
     <span class="entry-date">2026-05-07</span>
     <span class="entry-badge badge-system">Manual Kanban Conversions</span>
     <span class="entry-source">"process pending kanban adds" — bene-gesserit-card flow</span>
