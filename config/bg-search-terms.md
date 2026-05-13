@@ -2,6 +2,8 @@
 *Generated: 2026-05-08 | thesis-schema v1.0 | Thesis v3.2*  
 *DO NOT EDIT — regenerate via generate-search-terms skill.*
 
+**Cycle 17 override (2026-05-13):** Phase 0 coverage audit elevated the following categories to mandatory ≥2-search allocation this cycle regardless of normal scan frequency: **S2 Portfolio Construction, S3 Trade Structuring, S5 Options & Derivatives, S6 Execution, S7 Position Monitoring, S8 Financial Planning, S9 Behavioural Coaching, S10 Post-Trade, P5 Audit & Explainability, R1 Retail Derivatives, R3 Tokenization**. Override is for this cycle only — does not change the file content.
+
 ---
 
 ## How to Read This File
