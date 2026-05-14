@@ -551,7 +551,7 @@
     }
   },
   "regen_pending": false,
-  "last_run": "2026-05-12",
+  "last_run": "2026-05-14",
   "query_hits": {
     "S1_layer4a_yc": 1,
     "S3_layer4a_yc_w26": 1,
@@ -571,5 +571,6 @@
       "S10"
     ],
     "note": "Six cycles of S-gap desert in public press. Recommend Show HN / Product Hunt / GitHub deep-scan next cycle."
-  }
+  },
+  "cycle_number": 16
 }
