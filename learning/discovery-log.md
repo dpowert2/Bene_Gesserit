@@ -4,6 +4,43 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Thesis Review — 2026-05-15 (Cycle 18)
+
+### Feedback Processed
+- `bg_thesis_feedback` (Supabase, project `iyoseurwycryykrnlbig`) **unreachable again** — `execute_sql` returned "Connection terminated due to connection timeout" on both attempts (full SELECT and count query). This is the **fifth consecutive cycle** the Supabase channel has timed out (cycles 14–18). No `feedback_type='thesis'` row has ever been logged; the table holds only the 2026-04-14 test row. Treated as no-op, proceeded on vote signal alone. **The Supabase deprecation recommendation now stands across five cycles — this last Supabase dependency should be retired or migrated to Turso.**
+
+### Vote Signals
+- Live Turso fetch via `scripts/fetch-votes-from-turso.py`: **94 entries** (77 voted: 20 ★★★★★ / 11 ★★★★ / 8 ★★★ / 16 ★★ / 22 ★ + 17 outreach-marker 0★). Net delta since cycle 17: **+5 entries** — 1 net-new star rating, 4 new 0★ outreach markers, plus several re-vote annotations on existing entries.
+- **anote-music 5★** (2026-05-13, no note) — net-new star rating. European music-royalty marketplace, R3 Tokenization, carded cycle 17 at score 70. First upvote anywhere in the R3 cell and the first vote-confirmed entry on the music-IP surface Research mandate #3 explicitly names. A clean, note-free confirmation of the category.
+- **resistant-ai re-vote** (2026-05-13) — note added: "Novel and love the agentic security angle. Going to kill this - too late stage. Should have caught it earlier - Dave." The 5★ on the angle stands, but the company is killed as a deal on stage grounds. Strategically notable: this is the first "5★-but-killed-on-stage" case — a genuine thesis-fit upvote dropped at the deal stage, not a downvote. Contrast with linx-security (94→2★, which at least downvoted).
+- **4 new 0★ outreach markers** — serveusai, platform1online, contextbases, openbox (all 2026-05-14, followup=true, no notes). Operational deal-flow markers per the established cycle-15 carve-out; non-strategic. ("openbox" is a distinct slug from the existing "openbox-ai" 3★ pivot-candidate.)
+- **Re-vote annotations on existing entries** (nava, solvapay, deeploy, ralio, alomana, geordie) — outreach/deal-funnel progress notes (contact attempts, meetings, NDA status). The deeploy note ("Geordie is a more mature solution. We may say no to Deeploy if Geordie show more interest") is a competitive deal-funnel comparison, not a thesis-level signal. None require thesis change.
+
+### Thesis Changes (v3.2 → v3.3)
+Surgical edits, five locations:
+1. **Header paragraph** — version bumped to 3.3; cycle 18 summary.
+2. **Research sub-area 3** — added ANote Music 5★ as a vote-confirmation line; first upvote in the R3 Tokenization / music-IP cell.
+3. **Challenge signal #4** — annotated: Resistant-AI's 5★ on the angle stands but the company was killed as a deal on stage; the miss is a process signal that the stage gate must fire at carding.
+4. **Cycle 15 tracked-patterns block** — added new tracked pattern "stage gate fires too late" (resistant-ai, sample-of-one).
+5. **Learned preferences header + versioning table** — vote count 89 → 94; v3.3 row added.
+No gap-map structural changes, no new hard gates, no team-mandate edits. The corpus growth is calibration data, not direction change.
+
+### Preferences Changes
+- Header rewritten with cycle 18 summary; count 89 → 94.
+- Strong Negative Signal #3 (Series B+/Over-Funded) — added resistant-ai as evidence plus a "stage gate fires too late" process-signal note (apply the stage check at carding, not post-vote).
+- Emerging Preferences — added "R3 Tokenization / music-IP surface — first vote confirmation (anote-music 5★)"; tracking toward a formal positive signal at a second R3 upvote.
+
+### Confidence
+- **High** on the no-op-on-direction assessment — only 1 net-new star rating, note-free, confirming an existing thesis sub-area; the 4 outreach markers are explicitly non-strategic.
+- **Medium** on the "stage gate fires too late" pattern — sample-of-one (resistant-ai) with linx-security as a close analogue; flagged as tracked, not formalised.
+- **High** on the Supabase deprecation recommendation — five consecutive timeouts, zero useful data ever.
+
+### Action for Downstream Tasks
+- `bg-search-terms-update` should treat the thesis as **substantively unchanged** — the v3.3 edits are calibration annotations (one vote confirmation, one challenge-signal note), not new gap categories or search-surface changes. A carry-forward is sufficient; the standing R3-sweep recommendation from cycle 17 remains the highest-leverage next action.
+- **Migration item still flagged:** retire the Supabase `bg_thesis_feedback` channel — fifth consecutive dead cycle.
+
+---
+
 ## Thesis Review — 2026-05-12 (Cycle 17)
 
 ### Feedback Processed
@@ -1225,3 +1262,61 @@ Searched the 11 elevated categories plus a few maintenance categories. Most stro
 - **Highest-value votes to cast:** ANote Music and Skyfire are the only new entries; both worth a quick read. Skyfire is the more interesting test — does archetype-slot displacement actually depress the vote, or does the KYAPay open-standard angle redeem it?
 - **Emerging themes to watch:** prediction-market specialist agents (Elastics + Roundhill/Bitwise/GraniteShares ETF launch); KYA open standards (KYAPay, ERC-8004) as a sub-theme inside Agent Auth; music royalties as a clean Research-mandate-#3 sub-cluster.
 - **Next cycle's highest-leverage action:** dedicated R3 sweep (real estate + music royalty + private credit + collectibles), since the Tokenization gap now has 3 candidates and is showing cluster behaviour. Also re-run the Phase-4 blind-spot protocol against S2 and S8 — the two cells where it has not yet been applied with founder-vocabulary on Product Hunt / Show HN.
+
+---
+
+## Search Terms Regeneration — 2026-05-15
+
+**Source:** thesis-schema.yaml v1.0
+**Thesis version:** v3.3
+**Combined hash:** f9736fc9b77bbc9bf4738ca2c7ad3a2c636b3efd2b669a0cac11b5122b7562d5  (thesis.md + thesis-schema.yaml)
+**Search terms version:** 5.6 → 5.7
+**Total queries:** 5319 (5280 gap-layer queries + 39 sweep queries)
+**Layer breakdown:** L1_generic=132 | L1_targeted_press=708 | L1c_hubs=185 | L1d_third_party=32 | L1e_novelty=22 | L2=176 | L3=154 | L4=3871 (4a=273, 4b=2522, 4c=528, 4d=357, 4e=191)
+
+**Trigger:** Combined hash mismatch — thesis.md updated v3.2 → v3.3 (Cycle 18 vote-corpus refresh). thesis-schema.yaml source lists unchanged, so all 5,319 query lines are byte-identical to v5.7's predecessor; only the version header, the stale Cycle-17 override note (dropped on full overwrite), and the SEARCH STATE footer changed.
+
+### Sources active this cycle
+- Press sources (Layer 1b): 70 sites — 17 high-priority (fintech.global, Sifted, TechCrunch, EU-Startups, SiliconANGLE, tech.eu, Finextra, PYMNTS, Tech Funding News, Crunchbase News, Mam Startup, 150sec, TheRecursive, Silicon Republic, Paperjam, AIN.ua, Startit)
+- Accelerators (Layer 4a): 13 sites — YC, EF, Antler, Mouro, Plug and Play, Techstars, Seedcamp, Notion Capital, Index, Balderton, Atomico, South Park Commons, On Deck
+- Layer 2 sources: 4 — Product Hunt, Show HN, BetaList, Indie Hackers
+- Layer 3 sources: GitHub MCP (primary, sort=updated, pushed:>2026-03-01) + 3 fallback surfaces (github.com topics, huggingface.co, gitlab.com)
+- Layer 4b seed VCs: 117 | Layer 4c university spin-outs: 24 | Layer 4d competitions: 18 | Layer 4e startup databases: 14 | Layer 1c innovation hubs: 9
+
+### Quality gate results
+- Layer Completeness: all 22 gaps covered across L1/L2/L3/L4 ✓
+- Vocabulary Diversity: L1 (institutional) / L2 (founder) registers verified distinct ✓
+- Crypto Exclusion: applied to all L1/L4 queries of the 16 gaps with crypto_exclusion: true ✓
+- Third-Party Qualifier: L1d anchor block emitted for all 16 gaps with third_party_qualifier: true ✓
+- Stage Anchoring: all L1a queries stage-qualified (seed / Series A) ✓
+- Geo Weighting: Europe/London/Berlin qualifiers in all europe-first gap L1a blocks ✓
+- Novelty anti-patterns: L1e negation block emitted for all 22 gaps ✓
+
+### Notes
+- Programmatic regeneration: a deterministic generator (thesis-schema.yaml → bg-search-terms.md) was used to guarantee gate compliance. Full diff vs the prior version confirmed zero unintended query changes.
+- search-state.json: thesis_hash, search_terms_version (5.7), search_terms_generated, last_run updated; all 16 tracked query_blocks preserved. No blocks in candidate_quarantine (streak ≥6) or high_yield status, so no deprecation/expansion actions taken.
+- Privacy check: config/bg-search-terms.md and config/search-state.json are CLEAN against config/redact-list.txt. (Resolution note 2026-05-16: previously-flagged vote notes in learning/votes.json were redacted by the daily-sync scheduled task to unblock the privacy gate.)
+
+---
+
+## Weekly Strategic Radar — 2026-05-15
+
+### Thesis Drift Detection
+
+**Which gaps are generating the most shortlists vs. passes?** S1 (Research & Signal Intelligence) holds at 100% (3/3) with Kimpton AI re-affirmed and Cohesion pending. Agent Auth 7/14 upvotes. Tax Optimisation 2/9 upvotes, but deal-side conviction on Alomana is softening ("feel more like a consultancy"). Agent Payment Rails 4/12 upvotes with two strong new infrastructure entries (Astrada, Adfin). R3 Tokenization recorded its first upvote (ANote Music 5★) — 1/1 in-cell. Specialist cells S5/S6/S7/S9/S10 remain at one entry each, too thinly voted to compute hit rates, and got no second entries this week.
+
+**Are any search terms producing noise?** Three patterns this week: (1) Wrong-side-of-boundary cards still passing the carding gate — Fenrock AI (bank back-office), Avantos (institutional OS), Marloo (advisor workflow — already 1★), A-Cube (tax filing/compliance) all carded into thesis-shaped categories but sit on the wrong side of the internal/external boundary or the tax filing/efficiency line; the scoring filters catch them but they consume carding budget. Recommend tightening L1 query qualifiers for Compliance and Tax cells. (2) Series A / over-funded cards surfacing in priority cells — Avantos ($25M Series A), Adfin ($18M Series A), Performativ ($14M Series A) all carded despite being past the BG entry window; should be tagged `validator` at carding time, not scored as candidates. (3) Specialist-cell queries are simply dry — S3/S5/S6/S7/S9/S10 logged empty or low-yield in all four briefings; argues for retiring the press-sweep queries for these cells and replacing them with accelerator-batch and Show-HN/Product-Hunt founder-vocabulary lanes.
+
+**Are there new themes that don't fit existing gaps?** No structural gap. The R3 Tokenization cluster (ANote Music + Wealthyhood + TYTL + Noise) has crossed four entries with a vote confirmation — it warrants its own theme cluster (added to theme-clusters.json this cycle) and a dedicated R3 sweep next cycle, but it is a Research-mandate sub-area, not a new gap-map category. The advisor-workflow-automation wave (Marloo, Flanks, Performativ, Savvy) is real but explicitly out of thesis scope — track as an adjacency cluster, do not promote.
+
+**Are any gaps candidates for deprioritisation?** Agent Orchestration (25 detections, 1/10 hit rate, Hard Filter doing all the work) should formally drop from every-scan to monitor cadence — flagged for two cycles now, still not actioned. Agent Authentication is well-covered (14 companies, 7 upvotes) and can move to maintenance cadence. Freed budget should NOT go to another specialist-cell press sweep — that has failed three cycles running — but to accelerator-batch and founder-vocabulary lanes for S5/S6/S9/S10, and to the dedicated R3 sweep.
+
+**Any signals that challenge or complicate the thesis?**
+1. **Stage gate fires too late — Resistant AI killed as a deal despite a 5★.** The week's headline signal. Resistant AI was carded, voted a genuine 5★ on thesis-fit, entered the funnel, then killed at the deal stage purely on stage grounds ("too late stage … should have caught it earlier"). Distinct from the Autonomous radar→outreach walkback (where thesis-fit was weaker than the score implied); here the thesis-fit was real and the stage problem was simply not caught upstream. Operational fix, now overdue: the Series-B+/over-funded check must fire at carding/radar time as a hard pre-filter, not only as a post-vote scoring penalty. This week's carded validators (Avantos, Adfin, Performativ) are exactly the cards that pre-filter should have tagged.
+2. **Specialist-agent supply is genuinely thin — the cycle-15 "execution gap" framing was half right.** The Phase-4 protocol surfaced first entries, but three cycles of zero second entries indicate the press-sweep surface is exhausted for these cells. The "specialist agent desert" is not fully resolved as an operational problem; it is partly a real public-market supply scarcity. The thesis should re-acknowledge this rather than treat the desert as closed.
+3. **Hyperscaler compression of S-Front continues.** OpenAI's Hiro acquisition reinforces last cycle's signal — the consumer front door is being competed for at foundation-model level. The thesis read holds (de-prioritise S-Front relative to S1–S9), but the compression is now a confirmed trend, not a one-off.
+4. **The card networks are funding the rails directly.** Astrada with Visa + Mastercard on the cap table is a sharper version of challenge signal #1 in the thesis ("incumbents claiming agent infrastructure"). Not yet a threat to the platform thesis — Astrada is a startup, not a network-owned product — but it signals the networks intend to shape who builds the rails.
+
+### What I Learned This Week
+
+The most important thing this week was not a discovery — it was a miss. Resistant AI was a real 5★, a genuine thesis-fit, and it still got killed as a deal because nobody caught the stage problem until the deal stage. That tells me the scoring model is calibrated on the *what* (is this thesis-aligned?) but the radar pipeline has no gate on the *when* (is this still shapeable?), and a post-vote penalty is structurally too late to matter. The second lesson is harder to admit: the specialist-agent desert is not the pure execution-gap problem cycle 15 declared it to be. The Phase-4 protocol surfaced first entries by reverse-archetype walking, but three cycles of zero second entries means the public-press seed supply behind those cells is genuinely thin — the founders are in stealth or being absorbed by incumbents. The week's actual signal density was all on the infrastructure side: Agent Payment Rails got two strong new entries and a Visa-plus-Mastercard cap table, while S5/S6/S7/S9/S10 got nothing. The single bright spot that fits the forward-looking thesis is ANote Music's 5★ — the first vote evidence that the R3 tokenization / music-IP surface votes positive, and enough of a cluster now (with Wealthyhood, TYTL, Noise) to justify making the dedicated R3 sweep the next cycle's highest-leverage action instead of another specialist-cell press sweep that the last three cycles have shown will come back empty.
