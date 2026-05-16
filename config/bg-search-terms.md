@@ -1,8 +1,6 @@
-# Bene Gesserit — Search Terms v5.6
-*Generated: 2026-05-08 | thesis-schema v1.0 | Thesis v3.2*  
+# Bene Gesserit — Search Terms v5.7
+*Generated: 2026-05-15 | thesis-schema v1.0 | Thesis v3.3*  
 *DO NOT EDIT — regenerate via generate-search-terms skill.*
-
-**Cycle 17 override (2026-05-13):** Phase 0 coverage audit elevated the following categories to mandatory ≥2-search allocation this cycle regardless of normal scan frequency: **S2 Portfolio Construction, S3 Trade Structuring, S5 Options & Derivatives, S6 Execution, S7 Position Monitoring, S8 Financial Planning, S9 Behavioural Coaching, S10 Post-Trade, P5 Audit & Explainability, R1 Retail Derivatives, R3 Tokenization**. Override is for this cycle only — does not change the file content.
 
 ---
 
@@ -6602,5 +6600,7 @@ https://www.piratesummit.com  # Pirate Summit
 ---
 
 ## SEARCH STATE
-*Last generated: 2026-05-08*
-*Combined hash (thesis.md + thesis-schema.yaml): 98cb6f16f79e3b11a0610deda0c5e8abf327b9142151427fb6187753704e7ca1*
+*Last generated: 2026-05-15*
+*Combined hash (thesis.md + thesis-schema.yaml): f9736fc9b77bbc9bf4738ca2c7ad3a2c636b3efd2b669a0cac11b5122b7562d5*
+*Total queries: 5319*
+*Search terms version: 5.7*
