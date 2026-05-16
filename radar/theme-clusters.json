@@ -1,64 +1,285 @@
 {
-  "generated": "2026-05-08",
-  "previous_generated": "2026-04-27",
-  "cycle": 15,
+  "generated": "2026-05-15",
+  "previous_generated": "2026-05-08",
+  "cycle": 18,
   "clusters": [
     {
       "gap": "Agent Authentication & Security",
       "theme": "Agent Identity as Regulated Infrastructure",
       "count": 13,
-      "companies": ["alter", "oasis-security", "t54-labs", "sapiom", "keycard", "venice-security", "linx-security", "runlayer", "aembit", "astrix-security", "bank-of-bots", "vouched", "alien"],
+      "companies": [
+        "alter",
+        "oasis-security",
+        "t54-labs",
+        "sapiom",
+        "keycard",
+        "venice-security",
+        "linx-security",
+        "runlayer",
+        "aembit",
+        "astrix-security",
+        "bank-of-bots",
+        "vouched",
+        "alien"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Zero-trust per-call AuthN/AuthZ", "companies": ["alter"], "status": "ongoing"},
-        {"name": "Non-human identity (NHI) management", "companies": ["oasis-security", "linx-security", "astrix-security"], "status": "ongoing"},
-        {"name": "Agent identity standards and developer tools", "companies": ["t54-labs"], "status": "ongoing", "vote_signal": "5★ reaffirmed cycle 15"},
-        {"name": "Agent identity + payment rails", "companies": ["sapiom"], "status": "ongoing"},
-        {"name": "Cryptographic agent identity binding (Auth0/Okta pedigree)", "companies": ["keycard"], "status": "ongoing", "vote_signal": "5★ reaffirmed cycle 15"},
-        {"name": "Unified PAM across human/machine/AI identities", "companies": ["venice-security"], "status": "ongoing"},
-        {"name": "MCP security gateway — agent-to-tool authentication", "companies": ["runlayer"], "status": "ongoing"},
-        {"name": "Ephemeral task-scoped agent credentials (workload IAM)", "companies": ["aembit"], "status": "ongoing"},
-        {"name": "Financial infrastructure for AI agents as primary account holders", "companies": ["bank-of-bots"], "status": "ongoing"},
-        {"name": "KYA (Know Your Agent) platform with MCP-Identity", "companies": ["vouched"], "status": "ongoing", "vote_signal": "5★ confirmed"},
-        {"name": "Facial-recognition-anchored Agent ID with derived identity for AI agents", "companies": ["alien"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "Zero-trust per-call AuthN/AuthZ",
+          "companies": [
+            "alter"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Non-human identity (NHI) management",
+          "companies": [
+            "oasis-security",
+            "linx-security",
+            "astrix-security"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent identity standards and developer tools",
+          "companies": [
+            "t54-labs"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ reaffirmed cycle 15"
+        },
+        {
+          "name": "Agent identity + payment rails",
+          "companies": [
+            "sapiom"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Cryptographic agent identity binding (Auth0/Okta pedigree)",
+          "companies": [
+            "keycard"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ reaffirmed cycle 15"
+        },
+        {
+          "name": "Unified PAM across human/machine/AI identities",
+          "companies": [
+            "venice-security"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "MCP security gateway — agent-to-tool authentication",
+          "companies": [
+            "runlayer"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Ephemeral task-scoped agent credentials (workload IAM)",
+          "companies": [
+            "aembit"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Financial infrastructure for AI agents as primary account holders",
+          "companies": [
+            "bank-of-bots"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "KYA (Know Your Agent) platform with MCP-Identity",
+          "companies": [
+            "vouched"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ confirmed"
+        },
+        {
+          "name": "Facial-recognition-anchored Agent ID with derived identity for AI agents",
+          "companies": [
+            "alien"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
-      "notes": "Alien added cycle 15 — first new entry since Vouched closed the gap. Facial-recognition surface is unusual; the Agent ID derivation model is closer to Vouched's KYA architecture than to Keycard's cryptographic binding. T54 and Keycard both reaffirmed at 5★ in cycle 15 vote pass."
+      "notes": "Alien added cycle 15 — first new entry since Vouched closed the gap. Facial-recognition surface is unusual; the Agent ID derivation model is closer to Vouched's KYA architecture than to Keycard's cryptographic binding. T54 and Keycard both reaffirmed at 5★ in cycle 15 vote pass. Cycle 18: Alien (San Francisco, $7.1M pre-seed) confirmed in cell. Gap well-covered (14 companies, 7 upvotes) — recommend move to maintenance cadence."
     },
     {
       "gap": "Agent Payment Rails",
       "theme": "Agent Payment Infrastructure Stack",
-      "count": 10,
-      "companies": ["sapiom", "crossmint", "inflow", "natural", "circuit-chisel", "ralio", "nava", "solvapay", "sponge", "paygentic"],
+      "count": 12,
+      "companies": [
+        "sapiom",
+        "crossmint",
+        "inflow",
+        "natural",
+        "circuit-chisel",
+        "ralio",
+        "nava",
+        "solvapay",
+        "sponge",
+        "paygentic",
+        "astrada",
+        "adfin"
+      ],
       "first_seen": "2026-03-29",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "End-to-end agentic payments: wallets, virtual cards, stablecoin, KYA credentials", "companies": ["crossmint"], "status": "ongoing"},
-        {"name": "Agent onboarding and policy-compliant credentialing at point of action", "companies": ["inflow"], "status": "ongoing"},
-        {"name": "Agent identity + payment rails (earlier entry)", "companies": ["sapiom"], "status": "ongoing"},
-        {"name": "B2B agentic payment rails for autonomous vendor/invoice/procurement", "companies": ["natural"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "Agent Transaction Protocol (ATXP) — open payment standard for agents", "companies": ["circuit-chisel"], "status": "ongoing"},
-        {"name": "Programmable payment rails with tokenised identity (UK)", "companies": ["ralio"], "status": "ongoing", "vote_signal": "5★ reaffirmed cycle 15"},
-        {"name": "Blockchain-anchored escrow + policy + dispute (multi-gap US)", "companies": ["nava"], "status": "ongoing", "vote_signal": "5★ confirmed"},
-        {"name": "Machine-native European payment rails for agentic commerce", "companies": ["solvapay"], "status": "ongoing", "vote_signal": "5★ confirmed cycle 15"},
-        {"name": "Per-agent bank accounts + cards + crypto wallets (ex-Stripe Crypto trio, YC W26)", "companies": ["sponge"], "status": "new", "vote_signal": "pending"},
-        {"name": "Agentic payments infrastructure (Irish co-founded)", "companies": ["paygentic"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "End-to-end agentic payments: wallets, virtual cards, stablecoin, KYA credentials",
+          "companies": [
+            "crossmint"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent onboarding and policy-compliant credentialing at point of action",
+          "companies": [
+            "inflow"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Agent identity + payment rails (earlier entry)",
+          "companies": [
+            "sapiom"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "B2B agentic payment rails for autonomous vendor/invoice/procurement",
+          "companies": [
+            "natural"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★"
+        },
+        {
+          "name": "Agent Transaction Protocol (ATXP) — open payment standard for agents",
+          "companies": [
+            "circuit-chisel"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Programmable payment rails with tokenised identity (UK)",
+          "companies": [
+            "ralio"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ reaffirmed cycle 15"
+        },
+        {
+          "name": "Blockchain-anchored escrow + policy + dispute (multi-gap US)",
+          "companies": [
+            "nava"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ confirmed"
+        },
+        {
+          "name": "Machine-native European payment rails for agentic commerce",
+          "companies": [
+            "solvapay"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ confirmed cycle 15"
+        },
+        {
+          "name": "Per-agent bank accounts + cards + crypto wallets (ex-Stripe Crypto trio, YC W26)",
+          "companies": [
+            "sponge"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Agentic payments infrastructure (Irish co-founded)",
+          "companies": [
+            "paygentic"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Card-network-native payment rails for agent-driven spend (Visa + Mastercard strategic investors)",
+          "companies": [
+            "astrada"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Agentic B2B money movement — agents as autonomous invoice negotiators",
+          "companies": [
+            "adfin"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
-      "notes": "Two new entries cycle 15 — Sponge (YC W26) and Paygentic (Ireland) bring count to 10. European cluster now 4-strong (Solvapay, Ralio, Paygentic, plus partial Solvapay-Stockholm presence). UK PSR consultation announcement (April 21) is the largest external tailwind to this cell ever. Solvapay 5★ confirmed via re-vote ('waiting on NDA'); Ralio reaffirmed 5★ ('Dave met and liked them, slightly different, really nice founder')."
+      "notes": "Cycle 18: Astrada (US, $3.8M seed, Visa AND Mastercard both strategic investors — nearly unprecedented at seed) and Adfin (London, $18M Series A, Index Ventures) added. Count 12. P8 is the funded category of the moment — Astrada, Adfin, SolvaPay, Ralio all closed within a 28-day window, each at a distinct layer (rails / money movement / machine-native rails / guardrails). European cluster now 4-strong (SolvaPay, Ralio, Paygentic, Adfin)."
     },
     {
       "gap": "AI Safety & Guardrails",
       "theme": "Agentic Guardrails as Regulated Infrastructure",
       "count": 5,
-      "companies": ["kai", "guardrails-ai", "openbox-ai", "portia-ai", "pallma-ai"],
+      "companies": [
+        "kai",
+        "guardrails-ai",
+        "openbox-ai",
+        "portia-ai",
+        "pallma-ai"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Agentic cybersecurity (IT/OT)", "companies": ["kai"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "Open-source guardrails framework", "companies": ["guardrails-ai"], "status": "ongoing"},
-        {"name": "Enterprise AI trust platform with agent lifecycle governance (ex-BlackRock)", "companies": ["openbox-ai"], "status": "ongoing", "vote_signal": "3★ — pivot-candidate, NDA + demo booked"},
-        {"name": "Open-source SDK for predictable, controllable agents in regulated industries (ex-Stripe UK CTO, GC-backed)", "companies": ["portia-ai"], "status": "new", "vote_signal": "pending"},
-        {"name": "Real-time threat detection + prompt-injection defence for autonomous agents (Greek-origin, London)", "companies": ["pallma-ai"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "Agentic cybersecurity (IT/OT)",
+          "companies": [
+            "kai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★"
+        },
+        {
+          "name": "Open-source guardrails framework",
+          "companies": [
+            "guardrails-ai"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Enterprise AI trust platform with agent lifecycle governance (ex-BlackRock)",
+          "companies": [
+            "openbox-ai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "3★ — pivot-candidate, NDA + demo booked"
+        },
+        {
+          "name": "Open-source SDK for predictable, controllable agents in regulated industries (ex-Stripe UK CTO, GC-backed)",
+          "companies": [
+            "portia-ai"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Real-time threat detection + prompt-injection defence for autonomous agents (Greek-origin, London)",
+          "companies": [
+            "pallma-ai"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "Two new entries cycle 15 — Portia AI (£4.4M seed, GC + First Minute, regulated industries primary use case) and Pallma AI (£1.36M pre-seed, Greek-origin London-HQ). First new candidates since Overmind was archived. Portia is the strongest finserv-fit candidate for the gap. Capsule Security (cycle 12 carry-over, BG 89) remains the strongest unvoted candidate."
     },
@@ -66,11 +287,20 @@
       "gap": "AI Safety & Guardrails",
       "theme": "Adjacent — Physical AI Safety (NOT Finserv)",
       "count": 1,
-      "companies": ["saif"],
+      "companies": [
+        "saif"
+      ],
       "first_seen": "2026-05-07",
       "status": "new",
       "sub_themes": [
-        {"name": "Safety frameworks for physical/autonomous-system AI agents (London, $1.2M pre-seed Fusion Fund)", "companies": ["saif"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "Safety frameworks for physical/autonomous-system AI agents (London, $1.2M pre-seed Fusion Fund)",
+          "companies": [
+            "saif"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "Adjacent to thesis — physical AI rather than financial services. Carded for record-keeping with explicit thesis-mismatch reasoning."
     },
@@ -78,13 +308,39 @@
       "gap": "Compliance",
       "theme": "Compliance Without Disruption",
       "count": 4,
-      "companies": ["sphinx", "uptiq", "complyance", "steward"],
+      "companies": [
+        "sphinx",
+        "uptiq",
+        "complyance",
+        "steward"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Browser-native / no-new-system compliance agents", "companies": ["sphinx", "uptiq"], "status": "ongoing", "vote_signal": "sphinx 3★"},
-        {"name": "AI agents for GRC workflows", "companies": ["complyance"], "status": "ongoing", "vote_signal": "5★ confirmed"},
-        {"name": "Institutional investor compliance (fund-of-funds, family offices)", "companies": ["steward"], "status": "ongoing"}
+        {
+          "name": "Browser-native / no-new-system compliance agents",
+          "companies": [
+            "sphinx",
+            "uptiq"
+          ],
+          "status": "ongoing",
+          "vote_signal": "sphinx 3★"
+        },
+        {
+          "name": "AI agents for GRC workflows",
+          "companies": [
+            "complyance"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ confirmed"
+        },
+        {
+          "name": "Institutional investor compliance (fund-of-funds, family offices)",
+          "companies": [
+            "steward"
+          ],
+          "status": "ongoing"
+        }
       ],
       "notes": "No new additions this week. Steward (Motive Partners, $100B AUM on-platform) remains highest-priority unvoted entry."
     },
@@ -92,23 +348,41 @@
       "gap": "Compliance",
       "theme": "AML / Fraud / Loan Processing Back-Office Agents (banks)",
       "count": 1,
-      "companies": ["fenrock-ai"],
-      "first_seen": "2026-05-08",
-      "status": "new",
-      "sub_themes": [
-        {"name": "Bank back-office compliance overlay (AML, fraud, loan decisioning) at 10x analyst throughput (YC W26)", "companies": ["fenrock-ai"], "status": "new", "vote_signal": "pending"}
+      "companies": [
+        "fenrock-ai"
       ],
-      "notes": "New theme cycle 15. Fenrock AI (YC W26, BG 85) — Charu Sharma (regulated-healthcare API scaling, GC-backed) + Michael Fenrock (Apple privacy ML) team. Unusual depth for bank compliance AI. Risk: framing leans toward institution-overlay rather than external-agent governance — vote will resolve internal-vs-external boundary."
+      "first_seen": "2026-05-08",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Bank back-office compliance overlay (AML, fraud, loan decisioning) at 10x analyst throughput (YC W26)",
+          "companies": [
+            "fenrock-ai"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
+      ],
+      "notes": "New theme cycle 15. Fenrock AI (YC W26, BG 85) — Charu Sharma (regulated-healthcare API scaling, GC-backed) + Michael Fenrock (Apple privacy ML) team. Unusual depth for bank compliance AI. Risk: framing leans toward institution-overlay rather than external-agent governance — vote will resolve internal-vs-external boundary. Cycle 18: Fenrock AI re-confirmed — strong team (regulated-healthcare API scaling + Apple privacy ML) but bank-back-office-facing; clean internal/external boundary test if it goes to a vote."
     },
     {
       "gap": "Compliance",
       "theme": "SOP-Following Customer Operations Agents (Reference Architecture)",
       "count": 1,
-      "companies": ["gradient-labs"],
+      "companies": [
+        "gradient-labs"
+      ],
       "first_seen": "2026-05-07",
       "status": "new",
       "sub_themes": [
-        {"name": "SOP-following compliance agents in regulated banking customer ops (London, Series A $13M)", "companies": ["gradient-labs"], "status": "new", "vote_signal": "0★ outreach — kanban=talked_to, internal champion"}
+        {
+          "name": "SOP-following compliance agents in regulated banking customer ops (London, Series A $13M)",
+          "companies": [
+            "gradient-labs"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach — kanban=talked_to, internal champion"
+        }
       ],
       "notes": "Named in thesis as Reference Architecture. Active conversation — 'teammate wants to take them in'. Series A stage is at the upper edge of the BG window; the reference-architecture status is what keeps the candidate in scope."
     },
@@ -116,12 +390,29 @@
       "gap": "Compliance",
       "theme": "EU Regulatory Compliance Automation",
       "count": 2,
-      "companies": ["hybridity", "regsearch"],
+      "companies": [
+        "hybridity",
+        "regsearch"
+      ],
       "first_seen": "2026-04-03",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "DORA/NIS2/GDPR compliance via agentic workflows", "companies": ["hybridity"], "status": "ongoing", "vote_signal": "3★"},
-        {"name": "Luxembourg-based regulatory AI ('first regulatory AI company')", "companies": ["regsearch"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "DORA/NIS2/GDPR compliance via agentic workflows",
+          "companies": [
+            "hybridity"
+          ],
+          "status": "ongoing",
+          "vote_signal": "3★"
+        },
+        {
+          "name": "Luxembourg-based regulatory AI ('first regulatory AI company')",
+          "companies": [
+            "regsearch"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "Regsearch added cycle 15 — first Luxembourg signal in BG. EU AI Act full enforcement August 2, 2026 adds urgency."
     },
@@ -129,15 +420,54 @@
       "gap": "Compliance",
       "theme": "High-Scale Financial Crime Automation",
       "count": 5,
-      "companies": ["bretton-ai", "unit21", "certivo", "vivox-ai", "variance"],
+      "companies": [
+        "bretton-ai",
+        "unit21",
+        "certivo",
+        "vivox-ai",
+        "variance"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "AML/fraud/KYC at scale (replacement approach)", "companies": ["bretton-ai"], "status": "ongoing", "vote_signal": "3★"},
-        {"name": "Fraud and AML risk operations platform", "companies": ["unit21"], "status": "ongoing"},
-        {"name": "AI compliance automation (supply chain beachhead)", "companies": ["certivo"], "status": "ongoing", "vote_signal": "3★"},
-        {"name": "Atomic agents for auditable AML/KYC tasks", "companies": ["vivox-ai"], "status": "ongoing", "vote_signal": "2★"},
-        {"name": "Autonomous KYC/KYB/AML/fraud agents with full audit trails", "companies": ["variance"], "status": "ongoing"}
+        {
+          "name": "AML/fraud/KYC at scale (replacement approach)",
+          "companies": [
+            "bretton-ai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "3★"
+        },
+        {
+          "name": "Fraud and AML risk operations platform",
+          "companies": [
+            "unit21"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "AI compliance automation (supply chain beachhead)",
+          "companies": [
+            "certivo"
+          ],
+          "status": "ongoing",
+          "vote_signal": "3★"
+        },
+        {
+          "name": "Atomic agents for auditable AML/KYC tasks",
+          "companies": [
+            "vivox-ai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "2★"
+        },
+        {
+          "name": "Autonomous KYC/KYB/AML/fraud agents with full audit trails",
+          "companies": [
+            "variance"
+          ],
+          "status": "ongoing"
+        }
       ],
       "notes": "KYC/AML sub-domain formally penalised (–15 points). SEC 2026 exam priorities flag AI governance. Variance vote pending."
     },
@@ -145,45 +475,151 @@
       "gap": "Compliance",
       "theme": "Regulatory Policy as Executable Infrastructure",
       "count": 2,
-      "companies": ["norm-ai", "worth"],
+      "companies": [
+        "norm-ai",
+        "worth"
+      ],
       "first_seen": "2026-04-03",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Regulatory rules as executable AI policies", "companies": ["norm-ai"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "KYA compliance framework for agent-SMB transactions", "companies": ["worth"], "status": "ongoing"}
+        {
+          "name": "Regulatory rules as executable AI policies",
+          "companies": [
+            "norm-ai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★"
+        },
+        {
+          "name": "KYA compliance framework for agent-SMB transactions",
+          "companies": [
+            "worth"
+          ],
+          "status": "ongoing"
+        }
       ],
       "notes": "Norm-ai 4★ confirms regulatory AI with depth. FIS launched its own KYA framework — validates Worth's positioning but adds incumbent competitive pressure."
     },
     {
       "gap": "Tax Optimisation",
-      "theme": "Portfolio-Integrated Tax Intelligence (DENSEST CLUSTER OF CYCLE 15)",
+      "theme": "Portfolio-Integrated Tax Intelligence",
       "count": 9,
-      "companies": ["hive-tax-ai", "mezzi", "taxdown", "april", "juno", "alomana", "alphathena", "evergreen-wealth", "wallace-finance"],
+      "companies": [
+        "hive-tax-ai",
+        "mezzi",
+        "taxdown",
+        "april",
+        "juno",
+        "alomana",
+        "alphathena",
+        "evergreen-wealth",
+        "wallace-finance"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Tax filing / digital tax returns", "companies": ["taxdown"], "status": "ongoing", "vote_signal": "2★ (tax filing penalty)"},
-        {"name": "Portfolio-native tax optimisation", "companies": ["mezzi", "hive-tax-ai"], "status": "ongoing"},
-        {"name": "Embedded AI tax platform for wealth management", "companies": ["april"], "status": "ongoing", "vote_signal": "3★ — pivot-candidate (cycle 15: 'unless they are interested in providing this as an agent')"},
-        {"name": "AI tax preparation for CPA firms", "companies": ["juno"], "status": "ongoing", "vote_signal": "2★ (tax filing penalty extended)"},
-        {"name": "Autonomous portfolio rebalancing + TLH (archetype)", "companies": ["alomana"], "status": "ongoing", "vote_signal": "5★ reaffirmed — TLH-alone caveat: 'just one of a hundred'"},
-        {"name": "Portfolio optimization platform with tax harvesting feature (multi-feature)", "companies": ["alphathena"], "status": "new", "vote_signal": "4★ NEW — Includes tax harvesting"},
-        {"name": "AI-native RIA with tax-aware direct indexing (Bill Harris $10M self-funded, Alphathena partnership)", "companies": ["evergreen-wealth"], "status": "new", "vote_signal": "0★ outreach — kanban=shortlist"},
-        {"name": "Direct indexing for retail with tax alpha (Alpaca partnership)", "companies": ["wallace-finance"], "status": "new", "vote_signal": "0★ outreach — kanban=shortlist"}
+        {
+          "name": "Tax filing / digital tax returns",
+          "companies": [
+            "taxdown"
+          ],
+          "status": "ongoing",
+          "vote_signal": "2★ (tax filing penalty)"
+        },
+        {
+          "name": "Portfolio-native tax optimisation",
+          "companies": [
+            "mezzi",
+            "hive-tax-ai"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Embedded AI tax platform for wealth management",
+          "companies": [
+            "april"
+          ],
+          "status": "ongoing",
+          "vote_signal": "3★ — pivot-candidate (cycle 15: 'unless they are interested in providing this as an agent')"
+        },
+        {
+          "name": "AI tax preparation for CPA firms",
+          "companies": [
+            "juno"
+          ],
+          "status": "ongoing",
+          "vote_signal": "2★ (tax filing penalty extended)"
+        },
+        {
+          "name": "Autonomous portfolio rebalancing + TLH (archetype)",
+          "companies": [
+            "alomana"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ reaffirmed — TLH-alone caveat: 'just one of a hundred'"
+        },
+        {
+          "name": "Portfolio optimization platform with tax harvesting feature (multi-feature)",
+          "companies": [
+            "alphathena"
+          ],
+          "status": "new",
+          "vote_signal": "4★ NEW — Includes tax harvesting"
+        },
+        {
+          "name": "AI-native RIA with tax-aware direct indexing (Bill Harris $10M self-funded, Alphathena partnership)",
+          "companies": [
+            "evergreen-wealth"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach — kanban=shortlist"
+        },
+        {
+          "name": "Direct indexing for retail with tax alpha (Alpaca partnership)",
+          "companies": [
+            "wallace-finance"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach — kanban=shortlist"
+        }
       ],
-      "notes": "Densest sub-cluster of cycle 15. Alphathena 4★ NEW is second upvote in the cell (alongside Alomana 5★). Alomana revote caveat 'tax harvesting use case is generated by AI and just one of a hundred' tightens the preference: TLH-only candidates score at the low end of the +12 band, full multi-feature portfolio integration at the high end. Cluster anchor: Alphathena ↔ Evergreen Wealth Feb-2026 strategic partnership."
+      "notes": "Densest sub-cluster of cycle 15. Alphathena 4★ NEW is second upvote in the cell (alongside Alomana 5★). Alomana revote caveat 'tax harvesting use case is generated by AI and just one of a hundred' tightens the preference: TLH-only candidates score at the low end of the +12 band, full multi-feature portfolio integration at the high end. Cluster anchor: Alphathena ↔ Evergreen Wealth Feb-2026 strategic partnership. Cycle 18: no new entries. Alomana re-vote annotation softens deal conviction ('feel more like a consultancy at the moment') — 5★ stands but a live radar→outreach-walkback-adjacent signal. A-Cube (Italy) carded adjacent but is tax filing/compliance, fails the –20 boundary."
     },
     {
       "gap": "Audit & Explainability",
       "theme": "AI Governance for Regulatory Conformity Assessment",
       "count": 3,
-      "companies": ["validmind", "alinia", "deeploy"],
+      "companies": [
+        "validmind",
+        "alinia",
+        "deeploy"
+      ],
       "first_seen": "2026-04-10",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "EU AI Act conformity assessment and model governance for finserv agentic AI", "companies": ["validmind"], "status": "ongoing"},
-        {"name": "Backend compliance controller for high-stake AI agents (Barcelona, Mouro/Santander)", "companies": ["alinia"], "status": "ongoing", "vote_signal": "pending"},
-        {"name": "Horizontal AI governance platform with finserv applicability (Netherlands, €1M seed)", "companies": ["deeploy"], "status": "new", "vote_signal": "0★ outreach — in active conversation"}
+        {
+          "name": "EU AI Act conformity assessment and model governance for finserv agentic AI",
+          "companies": [
+            "validmind"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Backend compliance controller for high-stake AI agents (Barcelona, Mouro/Santander)",
+          "companies": [
+            "alinia"
+          ],
+          "status": "ongoing",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Horizontal AI governance platform with finserv applicability (Netherlands, €1M seed)",
+          "companies": [
+            "deeploy"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach — in active conversation"
+        }
       ],
       "notes": "Deeploy added cycle 15. Active conversation — 'had a call with them a few times, still need to put a final decision on it'. EU AI Act high-risk enforcement now 86 days away."
     },
@@ -191,11 +627,19 @@
       "gap": "Pre-Trade Compliance",
       "theme": "AI-Native SEC/FINRA Compliance",
       "count": 1,
-      "companies": ["hadrius"],
+      "companies": [
+        "hadrius"
+      ],
       "first_seen": "2026-04-10",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "YC-backed SEC and FINRA compliance automation for financial firms", "companies": ["hadrius"], "status": "ongoing"}
+        {
+          "name": "YC-backed SEC and FINRA compliance automation for financial firms",
+          "companies": [
+            "hadrius"
+          ],
+          "status": "ongoing"
+        }
       ],
       "notes": "Highest-priority unfilled gap for the fourth consecutive cycle. UK PSR consultation announcement (21 April) is the strongest demand-side tailwind ever recorded for this cell. Active solicitation against accelerator batches and FCA sandbox alumni recommended."
     },
@@ -203,15 +647,54 @@
       "gap": "Dispute Resolution & Agent Liability",
       "theme": "Agent Insurance and Certification",
       "count": 5,
-      "companies": ["armilla", "aiuc", "mount-insurance", "klaimee", "testudo"],
+      "companies": [
+        "armilla",
+        "aiuc",
+        "mount-insurance",
+        "klaimee",
+        "testudo"
+      ],
       "first_seen": "2026-04-10",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Lloyds-backed insurance for AI agent-caused losses", "companies": ["armilla"], "status": "ongoing"},
-        {"name": "First AI agent certification standard (AIUC-1) — ex-Anthropic founder", "companies": ["aiuc"], "status": "ongoing"},
-        {"name": "Insurer for the agent economy (archetype)", "companies": ["mount-insurance"], "status": "ongoing", "vote_signal": "5★"},
-        {"name": "Agent certification + AI-native liability coverage (self-serve)", "companies": ["klaimee"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "Litigation-data-driven AI liability insurance (Lloyd's Lab cohort, $9.25M capacity)", "companies": ["testudo"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "Lloyds-backed insurance for AI agent-caused losses",
+          "companies": [
+            "armilla"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "First AI agent certification standard (AIUC-1) — ex-Anthropic founder",
+          "companies": [
+            "aiuc"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Insurer for the agent economy (archetype)",
+          "companies": [
+            "mount-insurance"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★"
+        },
+        {
+          "name": "Agent certification + AI-native liability coverage (self-serve)",
+          "companies": [
+            "klaimee"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★"
+        },
+        {
+          "name": "Litigation-data-driven AI liability insurance (Lloyd's Lab cohort, $9.25M capacity)",
+          "companies": [
+            "testudo"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "Testudo added cycle 15. Strongest new entry since AIUC. Lloyd's Lab cohort + active litigation-data-driven underwriting differentiates from AIUC's certification model. External catalyst: Berkshire/Chubb/Travelers AI-liability carve-outs (>80% of state requests approved) creates the structural vacuum these companies fill."
     },
@@ -219,58 +702,179 @@
       "gap": "Agent Monetisation",
       "theme": "Results-Based Billing Infrastructure for Agents",
       "count": 3,
-      "companies": ["paid-ai", "orthogonal", "revenium"],
+      "companies": [
+        "paid-ai",
+        "orthogonal",
+        "revenium"
+      ],
       "first_seen": "2026-04-10",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Results-based billing rails for 'service as software' agents", "companies": ["paid-ai"], "status": "ongoing"},
-        {"name": "Pay-per-use API marketplace for autonomous agent calls (YC W26)", "companies": ["orthogonal"], "status": "new", "vote_signal": "pending"},
-        {"name": "Agentic payments + monetisation (research-team-sourced)", "companies": ["revenium"], "status": "new", "vote_signal": "0★ outreach — 'no brainer' qualitative language"}
+        {
+          "name": "Results-based billing rails for 'service as software' agents",
+          "companies": [
+            "paid-ai"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Pay-per-use API marketplace for autonomous agent calls (YC W26)",
+          "companies": [
+            "orthogonal"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Agentic payments + monetisation (research-team-sourced)",
+          "companies": [
+            "revenium"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach — 'no brainer' qualitative language"
+        }
       ],
       "notes": "Two new entries cycle 15 close the 'second-company' requirement. Cell has graduated from pattern-signal to active. Revenium's 'no brainer' framing despite 0★ rating is operational-deal-flow shape — engagement high, star rating reserved until agentic-payments boundary is resolved."
     },
     {
       "gap": "Personal Agent",
       "theme": "AI-Powered Advisor and Consumer Finance Agents",
-      "count": 6,
-      "companies": ["mine-moneygpt", "tendi", "unique-ai", "natural", "samaya", "astor"],
+      "count": 7,
+      "companies": [
+        "mine-moneygpt",
+        "tendi",
+        "unique-ai",
+        "natural",
+        "samaya",
+        "astor",
+        "flanks"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "AI financial advisor for consumers and advisors", "companies": ["mine-moneygpt"], "status": "ongoing"},
-        {"name": "Multi-institution connectivity agents", "companies": ["tendi"], "status": "ongoing"},
-        {"name": "Vertical agentic AI for wealth/asset management", "companies": ["unique-ai"], "status": "ongoing", "vote_signal": "4★ — Booked demo"},
-        {"name": "Agentic payment rails for consumers/SMBs", "companies": ["natural"], "status": "ongoing", "vote_signal": "4★"},
-        {"name": "AI research agents for investment professionals", "companies": ["samaya"], "status": "ongoing"},
-        {"name": "Regulated retail AI investment advisor (RIA-licensed, brokerage-integrated)", "companies": ["astor"], "status": "ongoing", "vote_signal": "pending"}
+        {
+          "name": "AI financial advisor for consumers and advisors",
+          "companies": [
+            "mine-moneygpt"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Multi-institution connectivity agents",
+          "companies": [
+            "tendi"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Vertical agentic AI for wealth/asset management",
+          "companies": [
+            "unique-ai"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★ — Booked demo"
+        },
+        {
+          "name": "Agentic payment rails for consumers/SMBs",
+          "companies": [
+            "natural"
+          ],
+          "status": "ongoing",
+          "vote_signal": "4★"
+        },
+        {
+          "name": "AI research agents for investment professionals",
+          "companies": [
+            "samaya"
+          ],
+          "status": "ongoing"
+        },
+        {
+          "name": "Regulated retail AI investment advisor (RIA-licensed, brokerage-integrated)",
+          "companies": [
+            "astor"
+          ],
+          "status": "ongoing",
+          "vote_signal": "pending"
+        }
       ],
-      "notes": "No new entries this week. Astor still vote-pending. AUTONOMOUS RE-VOTED 0★ this cycle — first observation of radar→outreach walkback (was BG Score 92 multi-fit cycle 9). Note: 'Potential white label? YC personal investment is promising. Otherwise style over substance right now.' Sample-of-one — pattern to watch."
+      "notes": "No new entries this week. Astor still vote-pending. AUTONOMOUS RE-VOTED 0★ this cycle — first observation of radar→outreach walkback (was BG Score 92 multi-fit cycle 9). Note: 'Potential white label? YC personal investment is promising. Otherwise style over substance right now.' Sample-of-one — pattern to watch. Cycle 18: Flanks (Spain, multi-agent AI Financial Advisor product launch) added. Marloo also re-profiled this week but already carries a 1★ (workflow tool) — not added. OpenAI/Hiro acquisition reinforces hyperscaler compression of the S-Front front door."
     },
     {
       "gap": "S1 — Research & Signal Intelligence (validated)",
       "theme": "Specialist research agents (autonomous, agent-callable)",
       "count": 5,
-      "companies": ["agentsmyth", "serafis", "kimpton-ai", "cohesion", "quartr"],
+      "companies": [
+        "agentsmyth",
+        "serafis",
+        "kimpton-ai",
+        "cohesion",
+        "quartr"
+      ],
       "first_seen": "2026-04-15",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Autonomous specialist research agents (macro, sentiment, quant, options, earnings)", "companies": ["agentsmyth"], "status": "ongoing", "vote_signal": "5★ reaffirmed cycle 15 — 'This is what we are looking for'"},
-        {"name": "Narrative inflection mining from unstructured data (YC)", "companies": ["serafis"], "status": "ongoing", "vote_signal": "5★ — find things like this in EU?"},
-        {"name": "AI-native investment research (YC P26, ex-Goldman Sachs PMs running $10M long/short for 4 years)", "companies": ["kimpton-ai"], "status": "new", "vote_signal": "5★ — better if exposed an agent"},
-        {"name": "Agentic teammates for public-equities hedge funds — earnings, podcasts, X/Twitter alt-data (YC W26)", "companies": ["cohesion"], "status": "ongoing", "vote_signal": "pending"},
-        {"name": "Earnings prep + thesis tracking for advisors and investors (Stockholm Series A, agent-callable layer)", "companies": ["quartr"], "status": "new", "vote_signal": "4★ — too similar to Edgehound who have taken this slot (S7 archetype-overlap)"}
+        {
+          "name": "Autonomous specialist research agents (macro, sentiment, quant, options, earnings)",
+          "companies": [
+            "agentsmyth"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ reaffirmed cycle 15 — 'This is what we are looking for'"
+        },
+        {
+          "name": "Narrative inflection mining from unstructured data (YC)",
+          "companies": [
+            "serafis"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ — find things like this in EU?"
+        },
+        {
+          "name": "AI-native investment research (YC P26, ex-Goldman Sachs PMs running $10M long/short for 4 years)",
+          "companies": [
+            "kimpton-ai"
+          ],
+          "status": "new",
+          "vote_signal": "5★ — better if exposed an agent"
+        },
+        {
+          "name": "Agentic teammates for public-equities hedge funds — earnings, podcasts, X/Twitter alt-data (YC W26)",
+          "companies": [
+            "cohesion"
+          ],
+          "status": "ongoing",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Earnings prep + thesis tracking for advisors and investors (Stockholm Series A, agent-callable layer)",
+          "companies": [
+            "quartr"
+          ],
+          "status": "new",
+          "vote_signal": "4★ — too similar to Edgehound who have taken this slot (S7 archetype-overlap)"
+        }
       ],
-      "notes": "Quartr enters cell at 4★ but is archetype-slot-displaced by Edgehound (S1 incumbent) — first occurrence of archetype-slot-displacement pattern. All 5 candidates US-based except Quartr (Stockholm/NYC/Dublin). Standing Serafis European-equivalent mandate now 4 cycles open. Kimpton AI carded cycle 15."
+      "notes": "Quartr enters cell at 4★ but is archetype-slot-displaced by Edgehound (S1 incumbent) — first occurrence of archetype-slot-displacement pattern. All 5 candidates US-based except Quartr (Stockholm/NYC/Dublin). Standing Serafis European-equivalent mandate now 4 cycles open. Kimpton AI carded cycle 15. Cycle 18: Kimpton AI re-affirmed 5★; cell holds 100% hit rate (3/3). All five S1 candidates remain US-based — Serafis European-equivalent mandate now 5 cycles open."
     },
     {
       "gap": "S2 — Portfolio Construction & Risk Agent",
       "theme": "Portfolio construction (adjacent — empty cell on direct hits)",
       "count": 1,
-      "companies": ["pillar"],
+      "companies": [
+        "pillar"
+      ],
       "first_seen": "2026-04-14",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Autonomous hedge book agent for commodity-exposed industrials (a16z-led, $20M seed, wrong customer)", "companies": ["pillar"], "status": "ongoing", "vote_signal": "pending"}
+        {
+          "name": "Autonomous hedge book agent for commodity-exposed industrials (a16z-led, $20M seed, wrong customer)",
+          "companies": [
+            "pillar"
+          ],
+          "status": "ongoing",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "No new entries this week. Pillar remains the only S2-adjacent entry. Phase-4 protocol has not yet been applied to this cell — recommended target for next cycle."
     },
@@ -278,121 +882,386 @@
       "gap": "S3 — Trade Structuring Agent",
       "theme": "Account selection, asset location, deal structuring (NEW CELL)",
       "count": 2,
-      "companies": ["maywood", "range-com"],
-      "first_seen": "2026-05-08",
-      "status": "new",
-      "sub_themes": [
-        {"name": "M&A deal execution + IB workflow automation (YC W26, Blackstone deal-floor pedigree)", "companies": ["maywood"], "status": "new", "vote_signal": "pending — BG 94 (highest specialist-agent score)"},
-        {"name": "Asset-location + tax-aware advisor copilot ($700M AUM US RIA)", "companies": ["range-com"], "status": "new", "vote_signal": "0★ outreach"}
+      "companies": [
+        "maywood",
+        "range-com"
       ],
-      "notes": "First two entries in S3 — cell was empty before cycle 15. Phase-4 protocol surfaced both candidates: Maywood via accelerator-batch (YC W26), Range via reverse-archetype walk on Kitces/ThinkAdvisor coverage. Maywood at BG 94 is the highest specialist-agent score ever recorded."
+      "first_seen": "2026-05-08",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "M&A deal execution + IB workflow automation (YC W26, Blackstone deal-floor pedigree)",
+          "companies": [
+            "maywood"
+          ],
+          "status": "new",
+          "vote_signal": "pending — BG 94 (highest specialist-agent score)"
+        },
+        {
+          "name": "Asset-location + tax-aware advisor copilot ($700M AUM US RIA)",
+          "companies": [
+            "range-com"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach"
+        }
+      ],
+      "notes": "First two entries in S3 — cell was empty before cycle 15. Phase-4 protocol surfaced both candidates: Maywood via accelerator-batch (YC W26), Range via reverse-archetype walk on Kitces/ThinkAdvisor coverage. Maywood at BG 94 is the highest specialist-agent score ever recorded. Cycle 18: S3 the only specialist cell to gain an entry this week (Maywood, BG 94). Maywood is IB-workflow-facing — internal/external boundary worth watching at vote time."
     },
     {
       "gap": "S5 — Options & Derivatives Strategy Agent",
       "theme": "Wheel / covered-call / income strategies for retail (NEW CELL)",
       "count": 1,
-      "companies": ["quantwheel"],
-      "first_seen": "2026-05-06",
-      "status": "new",
-      "sub_themes": [
-        {"name": "Wheel strategy autopilot + covered-call income engine (bootstrapped indie, customer-native vocabulary surface)", "companies": ["quantwheel"], "status": "new", "vote_signal": "pending"}
+      "companies": [
+        "quantwheel"
       ],
-      "notes": "First entry in S5. Surfaced via Phase-4 archetype-A surfaces (Reddit r/thetagang, FinTwit). Single data point — second entry hunting is highest-leverage next move."
+      "first_seen": "2026-05-06",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Wheel strategy autopilot + covered-call income engine (bootstrapped indie, customer-native vocabulary surface)",
+          "companies": [
+            "quantwheel"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
+      ],
+      "notes": "First entry in S5. Surfaced via Phase-4 archetype-A surfaces (Reddit r/thetagang, FinTwit). Single data point — second entry hunting is highest-leverage next move. Cycle 18: no second entry — still one company. Three cycles of zero second entries; press-sweep surface exhausted for this cell."
     },
     {
       "gap": "S6 — Execution Agent",
       "theme": "TCA + smart order routing + agentic execution interface (NEW CELL)",
       "count": 1,
-      "companies": ["tradefeedr"],
-      "first_seen": "2026-05-06",
-      "status": "new",
-      "sub_themes": [
-        {"name": "Agentic-interface layer on trading analytics (London, founder-funded since 2020 $3M seed)", "companies": ["tradefeedr"], "status": "new", "vote_signal": "pending"}
+      "companies": [
+        "tradefeedr"
       ],
-      "notes": "First entry in S6. Surfaced via Phase-4 reverse-archetype walk from BMLL Mar-2026 partnership announcement. Stage-edge: six-year-old company on $3M seed, founder-funded since."
+      "first_seen": "2026-05-06",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Agentic-interface layer on trading analytics (London, founder-funded since 2020 $3M seed)",
+          "companies": [
+            "tradefeedr"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
+      ],
+      "notes": "First entry in S6. Surfaced via Phase-4 reverse-archetype walk from BMLL Mar-2026 partnership announcement. Stage-edge: six-year-old company on $3M seed, founder-funded since. Cycle 18: no second entry — still one company. Three cycles of zero second entries; press-sweep surface exhausted for this cell."
     },
     {
       "gap": "S7 — Position Monitoring & Thesis Tracking Agent",
       "theme": "Earnings prep + thesis tracking (CONTESTED-SLOT — see S1 cluster)",
       "count": 1,
-      "companies": ["quartr"],
-      "first_seen": "2026-05-06",
-      "status": "new",
-      "sub_themes": [
-        {"name": "Earnings prep + thesis tracking for advisors and investors (Stockholm Series A)", "companies": ["quartr"], "status": "new", "vote_signal": "4★ archetype-slot-displaced by Edgehound"}
+      "companies": [
+        "quartr"
       ],
-      "notes": "First S7 entry — moved from ❌ blind-spot to ⚠️ contested-slot. Quartr's 4★ vote with archetype-slot-displacement note ('Good but too similar to Edgehound who have taken this slot') is the first occurrence of the archetype-slot-displacement pattern. Cell still needs an S7-specific entry not displaced by an S1 incumbent."
+      "first_seen": "2026-05-06",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "Earnings prep + thesis tracking for advisors and investors (Stockholm Series A)",
+          "companies": [
+            "quartr"
+          ],
+          "status": "new",
+          "vote_signal": "4★ archetype-slot-displaced by Edgehound"
+        }
+      ],
+      "notes": "First S7 entry — moved from ❌ blind-spot to ⚠️ contested-slot. Quartr's 4★ vote with archetype-slot-displacement note ('Good but too similar to Edgehound who have taken this slot') is the first occurrence of the archetype-slot-displacement pattern. Cell still needs an S7-specific entry not displaced by an S1 incumbent. Cycle 18: no second entry — still one company. Three cycles of zero second entries; press-sweep surface exhausted for this cell."
     },
     {
       "gap": "S9 — Behavioural Coaching Agent",
       "theme": "Decision-discipline coaching (NEW CELL)",
       "count": 1,
-      "companies": ["balanced-investor-club"],
-      "first_seen": "2026-05-06",
-      "status": "new",
-      "sub_themes": [
-        {"name": "AI-native behavioural finance companion anchored on Morningstar Mind-the-Gap research", "companies": ["balanced-investor-club"], "status": "new", "vote_signal": "pending"}
+      "companies": [
+        "balanced-investor-club"
       ],
-      "notes": "First entry in S9. Educational only — no investment advice, no execution. Limitation: dashboard/companion architecture with no agent-callable API layer. Track for potential B2B pivot or API exposure."
+      "first_seen": "2026-05-06",
+      "status": "ongoing",
+      "sub_themes": [
+        {
+          "name": "AI-native behavioural finance companion anchored on Morningstar Mind-the-Gap research",
+          "companies": [
+            "balanced-investor-club"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
+      ],
+      "notes": "First entry in S9. Educational only — no investment advice, no execution. Limitation: dashboard/companion architecture with no agent-callable API layer. Track for potential B2B pivot or API exposure. Cycle 18: no second entry — still one company. Three cycles of zero second entries; press-sweep surface exhausted for this cell."
     },
     {
       "gap": "S10 — Post-Trade Analysis & Learning Agent",
       "theme": "AI trade journaling + attribution (CELL EMPTY AFTER NOVELTY GATE REJECTION)",
       "count": 1,
-      "companies": ["tradersage"],
+      "companies": [
+        "tradersage"
+      ],
       "first_seen": "2026-05-07",
       "status": "rejected",
       "sub_themes": [
-        {"name": "AI trade journal + trade attribution + AI trading coach (bootstrapped indie)", "companies": ["tradersage"], "status": "rejected", "vote_signal": "2★ — 'I don't see anything special here. Seems like an obvious implementation of AI'"}
+        {
+          "name": "AI trade journal + trade attribution + AI trading coach (bootstrapped indie)",
+          "companies": [
+            "tradersage"
+          ],
+          "status": "rejected",
+          "vote_signal": "2★ — 'I don't see anything special here. Seems like an obvious implementation of AI'"
+        }
       ],
-      "notes": "Carded via Phase-4 protocol then voted 2★ on novelty grounds. Confirms: when a candidate is surfaced for an empty cell via Phase-4, it does not get a novelty exemption. Cell remains effectively empty — needs a NOVEL entry, not just any thesis-shaped entry."
+      "notes": "Carded via Phase-4 protocol then voted 2★ on novelty grounds. Confirms: when a candidate is surfaced for an empty cell via Phase-4, it does not get a novelty exemption. Cell remains effectively empty — needs a NOVEL entry, not just any thesis-shaped entry. Cycle 18: still effectively empty after the TraderSage novelty-gate rejection; no new entry."
     },
     {
       "gap": "R1 — Retail Derivatives / Prediction Markets",
       "theme": "Prediction-market specialist agents (NEW CELL)",
       "count": 1,
-      "companies": ["elastics"],
+      "companies": [
+        "elastics"
+      ],
       "first_seen": "2026-05-06",
       "status": "new",
       "sub_themes": [
-        {"name": "AI agents for prediction market trading across Kalshi/Polymarket/Limitless (Warsaw, ex-Goldman quant)", "companies": ["elastics"], "status": "new", "vote_signal": "pending"}
+        {
+          "name": "AI agents for prediction market trading across Kalshi/Polymarket/Limitless (Warsaw, ex-Goldman quant)",
+          "companies": [
+            "elastics"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        }
       ],
       "notes": "First R1 entry. External catalysts cycle 15: Roundhill/Bitwise/GraniteShares prediction-market ETFs go live 5 May; 5c(c) Capital $35M VC fund seeded by Kalshi+Polymarket+a16z+Ribbit specifically backs prediction-market infrastructure. Concern: 'AI-native operating system for prediction markets' framing triggers novelty gate; meaningful crypto exposure through Polymarket. Regulated Kalshi integration is the most finserv-credible entry point."
     },
     {
       "gap": "Agent Orchestration",
       "theme": "Trusted Agent Operating Systems (Hard-Filtered)",
-      "count": 24,
-      "companies": ["dyna-ai", "natural-payments", "stacks", "trace", "lyzr", "sycamore", "notch", "opencfo", "eragon", "meridian-ai", "interloom", "pace", "pluvo", "nexus", "octonomy", "appzen", "haast", "kaaj", "lema-ai", "obin-ai", "galdera", "numos", "jentic", "orthogonal"],
+      "count": 25,
+      "companies": [
+        "dyna-ai",
+        "natural-payments",
+        "stacks",
+        "trace",
+        "lyzr",
+        "sycamore",
+        "notch",
+        "opencfo",
+        "eragon",
+        "meridian-ai",
+        "interloom",
+        "pace",
+        "pluvo",
+        "nexus",
+        "octonomy",
+        "appzen",
+        "haast",
+        "kaaj",
+        "lema-ai",
+        "obin-ai",
+        "galdera",
+        "numos",
+        "jentic",
+        "orthogonal",
+        "avantos"
+      ],
       "first_seen": "2026-03-13",
       "status": "ongoing",
       "sub_themes": [
-        {"name": "Internal-workflow Hard-Filtered cluster", "companies": ["sycamore", "notch", "opencfo", "eragon", "meridian-ai", "interloom", "pace", "nexus", "octonomy", "appzen", "haast", "kaaj", "lema-ai", "obin-ai", "galdera", "numos"], "status": "ongoing", "vote_signal": "1-2★ pattern — Hard Filter active"},
-        {"name": "POC partner — orchestration anchor", "companies": ["jentic"], "status": "new", "vote_signal": "0★ outreach kanban=accepted"},
-        {"name": "Pay-per-API marketplace (P7-adjacent)", "companies": ["orthogonal"], "status": "new", "vote_signal": "pending"},
-        {"name": "Finserv-specific orchestration", "companies": ["pluvo"], "status": "ongoing", "vote_signal": "pending"}
+        {
+          "name": "Internal-workflow Hard-Filtered cluster",
+          "companies": [
+            "sycamore",
+            "notch",
+            "opencfo",
+            "eragon",
+            "meridian-ai",
+            "interloom",
+            "pace",
+            "nexus",
+            "octonomy",
+            "appzen",
+            "haast",
+            "kaaj",
+            "lema-ai",
+            "obin-ai",
+            "galdera",
+            "numos"
+          ],
+          "status": "ongoing",
+          "vote_signal": "1-2★ pattern — Hard Filter active"
+        },
+        {
+          "name": "POC partner — orchestration anchor",
+          "companies": [
+            "jentic"
+          ],
+          "status": "new",
+          "vote_signal": "0★ outreach kanban=accepted"
+        },
+        {
+          "name": "Pay-per-API marketplace (P7-adjacent)",
+          "companies": [
+            "orthogonal"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Finserv-specific orchestration",
+          "companies": [
+            "pluvo"
+          ],
+          "status": "ongoing",
+          "vote_signal": "pending"
+        }
       ],
-      "notes": "24 detected, 1/10 hit rate, Hard Filter rejecting most new candidates. Recommended drop from 🔴 every-scan to 🟠 monitor next cycle. Jentic is the cell anchor at BG 95."
+      "notes": "24 detected, 1/10 hit rate, Hard Filter rejecting most new candidates. Recommended drop from 🔴 every-scan to 🟠 monitor next cycle. Jentic is the cell anchor at BG 95. Cycle 18: Avantos ($25M Series A, 'AI operating system for financial institutions') added — hard-filtered OS framing; Vanguard/SEI/Guardian validator signal noted but stage + geography outside BG window."
     },
     {
       "gap": "Adjacent — Non-Finserv",
       "theme": "Adjacent and out-of-scope detections",
       "count": 2,
-      "companies": ["cognibit", "bottlecap-ai"],
+      "companies": [
+        "cognibit",
+        "bottlecap-ai"
+      ],
       "first_seen": "2026-05-06",
       "status": "rejected",
       "sub_themes": [
-        {"name": "Autonomous-vehicle simulation (Munich)", "companies": ["cognibit"], "status": "rejected", "vote_signal": "0★ outreach kanban=rejected"},
-        {"name": "Foundation LLM efficiency (Prague, Mikolov + Beck)", "companies": ["bottlecap-ai"], "status": "rejected", "vote_signal": "challenges thesis — borderline"}
+        {
+          "name": "Autonomous-vehicle simulation (Munich)",
+          "companies": [
+            "cognibit"
+          ],
+          "status": "rejected",
+          "vote_signal": "0★ outreach kanban=rejected"
+        },
+        {
+          "name": "Foundation LLM efficiency (Prague, Mikolov + Beck)",
+          "companies": [
+            "bottlecap-ai"
+          ],
+          "status": "rejected",
+          "vote_signal": "challenges thesis — borderline"
+        }
       ],
       "notes": "Carded for record-keeping. Adjacent calibration cases — vocabulary refinement should add explicit 'financial services' qualifiers to P2/Auth searches to suppress this leakage."
+    },
+    {
+      "gap": "R3 — Tokenization / Wealth Reinvention (Research mandate #3)",
+      "theme": "Tokenization of previously-uninvestable surfaces",
+      "count": 4,
+      "companies": [
+        "anote-music",
+        "wealthyhood",
+        "tytl",
+        "noise"
+      ],
+      "first_seen": "2026-05-13",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "European music-royalty marketplace — issuance + marketplace + secondary inside a regulated EU vehicle",
+          "companies": [
+            "anote-music"
+          ],
+          "status": "new",
+          "vote_signal": "5★ confirmed 2026-05-13 — first upvote anywhere in R3"
+        },
+        {
+          "name": "AI investing app for younger European investors (retail wealth reinvention)",
+          "companies": [
+            "wealthyhood"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "Tokenized residential real estate — Anchorage custody, full-stack",
+          "companies": [
+            "tytl"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★ archetype"
+        },
+        {
+          "name": "Attention market on Base — new investable surface",
+          "companies": [
+            "noise"
+          ],
+          "status": "ongoing",
+          "vote_signal": "5★"
+        }
+      ],
+      "notes": "New cluster, cycle 18. ANote Music 5★ (2026-05-13, no note) is the first vote-confirmed entry on the R3 Tokenization / music-IP surface that Research mandate #3 explicitly names — first upvote anywhere in the R3 cell. With Wealthyhood, TYTL and Noise, the cluster has crossed four entries with a vote confirmation. A dedicated R3 sweep (real estate + music royalties + private credit + collectibles) is the next cycle's highest-leverage action."
+    },
+    {
+      "gap": "Adjacent — Advisor / WealthTech Workflow Automation (out of thesis scope)",
+      "theme": "Advisor-side AI co-pilots and wealth-management operating systems",
+      "count": 4,
+      "companies": [
+        "marloo",
+        "flanks",
+        "performativ",
+        "seapoint"
+      ],
+      "first_seen": "2026-05-10",
+      "status": "new",
+      "sub_themes": [
+        {
+          "name": "AI operating platform for financial advisers — post-meeting workflow automation",
+          "companies": [
+            "marloo"
+          ],
+          "status": "ongoing",
+          "vote_signal": "1★ — workflow tool, out of scope"
+        },
+        {
+          "name": "Multi-agent AI Financial Advisor for wealth managers (custodian-connected)",
+          "companies": [
+            "flanks"
+          ],
+          "status": "new",
+          "vote_signal": "pending"
+        },
+        {
+          "name": "AI-native wealth-management operating system for SME wealth managers",
+          "companies": [
+            "performativ"
+          ],
+          "status": "new",
+          "vote_signal": "pending — Series A, validator only"
+        },
+        {
+          "name": "AI-native financial-ops home for startup founders (ex-Stripe team)",
+          "companies": [
+            "seapoint"
+          ],
+          "status": "new",
+          "vote_signal": "pending — weak fit"
+        }
+      ],
+      "notes": "New adjacency cluster, cycle 18. The advisor-workflow-automation category (Marloo, Flanks, Performativ, plus Savvy) hit a simultaneous commercialisation wave within a six-week window — category maturity, not early discovery. Sits adjacent to the core S-Front vision rather than inside it. Marloo already carries a 1★ ('never looking for workflow management tools'). Tracked as an adjacency cluster, not promoted to a gap."
     }
   ],
   "emerging_cross_gap_themes": [
     {
       "theme": "Phase-4 Blind-Spot Protocol — Specialist Desert Filling",
-      "status": "VALIDATED — operational, fired at scale cycle 15",
-      "companies": ["maywood", "range-com", "quantwheel", "tradefeedr", "quartr", "balanced-investor-club", "tradersage", "elastics", "alphathena", "evergreen-wealth", "wallace-finance"],
+      "status": "PARTIALLY VALIDATED — surfaces first entries, no second entries in 3 cycles",
+      "companies": [
+        "maywood",
+        "range-com",
+        "quantwheel",
+        "tradefeedr",
+        "quartr",
+        "balanced-investor-club",
+        "tradersage",
+        "elastics",
+        "alphathena",
+        "evergreen-wealth",
+        "wallace-finance"
+      ],
       "external_signals": [
         "9+ candidates surfaced across previously-empty S3/S5/S6/S7/S9/S10/R1 cells in single cycle",
         "Customer-native vocabulary on audience-typed surfaces (Reddit r/algotrading, r/thetagang, FinTwit, Kitces, ThinkAdvisor, WealthManagement.com, Finovate) — protocol working as designed",
@@ -400,13 +1269,21 @@
         "Cycle 14 finding (S3/S5/S6/S7/S10 zeros were execution gap not market-supply problem) confirmed",
         "Maywood at BG 94 is highest specialist-agent score ever surfaced"
       ],
-      "notes": "Most decisive operational result of the year. Specialist Agent Desert challenge signal downgraded from structural to operational, exactly as v3.1 anticipated. Next-cycle action: second-entry hunting in cells that just got first entries (S5/S6/S9), plus running same protocol against S2 (Portfolio Construction) and S8 (Financial Planning).",
+      "notes": "Cycle 18 revision: the protocol reliably surfaces FIRST entries by reverse-archetype walking, but three cycles (16/17/18) of zero second entries across S5/S6/S7/S9/S10 indicate the public-press seed surface for these cells is genuinely thin — partly a real supply scarcity, not purely an execution gap. Next-cycle action: stop press-sweeping these cells; move to accelerator-batch and Show-HN/Product-Hunt founder-vocabulary lanes.",
       "first_seen": "2026-05-08"
     },
     {
       "theme": "YC W26 / P26 as Specialist-Agent Supply Source",
       "status": "PROMOTED — first-class lane",
-      "companies": ["cohesion", "astor", "maywood", "fenrock-ai", "sponge", "orthogonal", "kimpton-ai"],
+      "companies": [
+        "cohesion",
+        "astor",
+        "maywood",
+        "fenrock-ai",
+        "sponge",
+        "orthogonal",
+        "kimpton-ai"
+      ],
       "external_signals": [
         "7 thesis-aligned specialist agents from YC W26/P26 across 3 cycles",
         "S1 (Cohesion, Kimpton AI), S3 (Maywood), S-Front (Astor), Compliance (Fenrock), P7 (Orthogonal), P8 (Sponge)",
@@ -419,7 +1296,17 @@
     {
       "theme": "European Multi-Cell Activation",
       "status": "ACTIVATING — 7 new European entries across 7 cells in single cycle",
-      "companies": ["pallma-ai", "paygentic", "regsearch", "elastics", "tradefeedr", "gradient-labs", "deeploy", "saif", "portia-ai"],
+      "companies": [
+        "pallma-ai",
+        "paygentic",
+        "regsearch",
+        "elastics",
+        "tradefeedr",
+        "gradient-labs",
+        "deeploy",
+        "saif",
+        "portia-ai"
+      ],
       "external_signals": [
         "Pallma AI (London/Athens, P-safety, £1.36M)",
         "Paygentic (Ireland, P8, $2M)",
@@ -452,19 +1339,33 @@
     {
       "theme": "Cycle 15 Sample-of-One Patterns",
       "status": "tracking — three patterns at n=1, awaiting second occurrence",
-      "companies": ["quartr", "autonomous", "tradersage"],
+      "companies": [
+        "quartr",
+        "autonomous",
+        "tradersage"
+      ],
       "external_signals": [
         "Archetype-slot displacement: Quartr 4★ ('too similar to Edgehound who have taken this slot')",
         "Radar→outreach walkback: Autonomous BG 92 → 0★ ('style over substance right now')",
         "Novelty gate applies in empty cells: TraderSage 2★ ('obvious implementation of AI')"
       ],
-      "notes": "Each pattern would meaningfully affect the scoring rubric if a second case appears. Tracked but not formalised. The 3★+pivot-candidate pathway formalised at n=2 cycle 15 (openbox-ai + april) shows how these patterns mature.",
+      "notes": "Each pattern would meaningfully affect the scoring rubric if a second case appears. Tracked but not formalised. The 3★+pivot-candidate pathway formalised at n=2 cycle 15 (openbox-ai + april) shows how these patterns mature. Cycle 18: no second occurrences of archetype-slot-displacement, radar→outreach-walkback, or novelty-gate-in-empty-cells. Alomana's 'feels like a consultancy' re-vote annotation is walkback-adjacent but is a deal-stage softening of an existing 5★, not a radar prediction failing at outreach — tracked, not formalised.",
       "first_seen": "2026-05-08"
     },
     {
       "theme": "Tax Optimisation Cluster (Densest of Cycle 15)",
       "status": "ACTIVE — second upvote confirmed",
-      "companies": ["alomana", "alphathena", "evergreen-wealth", "wallace-finance", "april", "mezzi", "hive-tax-ai", "juno", "taxdown"],
+      "companies": [
+        "alomana",
+        "alphathena",
+        "evergreen-wealth",
+        "wallace-finance",
+        "april",
+        "mezzi",
+        "hive-tax-ai",
+        "juno",
+        "taxdown"
+      ],
       "external_signals": [
         "Alphathena 4★ (NEW cycle 15) — second upvote in the Tax cell",
         "Alomana revote caveat: 'tax harvesting use case is generated by AI and just one of a hundred' — TLH-alone-isn't-novel signal",
@@ -478,7 +1379,10 @@
     {
       "theme": "Multi-Gap Agent Controls Architecture",
       "status": "ongoing — 2 datapoints, monitoring",
-      "companies": ["nava", "vouched"],
+      "companies": [
+        "nava",
+        "vouched"
+      ],
       "external_signals": [
         "Nava: Cat 5 + Cat 7 + Cat 10 (safety + payment rails + dispute resolution)",
         "Vouched: Agent Auth + MCP-Identity (identity + permissioning + detection)",
@@ -490,7 +1394,18 @@
     {
       "theme": "Agent Payment Rails (Promoted to first-class gap)",
       "status": "validated and contested — 10 pipeline companies",
-      "companies": ["sapiom", "crossmint", "inflow", "natural", "circuit-chisel", "ralio", "nava", "solvapay", "sponge", "paygentic"],
+      "companies": [
+        "sapiom",
+        "crossmint",
+        "inflow",
+        "natural",
+        "circuit-chisel",
+        "ralio",
+        "nava",
+        "solvapay",
+        "sponge",
+        "paygentic"
+      ],
       "external_signals": [
         "UK PSR consultation on AI agents in payments (April 2026) — first government-level consultation",
         "Visa Intelligent Commerce Connect (protocol-agnostic, GA June)",
@@ -507,7 +1422,16 @@
     {
       "theme": "AI Governance / Regulatory Technology for AI Systems",
       "status": "active gap candidate — multi-jurisdiction convergence intensifying",
-      "companies": ["norm-ai", "validmind", "hadrius", "alinia", "deeploy", "fenrock-ai", "regsearch", "gradient-labs"],
+      "companies": [
+        "norm-ai",
+        "validmind",
+        "hadrius",
+        "alinia",
+        "deeploy",
+        "fenrock-ai",
+        "regsearch",
+        "gradient-labs"
+      ],
       "external_signals": [
         "UK PSR consultation announcement (April 2026)",
         "DRCF Future of Agentic AI Foresight Paper (March 2026)",
@@ -561,6 +1485,22 @@
       ],
       "notes": "Microsoft open-source toolkit commoditises horizontal safety further. Surviving startup opportunity is regulated compliance overlay requiring deep FINRA/FCA/EU AI Act domain knowledge. OpenBox AI, Trent AI, Resistant AI, Portia AI, Pallma AI are the survivable-zone entries.",
       "first_seen": "2026-04-03"
+    },
+    {
+      "theme": "Stage Gate Fires Too Late",
+      "status": "tracking — n=1 as a 5★-killed-on-stage case (Resistant AI), analogous near-miss linx-security",
+      "companies": [
+        "resistant-ai",
+        "linx-security"
+      ],
+      "external_signals": [
+        "Resistant AI re-voted 2026-05-13: genuine 5★ thesis-fit ('Novel and love the agentic security angle') killed as a deal on stage ('too late stage … should have caught it earlier')",
+        "Distinct from radar→outreach walkback (Autonomous) — there the thesis-fit was weaker than the score; here the thesis-fit was real and the stage problem was simply not caught upstream",
+        "linx-security (94→2★ 'just too late at series B') is the analogous near-miss but at least downvoted",
+        "This week's carded validators (Avantos $25M Series A, Adfin $18M Series A, Performativ $14M Series A) are the cards a carding-time pre-filter should have tagged"
+      ],
+      "notes": "The Series-B+/over-funded penalty is correctly calibrated but fires at scoring time, which is structurally too late — a 5★ thesis-fit can still enter the funnel and consume deal-stage effort. Operational fix: serialise a carding-time stage pre-filter that tags any Series B+ / >$20M-raised candidate as 'validator' before scoring. Recommended in this cycle's scoring-model-health section.",
+      "first_seen": "2026-05-15"
     }
   ]
 }
