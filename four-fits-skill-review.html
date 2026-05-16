@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "four-fits", "runs": [{"id": "eval-0-poke-holes-playtester-with_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "Happy to poke holes \u2014 that's exactly what a Four Fits session is for. The framework is Brian Balfour's: a venture is four pieces \u2014 **Market, Product, Channel, Model** \u2014 and the joints between them either line up or they don't yet. Most ideas don't die because one piece is bad. They die because the pieces don't line up with each other. So I'll do a coaching read, not a grade. A year of your life is worth being honest about.\n\nYou've given me a clear enough picture to diagnose \u2014 a one-liner, a buyer, a pricing instinct, and a current-state behaviour. Let me reflect back what I'm hearing, then state the assumptions I'm filling in, then walk it.\n\n**What I heard:** indie game developers currently scatter playtest requests across Discord servers and subreddits. It's \"super hit and miss\" \u2014 wrong feedback, or no feedback. You'd build a tool to connect them with playtesters, and charge developers a monthly subscription.\n\n**Assumptions I'm making (correct me freely):** the buyer is a solo or tiny-team indie dev, pre-launch or in early access, on Steam or itch.io. The \"playtester\" side is a supply pool you'd somehow assemble. The subscription is something like $15\u201340/month. You haven't built it yet \u2014 this is a go/no-go gut check.\n\n---\n\n## What's working\n\nThe problem is **real and observable**, and you didn't have to invent it \u2014 devs are *already doing the workaround*. They're posting in Discords and subreddits right now. That's the single most valuable thing in your favour: M3 in this framework says the test of real pain is \"is there a current workaround, a current cost?\" \u2014 and there is. People don't workaround vitamins. They workaround painkillers. So you're not selling something nobody thinks is a problem. Good. That earns you the right to the hard parts.\n\nYou've also got a **specific-ish Who** \u2014 \"indie game developer\" is much closer to a real human than \"creators\" or \"small businesses.\" We can sharpen it, but you're in the right postcode.\n\nNow the hard parts.\n\n---\n\n## The four fits\n\n- **Market \u2194 Product: partial.** The pain is real, but you haven't told me what the product *does* that the Discord post doesn't. \"Find playtesters\" is a category, not a value prop yet.\n- **Channel \u2194 Model: needs work.** This is the big one. How does an indie dev *find out your tool exists*? And the marketplace cold-start problem sits underneath this.\n- **Model \u2194 Market: needs work.** A monthly subscription onto a buyer who tests in bursts, paired with a market that may be too small for subscription math to reach a meaningful outcome.\n- **Product \u2194 Channel: can't fully judge yet** \u2014 but it inherits the problems above.\n\nLet me walk the joints that aren't holding.\n\n---\n\n## The connections that matter\n\n**C2 \u2014 is the pain a painkiller, or a vitamin dressed up?** You said feedback is \"hit and miss.\" Worth being precise about which half hurts. \"I get *no* feedback\" is hair-on-fire. \"I get feedback but it's the *wrong kind*\" is a real problem but a quieter one \u2014 and notice it's not actually a *find playtesters* problem, it's a *get good feedback* problem. Those are different products. The Discord workaround isn't failing because devs can't find humans \u2014 Discord is full of humans. It's failing because the humans give shallow, unstructured, or unrepresentative feedback. If that's the true pain, your product isn't a matching service. It's a feedback-quality product. **Next move:** go interview ten indie devs and make them rank it \u2014 is the pain \"I can't find anyone\" or \"what I get back is useless\"? The answer changes what you build.\n\n**C3 / C4 \u2014 does the value prop address the micro problem, and do shipped features deliver it?** Right now the value prop is \"find playtesters.\" But against the Discord baseline, finding humans is *free and easy*. So the realizable benefit has to be something Discord can't give: vetted testers who match the genre, structured feedback templates, feedback you can actually act on, turnaround speed. Until you can name that concrete benefit, you don't have a product \u2014 you have a category. **Next move:** write the one sentence that finishes \"unlike posting in Discord, with this tool you get ___.\" If you can't finish it crisply, that's the first thing to fix.\n\n**C8 \u2014 does your channel reach this specific Who, at density?** Here's the irony you need to sit with: **the indie devs are concentrated in exactly the places they currently complain about** \u2014 the gamedev Discords, r/gamedev, r/IndieDev, itch.io forums, Twitter/Bluesky gamedev circles. That's good news for *reach*. But it raises a sharp question: if your acquisition channel is the same Discord servers and subreddits, you are competing for attention in the very channel your product claims to replace. That can work \u2014 but it means your pitch has to win against \"just post it for free, like you already do.\" **Next move:** before building anything, post in three of those communities describing the tool and see if devs lean in or shrug.\n\n**C-marketplace \u2014 the cold-start problem you haven't mentioned.** This is a two-sided marketplace, and you've only described one side. A dev paying a subscription on day one needs *playtesters to already be there*. Where does the testing supply come from? Why do testers show up \u2014 are they paid, gamified, doing it for early access to games, for status? You can't charge the dev side until the tester side has liquidity, and you can't attract testers without devs and games. This is the classic chicken-and-egg, and it's the thing most likely to eat your year. **Next move:** decide explicitly whether you seed the supply side yourself (a managed pool you recruit and curate) or whether there's an organic reason testers come \u2014 and if you can't answer that, the marketplace model isn't ready.\n\n**C10 / C12 \u2014 does the model fit the buyer's wallet and their usage rhythm?** A subscription is *continuous* revenue. But playtesting is *bursty* \u2014 a dev needs testers hard for two weeks before a beta, then goes quiet for two months building. A monthly subscription onto a bursty need has a built-in churn engine: they subscribe, get their test, cancel. You'll feel this as brutal month-three retention. The model may want to be **transactional** \u2014 pay per playtest round, or per number of testers \u2014 or a **credit pack**, not a flat monthly seat. Don't default to subscription because subscription is the fashionable pattern; in this framework the Model is a real bet, not a checkbox. **Next move:** sketch the same business at $X-per-test-round and see which one a real indie dev says yes to faster.\n\n**C-X3 \u2014 the arithmetic of a meaningful outcome.** Indie game developers are a *small, poor* buyer. Many are pre-revenue, funding the game out of pocket or a day job. So your price ceiling is low \u2014 call it $20\u201330/month, and that's optimistic \u2014 and the total population of active indie devs who are *currently in a testing phase and would pay* is a thin slice of an already-niche market. Revenue per customer \u00d7 reachable customers \u00d7 the share you can win has to add up to something worth a year of your life. Run that number honestly. It might be a good *business*; it's worth checking whether it's a good *enough* one for the commitment you're weighing.\n\n---\n\n## The cascade \u2014 the thing underneath all of it\n\nHere's the pattern you probably can't see from inside the idea, and it's the highest-value thing I can give you:\n\n**The value prop is defined as \"find playtesters\" \u2192 but finding humans is the part Discord already does for free \u2192 so the channel (those same Discords) struggles to convert, because you're selling against a free incumbent that does the headline job \u2192 which puts all the weight on the subscription model to justify itself \u2192 but the model is a continuous charge on a bursty, low-budget buyer \u2192 so retention bleeds \u2192 and a marketplace that bleeds the paying side can never get the supply side liquid.**\n\nOne imprecise box at the top \u2014 *what is the actual value, versus Discord* \u2014 and the pressure rolls all the way down through channel, model, and the cold-start. That's the Hiri shape: every box looks defensible alone, the proposition strains when you read them together.\n\nNotice the fix is also upstream. You don't fix this at the pricing page. You fix it by getting the value prop precise.\n\n---\n\n## The verdict\n\n**As described, the Four Fits don't hold yet \u2014 the model needs revisiting before you commit the year.** Not because the problem isn't real (it clearly is \u2014 the workaround proves it), but because three joints are loose at once: the value prop hasn't separated itself from the free Discord baseline, the subscription model fights the buyer's bursty rhythm and thin wallet, and the marketplace's supply side is undefined. That's a redesign, not a death sentence. The raw material \u2014 a real, evidenced pain with an observable workaround \u2014 is genuinely worth something. It's the *shape* of the proposition that isn't right yet.\n\n## The next move\n\nStart at the furthest-upstream loose joint: **the value prop.** Before you write a line of code, interview ten indie devs who are testing right now and force the distinction \u2014 is their pain \"I can't find testers\" or \"the feedback I get is useless\"? That single answer tells you whether you're building a matching marketplace (hard cold-start, weak vs. Discord) or a feedback-quality tool (possibly a one-sided product, no cold-start, a sharper wedge). Everything downstream \u2014 channel, pricing model, whether it's even a marketplace \u2014 only becomes answerable once you know which problem you're actually solving.\n\nDo that, come back, and we'll re-walk the fits with a real value prop in hand. That's a far better use of the next two weeks than building.\n"}], "grading": {"expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": true, "evidence": "Explicit 'The four fits' section lists all four by name with statuses."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": true, "evidence": "Walks C2, C3/C4, C8, C-marketplace, C10/C12, C-X3 \u2014 connection-structured throughout."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": true, "evidence": "Dedicated 'The cascade' section: imprecise value prop -> channel -> model -> cold-start."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": true, "evidence": "'The verdict' section: 'the Four Fits don't hold yet \u2014 the model needs revisiting'."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": true, "evidence": "'The next move': interview ten devs to settle the value prop \u2014 the furthest-upstream joint."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "'What's working' section opens it; credits the evidenced pain; 'redesign, not a death sentence'."}], "summary": {"passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0}}}, {"id": "eval-0-poke-holes-playtester-without_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "# Poking holes in: a playtester-matching tool for indie devs\n\nYou asked me to be critical before you commit a year. So this is deliberately skewed toward problems. None of these are necessarily fatal, but you should have a real answer for each one before you start.\n\n## 1. The \"who pays\" problem is upside down\n\nYou want to charge **developers** a subscription. But the value of your product depends entirely on having a large, engaged pool of **playtesters** \u2014 and playtesters are the side that's hard to get and easy to lose.\n\nThis is a classic two-sided marketplace, and you've picked the harder cold-start:\n\n- Developers will only pay if there are good testers waiting.\n- Testers will only show up if there are interesting games to play.\n- On day one you have neither.\n\nWorse: the side you're *not* charging (testers) is the side that needs the most ongoing investment \u2014 recruitment, retention, quality control, anti-spam. You're taking on your biggest cost center as a freebie and monetizing the easier side. Marketplaces usually work the other way around (subsidize the scarce side).\n\n**Question to answer:** How do you get your first 500 quality testers before you have a single paying dev? And why do those testers stay when there are only 3 games to test?\n\n## 2. \"Indie devs\" are famously broke and famously cheap\n\nThe willingness-to-pay here is genuinely questionable:\n\n- Most indie devs are pre-revenue or hobbyists. The ones who *can* pay a monthly SaaS fee are a thin slice of the top.\n- Playtesting is bursty, not continuous. A dev needs testers hard for 2-3 weeks around a milestone, then not at all for 3 months. A *monthly subscription* is a bad fit for bursty demand \u2014 they'll subscribe, use it once, cancel. Churn will be brutal.\n- The free alternatives (Discord, Reddit, r/playmygame, itch.io, Steam playtest, IndieDB, feedback Fridays) are not just free \u2014 they're where the devs already are, with communities they already trust.\n\n**Question to answer:** Is this a subscription business or a pay-per-campaign business? And can you name 10 real indie devs who'd pay $20+/mo *today*?\n\n## 3. You're competing with \"free and good enough,\" not \"free and bad\"\n\nYou're framing the status quo as broken (\"hit and miss, wrong feedback or none\"). That's partly true \u2014 but Discord/Reddit also have huge advantages you can't easily replicate:\n\n- Zero friction, zero cost, existing audience.\n- Social proof and relationship-building (testers become fans, wishlists, launch-day buyers).\n- The \"wrong feedback\" problem is often a *dev skill* problem (bad build, no questions asked, no target audience defined), not a *platform* problem. Your tool can't fix a dev who doesn't know what to ask.\n\nIf the real problem is \"devs don't know how to run a playtest,\" that's a content/education problem, and people pay even less for that.\n\n**Question to answer:** What specifically can you do that a well-run Discord cannot? \"Matching\" and \"structured feedback\" are the obvious answers \u2014 are they enough?\n\n## 4. Tester quality and incentives \u2014 the hardest unsolved part\n\nThe core promise is \"the *right* kind of feedback.\" That means:\n\n- Testers who match the genre/audience.\n- Testers who actually play (not just sign up).\n- Testers who write useful, honest, structured feedback (rare skill!).\n\nBut why do testers do this? Options, all flawed:\n\n- **For free / for love:** only works at small scale, hard to direct to specific games.\n- **Paid by you:** now your unit economics are wrecked \u2014 you're paying testers out of dev subscriptions.\n- **Gamified points/karma:** invites gaming the system, low-effort feedback, Goodhart's law.\n- **Early access to games:** weak incentive; itch.io already gives that away.\n\nQuality control on user-generated feedback at scale is a genuinely hard, ongoing operational problem. It's not a feature you ship once.\n\n**Question to answer:** What's the tester incentive, and does it survive contact with scale and bad actors?\n\n## 5. Market size might be too small to support a business\n\nDo the math honestly:\n\n- Active indie devs running playtests in any given month: tens of thousands globally, optimistically.\n- Share who'd pay: maybe low single-digit percent.\n- Realistic capture as a new entrant: a fraction of that.\n- At $15-30/mo with heavy churn... you may be looking at a lifestyle/side-project ceiling, not a venture-scale business.\n\nThat might be *fine* \u2014 but you said \"a year of my life,\" so be clear about what outcome justifies that year. A $3-5k/mo side business is a very different commitment than a fundable startup.\n\n## 6. It's easy to build, which is bad\n\nA matching directory + feedback forms + Stripe is not technically defensible. If it works, it gets cloned, and the incumbents with the audience (itch.io, Discord itself, even Steam) can add \"structured playtest matching\" as a feature. Your moat would have to be the **tester network** \u2014 which loops back to problem #1, the thing that's hardest to build.\n\n## 7. Hidden operational drag\n\nThis is not a \"build it and let it run\" SaaS. It's a community business in disguise:\n\n- Moderation, dispute handling (dev says feedback was useless, tester says build was broken).\n- Anti-cheat / anti-spam / fake accounts.\n- NDA and IP concerns \u2014 devs are paranoid about leaks of unreleased builds. You may need build-protection features, watermarking, access controls. That's real scope.\n- Curation so the platform doesn't fill with low-effort asset-flip games.\n\n## What I'd want to see before you commit the year\n\n1. **10 customer interviews** with indie devs who've shipped or are close. Ask what they did for their last playtest, what it cost them (time/money), and whether they'd pay. Don't pitch \u2014 listen.\n2. **A concierge MVP.** No product. You personally matchmake 5 devs with testers via a spreadsheet and a Discord. If you can't make *that* valuable by hand, software won't fix it.\n3. **Reframe the monetization.** Strongly consider pay-per-campaign or a marketplace take-rate over a flat subscription, given bursty demand.\n4. **Solve the tester side on paper first.** Write down exactly why 500 quality testers show up and stay. If that page is hand-wavy, the business is hand-wavy.\n5. **Pick your honest ceiling.** Decide now whether a profitable small business is a win, or whether you need this to be huge \u2014 it changes whether the year is worth it.\n\n## The steelman (so this isn't all doom)\n\nThere *is* a real pain here. \"Wrong feedback or none\" is a genuine, repeated complaint. If you can crack the tester-quality problem \u2014 and especially if you nail *matching by target audience* and *structuring the feedback ask* \u2014 there's a wedge. The most promising version is probably narrow: pick one genre or one engine community, become the obvious choice there, win on curation and trust, then expand. The riskiest version is the broad horizontal subscription you described.\n\nThe single biggest hole: **you're charging the easy side and giving away the hard side.** Fix that thinking first, and a lot of the rest gets more tractable.\n"}], "grading": {"expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": false, "evidence": "Structured as 'seven core risks' + validation checklist \u2014 does not walk the four fits by name."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": false, "evidence": "Risk list, not connection-structured; no named joints between boxes."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": false, "evidence": "No explicit cascade \u2014 risks are listed in parallel, not traced as one chain."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": false, "evidence": "No Four Fits verdict \u2014 ends on a risk summary and a steelman."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": false, "evidence": "Offers a five-step checklist rather than one furthest-upstream move."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "Constructive \u2014 includes a steelman of the narrowest viable version."}], "summary": {"passed": 1, "failed": 5, "total": 6, "pass_rate": 0.1667}}}, {"id": "eval-1-walkthrough-soc2-with_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "Happy to. Let's do this properly.\n\nQuick frame so you know what you're in for: a Four Fits session looks at a venture as four pieces \u2014 **Market, Product, Channel, Model** \u2014 and the honest truth is that propositions rarely fail because one piece is bad. They fail because the pieces don't line up *with each other*. So we'll build out each piece, and then the real work is walking the joints between them. Think of this as a coaching read, not a grade \u2014 I'll be straight with you about gaps, but everything we find gets a next move attached.\n\nWe'll go card by card. I'll give you a light read as we close each one, then do the full cross-cut at the end. Easy on the jargon \u2014 stop me any time a term lands funny.\n\nSo \u2014 starting with **the Market**, and the most important question in the whole session: **who, exactly, is the buyer?**\n\nYou've said \"early-stage startups going through their first SOC 2 audit,\" and I want to push past that, because \"startups\" is a category, not a person. Picture the actual human who opens your tool and pays for it. Walk me through:\n\n- **The individual.** What's their title \u2014 is this a founder/CEO at a 15-person seed-stage company, a first security hire, a Head of Engineering who got handed compliance because nobody else would? Company size, stage, roughly where they are?\n- **The macro problem** \u2014 the systemic \"why this matters.\" My guess: enterprise buyers won't sign without a SOC 2 report, so compliance has become a gate on revenue for any startup selling upmarket. Is that the shape of it, or is the pressure coming from somewhere else?\n- **The micro problem** \u2014 the specific, addressable bottleneck *inside* that macro that your product actually grabs hold of. You've named it as evidence collection \u2014 the screenshots, the config exports, the \"prove this control is in place\" scramble. Is that the sharpest pain, or is the real bottleneck somewhere else in the audit (picking a framework, writing policies, the back-and-forth with the auditor)?\n- **Pain level** \u2014 and this is the one I'll lean on. Is this hair-on-fire, real, mild, or honestly a vitamin? And what's the *evidence*? What do these companies do about it today \u2014 pay a consultant, throw an engineer at it for three weeks, buy Vanta or Drata, just suffer through a messy spreadsheet? Is there budget already allocated, or are you trying to create a line item that doesn't exist yet?\n\nGive me what you've got on the buyer and the problem, and we'll get the Market card down before we move to Product.\n"}], "grading": {"expectations": [{"text": "Runs in walk-through mode \u2014 gathers cards conversationally rather than dumping a full analysis", "passed": true, "evidence": "Gathers the Market card only, conversationally; 'We'll go card by card'; ends asking for input \u2014 no full analysis dumped."}, {"text": "Sets the Four Fits frame at the open (four pieces, the joints between them matter)", "passed": true, "evidence": "Paragraph 2 sets the frame: four pieces, fail because pieces don't line up with each other, coaching not a grade."}, {"text": "Asks the founder specific questions to gather the Market card", "passed": true, "evidence": "Asks specific questions: the individual's title, company size, stage."}, {"text": "Probes the macro/micro problem split and pain level", "passed": true, "evidence": "Explicitly probes macro problem, micro problem, and pain level with evidence."}, {"text": "Frames it as a coaching session, not a grade", "passed": true, "evidence": "'Think of this as a coaching read, not a grade'; 'stop me any time a term lands funny'."}], "summary": {"passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0}}}, {"id": "eval-1-walkthrough-soc2-without_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "# The Four Fits \u2014 Walkthrough\n\n**Startup:** Automated SOC 2 compliance evidence collection for early-stage startups going through their first audit (B2B).\n\nThe \"four fits\" framework (popularized by Brian Balfour) says sustainable growth requires *four* things to line up \u2014 not just product-market fit. Each fit constrains the others. Let's walk through them one at a time. I've flagged questions along the way; answer whichever you can and we'll tighten the picture.\n\n---\n\n## 1. Market\u2013Product Fit\n\n*Does the market actually want this product? Start with the market, not the product.*\n\n**Your market:** Early-stage startups (likely seed to Series A) facing their *first* SOC 2 audit. This is usually triggered by an enterprise customer or prospect demanding it before they'll sign.\n\n**Why this market is interesting:**\n- The pain is acute and externally imposed \u2014 founders don't *want* SOC 2, they're forced into it by a deal on the table. That's urgency.\n- It's a recurring need (Type II is continuous; audits renew annually).\n- The buyer is technical and underwater \u2014 they have no compliance staff, so \"automated evidence collection\" maps directly to their gap.\n\n**Where it gets tricky:**\n- This is a *crowded* market. Vanta, Drata, Secureframe, Thoropass, Sprinto all target roughly this buyer. \"First audit, early-stage\" is specifically Vanta's and Drata's origin wedge.\n- \"Evidence collection\" alone is a *feature* of those platforms, not a category. The incumbents bundle evidence collection with the auditor relationship, policy templates, security questionnaires, trust pages, and a dozen other frameworks.\n\n**Questions for you:**\n1. What's the *wedge* that makes you different from Vanta/Drata for this exact buyer \u2014 price, a specific stack you support better, speed-to-audit, an underserved segment (e.g. AI startups, fintech, non-US)?\n2. Is \"evidence collection\" the whole product, or the entry point to something broader?\n3. How are these startups solving it *today* \u2014 Vanta, a spreadsheet + consultant, or a vCISO?\n\n---\n\n## 2. Product\u2013Channel Fit\n\n*You build your product for the channel \u2014 you do not bend the channel to the product.*\n\nThe key insight here: channels are fixed sets of rules. You design the product to fit how the channel works, not the other way around.\n\n**Plausible channels for you:**\n- **Auditor partnerships / referrals.** Audit firms send clients to a tooling platform. This is how a lot of compliance tooling actually distributes. It rewards a product that makes the *auditor's* job easier, not just the startup's.\n- **Content / SEO.** \"How to get SOC 2,\" \"SOC 2 checklist\" \u2014 high-intent, bottom-of-funnel search. Rewards a self-serve product with a clear onboarding path.\n- **Integrations marketplaces / co-marketing** (AWS, GCP, dev tools your buyers already use).\n- **VC portfolio deals.** Investors offer portfolio companies discounted compliance tooling. Rewards a product with a recognizable brand and a clean per-seat or per-company price.\n- **Sales-led / outbound.** Works if ACV supports it.\n\n**Why this matters for you specifically:** if you're cheaper/leaner than Vanta, that points to a *low-touch channel* (content, self-serve, PLG) \u2014 because you can't afford an enterprise sales motion at a low price point. If your wedge is a high-touch audit-firm relationship, the product needs auditor-facing features. These are different products.\n\n**Questions for you:**\n4. How do you imagine customers *finding* you?\n5. Do you have, or can you build, relationships with audit firms?\n6. Is the product self-serve, or does it need a human to onboard each customer?\n\n---\n\n## 3. Channel\u2013Model Fit\n\n*Your monetization model must fit the economics of your channel.*\n\nThis is about the math: ARPU/ACV vs. the cost and behavior of the channel.\n\n**The tension for your startup:**\n- Early-stage startups are *price-sensitive* and *churn-prone* \u2014 many will do one audit cycle, get acquired, die, or graduate to a platform with more frameworks. So your ARPU is probably modest (think low-thousands ARR per customer) and your customer lifetime may be short.\n- A modest ARPU with short lifetime **cannot** support a high-cost channel (enterprise AEs, SDR teams). It *can* support low-cost channels: self-serve, content, partnerships with rev-share.\n- Conversely, if you go after auditor partnerships, you may owe referral fees or revenue share \u2014 that has to fit inside your margin.\n\n**The classic trap here:** building a self-serve-priced product but trying to distribute it through a sales-led channel (or vice versa). The price and the channel have to be the same \"size.\"\n\n**Questions for you:**\n7. What's your pricing \u2014 flat annual fee, per-employee, per-framework, usage-based?\n8. Roughly what ACV are you targeting?\n9. Do you expect customers to *expand* (more frameworks, more seats, ongoing monitoring) or is it largely one-and-done?\n\n---\n\n## 4. Model\u2013Market Fit\n\n*This closes the loop: your monetization model has to fit the market's size and willingness/ability to pay.*\n\n**The core question:** are there *enough* of these customers, paying *enough*, for the business to be venture-scale (if that's the goal)?\n\n**For your market:**\n- The number of early-stage startups doing a *first* SOC 2 each year is real but bounded \u2014 and you only \"own\" each customer during their early phase. If they grow, they may outgrow you.\n- Willingness to pay is genuinely high *at the moment of pain* (a deal is blocked), but it drops once the audit is passed \u2014 unless you convert the relationship into continuous monitoring.\n- This is why the incumbents don't sell \"evidence collection\" \u2014 they sell an expanding platform, because *evidence collection alone* has a model\u2013market problem: the market won't pay enough, for long enough, for just that.\n\n**The strategic risk to name out loud:** \"evidence collection for first audits\" might be a great *wedge* but a constrained *business*. The four-fits lens suggests you either (a) need a path to expand ARPU within the same customer over time, or (b) need a very low-cost channel + model so the unit economics work even at low ARPU and short lifetime.\n\n**Questions for you:**\n10. Is this venture-backed / aiming for venture scale, or a capital-efficient business?\n11. What's the expansion story \u2014 does a customer who passes their first audit keep paying you, and for what?\n12. Have you sized the market \u2014 how many first-time SOC 2 startups per year, realistically reachable?\n\n---\n\n## How the four fits chain together for you\n\n```\nMarket          \u2192  Product        \u2192  Channel        \u2192  Model          \u2192  (back to Market)\nearly-stage        automated          ?  low-cost?      ?  low ACV?       enough of them,\nfirst-audit        evidence           content/         per-co? per-       paying enough,\nstartups           collection         auditor/PLG?     framework?         long enough?\n```\n\nThe framework's whole point: **a weakness in any one fit caps the other three.** Right now the open questions cluster around two things:\n\n1. **Differentiation** (Fit 1) \u2014 what's your wedge against Vanta/Drata, who own this exact buyer?\n2. **The expansion/economics story** (Fits 3 & 4) \u2014 \"evidence collection for first audits\" needs either a very cheap channel+model, or a credible path to growing revenue per customer over time.\n\nNail those two and the channel choice tends to fall out naturally.\n\n---\n\n### Your turn\n\nPick off whatever questions you can \u2014 even partial answers help. The most useful ones to start with: **#1 (your wedge)**, **#7\u20138 (pricing/ACV)**, and **#11 (expansion story)**. Once I have those, I can pressure-test whether the four fits actually close into a loop or where the chain breaks.\n"}], "grading": {"expectations": [{"text": "Runs in walk-through mode \u2014 gathers cards conversationally rather than dumping a full analysis", "passed": false, "evidence": "Walked all four fits in one pass with 12 interspersed questions \u2014 closer to a full analysis than card-by-card gathering."}, {"text": "Sets the Four Fits frame at the open (four pieces, the joints between them matter)", "passed": true, "evidence": "Engages with the four fits structure the user named."}, {"text": "Asks the founder specific questions to gather the Market card", "passed": true, "evidence": "Includes diagnostic questions, several touching the market."}, {"text": "Probes the macro/micro problem split and pain level", "passed": false, "evidence": "Does not probe the skill-specific macro/micro split or a structured pain level."}, {"text": "Frames it as a coaching session, not a grade", "passed": true, "evidence": "Reasonably collaborative with interspersed questions."}], "summary": {"passed": 3, "failed": 2, "total": 5, "pass_rate": 0.6}}}, {"id": "eval-2-pasted-pitch-lumen-with_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "You asked for a hard critique with no cushioning, so that's what you'll get \u2014 but fair warning, \"hard\" here means *honest and specific*, not *dismissive*. There's a real seed in Lumen. Let me run it through a Four Fits read so you can see the system, not just the pitch.\n\nQuick frame: Four Fits looks at a venture as four pieces \u2014 **Market, Product, Channel, Model** \u2014 and the four joints between them. Most ideas don't die because one piece is bad. They die because the pieces don't line up with each other. So I'm going to reflect back what I heard, then walk the joints.\n\n## What I heard\n\n- **Market:** surgeons, suffering brutal stress and burnout.\n- **Product:** a meditation app using biofeedback to deliver 3-minute resets between operations.\n- **Channel:** Instagram plus a wellness content blog.\n- **Model:** freemium \u2014 free app, $15/month premium with personalized programs.\n\nIf I've got any of that wrong, correct me. I've had to make a few assumptions to keep moving \u2014 I'll flag them as I go.\n\n## What's working\n\nThe wedge instinct is genuinely good. You didn't say \"a meditation app for stressed people\" \u2014 you picked surgeons, and you picked a *specific moment* (between operations) and a *specific format* (3 minutes). That's more discipline than most pitches show. The biofeedback angle is a plausible reason this isn't just Calm with a white coat on. And the macro problem is real and well-documented \u2014 surgeon burnout is a serious, named issue. So there's something here. That's exactly why the gaps are worth being blunt about.\n\n## The four fits\n\n- **Market \u2194 Product \u2014 partial.** The \"who\" and the moment are specific, but the pain is asserted, not evidenced, and the product format may not survive contact with the actual moment.\n- **Product \u2194 Channel \u2014 needs work.** Instagram and a wellness blog reach *consumers who like wellness content*. They do not reach *surgeons in the moments that matter*. The channel doesn't fit the buyer.\n- **Channel \u2194 Model \u2014 needs work.** A freemium consumer funnel against a $15/month price puts you in a known danger zone, and there's no CAC math behind it.\n- **Model \u2194 Market \u2014 needs work.** The market of surgeons is small, $15/month is consumer pricing, and the multiplication doesn't get to a meaningful outcome. There may be a better-paying buyer you're walking past.\n\n## The connections that aren't holding\n\n**C2 \u2014 is the pain actually a painkiller, or a vitamin?** You said surgeons have \"brutal stress and burnout.\" I believe the macro problem. But the Four Fits question is sharper: does *this specific person*, in the 4 minutes between operations, feel the pain enough to *do something about it* \u2014 and is there spend, a workaround, or a budget behind it? Right now that's an assertion. What do surgeons currently do in that gap? (My guess: scrub out, debrief, eat something, decompress with colleagues, or just go.) If a surgeon's honest reaction is \"I'd love that but I don't have the bandwidth to think about it between cases,\" you've got a vitamin dressed as a painkiller. That's not fatal at this stage \u2014 but you have to name it honestly, because a vitamin needs a much cheaper channel and much lower friction than what you've described.\n\n**C1/C3 \u2014 does the micro problem credibly sit inside the macro?** Burnout is a *chronic, cumulative* condition \u2014 months and years of overload. Your product is an *acute, in-the-moment* intervention \u2014 3 minutes between cases. Those aren't obviously the same problem. A 3-minute reset might genuinely help someone get through a hard day; it's much less clear it moves the needle on career burnout. You're solving a macro problem (\"burnout\") by picking a micro (\"between-case stress\") \u2014 but you haven't shown the micro is the *right wedge* into the macro. It might be. But \"calmer for the next operation\" and \"not burning out of medicine\" are different promises, and right now the pitch slides between them.\n\n**C8 \u2014 does the channel reach this specific Who, at density?** This is the hardest gap, so I'll be direct. Instagram and a wellness blog are *generic consumer channels*. Your buyer is one of the most time-poor, hardest-to-reach professionals there is. The test for a channel isn't reach, it's **density** \u2014 what fraction of the audience is actually your buyer. A wellness blog's audience is maybe 0.1% surgeons, if that. You'd be paying to reach yoga-curious office workers in the hope a surgeon scrolls past. Specific buyers need specific channels, and right now your channel is built for a consumer you don't have.\n\n**C9 \u2014 does the product lend itself naturally to these channels?** Even setting density aside: a wellness blog and Instagram are slow, top-of-funnel, brand-building channels. They work for products with a long, patient consumer funnel. They don't naturally carry a niche-professional tool. There's no organic reason a surgeon discovers Lumen through Instagram \u2014 the product doesn't *produce* anything that flows into that channel.\n\n**C10/C12 \u2014 does the price cover the cost to acquire, and can you even get there?** Here's the math you haven't done. If you acquire through paid social, you're paying a consumer CPC to filter for a tiny sliver of surgeons \u2014 your effective cost per *actual surgeon acquired* could be hundreds of dollars. Against $15/month, with consumer churn, you may never pay that back. And you have no CAC estimate in the pitch at all \u2014 that's a gap in itself.\n\n## The cascade \u2014 the thing underneath all of this\n\nHere's the pattern you probably can't see from inside the pitch, and it's the highest-value thing I can show you.\n\nYou've designed a **consumer freemium business** \u2014 Instagram funnel, wellness blog, $15/month, self-serve \u2014 and pointed it at a buyer who is **not a reachable consumer**. That one mismatch cascades through the whole right-hand side of the system:\n\nThe channel is generic \u2192 so it can't reach surgeons at density \u2192 so your real CAC is high \u2192 but your model is consumer-priced at $15/month \u2192 which puts you squarely in the **danger zone**: high cost to acquire, low revenue per customer. That's the quadrant companies die in. And because the model assumes a small market (there are only so many surgeons) at a small price, the arithmetic \u2014 revenue per customer \u00d7 customers \u00d7 share you can win \u2014 never adds up to a meaningful outcome anyway.\n\nOne decision at the top \u2014 \"this is a consumer app\" \u2014 and the channel, the unit economics, and the market size all collapse together.\n\n## The verdict\n\n**As it stands, the Four Fits don't hold.** Market \u2194 Product is partial and unevidenced; the other three joints need real work. This isn't \"bad idea, walk away\" \u2014 the wedge instinct is sound and the macro problem is real. It's \"the business model you've wrapped around the idea is fighting the idea.\"\n\nThe deepest issue is that you've assumed the **surgeon is the buyer and the consumer**. But surgeons don't buy their own tools \u2014 *hospitals, surgical departments, and health systems do*. Burnout costs hospitals enormous money: turnover, errors, malpractice exposure, recruitment. There may be a buyer here with budget, a reason to care, and a concentrated way to reach them (hospital wellness programs, department heads, medical associations, GME programs) \u2014 and that buyer changes your channel, your price, and your market size all at once. That's not a tweak. It's possibly the actual business.\n\n## The next move\n\nStart at the furthest-upstream broken joint \u2014 the Market card \u2014 and do it before touching the product or the funnel:\n\n**Talk to 10 surgeons and 3 hospital wellness or department leads.** With the surgeons, you're testing C2: in the moment between cases, is this hair-on-fire pain or a nice idea \u2014 what do they do now, and would they actually reach for a phone? With the hospital leads, you're testing whether there's a *buyer with a budget line* for surgeon burnout. Those conversations will tell you which business you're in: a hard consumer app fighting an unreachable channel, or a B2B2C product sold to health systems. Everything downstream \u2014 channel, price, market math \u2014 only becomes answerable once you know who the buyer actually is.\n\nDo that, come back, and we'll re-run the fits with real evidence in the Market card. The idea deserves that test.\n"}], "grading": {"expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": true, "evidence": "'The four fits' section names all four with statuses."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": true, "evidence": "Walks C2, C1/C3, C8, C9, C10/C12 \u2014 connection-structured."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": true, "evidence": "'The cascade' section: consumer model pointed at non-consumer buyer collapses channel, unit economics, market math together."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": true, "evidence": "'The verdict': 'As it stands, the Four Fits don't hold' \u2014 and reframes the real buyer."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": true, "evidence": "'The next move': talk to 10 surgeons + 3 hospital leads \u2014 fix the Market card first."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "'What's working' credits the disciplined wedge; honest but explicitly not dismissive."}], "summary": {"passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0}}}, {"id": "eval-2-pasted-pitch-lumen-without_skill-run-1", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "response.md", "type": "text", "content": "# Hard critique: Lumen\n\nYou asked for a hard critique, so here it is. The short version: the *problem* is real, but almost every strategic choice you've made to attack it is working against you. This currently reads like a consumer wellness app wearing a vertical-SaaS costume.\n\n## 1. The market is too small to support the plan you've described\n\nThere are roughly 1 million physicians in the US, and surgeons are a small slice of that \u2014 on the order of ~150,000\u2013200,000 actively practicing surgeons. Even if you captured an implausible 10% as paying users at $15/month, that's ~$30M ARR at the absolute ceiling. Realistic penetration of a niche wellness app is more like 1\u20133%. So you're describing a business with a likely revenue ceiling in the single-digit millions.\n\nThat's not automatically fatal \u2014 but it's a lifestyle-business-sized market, and your go-to-market (Instagram, content blog) is a consumer growth motion that needs *huge* volume to work. You've picked a tiny, hard-to-reach audience and a strategy that only pays off at scale. Those two things contradict each other.\n\n## 2. \"Meditation app for surgeons\" is positioning, not a product\n\nBe honest about what's actually differentiated here. A 3-minute biofeedback reset is not surgeon-specific. The breathing exercise doesn't know the user is a surgeon. Right now \"for surgeons\" is a marketing label on a generic mindfulness product \u2014 and Calm, Headspace, and a dozen others can slap \"for clinicians\" on a landing page next week and outspend you.\n\nWhat would make this *actually* a surgeon product:\n- Integration with the surgical workflow (OR scheduling, case turnover times)\n- Content built around specific surgical stressors (adverse events, M&M conferences, malpractice stress, the specific cognitive load of long cases)\n- Outcome claims that matter to the people who hold budgets \u2014 hand steadiness, decision fatigue, error rates\n\nIf you can't articulate why a surgeon needs *this* and not Headspace, you don't have a company yet.\n\n## 3. The biofeedback claim needs scrutiny\n\n\"We use biofeedback\" \u2014 with what hardware? If it's phone-camera-based heart rate, the signal quality is marginal and the \"biofeedback\" framing is generous. If it requires a wearable, you've just added a hardware dependency, a cost, and an adoption barrier you didn't mention. Either way, biofeedback for a *3-minute* session is a weak loop \u2014 meaningful biofeedback training generally needs sustained, repeated practice. This feels like a buzzword doing load-bearing work in the pitch. Be specific or drop it.\n\n## 4. You're selling to the wrong buyer\n\nThis is the biggest miss. Surgeons are time-poor, skeptical of \"wellness,\" and famously resistant to anything that implies they can't handle stress. Asking an individual surgeon to discover you on Instagram, download an app, and personally expense $15/month is a brutal conversion path.\n\nThe money and the motivation to solve surgeon burnout sit with **hospitals, health systems, and surgical departments**. Burnout costs them retention, recruiting, malpractice exposure, and productivity. That's a B2B2C play: sell seats to the institution, the institution drives adoption, you get contract-sized revenue and a real distribution channel. Same product, completely different (and far more fundable) business. Your current plan ignores the only buyer with budget and incentive.\n\n## 5. Freemium is probably the wrong model here\n\nFreemium works when you have massive top-of-funnel and viral/organic spread. You have neither \u2014 a niche audience and a paid-feeling content motion. With a small TAM, freemium just means you give the product away to most of your tiny market and convert a thin slice. Either go straight to paid (the audience can afford $15 and time-scarcity means free users won't engage anyway) or, better, go B2B with institutional contracts.\n\n## 6. The GTM is the weakest part of the whole pitch\n\nInstagram + a wellness blog is the default answer founders give when they haven't actually figured out distribution. Problems:\n- Surgeons are not scrolling Instagram looking for meditation apps\n- A content blog is a 12\u201318 month SEO bet with no guarantee, and the keywords here are not high-intent\n- Neither channel gives you a defensible, repeatable acquisition loop\n\nWhere surgeons actually are: professional societies (ACS and specialty boards), residency and fellowship programs, hospital wellness committees, surgical conferences, CME channels. That's also where you'd find institutional buyers. Your GTM and your ideal buyer should be the same motion \u2014 right now they're disconnected.\n\n## 7. Unanswered questions you need crisp answers to\n\n- **Retention.** Wellness apps have notoriously brutal retention. What's your 30/90-day number, or your hypothesis for why surgeons retain better? \"Between operations\" is a nice hook but surgeons' between-case time is chaotic and short \u2014 when exactly does usage happen?\n- **Evidence.** Do you have *any* data that 3-minute resets move a metric a surgeon or hospital cares about? Without it, this is a vitamin, not a painkiller.\n- **Founder fit.** Are you a surgeon, or working with one? This audience smells outsiders instantly. Credibility is distribution here.\n- **Why now?** What changed that makes this possible/urgent today?\n\n## What I'd actually do\n\n1. **Re-aim at institutions.** Surgeon burnout is a P&L problem for health systems. Sell there. It fixes your TAM math, your GTM, and your buyer-motivation problem in one move.\n2. **Earn the vertical.** Make the product genuinely surgery-specific \u2014 workflow, content, and outcome claims \u2014 or stop calling it a surgeon app.\n3. **Get one piece of evidence.** A small pilot with one surgical department showing engagement + a self-reported stress/retention signal is worth more than any amount of Instagram strategy.\n4. **Drop or substantiate \"biofeedback.\"** Say exactly what the mechanism and hardware are.\n5. **Rethink pricing around the institutional buyer**, not the $15 individual.\n\n## Bottom line\n\nThe pain is real and timely \u2014 that's the strength, and it's a real one. But as pitched, this is a generic meditation app pointed at a niche too small for its own go-to-market, sold to the buyer with the least budget and the most resistance, through channels that buyer doesn't use. The good news: every one of those problems is fixable, and they mostly get fixed by the *same* decision \u2014 sell to health systems, not to individual surgeons on Instagram. Make that pivot and you might have something. Stay on the current path and you've built a hard-to-find, hard-to-monetize lifestyle app.\n"}], "grading": {"expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": false, "evidence": "A hard critique organised by issue (TAM, positioning, vague claim) \u2014 not the four fits by name."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": false, "evidence": "Touches channel/market issues but not as named connections."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": false, "evidence": "No explicit cascade traced as one chain."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": false, "evidence": "No Four Fits verdict."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": false, "evidence": "Recommends an institutional pivot but not framed as one upstream validation move."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "Acknowledges the problem is real before critiquing."}], "summary": {"passed": 1, "failed": 5, "total": 6, "pass_rate": 0.1667}}}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "four-fits", "skill_path": "<path/to/skill>", "executor_model": "<model-name>", "analyzer_model": "<model-name>", "timestamp": "2026-05-14T14:27:51Z", "evals_run": [0, 1, 2], "runs_per_configuration": 3}, "runs": [{"eval_id": 0, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 84.4, "tokens": 37650, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": true, "evidence": "Explicit 'The four fits' section lists all four by name with statuses."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": true, "evidence": "Walks C2, C3/C4, C8, C-marketplace, C10/C12, C-X3 \u2014 connection-structured throughout."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": true, "evidence": "Dedicated 'The cascade' section: imprecise value prop -> channel -> model -> cold-start."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": true, "evidence": "'The verdict' section: 'the Four Fits don't hold yet \u2014 the model needs revisiting'."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": true, "evidence": "'The next move': interview ten devs to settle the value prop \u2014 the furthest-upstream joint."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "'What's working' section opens it; credits the evidenced pain; 'redesign, not a death sentence'."}], "notes": []}, {"eval_id": 1, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 40.3, "tokens": 34061, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Runs in walk-through mode \u2014 gathers cards conversationally rather than dumping a full analysis", "passed": true, "evidence": "Gathers the Market card only, conversationally; 'We'll go card by card'; ends asking for input \u2014 no full analysis dumped."}, {"text": "Sets the Four Fits frame at the open (four pieces, the joints between them matter)", "passed": true, "evidence": "Paragraph 2 sets the frame: four pieces, fail because pieces don't line up with each other, coaching not a grade."}, {"text": "Asks the founder specific questions to gather the Market card", "passed": true, "evidence": "Asks specific questions: the individual's title, company size, stage."}, {"text": "Probes the macro/micro problem split and pain level", "passed": true, "evidence": "Explicitly probes macro problem, micro problem, and pain level with evidence."}, {"text": "Frames it as a coaching session, not a grade", "passed": true, "evidence": "'Think of this as a coaching read, not a grade'; 'stop me any time a term lands funny'."}], "notes": []}, {"eval_id": 2, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 75.1, "tokens": 37333, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": true, "evidence": "'The four fits' section names all four with statuses."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": true, "evidence": "Walks C2, C1/C3, C8, C9, C10/C12 \u2014 connection-structured."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": true, "evidence": "'The cascade' section: consumer model pointed at non-consumer buyer collapses channel, unit economics, market math together."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": true, "evidence": "'The verdict': 'As it stands, the Four Fits don't hold' \u2014 and reframes the real buyer."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": true, "evidence": "'The next move': talk to 10 surgeons + 3 hospital leads \u2014 fix the Market card first."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "'What's working' credits the disciplined wedge; honest but explicitly not dismissive."}], "notes": []}, {"eval_id": 0, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.1667, "passed": 1, "failed": 5, "total": 6, "time_seconds": 53.8, "tokens": 22112, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": false, "evidence": "Structured as 'seven core risks' + validation checklist \u2014 does not walk the four fits by name."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": false, "evidence": "Risk list, not connection-structured; no named joints between boxes."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": false, "evidence": "No explicit cascade \u2014 risks are listed in parallel, not traced as one chain."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": false, "evidence": "No Four Fits verdict \u2014 ends on a risk summary and a steelman."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": false, "evidence": "Offers a five-step checklist rather than one furthest-upstream move."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "Constructive \u2014 includes a steelman of the narrowest viable version."}], "notes": []}, {"eval_id": 1, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6, "passed": 3, "failed": 2, "total": 5, "time_seconds": 56.8, "tokens": 22501, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Runs in walk-through mode \u2014 gathers cards conversationally rather than dumping a full analysis", "passed": false, "evidence": "Walked all four fits in one pass with 12 interspersed questions \u2014 closer to a full analysis than card-by-card gathering."}, {"text": "Sets the Four Fits frame at the open (four pieces, the joints between them matter)", "passed": true, "evidence": "Engages with the four fits structure the user named."}, {"text": "Asks the founder specific questions to gather the Market card", "passed": true, "evidence": "Includes diagnostic questions, several touching the market."}, {"text": "Probes the macro/micro problem split and pain level", "passed": false, "evidence": "Does not probe the skill-specific macro/micro split or a structured pain level."}, {"text": "Frames it as a coaching session, not a grade", "passed": true, "evidence": "Reasonably collaborative with interspersed questions."}], "notes": []}, {"eval_id": 2, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.1667, "passed": 1, "failed": 5, "total": 6, "time_seconds": 49.8, "tokens": 22047, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Walks all four fits by name (Market-Product, Product-Channel, Channel-Model, Model-Market)", "passed": false, "evidence": "A hard critique organised by issue (TAM, positioning, vague claim) \u2014 not the four fits by name."}, {"text": "Surfaces at least two connection-level gaps between boxes (e.g. C2/C4/C8), not just box-level critique", "passed": false, "evidence": "Touches channel/market issues but not as named connections."}, {"text": "Names at least one cascade \u2014 one upstream gap creating downstream pressure", "passed": false, "evidence": "No explicit cascade traced as one chain."}, {"text": "Gives a clear overall verdict on whether the Four Fits hold", "passed": false, "evidence": "No Four Fits verdict."}, {"text": "Ends with one concrete, furthest-upstream next move", "passed": false, "evidence": "Recommends an institutional pivot but not framed as one upstream validation move."}, {"text": "Coaching tone \u2014 acknowledges what's working, honest but constructive, no 'broken'/'fail'", "passed": true, "evidence": "Acknowledges the problem is real before critiquing."}], "notes": []}], "run_summary": {"with_skill": {"pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0}, "time_seconds": {"mean": 66.6, "stddev": 23.2463, "min": 40.3, "max": 84.4}, "tokens": {"mean": 36348.0, "stddev": 1986.9321, "min": 34061, "max": 37650}}, "without_skill": {"pass_rate": {"mean": 0.3111, "stddev": 0.2502, "min": 0.1667, "max": 0.6}, "time_seconds": {"mean": 53.4667, "stddev": 3.5119, "min": 49.8, "max": 56.8}, "tokens": {"mean": 22220.0, "stddev": 245.5137, "min": 22047, "max": 22501}}, "delta": {"pass_rate": "+0.69", "time_seconds": "+13.1", "tokens": "+14128"}}, "notes": []}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>
