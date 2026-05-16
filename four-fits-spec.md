@@ -68,30 +68,42 @@ The founder fills these in. All fields are free-text unless flagged otherwise.
 | Field | Type | Description |
 |---|---|---|
 | `market.who` | string | The specific individual buyer — title, company size, geography. Get to the human, not a category. |
-| `market.problem` | string | The concrete, painful, recurring problem this individual has. A moment, not a category. |
+| `market.macro_problem` | string | The systemic "why it matters" — the big problem the micro problem sits inside. (Energy example: the grid can't connect new generation.) |
+| `market.micro_problem` | string | The specific, addressable bottleneck inside the macro problem. (Energy example: transformer availability.) You solve the macro by picking the right micro. |
+| `market.pain_level` | enum: `vitamin` \| `mild` \| `real` \| `hair-on-fire` | How painful is the micro problem? A problem can be specific and still be a vitamin. We want painkillers. |
+| `market.pain_detail` | string | Evidence the pain is real — what does the buyer currently do about it, what does it cost them? |
 | `market.motivation_archetype` | enum: `laid` \| `made` \| `paid` | The dominant human driver. (Laid = status, belonging, attraction. Made = achievement, mastery, advancement. Paid = money, security, savings.) |
 | `market.motivation_detail` | string | Why this individual cares enough to act. |
+| `market.pmf_phase` | enum: `none` \| `early-signal` \| `some-retention` \| `flat-retention` | Where the proposition sits on the PMF spectrum. |
+| `market.pmf_evidence` | string | The actual evidence — NPS score, feedback quotes, the shape of the retention curve, % "very disappointed" if the product vanished. |
+
+PMF phases: `none` (no data yet) → `early-signal` (good feedback, NPS >90) → `some-retention` (paying customers staying, curve still declining) → `flat-retention` (the gold standard — a flat retention curve of paying customers).
 
 #### 2. Product Hypothesis
 
 | Field | Type | Description |
 |---|---|---|
-| `product.value_prop` | string | The actual value delivered. The promise on the homepage. |
+| `product.value_prop` | string | The concrete, **realizable** benefit. Not a nice-to-have ("a beautiful email client"), a checkable value ("save 2.5 hours a day"). |
+| `product.marketing_promise` | string | The actual promise made in marketing. |
+| `product.promise_type` | enum: `value` \| `emotional` | Is the promise a nuts-and-bolts value promise (what a startup needs) or an emotional/brand promise (mature-business marketing)? |
+| `product.features_that_deliver` | string | The specific shipped features that deliver the value prop and solve the micro problem. Must map back to the problem — features on the roadmap don't count. |
 | `product.hook` | string | What pulls them in? Habit-forming or habit-replacing. |
-| `product.aha_moment` | string | The single moment a user feels the value. Must be precisely nameable. |
+| `product.aha_moment` | string | The single, observable moment a user feels the value. Must be precisely nameable. |
 | `product.time_to_value` | string | How long from sign-up to Aha. Minutes / hours / days / weeks / months. |
+| `product.onboarding` | string | The path to Aha. Onboarding is a separate product whose only job is to get users to Aha fast. |
 | `product.stickiness` | string | Why they come back — network effect, lock-in, habit, switching cost. |
-| `product.onboarding` | string | The path to Aha. Onboarding is a separate product. |
-| `product.value_prop_vs_features` | string | The marketing promise vs features actually shipped today. Where's the gap? |
 
 #### 3. Channel Hypothesis
 
 | Field | Type | Description |
 |---|---|---|
 | `channel.primary` | enum (see below) | The single dominant channel. Power Law: 70%+ of acquisition comes from one. |
-| `channel.rationale` | string | Why this is THE channel. Why does the product fit it naturally? |
-| `channel.secondary` | string | Other channels for context only. |
+| `channel.natural_fit` | string | Why this is THE channel — why the product lends itself to it naturally. Channels don't mold to products. |
+| `channel.audience_density` | string | What fraction of this channel's audience can actually realize value from the product? Radio for Hiri = ~1 in 10,000 = terrible. Density, not reach. |
+| `channel.scales_naturally` | enum: `yes` \| `partly` \| `no` | Does the channel scale on its own, or does it cap out (founder coffees, networking)? |
+| `channel.cost_to_run` | enum: `low` \| `medium` \| `high` | Roughly how expensive is it to run this channel? |
 | `channel.cac_expectation` | string | Realistic CAC range for this channel + buyer combination. |
+| `channel.secondary` | string | Other channels for context only. |
 
 `channel.primary` enum values: `viral-b2c`, `seo`, `paid`, `b2b-content`, `inside-sales`, `enterprise-sales`, `plg`, `partnerships`, `community`, `other`.
 
@@ -103,21 +115,24 @@ The founder fills these in. All fields are free-text unless flagged otherwise.
 | `model.pattern` | string | Strategyzer pattern: subscription, freemium, transactional, marketplace, multi-sided platform, razor-and-blade, pay-per-use, revenue share, aggregator, open-source-with-paid-services, white-label, franchise, long tail, who-pays inversion, third-party subsidised, etc. |
 | `model.innovation` | string | Is the model itself the bet? If non-obvious (subsidies, unbundling, new pricing axis, who-pays inversion), describe. If standard, say so. |
 | `model.arpa` | string | ARPA / pricing. |
+| `model.pricing_logic` | enum: `commodity-risk` \| `competitor-anchored` \| `value-capture` \| `monopoly-like` | How is price set? Commodity = race to the bottom. Value-capture = priced to the value added. Monopoly-like = can charge freely because of the value add. |
+| `model.value_quantification` | string | The value added, in money where possible — $ saved or $ made per customer per year. Pricing should be a fraction of this. |
 | `model.motion` | enum: `self-serve` \| `plg-with-sales` \| `inside-sales` \| `field-sales` \| `hybrid` | Sales motion. |
+| `model.cac_math` | string | Back-of-envelope CAC: e.g. "$5/click × 1-in-10 conversion = $50 CAC". Must be covered by ARPU/LTV. |
 | `model.volume_to_outcome` | string | Customers needed at this ARPA to hit a meaningful ARR target. |
-| `model.unit_economics` | string | ARPU and CAC explicitly, plus LTV/CAC and payback if known. |
+| `model.unit_economics` | string | ARPU and CAC explicitly, plus LTV/CAC and payback. Does ARPU cover CAC? |
 
 ### 1.6 UX Flow (Reference Implementation)
 
 1. Founder lands on the page; persisted draft (if any) is restored from local storage.
-2. Founder fills the four hypothesis cards in any order. Saves continuously.
-3. Founder clicks **Run Analysis**.
-4. Frontend builds a JSON payload (the schema in §1.5) and POSTs it to the analysis endpoint.
-5. Backend prepends the system prompt (§2.2) and sends to the LLM.
-6. LLM returns JSON matching the output schema (§2.5).
-7. Frontend renders: hero verdict card, four fit-tile traffic lights, field-level critique grouped by fit, cascade narratives.
-
-There is also a "Load Hiri example" button that populates all fields with the canonical worked example (§2.7) — useful as a smoke test.
+2. **Optional onboarding aid:** the founder can load a worked case study (Hiri, plus a strong-fit contrast) or click "Generate a random case study" — the LLM invents a realistic, fully-filled proposition so the founder can see what good looks like end to end before starting their own.
+3. Founder fills the four hypothesis cards in any order. Each field carries a one-line "what we're looking for" and an expandable "what good looks like" with a strong and a weak example. Saves continuously.
+4. **Coach-as-you-go:** each card has a "Coach this card" button that runs a focused critique of that card (plus whatever else has been filled), so the founder gets feedback before completing the whole template.
+5. Founder clicks **Run Full Analysis**.
+6. Frontend builds a JSON payload (the schema in §1.5) and POSTs it to the analysis endpoint.
+7. Backend prepends the system prompt (§2.2) and sends to the LLM.
+8. LLM returns JSON matching the output schema (§2.5).
+9. Frontend renders: overall verdict (including a "does this fulfil the requirements of Four Fits" judgment), four fit-tile traffic lights, box-by-box critique, **connection-by-connection critique** (the lines between boxes), and cascade narratives.
 
 ---
 
@@ -212,7 +227,70 @@ Cross-check `model.animal` against `model.motion` and `channel.primary`. Mismatc
 - The dominant human driver should match what the product actually delivers.
 - A "Made" motivation paired with a value prop about saving money is a tell — what's actually being sold?
 
-### 2.4 Cascading Failure Patterns
+#### 2.3.12 Macro vs micro problem (Market)
+- A complete Market hypothesis has both altitudes: a macro problem (the systemic "why it matters") and a micro problem (the specific addressable bottleneck inside it).
+- You solve the macro by picking the *right* micro. Flag if only one altitude is present, or if the micro problem doesn't credibly sit inside the macro.
+
+#### 2.3.13 Pain, not vitamins (Market)
+- A problem can be specific and still be a vitamin. We want painkillers.
+- Check `market.pain_level` against `market.pain_detail`. If pain is claimed as "real" or "hair-on-fire" but the detail shows no current spend, workaround, or cost — flag it: the pain may not be as real as claimed.
+- Vitamin-level pain is not fatal at idea stage, but it must be named honestly.
+
+#### 2.3.14 PMF as phases, not binary (Market)
+- PMF is a spectrum: no data → early signal (good feedback, NPS >90) → some retention → flat retention curve (the gold standard).
+- A flat retention curve of paying customers is the strongest signal there is. Early-stage qualitative feedback is the weakest.
+- Check `market.pmf_phase` against `market.pmf_evidence`. A claimed phase with no evidence behind it is Partial at best.
+
+#### 2.3.15 Realizable benefit vs nice-to-have (Product)
+- The value prop must be a *realizable* value, not a nice-to-have. "A beautiful email client" — beauty is a nice-to-have you can't realize as value. "Save 2.5 hours a day" — concrete, realizable, checkable.
+- Flag value props that are aesthetic, aspirational, or vague rather than concrete and realizable.
+
+#### 2.3.16 Two kinds of marketing (Product)
+- Startup marketing must make a nuts-and-bolts **value** promise. Mature-business marketing makes **emotional**/brand promises (differentiation, "step into the future", brand consideration).
+- If `product.promise_type` is `emotional` for an early-stage proposition, flag it: an early-stage company usually can't afford brand marketing, and an emotional promise can't be checked against the product.
+
+#### 2.3.17 Channel audience density + the three channel tests (Channel)
+- The real channel test isn't reach, it's **density** — what fraction of the channel's audience can actually realize value. Hiri on the radio: ~1 in 10,000 = terrible.
+- Three tests every channel must pass: (1) natural fit — the product lends itself to it; (2) scales naturally — doesn't cap out like founder coffees; (3) doesn't cost too much to run.
+- "No box is filler" — social-media-as-catchall or a dialed-in channel box is a flag. The Bullseye Framework (start wide, whittle to a few) is the recommended exercise.
+
+#### 2.3.18 Repeatable channel + CAC math (Channel ↔ Model)
+- The channel must be **repeatable** and pay for itself. Look for back-of-envelope CAC math in `model.cac_math`.
+- If `model.cac_math` is absent, flag Partial — the founder hasn't done the arithmetic.
+
+#### 2.3.19 Willingness AND ability to pay (Model ↔ Market)
+- Two separate tests: does the segment *want* it (willingness), and can they *afford* it (purchasing power)?
+- A buyer who wants the product but lacks budget authority or spend is a Model ↔ Market mismatch.
+
+#### 2.3.20 Pricing: capture value, avoid commodity, aim for monopoly (Model)
+- Best pricing method: ramp price up until the customer won't pay anymore — find the ceiling. Don't just anchor to competitors.
+- Price to capture the value added. Check `model.pricing_logic` against `model.value_quantification`: price should be a fraction of the quantified value.
+- Commodities are a race to the bottom — flag `commodity-risk`. The goal is monopoly-like pricing power, earned through genuine value add.
+- If `model.value_quantification` is vague or missing, the founder can't price to value — flag it.
+
+### 2.4 The Connections Model
+
+The analysis is **box-by-box, but the boxes must relate to each other**. The Four Fits are not four separate scores — they are a chain, and a chain is only as strong as its joints. The LLM must explicitly walk each connection below, decide whether the two boxes line up, and flag any that don't. When connections don't align, the Four Fits model needs revisiting — say so plainly.
+
+| # | Connection | The question |
+|---|---|---|
+| C1 | Who → Macro/Micro problem | Does this specific person actually have this problem? Is the micro problem a credible wedge into the macro? |
+| C2 | Micro problem → Pain | Is the problem genuinely painful, with evidence — or a vitamin dressed up? |
+| C3 | Problem → Value prop | Does the value prop directly address the stated micro problem? |
+| C4 | Value prop → Features that deliver | Do shipped features actually deliver the value prop and solve the problem? (Roadmap doesn't count.) |
+| C5 | Value prop → Marketing promise | Is the promise a value promise, and does it match what the product delivers? Break the realization, break the chain. |
+| C6 | Value prop → Aha moment | Is the Aha moment the moment the promised value is felt? |
+| C7 | Aha moment → Time to Value → Onboarding | Can onboarding get the user to Aha fast enough for the channel to work? |
+| C8 | Who → Channel | Does the channel reach this specific person, at density? |
+| C9 | Product → Channel | Does the product lend itself naturally to this channel? Does it scale? Is it affordable? |
+| C10 | Channel CAC → Model ARPU | Does the revenue per customer cover the cost to acquire them, with the CAC math shown? |
+| C11 | Animal ↔ Motion ↔ Channel | Do the Janz animal, the sales motion, and the channel all agree with each other? |
+| C12 | Model ARPA → Who's purchasing power | Can this buyer actually afford this price — willingness *and* ability? |
+| C13 | Value quantification → Pricing logic | Is price set to capture a fraction of the quantified value, not anchored to commodities or competitors? |
+
+The output (§2.6) carries a `connections` array — one entry per connection the LLM judges worth commenting on, each with a status and a coaching comment.
+
+### 2.5 Cascading Failure Patterns
 
 The most important thing the LLM must find. Cascades are cross-fit failure narratives — one upstream gap creating downstream pressure.
 
@@ -222,14 +300,19 @@ The canonical cascade:
 
 The LLM should produce 1–3 cascade narratives in the output, framed in coaching tone. Each cascade: name the upstream gap, trace the downstream pressure, suggest where to intervene first.
 
-### 2.5 Output Schema (JSON)
+### 2.6 Output Schema (JSON)
 
 The LLM must return ONLY this JSON object. No markdown fences, no prose before or after, no comments inside JSON, no literal newlines inside string values.
+
+Two modes share this schema:
+- **Full analysis** — all sections populated.
+- **Coach-a-card** — only `summary`, the relevant `boxes`, and any `connections` touching that card are populated; `fits` and `cascades` may be omitted.
 
 ```json
 {
   "summary": {
     "overall_status": "green" | "amber" | "red",
+    "fulfils_four_fits": true | false,
     "headline": "<one line, ≤18 words>",
     "body": "<3–4 sentences in coaching tone, ≤60 words>"
   },
@@ -243,12 +326,22 @@ The LLM must return ONLY this JSON object. No markdown fences, no prose before o
     "channel_model":   { "status": "...", "verdict": "...", "next_move": "..." },
     "model_market":    { "status": "...", "verdict": "...", "next_move": "..." }
   },
-  "fields": [
+  "boxes": [
     {
-      "fit": "market_product" | "product_channel" | "channel_model" | "model_market",
+      "card": "market" | "product" | "channel" | "model",
       "label": "<name of the input field, e.g. 'Who'>",
       "status": "green" | "amber" | "red",
       "comment": "<≤30 words: warm, specific, quotes the input where useful>",
+      "next_move": "<≤20 words; only if amber/red>"
+    }
+  ],
+  "connections": [
+    {
+      "id": "<e.g. C4>",
+      "from": "<box name>",
+      "to": "<box name>",
+      "status": "green" | "amber" | "red",
+      "comment": "<≤35 words: does this joint line up? coaching tone>",
       "next_move": "<≤20 words; only if amber/red>"
     }
   ],
@@ -258,7 +351,9 @@ The LLM must return ONLY this JSON object. No markdown fences, no prose before o
 }
 ```
 
-### 2.6 Length Caps (mandatory)
+`fulfils_four_fits` is the headline judgment: does this proposition currently meet the bar — all four fits aligned and the connections holding — or does the model need revisiting?
+
+### 2.7 Length Caps (mandatory)
 
 The model must respect these to fit within token budgets:
 
@@ -268,13 +363,15 @@ The model must respect these to fit within token budgets:
 | `summary.body` | ≤60 words |
 | `fits.*.verdict` | ≤25 words |
 | `fits.*.next_move` | ≤20 words |
-| `fields[].comment` | ≤30 words |
-| `fields[].next_move` | ≤20 words |
+| `boxes[].comment` | ≤30 words |
+| `boxes[].next_move` | ≤20 words |
+| `connections[].comment` | ≤35 words |
+| `connections[].next_move` | ≤20 words |
 | `cascades[]` | ≤60 words each, max 3 |
 
 Total output budget: ~8000 tokens. If the model can stream, prefer streaming.
 
-### 2.7 Worked Example: Hiri (canonical)
+### 2.8 Worked Example: Hiri (canonical)
 
 A real-world startup that ran every fit "green" on its own card but failed when read across cards. Use as a smoke test for any implementation.
 
@@ -286,31 +383,44 @@ A real-world startup that ran every fit "green" on its own card but failed when 
     "pitch": "An email client that helps knowledge workers write fewer, better emails." },
   "market": {
     "who": "C-level exec — CIO/CEO — of a knowledge-worker company (50–1000 staff).",
-    "problem": "Loss of productivity from bad email habits and poor written communication culture.",
+    "macro_problem": "Knowledge-worker organisations are losing productivity to a poor written-communication culture.",
+    "micro_problem": "Individual bad email habits — overlong messages, unclear asks, reply-all noise.",
+    "pain_level": "mild",
+    "pain_detail": "Execs grumble about email but few have a budget line for it; no current spend on a fix.",
     "motivation_archetype": "paid",
-    "motivation_detail": "Wants to claw back productivity hours and reduce wasteful email volume."
+    "motivation_detail": "Wants to claw back productivity hours and reduce wasteful email volume.",
+    "pmf_phase": "early-signal",
+    "pmf_evidence": "Warm individual feedback from early users; no retention curve data at org level."
   },
   "product": {
     "value_prop": "Save time, improve communication.",
+    "marketing_promise": "A beautiful email client for mid-level managers.",
+    "promise_type": "emotional",
+    "features_that_deliver": "Email scoring, send-later, focus inbox. None of these directly produce the org-level 'save time' claim quickly.",
     "hook": "Rate each other's emails — hold up a mirror to the team's habits.",
     "aha_moment": "Unclear. Buried, not front-loaded.",
     "time_to_value": "~12 months for org-level habit change.",
-    "stickiness": "Habit-based, but only if onboarding gets there.",
     "onboarding": "Org-wide rollout, training, change management.",
-    "value_prop_vs_features": "Promise: 'save time'. Reality: behavioural change over a year. Big gap."
+    "stickiness": "Habit-based, but only if onboarding gets there."
   },
   "channel": {
     "primary": "enterprise-sales",
-    "rationale": "In practice: networking, word-of-mouth, founder coffees. C-level buyers have no concentrated venue.",
-    "secondary": "Word of mouth, founder coffees.",
-    "cac_expectation": "Effectively very high — founder time × months per deal."
+    "natural_fit": "Weak. In practice: networking, word-of-mouth, founder coffees.",
+    "audience_density": "C-level buyers have no concentrated venue — generic channels reach almost no one who'd buy.",
+    "scales_naturally": "no",
+    "cost_to_run": "high",
+    "cac_expectation": "Effectively very high — founder time × months per deal.",
+    "secondary": "Word of mouth, founder coffees."
   },
   "model": {
     "animal": "whale",
     "pattern": "Standard enterprise SaaS subscription. No model innovation.",
     "innovation": "No real model innovation.",
     "arpa": "$500k – $1.5M per company.",
+    "pricing_logic": "competitor-anchored",
+    "value_quantification": "Vague — 'save time' never converted to $ per company per year.",
     "motion": "field-sales",
+    "cac_math": "Not done — no per-deal CAC arithmetic.",
     "volume_to_outcome": "70+ whale customers needed for $100M — but no enterprise sales org.",
     "unit_economics": "ARPU $500k–$1.5M; CAC very high (founder time × months); throughput too low."
   }
@@ -319,17 +429,18 @@ A real-world startup that ran every fit "green" on its own card but failed when 
 
 #### Expected Diagnosis (high level)
 
-- **Overall status:** `red` / Needs work.
-- **Market ↔ Product:** Partial — buyer and problem are clear, but the value prop ("save time, improve communication") is too generic for the buyer's actual decision.
+- **Overall status:** `red` / Needs work. `fulfils_four_fits: false`.
+- **Market ↔ Product:** Partial — buyer and problem altitudes are clear, but pain is only `mild` (no current spend), and the value prop is too generic for the buyer's actual decision.
 - **Product ↔ Channel:** Needs work — the 12-month TTV is the upstream cause of the cascade. With no fast Aha moment, self-serve and paid acquisition are impossible; founder is forced into coffees and word-of-mouth.
-- **Channel ↔ Model:** Needs work — manual founder-led channel cannot sustain the throughput required for whale economics; CAC is effectively unbounded.
-- **Model ↔ Market:** Partial — whale ARPA is consistent with the buyer, but "70+ whale customers without an enterprise sales org" is the gap. The model is correct for the market but the org isn't built to deliver it.
+- **Channel ↔ Model:** Needs work — manual founder-led channel cannot sustain the throughput required for whale economics; CAC math was never done; CAC is effectively unbounded.
+- **Model ↔ Market:** Partial — whale ARPA is consistent with the buyer's purchasing power, but pricing is competitor-anchored not value-captured, value was never quantified, and "70+ whale customers without an enterprise sales org" is the gap.
+- **Key broken connections:** C4 (features don't deliver the value prop fast), C5 (marketing promise is emotional, not a value promise — "beautiful email client" isn't realizable value), C7 (onboarding is "training/rollout", not a product driving to a fast Aha), C8 (channel doesn't reach the Who at density), C13 (value never quantified, so pricing can't capture it).
 - **Primary cascade:** Time to Value (12 months) → killed scalable channels → forced into manual sales → forced into whale ARPA to make the unit economics work → required enterprise sales motion that doesn't exist.
 - **Primary next move:** Find a 5-minute Aha moment for an individual user inside Hiri before any org-level deployment. Build onboarding as a self-contained product around it.
 
-A correct implementation should surface most of this. Verdicts may vary slightly in colour but the cascading narrative is the test.
+A correct implementation should surface most of this. Verdicts may vary slightly in colour but the cascading narrative and the broken connections are the test.
 
-### 2.8 Status Semantics (UI mapping)
+### 2.9 Status Semantics (UI mapping)
 
 | LLM emits | UI label | Semantic |
 |---|---|---|
@@ -379,13 +490,16 @@ UI should colour-code: green = success colour, amber = warning colour, red = the
 
 A correct implementation should pass:
 
-1. **Hiri smoke test.** Loading the canonical Hiri example and running analysis must produce: overall `red`, Time-to-Value flagged in `fields[]`, at least one cascade narrative naming the TTV → channel → model chain, and a concrete next_move suggesting an individual-user Aha moment.
-2. **Empty-fields handling.** An entirely empty submission must return: all fields with `status: amber`, sensible "worth filling in" comments, no errors.
+1. **Hiri smoke test.** Loading the canonical Hiri example and running analysis must produce: overall `red`, `fulfils_four_fits: false`, Time-to-Value flagged in `boxes[]`, at least one broken `connections[]` entry among C4/C5/C7/C8/C13, at least one cascade narrative naming the TTV → channel → model chain, and a concrete next_move suggesting an individual-user Aha moment.
+2. **Empty-fields handling.** An entirely empty submission must return: all boxes with `status: amber`, sensible "worth filling in" comments, no errors.
 3. **Tone test.** No output should contain the words "broken," "fail," "wrong," or imperatives like "you must." Spot-check three generated analyses.
 4. **JSON robustness.** Truncate the LLM response 100 chars short of the closing `}`. The repair function must still produce a valid object with the available data.
-5. **Length caps.** No `comment` exceeds 30 words; no `cascades[]` entry exceeds 60 words. Validate programmatically.
-6. **Channel discipline.** A submission listing three primary channels in `channel.rationale` must trigger a Partial verdict on Product ↔ Channel with a next_move about picking THE channel.
+5. **Length caps.** No `boxes[].comment` exceeds 30 words; no `connections[].comment` exceeds 35 words; no `cascades[]` entry exceeds 60 words. Validate programmatically.
+6. **Channel discipline.** A submission with a vague or multi-channel `channel.natural_fit` must trigger a Partial verdict on Product ↔ Channel with a next_move about picking THE channel.
 7. **Model-as-checkbox check.** A submission where `model.innovation` is "standard SaaS, no innovation" but `channel.primary` is `enterprise-sales` and `model.animal` is `mouse` or `rabbit` must trigger a flag on Model ↔ Market suggesting a non-standard pattern.
+8. **Connections test.** A submission where `product.features_that_deliver` does not address `market.micro_problem` must produce a `red` or `amber` on connection C4 (Value prop → Features) with a specific comment.
+9. **Pain test.** A submission claiming `pain_level: hair-on-fire` with a `pain_detail` showing no current spend or workaround must be flagged on connection C2.
+10. **Coach-a-card mode.** Requesting coaching on a single card must return only `summary`, that card's `boxes`, and `connections` touching it — no errors from the omitted `fits`/`cascades`.
 
 ---
 
