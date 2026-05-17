@@ -161,6 +161,16 @@
       "note": "Distinct from internal_workflow_hard_filter (which tests who the product serves). This tests whether the approach is genuinely new. Both can apply simultaneously. Hard filter threshold (5 appearances) not yet met — serialised as soft factor at 3-occurrence threshold."
     }
   ],
+    {
+      "name": "r3_tokenization_novel_asset",
+      "type": "positive",
+      "condition": "Tokenisation of novel or previously illiquid alternative asset classes (real estate, royalties/IP, attention, niche alternatives) for retail or democratised access — independent seed/Series-A startup, not a product of an established incumbent",
+      "value": 12,
+      "evidence": "tytl 5★ (tokenized residential RE, Anchorage custody full-stack), anote-music 5★ (music-royalty marketplace — issuance + marketplace + secondary, R3 Tokenization cell), noise 5★ ('Love it' — attention market on Base); 3/3 upvotes (100%) — cycle 19 formalisation after 3-vote threshold met. Entity-level archetype check applies (must be independent startup, not parent-company product).",
+      "weeks_active": 0,
+      "status": "active"
+    }
+  ],
   "soft_factors_pending": [
     {
       "name": "agent_exposure_api_callable",
@@ -182,6 +192,19 @@
       },
       "soft_factors_count": 0,
       "note": "Initial configuration. No votes yet."
+    },
+    {
+      "date": "2026-05-17",
+      "weights": {
+        "gap_fit": 30,
+        "finserv_readiness": 25,
+        "stage_match": 25,
+        "team_signal": 20
+      },
+      "soft_factors_count": 18,
+      "changes": [],
+      "new_soft_factors": ["r3_tokenization_novel_asset"],
+      "review_note": "Cycle 19 — vote corpus stable at 94 (unchanged from cycle 18 thesis review 2026-05-15; only +1 strategic vote + 4 outreach markers since cycle 16 preference learning at 89). No new near-misses (anote-music was an upvote; all other activity was deal-funnel annotation). Core weights unchanged: insufficient new statistical signal from a single upvote to re-calibrate any dimension. One new positive soft factor added: r3_tokenization_novel_asset (+12 pts) — TYTL 5★ + ANote Music 5★ + Noise 5★ = 3/3 upvotes (100% hit rate) in the novel-asset-tokenisation cell, meeting the 3-occurrence threshold. Soft factors now 18 active + 1 pending (agent_exposure_api_callable at 2/3 evidence threshold — anote-music 5★ note was blank, does not advance this counter). No retirements: all active factors continue to show directional validity. Maximum 2 weight changes per cycle — 1 structural change made (new soft factor); 0 core weight changes."
     },
     {
       "date": "2026-05-10",
