@@ -4,6 +4,38 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Preference Learning — 2026-05-17
+Total votes: 94 (31 up [4★+5★], 8 neutral [3★], 38 down [1★+2★]) | New near misses: 0 | New soft factors: r3_tokenization_novel_asset (+12 pts) | Weight changes: none | Key insight: R3 Tokenization / novel asset democratisation graduates to formal soft factor at n=3 (TYTL + ANote Music + Noise, 3/3 = 100% upvote rate); radar→outreach walkback reaches n=2 with Alomana deal-stage softening | Confidence: high
+
+### Vote Corpus
+94 entries total (77 voted + 17 outreach-marker 0★). Net delta since last preference learning cycle (2026-05-10, 89 entries): +5 — anote-music 5★ (1 strategic upvote), serveusai/platform1online/contextbases/openbox (4 outreach markers). Re-vote annotations on nava, solvapay, deeploy, ralio, alomana, geordie — deal-funnel progress notes only, no star-rating changes.
+
+### STEP 1 — Vote Pattern Analysis
+Corpus movement is minimal (+1 strategic upvote, +4 non-strategic markers), so no entirely new patterns emerge. However, existing patterns either consolidate or approach new thresholds:
+
+**R3 Tokenization cluster reaches n=3.** TYTL 5★ (tokenized residential RE) + Noise 5★ (attention market on Base) + ANote Music 5★ (music-royalty marketplace) = 3/3 upvotes in the novel-asset-tokenisation cell. All three are: (a) tokenising previously illiquid or non-traditional asset classes, (b) democratising retail access, (c) independent seed/Series-A startups, (d) operating on new asset surfaces that did not exist as investable products before. This is the same pattern strength as Research & Signal Intelligence (3/3, 100%) and Dispute Resolution (2/2, 100%). **Formalised as soft factor this cycle.**
+
+**Radar→outreach walkback at n=2.** autonomous (BG 92 → 0★, "style over substance") was n=1. Alomana (5★, "feels more like a consultancy at the moment" — 2026-05-13 meeting note) is the potential second occurrence. Alomana's 5★ is intact, making this a weaker case than autonomous, but the business-model concern (product vs consultancy) at deal stage matches the same failure mode: a dimension invisible at carding time became decisive in person. At n=3 this pattern would earn a scoring signal (likely a penalty for companies scoring high on pedigree signals but with thin public product evidence).
+
+**Deal-funnel competitive dynamics first visible.** deeploy (0★, kanban: talked_to) note: "Geordie is a more mature solution. We may say no to Deeploy if Geordie show more interest." This is the first explicit intra-category competitive comparison in the deal funnel — two companies competing for the same slot with Dave weighing them against each other. Not a scoring signal yet (sample-of-one, purely operational) but worth watching as the funnel deepens.
+
+**No hard filter candidates, no new rejection patterns.** The absence of new downvotes this cycle is itself a calibration signal: the hard filters are successfully blocking internal-workflow and accounting companies before they reach the vote stage.
+
+### STEP 2 — Near-Miss Analysis
+**0 new near-misses.** The only new strategic vote is anote-music 5★ (upvote). All other activity is deal-funnel annotation. Near-miss total remains 24.
+
+### STEP 3 — Preferences Changes
+Four targeted edits to `config/preferences.md`:
+1. **Header** — updated to cycle 19, 2026-05-17; vote count reflects 94.
+2. **Strong Positive Signals** — added new section #8: R3 Tokenization / Novel Asset Democratisation (+12 pts); inserted before Compliance with Differentiation.
+3. **Emerging Preferences — Radar→outreach walkback** — updated from n=1 (autonomous) to n=2 (autonomous + alomana softening); formalisation threshold at n=3 noted.
+4. **Emerging Preferences — R3 Tokenization** — entry marked GRADUATED; forward reference to Strong Positive Signal #8; Wealthyhood flagged as the first untested candidate in the now-formalised cell.
+
+### STEP 4 — Weight Calibration
+94 entries ≥ 50-vote threshold. Core weights unchanged (gap_fit 30, finserv_readiness 25, stage_match 25, team_signal 20). Rationale: +1 strategic upvote is insufficient new signal to shift any dimension's predictive power estimate. The single change is the new `r3_tokenization_novel_asset` soft factor (+12 pts). No retirements: all 17 pre-existing active factors remain directionally valid. Pending factor `agent_exposure_api_callable` stays at 2/3 — ANote Music's note was blank, so it does not advance the counter.
+
+---
+
 ## Thesis Review — 2026-05-15 (Cycle 18)
 
 ### Feedback Processed
