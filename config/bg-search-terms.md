@@ -1,5 +1,5 @@
-# Bene Gesserit — Search Terms v5.7
-*Generated: 2026-05-15 | thesis-schema v1.0 | Thesis v3.3*  
+# Bene Gesserit — Search Terms v5.8
+*Generated: 2026-05-19 | thesis-schema v1.0 | Thesis v3.4*  
 *DO NOT EDIT — regenerate via generate-search-terms skill.*
 
 ---
@@ -22,7 +22,7 @@ Each gap exposes queries across **four discovery layers** (with sub-layers).
 ### S-FRONT — Personal Financial Agent
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** True | **Specialist bonus:** +10
 
-_The front door. Understands the customer's goals, translates intent into action, orchestrates the conversation across all specialist agents. Covers idea generation, behavioural coaching, and financial planning overlay (stages 1, 13, 14)._
+_The front door. Understands the customer's goals, translates intent into action, orchestrates the conversation across all specialist agents. Covers idea generation, behavioural coaching, and financial…_
 
 #### L1a — Generic press
 ```
@@ -31,7 +31,7 @@ _The front door. Understands the customer's goals, translates intent into action
 "AI financial advisor startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
 "AI financial advisor startup" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 "wealth management agent" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"wealth management agent" "Series A" Berlin -crypto -DeFi -blockchain -web3 -NFT -token
+"wealth management agent" "Series A" Europe -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -59,13 +59,19 @@ site:itkeymedia.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 
 site:aripaev.ee "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:estonianworld.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:e-estonia.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:innovationorigins.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:elreferente.es "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupxplore.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:economyup.it "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupbusiness.it "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:shifter.no "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:breakit.se "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:tech.fi "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thecurrency.news "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:businesspost.ie "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -75,15 +81,19 @@ site:ekathimerini.com "personal finance AI agent" -crypto -DeFi -blockchain -web
 site:dev.ua "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:netokracija.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:trend.sk "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:northstack.is "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techukraine.org "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:level39.co "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:rise.barclays "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfactory.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:plexal.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ukri.org "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -163,6 +173,8 @@ site:byfounders.vc "personal finance AI agent" -crypto -DeFi -blockchain -web3 -
 site:inventure.fi "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:frontline.vc "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:octopusventures.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:qedinvestors.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ribbitcap.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:anthemis.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:augmentum.vc "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:speedinvest.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -252,7 +264,9 @@ site:wayra.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT 
 site:startupwiseguys.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:sequoiacap.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:a16z.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:bvp.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfund.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:insightpartners.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L4c — University spin-outs
@@ -288,10 +302,13 @@ site:tecnico.ulisboa.pt "personal finance AI agent" -crypto -DeFi -blockchain -w
 site:slush.org "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:websummit.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eic.ec.europa.eu "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hello-tomorrow.org "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:vivatechnology.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thenextweb.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techcrunch.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:f6s.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:money2020.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:fintechfutures.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:latitude59.ee "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:wolvessummit.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:bitsandpretzels.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -305,6 +322,7 @@ site:piratesummit.com "personal finance AI agent" -crypto -DeFi -blockchain -web
 #### L4e — Databases
 ```
 site:dealroom.co "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:beauhurst.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:seedtable.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupsmagazine.co.uk "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eu-startups.com "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -316,16 +334,16 @@ site:sifted.eu "personal finance AI agent" -crypto -DeFi -blockchain -web3 -NFT 
 ### S1 — Research & Signal Intelligence
 **Status:** filled | **Geo:** europe-first | **Crypto excl:** True | **Specialist bonus:** +18
 
-_Alternative data, earnings analysis, sector research, catalyst identification, sentiment analysis, institutional flow tracking. The knowledge layer that generates investment ideas and validates theses. Must be exposed as agent-callable endp…_
+_Alternative data, earnings analysis, sector research, catalyst identification, sentiment analysis, institutional flow tracking. The knowledge layer that generates investment ideas and validates theses…_
 
 #### L1a — Generic press
 ```
 "alternative data startup fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"alternative data startup fintech" "Series A" Europe -crypto -DeFi -blockchain -web3 -NFT -token
+"alternative data startup fintech" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 "AI investment research platform" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"AI investment research platform" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
+"AI investment research platform" "Series A" Amsterdam -crypto -DeFi -blockchain -web3 -NFT -token
 "financial signal intelligence startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"financial signal intelligence startup" "Series A" Berlin -crypto -DeFi -blockchain -web3 -NFT -token
+"financial signal intelligence startup" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -353,13 +371,19 @@ site:itkeymedia.com "alternative data startup fintech" -crypto -DeFi -blockchain
 site:aripaev.ee "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:estonianworld.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:e-estonia.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:innovationorigins.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:elreferente.es "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupxplore.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:economyup.it "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupbusiness.it "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:shifter.no "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:breakit.se "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:tech.fi "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thecurrency.news "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:businesspost.ie "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -369,15 +393,19 @@ site:ekathimerini.com "alternative data startup fintech" -crypto -DeFi -blockcha
 site:dev.ua "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:netokracija.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:trend.sk "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:northstack.is "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techukraine.org "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:level39.co "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:rise.barclays "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfactory.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:plexal.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ukri.org "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -463,6 +491,8 @@ site:byfounders.vc "alternative data startup fintech" -crypto -DeFi -blockchain 
 site:inventure.fi "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:frontline.vc "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:octopusventures.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:qedinvestors.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ribbitcap.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:anthemis.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:augmentum.vc "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:speedinvest.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -552,7 +582,9 @@ site:wayra.com "alternative data startup fintech" -crypto -DeFi -blockchain -web
 site:startupwiseguys.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:sequoiacap.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:a16z.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:bvp.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfund.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:insightpartners.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L4c — University spin-outs
@@ -588,10 +620,13 @@ site:tecnico.ulisboa.pt "alternative data startup fintech" -crypto -DeFi -blockc
 site:slush.org "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:websummit.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eic.ec.europa.eu "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hello-tomorrow.org "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:vivatechnology.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thenextweb.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techcrunch.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:f6s.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:money2020.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:fintechfutures.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:latitude59.ee "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:wolvessummit.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:bitsandpretzels.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -605,6 +640,7 @@ site:piratesummit.com "alternative data startup fintech" -crypto -DeFi -blockcha
 #### L4e — Databases
 ```
 site:dealroom.co "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+site:beauhurst.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:seedtable.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupsmagazine.co.uk "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eu-startups.com "alternative data startup fintech" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -616,16 +652,16 @@ site:sifted.eu "alternative data startup fintech" -crypto -DeFi -blockchain -web
 ### S2 — Portfolio Construction & Risk Agent
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** True | **Specialist bonus:** +18
 
-_Concentration analysis, factor exposure, correlation modelling, scenario analysis, position sizing, rebalancing triggers. Knows what you own and what adding or removing a position does to the whole portfolio. Covers investment process stage…_
+_Concentration analysis, factor exposure, correlation modelling, scenario analysis, position sizing, rebalancing triggers. Knows what you own and what adding or removing a position does to the whole po…_
 
 #### L1a — Generic press
 ```
 "portfolio construction AI startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"portfolio construction AI startup" "Series A" Europe -crypto -DeFi -blockchain -web3 -NFT -token
+"portfolio construction AI startup" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 "risk management AI agent" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"risk management AI agent" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
+"risk management AI agent" "Series A" Amsterdam -crypto -DeFi -blockchain -web3 -NFT -token
 "factor analysis startup fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"factor analysis startup fintech" "Series A" Berlin -crypto -DeFi -blockchain -web3 -NFT -token
+"factor analysis startup fintech" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -653,13 +689,19 @@ site:itkeymedia.com "portfolio construction AI startup" -crypto -DeFi -blockchai
 site:aripaev.ee "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:estonianworld.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:e-estonia.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:innovationorigins.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:elreferente.es "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupxplore.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:economyup.it "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupbusiness.it "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:shifter.no "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:breakit.se "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:tech.fi "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thecurrency.news "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:businesspost.ie "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -669,15 +711,19 @@ site:ekathimerini.com "portfolio construction AI startup" -crypto -DeFi -blockch
 site:dev.ua "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:netokracija.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:trend.sk "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:northstack.is "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techukraine.org "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:level39.co "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:rise.barclays "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfactory.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:plexal.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ukri.org "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -763,6 +809,8 @@ site:byfounders.vc "portfolio construction AI startup" -crypto -DeFi -blockchain
 site:inventure.fi "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:frontline.vc "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:octopusventures.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:qedinvestors.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ribbitcap.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:anthemis.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:augmentum.vc "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:speedinvest.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -852,7 +900,9 @@ site:wayra.com "portfolio construction AI startup" -crypto -DeFi -blockchain -we
 site:startupwiseguys.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:sequoiacap.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:a16z.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:bvp.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfund.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:insightpartners.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L4c — University spin-outs
@@ -888,10 +938,13 @@ site:tecnico.ulisboa.pt "portfolio construction AI startup" -crypto -DeFi -block
 site:slush.org "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:websummit.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eic.ec.europa.eu "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hello-tomorrow.org "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:vivatechnology.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thenextweb.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techcrunch.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:f6s.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:money2020.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:fintechfutures.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:latitude59.ee "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:wolvessummit.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:bitsandpretzels.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -905,6 +958,7 @@ site:piratesummit.com "portfolio construction AI startup" -crypto -DeFi -blockch
 #### L4e — Databases
 ```
 site:dealroom.co "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:beauhurst.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:seedtable.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupsmagazine.co.uk "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eu-startups.com "portfolio construction AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -916,16 +970,16 @@ site:sifted.eu "portfolio construction AI startup" -crypto -DeFi -blockchain -we
 ### S3 — Trade Structuring Agent
 **Status:** empty | **Geo:** global | **Crypto excl:** True | **Specialist bonus:** +15
 
-_Equity vs options vs pairs vs ETFs. Account selection across taxable, IRA, Roth, 529. Structures the expression of a thesis for optimal risk/reward and tax efficiency. Covers investment process stage 6._
+_Equity vs options vs pairs vs ETFs. Account selection across taxable, IRA, Roth, 529. Structures the expression of a thesis for optimal risk/reward and tax efficiency. Covers investment process stage…_
 
 #### L1a — Generic press
 ```
 "trade structuring AI startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"trade structuring AI startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"trade structuring AI startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "options strategy agent fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"options strategy agent fintech" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"options strategy agent fintech" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "account selection AI" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"account selection AI" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"account selection AI" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -947,7 +1001,40 @@ site:siliconrepublic.com "trade structuring AI startup" -crypto -DeFi -blockchai
 site:paperjam.lu "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ain.ua "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startit.rs "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.pl "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:spidersweb.pl "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:itkeymedia.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:aripaev.ee "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:estonianworld.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:e-estonia.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:innovationorigins.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:elreferente.es "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupxplore.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:economyup.it "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupbusiness.it "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:shifter.no "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:breakit.se "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:tech.fi "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:thecurrency.news "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:businesspost.ie "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delano.lu "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:naftemporiki.gr "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ekathimerini.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:dev.ua "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:netokracija.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:trend.sk "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:northstack.is "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:techukraine.org "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "trade structuring AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
@@ -1210,16 +1297,16 @@ site:startupblink.com "trade structuring AI startup" -crypto -DeFi -blockchain -
 ### S4 — Tax Optimisation Agent
 **Status:** partial | **Geo:** global | **Crypto excl:** False | **Specialist bonus:** +12
 
-_Lot-level tax-loss harvesting, gain deferral, asset location optimisation, wash sale prevention, Roth conversion analysis. Operates on the live portfolio in real time across all account types. NOT tax filing. Portfolio-integrated, continuou…_
+_Lot-level tax-loss harvesting, gain deferral, asset location optimisation, wash sale prevention, Roth conversion analysis. Operates on the live portfolio in real time across all account types. NOT tax…_
 
 #### L1a — Generic press
 ```
 "tax loss harvesting AI startup" startup seed funding
-"tax loss harvesting AI startup" "Series A"
+"tax loss harvesting AI startup" "Series A" startup
 "portfolio tax optimisation agent" startup seed funding
-"portfolio tax optimisation agent" "Series A"
+"portfolio tax optimisation agent" "Series A" startup
 "direct indexing tax agent" startup seed funding
-"direct indexing tax agent" "Series A"
+"direct indexing tax agent" "Series A" startup
 ```
 
 #### L1b — Targeted press
@@ -1241,7 +1328,40 @@ site:siliconrepublic.com "tax loss harvesting AI startup"
 site:paperjam.lu "tax loss harvesting AI startup"
 site:ain.ua "tax loss harvesting AI startup"
 site:startit.rs "tax loss harvesting AI startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "tax loss harvesting AI startup"
+site:forbes.pl "tax loss harvesting AI startup"
+site:spidersweb.pl "tax loss harvesting AI startup"
+site:itkeymedia.com "tax loss harvesting AI startup"
+site:aripaev.ee "tax loss harvesting AI startup"
+site:estonianworld.com "tax loss harvesting AI startup"
+site:e-estonia.com "tax loss harvesting AI startup"
+site:delfi.lt "tax loss harvesting AI startup"
+site:hvg.hu "tax loss harvesting AI startup"
+site:innovationorigins.com "tax loss harvesting AI startup"
+site:elreferente.es "tax loss harvesting AI startup"
+site:forbes.es "tax loss harvesting AI startup"
+site:startupxplore.com "tax loss harvesting AI startup"
+site:eco.sapo.pt "tax loss harvesting AI startup"
+site:observador.pt "tax loss harvesting AI startup"
+site:economyup.it "tax loss harvesting AI startup"
+site:startupbusiness.it "tax loss harvesting AI startup"
+site:shifter.no "tax loss harvesting AI startup"
+site:breakit.se "tax loss harvesting AI startup"
+site:di.se "tax loss harvesting AI startup"
+site:tech.fi "tax loss harvesting AI startup"
+site:thecurrency.news "tax loss harvesting AI startup"
+site:businesspost.ie "tax loss harvesting AI startup"
+site:delano.lu "tax loss harvesting AI startup"
+site:naftemporiki.gr "tax loss harvesting AI startup"
+site:ekathimerini.com "tax loss harvesting AI startup"
+site:dev.ua "tax loss harvesting AI startup"
+site:netokracija.com "tax loss harvesting AI startup"
+site:trend.sk "tax loss harvesting AI startup"
+site:visir.is "tax loss harvesting AI startup"
+site:northstack.is "tax loss harvesting AI startup"
+site:cyprus-mail.com "tax loss harvesting AI startup"
+site:timesofmalta.com "tax loss harvesting AI startup"
+site:techukraine.org "tax loss harvesting AI startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "tax loss harvesting AI startup"
 ```
 
 #### L1c — Hubs
@@ -1504,16 +1624,16 @@ site:startupblink.com "tax loss harvesting AI startup"
 ### S5 — Options & Derivatives Strategy Agent
 **Status:** empty | **Geo:** global | **Crypto excl:** True | **Specialist bonus:** +15
 
-_Covered calls for income, protective puts, spreads for defined risk, collar strategies, volatility trading. Deep specialist knowledge that most retail investors can't access today. Agent-callable, not just educational. Covers investment pro…_
+_Covered calls for income, protective puts, spreads for defined risk, collar strategies, volatility trading. Deep specialist knowledge that most retail investors can't access today. Agent-callable, not…_
 
 #### L1a — Generic press
 ```
 "options strategy AI startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"options strategy AI startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"options strategy AI startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "derivatives intelligence agent fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"derivatives intelligence agent fintech" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"derivatives intelligence agent fintech" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "retail options AI platform" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"retail options AI platform" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"retail options AI platform" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -1535,7 +1655,40 @@ site:siliconrepublic.com "options strategy AI startup" -crypto -DeFi -blockchain
 site:paperjam.lu "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ain.ua "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startit.rs "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.pl "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:spidersweb.pl "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:itkeymedia.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:aripaev.ee "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:estonianworld.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:e-estonia.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:innovationorigins.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:elreferente.es "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupxplore.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:economyup.it "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupbusiness.it "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:shifter.no "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:breakit.se "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:tech.fi "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:thecurrency.news "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:businesspost.ie "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delano.lu "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:naftemporiki.gr "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ekathimerini.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:dev.ua "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:netokracija.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:trend.sk "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:northstack.is "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:techukraine.org "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "options strategy AI startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
@@ -1803,11 +1956,11 @@ _Algorithm selection (VWAP, TWAP, POV), dark pool routing, multi-venue smart ord
 #### L1a — Generic press
 ```
 "algorithmic execution startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"algorithmic execution startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"algorithmic execution startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "smart order routing AI" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"smart order routing AI" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"smart order routing AI" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "execution quality AI fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"execution quality AI fintech" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"execution quality AI fintech" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -1829,7 +1982,40 @@ site:siliconrepublic.com "algorithmic execution startup" -crypto -DeFi -blockcha
 site:paperjam.lu "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ain.ua "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startit.rs "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.pl "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:spidersweb.pl "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:itkeymedia.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:aripaev.ee "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:estonianworld.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:e-estonia.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:innovationorigins.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:elreferente.es "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupxplore.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:economyup.it "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupbusiness.it "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:shifter.no "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:breakit.se "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:tech.fi "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:thecurrency.news "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:businesspost.ie "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delano.lu "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:naftemporiki.gr "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ekathimerini.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:dev.ua "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:netokracija.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:trend.sk "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:northstack.is "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:techukraine.org "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "algorithmic execution startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
@@ -2092,16 +2278,16 @@ site:startupblink.com "algorithmic execution startup" -crypto -DeFi -blockchain 
 ### S7 — Position Monitoring & Thesis Tracking Agent
 **Status:** empty | **Geo:** europe-first | **Crypto excl:** True | **Specialist bonus:** +12
 
-_Continuous monitoring of thesis milestones, stop-loss/profit-target management, catalyst tracking, earnings surprises, macro regime changes. Initiates new conversations when conditions change. Covers investment process stage 10._
+_Continuous monitoring of thesis milestones, stop-loss/profit-target management, catalyst tracking, earnings surprises, macro regime changes. Initiates new conversations when conditions change. Covers…_
 
 #### L1a — Generic press
 ```
 "portfolio monitoring AI agent" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"portfolio monitoring AI agent" "Series A" Europe -crypto -DeFi -blockchain -web3 -NFT -token
+"portfolio monitoring AI agent" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 "thesis tracking startup fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"thesis tracking startup fintech" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
+"thesis tracking startup fintech" "Series A" Amsterdam -crypto -DeFi -blockchain -web3 -NFT -token
 "position alert AI" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"position alert AI" "Series A" Berlin -crypto -DeFi -blockchain -web3 -NFT -token
+"position alert AI" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -2129,13 +2315,19 @@ site:itkeymedia.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -w
 site:aripaev.ee "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:estonianworld.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:e-estonia.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:innovationorigins.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:elreferente.es "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupxplore.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:economyup.it "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupbusiness.it "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:shifter.no "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:breakit.se "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:tech.fi "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thecurrency.news "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:businesspost.ie "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -2145,15 +2337,19 @@ site:ekathimerini.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain 
 site:dev.ua "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:netokracija.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:trend.sk "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:northstack.is "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techukraine.org "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:level39.co "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:rise.barclays "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfactory.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:plexal.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ukri.org "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -2239,6 +2435,8 @@ site:byfounders.vc "portfolio monitoring AI agent" -crypto -DeFi -blockchain -we
 site:inventure.fi "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:frontline.vc "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:octopusventures.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:qedinvestors.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ribbitcap.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:anthemis.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:augmentum.vc "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:speedinvest.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -2328,7 +2526,9 @@ site:wayra.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -
 site:startupwiseguys.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:sequoiacap.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:a16z.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:bvp.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfund.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:insightpartners.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L4c — University spin-outs
@@ -2364,10 +2564,13 @@ site:tecnico.ulisboa.pt "portfolio monitoring AI agent" -crypto -DeFi -blockchai
 site:slush.org "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:websummit.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eic.ec.europa.eu "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hello-tomorrow.org "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:vivatechnology.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thenextweb.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techcrunch.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:f6s.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:money2020.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:fintechfutures.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:latitude59.ee "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:wolvessummit.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:bitsandpretzels.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -2381,6 +2584,7 @@ site:piratesummit.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain 
 #### L4e — Databases
 ```
 site:dealroom.co "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
+site:beauhurst.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:seedtable.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupsmagazine.co.uk "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eu-startups.com "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -2392,16 +2596,16 @@ site:sifted.eu "portfolio monitoring AI agent" -crypto -DeFi -blockchain -web3 -
 ### S8 — Financial Planning Agent
 **Status:** empty | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +12
 
-_Goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. The long-term guardrail that prevents short-term decisions from undermining the client's actual objectives. Covers stage …_
+_Goals-based planning, retirement projections, life event modelling, income generation strategy, estate considerations. The long-term guardrail that prevents short-term decisions from undermining the c…_
 
 #### L1a — Generic press
 ```
 "financial planning AI agent" startup seed funding
-"financial planning AI agent" "Series A" Europe
+"financial planning AI agent" "Series A" UK
 "goals based planning startup" startup seed funding
-"goals based planning startup" "Series A" London
+"goals based planning startup" "Series A" Paris
 "retirement planning AI fintech" startup seed funding
-"retirement planning AI fintech" "Series A" Berlin
+"retirement planning AI fintech" "Series A" UK
 ```
 
 #### L1b — Targeted press
@@ -2429,13 +2633,19 @@ site:itkeymedia.com "financial planning AI agent"
 site:aripaev.ee "financial planning AI agent"
 site:estonianworld.com "financial planning AI agent"
 site:e-estonia.com "financial planning AI agent"
+site:delfi.lt "financial planning AI agent"
+site:hvg.hu "financial planning AI agent"
 site:innovationorigins.com "financial planning AI agent"
 site:elreferente.es "financial planning AI agent"
+site:forbes.es "financial planning AI agent"
 site:startupxplore.com "financial planning AI agent"
+site:eco.sapo.pt "financial planning AI agent"
+site:observador.pt "financial planning AI agent"
 site:economyup.it "financial planning AI agent"
 site:startupbusiness.it "financial planning AI agent"
 site:shifter.no "financial planning AI agent"
 site:breakit.se "financial planning AI agent"
+site:di.se "financial planning AI agent"
 site:tech.fi "financial planning AI agent"
 site:thecurrency.news "financial planning AI agent"
 site:businesspost.ie "financial planning AI agent"
@@ -2445,15 +2655,19 @@ site:ekathimerini.com "financial planning AI agent"
 site:dev.ua "financial planning AI agent"
 site:netokracija.com "financial planning AI agent"
 site:trend.sk "financial planning AI agent"
+site:visir.is "financial planning AI agent"
 site:northstack.is "financial planning AI agent"
+site:cyprus-mail.com "financial planning AI agent"
+site:timesofmalta.com "financial planning AI agent"
 site:techukraine.org "financial planning AI agent"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "financial planning AI agent"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "financial planning AI agent"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "financial planning AI agent"
 site:level39.co "financial planning AI agent"
+site:rise.barclays "financial planning AI agent"
 site:foundersfactory.com "financial planning AI agent"
 site:plexal.com "financial planning AI agent"
 site:ukri.org "financial planning AI agent"
@@ -2533,6 +2747,8 @@ site:byfounders.vc "financial planning AI agent"
 site:inventure.fi "financial planning AI agent"
 site:frontline.vc "financial planning AI agent"
 site:octopusventures.com "financial planning AI agent"
+site:qedinvestors.com "financial planning AI agent"
+site:ribbitcap.com "financial planning AI agent"
 site:anthemis.com "financial planning AI agent"
 site:augmentum.vc "financial planning AI agent"
 site:speedinvest.com "financial planning AI agent"
@@ -2622,7 +2838,9 @@ site:wayra.com "financial planning AI agent"
 site:startupwiseguys.com "financial planning AI agent"
 site:sequoiacap.com "financial planning AI agent"
 site:a16z.com "financial planning AI agent"
+site:bvp.com "financial planning AI agent"
 site:foundersfund.com "financial planning AI agent"
+site:insightpartners.com "financial planning AI agent"
 ```
 
 #### L4c — University spin-outs
@@ -2658,10 +2876,13 @@ site:tecnico.ulisboa.pt "financial planning AI agent"
 site:slush.org "financial planning AI agent"
 site:websummit.com "financial planning AI agent"
 site:eic.ec.europa.eu "financial planning AI agent"
+site:hello-tomorrow.org "financial planning AI agent"
 site:vivatechnology.com "financial planning AI agent"
 site:thenextweb.com "financial planning AI agent"
 site:techcrunch.com "financial planning AI agent"
 site:f6s.com "financial planning AI agent"
+site:money2020.com "financial planning AI agent"
+site:fintechfutures.com "financial planning AI agent"
 site:latitude59.ee "financial planning AI agent"
 site:wolvessummit.com "financial planning AI agent"
 site:bitsandpretzels.com "financial planning AI agent"
@@ -2675,6 +2896,7 @@ site:piratesummit.com "financial planning AI agent"
 #### L4e — Databases
 ```
 site:dealroom.co "financial planning AI agent"
+site:beauhurst.com "financial planning AI agent"
 site:seedtable.com "financial planning AI agent"
 site:startupsmagazine.co.uk "financial planning AI agent"
 site:eu-startups.com "financial planning AI agent"
@@ -2686,16 +2908,16 @@ site:sifted.eu "financial planning AI agent"
 ### S9 — Behavioural Coaching Agent
 **Status:** empty | **Geo:** global | **Crypto excl:** False | **Specialist bonus:** +8
 
-_Panic prevention, discipline enforcement, drawdown perspective, portfolio-consistent decision support. The agent that stops you selling at the bottom. Behavioural psychology applied to finance as an agent-callable service. Covers stage 13._
+_Panic prevention, discipline enforcement, drawdown perspective, portfolio-consistent decision support. The agent that stops you selling at the bottom. Behavioural psychology applied to finance as an a…_
 
 #### L1a — Generic press
 ```
 "behavioural finance AI startup" startup seed funding
-"behavioural finance AI startup" "Series A"
+"behavioural finance AI startup" "Series A" startup
 "investor coaching AI" startup seed funding
-"investor coaching AI" "Series A"
+"investor coaching AI" "Series A" startup
 "behavioural coaching agent fintech" startup seed funding
-"behavioural coaching agent fintech" "Series A"
+"behavioural coaching agent fintech" "Series A" startup
 ```
 
 #### L1b — Targeted press
@@ -2717,7 +2939,40 @@ site:siliconrepublic.com "behavioural finance AI startup"
 site:paperjam.lu "behavioural finance AI startup"
 site:ain.ua "behavioural finance AI startup"
 site:startit.rs "behavioural finance AI startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "behavioural finance AI startup"
+site:forbes.pl "behavioural finance AI startup"
+site:spidersweb.pl "behavioural finance AI startup"
+site:itkeymedia.com "behavioural finance AI startup"
+site:aripaev.ee "behavioural finance AI startup"
+site:estonianworld.com "behavioural finance AI startup"
+site:e-estonia.com "behavioural finance AI startup"
+site:delfi.lt "behavioural finance AI startup"
+site:hvg.hu "behavioural finance AI startup"
+site:innovationorigins.com "behavioural finance AI startup"
+site:elreferente.es "behavioural finance AI startup"
+site:forbes.es "behavioural finance AI startup"
+site:startupxplore.com "behavioural finance AI startup"
+site:eco.sapo.pt "behavioural finance AI startup"
+site:observador.pt "behavioural finance AI startup"
+site:economyup.it "behavioural finance AI startup"
+site:startupbusiness.it "behavioural finance AI startup"
+site:shifter.no "behavioural finance AI startup"
+site:breakit.se "behavioural finance AI startup"
+site:di.se "behavioural finance AI startup"
+site:tech.fi "behavioural finance AI startup"
+site:thecurrency.news "behavioural finance AI startup"
+site:businesspost.ie "behavioural finance AI startup"
+site:delano.lu "behavioural finance AI startup"
+site:naftemporiki.gr "behavioural finance AI startup"
+site:ekathimerini.com "behavioural finance AI startup"
+site:dev.ua "behavioural finance AI startup"
+site:netokracija.com "behavioural finance AI startup"
+site:trend.sk "behavioural finance AI startup"
+site:visir.is "behavioural finance AI startup"
+site:northstack.is "behavioural finance AI startup"
+site:cyprus-mail.com "behavioural finance AI startup"
+site:timesofmalta.com "behavioural finance AI startup"
+site:techukraine.org "behavioural finance AI startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "behavioural finance AI startup"
 ```
 
 #### L1c — Hubs
@@ -2974,16 +3229,16 @@ site:startupblink.com "behavioural finance AI startup"
 ### S10 — Post-Trade Analysis & Learning Agent
 **Status:** empty | **Geo:** global | **Crypto excl:** False | **Specialist bonus:** +8
 
-_Trade journaling, attribution analysis, pattern recognition across closed positions, strategy refinement. The feedback loop that makes the entire agent ecosystem smarter over time. Agent-callable, not a dashboard. Covers investment process …_
+_Trade journaling, attribution analysis, pattern recognition across closed positions, strategy refinement. The feedback loop that makes the entire agent ecosystem smarter over time. Agent-callable, not…_
 
 #### L1a — Generic press
 ```
 "post-trade analytics AI startup" startup seed funding
-"post-trade analytics AI startup" "Series A"
+"post-trade analytics AI startup" "Series A" startup
 "trade attribution AI fintech" startup seed funding
-"trade attribution AI fintech" "Series A"
+"trade attribution AI fintech" "Series A" startup
 "performance analytics agent" startup seed funding
-"performance analytics agent" "Series A"
+"performance analytics agent" "Series A" startup
 ```
 
 #### L1b — Targeted press
@@ -3005,7 +3260,40 @@ site:siliconrepublic.com "post-trade analytics AI startup"
 site:paperjam.lu "post-trade analytics AI startup"
 site:ain.ua "post-trade analytics AI startup"
 site:startit.rs "post-trade analytics AI startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "post-trade analytics AI startup"
+site:forbes.pl "post-trade analytics AI startup"
+site:spidersweb.pl "post-trade analytics AI startup"
+site:itkeymedia.com "post-trade analytics AI startup"
+site:aripaev.ee "post-trade analytics AI startup"
+site:estonianworld.com "post-trade analytics AI startup"
+site:e-estonia.com "post-trade analytics AI startup"
+site:delfi.lt "post-trade analytics AI startup"
+site:hvg.hu "post-trade analytics AI startup"
+site:innovationorigins.com "post-trade analytics AI startup"
+site:elreferente.es "post-trade analytics AI startup"
+site:forbes.es "post-trade analytics AI startup"
+site:startupxplore.com "post-trade analytics AI startup"
+site:eco.sapo.pt "post-trade analytics AI startup"
+site:observador.pt "post-trade analytics AI startup"
+site:economyup.it "post-trade analytics AI startup"
+site:startupbusiness.it "post-trade analytics AI startup"
+site:shifter.no "post-trade analytics AI startup"
+site:breakit.se "post-trade analytics AI startup"
+site:di.se "post-trade analytics AI startup"
+site:tech.fi "post-trade analytics AI startup"
+site:thecurrency.news "post-trade analytics AI startup"
+site:businesspost.ie "post-trade analytics AI startup"
+site:delano.lu "post-trade analytics AI startup"
+site:naftemporiki.gr "post-trade analytics AI startup"
+site:ekathimerini.com "post-trade analytics AI startup"
+site:dev.ua "post-trade analytics AI startup"
+site:netokracija.com "post-trade analytics AI startup"
+site:trend.sk "post-trade analytics AI startup"
+site:visir.is "post-trade analytics AI startup"
+site:northstack.is "post-trade analytics AI startup"
+site:cyprus-mail.com "post-trade analytics AI startup"
+site:timesofmalta.com "post-trade analytics AI startup"
+site:techukraine.org "post-trade analytics AI startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "post-trade analytics AI startup"
 ```
 
 #### L1c — Hubs
@@ -3270,7 +3558,7 @@ site:startupblink.com "post-trade analytics AI startup"
 ### P1 — Agent Orchestration
 **Status:** filled | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +0
 
-_Routes conversations between agents, manages multi-agent workflows, enforces execution order, governs agent-to-agent communication in a regulated context. Platform infrastructure that makes the marketplace function._
+_Routes conversations between agents, manages multi-agent workflows, enforces execution order, governs agent-to-agent communication in a regulated context. Platform infrastructure that makes the market…_
 
 #### L1a — Generic press
 ```
@@ -3279,7 +3567,7 @@ _Routes conversations between agents, manages multi-agent workflows, enforces ex
 "AI agent workflow infrastructure" startup seed funding
 "AI agent workflow infrastructure" "Series A" London
 "agentic workflow platform fintech" startup seed funding
-"agentic workflow platform fintech" "Series A" Berlin
+"agentic workflow platform fintech" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -3307,13 +3595,19 @@ site:itkeymedia.com "multi-agent orchestration startup"
 site:aripaev.ee "multi-agent orchestration startup"
 site:estonianworld.com "multi-agent orchestration startup"
 site:e-estonia.com "multi-agent orchestration startup"
+site:delfi.lt "multi-agent orchestration startup"
+site:hvg.hu "multi-agent orchestration startup"
 site:innovationorigins.com "multi-agent orchestration startup"
 site:elreferente.es "multi-agent orchestration startup"
+site:forbes.es "multi-agent orchestration startup"
 site:startupxplore.com "multi-agent orchestration startup"
+site:eco.sapo.pt "multi-agent orchestration startup"
+site:observador.pt "multi-agent orchestration startup"
 site:economyup.it "multi-agent orchestration startup"
 site:startupbusiness.it "multi-agent orchestration startup"
 site:shifter.no "multi-agent orchestration startup"
 site:breakit.se "multi-agent orchestration startup"
+site:di.se "multi-agent orchestration startup"
 site:tech.fi "multi-agent orchestration startup"
 site:thecurrency.news "multi-agent orchestration startup"
 site:businesspost.ie "multi-agent orchestration startup"
@@ -3323,15 +3617,19 @@ site:ekathimerini.com "multi-agent orchestration startup"
 site:dev.ua "multi-agent orchestration startup"
 site:netokracija.com "multi-agent orchestration startup"
 site:trend.sk "multi-agent orchestration startup"
+site:visir.is "multi-agent orchestration startup"
 site:northstack.is "multi-agent orchestration startup"
+site:cyprus-mail.com "multi-agent orchestration startup"
+site:timesofmalta.com "multi-agent orchestration startup"
 site:techukraine.org "multi-agent orchestration startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "multi-agent orchestration startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "multi-agent orchestration startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "multi-agent orchestration startup"
 site:level39.co "multi-agent orchestration startup"
+site:rise.barclays "multi-agent orchestration startup"
 site:foundersfactory.com "multi-agent orchestration startup"
 site:plexal.com "multi-agent orchestration startup"
 site:ukri.org "multi-agent orchestration startup"
@@ -3417,6 +3715,8 @@ site:byfounders.vc "multi-agent orchestration startup"
 site:inventure.fi "multi-agent orchestration startup"
 site:frontline.vc "multi-agent orchestration startup"
 site:octopusventures.com "multi-agent orchestration startup"
+site:qedinvestors.com "multi-agent orchestration startup"
+site:ribbitcap.com "multi-agent orchestration startup"
 site:anthemis.com "multi-agent orchestration startup"
 site:augmentum.vc "multi-agent orchestration startup"
 site:speedinvest.com "multi-agent orchestration startup"
@@ -3506,7 +3806,9 @@ site:wayra.com "multi-agent orchestration startup"
 site:startupwiseguys.com "multi-agent orchestration startup"
 site:sequoiacap.com "multi-agent orchestration startup"
 site:a16z.com "multi-agent orchestration startup"
+site:bvp.com "multi-agent orchestration startup"
 site:foundersfund.com "multi-agent orchestration startup"
+site:insightpartners.com "multi-agent orchestration startup"
 ```
 
 #### L4c — University spin-outs
@@ -3542,10 +3844,13 @@ site:tecnico.ulisboa.pt "multi-agent orchestration startup"
 site:slush.org "multi-agent orchestration startup"
 site:websummit.com "multi-agent orchestration startup"
 site:eic.ec.europa.eu "multi-agent orchestration startup"
+site:hello-tomorrow.org "multi-agent orchestration startup"
 site:vivatechnology.com "multi-agent orchestration startup"
 site:thenextweb.com "multi-agent orchestration startup"
 site:techcrunch.com "multi-agent orchestration startup"
 site:f6s.com "multi-agent orchestration startup"
+site:money2020.com "multi-agent orchestration startup"
+site:fintechfutures.com "multi-agent orchestration startup"
 site:latitude59.ee "multi-agent orchestration startup"
 site:wolvessummit.com "multi-agent orchestration startup"
 site:bitsandpretzels.com "multi-agent orchestration startup"
@@ -3559,6 +3864,7 @@ site:piratesummit.com "multi-agent orchestration startup"
 #### L4e — Databases
 ```
 site:dealroom.co "multi-agent orchestration startup"
+site:beauhurst.com "multi-agent orchestration startup"
 site:seedtable.com "multi-agent orchestration startup"
 site:startupsmagazine.co.uk "multi-agent orchestration startup"
 site:eu-startups.com "multi-agent orchestration startup"
@@ -3570,7 +3876,7 @@ site:sifted.eu "multi-agent orchestration startup"
 ### P2 — AI Safety & Guardrails
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +0
 
-_Supervises agent behaviour, prevents hallucination, enforces boundaries, detects anomalous or harmful agent actions in real time. Agent-level safety, NOT AI model interpretability or model safety. The referee for the marketplace._
+_Supervises agent behaviour, prevents hallucination, enforces boundaries, detects anomalous or harmful agent actions in real time. Agent-level safety, NOT AI model interpretability or model safety. The…_
 
 #### L1a — Generic press
 ```
@@ -3579,7 +3885,7 @@ _Supervises agent behaviour, prevents hallucination, enforces boundaries, detect
 "AI guardrails platform fintech" startup seed funding
 "AI guardrails platform fintech" "Series A" London
 "agentic security startup" startup seed funding
-"agentic security startup" "Series A" Berlin
+"agentic security startup" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -3607,13 +3913,19 @@ site:itkeymedia.com "AI agent safety startup"
 site:aripaev.ee "AI agent safety startup"
 site:estonianworld.com "AI agent safety startup"
 site:e-estonia.com "AI agent safety startup"
+site:delfi.lt "AI agent safety startup"
+site:hvg.hu "AI agent safety startup"
 site:innovationorigins.com "AI agent safety startup"
 site:elreferente.es "AI agent safety startup"
+site:forbes.es "AI agent safety startup"
 site:startupxplore.com "AI agent safety startup"
+site:eco.sapo.pt "AI agent safety startup"
+site:observador.pt "AI agent safety startup"
 site:economyup.it "AI agent safety startup"
 site:startupbusiness.it "AI agent safety startup"
 site:shifter.no "AI agent safety startup"
 site:breakit.se "AI agent safety startup"
+site:di.se "AI agent safety startup"
 site:tech.fi "AI agent safety startup"
 site:thecurrency.news "AI agent safety startup"
 site:businesspost.ie "AI agent safety startup"
@@ -3623,15 +3935,19 @@ site:ekathimerini.com "AI agent safety startup"
 site:dev.ua "AI agent safety startup"
 site:netokracija.com "AI agent safety startup"
 site:trend.sk "AI agent safety startup"
+site:visir.is "AI agent safety startup"
 site:northstack.is "AI agent safety startup"
+site:cyprus-mail.com "AI agent safety startup"
+site:timesofmalta.com "AI agent safety startup"
 site:techukraine.org "AI agent safety startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI agent safety startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI agent safety startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "AI agent safety startup"
 site:level39.co "AI agent safety startup"
+site:rise.barclays "AI agent safety startup"
 site:foundersfactory.com "AI agent safety startup"
 site:plexal.com "AI agent safety startup"
 site:ukri.org "AI agent safety startup"
@@ -3717,6 +4033,8 @@ site:byfounders.vc "AI agent safety startup"
 site:inventure.fi "AI agent safety startup"
 site:frontline.vc "AI agent safety startup"
 site:octopusventures.com "AI agent safety startup"
+site:qedinvestors.com "AI agent safety startup"
+site:ribbitcap.com "AI agent safety startup"
 site:anthemis.com "AI agent safety startup"
 site:augmentum.vc "AI agent safety startup"
 site:speedinvest.com "AI agent safety startup"
@@ -3806,7 +4124,9 @@ site:wayra.com "AI agent safety startup"
 site:startupwiseguys.com "AI agent safety startup"
 site:sequoiacap.com "AI agent safety startup"
 site:a16z.com "AI agent safety startup"
+site:bvp.com "AI agent safety startup"
 site:foundersfund.com "AI agent safety startup"
+site:insightpartners.com "AI agent safety startup"
 ```
 
 #### L4c — University spin-outs
@@ -3842,10 +4162,13 @@ site:tecnico.ulisboa.pt "AI agent safety startup"
 site:slush.org "AI agent safety startup"
 site:websummit.com "AI agent safety startup"
 site:eic.ec.europa.eu "AI agent safety startup"
+site:hello-tomorrow.org "AI agent safety startup"
 site:vivatechnology.com "AI agent safety startup"
 site:thenextweb.com "AI agent safety startup"
 site:techcrunch.com "AI agent safety startup"
 site:f6s.com "AI agent safety startup"
+site:money2020.com "AI agent safety startup"
+site:fintechfutures.com "AI agent safety startup"
 site:latitude59.ee "AI agent safety startup"
 site:wolvessummit.com "AI agent safety startup"
 site:bitsandpretzels.com "AI agent safety startup"
@@ -3859,6 +4182,7 @@ site:piratesummit.com "AI agent safety startup"
 #### L4e — Databases
 ```
 site:dealroom.co "AI agent safety startup"
+site:beauhurst.com "AI agent safety startup"
 site:seedtable.com "AI agent safety startup"
 site:startupsmagazine.co.uk "AI agent safety startup"
 site:eu-startups.com "AI agent safety startup"
@@ -3870,7 +4194,7 @@ site:sifted.eu "AI agent safety startup"
 ### P3 — Pre-Trade Compliance Agent
 **Status:** market-gap | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +20
 
-_The gate. Checks suitability, concentration limits, restricted lists, best execution obligations before any agent-initiated trade executes. The governance layer for every agentic brokerage — including the app store. Nobody is building this.…_
+_The gate. Checks suitability, concentration limits, restricted lists, best execution obligations before any agent-initiated trade executes. The governance layer for every agentic brokerage — including…_
 
 #### L1a — Generic press
 ```
@@ -3879,7 +4203,7 @@ _The gate. Checks suitability, concentration limits, restricted lists, best exec
 "suitability check AI fintech" startup seed funding
 "suitability check AI fintech" "Series A" London
 "compliance gate for AI agents" startup seed funding
-"compliance gate for AI agents" "Series A" Berlin
+"compliance gate for AI agents" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -3907,13 +4231,19 @@ site:itkeymedia.com "pre-trade compliance AI startup"
 site:aripaev.ee "pre-trade compliance AI startup"
 site:estonianworld.com "pre-trade compliance AI startup"
 site:e-estonia.com "pre-trade compliance AI startup"
+site:delfi.lt "pre-trade compliance AI startup"
+site:hvg.hu "pre-trade compliance AI startup"
 site:innovationorigins.com "pre-trade compliance AI startup"
 site:elreferente.es "pre-trade compliance AI startup"
+site:forbes.es "pre-trade compliance AI startup"
 site:startupxplore.com "pre-trade compliance AI startup"
+site:eco.sapo.pt "pre-trade compliance AI startup"
+site:observador.pt "pre-trade compliance AI startup"
 site:economyup.it "pre-trade compliance AI startup"
 site:startupbusiness.it "pre-trade compliance AI startup"
 site:shifter.no "pre-trade compliance AI startup"
 site:breakit.se "pre-trade compliance AI startup"
+site:di.se "pre-trade compliance AI startup"
 site:tech.fi "pre-trade compliance AI startup"
 site:thecurrency.news "pre-trade compliance AI startup"
 site:businesspost.ie "pre-trade compliance AI startup"
@@ -3923,15 +4253,19 @@ site:ekathimerini.com "pre-trade compliance AI startup"
 site:dev.ua "pre-trade compliance AI startup"
 site:netokracija.com "pre-trade compliance AI startup"
 site:trend.sk "pre-trade compliance AI startup"
+site:visir.is "pre-trade compliance AI startup"
 site:northstack.is "pre-trade compliance AI startup"
+site:cyprus-mail.com "pre-trade compliance AI startup"
+site:timesofmalta.com "pre-trade compliance AI startup"
 site:techukraine.org "pre-trade compliance AI startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "pre-trade compliance AI startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "pre-trade compliance AI startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "pre-trade compliance AI startup"
 site:level39.co "pre-trade compliance AI startup"
+site:rise.barclays "pre-trade compliance AI startup"
 site:foundersfactory.com "pre-trade compliance AI startup"
 site:plexal.com "pre-trade compliance AI startup"
 site:ukri.org "pre-trade compliance AI startup"
@@ -4017,6 +4351,8 @@ site:byfounders.vc "pre-trade compliance AI startup"
 site:inventure.fi "pre-trade compliance AI startup"
 site:frontline.vc "pre-trade compliance AI startup"
 site:octopusventures.com "pre-trade compliance AI startup"
+site:qedinvestors.com "pre-trade compliance AI startup"
+site:ribbitcap.com "pre-trade compliance AI startup"
 site:anthemis.com "pre-trade compliance AI startup"
 site:augmentum.vc "pre-trade compliance AI startup"
 site:speedinvest.com "pre-trade compliance AI startup"
@@ -4106,7 +4442,9 @@ site:wayra.com "pre-trade compliance AI startup"
 site:startupwiseguys.com "pre-trade compliance AI startup"
 site:sequoiacap.com "pre-trade compliance AI startup"
 site:a16z.com "pre-trade compliance AI startup"
+site:bvp.com "pre-trade compliance AI startup"
 site:foundersfund.com "pre-trade compliance AI startup"
+site:insightpartners.com "pre-trade compliance AI startup"
 ```
 
 #### L4c — University spin-outs
@@ -4142,10 +4480,13 @@ site:tecnico.ulisboa.pt "pre-trade compliance AI startup"
 site:slush.org "pre-trade compliance AI startup"
 site:websummit.com "pre-trade compliance AI startup"
 site:eic.ec.europa.eu "pre-trade compliance AI startup"
+site:hello-tomorrow.org "pre-trade compliance AI startup"
 site:vivatechnology.com "pre-trade compliance AI startup"
 site:thenextweb.com "pre-trade compliance AI startup"
 site:techcrunch.com "pre-trade compliance AI startup"
 site:f6s.com "pre-trade compliance AI startup"
+site:money2020.com "pre-trade compliance AI startup"
+site:fintechfutures.com "pre-trade compliance AI startup"
 site:latitude59.ee "pre-trade compliance AI startup"
 site:wolvessummit.com "pre-trade compliance AI startup"
 site:bitsandpretzels.com "pre-trade compliance AI startup"
@@ -4159,6 +4500,7 @@ site:piratesummit.com "pre-trade compliance AI startup"
 #### L4e — Databases
 ```
 site:dealroom.co "pre-trade compliance AI startup"
+site:beauhurst.com "pre-trade compliance AI startup"
 site:seedtable.com "pre-trade compliance AI startup"
 site:startupsmagazine.co.uk "pre-trade compliance AI startup"
 site:eu-startups.com "pre-trade compliance AI startup"
@@ -4170,7 +4512,7 @@ site:sifted.eu "pre-trade compliance AI startup"
 ### P4 — Agent Authentication & Identity (KYA)
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +15
 
-_Know Your Agent. Every agent in the garden must be certified, permissioned, and accountable. KYC redesigned for non-human actors. The app store's admission system. Identity delegation, secrets management, and agent permissioning for financi…_
+_Know Your Agent. Every agent in the garden must be certified, permissioned, and accountable. KYC redesigned for non-human actors. The app store's admission system. Identity delegation, secrets managem…_
 
 #### L1a — Generic press
 ```
@@ -4179,7 +4521,7 @@ _Know Your Agent. Every agent in the garden must be certified, permissioned, and
 "Know Your Agent platform" startup seed funding
 "Know Your Agent platform" "Series A" London
 "agent authentication fintech" startup seed funding
-"agent authentication fintech" "Series A" Berlin
+"agent authentication fintech" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -4207,13 +4549,19 @@ site:itkeymedia.com "AI agent identity startup"
 site:aripaev.ee "AI agent identity startup"
 site:estonianworld.com "AI agent identity startup"
 site:e-estonia.com "AI agent identity startup"
+site:delfi.lt "AI agent identity startup"
+site:hvg.hu "AI agent identity startup"
 site:innovationorigins.com "AI agent identity startup"
 site:elreferente.es "AI agent identity startup"
+site:forbes.es "AI agent identity startup"
 site:startupxplore.com "AI agent identity startup"
+site:eco.sapo.pt "AI agent identity startup"
+site:observador.pt "AI agent identity startup"
 site:economyup.it "AI agent identity startup"
 site:startupbusiness.it "AI agent identity startup"
 site:shifter.no "AI agent identity startup"
 site:breakit.se "AI agent identity startup"
+site:di.se "AI agent identity startup"
 site:tech.fi "AI agent identity startup"
 site:thecurrency.news "AI agent identity startup"
 site:businesspost.ie "AI agent identity startup"
@@ -4223,15 +4571,19 @@ site:ekathimerini.com "AI agent identity startup"
 site:dev.ua "AI agent identity startup"
 site:netokracija.com "AI agent identity startup"
 site:trend.sk "AI agent identity startup"
+site:visir.is "AI agent identity startup"
 site:northstack.is "AI agent identity startup"
+site:cyprus-mail.com "AI agent identity startup"
+site:timesofmalta.com "AI agent identity startup"
 site:techukraine.org "AI agent identity startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI agent identity startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI agent identity startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "AI agent identity startup"
 site:level39.co "AI agent identity startup"
+site:rise.barclays "AI agent identity startup"
 site:foundersfactory.com "AI agent identity startup"
 site:plexal.com "AI agent identity startup"
 site:ukri.org "AI agent identity startup"
@@ -4317,6 +4669,8 @@ site:byfounders.vc "AI agent identity startup"
 site:inventure.fi "AI agent identity startup"
 site:frontline.vc "AI agent identity startup"
 site:octopusventures.com "AI agent identity startup"
+site:qedinvestors.com "AI agent identity startup"
+site:ribbitcap.com "AI agent identity startup"
 site:anthemis.com "AI agent identity startup"
 site:augmentum.vc "AI agent identity startup"
 site:speedinvest.com "AI agent identity startup"
@@ -4406,7 +4760,9 @@ site:wayra.com "AI agent identity startup"
 site:startupwiseguys.com "AI agent identity startup"
 site:sequoiacap.com "AI agent identity startup"
 site:a16z.com "AI agent identity startup"
+site:bvp.com "AI agent identity startup"
 site:foundersfund.com "AI agent identity startup"
+site:insightpartners.com "AI agent identity startup"
 ```
 
 #### L4c — University spin-outs
@@ -4442,10 +4798,13 @@ site:tecnico.ulisboa.pt "AI agent identity startup"
 site:slush.org "AI agent identity startup"
 site:websummit.com "AI agent identity startup"
 site:eic.ec.europa.eu "AI agent identity startup"
+site:hello-tomorrow.org "AI agent identity startup"
 site:vivatechnology.com "AI agent identity startup"
 site:thenextweb.com "AI agent identity startup"
 site:techcrunch.com "AI agent identity startup"
 site:f6s.com "AI agent identity startup"
+site:money2020.com "AI agent identity startup"
+site:fintechfutures.com "AI agent identity startup"
 site:latitude59.ee "AI agent identity startup"
 site:wolvessummit.com "AI agent identity startup"
 site:bitsandpretzels.com "AI agent identity startup"
@@ -4459,6 +4818,7 @@ site:piratesummit.com "AI agent identity startup"
 #### L4e — Databases
 ```
 site:dealroom.co "AI agent identity startup"
+site:beauhurst.com "AI agent identity startup"
 site:seedtable.com "AI agent identity startup"
 site:startupsmagazine.co.uk "AI agent identity startup"
 site:eu-startups.com "AI agent identity startup"
@@ -4470,7 +4830,7 @@ site:sifted.eu "AI agent identity startup"
 ### P5 — Audit & Explainability
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +15
 
-_Records every agent conversation and decision. "Why did the agent recommend this?" must be answerable for regulators and customers. Auditable, regulator-ready explanation of agent-driven financial decisions. The marketplace's transparency l…_
+_Records every agent conversation and decision. "Why did the agent recommend this?" must be answerable for regulators and customers. Auditable, regulator-ready explanation of agent-driven financial dec…_
 
 #### L1a — Generic press
 ```
@@ -4479,7 +4839,7 @@ _Records every agent conversation and decision. "Why did the agent recommend thi
 "explainable AI finserv" startup seed funding
 "explainable AI finserv" "Series A" London
 "agent explainability platform" startup seed funding
-"agent explainability platform" "Series A" Berlin
+"agent explainability platform" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -4507,13 +4867,19 @@ site:itkeymedia.com "AI audit trail fintech startup"
 site:aripaev.ee "AI audit trail fintech startup"
 site:estonianworld.com "AI audit trail fintech startup"
 site:e-estonia.com "AI audit trail fintech startup"
+site:delfi.lt "AI audit trail fintech startup"
+site:hvg.hu "AI audit trail fintech startup"
 site:innovationorigins.com "AI audit trail fintech startup"
 site:elreferente.es "AI audit trail fintech startup"
+site:forbes.es "AI audit trail fintech startup"
 site:startupxplore.com "AI audit trail fintech startup"
+site:eco.sapo.pt "AI audit trail fintech startup"
+site:observador.pt "AI audit trail fintech startup"
 site:economyup.it "AI audit trail fintech startup"
 site:startupbusiness.it "AI audit trail fintech startup"
 site:shifter.no "AI audit trail fintech startup"
 site:breakit.se "AI audit trail fintech startup"
+site:di.se "AI audit trail fintech startup"
 site:tech.fi "AI audit trail fintech startup"
 site:thecurrency.news "AI audit trail fintech startup"
 site:businesspost.ie "AI audit trail fintech startup"
@@ -4523,15 +4889,19 @@ site:ekathimerini.com "AI audit trail fintech startup"
 site:dev.ua "AI audit trail fintech startup"
 site:netokracija.com "AI audit trail fintech startup"
 site:trend.sk "AI audit trail fintech startup"
+site:visir.is "AI audit trail fintech startup"
 site:northstack.is "AI audit trail fintech startup"
+site:cyprus-mail.com "AI audit trail fintech startup"
+site:timesofmalta.com "AI audit trail fintech startup"
 site:techukraine.org "AI audit trail fintech startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI audit trail fintech startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI audit trail fintech startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "AI audit trail fintech startup"
 site:level39.co "AI audit trail fintech startup"
+site:rise.barclays "AI audit trail fintech startup"
 site:foundersfactory.com "AI audit trail fintech startup"
 site:plexal.com "AI audit trail fintech startup"
 site:ukri.org "AI audit trail fintech startup"
@@ -4617,6 +4987,8 @@ site:byfounders.vc "AI audit trail fintech startup"
 site:inventure.fi "AI audit trail fintech startup"
 site:frontline.vc "AI audit trail fintech startup"
 site:octopusventures.com "AI audit trail fintech startup"
+site:qedinvestors.com "AI audit trail fintech startup"
+site:ribbitcap.com "AI audit trail fintech startup"
 site:anthemis.com "AI audit trail fintech startup"
 site:augmentum.vc "AI audit trail fintech startup"
 site:speedinvest.com "AI audit trail fintech startup"
@@ -4706,7 +5078,9 @@ site:wayra.com "AI audit trail fintech startup"
 site:startupwiseguys.com "AI audit trail fintech startup"
 site:sequoiacap.com "AI audit trail fintech startup"
 site:a16z.com "AI audit trail fintech startup"
+site:bvp.com "AI audit trail fintech startup"
 site:foundersfund.com "AI audit trail fintech startup"
+site:insightpartners.com "AI audit trail fintech startup"
 ```
 
 #### L4c — University spin-outs
@@ -4742,10 +5116,13 @@ site:tecnico.ulisboa.pt "AI audit trail fintech startup"
 site:slush.org "AI audit trail fintech startup"
 site:websummit.com "AI audit trail fintech startup"
 site:eic.ec.europa.eu "AI audit trail fintech startup"
+site:hello-tomorrow.org "AI audit trail fintech startup"
 site:vivatechnology.com "AI audit trail fintech startup"
 site:thenextweb.com "AI audit trail fintech startup"
 site:techcrunch.com "AI audit trail fintech startup"
 site:f6s.com "AI audit trail fintech startup"
+site:money2020.com "AI audit trail fintech startup"
+site:fintechfutures.com "AI audit trail fintech startup"
 site:latitude59.ee "AI audit trail fintech startup"
 site:wolvessummit.com "AI audit trail fintech startup"
 site:bitsandpretzels.com "AI audit trail fintech startup"
@@ -4759,6 +5136,7 @@ site:piratesummit.com "AI audit trail fintech startup"
 #### L4e — Databases
 ```
 site:dealroom.co "AI audit trail fintech startup"
+site:beauhurst.com "AI audit trail fintech startup"
 site:seedtable.com "AI audit trail fintech startup"
 site:startupsmagazine.co.uk "AI audit trail fintech startup"
 site:eu-startups.com "AI audit trail fintech startup"
@@ -4770,7 +5148,7 @@ site:sifted.eu "AI audit trail fintech startup"
 ### P6 — Dispute Resolution & Agent Liability
 **Status:** partial | **Geo:** europe-first | **Crypto excl:** False | **Specialist bonus:** +0
 
-_When an agent trade goes wrong, who pays? Insurance, certification, accountability frameworks for agent-mediated financial harm. A new category of fintech infrastructure invented by the emergence of agentic brokerages._
+_When an agent trade goes wrong, who pays? Insurance, certification, accountability frameworks for agent-mediated financial harm. A new category of fintech infrastructure invented by the emergence of a…_
 
 #### L1a — Generic press
 ```
@@ -4779,7 +5157,7 @@ _When an agent trade goes wrong, who pays? Insurance, certification, accountabil
 "agent risk insurance fintech" startup seed funding
 "agent risk insurance fintech" "Series A" London
 "agentic commerce liability" startup seed funding
-"agentic commerce liability" "Series A" Berlin
+"agentic commerce liability" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -4807,13 +5185,19 @@ site:itkeymedia.com "AI agent liability insurance startup"
 site:aripaev.ee "AI agent liability insurance startup"
 site:estonianworld.com "AI agent liability insurance startup"
 site:e-estonia.com "AI agent liability insurance startup"
+site:delfi.lt "AI agent liability insurance startup"
+site:hvg.hu "AI agent liability insurance startup"
 site:innovationorigins.com "AI agent liability insurance startup"
 site:elreferente.es "AI agent liability insurance startup"
+site:forbes.es "AI agent liability insurance startup"
 site:startupxplore.com "AI agent liability insurance startup"
+site:eco.sapo.pt "AI agent liability insurance startup"
+site:observador.pt "AI agent liability insurance startup"
 site:economyup.it "AI agent liability insurance startup"
 site:startupbusiness.it "AI agent liability insurance startup"
 site:shifter.no "AI agent liability insurance startup"
 site:breakit.se "AI agent liability insurance startup"
+site:di.se "AI agent liability insurance startup"
 site:tech.fi "AI agent liability insurance startup"
 site:thecurrency.news "AI agent liability insurance startup"
 site:businesspost.ie "AI agent liability insurance startup"
@@ -4823,15 +5207,19 @@ site:ekathimerini.com "AI agent liability insurance startup"
 site:dev.ua "AI agent liability insurance startup"
 site:netokracija.com "AI agent liability insurance startup"
 site:trend.sk "AI agent liability insurance startup"
+site:visir.is "AI agent liability insurance startup"
 site:northstack.is "AI agent liability insurance startup"
+site:cyprus-mail.com "AI agent liability insurance startup"
+site:timesofmalta.com "AI agent liability insurance startup"
 site:techukraine.org "AI agent liability insurance startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI agent liability insurance startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI agent liability insurance startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "AI agent liability insurance startup"
 site:level39.co "AI agent liability insurance startup"
+site:rise.barclays "AI agent liability insurance startup"
 site:foundersfactory.com "AI agent liability insurance startup"
 site:plexal.com "AI agent liability insurance startup"
 site:ukri.org "AI agent liability insurance startup"
@@ -4917,6 +5305,8 @@ site:byfounders.vc "AI agent liability insurance startup"
 site:inventure.fi "AI agent liability insurance startup"
 site:frontline.vc "AI agent liability insurance startup"
 site:octopusventures.com "AI agent liability insurance startup"
+site:qedinvestors.com "AI agent liability insurance startup"
+site:ribbitcap.com "AI agent liability insurance startup"
 site:anthemis.com "AI agent liability insurance startup"
 site:augmentum.vc "AI agent liability insurance startup"
 site:speedinvest.com "AI agent liability insurance startup"
@@ -5006,7 +5396,9 @@ site:wayra.com "AI agent liability insurance startup"
 site:startupwiseguys.com "AI agent liability insurance startup"
 site:sequoiacap.com "AI agent liability insurance startup"
 site:a16z.com "AI agent liability insurance startup"
+site:bvp.com "AI agent liability insurance startup"
 site:foundersfund.com "AI agent liability insurance startup"
+site:insightpartners.com "AI agent liability insurance startup"
 ```
 
 #### L4c — University spin-outs
@@ -5042,10 +5434,13 @@ site:tecnico.ulisboa.pt "AI agent liability insurance startup"
 site:slush.org "AI agent liability insurance startup"
 site:websummit.com "AI agent liability insurance startup"
 site:eic.ec.europa.eu "AI agent liability insurance startup"
+site:hello-tomorrow.org "AI agent liability insurance startup"
 site:vivatechnology.com "AI agent liability insurance startup"
 site:thenextweb.com "AI agent liability insurance startup"
 site:techcrunch.com "AI agent liability insurance startup"
 site:f6s.com "AI agent liability insurance startup"
+site:money2020.com "AI agent liability insurance startup"
+site:fintechfutures.com "AI agent liability insurance startup"
 site:latitude59.ee "AI agent liability insurance startup"
 site:wolvessummit.com "AI agent liability insurance startup"
 site:bitsandpretzels.com "AI agent liability insurance startup"
@@ -5059,6 +5454,7 @@ site:piratesummit.com "AI agent liability insurance startup"
 #### L4e — Databases
 ```
 site:dealroom.co "AI agent liability insurance startup"
+site:beauhurst.com "AI agent liability insurance startup"
 site:seedtable.com "AI agent liability insurance startup"
 site:startupsmagazine.co.uk "AI agent liability insurance startup"
 site:eu-startups.com "AI agent liability insurance startup"
@@ -5079,7 +5475,7 @@ _How each specialist agent gets paid in a marketplace model. Results-based billi
 "agent monetisation platform" startup seed funding
 "agent monetisation platform" "Series A" London
 "results-based billing AI" startup seed funding
-"results-based billing AI" "Series A" Berlin
+"results-based billing AI" "Series A" Europe
 ```
 
 #### L1b — Targeted press
@@ -5107,13 +5503,19 @@ site:itkeymedia.com "AI agent billing startup"
 site:aripaev.ee "AI agent billing startup"
 site:estonianworld.com "AI agent billing startup"
 site:e-estonia.com "AI agent billing startup"
+site:delfi.lt "AI agent billing startup"
+site:hvg.hu "AI agent billing startup"
 site:innovationorigins.com "AI agent billing startup"
 site:elreferente.es "AI agent billing startup"
+site:forbes.es "AI agent billing startup"
 site:startupxplore.com "AI agent billing startup"
+site:eco.sapo.pt "AI agent billing startup"
+site:observador.pt "AI agent billing startup"
 site:economyup.it "AI agent billing startup"
 site:startupbusiness.it "AI agent billing startup"
 site:shifter.no "AI agent billing startup"
 site:breakit.se "AI agent billing startup"
+site:di.se "AI agent billing startup"
 site:tech.fi "AI agent billing startup"
 site:thecurrency.news "AI agent billing startup"
 site:businesspost.ie "AI agent billing startup"
@@ -5123,15 +5525,19 @@ site:ekathimerini.com "AI agent billing startup"
 site:dev.ua "AI agent billing startup"
 site:netokracija.com "AI agent billing startup"
 site:trend.sk "AI agent billing startup"
+site:visir.is "AI agent billing startup"
 site:northstack.is "AI agent billing startup"
+site:cyprus-mail.com "AI agent billing startup"
+site:timesofmalta.com "AI agent billing startup"
 site:techukraine.org "AI agent billing startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI agent billing startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI agent billing startup"
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "AI agent billing startup"
 site:level39.co "AI agent billing startup"
+site:rise.barclays "AI agent billing startup"
 site:foundersfactory.com "AI agent billing startup"
 site:plexal.com "AI agent billing startup"
 site:ukri.org "AI agent billing startup"
@@ -5217,6 +5623,8 @@ site:byfounders.vc "AI agent billing startup"
 site:inventure.fi "AI agent billing startup"
 site:frontline.vc "AI agent billing startup"
 site:octopusventures.com "AI agent billing startup"
+site:qedinvestors.com "AI agent billing startup"
+site:ribbitcap.com "AI agent billing startup"
 site:anthemis.com "AI agent billing startup"
 site:augmentum.vc "AI agent billing startup"
 site:speedinvest.com "AI agent billing startup"
@@ -5306,7 +5714,9 @@ site:wayra.com "AI agent billing startup"
 site:startupwiseguys.com "AI agent billing startup"
 site:sequoiacap.com "AI agent billing startup"
 site:a16z.com "AI agent billing startup"
+site:bvp.com "AI agent billing startup"
 site:foundersfund.com "AI agent billing startup"
+site:insightpartners.com "AI agent billing startup"
 ```
 
 #### L4c — University spin-outs
@@ -5342,10 +5752,13 @@ site:tecnico.ulisboa.pt "AI agent billing startup"
 site:slush.org "AI agent billing startup"
 site:websummit.com "AI agent billing startup"
 site:eic.ec.europa.eu "AI agent billing startup"
+site:hello-tomorrow.org "AI agent billing startup"
 site:vivatechnology.com "AI agent billing startup"
 site:thenextweb.com "AI agent billing startup"
 site:techcrunch.com "AI agent billing startup"
 site:f6s.com "AI agent billing startup"
+site:money2020.com "AI agent billing startup"
+site:fintechfutures.com "AI agent billing startup"
 site:latitude59.ee "AI agent billing startup"
 site:wolvessummit.com "AI agent billing startup"
 site:bitsandpretzels.com "AI agent billing startup"
@@ -5359,6 +5772,7 @@ site:piratesummit.com "AI agent billing startup"
 #### L4e — Databases
 ```
 site:dealroom.co "AI agent billing startup"
+site:beauhurst.com "AI agent billing startup"
 site:seedtable.com "AI agent billing startup"
 site:startupsmagazine.co.uk "AI agent billing startup"
 site:eu-startups.com "AI agent billing startup"
@@ -5379,7 +5793,7 @@ _Escrow, intent verification, dispute resolution for agent-initiated financial t
 "agentic transaction rails" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
 "agentic transaction rails" "Series A" London -crypto -DeFi -blockchain -web3 -NFT -token
 "AI agent payments fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"AI agent payments fintech" "Series A" Berlin -crypto -DeFi -blockchain -web3 -NFT -token
+"AI agent payments fintech" "Series A" Europe -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -5407,13 +5821,19 @@ site:itkeymedia.com "agent payment infrastructure startup" -crypto -DeFi -blockc
 site:aripaev.ee "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:estonianworld.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:e-estonia.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:innovationorigins.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:elreferente.es "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupxplore.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:economyup.it "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupbusiness.it "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:shifter.no "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:breakit.se "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:tech.fi "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thecurrency.news "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:businesspost.ie "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -5423,15 +5843,19 @@ site:ekathimerini.com "agent payment infrastructure startup" -crypto -DeFi -bloc
 site:dev.ua "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:netokracija.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:trend.sk "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:northstack.is "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techukraine.org "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
 ```
 site:stationf.co "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:level39.co "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:rise.barclays "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfactory.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:plexal.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ukri.org "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -5517,6 +5941,8 @@ site:byfounders.vc "agent payment infrastructure startup" -crypto -DeFi -blockch
 site:inventure.fi "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:frontline.vc "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:octopusventures.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:qedinvestors.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ribbitcap.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:anthemis.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:augmentum.vc "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:speedinvest.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -5606,7 +6032,9 @@ site:wayra.com "agent payment infrastructure startup" -crypto -DeFi -blockchain 
 site:startupwiseguys.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:sequoiacap.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:a16z.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:bvp.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:foundersfund.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:insightpartners.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L4c — University spin-outs
@@ -5642,10 +6070,13 @@ site:tecnico.ulisboa.pt "agent payment infrastructure startup" -crypto -DeFi -bl
 site:slush.org "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:websummit.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eic.ec.europa.eu "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hello-tomorrow.org "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:vivatechnology.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:thenextweb.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:techcrunch.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:f6s.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:money2020.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:fintechfutures.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:latitude59.ee "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:wolvessummit.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:bitsandpretzels.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -5659,6 +6090,7 @@ site:piratesummit.com "agent payment infrastructure startup" -crypto -DeFi -bloc
 #### L4e — Databases
 ```
 site:dealroom.co "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:beauhurst.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:seedtable.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startupsmagazine.co.uk "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:eu-startups.com "agent payment infrastructure startup" -crypto -DeFi -blockchain -web3 -NFT -token
@@ -5672,16 +6104,16 @@ site:sifted.eu "agent payment infrastructure startup" -crypto -DeFi -blockchain 
 ### R1 — Product Inversion / Retail Derivatives
 **Status:** partial | **Geo:** global | **Crypto excl:** True | **Specialist bonus:** +0
 
-_Democratising access to financial products through Product Inversion — reimagining derivatives, options, structured products, and prediction-market mechanics for retail. Not simplifying them; reinventing the product form so it's native to r…_
+_Democratising access to financial products through Product Inversion — reimagining derivatives, options, structured products, and prediction-market mechanics for retail. Not simplifying them; reinvent…_
 
 #### L1a — Generic press
 ```
 "retail derivatives startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"retail derivatives startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"retail derivatives startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "prediction market startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"prediction market startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"prediction market startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "retail structured products fintech" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"retail structured products fintech" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"retail structured products fintech" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -5703,7 +6135,40 @@ site:siliconrepublic.com "retail derivatives startup" -crypto -DeFi -blockchain 
 site:paperjam.lu "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ain.ua "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startit.rs "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.pl "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:spidersweb.pl "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:itkeymedia.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:aripaev.ee "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:estonianworld.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:e-estonia.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:innovationorigins.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:elreferente.es "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupxplore.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:economyup.it "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupbusiness.it "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:shifter.no "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:breakit.se "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:tech.fi "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:thecurrency.news "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:businesspost.ie "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delano.lu "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:naftemporiki.gr "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ekathimerini.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:dev.ua "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:netokracija.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:trend.sk "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:northstack.is "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:techukraine.org "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "retail derivatives startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
@@ -5960,16 +6425,16 @@ site:startupblink.com "retail derivatives startup" -crypto -DeFi -blockchain -we
 ### R2 — Tokenization & Fractionalization
 **Status:** partial | **Geo:** global | **Crypto excl:** True | **Specialist bonus:** +0
 
-_Compliant, rights-clear infrastructure for previously illiquid assets — real estate, private equity, collectibles, IP rights. Full-stack tokenization (Securitize/Republic/ Rally archetype). NOT crypto speculation. Fractionalization as democ…_
+_Compliant, rights-clear infrastructure for previously illiquid assets — real estate, private equity, collectibles, IP rights. Full-stack tokenization (Securitize/Republic/ Rally archetype). NOT crypto…_
 
 #### L1a — Generic press
 ```
 "real estate tokenization startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"real estate tokenization startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"real estate tokenization startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "asset tokenization platform" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"asset tokenization platform" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"asset tokenization platform" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 "fractionalized investment startup" startup seed funding -crypto -DeFi -blockchain -web3 -NFT -token
-"fractionalized investment startup" "Series A" -crypto -DeFi -blockchain -web3 -NFT -token
+"fractionalized investment startup" "Series A" startup -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1b — Targeted press
@@ -5991,7 +6456,40 @@ site:siliconrepublic.com "real estate tokenization startup" -crypto -DeFi -block
 site:paperjam.lu "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:ain.ua "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
 site:startit.rs "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.pl "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:spidersweb.pl "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:itkeymedia.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:aripaev.ee "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:estonianworld.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:e-estonia.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delfi.lt "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:hvg.hu "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:innovationorigins.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:elreferente.es "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:forbes.es "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupxplore.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:eco.sapo.pt "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:observador.pt "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:economyup.it "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:startupbusiness.it "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:shifter.no "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:breakit.se "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:di.se "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:tech.fi "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:thecurrency.news "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:businesspost.ie "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:delano.lu "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:naftemporiki.gr "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:ekathimerini.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:dev.ua "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:netokracija.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:trend.sk "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:visir.is "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:northstack.is "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:cyprus-mail.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:timesofmalta.com "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+site:techukraine.org "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "real estate tokenization startup" -crypto -DeFi -blockchain -web3 -NFT -token
 ```
 
 #### L1c — Hubs
@@ -6248,16 +6746,16 @@ site:startupblink.com "real estate tokenization startup" -crypto -DeFi -blockcha
 ### R3 — Wealth Management Reinvention
 **Status:** partial | **Geo:** global | **Crypto excl:** False | **Specialist bonus:** +0
 
-_Anything that meaningfully reimagines wealth management or investing: AI-native RIAs that bypass the human-advisor stack, family-office-as-a-service democratisation, novel asset-class access for retail (royalties, litigation finance, life s…_
+_Anything that meaningfully reimagines wealth management or investing: AI-native RIAs that bypass the human-advisor stack, family-office-as-a-service democratisation, novel asset-class access for retai…_
 
 #### L1a — Generic press
 ```
 "AI-native RIA startup" startup seed funding
-"AI-native RIA startup" "Series A"
+"AI-native RIA startup" "Series A" startup
 "wealth management reinvention" startup seed funding
-"wealth management reinvention" "Series A"
+"wealth management reinvention" "Series A" startup
 "holistic wealth platform AI" startup seed funding
-"holistic wealth platform AI" "Series A"
+"holistic wealth platform AI" "Series A" startup
 ```
 
 #### L1b — Targeted press
@@ -6279,7 +6777,40 @@ site:siliconrepublic.com "AI-native RIA startup"
 site:paperjam.lu "AI-native RIA startup"
 site:ain.ua "AI-native RIA startup"
 site:startit.rs "AI-native RIA startup"
-(site:businesswire.com OR site:prnewswire.com OR site:globenewswire.com OR site:finance.yahoo.com OR site:handelsblatt.com) "AI-native RIA startup"
+site:forbes.pl "AI-native RIA startup"
+site:spidersweb.pl "AI-native RIA startup"
+site:itkeymedia.com "AI-native RIA startup"
+site:aripaev.ee "AI-native RIA startup"
+site:estonianworld.com "AI-native RIA startup"
+site:e-estonia.com "AI-native RIA startup"
+site:delfi.lt "AI-native RIA startup"
+site:hvg.hu "AI-native RIA startup"
+site:innovationorigins.com "AI-native RIA startup"
+site:elreferente.es "AI-native RIA startup"
+site:forbes.es "AI-native RIA startup"
+site:startupxplore.com "AI-native RIA startup"
+site:eco.sapo.pt "AI-native RIA startup"
+site:observador.pt "AI-native RIA startup"
+site:economyup.it "AI-native RIA startup"
+site:startupbusiness.it "AI-native RIA startup"
+site:shifter.no "AI-native RIA startup"
+site:breakit.se "AI-native RIA startup"
+site:di.se "AI-native RIA startup"
+site:tech.fi "AI-native RIA startup"
+site:thecurrency.news "AI-native RIA startup"
+site:businesspost.ie "AI-native RIA startup"
+site:delano.lu "AI-native RIA startup"
+site:naftemporiki.gr "AI-native RIA startup"
+site:ekathimerini.com "AI-native RIA startup"
+site:dev.ua "AI-native RIA startup"
+site:netokracija.com "AI-native RIA startup"
+site:trend.sk "AI-native RIA startup"
+site:visir.is "AI-native RIA startup"
+site:northstack.is "AI-native RIA startup"
+site:cyprus-mail.com "AI-native RIA startup"
+site:timesofmalta.com "AI-native RIA startup"
+site:techukraine.org "AI-native RIA startup"
+(site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net) "AI-native RIA startup"
 ```
 
 #### L1c — Hubs
@@ -6600,7 +7131,7 @@ https://www.piratesummit.com  # Pirate Summit
 ---
 
 ## SEARCH STATE
-*Last generated: 2026-05-15*
-*Combined hash (thesis.md + thesis-schema.yaml): f9736fc9b77bbc9bf4738ca2c7ad3a2c636b3efd2b669a0cac11b5122b7562d5*
-*Total queries: 5319*
-*Search terms version: 5.7*
+*Last generated: 2026-05-19*
+*Combined hash (thesis.md + thesis-schema.yaml): 2bf7d0a96075fe9f904747e60a2f391d8677dd9f28f76641d6539e799502fca3*
+*Total queries: 5894*
+*Search terms version: 5.8*

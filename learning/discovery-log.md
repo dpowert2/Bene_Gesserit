@@ -1391,3 +1391,42 @@ Searched the 11 elevated categories plus a few maintenance categories. Most stro
 ### What I Learned This Week
 
 The most important thing this week was not a discovery — it was a miss. Resistant AI was a real 5★, a genuine thesis-fit, and it still got killed as a deal because nobody caught the stage problem until the deal stage. That tells me the scoring model is calibrated on the *what* (is this thesis-aligned?) but the radar pipeline has no gate on the *when* (is this still shapeable?), and a post-vote penalty is structurally too late to matter. The second lesson is harder to admit: the specialist-agent desert is not the pure execution-gap problem cycle 15 declared it to be. The Phase-4 protocol surfaced first entries by reverse-archetype walking, but three cycles of zero second entries means the public-press seed supply behind those cells is genuinely thin — the founders are in stealth or being absorbed by incumbents. The week's actual signal density was all on the infrastructure side: Agent Payment Rails got two strong new entries and a Visa-plus-Mastercard cap table, while S5/S6/S7/S9/S10 got nothing. The single bright spot that fits the forward-looking thesis is ANote Music's 5★ — the first vote evidence that the R3 tokenization / music-IP surface votes positive, and enough of a cluster now (with Wealthyhood, TYTL, Noise) to justify making the dedicated R3 sweep the next cycle's highest-leverage action instead of another specialist-cell press sweep that the last three cycles have shown will come back empty.
+
+## Search Terms Regeneration — 2026-05-19
+
+**Source:** thesis-schema.yaml v1.0
+**Thesis version:** v3.4
+**Combined hash:** 2bf7d0a96075fe9f904747e60a2f391d8677dd9f28f76641d6539e799502fca3  (thesis.md + thesis-schema.yaml)
+**Search terms version:** 5.8 (bumped from 5.7)
+**Total queries:** 5894
+**Layer breakdown:** L1a=132 | L1b=1122 | L1c=198 | L1d=32 | L1e=22 | L2=176 | L3=154 | L4a=273 | L4b=2574 | L4c=528 | L4d=396 | L4e=243
+
+Trigger: combined hash drift (5.7 hash f9736f… → 5.8 hash 2bf7d0…). Thesis review yesterday (cycle 20) edited thesis.md to v3.4 — calibration annotations only (pattern n=2 → n=3 graduation, new n=2 emerging pattern, internal/external boundary refinement). No gap-map structural changes; this is a carry-forward regen that re-emits the same 22-gap × 4-layer surface against the updated source-list pinning in thesis-schema.yaml.
+
+### Sources active this cycle
+- **Press sources (Layer 1b):** 67 sites total — 10 high-priority generic + ~26 European-tagged (CEE/Iberia/Italy/Nordic + country gap-fills Ireland/Luxembourg/Greece/Ukraine/Serbia/Slovakia/Iceland/Malta/Cyprus) + 5 low-priority press wires combined.
+- **Accelerators (Layer 4a):** 13 sites — YC, EF, Antler, Mouro, Plug & Play, Techstars, Seedcamp, Notion VC, Index, Balderton, Atomico, South Park Commons, On Deck. Europe-first gaps drop YC.
+- **Seed VCs (Layer 4b):** 117 sites — generalist EU seed (LocalGlobe, Hoxton, Connect, Ada, Episode 1, Talis, Stride, Partech, Daphni, 360, United VC, Cherry, Earlybird, Project A, HV, Lakestar, Northzone, Creandum, EQT, byFounders, Inventure, Frontline, Octopus) + fintech specialists (QED, Ribbit, Anthemis, Augmentum, Speedinvest, Mosaic) + full CEE/Baltic/SEE bench (Inovo, OTB, Czysta3, Black Pearls, ffVC, Innovation Nest, Bitspiration, Karma, Tera, Trind, UAVC, Change, Practica, Open Circle, Credo, Reflex, Kaya, JT, Day One, Hiventures, 3TS, LAUNCHub, Eleven, Catalyst Romania, Early Game, South Central, Fil Rouge) + Iberia (K Fund, Samaipata, JME, Kibo, All Iron, Bynd, Faber, Indico, Mustard Seed MAZE) + Norway/Belgium/NL (Alliance, Schibsted, Hummingbird, Volta, SmartFin, Curiosity, Endeit) + Ireland (Atlantic Bridge, Furthr, ACT, Delta, NDRC) + Luxembourg (Expon, Encevo, Luxinnovation) + Greece (Marathon, VentureFriends, Big Pi, Velocity) + Ukraine (Genesis, SMRK, Roosh, AVentures, Horizon) + Serbia (ICT Hub, Stardust) + Slovakia (Crowdberry, Neulogy) + Slovenia (Silicon Gardens) + Iceland (Brunnur, Crowberry, Frumtak) + Croatia/Cyprus/Latvia (Feelsgood, 33East, ZGI) + Phase-7 discoveries (MiddleGame, Anamcara, Aperture, SMOK, SID, 1991, N1, Tilia, Anthemis Insurance, Wayra, Startup Wise Guys) + top US active in EU (Sequoia, a16z, BVP, Founders Fund, Insight).
+- **University spinouts (Layer 4c):** 24 sites — Oxford, Cambridge, Imperial, UCL, Edinburgh, ETH Zurich, EPFL, TU Delft, TUM, KI, Aalto, DTU, NovaUCD, Trinity, Spinout.fyi, TalTech, WUT, AGH, Charles U, CTU, BME, PoliMi, IE, IST Lisbon.
+- **Competitions (Layer 4d):** 18 events — Slush, Web Summit PITCH, EIC Accelerator, Hello Tomorrow, VivaTech, TNW, TC Disrupt Battlefield, F6S, Money 20/20, Banking Tech Awards, Latitude59, Wolves Summit, Bits & Pretzels, TechBBQ, Vienna Up, South Summit, How To Web, Pirate Summit.
+- **Databases (Layer 4e):** 14 sources — Wellfound, F6S, Dealroom, Crunchbase, Tracxn, Beauhurst, PitchBook News, SeedTable, TheOrg, Startups Magazine, EU-Startups directory, Sifted Startup Tracker, AngelMatch, StartupBlink.
+- **Innovation hubs (Layer 1c):** 9 sites — Station F, Level39, Rise by Barclays, Founders Factory, Plexal, Innovate UK, Founders Forum, RAEng Enterprise Hub, ImpactX (Endeavor).
+
+### Quality gate results
+- **Gate 1 — Layer Completeness:** all 22 gaps covered across L1a/L1b/L1c/L1e/L2/L3/L4a/L4b/L4c/L4d/L4e ✓. L1d (third-party anchor) emitted only on the 15 gaps with `third_party_qualifier: true` (S1, S2, S3, S4, S5, S6, S7, S10, P1, P2, P3, P4, P5, P6, P7, P8) — correct per schema.
+- **Gate 2 — Vocabulary Diversity:** L1 emits institutional_vocabulary terms ("personal finance AI agent", "alternative data startup fintech"); L2 emits founder_vocabulary terms ("AI money manager", "financial data MCP server"). Distinct registers maintained ✓.
+- **Gate 3 — Crypto Exclusion:** appended `-crypto -DeFi -blockchain -web3 -NFT -token` to every query in every layer of the 17 crypto_exclusion=true gaps (S-FRONT, S1, S2, S3, S5, S6, S7, P8, R1, R2). Not applied to S4, S8, S9, S10, P1–P7, R3 ✓.
+- **Gate 4 — Third-Party Qualifier:** dedicated L1d block with `API third party agent` / `SDK platform external agents` emitted for 15 third_party_qualifier=true gaps ✓.
+- **Gate 5 — Stage Anchoring:** every L1a query carries `seed funding` or `"Series A"` ✓.
+- **Gate 6 — Geo Weighting:** europe-first gaps (S-FRONT, S1, S2, S7, S8, P1–P8) emit Europe + city qualifier (London/Berlin/Paris/Amsterdam/Dublin/Stockholm) in L1a; Layer 4a drops YC for europe-first gaps; L4b includes the full European-tagged bench (CEE/Baltic/Iberia/Nordic/Country-gap-fills) ✓.
+- **Gate 7 — Novelty Anti-pattern Exclusion:** every gap emits an L1e block negating its top two novelty_antipatterns (e.g. S-FRONT negates "AI-powered financial planning app" and "robo-advisor with AI"; P3 negates "compliance management platform" and "KYC automation") ✓.
+
+### Sweeps refreshed
+- STUDIO-SPECIFIC SWEEPS — 8 tax/voice/estate/predictive queries unchanged.
+- GLOBAL ACCELERATOR SWEEPS — 13 cohort URLs.
+- COMPETITION & GRANT SWEEPS — 18 event URLs.
+
+### State changes
+- `search-state.json`: `thesis_hash` → 2bf7d0a9…; `search_terms_version` → 5.8; `search_terms_generated` → 2026-05-19; added 4 new query_blocks for newly tracked sub-layers (S-FRONT L1c Station F, S1 L4c Oxford Innovation, P3 L4d EIC, S9 L4c UCL Business — the last seeded from next-cycle-target for S9 behavioural-finance lab spin-outs). Quarantine check: zero query_blocks at status `candidate_quarantine` with streak ≥ 6 — no auto-deprecations this cycle. Promotion check: no query_blocks crossed the hit_count ≥ 3 threshold this cycle (the highest, S6_layer3_github_mcp at 4 hits, was promoted last cycle).
+- Privacy check: ✓ passed (no redacted terms in working tree).
+
