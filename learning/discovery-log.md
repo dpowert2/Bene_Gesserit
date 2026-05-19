@@ -4,6 +4,45 @@ Append-only record of what the system learns each week. Written by the weekly ra
 
 ---
 
+## Thesis Review — 2026-05-19 (Cycle 20)
+
+### Feedback Processed
+- `bg_thesis_feedback` (Supabase, project `iyoseurwycryykrnlbig`) **unreachable again** — `execute_sql` returned "Connection terminated due to connection timeout" on both attempts (full SELECT and the LIMIT 20 variant). This is the **sixth consecutive cycle** the Supabase channel has timed out (cycles 14–18 plus this cycle 20). No `feedback_type='thesis'` row has ever been logged. Treated as no-op, proceeded on vote signal alone. **The Supabase deprecation recommendation has now stood across six cycles — this last Supabase dependency should be retired or migrated to Turso. Continuing to retry the connection each cycle is consuming runtime with zero return.**
+
+### Vote Signals
+- Live Turso fetch via `scripts/fetch-votes-from-turso.py`: **97 entries** (79 voted: 20 ★★★★★ / 12 ★★★★ / 9 ★★★ / 16 ★★ / 22 ★ + 18 outreach-marker 0★). Net delta since cycle 19 (94 entries): **+3 entries** — 2 net-new star ratings (1 × 4★, 1 × 3★) and 1 new 0★ outreach marker.
+- **greenboard 4★** (2026-05-18, no note) — net-new strategic upvote. US Series A AI-native securities compliance platform for broker-dealers, RIAs, and securities firms. $15.5M Base10-led Series A ($20M total raised), 500+ FIs, 99% retention. Just launched GreenboardGo — a conversational AI-native layer on top of compliance books and records. Third confirming upvote in the "Compliance with Differentiation" pattern alongside complyance 5★ and norm-ai 4★. The 4★ on what is nominally internal compliance workflow is calibration data on the internal/external boundary: securities-compliance infrastructure that wraps a regulated firm IS thesis-aligned at the 4★ band because it forms the regulatory perimeter inside which external agents will operate. The Hard Filter still applies to "improving life for the finance department" — the line drawn this cycle: *does the product create or maintain the regulatory perimeter inside which external agents act?*
+- **deepflow 3★** (2026-05-19) — net-new strategic vote with substantive note: "Their website is not very clear at all. It looks more like an orchestration tool with some consultancy built in." UK financial-crime agentic orchestration, NatWest 2026 Fintech Programme cohort, BG Score 74 at carding. Companion observation to Alomana's deal-stage softening ("feels more like a consultancy at the moment"). Different funnel stages (vote vs deal), different star outcomes (3★ vs 5★), same qualitative concern: company looks more like services than product when a human inspects it.
+- **empath-ai 0★ outreach marker** (2026-05-19, followup=true, no note) — UK vocal-biomarker vulnerability detection, NatWest cohort + IPTF membership. Operational deal-flow marker per the cycle 15 carve-out; non-strategic.
+- **Source-side observation (non-strategic but worth logging):** two of the three new entries (deepflow, empath-ai) came from the same NatWest 2026 Fintech Programme cohort. The cohort itself is a source signal — pre-Series A / Series A AI-native fintechs validated by a tier-1 UK clearer. Not a thesis or preference change, but the cohort should be added to the scout's Phase-4 accelerator-batch sweep list alongside YC, EF, Antler, Mouro Capital, Tenity, etc.
+
+### Thesis Changes (v3.3 → v3.4)
+Surgical edits, three locations:
+1. **Header paragraph** — version bumped to 3.4; cycle 20 summary in one paragraph.
+2. **Learned preferences count line** — vote count 94 → 97, distribution updated (20/12/9/16/22 voted + 18 outreach-marker 0★).
+3. **Cycle 15 tracked-patterns block** — new tracked pattern "Consultancy-vs-product concern at human-review stage" added at n=2 (Alomana + Deepflow); distinguished from radar→outreach walkback by probing business-model framing rather than score prediction; companion observation that both companies presented thin public product surface area at carding time.
+4. **Versioning table** — v3.4 row added.
+
+No gap-map structural changes. No new hard gates. No team-mandate edits. The corpus growth is calibration data and one new emerging pattern.
+
+### Preferences Changes
+- Header rewritten with cycle 20 summary; vote count 94 → 97; distribution updated.
+- Strong Positive Signal #7 "Compliance with Differentiation" — promoted from "NEW — resolves dual failure mode" to "CONFIRMED BY 3 UPVOTES — cycle 20"; greenboard 4★ added to evidence list; compliance scoring ladder expanded (4★ band now includes "agent-callable architecture"); new "Internal/external boundary refinement" paragraph drawing the line that securities-compliance infrastructure wrapping a regulated firm is thesis-aligned when it maintains the regulatory perimeter for external agents (vs internal staff productivity which still trips the Hard Filter).
+- Emerging Preferences — new entry "Consultancy-vs-product concern at human-review stage" at n=2 (Alomana + Deepflow). Approaching formalisation at n=3. Provisional operational rule: when scout's evidence is press/funding/cohort-heavy but product-surface-thin, append a "consultancy-risk flag" to the card for reviewer probing. Distinct from radar→outreach walkback (which tracks score-prediction errors); the two patterns share Alomana but probe different dimensions.
+
+### Confidence
+- **High** on Compliance-with-Differentiation graduation to n=3 — greenboard fits the same archetype shape (finserv-specific + agent-callable + differentiated execution) as complyance and norm-ai.
+- **Medium-high** on consultancy-vs-product pattern at n=2 — the two cases (Alomana, Deepflow) share enough structure (similar evidence shape at carding, similar reviewer concern at human inspection) that the pattern is worth tracking and the provisional operational rule worth implementing. Will formalise at n=3.
+- **Medium** on internal/external boundary refinement — Greenboard's 4★ no-note vote is unambiguous as an upvote, but without a note the precise reasoning is inferred from precedent (Vouched 5★, Complyance 5★, Norm-AI 4★). The "regulatory perimeter wrapper" framing is the cleanest reading consistent with all four upvotes, but a future vote with explicit reasoning will tighten the rule.
+- **High** on the Supabase deprecation recommendation — six consecutive timeouts; the table has produced zero useful strategic data since the 2026-04-14 test entry. **Recommend retiring the read step from this task next cycle.**
+
+### Action for Downstream Tasks
+- `bg-search-terms-update` should treat the thesis as **substantively unchanged** — the v3.4 edits are calibration annotations (one pattern n=2 → n=3 graduation, one new n=2 emerging pattern, one boundary refinement). No new gap categories or search-surface changes. A carry-forward is sufficient.
+- **Source-side recommendation:** add NatWest 2026 Fintech Programme cohort to the Phase-4 accelerator-batch sweep list. The deepflow + empath-ai pair this cycle is the second cohort-level signal (cycle 14 already surfaced Quartr from Stockholm and Tradefeedr from London via similar surfaces).
+- **Migration item still flagged:** retire the Supabase `bg_thesis_feedback` channel — sixth consecutive dead cycle.
+
+---
+
 ## Preference Learning — 2026-05-17
 Total votes: 94 (31 up [4★+5★], 8 neutral [3★], 38 down [1★+2★]) | New near misses: 0 | New soft factors: r3_tokenization_novel_asset (+12 pts) | Weight changes: none | Key insight: R3 Tokenization / novel asset democratisation graduates to formal soft factor at n=3 (TYTL + ANote Music + Noise, 3/3 = 100% upvote rate); radar→outreach walkback reaches n=2 with Alomana deal-stage softening | Confidence: high
 
