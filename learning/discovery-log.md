@@ -1430,3 +1430,41 @@ Trigger: combined hash drift (5.7 hash f9736f… → 5.8 hash 2bf7d0…). Thesis
 - `search-state.json`: `thesis_hash` → 2bf7d0a9…; `search_terms_version` → 5.8; `search_terms_generated` → 2026-05-19; added 4 new query_blocks for newly tracked sub-layers (S-FRONT L1c Station F, S1 L4c Oxford Innovation, P3 L4d EIC, S9 L4c UCL Business — the last seeded from next-cycle-target for S9 behavioural-finance lab spin-outs). Quarantine check: zero query_blocks at status `candidate_quarantine` with streak ≥ 6 — no auto-deprecations this cycle. Promotion check: no query_blocks crossed the hit_count ≥ 3 threshold this cycle (the highest, S6_layer3_github_mcp at 4 hits, was promoted last cycle).
 - Privacy check: ✓ passed (no redacted terms in working tree).
 
+
+---
+
+## 2026-05-20 — Cycle 21 (bg-full-cycle)
+
+Full orchestrator run, all phases 0→6 executed in order. Headline: a coverage-driven scout with no new votes to learn from; the cleanest signal of the cycle is structural (specialist coverage slowly filling) rather than a new flagship company.
+
+### Phase 0 — Coverage Audit
+Canonicalised gap-count extraction across all 142 pre-run pipeline companies. **No 0-company blind spots.** Underrepresented cells (<3 companies) fell from 11 (cycle-17 audit) to **9**: S3 Trade Structuring (now 3) and R3 Tokenization (now 4) graduated to adequate coverage. Nine cells still underrepresented and elevated to mandatory ≥2-search allocation: S2 Portfolio Construction (2), S5 Options (1), S6 Execution (1), S7 Position Monitoring (1), S8 Financial Planning (2), S9 Behavioural Coaching (1), S10 Post-Trade (1), P5 Audit & Explainability (1), R1 Retail Derivatives (1). Well-covered (≥10): Compliance/Pre-Trade 21, Personal Agent/S-Front 19, AI Safety 19, Orchestration 16, Auth 13, S1 11.
+
+### Phase 1 — Learn
+**No new votes since cycle 20.** Turso unreachable from the run sandbox (DNS resolution blocked by network allowlist), so worked from cached `learning/votes.json` — corpus stable at 97 entries, top entry empath-ai @ 2026-05-19. The three latest votes (greenboard 4★ / deepflow 3★ / empath-ai 0★) were already processed in cycle 20. No new near-misses (no recent >60-score downvotes). No exposure-normalisation changes, no preference-weight changes. `near-misses.md` gets a cycle-21 audit-trail row.
+
+### Phase 2 — Strategise
+Thesis → **v3.5**. No structural gap-map or preference change. Recorded the coverage progress (11 → 9) and updated the S3 Trade Structuring gap-map row from "❌ Empty" to "⚠️ Adequately covered (3 cos)." Added a v3.5 versioning row.
+
+### Phase 3 — Arm
+No regeneration. `bg-search-terms.md` v5.8 (generated 2026-05-19) remains aligned to the unchanged thesis structure; Phase 0 overrides applied at scan-time only, not persisted.
+
+### Phase 4 — Scout
+Honoured the ≥2-search constraint across the nine underrepresented cells (S2/S5/S6/S7/S8/S9/S10/P5/R1). **Specialist-vs-infrastructure split: 4 new profiles, all specialist-side (R1×1, S9×1, S10×1, S6×1) — 0 new infrastructure cards.** This satisfies the ≥60% specialist target. But **none is upvote-grade**:
+- **Liquid** (R1, score 58) — $18M Series A, unified leveraged trading incl. prediction markets + private secondaries. Genuine product-inversion, but crypto-adjacent and stage-edging. Watch-item.
+- **Whistl** (S9, 52) — impulse-spend blocker + auto-invest + AI coach. Fills the cell but self-brands "Behavioral Finance OS" (rejected framing, avantos precedent), PFM-adjacent, Australia, not agent-callable.
+- **Trade Journal AI** (S10, 50) — AI trade journal + coach. Trips the novelty gate that killed TraderSage 2★. Crypto/futures, thin team.
+- **TwoWay** (S6, 47) — Paris €1.5M pre-seed, institutional broker-message intelligence. Strongest team/stage/geo this cycle but builds internal front-office tooling → fails external-over-internal. Logged as a recurring **S6 workflow-vocabulary false positive**.
+
+Most other cells returned funding-tracker noise or already-pipelined names (Edge Hound, Resistant AI, Elastics, Nava, Astor). The documented specialist-agent seed-stage desert persists.
+
+### Phase 0 effectiveness
+The overrides did force coverage of every thin cell, and produced a card for R1, S9, S10 and a (flagged) S6 candidate — so the thin cells each gained a profile or a documented negative. But quality remained low: the binding ≥2-search constraint surfaces *quantity* in thin cells, not *upvote-grade quality*. The recurring lesson holds: thin-cell scarcity is a supply problem, not a search-effort problem.
+
+### Phase 5 — Publish
+New briefing `2026-05-20.html` (Cycle 21, 5 signals incl. 1 system signal, 4 new profiles). `index.html` run grid updated (new latest card; 05-19 demoted; Last Run 2026-05-20; Runs 35). `startups-data.js` 142 → 146 (4 cards prepended newest-first; SLUG_DATES 2026-05-20). `changelog.html` +4 entries (system/preferences/thesis/scoring). archive.html unchanged (it lists archived *startups*, vote-driven, not briefings).
+
+### Recommendations / watch-items
+- Highest-value votes to cast: Liquid (is the crypto-adjacency disqualifying, or is the prediction-market/private-secondaries inversion interesting enough?), Whistl (does the "OS" branding + PFM framing kill it, or is S9 thin enough to warrant a look?).
+- S6 scouting needs a vocabulary fix: "trading workflows" keeps surfacing institutional front-office tooling (TwoWay) that fails external-over-internal. Consider negating "broker", "trading desk", "front office", "OMS/EMS" in S6 L1e.
+- S10 remains a novelty trap — every candidate is an "AI trade journal." A genuine S10 fit needs a non-journal mechanism (e.g. agent-callable attribution API), not another journaling app.

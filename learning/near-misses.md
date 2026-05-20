@@ -16,6 +16,7 @@ A "near miss" is a startup that scored above 60 on the relevance model but recei
 | 2026-05-03 | 0 | 24 | — (vote corpus unchanged since cycle 10; no new votes to process) |
 | 2026-05-10 | 0 | 24 | — (vote corpus unchanged from cycle 15; NOVELTY GATE elevated to formal soft factor at n=3) |
 | **2026-05-17** | **0** | **24** | **— (vote corpus stable at 94; only net-new strategic vote is anote-music 5★ upvote in R3 Tokenization; R3 cell reaches n=3 upvotes → formalised as positive soft factor this cycle; no new downvotes)** |
+| 2026-05-20 | 0 | 24 | — (vote corpus unchanged since cycle 20; greenboard 4★ / deepflow 3★ / empath-ai 0★ already processed 2026-05-19, none are downvotes >60-score; Turso unreachable from sandbox, working from cached corpus of 97 entries) |
 
 ---
 

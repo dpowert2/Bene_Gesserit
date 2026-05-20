@@ -324,6 +324,74 @@ footer p {
 
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
+    <span class="entry-date">2026-05-20</span>
+    <span class="entry-badge badge-system">Cycle 21 — Coverage Audit</span>
+    <span class="entry-source">bg-full-cycle Phase 0</span>
+  </div>
+  <div class="entry-title">Underrepresented categories fall 11 → 9 — S3 Trade Structuring and R3 Tokenization graduate to adequate coverage</div>
+  <div class="entry-body">
+    <p>The cycle-21 audit compared the thesis gap map against all pipeline companies. No 0-company blind spots remain. Underrepresented cells (&lt;3 companies) dropped from 11 at the cycle-17 audit to 9: <strong>S3 Trade Structuring</strong> (now 3) and <strong>R3 Tokenization</strong> (now 4) graduated to adequately covered.</p>
+    <p><strong>Still underrepresented (1–2 companies), elevated to mandatory ≥2-search allocation this cycle:</strong> S2 Portfolio Construction (2), S5 Options (1), S6 Execution (1), S7 Position Monitoring (1), S8 Financial Planning (2), S9 Behavioural Coaching (1), S10 Post-Trade (1, voted 2★), P5 Audit &amp; Explainability (1), R1 Retail Derivatives (1).</p>
+    <p><strong>Well-covered (≥10):</strong> Compliance/Pre-Trade (21), Personal Agent / S-Front (19), AI Safety (19), Orchestration (16), Auth &amp; Identity (13), S1 Research &amp; Signal (11). Maintenance mode this cycle.</p>
+    <p><strong>Override scope:</strong> binding for this cycle only; does not permanently change <code>config/bg-search-terms.md</code>.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Canonicalised gap-count extraction from <code>startups-data.js</code> (142 pipeline entries pre-run, 146 post-run). Counts cross-checked against thesis v3.4 gap map.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="preferences">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-20</span>
+    <span class="entry-badge badge-preferences">Preferences</span>
+    <span class="entry-source">bg-full-cycle Phase 1</span>
+  </div>
+  <div class="entry-title">No new votes since cycle 20; corpus stable at 97 — no preference or near-miss changes</div>
+  <div class="entry-body">
+    <p>The three most recent votes (greenboard 4★, deepflow 3★, empath-ai 0★, all 2026-05-19) were processed in cycle 20. No new star ratings since. Turso was unreachable from the run sandbox, so Phase 1 worked from the cached corpus of 97 entries — confirmed identical to the last-processed state. No new near-misses (none of the recent votes is a &gt;60-score downvote). <code>preferences.md</code> and the soft-factor weights are unchanged; <code>near-misses.md</code> picks up a cycle-21 audit-trail row noting the stability.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Cached <code>learning/votes.json</code> top entry empath-ai @ 2026-05-19T11:43Z; no entries newer than the cycle-20 run. Turso DNS resolution failed under the sandbox network allowlist.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="thesis">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-20</span>
+    <span class="entry-badge badge-thesis">Thesis</span>
+    <span class="entry-source">bg-full-cycle Phase 2</span>
+  </div>
+  <div class="entry-title">Thesis bumped to v3.5 — coverage progress recorded, S3 gap-map status updated</div>
+  <div class="entry-body">
+    <p>No structural gap-map change and no preference-driven change (no new votes). The substantive update is the coverage progress: the S3 Trade Structuring gap-map row moved from "❌ Empty until 2026-05-07" to "⚠️ Adequately covered (3 pipeline cos as of cycle 21)." A v3.5 versioning row documents the 11 → 9 underrepresented-category drop and the nine cells elevated for mandatory Phase-4 search.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Phase 0 Coverage Report (cycle 21). S3 reaching n=3; R3 Tokenization at n=4.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="scoring">
+  <div class="entry-header">
+    <span class="entry-date">2026-05-20</span>
+    <span class="entry-badge badge-scoring">Scoring</span>
+    <span class="entry-source">bg-full-cycle Phase 4</span>
+  </div>
+  <div class="entry-title">4 new profiles carded across underrepresented cells — none a clean fit; S6 workflow-vocabulary false positive documented</div>
+  <div class="entry-body">
+    <p>Phase 4 honoured the Phase-0 ≥2-search constraint across the nine underrepresented cells. Four candidates surfaced and were carded with honest, caveat-flagged scores: <strong>Liquid</strong> (R1 retail derivatives, 58 — product-inversion play but crypto-adjacent and $18M Series A edges the stage gate), <strong>Whistl</strong> (S9 behavioural coaching, 52 — fills the cell but self-brands "Behavioral Finance OS", the rejected framing, and is PFM-adjacent + Australia), <strong>Trade Journal AI</strong> (S10 post-trade, 50 — trips the novelty gate that killed TraderSage), and <strong>TwoWay</strong> (S6, 47 — strong Paris pre-seed team but builds institutional front-office tooling, failing the external-over-internal test; surfaced on "trading workflows" vocabulary overlap).</p>
+    <p>Net: no upvote-grade flagship this cycle. The specialist-agent desert persists at seed stage; the cleanest signal is structural (coverage improving) rather than a new company. TwoWay is logged as a recurring S6 workflow-vocabulary false-positive pattern.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    Web scan of S2/S5/S6/S7/S8/S9/S10/P5/R1 queries from <code>bg-search-terms.md</code> v5.8. Pipeline 142 → 146. Cards prepended to <code>startups-data.js</code> (newest-first) with SLUG_DATES 2026-05-20.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
     <span class="entry-date">2026-05-13</span>
     <span class="entry-badge badge-system">Cycle 17 — Coverage Audit</span>
     <span class="entry-source">bg-full-cycle Phase 0</span>
