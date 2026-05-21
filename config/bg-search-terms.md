@@ -1,5 +1,5 @@
-# Bene Gesserit — Search Terms v5.8
-*Generated: 2026-05-19 | thesis-schema v1.0 | Thesis v3.4*  
+# Bene Gesserit — Search Terms v5.9
+*Generated: 2026-05-21 | thesis-schema v1.0 | Thesis v3.5*  
 *DO NOT EDIT — regenerate via generate-search-terms skill.*
 
 ---
