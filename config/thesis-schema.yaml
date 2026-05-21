@@ -1408,8 +1408,14 @@ gaps:
 
   # ─────────────────────────────────────────────────────────
   # GENERATIONAL / LIFECYCLE CLUSTER (Studio, added thesis v3.6)
-  # Market = US (instrument vocab below is US). Supply = Europe-preferred
-  # (filter for European-founded builders serving the US at scout time).
+  # Target MARKET = US (the ~$84T great wealth transfer; US instruments are
+  #   the eventual surface). SUPPLY = Europe-preferred.
+  # SCOUT BAR (corrected 2026-05-22): European-built AND a model that would
+  #   work in the US IN PRINCIPLE. Do NOT require the company to already serve
+  #   US customers or run on US instruments — a European company on ISA/JISA
+  #   today qualifies if its approach transfers to 529/UTMA/etc. US-instrument
+  #   vocab below is the search *target*, not a gate. Europe-preferred ≠ Europe-only:
+  #   a strong US-built fit is a market-right context signal, not an auto-drop.
   # Decomposed family office — never a family-office-OS super-app.
   # ─────────────────────────────────────────────────────────
   - id: G1
