@@ -45,28 +45,28 @@ thesis_hash = h.hexdigest()
 For each gap in thesis-schema.yaml, generate queries across exactly 4 discovery layers.
 Each layer targets a different source surface and uses different vocabulary.
 
-### LAYER 1 — Press & Funding Coverage
-**Source:** General web search PLUS targeted high-quality press outlets from `global_config.press_sources`
+### LAYER 1 — Discovery & Funding Coverage
+**Source:** Exa entity discovery PLUS targeted high-quality press outlets from `global_config.press_sources`
 **Vocabulary:** `institutional_vocabulary` from schema
 **Crypto exclusion:** Add `global_config.crypto_exclusion_terms` if gap has `crypto_exclusion: true`
 
-Layer 1 has TWO sub-blocks per gap:
+**Scanner targeting (per the radar's Hybrid scanning doctrine).** Layer 1 feeds TWO different tools, which want DIFFERENT query shapes — generate both, tagged by scanner:
 
-**1a. Generic press queries** — 4–6 queries
-**Query structure:** `"{vocab term}" seed startup [geo_qualifier]`
+**1a. Exa entity-discovery queries** (scanner: **Exa** `category:"company"`) — 4–6 queries. These are **natural-language descriptions of the company you're looking for** — NO quotation marks, NO `site:` operators, NO boolean `OR`. Exa is entity-first and semantic; quoted exact-match strings hurt it. Describe the kind of company, its job, stage, and geo in plain prose.
+**Query structure:** `{plain-language description of the company} seed to Series A financial services [geo]`
 
-**1b. Targeted press queries** — one `site:` query for every `priority: high` source, plus one combined query covering the medium/low sources. The skill MUST iterate `global_config.press_sources` and generate these — DO NOT hardcode site names.
+**1b. WebSearch targeted-outlet queries** (scanner: **WebSearch**) — one `site:` query for every `priority: high` source, plus one combined query covering medium/low sources. Iterate `global_config.press_sources` — DO NOT hardcode site names. These own *recency/funding events*; the quoted exact-match string is correct HERE (it's what SERP wants), not in 1a.
 **Query structure:** `site:{source.site} "{vocab term}" [stage] [geo]`
 
 **Example for S1 (institutional vocab: "alternative data API", "earnings intelligence"):**
 ```
-# 1a — Generic
-"alternative data API" startup seed Europe -crypto -DeFi -blockchain
-"financial signal intelligence" startup "Series A" fintech
-"earnings intelligence" AI startup London OR Berlin
-"financial research agent" seed funding 2025 OR 2026
+# 1a — Exa entity discovery (natural language, no quotes/site:/OR — for category:"company")
+alternative data API startup providing earnings intelligence to investors, seed to Series A, Europe
+financial signal intelligence company exposing market sentiment as an agent-callable API
+early-stage startup building a financial research agent for fund managers
+company turning alternative data into trading signals for institutional clients
 
-# 1b — Targeted press (one per high-priority source)
+# 1b — WebSearch targeted outlets (quoted exact-match + site: — for SERP recency)
 site:sifted.eu "alternative data API" -crypto
 site:techcrunch.com "earnings intelligence" startup seed
 site:tech.eu "financial signal intelligence" Europe
@@ -76,7 +76,7 @@ site:finextra.com "financial research agent" startup
 ("site:theinformation.com" OR "site:fintechfutures.com" OR "site:maddyness.com") "alternative data API" agent
 ```
 
-If `geo_preference: europe-first`, prefer European sources (Sifted, tech.eu, EU-Startups, Maddyness, Handelsblatt, Financial News London) when picking which targeted queries to emit.
+If `geo_preference: europe-first`, bias the 1a Exa descriptions toward European geos and prefer European sources (Sifted, tech.eu, EU-Startups, Maddyness, Handelsblatt, Financial News London) in the 1b targeted queries.
 
 ### LAYER 2 — Product Launch Discovery
 **Source:** Product Hunt, Show HN (Hacker News)
@@ -264,12 +264,14 @@ After generating bg-search-terms.md, update `config/search-state.json`:
      "query": "site:sifted.eu \"alternative data API\" -crypto",
      "gap_id": "S1",
      "layer": "1b",
+     "scanner": "websearch",
      "first_added": "YYYY-MM-DD",
      "hit_count": 0,
      "empty_run_streak": 0,
      "status": "active"
    }
    ```
+   The `scanner` field records which tool the block targets — `exa` for 1a entity-discovery blocks, `websearch` for 1b/2/4 `site:` blocks, `github_mcp` for Layer 3. This lets the radar's Scanner Split (and cross-validation rate) be computed from the tracking data.
 5. **PRESERVE** all existing query block entries (carry forward hit counts and streaks). The radar populates these every cycle — they are the system's memory.
 6. **Honor learning signals from prior cycles:**
    - For query blocks with `status: "candidate_quarantine"` AND `empty_run_streak >= 6`:
