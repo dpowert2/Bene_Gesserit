@@ -1,11 +1,11 @@
 {
   "_schema_version": "1.0",
-  "_last_updated": "2026-05-19",
+  "_last_updated": "2026-05-21",
   "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06); cycle-14 hash-update 2026-05-08; v5.6 regen (2026-05-08, scheduled task); v5.7 regen (2026-05-15, scheduled task bg-search-terms-update); v5.8 regen (2026-05-19, scheduled task bg-search-terms-update)",
-  "search_terms_version": "5.9",
+  "search_terms_version": "6.0",
   "search_terms_generated": "2026-05-21",
   "search_terms_source": "config/thesis-schema.yaml v1.0",
-  "thesis_hash": "f7cab5f7412dca72b34e1480e19b02a86655033608a53deda689dbbf8815ec67",
+  "thesis_hash": "5d18946ba0c77d73625f7415b96ce908be79e212fe4c50b7355896328ce67039",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
   "cycle": 15,
   "cycle_completed_at": "2026-05-12",
@@ -464,11 +464,34 @@
         "rejected": 3
       },
       "meeting_arranged_or_outreach": 52
+    },
+    {
+      "timestamp": "2026-05-21T22:32:36.980309Z",
+      "live_pipeline": 148,
+      "voted": 79,
+      "stars": {
+        "5": 20,
+        "4": 12,
+        "3": 9,
+        "2": 16,
+        "1": 22
+      },
+      "with_notes": 75,
+      "follow_up_flagged": 44,
+      "archived_by_user": 37,
+      "kanban": {
+        "followup": 0,
+        "contacted": 1,
+        "talked_to": 7,
+        "accepted": 5,
+        "rejected": 3
+      },
+      "meeting_arranged_or_outreach": 52
     }
   ],
   "latest_funnel": {
-    "timestamp": "2026-05-19T14:05:44.850094Z",
-    "live_pipeline": 142,
+    "timestamp": "2026-05-21T22:32:36.980309Z",
+    "live_pipeline": 148,
     "voted": 79,
     "stars": {
       "5": 20,
@@ -551,12 +574,14 @@
       "status": "active"
     },
     "S6_layer3_github_mcp": {
-      "first_added": "2026-05-06",
-      "hit_count": 4,
+      "query": "mcp__github__search_repositories q=\"smart order routing python pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S6",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
       "empty_run_streak": 0,
-      "status": "high_yield",
-      "last_hit": "2026-05-06",
-      "promoted_date": "2026-05-19"
+      "status": "active"
     },
     "portfolio_risk_layer3_github_mcp_stars10": {
       "first_added": "2026-05-06",
@@ -635,6 +660,1646 @@
       "empty_run_streak": 0,
       "status": "active",
       "_note": "Next-cycle target \u2014 UCL/LSE behavioural finance lab spin-outs"
+    },
+    "S-FRONT_layer1a_exa": {
+      "query": "personal finance AI agent seed to Series A, Europe",
+      "gap_id": "S-FRONT",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S-FRONT_layer1b_websearch": {
+      "query": "site:fintech.global \"personal finance AI agent\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S-FRONT",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S-FRONT_layer2_websearch": {
+      "query": "site:producthunt.com \"AI money manager\"",
+      "gap_id": "S-FRONT",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S-FRONT_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"financial agent SDK pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S-FRONT",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S-FRONT_layer4_websearch": {
+      "query": "site:ycombinator.com \"personal finance AI agent\"",
+      "gap_id": "S-FRONT",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S1_layer1a_exa": {
+      "query": "alternative data startup fintech seed to Series A, Europe",
+      "gap_id": "S1",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S1_layer1b_websearch": {
+      "query": "site:fintech.global \"alternative data startup fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S1",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S1_layer2_websearch": {
+      "query": "site:producthunt.com \"financial data MCP server\"",
+      "gap_id": "S1",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S1_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"financial MCP server pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S1",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S1_layer4_websearch": {
+      "query": "site:ycombinator.com \"alternative data startup fintech\"",
+      "gap_id": "S1",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S2_layer1a_exa": {
+      "query": "portfolio construction AI startup seed to Series A, Europe",
+      "gap_id": "S2",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S2_layer1b_websearch": {
+      "query": "site:fintech.global \"portfolio construction AI startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S2",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S2_layer2_websearch": {
+      "query": "site:producthunt.com \"portfolio risk API\"",
+      "gap_id": "S2",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S2_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"portfolio optimisation python library pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S2",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S2_layer4_websearch": {
+      "query": "site:ycombinator.com \"portfolio construction AI startup\"",
+      "gap_id": "S2",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S3_layer1a_exa": {
+      "query": "trade structuring AI startup seed to Series A financial services",
+      "gap_id": "S3",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S3_layer1b_websearch": {
+      "query": "site:fintech.global \"trade structuring AI startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S3",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S3_layer2_websearch": {
+      "query": "site:producthunt.com \"asset location optimizer\"",
+      "gap_id": "S3",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S3_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"options pricing API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S3",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S3_layer4_websearch": {
+      "query": "site:ycombinator.com \"trade structuring AI startup\"",
+      "gap_id": "S3",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S4_layer1a_exa": {
+      "query": "tax loss harvesting AI startup seed to Series A financial services",
+      "gap_id": "S4",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S4_layer1b_websearch": {
+      "query": "site:fintech.global \"tax loss harvesting AI startup\"",
+      "gap_id": "S4",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S4_layer2_websearch": {
+      "query": "site:producthunt.com \"TLH agent\"",
+      "gap_id": "S4",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S4_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"tax lot optimisation python pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S4",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S4_layer4_websearch": {
+      "query": "site:ycombinator.com \"tax loss harvesting AI startup\"",
+      "gap_id": "S4",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S5_layer1a_exa": {
+      "query": "options strategy AI startup seed to Series A financial services",
+      "gap_id": "S5",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S5_layer1b_websearch": {
+      "query": "site:fintech.global \"options strategy AI startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S5",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S5_layer2_websearch": {
+      "query": "site:producthunt.com \"the wheel on autopilot\"",
+      "gap_id": "S5",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S5_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"options pricing python pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S5",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S5_layer4_websearch": {
+      "query": "site:ycombinator.com \"options strategy AI startup\"",
+      "gap_id": "S5",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S6_layer1a_exa": {
+      "query": "algorithmic execution startup seed to Series A financial services",
+      "gap_id": "S6",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S6_layer1b_websearch": {
+      "query": "site:fintech.global \"algorithmic execution startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S6",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S6_layer2_websearch": {
+      "query": "site:producthunt.com \"execution copilot\"",
+      "gap_id": "S6",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S6_layer4_websearch": {
+      "query": "site:ycombinator.com \"algorithmic execution startup\"",
+      "gap_id": "S6",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S7_layer1a_exa": {
+      "query": "portfolio monitoring AI agent seed to Series A, Europe",
+      "gap_id": "S7",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S7_layer1b_websearch": {
+      "query": "site:fintech.global \"portfolio monitoring AI agent\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "S7",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S7_layer2_websearch": {
+      "query": "site:producthunt.com \"thesis tracker\"",
+      "gap_id": "S7",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S7_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"event-driven portfolio monitoring pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S7",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S7_layer4_websearch": {
+      "query": "site:ycombinator.com \"portfolio monitoring AI agent\"",
+      "gap_id": "S7",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S8_layer1a_exa": {
+      "query": "financial planning AI agent seed to Series A, Europe",
+      "gap_id": "S8",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S8_layer1b_websearch": {
+      "query": "site:fintech.global \"financial planning AI agent\"",
+      "gap_id": "S8",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S8_layer2_websearch": {
+      "query": "site:producthunt.com \"financial planning agent\"",
+      "gap_id": "S8",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S8_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"retirement planning SDK pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S8",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S8_layer4_websearch": {
+      "query": "site:ycombinator.com \"financial planning AI agent\"",
+      "gap_id": "S8",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S9_layer1a_exa": {
+      "query": "behavioural finance AI startup seed to Series A financial services",
+      "gap_id": "S9",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S9_layer1b_websearch": {
+      "query": "site:fintech.global \"behavioural finance AI startup\"",
+      "gap_id": "S9",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S9_layer2_websearch": {
+      "query": "site:producthunt.com \"investor behaviour agent\"",
+      "gap_id": "S9",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S9_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"behavioural finance API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S9",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S9_layer4_websearch": {
+      "query": "site:ycombinator.com \"behavioural finance AI startup\"",
+      "gap_id": "S9",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S10_layer1a_exa": {
+      "query": "post-trade analytics AI startup seed to Series A financial services",
+      "gap_id": "S10",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S10_layer1b_websearch": {
+      "query": "site:fintech.global \"post-trade analytics AI startup\"",
+      "gap_id": "S10",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S10_layer2_websearch": {
+      "query": "site:producthunt.com \"AI trading journal\"",
+      "gap_id": "S10",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S10_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"trade attribution python pushed:>2026-03-21\" sort=updated",
+      "gap_id": "S10",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "S10_layer4_websearch": {
+      "query": "site:ycombinator.com \"post-trade analytics AI startup\"",
+      "gap_id": "S10",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G1_layer1a_exa": {
+      "query": "household balance sheet platform serving US families, seed to Series A, European-founded",
+      "gap_id": "G1",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G1_layer1b_websearch": {
+      "query": "site:fintech.global \"household balance sheet platform\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G1",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G1_layer2_websearch": {
+      "query": "site:producthunt.com \"the financial graph for families\"",
+      "gap_id": "G1",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G1_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"household financial graph API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G1",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G1_layer4_websearch": {
+      "query": "site:ycombinator.com \"household balance sheet platform\"",
+      "gap_id": "G1",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G2_layer1a_exa": {
+      "query": "estate tax planning software startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G2",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G2_layer1b_websearch": {
+      "query": "site:fintech.global \"estate tax planning software startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G2",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G2_layer2_websearch": {
+      "query": "site:producthunt.com \"gift money to family tax-free\"",
+      "gap_id": "G2",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G2_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"gift tax engine API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G2",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G2_layer4_websearch": {
+      "query": "site:ycombinator.com \"estate tax planning software startup\"",
+      "gap_id": "G2",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G3_layer1a_exa": {
+      "query": "digital estate planning startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G3",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G3_layer1b_websearch": {
+      "query": "site:fintech.global \"digital estate planning startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G3",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G3_layer2_websearch": {
+      "query": "site:producthunt.com \"plan what happens when you die\"",
+      "gap_id": "G3",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G3_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"estate document automation API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G3",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G3_layer4_websearch": {
+      "query": "site:ycombinator.com \"digital estate planning startup\"",
+      "gap_id": "G3",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G4_layer1a_exa": {
+      "query": "college savings fintech startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G4",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G4_layer1b_websearch": {
+      "query": "site:fintech.global \"college savings fintech startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G4",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G4_layer2_websearch": {
+      "query": "site:producthunt.com \"invest for your kids\"",
+      "gap_id": "G4",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G4_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"goal funding API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G4",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G4_layer4_websearch": {
+      "query": "site:ycombinator.com \"college savings fintech startup\"",
+      "gap_id": "G4",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G5_layer1a_exa": {
+      "query": "intra-family lending startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G5",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G5_layer1b_websearch": {
+      "query": "site:fintech.global \"intra-family lending startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G5",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G5_layer2_websearch": {
+      "query": "site:producthunt.com \"bank of mom and dad\"",
+      "gap_id": "G5",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G5_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"intra-family loan API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G5",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G5_layer4_websearch": {
+      "query": "site:ycombinator.com \"intra-family lending startup\"",
+      "gap_id": "G5",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G6_layer1a_exa": {
+      "query": "AI financial planning platform startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G6",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G6_layer1b_websearch": {
+      "query": "site:fintech.global \"AI financial planning platform startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G6",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G6_layer2_websearch": {
+      "query": "site:producthunt.com \"a CFO for your household\"",
+      "gap_id": "G6",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G6_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"financial planning agent API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G6",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G6_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI financial planning platform startup\"",
+      "gap_id": "G6",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G7_layer1a_exa": {
+      "query": "AI life insurance startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G7",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G7_layer1b_websearch": {
+      "query": "site:fintech.global \"AI life insurance startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G7",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G7_layer2_websearch": {
+      "query": "site:producthunt.com \"how much life insurance does my family need\"",
+      "gap_id": "G7",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G7_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"insurance needs API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G7",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G7_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI life insurance startup\"",
+      "gap_id": "G7",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G8_layer1a_exa": {
+      "query": "long term care planning startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G8",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G8_layer1b_websearch": {
+      "query": "site:fintech.global \"long term care planning startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G8",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G8_layer2_websearch": {
+      "query": "site:producthunt.com \"plan for long-term care costs\"",
+      "gap_id": "G8",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G8_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"LTC cost modeling API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G8",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G8_layer4_websearch": {
+      "query": "site:ycombinator.com \"long term care planning startup\"",
+      "gap_id": "G8",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G9_layer1a_exa": {
+      "query": "financial caregiving startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G9",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G9_layer1b_websearch": {
+      "query": "site:fintech.global \"financial caregiving startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G9",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G9_layer2_websearch": {
+      "query": "site:producthunt.com \"manage your aging parents' money\"",
+      "gap_id": "G9",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G9_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"caregiver financial API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G9",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G9_layer4_websearch": {
+      "query": "site:ycombinator.com \"financial caregiving startup\"",
+      "gap_id": "G9",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G10_layer1a_exa": {
+      "query": "medical bill management fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G10",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G10_layer1b_websearch": {
+      "query": "site:fintech.global \"medical bill management fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G10",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G10_layer2_websearch": {
+      "query": "site:producthunt.com \"fight your medical bills\"",
+      "gap_id": "G10",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G10_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"medical billing API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G10",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G10_layer4_websearch": {
+      "query": "site:ycombinator.com \"medical bill management fintech\"",
+      "gap_id": "G10",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G11_layer1a_exa": {
+      "query": "financial literacy AI startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G11",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G11_layer1b_websearch": {
+      "query": "site:fintech.global \"financial literacy AI startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G11",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G11_layer2_websearch": {
+      "query": "site:producthunt.com \"raise financially capable kids\"",
+      "gap_id": "G11",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G11_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"financial coaching agent API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "G11",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G11_layer4_websearch": {
+      "query": "site:ycombinator.com \"financial literacy AI startup\"",
+      "gap_id": "G11",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P1_layer1a_exa": {
+      "query": "multi-agent orchestration startup seed to Series A, Europe",
+      "gap_id": "P1",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P1_layer1b_websearch": {
+      "query": "site:fintech.global \"multi-agent orchestration startup\"",
+      "gap_id": "P1",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P1_layer2_websearch": {
+      "query": "site:producthunt.com \"multi-agent framework\"",
+      "gap_id": "P1",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P1_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"multi-agent orchestration github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P1",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P1_layer4_websearch": {
+      "query": "site:ycombinator.com \"multi-agent orchestration startup\"",
+      "gap_id": "P1",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P2_layer1a_exa": {
+      "query": "AI agent safety startup seed to Series A, Europe",
+      "gap_id": "P2",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P2_layer1b_websearch": {
+      "query": "site:fintech.global \"AI agent safety startup\"",
+      "gap_id": "P2",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P2_layer2_websearch": {
+      "query": "site:producthunt.com \"agent guardrails SDK\"",
+      "gap_id": "P2",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P2_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent safety SDK github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P2",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P2_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI agent safety startup\"",
+      "gap_id": "P2",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P3_layer1a_exa": {
+      "query": "pre-trade compliance AI startup seed to Series A, Europe",
+      "gap_id": "P3",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P3_layer1b_websearch": {
+      "query": "site:fintech.global \"pre-trade compliance AI startup\"",
+      "gap_id": "P3",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P3_layer2_websearch": {
+      "query": "site:producthunt.com \"pre-trade compliance API\"",
+      "gap_id": "P3",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P3_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"pre-trade compliance API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P3",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P3_layer4_websearch": {
+      "query": "site:ycombinator.com \"pre-trade compliance AI startup\"",
+      "gap_id": "P3",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P4_layer1a_exa": {
+      "query": "AI agent identity startup seed to Series A, Europe",
+      "gap_id": "P4",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P4_layer1b_websearch": {
+      "query": "site:fintech.global \"AI agent identity startup\"",
+      "gap_id": "P4",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P4_layer2_websearch": {
+      "query": "site:producthunt.com \"agent identity API\"",
+      "gap_id": "P4",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P4_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent authentication github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P4",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P4_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI agent identity startup\"",
+      "gap_id": "P4",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P5_layer1a_exa": {
+      "query": "AI audit trail fintech startup seed to Series A, Europe",
+      "gap_id": "P5",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P5_layer1b_websearch": {
+      "query": "site:fintech.global \"AI audit trail fintech startup\"",
+      "gap_id": "P5",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P5_layer2_websearch": {
+      "query": "site:producthunt.com \"agent audit trail API\"",
+      "gap_id": "P5",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P5_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent audit SDK github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P5",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P5_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI audit trail fintech startup\"",
+      "gap_id": "P5",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P6_layer1a_exa": {
+      "query": "AI agent liability insurance startup seed to Series A, Europe",
+      "gap_id": "P6",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P6_layer1b_websearch": {
+      "query": "site:fintech.global \"AI agent liability insurance startup\"",
+      "gap_id": "P6",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P6_layer2_websearch": {
+      "query": "site:producthunt.com \"insurance for AI agents\"",
+      "gap_id": "P6",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P6_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent liability SDK pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P6",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P6_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI agent liability insurance startup\"",
+      "gap_id": "P6",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P7_layer1a_exa": {
+      "query": "AI agent billing startup seed to Series A, Europe",
+      "gap_id": "P7",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P7_layer1b_websearch": {
+      "query": "site:fintech.global \"AI agent billing startup\"",
+      "gap_id": "P7",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P7_layer2_websearch": {
+      "query": "site:producthunt.com \"billing for AI agents\"",
+      "gap_id": "P7",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P7_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent billing SDK pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P7",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P7_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI agent billing startup\"",
+      "gap_id": "P7",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P8_layer1a_exa": {
+      "query": "agent payment infrastructure startup seed to Series A, Europe",
+      "gap_id": "P8",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P8_layer1b_websearch": {
+      "query": "site:fintech.global \"agent payment infrastructure startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "P8",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P8_layer2_websearch": {
+      "query": "site:producthunt.com \"payments for AI agents\"",
+      "gap_id": "P8",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P8_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"agent payment SDK github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "P8",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "P8_layer4_websearch": {
+      "query": "site:ycombinator.com \"agent payment infrastructure startup\"",
+      "gap_id": "P8",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R1_layer1a_exa": {
+      "query": "retail derivatives startup seed to Series A financial services",
+      "gap_id": "R1",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R1_layer1b_websearch": {
+      "query": "site:fintech.global \"retail derivatives startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "R1",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R1_layer2_websearch": {
+      "query": "site:producthunt.com \"prediction market app\"",
+      "gap_id": "R1",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R1_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"prediction market API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "R1",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R1_layer4_websearch": {
+      "query": "site:ycombinator.com \"retail derivatives startup\"",
+      "gap_id": "R1",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R2_layer1a_exa": {
+      "query": "real estate tokenization startup seed to Series A financial services",
+      "gap_id": "R2",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R2_layer1b_websearch": {
+      "query": "site:fintech.global \"real estate tokenization startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "R2",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R2_layer2_websearch": {
+      "query": "site:producthunt.com \"own a piece of anything\"",
+      "gap_id": "R2",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R2_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"asset tokenization github pushed:>2026-03-21\" sort=updated",
+      "gap_id": "R2",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R2_layer4_websearch": {
+      "query": "site:ycombinator.com \"real estate tokenization startup\"",
+      "gap_id": "R2",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R3_layer1a_exa": {
+      "query": "AI-native RIA startup seed to Series A financial services",
+      "gap_id": "R3",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R3_layer1b_websearch": {
+      "query": "site:fintech.global \"AI-native RIA startup\"",
+      "gap_id": "R3",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R3_layer2_websearch": {
+      "query": "site:producthunt.com \"wealth management for everyone\"",
+      "gap_id": "R3",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R3_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"wealth management API pushed:>2026-03-21\" sort=updated",
+      "gap_id": "R3",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "R3_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI-native RIA startup\"",
+      "gap_id": "R3",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-21",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
     }
   },
   "regen_pending": false,
