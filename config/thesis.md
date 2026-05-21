@@ -77,7 +77,7 @@ Time horizon: 6–18 months ahead.
 
 Studio is the 0-to-1 venture team. It prototypes new ventures inside emerging technology — voice, agents, predictive intelligence — before they're ready for the platform. Studio doesn't sell. It builds reference architectures, validates problem statements with academic and frontier-model partners, runs PoCs with Labs and EIRs, and graduates ventures to the Greens once three gates are cleared.
 
-Three focus projects for 2026.
+Four focus projects for 2026.
 
 **1. Voice AI through estate planning.** A constrained voice agent that helps a customer onboard — turning a decision tree into voice, explicitly *not* advice. The fundamental questions are about voice itself: can it be personalised, what kind of voice fits a regulated environment, what does the voice-artist research look like. The internal voice prototype from Labs is the starting point. Potential extension into the research component for the internal estate-planning initiative's voice implementation.
 *Reference signals:* Mistral and Anthropic on voice solutions in regulated environments. The internal estate-planning initiative as the venue and EIRs as the collaborators.
