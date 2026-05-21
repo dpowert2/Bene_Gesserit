@@ -324,6 +324,25 @@ footer p {
 
 <div class="changelog-entry" data-type="system">
   <div class="entry-header">
+    <span class="entry-date">2026-05-21</span>
+    <span class="entry-badge badge-system">Discovery Engine Overhaul</span>
+    <span class="entry-source">radar + full-cycle skills</span>
+  </div>
+  <div class="entry-title">Exa becomes the primary discovery scanner — a hybrid Exa + web-search engine with cited funding verification</div>
+  <div class="entry-body">
+    <p><strong>Why this matters.</strong> The radar had quietly been leaning on plain web search for discovery. Web search is <em>document-first</em> — it returns articles <em>about</em> a topic. Exa is <em>entity-first</em> — it returns the companies themselves. For a startup radar that difference is decisive, so Exa company-search is now the default discovery scanner across every layer.</p>
+    <p><strong>Hybrid, not either/or.</strong> Exa and web search now run as a deliberate division of labour: Exa owns discovery (“who exists”), while web search runs alongside every cycle for recency and events Exa’s index lags — this-week funding rounds, accelerator-cohort drops, demo days, product launches. Their disagreement is itself a signal: a company found in <em>both</em> is high-confidence; a fresh web-only hit <em>not yet</em> in Exa’s index is treated as brand-new and prioritised rather than discarded.</p>
+    <p><strong>Cited verification before the gate.</strong> The stage and round-size filters now fire on a <em>verified, dated</em> funding figure rather than a discovery snippet — the latest round, amount, and announcement date are confirmed from a cited source before a candidate is judged. Profiling enriches from the company’s own pages (cleaned text and a focused summary) instead of raw page fetches. A candidate whose funding can’t be cited anywhere is flagged “unverified funding” rather than silently passed.</p>
+    <p><strong>Reliability fixes shipped alongside.</strong> Vote and feedback reads were corrected from the retired vote backend to the current one across the strategy, full-cycle, and publish routines (the weekly thesis review had been reading from a decommissioned database). The search-term generator now produces natural-language entity queries for Exa <em>and</em> targeted outlet queries for web search, so each tool gets the query shape it’s good at. The manual run trigger was brought in line with the standard privacy-checked publish workflow.</p>
+  </div>
+  <div class="entry-evidence">
+    <div class="evidence-label">Evidence</div>
+    All three Exa endpoints were live-validated end to end before shipping: company discovery (returns entities, not articles), cited funding verification (returns a structured round/amount/date object with multiple dated citations), and page enrichment (cleaned summary from cache). Each scanned candidate now carries the tool that surfaced it, so each cycle reports its Exa / web-search / cross-validated mix.
+  </div>
+</div>
+
+<div class="changelog-entry" data-type="system">
+  <div class="entry-header">
     <span class="entry-date">2026-05-20</span>
     <span class="entry-badge badge-system">Cycle 21 — Coverage Audit</span>
     <span class="entry-source">bg-full-cycle Phase 0</span>
