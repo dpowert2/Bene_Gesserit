@@ -28,7 +28,7 @@
 #   novelty_signals           Phrases that indicate genuinely novel framing for this space
 #   novelty_antipatterns      Phrases that trigger the Novelty Gate rejection
 
-thesis_version: "2.8"
+thesis_version: "3.6"
 schema_version: "1.0"
 generated_date: "2026-05-05"
 
@@ -1405,6 +1405,342 @@ gaps:
 # the listed archetypes when generating L2 / L3 queries for that gap.
 # Schema rationale lives in config/search-strategy-redesign.md.
 # ─────────────────────────────────────────────────────────
+
+  # ─────────────────────────────────────────────────────────
+  # GENERATIONAL / LIFECYCLE CLUSTER (Studio, added thesis v3.6)
+  # Market = US (instrument vocab below is US). Supply = Europe-preferred
+  # (filter for European-founded builders serving the US at scout time).
+  # Decomposed family office — never a family-office-OS super-app.
+  # ─────────────────────────────────────────────────────────
+  - id: G1
+    name: "Social & Societal Graph"
+    team: studio
+    thesis_anchor: >
+      The data-and-consent substrate: the family-in-context (members, accounts, employer/state
+      benefits, programs) as an agent-callable graph, not a dashboard. The unit of analysis is
+      the family, not the individual.
+    target_company_shape: >
+      US-market household financial graph; European-founded preferred. Agent-callable, not a
+      net-worth dashboard. Seed to Series A.
+    institutional_vocabulary:
+      - "household balance sheet platform"
+      - "family financial data platform"
+      - "multi-generational wealth platform"
+      - "family net worth aggregation startup"
+    founder_vocabulary:
+      - "the financial graph for families"
+      - "your family's money in one place"
+      - "household financial operating layer"
+      - "agent-callable family balance sheet"
+    technical_vocabulary:
+      - "household financial graph API"
+      - "family account aggregation SDK"
+    community_vocabulary:
+      - "family finances API"
+      - "household net worth agent"
+      - "European fintech US families"
+    reference_archetypes:
+      - "asora / HeirWealth — family-office software (wrong tier, right shape)"
+      - "NestiFi (Dublin) — collaborative family wealth, US presence"
+    anti_archetypes:
+      - "Net-worth aggregator with a 'family' toggle — fails novelty"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals: ["family-in-context graph", "agent-callable, multi-member, multi-account"]
+    novelty_antipatterns: ["budgeting dashboard", "net-worth tracker app"]
+  - id: G2
+    name: "Gifting & Estate-Tax Agent"
+    team: studio
+    thesis_anchor: >
+      Execute wealth transfer down the generations tax-efficiently and pick the right vehicle
+      (529 / UTMA / custodial Roth / trust). The engine of the ~$84T great wealth transfer.
+    target_company_shape: >
+      US gift/estate-tax execution (not advice chat); European-founded preferred. A product that
+      executes, not a chatbot that explains. Seed to Series A.
+    institutional_vocabulary:
+      - "estate tax planning software startup"
+      - "wealth transfer platform"
+      - "gifting and trust funding fintech"
+      - "AI estate tax startup"
+    founder_vocabulary:
+      - "gift money to family tax-free"
+      - "automate the annual gift exclusion"
+      - "estate planning that executes"
+      - "529 and trust funding agent"
+    technical_vocabulary:
+      - "gift tax engine API"
+      - "estate planning automation SDK"
+    community_vocabulary:
+      ["529 superfunding tool", "step-up basis planning", "great wealth transfer fintech"]
+    reference_archetypes:
+      - "Luminary / EncorEstate — estate software (advisor tier)"
+    anti_archetypes:
+      ["Will-builder with no tax execution", "Tax-filing tool (juno 2★ pattern)"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["executes the gift/transfer", "vehicle selection + tax routing"]
+    novelty_antipatterns: ["estate planning chatbot", "online will builder"]
+  - id: G3
+    name: "Estate & Succession Agent"
+    team: studio
+    thesis_anchor: >
+      Wills, revocable living trusts, POA and healthcare directives, beneficiary mapping,
+      digital-asset succession. "What happens when." Where Studio's estate-voice venture lands.
+    target_company_shape: >
+      US succession (state probate, living-trust workaround, inherited-IRA 10-year rule);
+      European-founded preferred; agentic, plan-integrated. Seed to Series A.
+    institutional_vocabulary:
+      - "digital estate planning startup"
+      - "succession planning platform"
+      - "living trust fintech"
+      - "AI will and trust startup"
+    founder_vocabulary:
+      ["plan what happens when you die", "living trust in minutes", "beneficiary and succession agent", "digital legacy planning"]
+    technical_vocabulary: ["estate document automation API", "succession workflow SDK"]
+    community_vocabulary: ["digital will startup", "trust and estate AI", "European legaltech US estate"]
+    reference_archetypes: ["Trust & Will / Wealth.com (Series B — too late)", "My-Legacy.ai, Herbie"]
+    anti_archetypes: ["Static will PDF generator", "Document storage vault only"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["plan-integrated succession", "agentic, executes filings"]
+    novelty_antipatterns: ["will template generator", "document vault"]
+  - id: G4
+    name: "Goal-Funding Agent"
+    team: studio
+    thesis_anchor: >
+      Pool contributions from multiple family members toward a named goal (college, down-payment,
+      car, wedding) and route each into the optimal vehicle with the right consents.
+    target_company_shape: >
+      US vehicles (529, SECURE 2.0 529→Roth, Coverdell, custodial Roth); European-founded preferred;
+      multi-contributor, goal-ring-fenced, tax-aware (not a savings pot). Seed to Series A.
+    institutional_vocabulary:
+      - "college savings fintech startup"
+      - "family goal-based investing platform"
+      - "529 automation startup"
+      - "custodial investing for kids startup"
+    founder_vocabulary:
+      ["invest for your kids", "save for college as a family", "let grandparents contribute", "automated 529 for families"]
+    technical_vocabulary: ["goal funding API", "custodial account SDK"]
+    community_vocabulary: ["set money aside for my child", "family contributions app", "European fintech US college savings"]
+    reference_archetypes: ["UNest, FutureMoney, Stockpile (US, mostly non-agentic)", "Beanstalk/Mia (EU — wrong instruments)"]
+    anti_archetypes: ["Single-purpose kids savings app with a debit card", "Robo-advisor with a 'goal' label"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["multi-contributor goal funding", "tax-aware vehicle routing"]
+    novelty_antipatterns: ["kids debit card", "round-up savings app"]
+  - id: G5
+    name: "Family Lending Agent"
+    team: studio
+    thesis_anchor: >
+      The "bank of mom and dad" systematised, both directions: gifted down-payments and gift
+      letters, co-signer structures, intra-family loans at the AFR, HELOC / later-life lending.
+    target_company_shape: >
+      US (AFR rules, gift-letter/seasoning, ~$1.7T student-loan backdrop); European-founded preferred.
+      Seed to Series A.
+    institutional_vocabulary:
+      - "intra-family lending startup"
+      - "family mortgage fintech"
+      - "gifted down payment platform"
+      - "co-signer lending startup"
+    founder_vocabulary:
+      ["bank of mom and dad", "lend money to family properly", "help your kid buy a home", "family loan paperwork automated"]
+    technical_vocabulary: ["intra-family loan API", "AFR loan servicing SDK"]
+    community_vocabulary: ["family down payment help", "intergenerational mortgage", "AFR family loan"]
+    reference_archetypes: ["thin — open cell"]
+    anti_archetypes: ["BNPL", "Generic P2P lending marketplace"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["systematises bank-of-mom-and-dad", "AFR-correct intra-family loans"]
+    novelty_antipatterns: ["consumer BNPL", "payday lending"]
+  - id: G6
+    name: "Life-Event Planning Agent"
+    team: studio
+    thesis_anchor: >
+      The orchestrator. A continuous, always-on household finance function that sits on the family
+      graph, anticipates milestones, and fires the right preparation — both directions of support.
+      Extends S8. Scout both shapes: own-company OR super-set that calls the others.
+    target_company_shape: >
+      US-market continuous household CFO; European-founded preferred; agent-driven, not episodic.
+      Seed to Series A. The cleanest white space.
+    institutional_vocabulary:
+      - "AI financial planning platform startup"
+      - "household CFO startup"
+      - "life event financial planning fintech"
+      - "continuous financial planning agent"
+    founder_vocabulary:
+      ["a CFO for your household", "financial autopilot for families", "plan every life event", "always-on financial planning agent"]
+    technical_vocabulary: ["financial planning agent API", "life-event orchestration SDK"]
+    community_vocabulary: ["household CFO", "family financial autopilot", "European fintech US households"]
+    reference_archetypes: ["Hiro, Albert, Era (individual autopilots — not family/lifecycle)"]
+    anti_archetypes: ["Budgeting app with reminders", "Robo-advisor rebrand"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 14
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: true
+    novelty_signals: ["continuous family-level finance function", "anticipates and acts ahead of milestones"]
+    novelty_antipatterns: ["budgeting dashboard", "one-off financial plan"]
+  - id: G7
+    name: "Protection Agent"
+    team: studio
+    thesis_anchor: >
+      Life, income, and disability protection sized to the family system and to an estate-tax
+      liability — sold as a family-system output, not a comparison-table policy.
+    target_company_shape: >
+      US protection (term/whole life, ILITs for estate liquidity); European-founded preferred.
+      Seed to Series A.
+    institutional_vocabulary:
+      - "AI life insurance startup"
+      - "family protection planning fintech"
+      - "income protection insurtech startup"
+      - "insurance needs analysis platform"
+    founder_vocabulary:
+      ["how much life insurance does my family need", "protection sized to your family", "life cover for parents", "family insurance agent"]
+    technical_vocabulary: ["insurance needs API", "protection planning SDK"]
+    community_vocabulary: ["family protection agent", "ILIT estate liquidity", "insurtech for families"]
+    reference_archetypes: ["sparse in agentic form — open cell"]
+    anti_archetypes: ["Insurance comparison marketplace", "Quote-and-bind only"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["protection as a family-system output", "sized to estate liability"]
+    novelty_antipatterns: ["insurance comparison site", "single-policy quote tool"]
+  - id: G8
+    name: "Eldercare & Longevity Agent"
+    team: studio
+    thesis_anchor: >
+      Later-life cost planning and funding: long-term-care insurance, Medicaid planning (the
+      5-year lookback, asset-protection trusts), equity release. The downward-facing half of aging.
+    target_company_shape: >
+      US (LTC insurance, Medicaid planning, reverse mortgage/equity release); European-founded
+      preferred; product not services. Seed to Series A.
+    institutional_vocabulary:
+      - "long term care planning startup"
+      - "Medicaid planning fintech"
+      - "eldercare cost planning platform"
+      - "later-life lending startup"
+    founder_vocabulary:
+      ["plan for long-term care costs", "protect assets from nursing home costs", "fund mom's care", "later-life financial planning agent"]
+    technical_vocabulary: ["LTC cost modeling API", "Medicaid planning SDK"]
+    community_vocabulary: ["Medicaid 5-year lookback tool", "eldercare funding agent", "longevity finance"]
+    reference_archetypes: ["Waterlily-style LTC-cost AI", "Secure Aging, Money Care (mostly services)"]
+    anti_archetypes: ["Care-provider directory", "Generic senior-living marketplace"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 12
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["agentic Medicaid/LTC planning", "asset-protection structuring"]
+    novelty_antipatterns: ["senior living directory", "care marketplace"]
+  - id: G9
+    name: "Caregiving & Sandwich-Gen Agent"
+    team: studio
+    thesis_anchor: >
+      The upward flow made systematic: an adult child (or several siblings) coordinating and
+      cost-sharing a parent's care, managing a parent's finances under POA. Money moves both ways.
+    target_company_shape: >
+      US financial caregiving; European-founded preferred; coordination + money, not just monitoring.
+      Seed to Series A. Liveliest new cell.
+    institutional_vocabulary:
+      - "financial caregiving startup"
+      - "elder financial management platform"
+      - "caregiver fintech startup"
+      - "aging parents money management startup"
+    founder_vocabulary:
+      ["manage your aging parents' money", "coordinate care with siblings", "financial caregiving agent", "protect parents from financial fraud"]
+    technical_vocabulary: ["caregiver financial API", "POA account management SDK"]
+    community_vocabulary: ["sandwich generation finances", "financial caregiving", "elder money protection"]
+    reference_archetypes: ["Carefull, myFloc, Napa Money, WayWiser (US, mostly monitoring)"]
+    anti_archetypes: ["Care-scheduling app with no money layer", "Generic family calendar"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 14
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["multi-sibling care cost-sharing + money", "POA-aware financial management"]
+    novelty_antipatterns: ["care scheduling app", "monitoring-only alerts"]
+  - id: G10
+    name: "Health & Medical-Cost Agent"
+    team: studio
+    thesis_anchor: >
+      The money layer of illness — HSAs, medical-debt navigation, the financial shock of a
+      diagnosis, benefits/insurance optimisation. Health-finance, not clinical healthtech.
+    target_company_shape: >
+      US (HSAs, medical debt, benefits); European-founded preferred; the FINANCIAL side of a health
+      event. Seed to Series A. (Pure clinical product trips non-finserv penalty.)
+    institutional_vocabulary:
+      - "medical bill management fintech"
+      - "HSA optimization startup"
+      - "medical debt fintech startup"
+      - "healthcare cost navigation platform"
+    founder_vocabulary:
+      ["fight your medical bills", "optimize your HSA", "the financial side of getting sick", "medical cost agent"]
+    technical_vocabulary: ["medical billing API", "HSA optimization SDK"]
+    community_vocabulary: ["medical debt help", "HSA agent", "health finance startup"]
+    reference_archetypes: ["needs dedicated sweep — open cell"]
+    anti_archetypes: ["Clinical health app (non-finserv)", "Symptom checker"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 8
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["money layer of a health event", "HSA + medical-debt + benefits as an agent"]
+    novelty_antipatterns: ["telehealth", "clinical symptom app"]
+  - id: G11
+    name: "Rising-Generation Agent"
+    team: studio
+    thesis_anchor: >
+      Coach the next generation into competence — "next-gen prep" — wired into the real family
+      plan. Extends S9. Matters most as ~$84T changes hands. HIGH novelty risk (kids-card trap).
+    target_company_shape: >
+      US-market; European-founded preferred; agent-callable coaching tied to the family plan, NOT a
+      gamified debit card. Seed to Series A.
+    institutional_vocabulary:
+      - "financial literacy AI startup"
+      - "next generation wealth education platform"
+      - "young adult financial coaching fintech"
+      - "heir education startup"
+    founder_vocabulary:
+      ["raise financially capable kids", "prepare your heirs", "financial coach for young adults", "next-gen money mentor"]
+    technical_vocabulary: ["financial coaching agent API", "literacy curriculum SDK"]
+    community_vocabulary: ["next gen prep", "financial literacy agent", "heir readiness"]
+    reference_archetypes: ["(Greenlight / GoHenry shape — debit cards, the anti-pattern)"]
+    anti_archetypes: ["Kids debit card with a mascot", "Gamified allowance app"]
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 8
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["coaching wired into the real family plan", "agent-callable, not a card"]
+    novelty_antipatterns: ["kids debit card", "gamified allowance app"]
 
 audience_archetypes:
 
