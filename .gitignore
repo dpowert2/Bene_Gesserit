@@ -20,3 +20,9 @@ config/redact-list.txt
 
 # Project memory / working context for Claude — keep local only.
 CLAUDE.md
+
+# Exa Search API key — read by the radar/full-cycle scheduled tasks. Never push.
+config/.exa-key
+
+# Unreviewed thesis-extension draft — keep local until approved & merged into thesis.md.
+config/studio-generational-thesis-draft.md
