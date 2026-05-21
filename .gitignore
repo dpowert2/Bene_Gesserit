@@ -26,3 +26,6 @@ config/.exa-key
 
 # Unreviewed thesis-extension draft — keep local until approved & merged into thesis.md.
 config/studio-generational-thesis-draft.md
+
+# Internal Exa feature evaluation — keep local.
+config/exa-features-evaluation.md
