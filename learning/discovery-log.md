@@ -1484,3 +1484,11 @@ New briefing `2026-05-20.html` (Cycle 21, 5 signals incl. 1 system signal, 4 new
   3. Blind-spot seeding vs the 90-day freshness gate: applied an 18-month exception so first-of-cell candidates can seed. RECOMMEND formalising an age-gate relaxation for 0-company cells.
   4. Generator 1a queries are Exa-clean but templated — recommend enriching the 1a constructor with `thesis_anchor` for higher recall.
 **Phase 5 (Publish):** thesis.md, thesis-schema.yaml, bg-search-terms.md, search-state.json, briefings/2026-05-21.md, pipeline/detected/nestifi.md, changelog.html pushed (privacy-checked).
+
+### Cycle 22 — correction (2026-05-22): geo filter was too strict
+
+The first scout carded only NestiFi because the geo bar was over-applied as "European-built AND already US-serving." Corrected to "European-built AND a model that works in the US in principle" (US instruments = target, not a gate; Europe-preferred ≠ Europe-only). Fixed in thesis.md and thesis-schema.yaml (generational cluster header). Re-scouted all 11 cells.
+**Result: 1 → 5 cards.** NestiFi (G6/G1/G4), Familiebank (G5, NL — intra-family lending), Beanstalk (G4, UK — family goal-funding), Sibstar (G9, UK — caregiving/dementia money mgmt, Series A £1.35M), Life5 (G7, ES — protection, watch-grade, novelty caveat).
+**Cited /answer rejected 2 false fits:** Goya Health (provider-side healthcare billing, wrong side of G10) and Rule (impulse-spend PFM = addition-wealth/Whistl anti-pattern). The verification + judgment working as intended.
+**Still-open cells (no clean European-built fit this pass):** G8 Eldercare, G10 Health & Medical-Cost, G11 Rising-Generation. Scout G2/G3 estate for European fits next pass (Testamento flagged).
+**Lesson:** the dramatic-thesis-low-yield worry was a filter bug, not an engine or thesis failure. Discovery surfaced 30+ relevant companies; the bottleneck was an over-narrow geo gate.
