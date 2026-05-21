@@ -1468,3 +1468,19 @@ New briefing `2026-05-20.html` (Cycle 21, 5 signals incl. 1 system signal, 4 new
 - Highest-value votes to cast: Liquid (is the crypto-adjacency disqualifying, or is the prediction-market/private-secondaries inversion interesting enough?), Whistl (does the "OS" branding + PFM framing kill it, or is S9 thin enough to warrant a look?).
 - S6 scouting needs a vocabulary fix: "trading workflows" keeps surfacing institutional front-office tooling (TwoWay) that fails external-over-internal. Consider negating "broker", "trading desk", "front office", "OMS/EMS" in S6 L1e.
 - S10 remains a novelty trap — every candidate is an "AI trade journal." A genuine S10 fit needs a non-journal mechanism (e.g. agent-callable attribution API), not another journaling app.
+
+## Cycle 22 — 2026-05-21 — Studio generational integration + first hybrid-engine scout
+
+**Phase 1 (Learn):** Turso live fetch OK — 97 votes (20/12/9/16/22; 75 notes, 44 follow-ups). No new votes since cycle 21 → no preference/near-miss changes. (Confirms the Supabase→Turso fix works live.)
+**Phase 2 (Strategise):** Thesis → v3.6. Studio focus area 4 (decomposed family office, full lifecycle) + 11-cell Generational/Lifecycle cluster (G1–G11) added to the gap map. US-market / Europe-supply; anti-super-app guardrail. All 11 are 0-company blind spots.
+**Phase 3 (Arm):** Schema → 33 gaps (validated). `bg-search-terms.md` regenerated to v6.0 — 7,062 queries, dual-shape (Layer 1a Exa entity NL verified clean: 0/132 with quotes/site:/OR; 1b/2/4 WebSearch site:; 3 GitHub MCP). search-state.json v6.0, hash 5d18946b, 184 query_blocks with scanner field.
+**Phase 4 (Scout):** First scout on the new engine. Exa entity discovery + cited `/answer` verification + `/contents` enrichment.
+  - New card: **NestiFi** (Dublin, US-oriented multi-generational family engagement for institutions) — G6/G1/G4 multi-fit, Seed ~$250k, score 76. The clean European-built / US-served fit.
+  - Cited verification caught 3 stale signals (Sibstar Series A Aug-2025 UK; Backer Series A Dec-2023 US; NestiFi Seed Sep-2025 — past 90d gate).
+  - Two-axis geo filter sharply selective: Sibstar = supply-right/market-wrong (UK); Carefull/myFloc/Napa/WayWiser = market-right/supply-wrong (US-founded). Intersection is thin → that's the signal.
+**Findings / improvements:**
+  1. `/answer` cited verification works and changes outcomes (round/stage/date+country with citations, ~$0.005/call).
+  2. Two-axis European-built/US-served filter validated as the hardest, most useful constraint.
+  3. Blind-spot seeding vs the 90-day freshness gate: applied an 18-month exception so first-of-cell candidates can seed. RECOMMEND formalising an age-gate relaxation for 0-company cells.
+  4. Generator 1a queries are Exa-clean but templated — recommend enriching the 1a constructor with `thesis_anchor` for higher recall.
+**Phase 5 (Publish):** thesis.md, thesis-schema.yaml, bg-search-terms.md, search-state.json, briefings/2026-05-21.md, pipeline/detected/nestifi.md, changelog.html pushed (privacy-checked).
