@@ -396,7 +396,7 @@ body {
       <rect x="540" y="128" width="200" height="72" rx="12" fill="#1C1C2C"/>
       <text x="560" y="152" font-size="10" font-weight="800" fill="#E84B3C" letter-spacing="0.08em">PHASE 4</text>
       <text x="560" y="170" font-size="14" font-weight="700" fill="#fff">Scout</text>
-      <text x="560" y="186" font-size="10" fill="#9CA3AF">Web scan + score + briefing</text>
+      <text x="560" y="186" font-size="10" fill="#9CA3AF">Hybrid scan + score + briefing</text>
 
       <!-- Arrow 4→5 (goes left) -->
       <line x1="540" y1="164" x2="504" y2="164" stroke="#E84B3C" stroke-width="2" marker-end="url(#arr)"/>
@@ -622,6 +622,18 @@ body {
   <p>The schema upgrade landed alongside the Phase 4 blind-spot protocol gives every gap an <code>audience_archetype</code> tag — A (Retail Investor), B (Independent Advisor / RIA), C (Bank / Broker / Asset Manager), D (Compliance / RegTech), E (AI-Native Infrastructure). The top-level <code>audience_archetypes</code> block defines per-archetype surface menus: Kitces / T3 / Future Proof for B; The Trade News / Markets Media / Risk.net / Waters Technology for C; ACAMS / Compliance Week for D; Reddit / Show HN / FinTwit for A; LangChain / Anthropic customer pages for E. Categories that span audiences (e.g. S5 Options &amp; Derivatives is A + E; S3 Trade Structuring is B + C) get the union of surface menus.</p>
 
   <p>The point: instead of every category running the same Sifted + StationF + tech-press menu, each cell now reads from the surfaces where its actual customers and founders hang out. The cycle-14 manual seed pass demonstrated the lift — five first-of-cell cards in 30 minutes from cells that had been empty for seven cycles. The full <code>generate-search-terms</code> regeneration against the new schema is queued; <code>bg-search-terms.md</code> v5.5 is currently flagged REGEN PENDING.</p>
+
+  <h3>How the scan actually runs — the discovery engine</h3>
+  <p>Generating good queries is only half the job; the other half is the engine that runs them. The radar now runs an <strong>Exa-first hybrid</strong>. Exa is <em>entity-first</em> — it returns the companies that match, not articles <em>about</em> the topic — so it is the default discovery scanner on every layer. General web search runs <em>alongside</em>, every cycle, to catch what an index hasn't crawled yet: funding rounds announced this week, accelerator-cohort drops, demo days, and product launches.</p>
+
+  <div class="callout">
+    <div class="callout-label">The shift</div>
+    <p style="margin:0">From finding <em>articles about</em> startups to finding the <em>startups themselves</em> — and treating the two search styles' disagreement as a signal in its own right.</p>
+  </div>
+
+  <p>That disagreement is the clever part. A company that turns up in <strong>both</strong> the entity index and fresh funding coverage is high-confidence. A company in this week's funding news but <strong>not yet</strong> in the entity index is almost certainly brand-new — for a seed-stage radar, the most valuable kind of hit — so it is prioritised, not discarded. A company sitting in the index with no recent news anywhere gets a freshness check before it's trusted.</p>
+
+  <p>Before a candidate is scored against the stage and round-size gates, its latest round, amount, and announcement date are confirmed from a <strong>cited source</strong>, and its profile is enriched from the company's own pages rather than a raw page grab. The gate fires on verified, dated figures — not a discovery snippet — and a candidate whose funding can't be cited anywhere is flagged "unverified funding" rather than slipping through. Every scanned candidate carries the tool that surfaced it, so each cycle reports its Exa / web-search / cross-validated mix.</p>
 </div>
 
 <!-- ════════════════════════════════════════════
