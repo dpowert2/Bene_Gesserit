@@ -1,13 +1,13 @@
-# Bene Gesserit — Search Terms v6.0
-*Generated: 2026-05-21 | thesis-schema v1.0 | Thesis v3.6*  
+# Bene Gesserit — Search Terms v7.0
+*Generated: 2026-05-22 | thesis-schema v1.0 | Thesis v3.6*  
 *DO NOT EDIT — regenerate via generate-search-terms skill.*
-*Discovery engine: Layer 1a = Exa entity queries (natural language); Layer 1b/2/4 = WebSearch site:; Layer 3 = GitHub MCP.*
+*Engine: Layer 1a = Exa entity queries (natural language); Layer 1b/2/4 = WebSearch site:; Layer 3 = GitHub MCP.*
 
 
 ## SPECIALIST AGENTS
 
 ### S-FRONT — Personal Financial Agent
-*Team: cross-team | geo: europe-first | bonus: +10 | status: partial*
+*Team: cross-team | geo: europe-first | bonus: +10*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - personal finance AI agent seed to Series A, Europe
@@ -39,8 +39,8 @@
 - site:betalist.com "AI money manager"
 - site:indiehackers.com "AI money manager"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="financial agent SDK pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="personal finance MCP pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="financial agent SDK pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="personal finance MCP pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "personal finance AI agent"
 - site:joinef.com "personal finance AI agent"
@@ -230,7 +230,7 @@
 - site:startupblink.com "personal finance AI agent"
 
 ### S1 — Research & Signal Intelligence
-*Team: greens | geo: europe-first | bonus: +18 | status: filled*
+*Team: greens | geo: europe-first | bonus: +18*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - alternative data startup fintech seed to Series A, Europe
@@ -262,8 +262,8 @@
 - site:betalist.com "financial data MCP server"
 - site:indiehackers.com "financial data MCP server"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="financial MCP server pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="earnings data API python pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="financial MCP server pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="earnings data API python pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "alternative data startup fintech"
 - site:joinef.com "alternative data startup fintech"
@@ -453,7 +453,7 @@
 - site:startupblink.com "alternative data startup fintech"
 
 ### S2 — Portfolio Construction & Risk Agent
-*Team: greens | geo: europe-first | bonus: +18 | status: partial*
+*Team: greens | geo: europe-first | bonus: +18*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - portfolio construction AI startup seed to Series A, Europe
@@ -485,8 +485,8 @@
 - site:betalist.com "portfolio risk API"
 - site:indiehackers.com "portfolio risk API"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="portfolio optimisation python library pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="risk engine API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="portfolio optimisation python library pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="risk engine API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "portfolio construction AI startup"
 - site:joinef.com "portfolio construction AI startup"
@@ -676,7 +676,7 @@
 - site:startupblink.com "portfolio construction AI startup"
 
 ### S3 — Trade Structuring Agent
-*Team: greens | geo: global | bonus: +15 | status: empty*
+*Team: greens | geo: global | bonus: +15*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - trade structuring AI startup seed to Series A financial services
@@ -708,8 +708,8 @@
 - site:betalist.com "asset location optimizer"
 - site:indiehackers.com "asset location optimizer"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="options pricing API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="trade structure SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="options pricing API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="trade structure SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "trade structuring AI startup"
 - site:joinef.com "trade structuring AI startup"
@@ -899,7 +899,7 @@
 - site:startupblink.com "trade structuring AI startup"
 
 ### S4 — Tax Optimisation Agent
-*Team: studio | geo: global | bonus: +12 | status: partial*
+*Team: studio | geo: global | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - tax loss harvesting AI startup seed to Series A financial services
@@ -931,8 +931,8 @@
 - site:betalist.com "TLH agent"
 - site:indiehackers.com "TLH agent"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="tax lot optimisation python pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="TLH engine API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="tax lot optimisation python pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="TLH engine API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "tax loss harvesting AI startup"
 - site:joinef.com "tax loss harvesting AI startup"
@@ -1122,7 +1122,7 @@
 - site:startupblink.com "tax loss harvesting AI startup"
 
 ### S5 — Options & Derivatives Strategy Agent
-*Team: greens | geo: global | bonus: +15 | status: empty*
+*Team: greens | geo: global | bonus: +15*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - options strategy AI startup seed to Series A financial services
@@ -1154,8 +1154,8 @@
 - site:betalist.com "the wheel on autopilot"
 - site:indiehackers.com "the wheel on autopilot"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="options pricing python pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="vol surface API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="options pricing python pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="vol surface API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "options strategy AI startup"
 - site:joinef.com "options strategy AI startup"
@@ -1345,7 +1345,7 @@
 - site:startupblink.com "options strategy AI startup"
 
 ### S6 — Execution Agent
-*Team: greens | geo: global | bonus: +15 | status: empty*
+*Team: greens | geo: global | bonus: +15*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - algorithmic execution startup seed to Series A financial services
@@ -1377,8 +1377,8 @@
 - site:betalist.com "execution copilot"
 - site:indiehackers.com "execution copilot"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="smart order routing python pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="execution algorithm github pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="smart order routing python pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="execution algorithm github pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "algorithmic execution startup"
 - site:joinef.com "algorithmic execution startup"
@@ -1568,7 +1568,7 @@
 - site:startupblink.com "algorithmic execution startup"
 
 ### S7 — Position Monitoring & Thesis Tracking Agent
-*Team: greens | geo: europe-first | bonus: +12 | status: empty*
+*Team: greens | geo: europe-first | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - portfolio monitoring AI agent seed to Series A, Europe
@@ -1600,8 +1600,8 @@
 - site:betalist.com "thesis tracker"
 - site:indiehackers.com "thesis tracker"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="event-driven portfolio monitoring pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="catalyst tracking API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="event-driven portfolio monitoring pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="catalyst tracking API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "portfolio monitoring AI agent"
 - site:joinef.com "portfolio monitoring AI agent"
@@ -1791,7 +1791,7 @@
 - site:startupblink.com "portfolio monitoring AI agent"
 
 ### S8 — Financial Planning Agent
-*Team: research | geo: europe-first | bonus: +12 | status: empty*
+*Team: research | geo: europe-first | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - financial planning AI agent seed to Series A, Europe
@@ -1823,8 +1823,8 @@
 - site:betalist.com "financial planning agent"
 - site:indiehackers.com "financial planning agent"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="retirement planning SDK pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="financial planning API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="retirement planning SDK pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="financial planning API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "financial planning AI agent"
 - site:joinef.com "financial planning AI agent"
@@ -2014,7 +2014,7 @@
 - site:startupblink.com "financial planning AI agent"
 
 ### S9 — Behavioural Coaching Agent
-*Team: research | geo: global | bonus: +8 | status: empty*
+*Team: research | geo: global | bonus: +8*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - behavioural finance AI startup seed to Series A financial services
@@ -2046,8 +2046,8 @@
 - site:betalist.com "investor behaviour agent"
 - site:indiehackers.com "investor behaviour agent"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="behavioural finance API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="investor nudge SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="behavioural finance API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="investor nudge SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "behavioural finance AI startup"
 - site:joinef.com "behavioural finance AI startup"
@@ -2237,7 +2237,7 @@
 - site:startupblink.com "behavioural finance AI startup"
 
 ### S10 — Post-Trade Analysis & Learning Agent
-*Team: greens | geo: global | bonus: +8 | status: empty*
+*Team: greens | geo: global | bonus: +8*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - post-trade analytics AI startup seed to Series A financial services
@@ -2269,8 +2269,8 @@
 - site:betalist.com "AI trading journal"
 - site:indiehackers.com "AI trading journal"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="trade attribution python pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="performance analytics API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="trade attribution python pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="performance analytics API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "post-trade analytics AI startup"
 - site:joinef.com "post-trade analytics AI startup"
@@ -2463,7 +2463,7 @@
 ## GENERATIONAL / LIFECYCLE CLUSTER
 
 ### G1 — Social & Societal Graph
-*Team: studio | geo: us-market-europe-supply | bonus: +12 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - household balance sheet platform serving US families, seed to Series A, European-founded
@@ -2495,8 +2495,8 @@
 - site:betalist.com "the financial graph for families"
 - site:indiehackers.com "the financial graph for families"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="household financial graph API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="family account aggregation SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="household financial graph API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="family account aggregation SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "household balance sheet platform"
 - site:joinef.com "household balance sheet platform"
@@ -2686,7 +2686,7 @@
 - site:startupblink.com "household balance sheet platform"
 
 ### G2 — Gifting & Estate-Tax Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +12 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - estate tax planning software startup serving US families, seed to Series A, European-founded
@@ -2718,8 +2718,8 @@
 - site:betalist.com "gift money to family tax-free"
 - site:indiehackers.com "gift money to family tax-free"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="gift tax engine API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="estate planning automation SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="gift tax engine API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="estate planning automation SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "estate tax planning software startup"
 - site:joinef.com "estate tax planning software startup"
@@ -2909,7 +2909,7 @@
 - site:startupblink.com "estate tax planning software startup"
 
 ### G3 — Estate & Succession Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +10 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - digital estate planning startup serving US families, seed to Series A, European-founded
@@ -2941,8 +2941,8 @@
 - site:betalist.com "plan what happens when you die"
 - site:indiehackers.com "plan what happens when you die"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="estate document automation API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="succession workflow SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="estate document automation API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="succession workflow SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "digital estate planning startup"
 - site:joinef.com "digital estate planning startup"
@@ -3132,7 +3132,7 @@
 - site:startupblink.com "digital estate planning startup"
 
 ### G4 — Goal-Funding Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +12 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - college savings fintech startup serving US families, seed to Series A, European-founded
@@ -3164,8 +3164,8 @@
 - site:betalist.com "invest for your kids"
 - site:indiehackers.com "invest for your kids"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="goal funding API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="custodial account SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="goal funding API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="custodial account SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "college savings fintech startup"
 - site:joinef.com "college savings fintech startup"
@@ -3355,7 +3355,7 @@
 - site:startupblink.com "college savings fintech startup"
 
 ### G5 — Family Lending Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +10 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - intra-family lending startup serving US families, seed to Series A, European-founded
@@ -3387,8 +3387,8 @@
 - site:betalist.com "bank of mom and dad"
 - site:indiehackers.com "bank of mom and dad"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="intra-family loan API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="AFR loan servicing SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="intra-family loan API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="AFR loan servicing SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "intra-family lending startup"
 - site:joinef.com "intra-family lending startup"
@@ -3578,7 +3578,7 @@
 - site:startupblink.com "intra-family lending startup"
 
 ### G6 — Life-Event Planning Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +14 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +14*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI financial planning platform startup serving US families, seed to Series A, European-founded
@@ -3610,8 +3610,8 @@
 - site:betalist.com "a CFO for your household"
 - site:indiehackers.com "a CFO for your household"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="financial planning agent API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="life-event orchestration SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="financial planning agent API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="life-event orchestration SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI financial planning platform startup"
 - site:joinef.com "AI financial planning platform startup"
@@ -3801,7 +3801,7 @@
 - site:startupblink.com "AI financial planning platform startup"
 
 ### G7 — Protection Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +10 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI life insurance startup serving US families, seed to Series A, European-founded
@@ -3833,8 +3833,8 @@
 - site:betalist.com "how much life insurance does my family need"
 - site:indiehackers.com "how much life insurance does my family need"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="insurance needs API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="protection planning SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="insurance needs API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="protection planning SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI life insurance startup"
 - site:joinef.com "AI life insurance startup"
@@ -4024,7 +4024,7 @@
 - site:startupblink.com "AI life insurance startup"
 
 ### G8 — Eldercare & Longevity Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +12 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +12*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - long term care planning startup serving US families, seed to Series A, European-founded
@@ -4056,8 +4056,8 @@
 - site:betalist.com "plan for long-term care costs"
 - site:indiehackers.com "plan for long-term care costs"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="LTC cost modeling API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="Medicaid planning SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="LTC cost modeling API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="Medicaid planning SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "long term care planning startup"
 - site:joinef.com "long term care planning startup"
@@ -4247,7 +4247,7 @@
 - site:startupblink.com "long term care planning startup"
 
 ### G9 — Caregiving & Sandwich-Gen Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +14 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +14*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - financial caregiving startup serving US families, seed to Series A, European-founded
@@ -4279,8 +4279,8 @@
 - site:betalist.com "manage your aging parents' money"
 - site:indiehackers.com "manage your aging parents' money"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="caregiver financial API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="POA account management SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="caregiver financial API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="POA account management SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "financial caregiving startup"
 - site:joinef.com "financial caregiving startup"
@@ -4470,7 +4470,7 @@
 - site:startupblink.com "financial caregiving startup"
 
 ### G10 — Health & Medical-Cost Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +8 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +8*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - medical bill management fintech serving US families, seed to Series A, European-founded
@@ -4502,8 +4502,8 @@
 - site:betalist.com "fight your medical bills"
 - site:indiehackers.com "fight your medical bills"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="medical billing API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="HSA optimization SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="medical billing API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="HSA optimization SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "medical bill management fintech"
 - site:joinef.com "medical bill management fintech"
@@ -4693,7 +4693,7 @@
 - site:startupblink.com "medical bill management fintech"
 
 ### G11 — Rising-Generation Agent
-*Team: studio | geo: us-market-europe-supply | bonus: +8 | status: empty*
+*Team: studio | geo: us-market-europe-supply | bonus: +8*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - financial literacy AI startup serving US families, seed to Series A, European-founded
@@ -4725,8 +4725,8 @@
 - site:betalist.com "raise financially capable kids"
 - site:indiehackers.com "raise financially capable kids"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="financial coaching agent API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="literacy curriculum SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="financial coaching agent API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="literacy curriculum SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "financial literacy AI startup"
 - site:joinef.com "financial literacy AI startup"
@@ -4915,11 +4915,3786 @@
 - site:angelmatch.com "financial literacy AI startup"
 - site:startupblink.com "financial literacy AI startup"
 
+### G-INCOME — Income & Cashflow
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- income optimization fintech serving US families, seed to Series A, European-founded
+- cashflow management startup serving US families, seed to Series A, European-founded
+- startup that is maximise your take-home pay (US market)
+- early-stage company: smooth your cashflow
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "income optimization fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "income optimization fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "maximise your take-home pay"
+- site:news.ycombinator.com 'Show HN' "maximise your take-home pay"
+- site:betalist.com "maximise your take-home pay"
+- site:indiehackers.com "maximise your take-home pay"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="income data API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "income optimization fintech"
+- site:joinef.com "income optimization fintech"
+- site:antler.co "income optimization fintech"
+- site:mourocapital.com "income optimization fintech"
+- site:plugandplaytechcenter.com "income optimization fintech"
+- site:techstars.com "income optimization fintech"
+- site:seedcamp.com "income optimization fintech"
+- site:notion.vc "income optimization fintech"
+- site:indexventures.com "income optimization fintech"
+- site:balderton.com "income optimization fintech"
+- site:atomico.com "income optimization fintech"
+- site:southparkcommons.com "income optimization fintech"
+- site:beondeck.com "income optimization fintech"
+- site:localglobe.vc "income optimization fintech"
+- site:hoxtonventures.com "income optimization fintech"
+- site:connectventures.co "income optimization fintech"
+- site:adaventures.com "income optimization fintech"
+- site:episode1.com "income optimization fintech"
+- site:taliscapital.com "income optimization fintech"
+- site:stride.vc "income optimization fintech"
+- site:partechpartners.com "income optimization fintech"
+- site:daphni.com "income optimization fintech"
+- site:360cap.vc "income optimization fintech"
+- site:unitedventures.it "income optimization fintech"
+- site:cherry.vc "income optimization fintech"
+- site:earlybird.com "income optimization fintech"
+- site:project-a.com "income optimization fintech"
+- site:hvcapital.com "income optimization fintech"
+- site:lakestar.com "income optimization fintech"
+- site:northzone.com "income optimization fintech"
+- site:creandum.com "income optimization fintech"
+- site:eqtventures.com "income optimization fintech"
+- site:byfounders.vc "income optimization fintech"
+- site:inventure.fi "income optimization fintech"
+- site:frontline.vc "income optimization fintech"
+- site:octopusventures.com "income optimization fintech"
+- site:qedinvestors.com "income optimization fintech"
+- site:ribbitcap.com "income optimization fintech"
+- site:anthemis.com "income optimization fintech"
+- site:augmentum.vc "income optimization fintech"
+- site:speedinvest.com "income optimization fintech"
+- site:mosaicventures.com "income optimization fintech"
+- site:inovo.vc "income optimization fintech"
+- site:otb.vc "income optimization fintech"
+- site:czysta3.vc "income optimization fintech"
+- site:blackpearls.vc "income optimization fintech"
+- site:ffvc.com "income optimization fintech"
+- site:innovationnest.com "income optimization fintech"
+- site:bitspiration.com "income optimization fintech"
+- site:karma.vc "income optimization fintech"
+- site:teraventures.com "income optimization fintech"
+- site:trind.vc "income optimization fintech"
+- site:uavc.eu "income optimization fintech"
+- site:changeventures.com "income optimization fintech"
+- site:practica.lt "income optimization fintech"
+- site:opencirclecapital.com "income optimization fintech"
+- site:credoventures.com "income optimization fintech"
+- site:reflex.capital "income optimization fintech"
+- site:kaya.vc "income optimization fintech"
+- site:jtventures.com "income optimization fintech"
+- site:dayonecapital.com "income optimization fintech"
+- site:hiventures.hu "income optimization fintech"
+- site:earlybird.com "income optimization fintech"
+- site:3tscapital.com "income optimization fintech"
+- site:launchub.com "income optimization fintech"
+- site:11.vc "income optimization fintech"
+- site:catalystromania.com "income optimization fintech"
+- site:earlygame.vc "income optimization fintech"
+- site:sc-ventures.com "income optimization fintech"
+- site:filrougecapital.com "income optimization fintech"
+- site:kfund.vc "income optimization fintech"
+- site:samaipata.vc "income optimization fintech"
+- site:jme.vc "income optimization fintech"
+- site:kiboventures.com "income optimization fintech"
+- site:allironventures.com "income optimization fintech"
+- site:byndvc.com "income optimization fintech"
+- site:faberventures.com "income optimization fintech"
+- site:indicocapital.com "income optimization fintech"
+- site:mustardseedmaze.com "income optimization fintech"
+- site:alliancevc.com "income optimization fintech"
+- site:schibstedventures.com "income optimization fintech"
+- site:hummingbird-vc.com "income optimization fintech"
+- site:volta.ventures "income optimization fintech"
+- site:smartfincapital.com "income optimization fintech"
+- site:curiosityvc.com "income optimization fintech"
+- site:endeit.com "income optimization fintech"
+- site:atlanticbridge.com "income optimization fintech"
+- site:furthrventures.com "income optimization fintech"
+- site:actvc.com "income optimization fintech"
+- site:delta.ie "income optimization fintech"
+- site:ndrc.ie "income optimization fintech"
+- site:exponcapital.com "income optimization fintech"
+- site:encevo.lu "income optimization fintech"
+- site:luxinnovation.lu "income optimization fintech"
+- site:marathon.vc "income optimization fintech"
+- site:venturefriends.vc "income optimization fintech"
+- site:bigpi.vc "income optimization fintech"
+- site:velocity.partners "income optimization fintech"
+- site:genesis-investments.com "income optimization fintech"
+- site:smrk.vc "income optimization fintech"
+- site:roosh.com "income optimization fintech"
+- site:aventurescapital.com "income optimization fintech"
+- site:horizoncapital.ua "income optimization fintech"
+- site:icthub.rs "income optimization fintech"
+- site:stardust.capital "income optimization fintech"
+- site:crowdberry.eu "income optimization fintech"
+- site:neulogy.com "income optimization fintech"
+- site:silicongardens.com "income optimization fintech"
+- site:brunnur.is "income optimization fintech"
+- site:crowberry.is "income optimization fintech"
+- site:frumtak.is "income optimization fintech"
+- site:feelsgood.capital "income optimization fintech"
+- site:33east.com "income optimization fintech"
+- site:zgi.lv "income optimization fintech"
+- site:middlegame.vc "income optimization fintech"
+- site:anamcara.com "income optimization fintech"
+- site:aperture.vc "income optimization fintech"
+- site:smok.vc "income optimization fintech"
+- site:sidventures.com "income optimization fintech"
+- site:1991.vc "income optimization fintech"
+- site:n1.fund "income optimization fintech"
+- site:tilia.vc "income optimization fintech"
+- site:anthemis.com "income optimization fintech"
+- site:wayra.com "income optimization fintech"
+- site:startupwiseguys.com "income optimization fintech"
+- site:sequoiacap.com "income optimization fintech"
+- site:a16z.com "income optimization fintech"
+- site:bvp.com "income optimization fintech"
+- site:foundersfund.com "income optimization fintech"
+- site:insightpartners.com "income optimization fintech"
+- site:innovation.ox.ac.uk "income optimization fintech"
+- site:enterprise.cam.ac.uk "income optimization fintech"
+- site:imperial.ac.uk "income optimization fintech"
+- site:uclb.com "income optimization fintech"
+- site:edinburgh-innovations.ed.ac.uk "income optimization fintech"
+- site:ethz.ch "income optimization fintech"
+- site:epfl-innovationpark.ch "income optimization fintech"
+- site:yesdelft.com "income optimization fintech"
+- site:unternehmertum.de "income optimization fintech"
+- site:karolinskainnovations.ki.se "income optimization fintech"
+- site:startupcenter.aalto.fi "income optimization fintech"
+- site:skylab.dtu.dk "income optimization fintech"
+- site:ucd.ie "income optimization fintech"
+- site:tcd.ie "income optimization fintech"
+- site:spinout.fyi "income optimization fintech"
+- site:taltech.ee "income optimization fintech"
+- site:pw.edu.pl "income optimization fintech"
+- site:agh.edu.pl "income optimization fintech"
+- site:cuip.cuni.cz "income optimization fintech"
+- site:cvut.cz "income optimization fintech"
+- site:bme.hu "income optimization fintech"
+- site:polimi.it "income optimization fintech"
+- site:ie.edu "income optimization fintech"
+- site:tecnico.ulisboa.pt "income optimization fintech"
+- site:slush.org "income optimization fintech"
+- site:websummit.com "income optimization fintech"
+- site:eic.ec.europa.eu "income optimization fintech"
+- site:hello-tomorrow.org "income optimization fintech"
+- site:vivatechnology.com "income optimization fintech"
+- site:thenextweb.com "income optimization fintech"
+- site:techcrunch.com "income optimization fintech"
+- site:f6s.com "income optimization fintech"
+- site:money2020.com "income optimization fintech"
+- site:fintechfutures.com "income optimization fintech"
+- site:latitude59.ee "income optimization fintech"
+- site:wolvessummit.com "income optimization fintech"
+- site:bitsandpretzels.com "income optimization fintech"
+- site:techbbq.dk "income optimization fintech"
+- site:viennaup.com "income optimization fintech"
+- site:southsummit.co "income optimization fintech"
+- site:howtoweb.co "income optimization fintech"
+- site:piratesummit.com "income optimization fintech"
+- site:wellfound.com "income optimization fintech"
+- site:f6s.com "income optimization fintech"
+- site:dealroom.co "income optimization fintech"
+- site:crunchbase.com "income optimization fintech"
+- site:tracxn.com "income optimization fintech"
+- site:beauhurst.com "income optimization fintech"
+- site:pitchbook.com "income optimization fintech"
+- site:seedtable.com "income optimization fintech"
+- site:theorg.com "income optimization fintech"
+- site:startupsmagazine.co.uk "income optimization fintech"
+- site:eu-startups.com "income optimization fintech"
+- site:sifted.eu "income optimization fintech"
+- site:angelmatch.com "income optimization fintech"
+- site:startupblink.com "income optimization fintech"
+
+### G-COMP — Compensation & Equity
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- equity compensation platform serving US families, seed to Series A, European-founded
+- RSU management fintech serving US families, seed to Series A, European-founded
+- startup that is manage your RSUs and options (US market)
+- early-stage company: equity comp planner
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "equity compensation platform" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "equity compensation platform"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "manage your RSUs and options"
+- site:news.ycombinator.com 'Show HN' "manage your RSUs and options"
+- site:betalist.com "manage your RSUs and options"
+- site:indiehackers.com "manage your RSUs and options"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="equity comp API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "equity compensation platform"
+- site:joinef.com "equity compensation platform"
+- site:antler.co "equity compensation platform"
+- site:mourocapital.com "equity compensation platform"
+- site:plugandplaytechcenter.com "equity compensation platform"
+- site:techstars.com "equity compensation platform"
+- site:seedcamp.com "equity compensation platform"
+- site:notion.vc "equity compensation platform"
+- site:indexventures.com "equity compensation platform"
+- site:balderton.com "equity compensation platform"
+- site:atomico.com "equity compensation platform"
+- site:southparkcommons.com "equity compensation platform"
+- site:beondeck.com "equity compensation platform"
+- site:localglobe.vc "equity compensation platform"
+- site:hoxtonventures.com "equity compensation platform"
+- site:connectventures.co "equity compensation platform"
+- site:adaventures.com "equity compensation platform"
+- site:episode1.com "equity compensation platform"
+- site:taliscapital.com "equity compensation platform"
+- site:stride.vc "equity compensation platform"
+- site:partechpartners.com "equity compensation platform"
+- site:daphni.com "equity compensation platform"
+- site:360cap.vc "equity compensation platform"
+- site:unitedventures.it "equity compensation platform"
+- site:cherry.vc "equity compensation platform"
+- site:earlybird.com "equity compensation platform"
+- site:project-a.com "equity compensation platform"
+- site:hvcapital.com "equity compensation platform"
+- site:lakestar.com "equity compensation platform"
+- site:northzone.com "equity compensation platform"
+- site:creandum.com "equity compensation platform"
+- site:eqtventures.com "equity compensation platform"
+- site:byfounders.vc "equity compensation platform"
+- site:inventure.fi "equity compensation platform"
+- site:frontline.vc "equity compensation platform"
+- site:octopusventures.com "equity compensation platform"
+- site:qedinvestors.com "equity compensation platform"
+- site:ribbitcap.com "equity compensation platform"
+- site:anthemis.com "equity compensation platform"
+- site:augmentum.vc "equity compensation platform"
+- site:speedinvest.com "equity compensation platform"
+- site:mosaicventures.com "equity compensation platform"
+- site:inovo.vc "equity compensation platform"
+- site:otb.vc "equity compensation platform"
+- site:czysta3.vc "equity compensation platform"
+- site:blackpearls.vc "equity compensation platform"
+- site:ffvc.com "equity compensation platform"
+- site:innovationnest.com "equity compensation platform"
+- site:bitspiration.com "equity compensation platform"
+- site:karma.vc "equity compensation platform"
+- site:teraventures.com "equity compensation platform"
+- site:trind.vc "equity compensation platform"
+- site:uavc.eu "equity compensation platform"
+- site:changeventures.com "equity compensation platform"
+- site:practica.lt "equity compensation platform"
+- site:opencirclecapital.com "equity compensation platform"
+- site:credoventures.com "equity compensation platform"
+- site:reflex.capital "equity compensation platform"
+- site:kaya.vc "equity compensation platform"
+- site:jtventures.com "equity compensation platform"
+- site:dayonecapital.com "equity compensation platform"
+- site:hiventures.hu "equity compensation platform"
+- site:earlybird.com "equity compensation platform"
+- site:3tscapital.com "equity compensation platform"
+- site:launchub.com "equity compensation platform"
+- site:11.vc "equity compensation platform"
+- site:catalystromania.com "equity compensation platform"
+- site:earlygame.vc "equity compensation platform"
+- site:sc-ventures.com "equity compensation platform"
+- site:filrougecapital.com "equity compensation platform"
+- site:kfund.vc "equity compensation platform"
+- site:samaipata.vc "equity compensation platform"
+- site:jme.vc "equity compensation platform"
+- site:kiboventures.com "equity compensation platform"
+- site:allironventures.com "equity compensation platform"
+- site:byndvc.com "equity compensation platform"
+- site:faberventures.com "equity compensation platform"
+- site:indicocapital.com "equity compensation platform"
+- site:mustardseedmaze.com "equity compensation platform"
+- site:alliancevc.com "equity compensation platform"
+- site:schibstedventures.com "equity compensation platform"
+- site:hummingbird-vc.com "equity compensation platform"
+- site:volta.ventures "equity compensation platform"
+- site:smartfincapital.com "equity compensation platform"
+- site:curiosityvc.com "equity compensation platform"
+- site:endeit.com "equity compensation platform"
+- site:atlanticbridge.com "equity compensation platform"
+- site:furthrventures.com "equity compensation platform"
+- site:actvc.com "equity compensation platform"
+- site:delta.ie "equity compensation platform"
+- site:ndrc.ie "equity compensation platform"
+- site:exponcapital.com "equity compensation platform"
+- site:encevo.lu "equity compensation platform"
+- site:luxinnovation.lu "equity compensation platform"
+- site:marathon.vc "equity compensation platform"
+- site:venturefriends.vc "equity compensation platform"
+- site:bigpi.vc "equity compensation platform"
+- site:velocity.partners "equity compensation platform"
+- site:genesis-investments.com "equity compensation platform"
+- site:smrk.vc "equity compensation platform"
+- site:roosh.com "equity compensation platform"
+- site:aventurescapital.com "equity compensation platform"
+- site:horizoncapital.ua "equity compensation platform"
+- site:icthub.rs "equity compensation platform"
+- site:stardust.capital "equity compensation platform"
+- site:crowdberry.eu "equity compensation platform"
+- site:neulogy.com "equity compensation platform"
+- site:silicongardens.com "equity compensation platform"
+- site:brunnur.is "equity compensation platform"
+- site:crowberry.is "equity compensation platform"
+- site:frumtak.is "equity compensation platform"
+- site:feelsgood.capital "equity compensation platform"
+- site:33east.com "equity compensation platform"
+- site:zgi.lv "equity compensation platform"
+- site:middlegame.vc "equity compensation platform"
+- site:anamcara.com "equity compensation platform"
+- site:aperture.vc "equity compensation platform"
+- site:smok.vc "equity compensation platform"
+- site:sidventures.com "equity compensation platform"
+- site:1991.vc "equity compensation platform"
+- site:n1.fund "equity compensation platform"
+- site:tilia.vc "equity compensation platform"
+- site:anthemis.com "equity compensation platform"
+- site:wayra.com "equity compensation platform"
+- site:startupwiseguys.com "equity compensation platform"
+- site:sequoiacap.com "equity compensation platform"
+- site:a16z.com "equity compensation platform"
+- site:bvp.com "equity compensation platform"
+- site:foundersfund.com "equity compensation platform"
+- site:insightpartners.com "equity compensation platform"
+- site:innovation.ox.ac.uk "equity compensation platform"
+- site:enterprise.cam.ac.uk "equity compensation platform"
+- site:imperial.ac.uk "equity compensation platform"
+- site:uclb.com "equity compensation platform"
+- site:edinburgh-innovations.ed.ac.uk "equity compensation platform"
+- site:ethz.ch "equity compensation platform"
+- site:epfl-innovationpark.ch "equity compensation platform"
+- site:yesdelft.com "equity compensation platform"
+- site:unternehmertum.de "equity compensation platform"
+- site:karolinskainnovations.ki.se "equity compensation platform"
+- site:startupcenter.aalto.fi "equity compensation platform"
+- site:skylab.dtu.dk "equity compensation platform"
+- site:ucd.ie "equity compensation platform"
+- site:tcd.ie "equity compensation platform"
+- site:spinout.fyi "equity compensation platform"
+- site:taltech.ee "equity compensation platform"
+- site:pw.edu.pl "equity compensation platform"
+- site:agh.edu.pl "equity compensation platform"
+- site:cuip.cuni.cz "equity compensation platform"
+- site:cvut.cz "equity compensation platform"
+- site:bme.hu "equity compensation platform"
+- site:polimi.it "equity compensation platform"
+- site:ie.edu "equity compensation platform"
+- site:tecnico.ulisboa.pt "equity compensation platform"
+- site:slush.org "equity compensation platform"
+- site:websummit.com "equity compensation platform"
+- site:eic.ec.europa.eu "equity compensation platform"
+- site:hello-tomorrow.org "equity compensation platform"
+- site:vivatechnology.com "equity compensation platform"
+- site:thenextweb.com "equity compensation platform"
+- site:techcrunch.com "equity compensation platform"
+- site:f6s.com "equity compensation platform"
+- site:money2020.com "equity compensation platform"
+- site:fintechfutures.com "equity compensation platform"
+- site:latitude59.ee "equity compensation platform"
+- site:wolvessummit.com "equity compensation platform"
+- site:bitsandpretzels.com "equity compensation platform"
+- site:techbbq.dk "equity compensation platform"
+- site:viennaup.com "equity compensation platform"
+- site:southsummit.co "equity compensation platform"
+- site:howtoweb.co "equity compensation platform"
+- site:piratesummit.com "equity compensation platform"
+- site:wellfound.com "equity compensation platform"
+- site:f6s.com "equity compensation platform"
+- site:dealroom.co "equity compensation platform"
+- site:crunchbase.com "equity compensation platform"
+- site:tracxn.com "equity compensation platform"
+- site:beauhurst.com "equity compensation platform"
+- site:pitchbook.com "equity compensation platform"
+- site:seedtable.com "equity compensation platform"
+- site:theorg.com "equity compensation platform"
+- site:startupsmagazine.co.uk "equity compensation platform"
+- site:eu-startups.com "equity compensation platform"
+- site:sifted.eu "equity compensation platform"
+- site:angelmatch.com "equity compensation platform"
+- site:startupblink.com "equity compensation platform"
+
+### G-BENEFITS — Benefits Capture
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- employee benefits optimization startup serving US families, seed to Series A, European-founded
+- government benefits navigation fintech serving US families, seed to Series A, European-founded
+- startup that is maximise your benefits (US market)
+- early-stage company: claim every benefit
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "employee benefits optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "employee benefits optimization startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "maximise your benefits"
+- site:news.ycombinator.com 'Show HN' "maximise your benefits"
+- site:betalist.com "maximise your benefits"
+- site:indiehackers.com "maximise your benefits"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="benefits eligibility API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "employee benefits optimization startup"
+- site:joinef.com "employee benefits optimization startup"
+- site:antler.co "employee benefits optimization startup"
+- site:mourocapital.com "employee benefits optimization startup"
+- site:plugandplaytechcenter.com "employee benefits optimization startup"
+- site:techstars.com "employee benefits optimization startup"
+- site:seedcamp.com "employee benefits optimization startup"
+- site:notion.vc "employee benefits optimization startup"
+- site:indexventures.com "employee benefits optimization startup"
+- site:balderton.com "employee benefits optimization startup"
+- site:atomico.com "employee benefits optimization startup"
+- site:southparkcommons.com "employee benefits optimization startup"
+- site:beondeck.com "employee benefits optimization startup"
+- site:localglobe.vc "employee benefits optimization startup"
+- site:hoxtonventures.com "employee benefits optimization startup"
+- site:connectventures.co "employee benefits optimization startup"
+- site:adaventures.com "employee benefits optimization startup"
+- site:episode1.com "employee benefits optimization startup"
+- site:taliscapital.com "employee benefits optimization startup"
+- site:stride.vc "employee benefits optimization startup"
+- site:partechpartners.com "employee benefits optimization startup"
+- site:daphni.com "employee benefits optimization startup"
+- site:360cap.vc "employee benefits optimization startup"
+- site:unitedventures.it "employee benefits optimization startup"
+- site:cherry.vc "employee benefits optimization startup"
+- site:earlybird.com "employee benefits optimization startup"
+- site:project-a.com "employee benefits optimization startup"
+- site:hvcapital.com "employee benefits optimization startup"
+- site:lakestar.com "employee benefits optimization startup"
+- site:northzone.com "employee benefits optimization startup"
+- site:creandum.com "employee benefits optimization startup"
+- site:eqtventures.com "employee benefits optimization startup"
+- site:byfounders.vc "employee benefits optimization startup"
+- site:inventure.fi "employee benefits optimization startup"
+- site:frontline.vc "employee benefits optimization startup"
+- site:octopusventures.com "employee benefits optimization startup"
+- site:qedinvestors.com "employee benefits optimization startup"
+- site:ribbitcap.com "employee benefits optimization startup"
+- site:anthemis.com "employee benefits optimization startup"
+- site:augmentum.vc "employee benefits optimization startup"
+- site:speedinvest.com "employee benefits optimization startup"
+- site:mosaicventures.com "employee benefits optimization startup"
+- site:inovo.vc "employee benefits optimization startup"
+- site:otb.vc "employee benefits optimization startup"
+- site:czysta3.vc "employee benefits optimization startup"
+- site:blackpearls.vc "employee benefits optimization startup"
+- site:ffvc.com "employee benefits optimization startup"
+- site:innovationnest.com "employee benefits optimization startup"
+- site:bitspiration.com "employee benefits optimization startup"
+- site:karma.vc "employee benefits optimization startup"
+- site:teraventures.com "employee benefits optimization startup"
+- site:trind.vc "employee benefits optimization startup"
+- site:uavc.eu "employee benefits optimization startup"
+- site:changeventures.com "employee benefits optimization startup"
+- site:practica.lt "employee benefits optimization startup"
+- site:opencirclecapital.com "employee benefits optimization startup"
+- site:credoventures.com "employee benefits optimization startup"
+- site:reflex.capital "employee benefits optimization startup"
+- site:kaya.vc "employee benefits optimization startup"
+- site:jtventures.com "employee benefits optimization startup"
+- site:dayonecapital.com "employee benefits optimization startup"
+- site:hiventures.hu "employee benefits optimization startup"
+- site:earlybird.com "employee benefits optimization startup"
+- site:3tscapital.com "employee benefits optimization startup"
+- site:launchub.com "employee benefits optimization startup"
+- site:11.vc "employee benefits optimization startup"
+- site:catalystromania.com "employee benefits optimization startup"
+- site:earlygame.vc "employee benefits optimization startup"
+- site:sc-ventures.com "employee benefits optimization startup"
+- site:filrougecapital.com "employee benefits optimization startup"
+- site:kfund.vc "employee benefits optimization startup"
+- site:samaipata.vc "employee benefits optimization startup"
+- site:jme.vc "employee benefits optimization startup"
+- site:kiboventures.com "employee benefits optimization startup"
+- site:allironventures.com "employee benefits optimization startup"
+- site:byndvc.com "employee benefits optimization startup"
+- site:faberventures.com "employee benefits optimization startup"
+- site:indicocapital.com "employee benefits optimization startup"
+- site:mustardseedmaze.com "employee benefits optimization startup"
+- site:alliancevc.com "employee benefits optimization startup"
+- site:schibstedventures.com "employee benefits optimization startup"
+- site:hummingbird-vc.com "employee benefits optimization startup"
+- site:volta.ventures "employee benefits optimization startup"
+- site:smartfincapital.com "employee benefits optimization startup"
+- site:curiosityvc.com "employee benefits optimization startup"
+- site:endeit.com "employee benefits optimization startup"
+- site:atlanticbridge.com "employee benefits optimization startup"
+- site:furthrventures.com "employee benefits optimization startup"
+- site:actvc.com "employee benefits optimization startup"
+- site:delta.ie "employee benefits optimization startup"
+- site:ndrc.ie "employee benefits optimization startup"
+- site:exponcapital.com "employee benefits optimization startup"
+- site:encevo.lu "employee benefits optimization startup"
+- site:luxinnovation.lu "employee benefits optimization startup"
+- site:marathon.vc "employee benefits optimization startup"
+- site:venturefriends.vc "employee benefits optimization startup"
+- site:bigpi.vc "employee benefits optimization startup"
+- site:velocity.partners "employee benefits optimization startup"
+- site:genesis-investments.com "employee benefits optimization startup"
+- site:smrk.vc "employee benefits optimization startup"
+- site:roosh.com "employee benefits optimization startup"
+- site:aventurescapital.com "employee benefits optimization startup"
+- site:horizoncapital.ua "employee benefits optimization startup"
+- site:icthub.rs "employee benefits optimization startup"
+- site:stardust.capital "employee benefits optimization startup"
+- site:crowdberry.eu "employee benefits optimization startup"
+- site:neulogy.com "employee benefits optimization startup"
+- site:silicongardens.com "employee benefits optimization startup"
+- site:brunnur.is "employee benefits optimization startup"
+- site:crowberry.is "employee benefits optimization startup"
+- site:frumtak.is "employee benefits optimization startup"
+- site:feelsgood.capital "employee benefits optimization startup"
+- site:33east.com "employee benefits optimization startup"
+- site:zgi.lv "employee benefits optimization startup"
+- site:middlegame.vc "employee benefits optimization startup"
+- site:anamcara.com "employee benefits optimization startup"
+- site:aperture.vc "employee benefits optimization startup"
+- site:smok.vc "employee benefits optimization startup"
+- site:sidventures.com "employee benefits optimization startup"
+- site:1991.vc "employee benefits optimization startup"
+- site:n1.fund "employee benefits optimization startup"
+- site:tilia.vc "employee benefits optimization startup"
+- site:anthemis.com "employee benefits optimization startup"
+- site:wayra.com "employee benefits optimization startup"
+- site:startupwiseguys.com "employee benefits optimization startup"
+- site:sequoiacap.com "employee benefits optimization startup"
+- site:a16z.com "employee benefits optimization startup"
+- site:bvp.com "employee benefits optimization startup"
+- site:foundersfund.com "employee benefits optimization startup"
+- site:insightpartners.com "employee benefits optimization startup"
+- site:innovation.ox.ac.uk "employee benefits optimization startup"
+- site:enterprise.cam.ac.uk "employee benefits optimization startup"
+- site:imperial.ac.uk "employee benefits optimization startup"
+- site:uclb.com "employee benefits optimization startup"
+- site:edinburgh-innovations.ed.ac.uk "employee benefits optimization startup"
+- site:ethz.ch "employee benefits optimization startup"
+- site:epfl-innovationpark.ch "employee benefits optimization startup"
+- site:yesdelft.com "employee benefits optimization startup"
+- site:unternehmertum.de "employee benefits optimization startup"
+- site:karolinskainnovations.ki.se "employee benefits optimization startup"
+- site:startupcenter.aalto.fi "employee benefits optimization startup"
+- site:skylab.dtu.dk "employee benefits optimization startup"
+- site:ucd.ie "employee benefits optimization startup"
+- site:tcd.ie "employee benefits optimization startup"
+- site:spinout.fyi "employee benefits optimization startup"
+- site:taltech.ee "employee benefits optimization startup"
+- site:pw.edu.pl "employee benefits optimization startup"
+- site:agh.edu.pl "employee benefits optimization startup"
+- site:cuip.cuni.cz "employee benefits optimization startup"
+- site:cvut.cz "employee benefits optimization startup"
+- site:bme.hu "employee benefits optimization startup"
+- site:polimi.it "employee benefits optimization startup"
+- site:ie.edu "employee benefits optimization startup"
+- site:tecnico.ulisboa.pt "employee benefits optimization startup"
+- site:slush.org "employee benefits optimization startup"
+- site:websummit.com "employee benefits optimization startup"
+- site:eic.ec.europa.eu "employee benefits optimization startup"
+- site:hello-tomorrow.org "employee benefits optimization startup"
+- site:vivatechnology.com "employee benefits optimization startup"
+- site:thenextweb.com "employee benefits optimization startup"
+- site:techcrunch.com "employee benefits optimization startup"
+- site:f6s.com "employee benefits optimization startup"
+- site:money2020.com "employee benefits optimization startup"
+- site:fintechfutures.com "employee benefits optimization startup"
+- site:latitude59.ee "employee benefits optimization startup"
+- site:wolvessummit.com "employee benefits optimization startup"
+- site:bitsandpretzels.com "employee benefits optimization startup"
+- site:techbbq.dk "employee benefits optimization startup"
+- site:viennaup.com "employee benefits optimization startup"
+- site:southsummit.co "employee benefits optimization startup"
+- site:howtoweb.co "employee benefits optimization startup"
+- site:piratesummit.com "employee benefits optimization startup"
+- site:wellfound.com "employee benefits optimization startup"
+- site:f6s.com "employee benefits optimization startup"
+- site:dealroom.co "employee benefits optimization startup"
+- site:crunchbase.com "employee benefits optimization startup"
+- site:tracxn.com "employee benefits optimization startup"
+- site:beauhurst.com "employee benefits optimization startup"
+- site:pitchbook.com "employee benefits optimization startup"
+- site:seedtable.com "employee benefits optimization startup"
+- site:theorg.com "employee benefits optimization startup"
+- site:startupsmagazine.co.uk "employee benefits optimization startup"
+- site:eu-startups.com "employee benefits optimization startup"
+- site:sifted.eu "employee benefits optimization startup"
+- site:angelmatch.com "employee benefits optimization startup"
+- site:startupblink.com "employee benefits optimization startup"
+
+### G-CASH — Cash & Yield
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- cash management fintech serving US families, seed to Series A, European-founded
+- high yield savings startup serving US families, seed to Series A, European-founded
+- startup that is put your cash to work (US market)
+- early-stage company: best yield on idle cash
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "cash management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "cash management fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "put your cash to work"
+- site:news.ycombinator.com 'Show HN' "put your cash to work"
+- site:betalist.com "put your cash to work"
+- site:indiehackers.com "put your cash to work"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="cash sweep API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "cash management fintech"
+- site:joinef.com "cash management fintech"
+- site:antler.co "cash management fintech"
+- site:mourocapital.com "cash management fintech"
+- site:plugandplaytechcenter.com "cash management fintech"
+- site:techstars.com "cash management fintech"
+- site:seedcamp.com "cash management fintech"
+- site:notion.vc "cash management fintech"
+- site:indexventures.com "cash management fintech"
+- site:balderton.com "cash management fintech"
+- site:atomico.com "cash management fintech"
+- site:southparkcommons.com "cash management fintech"
+- site:beondeck.com "cash management fintech"
+- site:localglobe.vc "cash management fintech"
+- site:hoxtonventures.com "cash management fintech"
+- site:connectventures.co "cash management fintech"
+- site:adaventures.com "cash management fintech"
+- site:episode1.com "cash management fintech"
+- site:taliscapital.com "cash management fintech"
+- site:stride.vc "cash management fintech"
+- site:partechpartners.com "cash management fintech"
+- site:daphni.com "cash management fintech"
+- site:360cap.vc "cash management fintech"
+- site:unitedventures.it "cash management fintech"
+- site:cherry.vc "cash management fintech"
+- site:earlybird.com "cash management fintech"
+- site:project-a.com "cash management fintech"
+- site:hvcapital.com "cash management fintech"
+- site:lakestar.com "cash management fintech"
+- site:northzone.com "cash management fintech"
+- site:creandum.com "cash management fintech"
+- site:eqtventures.com "cash management fintech"
+- site:byfounders.vc "cash management fintech"
+- site:inventure.fi "cash management fintech"
+- site:frontline.vc "cash management fintech"
+- site:octopusventures.com "cash management fintech"
+- site:qedinvestors.com "cash management fintech"
+- site:ribbitcap.com "cash management fintech"
+- site:anthemis.com "cash management fintech"
+- site:augmentum.vc "cash management fintech"
+- site:speedinvest.com "cash management fintech"
+- site:mosaicventures.com "cash management fintech"
+- site:inovo.vc "cash management fintech"
+- site:otb.vc "cash management fintech"
+- site:czysta3.vc "cash management fintech"
+- site:blackpearls.vc "cash management fintech"
+- site:ffvc.com "cash management fintech"
+- site:innovationnest.com "cash management fintech"
+- site:bitspiration.com "cash management fintech"
+- site:karma.vc "cash management fintech"
+- site:teraventures.com "cash management fintech"
+- site:trind.vc "cash management fintech"
+- site:uavc.eu "cash management fintech"
+- site:changeventures.com "cash management fintech"
+- site:practica.lt "cash management fintech"
+- site:opencirclecapital.com "cash management fintech"
+- site:credoventures.com "cash management fintech"
+- site:reflex.capital "cash management fintech"
+- site:kaya.vc "cash management fintech"
+- site:jtventures.com "cash management fintech"
+- site:dayonecapital.com "cash management fintech"
+- site:hiventures.hu "cash management fintech"
+- site:earlybird.com "cash management fintech"
+- site:3tscapital.com "cash management fintech"
+- site:launchub.com "cash management fintech"
+- site:11.vc "cash management fintech"
+- site:catalystromania.com "cash management fintech"
+- site:earlygame.vc "cash management fintech"
+- site:sc-ventures.com "cash management fintech"
+- site:filrougecapital.com "cash management fintech"
+- site:kfund.vc "cash management fintech"
+- site:samaipata.vc "cash management fintech"
+- site:jme.vc "cash management fintech"
+- site:kiboventures.com "cash management fintech"
+- site:allironventures.com "cash management fintech"
+- site:byndvc.com "cash management fintech"
+- site:faberventures.com "cash management fintech"
+- site:indicocapital.com "cash management fintech"
+- site:mustardseedmaze.com "cash management fintech"
+- site:alliancevc.com "cash management fintech"
+- site:schibstedventures.com "cash management fintech"
+- site:hummingbird-vc.com "cash management fintech"
+- site:volta.ventures "cash management fintech"
+- site:smartfincapital.com "cash management fintech"
+- site:curiosityvc.com "cash management fintech"
+- site:endeit.com "cash management fintech"
+- site:atlanticbridge.com "cash management fintech"
+- site:furthrventures.com "cash management fintech"
+- site:actvc.com "cash management fintech"
+- site:delta.ie "cash management fintech"
+- site:ndrc.ie "cash management fintech"
+- site:exponcapital.com "cash management fintech"
+- site:encevo.lu "cash management fintech"
+- site:luxinnovation.lu "cash management fintech"
+- site:marathon.vc "cash management fintech"
+- site:venturefriends.vc "cash management fintech"
+- site:bigpi.vc "cash management fintech"
+- site:velocity.partners "cash management fintech"
+- site:genesis-investments.com "cash management fintech"
+- site:smrk.vc "cash management fintech"
+- site:roosh.com "cash management fintech"
+- site:aventurescapital.com "cash management fintech"
+- site:horizoncapital.ua "cash management fintech"
+- site:icthub.rs "cash management fintech"
+- site:stardust.capital "cash management fintech"
+- site:crowdberry.eu "cash management fintech"
+- site:neulogy.com "cash management fintech"
+- site:silicongardens.com "cash management fintech"
+- site:brunnur.is "cash management fintech"
+- site:crowberry.is "cash management fintech"
+- site:frumtak.is "cash management fintech"
+- site:feelsgood.capital "cash management fintech"
+- site:33east.com "cash management fintech"
+- site:zgi.lv "cash management fintech"
+- site:middlegame.vc "cash management fintech"
+- site:anamcara.com "cash management fintech"
+- site:aperture.vc "cash management fintech"
+- site:smok.vc "cash management fintech"
+- site:sidventures.com "cash management fintech"
+- site:1991.vc "cash management fintech"
+- site:n1.fund "cash management fintech"
+- site:tilia.vc "cash management fintech"
+- site:anthemis.com "cash management fintech"
+- site:wayra.com "cash management fintech"
+- site:startupwiseguys.com "cash management fintech"
+- site:sequoiacap.com "cash management fintech"
+- site:a16z.com "cash management fintech"
+- site:bvp.com "cash management fintech"
+- site:foundersfund.com "cash management fintech"
+- site:insightpartners.com "cash management fintech"
+- site:innovation.ox.ac.uk "cash management fintech"
+- site:enterprise.cam.ac.uk "cash management fintech"
+- site:imperial.ac.uk "cash management fintech"
+- site:uclb.com "cash management fintech"
+- site:edinburgh-innovations.ed.ac.uk "cash management fintech"
+- site:ethz.ch "cash management fintech"
+- site:epfl-innovationpark.ch "cash management fintech"
+- site:yesdelft.com "cash management fintech"
+- site:unternehmertum.de "cash management fintech"
+- site:karolinskainnovations.ki.se "cash management fintech"
+- site:startupcenter.aalto.fi "cash management fintech"
+- site:skylab.dtu.dk "cash management fintech"
+- site:ucd.ie "cash management fintech"
+- site:tcd.ie "cash management fintech"
+- site:spinout.fyi "cash management fintech"
+- site:taltech.ee "cash management fintech"
+- site:pw.edu.pl "cash management fintech"
+- site:agh.edu.pl "cash management fintech"
+- site:cuip.cuni.cz "cash management fintech"
+- site:cvut.cz "cash management fintech"
+- site:bme.hu "cash management fintech"
+- site:polimi.it "cash management fintech"
+- site:ie.edu "cash management fintech"
+- site:tecnico.ulisboa.pt "cash management fintech"
+- site:slush.org "cash management fintech"
+- site:websummit.com "cash management fintech"
+- site:eic.ec.europa.eu "cash management fintech"
+- site:hello-tomorrow.org "cash management fintech"
+- site:vivatechnology.com "cash management fintech"
+- site:thenextweb.com "cash management fintech"
+- site:techcrunch.com "cash management fintech"
+- site:f6s.com "cash management fintech"
+- site:money2020.com "cash management fintech"
+- site:fintechfutures.com "cash management fintech"
+- site:latitude59.ee "cash management fintech"
+- site:wolvessummit.com "cash management fintech"
+- site:bitsandpretzels.com "cash management fintech"
+- site:techbbq.dk "cash management fintech"
+- site:viennaup.com "cash management fintech"
+- site:southsummit.co "cash management fintech"
+- site:howtoweb.co "cash management fintech"
+- site:piratesummit.com "cash management fintech"
+- site:wellfound.com "cash management fintech"
+- site:f6s.com "cash management fintech"
+- site:dealroom.co "cash management fintech"
+- site:crunchbase.com "cash management fintech"
+- site:tracxn.com "cash management fintech"
+- site:beauhurst.com "cash management fintech"
+- site:pitchbook.com "cash management fintech"
+- site:seedtable.com "cash management fintech"
+- site:theorg.com "cash management fintech"
+- site:startupsmagazine.co.uk "cash management fintech"
+- site:eu-startups.com "cash management fintech"
+- site:sifted.eu "cash management fintech"
+- site:angelmatch.com "cash management fintech"
+- site:startupblink.com "cash management fintech"
+
+### G-LIQUIDITY — Liquidity Timing
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- liquidity planning fintech serving US families, seed to Series A, European-founded
+- cashflow forecasting startup serving US families, seed to Series A, European-founded
+- startup that is never miss a bill or overpay (US market)
+- early-stage company: cash-flow timing app
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "liquidity planning fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "liquidity planning fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "never miss a bill or overpay"
+- site:news.ycombinator.com 'Show HN' "never miss a bill or overpay"
+- site:betalist.com "never miss a bill or overpay"
+- site:indiehackers.com "never miss a bill or overpay"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="cashflow forecasting API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "liquidity planning fintech"
+- site:joinef.com "liquidity planning fintech"
+- site:antler.co "liquidity planning fintech"
+- site:mourocapital.com "liquidity planning fintech"
+- site:plugandplaytechcenter.com "liquidity planning fintech"
+- site:techstars.com "liquidity planning fintech"
+- site:seedcamp.com "liquidity planning fintech"
+- site:notion.vc "liquidity planning fintech"
+- site:indexventures.com "liquidity planning fintech"
+- site:balderton.com "liquidity planning fintech"
+- site:atomico.com "liquidity planning fintech"
+- site:southparkcommons.com "liquidity planning fintech"
+- site:beondeck.com "liquidity planning fintech"
+- site:localglobe.vc "liquidity planning fintech"
+- site:hoxtonventures.com "liquidity planning fintech"
+- site:connectventures.co "liquidity planning fintech"
+- site:adaventures.com "liquidity planning fintech"
+- site:episode1.com "liquidity planning fintech"
+- site:taliscapital.com "liquidity planning fintech"
+- site:stride.vc "liquidity planning fintech"
+- site:partechpartners.com "liquidity planning fintech"
+- site:daphni.com "liquidity planning fintech"
+- site:360cap.vc "liquidity planning fintech"
+- site:unitedventures.it "liquidity planning fintech"
+- site:cherry.vc "liquidity planning fintech"
+- site:earlybird.com "liquidity planning fintech"
+- site:project-a.com "liquidity planning fintech"
+- site:hvcapital.com "liquidity planning fintech"
+- site:lakestar.com "liquidity planning fintech"
+- site:northzone.com "liquidity planning fintech"
+- site:creandum.com "liquidity planning fintech"
+- site:eqtventures.com "liquidity planning fintech"
+- site:byfounders.vc "liquidity planning fintech"
+- site:inventure.fi "liquidity planning fintech"
+- site:frontline.vc "liquidity planning fintech"
+- site:octopusventures.com "liquidity planning fintech"
+- site:qedinvestors.com "liquidity planning fintech"
+- site:ribbitcap.com "liquidity planning fintech"
+- site:anthemis.com "liquidity planning fintech"
+- site:augmentum.vc "liquidity planning fintech"
+- site:speedinvest.com "liquidity planning fintech"
+- site:mosaicventures.com "liquidity planning fintech"
+- site:inovo.vc "liquidity planning fintech"
+- site:otb.vc "liquidity planning fintech"
+- site:czysta3.vc "liquidity planning fintech"
+- site:blackpearls.vc "liquidity planning fintech"
+- site:ffvc.com "liquidity planning fintech"
+- site:innovationnest.com "liquidity planning fintech"
+- site:bitspiration.com "liquidity planning fintech"
+- site:karma.vc "liquidity planning fintech"
+- site:teraventures.com "liquidity planning fintech"
+- site:trind.vc "liquidity planning fintech"
+- site:uavc.eu "liquidity planning fintech"
+- site:changeventures.com "liquidity planning fintech"
+- site:practica.lt "liquidity planning fintech"
+- site:opencirclecapital.com "liquidity planning fintech"
+- site:credoventures.com "liquidity planning fintech"
+- site:reflex.capital "liquidity planning fintech"
+- site:kaya.vc "liquidity planning fintech"
+- site:jtventures.com "liquidity planning fintech"
+- site:dayonecapital.com "liquidity planning fintech"
+- site:hiventures.hu "liquidity planning fintech"
+- site:earlybird.com "liquidity planning fintech"
+- site:3tscapital.com "liquidity planning fintech"
+- site:launchub.com "liquidity planning fintech"
+- site:11.vc "liquidity planning fintech"
+- site:catalystromania.com "liquidity planning fintech"
+- site:earlygame.vc "liquidity planning fintech"
+- site:sc-ventures.com "liquidity planning fintech"
+- site:filrougecapital.com "liquidity planning fintech"
+- site:kfund.vc "liquidity planning fintech"
+- site:samaipata.vc "liquidity planning fintech"
+- site:jme.vc "liquidity planning fintech"
+- site:kiboventures.com "liquidity planning fintech"
+- site:allironventures.com "liquidity planning fintech"
+- site:byndvc.com "liquidity planning fintech"
+- site:faberventures.com "liquidity planning fintech"
+- site:indicocapital.com "liquidity planning fintech"
+- site:mustardseedmaze.com "liquidity planning fintech"
+- site:alliancevc.com "liquidity planning fintech"
+- site:schibstedventures.com "liquidity planning fintech"
+- site:hummingbird-vc.com "liquidity planning fintech"
+- site:volta.ventures "liquidity planning fintech"
+- site:smartfincapital.com "liquidity planning fintech"
+- site:curiosityvc.com "liquidity planning fintech"
+- site:endeit.com "liquidity planning fintech"
+- site:atlanticbridge.com "liquidity planning fintech"
+- site:furthrventures.com "liquidity planning fintech"
+- site:actvc.com "liquidity planning fintech"
+- site:delta.ie "liquidity planning fintech"
+- site:ndrc.ie "liquidity planning fintech"
+- site:exponcapital.com "liquidity planning fintech"
+- site:encevo.lu "liquidity planning fintech"
+- site:luxinnovation.lu "liquidity planning fintech"
+- site:marathon.vc "liquidity planning fintech"
+- site:venturefriends.vc "liquidity planning fintech"
+- site:bigpi.vc "liquidity planning fintech"
+- site:velocity.partners "liquidity planning fintech"
+- site:genesis-investments.com "liquidity planning fintech"
+- site:smrk.vc "liquidity planning fintech"
+- site:roosh.com "liquidity planning fintech"
+- site:aventurescapital.com "liquidity planning fintech"
+- site:horizoncapital.ua "liquidity planning fintech"
+- site:icthub.rs "liquidity planning fintech"
+- site:stardust.capital "liquidity planning fintech"
+- site:crowdberry.eu "liquidity planning fintech"
+- site:neulogy.com "liquidity planning fintech"
+- site:silicongardens.com "liquidity planning fintech"
+- site:brunnur.is "liquidity planning fintech"
+- site:crowberry.is "liquidity planning fintech"
+- site:frumtak.is "liquidity planning fintech"
+- site:feelsgood.capital "liquidity planning fintech"
+- site:33east.com "liquidity planning fintech"
+- site:zgi.lv "liquidity planning fintech"
+- site:middlegame.vc "liquidity planning fintech"
+- site:anamcara.com "liquidity planning fintech"
+- site:aperture.vc "liquidity planning fintech"
+- site:smok.vc "liquidity planning fintech"
+- site:sidventures.com "liquidity planning fintech"
+- site:1991.vc "liquidity planning fintech"
+- site:n1.fund "liquidity planning fintech"
+- site:tilia.vc "liquidity planning fintech"
+- site:anthemis.com "liquidity planning fintech"
+- site:wayra.com "liquidity planning fintech"
+- site:startupwiseguys.com "liquidity planning fintech"
+- site:sequoiacap.com "liquidity planning fintech"
+- site:a16z.com "liquidity planning fintech"
+- site:bvp.com "liquidity planning fintech"
+- site:foundersfund.com "liquidity planning fintech"
+- site:insightpartners.com "liquidity planning fintech"
+- site:innovation.ox.ac.uk "liquidity planning fintech"
+- site:enterprise.cam.ac.uk "liquidity planning fintech"
+- site:imperial.ac.uk "liquidity planning fintech"
+- site:uclb.com "liquidity planning fintech"
+- site:edinburgh-innovations.ed.ac.uk "liquidity planning fintech"
+- site:ethz.ch "liquidity planning fintech"
+- site:epfl-innovationpark.ch "liquidity planning fintech"
+- site:yesdelft.com "liquidity planning fintech"
+- site:unternehmertum.de "liquidity planning fintech"
+- site:karolinskainnovations.ki.se "liquidity planning fintech"
+- site:startupcenter.aalto.fi "liquidity planning fintech"
+- site:skylab.dtu.dk "liquidity planning fintech"
+- site:ucd.ie "liquidity planning fintech"
+- site:tcd.ie "liquidity planning fintech"
+- site:spinout.fyi "liquidity planning fintech"
+- site:taltech.ee "liquidity planning fintech"
+- site:pw.edu.pl "liquidity planning fintech"
+- site:agh.edu.pl "liquidity planning fintech"
+- site:cuip.cuni.cz "liquidity planning fintech"
+- site:cvut.cz "liquidity planning fintech"
+- site:bme.hu "liquidity planning fintech"
+- site:polimi.it "liquidity planning fintech"
+- site:ie.edu "liquidity planning fintech"
+- site:tecnico.ulisboa.pt "liquidity planning fintech"
+- site:slush.org "liquidity planning fintech"
+- site:websummit.com "liquidity planning fintech"
+- site:eic.ec.europa.eu "liquidity planning fintech"
+- site:hello-tomorrow.org "liquidity planning fintech"
+- site:vivatechnology.com "liquidity planning fintech"
+- site:thenextweb.com "liquidity planning fintech"
+- site:techcrunch.com "liquidity planning fintech"
+- site:f6s.com "liquidity planning fintech"
+- site:money2020.com "liquidity planning fintech"
+- site:fintechfutures.com "liquidity planning fintech"
+- site:latitude59.ee "liquidity planning fintech"
+- site:wolvessummit.com "liquidity planning fintech"
+- site:bitsandpretzels.com "liquidity planning fintech"
+- site:techbbq.dk "liquidity planning fintech"
+- site:viennaup.com "liquidity planning fintech"
+- site:southsummit.co "liquidity planning fintech"
+- site:howtoweb.co "liquidity planning fintech"
+- site:piratesummit.com "liquidity planning fintech"
+- site:wellfound.com "liquidity planning fintech"
+- site:f6s.com "liquidity planning fintech"
+- site:dealroom.co "liquidity planning fintech"
+- site:crunchbase.com "liquidity planning fintech"
+- site:tracxn.com "liquidity planning fintech"
+- site:beauhurst.com "liquidity planning fintech"
+- site:pitchbook.com "liquidity planning fintech"
+- site:seedtable.com "liquidity planning fintech"
+- site:theorg.com "liquidity planning fintech"
+- site:startupsmagazine.co.uk "liquidity planning fintech"
+- site:eu-startups.com "liquidity planning fintech"
+- site:sifted.eu "liquidity planning fintech"
+- site:angelmatch.com "liquidity planning fintech"
+- site:startupblink.com "liquidity planning fintech"
+
+### G-DEPOSIT — Deposit Optimisation & Buffer
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- deposit management fintech serving US families, seed to Series A, European-founded
+- FDIC coverage optimization startup serving US families, seed to Series A, European-founded
+- startup that is maximise FDIC coverage (US market)
+- early-stage company: right-size your emergency fund
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "deposit management fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "deposit management fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "maximise FDIC coverage"
+- site:news.ycombinator.com 'Show HN' "maximise FDIC coverage"
+- site:betalist.com "maximise FDIC coverage"
+- site:indiehackers.com "maximise FDIC coverage"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="deposit network API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "deposit management fintech"
+- site:joinef.com "deposit management fintech"
+- site:antler.co "deposit management fintech"
+- site:mourocapital.com "deposit management fintech"
+- site:plugandplaytechcenter.com "deposit management fintech"
+- site:techstars.com "deposit management fintech"
+- site:seedcamp.com "deposit management fintech"
+- site:notion.vc "deposit management fintech"
+- site:indexventures.com "deposit management fintech"
+- site:balderton.com "deposit management fintech"
+- site:atomico.com "deposit management fintech"
+- site:southparkcommons.com "deposit management fintech"
+- site:beondeck.com "deposit management fintech"
+- site:localglobe.vc "deposit management fintech"
+- site:hoxtonventures.com "deposit management fintech"
+- site:connectventures.co "deposit management fintech"
+- site:adaventures.com "deposit management fintech"
+- site:episode1.com "deposit management fintech"
+- site:taliscapital.com "deposit management fintech"
+- site:stride.vc "deposit management fintech"
+- site:partechpartners.com "deposit management fintech"
+- site:daphni.com "deposit management fintech"
+- site:360cap.vc "deposit management fintech"
+- site:unitedventures.it "deposit management fintech"
+- site:cherry.vc "deposit management fintech"
+- site:earlybird.com "deposit management fintech"
+- site:project-a.com "deposit management fintech"
+- site:hvcapital.com "deposit management fintech"
+- site:lakestar.com "deposit management fintech"
+- site:northzone.com "deposit management fintech"
+- site:creandum.com "deposit management fintech"
+- site:eqtventures.com "deposit management fintech"
+- site:byfounders.vc "deposit management fintech"
+- site:inventure.fi "deposit management fintech"
+- site:frontline.vc "deposit management fintech"
+- site:octopusventures.com "deposit management fintech"
+- site:qedinvestors.com "deposit management fintech"
+- site:ribbitcap.com "deposit management fintech"
+- site:anthemis.com "deposit management fintech"
+- site:augmentum.vc "deposit management fintech"
+- site:speedinvest.com "deposit management fintech"
+- site:mosaicventures.com "deposit management fintech"
+- site:inovo.vc "deposit management fintech"
+- site:otb.vc "deposit management fintech"
+- site:czysta3.vc "deposit management fintech"
+- site:blackpearls.vc "deposit management fintech"
+- site:ffvc.com "deposit management fintech"
+- site:innovationnest.com "deposit management fintech"
+- site:bitspiration.com "deposit management fintech"
+- site:karma.vc "deposit management fintech"
+- site:teraventures.com "deposit management fintech"
+- site:trind.vc "deposit management fintech"
+- site:uavc.eu "deposit management fintech"
+- site:changeventures.com "deposit management fintech"
+- site:practica.lt "deposit management fintech"
+- site:opencirclecapital.com "deposit management fintech"
+- site:credoventures.com "deposit management fintech"
+- site:reflex.capital "deposit management fintech"
+- site:kaya.vc "deposit management fintech"
+- site:jtventures.com "deposit management fintech"
+- site:dayonecapital.com "deposit management fintech"
+- site:hiventures.hu "deposit management fintech"
+- site:earlybird.com "deposit management fintech"
+- site:3tscapital.com "deposit management fintech"
+- site:launchub.com "deposit management fintech"
+- site:11.vc "deposit management fintech"
+- site:catalystromania.com "deposit management fintech"
+- site:earlygame.vc "deposit management fintech"
+- site:sc-ventures.com "deposit management fintech"
+- site:filrougecapital.com "deposit management fintech"
+- site:kfund.vc "deposit management fintech"
+- site:samaipata.vc "deposit management fintech"
+- site:jme.vc "deposit management fintech"
+- site:kiboventures.com "deposit management fintech"
+- site:allironventures.com "deposit management fintech"
+- site:byndvc.com "deposit management fintech"
+- site:faberventures.com "deposit management fintech"
+- site:indicocapital.com "deposit management fintech"
+- site:mustardseedmaze.com "deposit management fintech"
+- site:alliancevc.com "deposit management fintech"
+- site:schibstedventures.com "deposit management fintech"
+- site:hummingbird-vc.com "deposit management fintech"
+- site:volta.ventures "deposit management fintech"
+- site:smartfincapital.com "deposit management fintech"
+- site:curiosityvc.com "deposit management fintech"
+- site:endeit.com "deposit management fintech"
+- site:atlanticbridge.com "deposit management fintech"
+- site:furthrventures.com "deposit management fintech"
+- site:actvc.com "deposit management fintech"
+- site:delta.ie "deposit management fintech"
+- site:ndrc.ie "deposit management fintech"
+- site:exponcapital.com "deposit management fintech"
+- site:encevo.lu "deposit management fintech"
+- site:luxinnovation.lu "deposit management fintech"
+- site:marathon.vc "deposit management fintech"
+- site:venturefriends.vc "deposit management fintech"
+- site:bigpi.vc "deposit management fintech"
+- site:velocity.partners "deposit management fintech"
+- site:genesis-investments.com "deposit management fintech"
+- site:smrk.vc "deposit management fintech"
+- site:roosh.com "deposit management fintech"
+- site:aventurescapital.com "deposit management fintech"
+- site:horizoncapital.ua "deposit management fintech"
+- site:icthub.rs "deposit management fintech"
+- site:stardust.capital "deposit management fintech"
+- site:crowdberry.eu "deposit management fintech"
+- site:neulogy.com "deposit management fintech"
+- site:silicongardens.com "deposit management fintech"
+- site:brunnur.is "deposit management fintech"
+- site:crowberry.is "deposit management fintech"
+- site:frumtak.is "deposit management fintech"
+- site:feelsgood.capital "deposit management fintech"
+- site:33east.com "deposit management fintech"
+- site:zgi.lv "deposit management fintech"
+- site:middlegame.vc "deposit management fintech"
+- site:anamcara.com "deposit management fintech"
+- site:aperture.vc "deposit management fintech"
+- site:smok.vc "deposit management fintech"
+- site:sidventures.com "deposit management fintech"
+- site:1991.vc "deposit management fintech"
+- site:n1.fund "deposit management fintech"
+- site:tilia.vc "deposit management fintech"
+- site:anthemis.com "deposit management fintech"
+- site:wayra.com "deposit management fintech"
+- site:startupwiseguys.com "deposit management fintech"
+- site:sequoiacap.com "deposit management fintech"
+- site:a16z.com "deposit management fintech"
+- site:bvp.com "deposit management fintech"
+- site:foundersfund.com "deposit management fintech"
+- site:insightpartners.com "deposit management fintech"
+- site:innovation.ox.ac.uk "deposit management fintech"
+- site:enterprise.cam.ac.uk "deposit management fintech"
+- site:imperial.ac.uk "deposit management fintech"
+- site:uclb.com "deposit management fintech"
+- site:edinburgh-innovations.ed.ac.uk "deposit management fintech"
+- site:ethz.ch "deposit management fintech"
+- site:epfl-innovationpark.ch "deposit management fintech"
+- site:yesdelft.com "deposit management fintech"
+- site:unternehmertum.de "deposit management fintech"
+- site:karolinskainnovations.ki.se "deposit management fintech"
+- site:startupcenter.aalto.fi "deposit management fintech"
+- site:skylab.dtu.dk "deposit management fintech"
+- site:ucd.ie "deposit management fintech"
+- site:tcd.ie "deposit management fintech"
+- site:spinout.fyi "deposit management fintech"
+- site:taltech.ee "deposit management fintech"
+- site:pw.edu.pl "deposit management fintech"
+- site:agh.edu.pl "deposit management fintech"
+- site:cuip.cuni.cz "deposit management fintech"
+- site:cvut.cz "deposit management fintech"
+- site:bme.hu "deposit management fintech"
+- site:polimi.it "deposit management fintech"
+- site:ie.edu "deposit management fintech"
+- site:tecnico.ulisboa.pt "deposit management fintech"
+- site:slush.org "deposit management fintech"
+- site:websummit.com "deposit management fintech"
+- site:eic.ec.europa.eu "deposit management fintech"
+- site:hello-tomorrow.org "deposit management fintech"
+- site:vivatechnology.com "deposit management fintech"
+- site:thenextweb.com "deposit management fintech"
+- site:techcrunch.com "deposit management fintech"
+- site:f6s.com "deposit management fintech"
+- site:money2020.com "deposit management fintech"
+- site:fintechfutures.com "deposit management fintech"
+- site:latitude59.ee "deposit management fintech"
+- site:wolvessummit.com "deposit management fintech"
+- site:bitsandpretzels.com "deposit management fintech"
+- site:techbbq.dk "deposit management fintech"
+- site:viennaup.com "deposit management fintech"
+- site:southsummit.co "deposit management fintech"
+- site:howtoweb.co "deposit management fintech"
+- site:piratesummit.com "deposit management fintech"
+- site:wellfound.com "deposit management fintech"
+- site:f6s.com "deposit management fintech"
+- site:dealroom.co "deposit management fintech"
+- site:crunchbase.com "deposit management fintech"
+- site:tracxn.com "deposit management fintech"
+- site:beauhurst.com "deposit management fintech"
+- site:pitchbook.com "deposit management fintech"
+- site:seedtable.com "deposit management fintech"
+- site:theorg.com "deposit management fintech"
+- site:startupsmagazine.co.uk "deposit management fintech"
+- site:eu-startups.com "deposit management fintech"
+- site:sifted.eu "deposit management fintech"
+- site:angelmatch.com "deposit management fintech"
+- site:startupblink.com "deposit management fintech"
+
+### G-LOCATION — Asset Location
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- asset location optimization startup serving US families, seed to Series A, European-founded
+- tax-efficient investing fintech serving US families, seed to Series A, European-founded
+- startup that is put assets in the right account (US market)
+- early-stage company: asset location optimizer
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "asset location optimization startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "asset location optimization startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "put assets in the right account"
+- site:news.ycombinator.com 'Show HN' "put assets in the right account"
+- site:betalist.com "put assets in the right account"
+- site:indiehackers.com "put assets in the right account"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="asset location API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "asset location optimization startup"
+- site:joinef.com "asset location optimization startup"
+- site:antler.co "asset location optimization startup"
+- site:mourocapital.com "asset location optimization startup"
+- site:plugandplaytechcenter.com "asset location optimization startup"
+- site:techstars.com "asset location optimization startup"
+- site:seedcamp.com "asset location optimization startup"
+- site:notion.vc "asset location optimization startup"
+- site:indexventures.com "asset location optimization startup"
+- site:balderton.com "asset location optimization startup"
+- site:atomico.com "asset location optimization startup"
+- site:southparkcommons.com "asset location optimization startup"
+- site:beondeck.com "asset location optimization startup"
+- site:localglobe.vc "asset location optimization startup"
+- site:hoxtonventures.com "asset location optimization startup"
+- site:connectventures.co "asset location optimization startup"
+- site:adaventures.com "asset location optimization startup"
+- site:episode1.com "asset location optimization startup"
+- site:taliscapital.com "asset location optimization startup"
+- site:stride.vc "asset location optimization startup"
+- site:partechpartners.com "asset location optimization startup"
+- site:daphni.com "asset location optimization startup"
+- site:360cap.vc "asset location optimization startup"
+- site:unitedventures.it "asset location optimization startup"
+- site:cherry.vc "asset location optimization startup"
+- site:earlybird.com "asset location optimization startup"
+- site:project-a.com "asset location optimization startup"
+- site:hvcapital.com "asset location optimization startup"
+- site:lakestar.com "asset location optimization startup"
+- site:northzone.com "asset location optimization startup"
+- site:creandum.com "asset location optimization startup"
+- site:eqtventures.com "asset location optimization startup"
+- site:byfounders.vc "asset location optimization startup"
+- site:inventure.fi "asset location optimization startup"
+- site:frontline.vc "asset location optimization startup"
+- site:octopusventures.com "asset location optimization startup"
+- site:qedinvestors.com "asset location optimization startup"
+- site:ribbitcap.com "asset location optimization startup"
+- site:anthemis.com "asset location optimization startup"
+- site:augmentum.vc "asset location optimization startup"
+- site:speedinvest.com "asset location optimization startup"
+- site:mosaicventures.com "asset location optimization startup"
+- site:inovo.vc "asset location optimization startup"
+- site:otb.vc "asset location optimization startup"
+- site:czysta3.vc "asset location optimization startup"
+- site:blackpearls.vc "asset location optimization startup"
+- site:ffvc.com "asset location optimization startup"
+- site:innovationnest.com "asset location optimization startup"
+- site:bitspiration.com "asset location optimization startup"
+- site:karma.vc "asset location optimization startup"
+- site:teraventures.com "asset location optimization startup"
+- site:trind.vc "asset location optimization startup"
+- site:uavc.eu "asset location optimization startup"
+- site:changeventures.com "asset location optimization startup"
+- site:practica.lt "asset location optimization startup"
+- site:opencirclecapital.com "asset location optimization startup"
+- site:credoventures.com "asset location optimization startup"
+- site:reflex.capital "asset location optimization startup"
+- site:kaya.vc "asset location optimization startup"
+- site:jtventures.com "asset location optimization startup"
+- site:dayonecapital.com "asset location optimization startup"
+- site:hiventures.hu "asset location optimization startup"
+- site:earlybird.com "asset location optimization startup"
+- site:3tscapital.com "asset location optimization startup"
+- site:launchub.com "asset location optimization startup"
+- site:11.vc "asset location optimization startup"
+- site:catalystromania.com "asset location optimization startup"
+- site:earlygame.vc "asset location optimization startup"
+- site:sc-ventures.com "asset location optimization startup"
+- site:filrougecapital.com "asset location optimization startup"
+- site:kfund.vc "asset location optimization startup"
+- site:samaipata.vc "asset location optimization startup"
+- site:jme.vc "asset location optimization startup"
+- site:kiboventures.com "asset location optimization startup"
+- site:allironventures.com "asset location optimization startup"
+- site:byndvc.com "asset location optimization startup"
+- site:faberventures.com "asset location optimization startup"
+- site:indicocapital.com "asset location optimization startup"
+- site:mustardseedmaze.com "asset location optimization startup"
+- site:alliancevc.com "asset location optimization startup"
+- site:schibstedventures.com "asset location optimization startup"
+- site:hummingbird-vc.com "asset location optimization startup"
+- site:volta.ventures "asset location optimization startup"
+- site:smartfincapital.com "asset location optimization startup"
+- site:curiosityvc.com "asset location optimization startup"
+- site:endeit.com "asset location optimization startup"
+- site:atlanticbridge.com "asset location optimization startup"
+- site:furthrventures.com "asset location optimization startup"
+- site:actvc.com "asset location optimization startup"
+- site:delta.ie "asset location optimization startup"
+- site:ndrc.ie "asset location optimization startup"
+- site:exponcapital.com "asset location optimization startup"
+- site:encevo.lu "asset location optimization startup"
+- site:luxinnovation.lu "asset location optimization startup"
+- site:marathon.vc "asset location optimization startup"
+- site:venturefriends.vc "asset location optimization startup"
+- site:bigpi.vc "asset location optimization startup"
+- site:velocity.partners "asset location optimization startup"
+- site:genesis-investments.com "asset location optimization startup"
+- site:smrk.vc "asset location optimization startup"
+- site:roosh.com "asset location optimization startup"
+- site:aventurescapital.com "asset location optimization startup"
+- site:horizoncapital.ua "asset location optimization startup"
+- site:icthub.rs "asset location optimization startup"
+- site:stardust.capital "asset location optimization startup"
+- site:crowdberry.eu "asset location optimization startup"
+- site:neulogy.com "asset location optimization startup"
+- site:silicongardens.com "asset location optimization startup"
+- site:brunnur.is "asset location optimization startup"
+- site:crowberry.is "asset location optimization startup"
+- site:frumtak.is "asset location optimization startup"
+- site:feelsgood.capital "asset location optimization startup"
+- site:33east.com "asset location optimization startup"
+- site:zgi.lv "asset location optimization startup"
+- site:middlegame.vc "asset location optimization startup"
+- site:anamcara.com "asset location optimization startup"
+- site:aperture.vc "asset location optimization startup"
+- site:smok.vc "asset location optimization startup"
+- site:sidventures.com "asset location optimization startup"
+- site:1991.vc "asset location optimization startup"
+- site:n1.fund "asset location optimization startup"
+- site:tilia.vc "asset location optimization startup"
+- site:anthemis.com "asset location optimization startup"
+- site:wayra.com "asset location optimization startup"
+- site:startupwiseguys.com "asset location optimization startup"
+- site:sequoiacap.com "asset location optimization startup"
+- site:a16z.com "asset location optimization startup"
+- site:bvp.com "asset location optimization startup"
+- site:foundersfund.com "asset location optimization startup"
+- site:insightpartners.com "asset location optimization startup"
+- site:innovation.ox.ac.uk "asset location optimization startup"
+- site:enterprise.cam.ac.uk "asset location optimization startup"
+- site:imperial.ac.uk "asset location optimization startup"
+- site:uclb.com "asset location optimization startup"
+- site:edinburgh-innovations.ed.ac.uk "asset location optimization startup"
+- site:ethz.ch "asset location optimization startup"
+- site:epfl-innovationpark.ch "asset location optimization startup"
+- site:yesdelft.com "asset location optimization startup"
+- site:unternehmertum.de "asset location optimization startup"
+- site:karolinskainnovations.ki.se "asset location optimization startup"
+- site:startupcenter.aalto.fi "asset location optimization startup"
+- site:skylab.dtu.dk "asset location optimization startup"
+- site:ucd.ie "asset location optimization startup"
+- site:tcd.ie "asset location optimization startup"
+- site:spinout.fyi "asset location optimization startup"
+- site:taltech.ee "asset location optimization startup"
+- site:pw.edu.pl "asset location optimization startup"
+- site:agh.edu.pl "asset location optimization startup"
+- site:cuip.cuni.cz "asset location optimization startup"
+- site:cvut.cz "asset location optimization startup"
+- site:bme.hu "asset location optimization startup"
+- site:polimi.it "asset location optimization startup"
+- site:ie.edu "asset location optimization startup"
+- site:tecnico.ulisboa.pt "asset location optimization startup"
+- site:slush.org "asset location optimization startup"
+- site:websummit.com "asset location optimization startup"
+- site:eic.ec.europa.eu "asset location optimization startup"
+- site:hello-tomorrow.org "asset location optimization startup"
+- site:vivatechnology.com "asset location optimization startup"
+- site:thenextweb.com "asset location optimization startup"
+- site:techcrunch.com "asset location optimization startup"
+- site:f6s.com "asset location optimization startup"
+- site:money2020.com "asset location optimization startup"
+- site:fintechfutures.com "asset location optimization startup"
+- site:latitude59.ee "asset location optimization startup"
+- site:wolvessummit.com "asset location optimization startup"
+- site:bitsandpretzels.com "asset location optimization startup"
+- site:techbbq.dk "asset location optimization startup"
+- site:viennaup.com "asset location optimization startup"
+- site:southsummit.co "asset location optimization startup"
+- site:howtoweb.co "asset location optimization startup"
+- site:piratesummit.com "asset location optimization startup"
+- site:wellfound.com "asset location optimization startup"
+- site:f6s.com "asset location optimization startup"
+- site:dealroom.co "asset location optimization startup"
+- site:crunchbase.com "asset location optimization startup"
+- site:tracxn.com "asset location optimization startup"
+- site:beauhurst.com "asset location optimization startup"
+- site:pitchbook.com "asset location optimization startup"
+- site:seedtable.com "asset location optimization startup"
+- site:theorg.com "asset location optimization startup"
+- site:startupsmagazine.co.uk "asset location optimization startup"
+- site:eu-startups.com "asset location optimization startup"
+- site:sifted.eu "asset location optimization startup"
+- site:angelmatch.com "asset location optimization startup"
+- site:startupblink.com "asset location optimization startup"
+
+### G-GLIDEPATH — Goal-Linked Investing
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- goal based investing startup serving US families, seed to Series A, European-founded
+- glidepath investing fintech serving US families, seed to Series A, European-founded
+- startup that is invest for each goal (US market)
+- early-stage company: goal-based portfolios
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "goal based investing startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "goal based investing startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "invest for each goal"
+- site:news.ycombinator.com 'Show HN' "invest for each goal"
+- site:betalist.com "invest for each goal"
+- site:indiehackers.com "invest for each goal"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="goal investing API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "goal based investing startup"
+- site:joinef.com "goal based investing startup"
+- site:antler.co "goal based investing startup"
+- site:mourocapital.com "goal based investing startup"
+- site:plugandplaytechcenter.com "goal based investing startup"
+- site:techstars.com "goal based investing startup"
+- site:seedcamp.com "goal based investing startup"
+- site:notion.vc "goal based investing startup"
+- site:indexventures.com "goal based investing startup"
+- site:balderton.com "goal based investing startup"
+- site:atomico.com "goal based investing startup"
+- site:southparkcommons.com "goal based investing startup"
+- site:beondeck.com "goal based investing startup"
+- site:localglobe.vc "goal based investing startup"
+- site:hoxtonventures.com "goal based investing startup"
+- site:connectventures.co "goal based investing startup"
+- site:adaventures.com "goal based investing startup"
+- site:episode1.com "goal based investing startup"
+- site:taliscapital.com "goal based investing startup"
+- site:stride.vc "goal based investing startup"
+- site:partechpartners.com "goal based investing startup"
+- site:daphni.com "goal based investing startup"
+- site:360cap.vc "goal based investing startup"
+- site:unitedventures.it "goal based investing startup"
+- site:cherry.vc "goal based investing startup"
+- site:earlybird.com "goal based investing startup"
+- site:project-a.com "goal based investing startup"
+- site:hvcapital.com "goal based investing startup"
+- site:lakestar.com "goal based investing startup"
+- site:northzone.com "goal based investing startup"
+- site:creandum.com "goal based investing startup"
+- site:eqtventures.com "goal based investing startup"
+- site:byfounders.vc "goal based investing startup"
+- site:inventure.fi "goal based investing startup"
+- site:frontline.vc "goal based investing startup"
+- site:octopusventures.com "goal based investing startup"
+- site:qedinvestors.com "goal based investing startup"
+- site:ribbitcap.com "goal based investing startup"
+- site:anthemis.com "goal based investing startup"
+- site:augmentum.vc "goal based investing startup"
+- site:speedinvest.com "goal based investing startup"
+- site:mosaicventures.com "goal based investing startup"
+- site:inovo.vc "goal based investing startup"
+- site:otb.vc "goal based investing startup"
+- site:czysta3.vc "goal based investing startup"
+- site:blackpearls.vc "goal based investing startup"
+- site:ffvc.com "goal based investing startup"
+- site:innovationnest.com "goal based investing startup"
+- site:bitspiration.com "goal based investing startup"
+- site:karma.vc "goal based investing startup"
+- site:teraventures.com "goal based investing startup"
+- site:trind.vc "goal based investing startup"
+- site:uavc.eu "goal based investing startup"
+- site:changeventures.com "goal based investing startup"
+- site:practica.lt "goal based investing startup"
+- site:opencirclecapital.com "goal based investing startup"
+- site:credoventures.com "goal based investing startup"
+- site:reflex.capital "goal based investing startup"
+- site:kaya.vc "goal based investing startup"
+- site:jtventures.com "goal based investing startup"
+- site:dayonecapital.com "goal based investing startup"
+- site:hiventures.hu "goal based investing startup"
+- site:earlybird.com "goal based investing startup"
+- site:3tscapital.com "goal based investing startup"
+- site:launchub.com "goal based investing startup"
+- site:11.vc "goal based investing startup"
+- site:catalystromania.com "goal based investing startup"
+- site:earlygame.vc "goal based investing startup"
+- site:sc-ventures.com "goal based investing startup"
+- site:filrougecapital.com "goal based investing startup"
+- site:kfund.vc "goal based investing startup"
+- site:samaipata.vc "goal based investing startup"
+- site:jme.vc "goal based investing startup"
+- site:kiboventures.com "goal based investing startup"
+- site:allironventures.com "goal based investing startup"
+- site:byndvc.com "goal based investing startup"
+- site:faberventures.com "goal based investing startup"
+- site:indicocapital.com "goal based investing startup"
+- site:mustardseedmaze.com "goal based investing startup"
+- site:alliancevc.com "goal based investing startup"
+- site:schibstedventures.com "goal based investing startup"
+- site:hummingbird-vc.com "goal based investing startup"
+- site:volta.ventures "goal based investing startup"
+- site:smartfincapital.com "goal based investing startup"
+- site:curiosityvc.com "goal based investing startup"
+- site:endeit.com "goal based investing startup"
+- site:atlanticbridge.com "goal based investing startup"
+- site:furthrventures.com "goal based investing startup"
+- site:actvc.com "goal based investing startup"
+- site:delta.ie "goal based investing startup"
+- site:ndrc.ie "goal based investing startup"
+- site:exponcapital.com "goal based investing startup"
+- site:encevo.lu "goal based investing startup"
+- site:luxinnovation.lu "goal based investing startup"
+- site:marathon.vc "goal based investing startup"
+- site:venturefriends.vc "goal based investing startup"
+- site:bigpi.vc "goal based investing startup"
+- site:velocity.partners "goal based investing startup"
+- site:genesis-investments.com "goal based investing startup"
+- site:smrk.vc "goal based investing startup"
+- site:roosh.com "goal based investing startup"
+- site:aventurescapital.com "goal based investing startup"
+- site:horizoncapital.ua "goal based investing startup"
+- site:icthub.rs "goal based investing startup"
+- site:stardust.capital "goal based investing startup"
+- site:crowdberry.eu "goal based investing startup"
+- site:neulogy.com "goal based investing startup"
+- site:silicongardens.com "goal based investing startup"
+- site:brunnur.is "goal based investing startup"
+- site:crowberry.is "goal based investing startup"
+- site:frumtak.is "goal based investing startup"
+- site:feelsgood.capital "goal based investing startup"
+- site:33east.com "goal based investing startup"
+- site:zgi.lv "goal based investing startup"
+- site:middlegame.vc "goal based investing startup"
+- site:anamcara.com "goal based investing startup"
+- site:aperture.vc "goal based investing startup"
+- site:smok.vc "goal based investing startup"
+- site:sidventures.com "goal based investing startup"
+- site:1991.vc "goal based investing startup"
+- site:n1.fund "goal based investing startup"
+- site:tilia.vc "goal based investing startup"
+- site:anthemis.com "goal based investing startup"
+- site:wayra.com "goal based investing startup"
+- site:startupwiseguys.com "goal based investing startup"
+- site:sequoiacap.com "goal based investing startup"
+- site:a16z.com "goal based investing startup"
+- site:bvp.com "goal based investing startup"
+- site:foundersfund.com "goal based investing startup"
+- site:insightpartners.com "goal based investing startup"
+- site:innovation.ox.ac.uk "goal based investing startup"
+- site:enterprise.cam.ac.uk "goal based investing startup"
+- site:imperial.ac.uk "goal based investing startup"
+- site:uclb.com "goal based investing startup"
+- site:edinburgh-innovations.ed.ac.uk "goal based investing startup"
+- site:ethz.ch "goal based investing startup"
+- site:epfl-innovationpark.ch "goal based investing startup"
+- site:yesdelft.com "goal based investing startup"
+- site:unternehmertum.de "goal based investing startup"
+- site:karolinskainnovations.ki.se "goal based investing startup"
+- site:startupcenter.aalto.fi "goal based investing startup"
+- site:skylab.dtu.dk "goal based investing startup"
+- site:ucd.ie "goal based investing startup"
+- site:tcd.ie "goal based investing startup"
+- site:spinout.fyi "goal based investing startup"
+- site:taltech.ee "goal based investing startup"
+- site:pw.edu.pl "goal based investing startup"
+- site:agh.edu.pl "goal based investing startup"
+- site:cuip.cuni.cz "goal based investing startup"
+- site:cvut.cz "goal based investing startup"
+- site:bme.hu "goal based investing startup"
+- site:polimi.it "goal based investing startup"
+- site:ie.edu "goal based investing startup"
+- site:tecnico.ulisboa.pt "goal based investing startup"
+- site:slush.org "goal based investing startup"
+- site:websummit.com "goal based investing startup"
+- site:eic.ec.europa.eu "goal based investing startup"
+- site:hello-tomorrow.org "goal based investing startup"
+- site:vivatechnology.com "goal based investing startup"
+- site:thenextweb.com "goal based investing startup"
+- site:techcrunch.com "goal based investing startup"
+- site:f6s.com "goal based investing startup"
+- site:money2020.com "goal based investing startup"
+- site:fintechfutures.com "goal based investing startup"
+- site:latitude59.ee "goal based investing startup"
+- site:wolvessummit.com "goal based investing startup"
+- site:bitsandpretzels.com "goal based investing startup"
+- site:techbbq.dk "goal based investing startup"
+- site:viennaup.com "goal based investing startup"
+- site:southsummit.co "goal based investing startup"
+- site:howtoweb.co "goal based investing startup"
+- site:piratesummit.com "goal based investing startup"
+- site:wellfound.com "goal based investing startup"
+- site:f6s.com "goal based investing startup"
+- site:dealroom.co "goal based investing startup"
+- site:crunchbase.com "goal based investing startup"
+- site:tracxn.com "goal based investing startup"
+- site:beauhurst.com "goal based investing startup"
+- site:pitchbook.com "goal based investing startup"
+- site:seedtable.com "goal based investing startup"
+- site:theorg.com "goal based investing startup"
+- site:startupsmagazine.co.uk "goal based investing startup"
+- site:eu-startups.com "goal based investing startup"
+- site:sifted.eu "goal based investing startup"
+- site:angelmatch.com "goal based investing startup"
+- site:startupblink.com "goal based investing startup"
+
+### G-MORTGAGE — Mortgage & Refinancing
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- AI mortgage startup serving US families, seed to Series A, European-founded
+- mortgage optimization fintech serving US families, seed to Series A, European-founded
+- startup that is get the best mortgage (US market)
+- early-stage company: when to refinance
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "AI mortgage startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "AI mortgage startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "get the best mortgage"
+- site:news.ycombinator.com 'Show HN' "get the best mortgage"
+- site:betalist.com "get the best mortgage"
+- site:indiehackers.com "get the best mortgage"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="mortgage pricing API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "AI mortgage startup"
+- site:joinef.com "AI mortgage startup"
+- site:antler.co "AI mortgage startup"
+- site:mourocapital.com "AI mortgage startup"
+- site:plugandplaytechcenter.com "AI mortgage startup"
+- site:techstars.com "AI mortgage startup"
+- site:seedcamp.com "AI mortgage startup"
+- site:notion.vc "AI mortgage startup"
+- site:indexventures.com "AI mortgage startup"
+- site:balderton.com "AI mortgage startup"
+- site:atomico.com "AI mortgage startup"
+- site:southparkcommons.com "AI mortgage startup"
+- site:beondeck.com "AI mortgage startup"
+- site:localglobe.vc "AI mortgage startup"
+- site:hoxtonventures.com "AI mortgage startup"
+- site:connectventures.co "AI mortgage startup"
+- site:adaventures.com "AI mortgage startup"
+- site:episode1.com "AI mortgage startup"
+- site:taliscapital.com "AI mortgage startup"
+- site:stride.vc "AI mortgage startup"
+- site:partechpartners.com "AI mortgage startup"
+- site:daphni.com "AI mortgage startup"
+- site:360cap.vc "AI mortgage startup"
+- site:unitedventures.it "AI mortgage startup"
+- site:cherry.vc "AI mortgage startup"
+- site:earlybird.com "AI mortgage startup"
+- site:project-a.com "AI mortgage startup"
+- site:hvcapital.com "AI mortgage startup"
+- site:lakestar.com "AI mortgage startup"
+- site:northzone.com "AI mortgage startup"
+- site:creandum.com "AI mortgage startup"
+- site:eqtventures.com "AI mortgage startup"
+- site:byfounders.vc "AI mortgage startup"
+- site:inventure.fi "AI mortgage startup"
+- site:frontline.vc "AI mortgage startup"
+- site:octopusventures.com "AI mortgage startup"
+- site:qedinvestors.com "AI mortgage startup"
+- site:ribbitcap.com "AI mortgage startup"
+- site:anthemis.com "AI mortgage startup"
+- site:augmentum.vc "AI mortgage startup"
+- site:speedinvest.com "AI mortgage startup"
+- site:mosaicventures.com "AI mortgage startup"
+- site:inovo.vc "AI mortgage startup"
+- site:otb.vc "AI mortgage startup"
+- site:czysta3.vc "AI mortgage startup"
+- site:blackpearls.vc "AI mortgage startup"
+- site:ffvc.com "AI mortgage startup"
+- site:innovationnest.com "AI mortgage startup"
+- site:bitspiration.com "AI mortgage startup"
+- site:karma.vc "AI mortgage startup"
+- site:teraventures.com "AI mortgage startup"
+- site:trind.vc "AI mortgage startup"
+- site:uavc.eu "AI mortgage startup"
+- site:changeventures.com "AI mortgage startup"
+- site:practica.lt "AI mortgage startup"
+- site:opencirclecapital.com "AI mortgage startup"
+- site:credoventures.com "AI mortgage startup"
+- site:reflex.capital "AI mortgage startup"
+- site:kaya.vc "AI mortgage startup"
+- site:jtventures.com "AI mortgage startup"
+- site:dayonecapital.com "AI mortgage startup"
+- site:hiventures.hu "AI mortgage startup"
+- site:earlybird.com "AI mortgage startup"
+- site:3tscapital.com "AI mortgage startup"
+- site:launchub.com "AI mortgage startup"
+- site:11.vc "AI mortgage startup"
+- site:catalystromania.com "AI mortgage startup"
+- site:earlygame.vc "AI mortgage startup"
+- site:sc-ventures.com "AI mortgage startup"
+- site:filrougecapital.com "AI mortgage startup"
+- site:kfund.vc "AI mortgage startup"
+- site:samaipata.vc "AI mortgage startup"
+- site:jme.vc "AI mortgage startup"
+- site:kiboventures.com "AI mortgage startup"
+- site:allironventures.com "AI mortgage startup"
+- site:byndvc.com "AI mortgage startup"
+- site:faberventures.com "AI mortgage startup"
+- site:indicocapital.com "AI mortgage startup"
+- site:mustardseedmaze.com "AI mortgage startup"
+- site:alliancevc.com "AI mortgage startup"
+- site:schibstedventures.com "AI mortgage startup"
+- site:hummingbird-vc.com "AI mortgage startup"
+- site:volta.ventures "AI mortgage startup"
+- site:smartfincapital.com "AI mortgage startup"
+- site:curiosityvc.com "AI mortgage startup"
+- site:endeit.com "AI mortgage startup"
+- site:atlanticbridge.com "AI mortgage startup"
+- site:furthrventures.com "AI mortgage startup"
+- site:actvc.com "AI mortgage startup"
+- site:delta.ie "AI mortgage startup"
+- site:ndrc.ie "AI mortgage startup"
+- site:exponcapital.com "AI mortgage startup"
+- site:encevo.lu "AI mortgage startup"
+- site:luxinnovation.lu "AI mortgage startup"
+- site:marathon.vc "AI mortgage startup"
+- site:venturefriends.vc "AI mortgage startup"
+- site:bigpi.vc "AI mortgage startup"
+- site:velocity.partners "AI mortgage startup"
+- site:genesis-investments.com "AI mortgage startup"
+- site:smrk.vc "AI mortgage startup"
+- site:roosh.com "AI mortgage startup"
+- site:aventurescapital.com "AI mortgage startup"
+- site:horizoncapital.ua "AI mortgage startup"
+- site:icthub.rs "AI mortgage startup"
+- site:stardust.capital "AI mortgage startup"
+- site:crowdberry.eu "AI mortgage startup"
+- site:neulogy.com "AI mortgage startup"
+- site:silicongardens.com "AI mortgage startup"
+- site:brunnur.is "AI mortgage startup"
+- site:crowberry.is "AI mortgage startup"
+- site:frumtak.is "AI mortgage startup"
+- site:feelsgood.capital "AI mortgage startup"
+- site:33east.com "AI mortgage startup"
+- site:zgi.lv "AI mortgage startup"
+- site:middlegame.vc "AI mortgage startup"
+- site:anamcara.com "AI mortgage startup"
+- site:aperture.vc "AI mortgage startup"
+- site:smok.vc "AI mortgage startup"
+- site:sidventures.com "AI mortgage startup"
+- site:1991.vc "AI mortgage startup"
+- site:n1.fund "AI mortgage startup"
+- site:tilia.vc "AI mortgage startup"
+- site:anthemis.com "AI mortgage startup"
+- site:wayra.com "AI mortgage startup"
+- site:startupwiseguys.com "AI mortgage startup"
+- site:sequoiacap.com "AI mortgage startup"
+- site:a16z.com "AI mortgage startup"
+- site:bvp.com "AI mortgage startup"
+- site:foundersfund.com "AI mortgage startup"
+- site:insightpartners.com "AI mortgage startup"
+- site:innovation.ox.ac.uk "AI mortgage startup"
+- site:enterprise.cam.ac.uk "AI mortgage startup"
+- site:imperial.ac.uk "AI mortgage startup"
+- site:uclb.com "AI mortgage startup"
+- site:edinburgh-innovations.ed.ac.uk "AI mortgage startup"
+- site:ethz.ch "AI mortgage startup"
+- site:epfl-innovationpark.ch "AI mortgage startup"
+- site:yesdelft.com "AI mortgage startup"
+- site:unternehmertum.de "AI mortgage startup"
+- site:karolinskainnovations.ki.se "AI mortgage startup"
+- site:startupcenter.aalto.fi "AI mortgage startup"
+- site:skylab.dtu.dk "AI mortgage startup"
+- site:ucd.ie "AI mortgage startup"
+- site:tcd.ie "AI mortgage startup"
+- site:spinout.fyi "AI mortgage startup"
+- site:taltech.ee "AI mortgage startup"
+- site:pw.edu.pl "AI mortgage startup"
+- site:agh.edu.pl "AI mortgage startup"
+- site:cuip.cuni.cz "AI mortgage startup"
+- site:cvut.cz "AI mortgage startup"
+- site:bme.hu "AI mortgage startup"
+- site:polimi.it "AI mortgage startup"
+- site:ie.edu "AI mortgage startup"
+- site:tecnico.ulisboa.pt "AI mortgage startup"
+- site:slush.org "AI mortgage startup"
+- site:websummit.com "AI mortgage startup"
+- site:eic.ec.europa.eu "AI mortgage startup"
+- site:hello-tomorrow.org "AI mortgage startup"
+- site:vivatechnology.com "AI mortgage startup"
+- site:thenextweb.com "AI mortgage startup"
+- site:techcrunch.com "AI mortgage startup"
+- site:f6s.com "AI mortgage startup"
+- site:money2020.com "AI mortgage startup"
+- site:fintechfutures.com "AI mortgage startup"
+- site:latitude59.ee "AI mortgage startup"
+- site:wolvessummit.com "AI mortgage startup"
+- site:bitsandpretzels.com "AI mortgage startup"
+- site:techbbq.dk "AI mortgage startup"
+- site:viennaup.com "AI mortgage startup"
+- site:southsummit.co "AI mortgage startup"
+- site:howtoweb.co "AI mortgage startup"
+- site:piratesummit.com "AI mortgage startup"
+- site:wellfound.com "AI mortgage startup"
+- site:f6s.com "AI mortgage startup"
+- site:dealroom.co "AI mortgage startup"
+- site:crunchbase.com "AI mortgage startup"
+- site:tracxn.com "AI mortgage startup"
+- site:beauhurst.com "AI mortgage startup"
+- site:pitchbook.com "AI mortgage startup"
+- site:seedtable.com "AI mortgage startup"
+- site:theorg.com "AI mortgage startup"
+- site:startupsmagazine.co.uk "AI mortgage startup"
+- site:eu-startups.com "AI mortgage startup"
+- site:sifted.eu "AI mortgage startup"
+- site:angelmatch.com "AI mortgage startup"
+- site:startupblink.com "AI mortgage startup"
+
+### G-DEBT — Debt Payoff
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- debt payoff fintech serving US families, seed to Series A, European-founded
+- student loan optimization startup serving US families, seed to Series A, European-founded
+- startup that is pay off debt faster (US market)
+- early-stage company: optimize your student loans
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "debt payoff fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "debt payoff fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "pay off debt faster"
+- site:news.ycombinator.com 'Show HN' "pay off debt faster"
+- site:betalist.com "pay off debt faster"
+- site:indiehackers.com "pay off debt faster"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="debt optimization API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "debt payoff fintech"
+- site:joinef.com "debt payoff fintech"
+- site:antler.co "debt payoff fintech"
+- site:mourocapital.com "debt payoff fintech"
+- site:plugandplaytechcenter.com "debt payoff fintech"
+- site:techstars.com "debt payoff fintech"
+- site:seedcamp.com "debt payoff fintech"
+- site:notion.vc "debt payoff fintech"
+- site:indexventures.com "debt payoff fintech"
+- site:balderton.com "debt payoff fintech"
+- site:atomico.com "debt payoff fintech"
+- site:southparkcommons.com "debt payoff fintech"
+- site:beondeck.com "debt payoff fintech"
+- site:localglobe.vc "debt payoff fintech"
+- site:hoxtonventures.com "debt payoff fintech"
+- site:connectventures.co "debt payoff fintech"
+- site:adaventures.com "debt payoff fintech"
+- site:episode1.com "debt payoff fintech"
+- site:taliscapital.com "debt payoff fintech"
+- site:stride.vc "debt payoff fintech"
+- site:partechpartners.com "debt payoff fintech"
+- site:daphni.com "debt payoff fintech"
+- site:360cap.vc "debt payoff fintech"
+- site:unitedventures.it "debt payoff fintech"
+- site:cherry.vc "debt payoff fintech"
+- site:earlybird.com "debt payoff fintech"
+- site:project-a.com "debt payoff fintech"
+- site:hvcapital.com "debt payoff fintech"
+- site:lakestar.com "debt payoff fintech"
+- site:northzone.com "debt payoff fintech"
+- site:creandum.com "debt payoff fintech"
+- site:eqtventures.com "debt payoff fintech"
+- site:byfounders.vc "debt payoff fintech"
+- site:inventure.fi "debt payoff fintech"
+- site:frontline.vc "debt payoff fintech"
+- site:octopusventures.com "debt payoff fintech"
+- site:qedinvestors.com "debt payoff fintech"
+- site:ribbitcap.com "debt payoff fintech"
+- site:anthemis.com "debt payoff fintech"
+- site:augmentum.vc "debt payoff fintech"
+- site:speedinvest.com "debt payoff fintech"
+- site:mosaicventures.com "debt payoff fintech"
+- site:inovo.vc "debt payoff fintech"
+- site:otb.vc "debt payoff fintech"
+- site:czysta3.vc "debt payoff fintech"
+- site:blackpearls.vc "debt payoff fintech"
+- site:ffvc.com "debt payoff fintech"
+- site:innovationnest.com "debt payoff fintech"
+- site:bitspiration.com "debt payoff fintech"
+- site:karma.vc "debt payoff fintech"
+- site:teraventures.com "debt payoff fintech"
+- site:trind.vc "debt payoff fintech"
+- site:uavc.eu "debt payoff fintech"
+- site:changeventures.com "debt payoff fintech"
+- site:practica.lt "debt payoff fintech"
+- site:opencirclecapital.com "debt payoff fintech"
+- site:credoventures.com "debt payoff fintech"
+- site:reflex.capital "debt payoff fintech"
+- site:kaya.vc "debt payoff fintech"
+- site:jtventures.com "debt payoff fintech"
+- site:dayonecapital.com "debt payoff fintech"
+- site:hiventures.hu "debt payoff fintech"
+- site:earlybird.com "debt payoff fintech"
+- site:3tscapital.com "debt payoff fintech"
+- site:launchub.com "debt payoff fintech"
+- site:11.vc "debt payoff fintech"
+- site:catalystromania.com "debt payoff fintech"
+- site:earlygame.vc "debt payoff fintech"
+- site:sc-ventures.com "debt payoff fintech"
+- site:filrougecapital.com "debt payoff fintech"
+- site:kfund.vc "debt payoff fintech"
+- site:samaipata.vc "debt payoff fintech"
+- site:jme.vc "debt payoff fintech"
+- site:kiboventures.com "debt payoff fintech"
+- site:allironventures.com "debt payoff fintech"
+- site:byndvc.com "debt payoff fintech"
+- site:faberventures.com "debt payoff fintech"
+- site:indicocapital.com "debt payoff fintech"
+- site:mustardseedmaze.com "debt payoff fintech"
+- site:alliancevc.com "debt payoff fintech"
+- site:schibstedventures.com "debt payoff fintech"
+- site:hummingbird-vc.com "debt payoff fintech"
+- site:volta.ventures "debt payoff fintech"
+- site:smartfincapital.com "debt payoff fintech"
+- site:curiosityvc.com "debt payoff fintech"
+- site:endeit.com "debt payoff fintech"
+- site:atlanticbridge.com "debt payoff fintech"
+- site:furthrventures.com "debt payoff fintech"
+- site:actvc.com "debt payoff fintech"
+- site:delta.ie "debt payoff fintech"
+- site:ndrc.ie "debt payoff fintech"
+- site:exponcapital.com "debt payoff fintech"
+- site:encevo.lu "debt payoff fintech"
+- site:luxinnovation.lu "debt payoff fintech"
+- site:marathon.vc "debt payoff fintech"
+- site:venturefriends.vc "debt payoff fintech"
+- site:bigpi.vc "debt payoff fintech"
+- site:velocity.partners "debt payoff fintech"
+- site:genesis-investments.com "debt payoff fintech"
+- site:smrk.vc "debt payoff fintech"
+- site:roosh.com "debt payoff fintech"
+- site:aventurescapital.com "debt payoff fintech"
+- site:horizoncapital.ua "debt payoff fintech"
+- site:icthub.rs "debt payoff fintech"
+- site:stardust.capital "debt payoff fintech"
+- site:crowdberry.eu "debt payoff fintech"
+- site:neulogy.com "debt payoff fintech"
+- site:silicongardens.com "debt payoff fintech"
+- site:brunnur.is "debt payoff fintech"
+- site:crowberry.is "debt payoff fintech"
+- site:frumtak.is "debt payoff fintech"
+- site:feelsgood.capital "debt payoff fintech"
+- site:33east.com "debt payoff fintech"
+- site:zgi.lv "debt payoff fintech"
+- site:middlegame.vc "debt payoff fintech"
+- site:anamcara.com "debt payoff fintech"
+- site:aperture.vc "debt payoff fintech"
+- site:smok.vc "debt payoff fintech"
+- site:sidventures.com "debt payoff fintech"
+- site:1991.vc "debt payoff fintech"
+- site:n1.fund "debt payoff fintech"
+- site:tilia.vc "debt payoff fintech"
+- site:anthemis.com "debt payoff fintech"
+- site:wayra.com "debt payoff fintech"
+- site:startupwiseguys.com "debt payoff fintech"
+- site:sequoiacap.com "debt payoff fintech"
+- site:a16z.com "debt payoff fintech"
+- site:bvp.com "debt payoff fintech"
+- site:foundersfund.com "debt payoff fintech"
+- site:insightpartners.com "debt payoff fintech"
+- site:innovation.ox.ac.uk "debt payoff fintech"
+- site:enterprise.cam.ac.uk "debt payoff fintech"
+- site:imperial.ac.uk "debt payoff fintech"
+- site:uclb.com "debt payoff fintech"
+- site:edinburgh-innovations.ed.ac.uk "debt payoff fintech"
+- site:ethz.ch "debt payoff fintech"
+- site:epfl-innovationpark.ch "debt payoff fintech"
+- site:yesdelft.com "debt payoff fintech"
+- site:unternehmertum.de "debt payoff fintech"
+- site:karolinskainnovations.ki.se "debt payoff fintech"
+- site:startupcenter.aalto.fi "debt payoff fintech"
+- site:skylab.dtu.dk "debt payoff fintech"
+- site:ucd.ie "debt payoff fintech"
+- site:tcd.ie "debt payoff fintech"
+- site:spinout.fyi "debt payoff fintech"
+- site:taltech.ee "debt payoff fintech"
+- site:pw.edu.pl "debt payoff fintech"
+- site:agh.edu.pl "debt payoff fintech"
+- site:cuip.cuni.cz "debt payoff fintech"
+- site:cvut.cz "debt payoff fintech"
+- site:bme.hu "debt payoff fintech"
+- site:polimi.it "debt payoff fintech"
+- site:ie.edu "debt payoff fintech"
+- site:tecnico.ulisboa.pt "debt payoff fintech"
+- site:slush.org "debt payoff fintech"
+- site:websummit.com "debt payoff fintech"
+- site:eic.ec.europa.eu "debt payoff fintech"
+- site:hello-tomorrow.org "debt payoff fintech"
+- site:vivatechnology.com "debt payoff fintech"
+- site:thenextweb.com "debt payoff fintech"
+- site:techcrunch.com "debt payoff fintech"
+- site:f6s.com "debt payoff fintech"
+- site:money2020.com "debt payoff fintech"
+- site:fintechfutures.com "debt payoff fintech"
+- site:latitude59.ee "debt payoff fintech"
+- site:wolvessummit.com "debt payoff fintech"
+- site:bitsandpretzels.com "debt payoff fintech"
+- site:techbbq.dk "debt payoff fintech"
+- site:viennaup.com "debt payoff fintech"
+- site:southsummit.co "debt payoff fintech"
+- site:howtoweb.co "debt payoff fintech"
+- site:piratesummit.com "debt payoff fintech"
+- site:wellfound.com "debt payoff fintech"
+- site:f6s.com "debt payoff fintech"
+- site:dealroom.co "debt payoff fintech"
+- site:crunchbase.com "debt payoff fintech"
+- site:tracxn.com "debt payoff fintech"
+- site:beauhurst.com "debt payoff fintech"
+- site:pitchbook.com "debt payoff fintech"
+- site:seedtable.com "debt payoff fintech"
+- site:theorg.com "debt payoff fintech"
+- site:startupsmagazine.co.uk "debt payoff fintech"
+- site:eu-startups.com "debt payoff fintech"
+- site:sifted.eu "debt payoff fintech"
+- site:angelmatch.com "debt payoff fintech"
+- site:startupblink.com "debt payoff fintech"
+
+### G-CREDIT — Credit Access
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- credit building fintech serving US families, seed to Series A, European-founded
+- thin file credit startup serving US families, seed to Series A, European-founded
+- startup that is build your credit (US market)
+- early-stage company: improve your score
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "credit building fintech" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "credit building fintech"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "build your credit"
+- site:news.ycombinator.com 'Show HN' "build your credit"
+- site:betalist.com "build your credit"
+- site:indiehackers.com "build your credit"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="credit data API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "credit building fintech"
+- site:joinef.com "credit building fintech"
+- site:antler.co "credit building fintech"
+- site:mourocapital.com "credit building fintech"
+- site:plugandplaytechcenter.com "credit building fintech"
+- site:techstars.com "credit building fintech"
+- site:seedcamp.com "credit building fintech"
+- site:notion.vc "credit building fintech"
+- site:indexventures.com "credit building fintech"
+- site:balderton.com "credit building fintech"
+- site:atomico.com "credit building fintech"
+- site:southparkcommons.com "credit building fintech"
+- site:beondeck.com "credit building fintech"
+- site:localglobe.vc "credit building fintech"
+- site:hoxtonventures.com "credit building fintech"
+- site:connectventures.co "credit building fintech"
+- site:adaventures.com "credit building fintech"
+- site:episode1.com "credit building fintech"
+- site:taliscapital.com "credit building fintech"
+- site:stride.vc "credit building fintech"
+- site:partechpartners.com "credit building fintech"
+- site:daphni.com "credit building fintech"
+- site:360cap.vc "credit building fintech"
+- site:unitedventures.it "credit building fintech"
+- site:cherry.vc "credit building fintech"
+- site:earlybird.com "credit building fintech"
+- site:project-a.com "credit building fintech"
+- site:hvcapital.com "credit building fintech"
+- site:lakestar.com "credit building fintech"
+- site:northzone.com "credit building fintech"
+- site:creandum.com "credit building fintech"
+- site:eqtventures.com "credit building fintech"
+- site:byfounders.vc "credit building fintech"
+- site:inventure.fi "credit building fintech"
+- site:frontline.vc "credit building fintech"
+- site:octopusventures.com "credit building fintech"
+- site:qedinvestors.com "credit building fintech"
+- site:ribbitcap.com "credit building fintech"
+- site:anthemis.com "credit building fintech"
+- site:augmentum.vc "credit building fintech"
+- site:speedinvest.com "credit building fintech"
+- site:mosaicventures.com "credit building fintech"
+- site:inovo.vc "credit building fintech"
+- site:otb.vc "credit building fintech"
+- site:czysta3.vc "credit building fintech"
+- site:blackpearls.vc "credit building fintech"
+- site:ffvc.com "credit building fintech"
+- site:innovationnest.com "credit building fintech"
+- site:bitspiration.com "credit building fintech"
+- site:karma.vc "credit building fintech"
+- site:teraventures.com "credit building fintech"
+- site:trind.vc "credit building fintech"
+- site:uavc.eu "credit building fintech"
+- site:changeventures.com "credit building fintech"
+- site:practica.lt "credit building fintech"
+- site:opencirclecapital.com "credit building fintech"
+- site:credoventures.com "credit building fintech"
+- site:reflex.capital "credit building fintech"
+- site:kaya.vc "credit building fintech"
+- site:jtventures.com "credit building fintech"
+- site:dayonecapital.com "credit building fintech"
+- site:hiventures.hu "credit building fintech"
+- site:earlybird.com "credit building fintech"
+- site:3tscapital.com "credit building fintech"
+- site:launchub.com "credit building fintech"
+- site:11.vc "credit building fintech"
+- site:catalystromania.com "credit building fintech"
+- site:earlygame.vc "credit building fintech"
+- site:sc-ventures.com "credit building fintech"
+- site:filrougecapital.com "credit building fintech"
+- site:kfund.vc "credit building fintech"
+- site:samaipata.vc "credit building fintech"
+- site:jme.vc "credit building fintech"
+- site:kiboventures.com "credit building fintech"
+- site:allironventures.com "credit building fintech"
+- site:byndvc.com "credit building fintech"
+- site:faberventures.com "credit building fintech"
+- site:indicocapital.com "credit building fintech"
+- site:mustardseedmaze.com "credit building fintech"
+- site:alliancevc.com "credit building fintech"
+- site:schibstedventures.com "credit building fintech"
+- site:hummingbird-vc.com "credit building fintech"
+- site:volta.ventures "credit building fintech"
+- site:smartfincapital.com "credit building fintech"
+- site:curiosityvc.com "credit building fintech"
+- site:endeit.com "credit building fintech"
+- site:atlanticbridge.com "credit building fintech"
+- site:furthrventures.com "credit building fintech"
+- site:actvc.com "credit building fintech"
+- site:delta.ie "credit building fintech"
+- site:ndrc.ie "credit building fintech"
+- site:exponcapital.com "credit building fintech"
+- site:encevo.lu "credit building fintech"
+- site:luxinnovation.lu "credit building fintech"
+- site:marathon.vc "credit building fintech"
+- site:venturefriends.vc "credit building fintech"
+- site:bigpi.vc "credit building fintech"
+- site:velocity.partners "credit building fintech"
+- site:genesis-investments.com "credit building fintech"
+- site:smrk.vc "credit building fintech"
+- site:roosh.com "credit building fintech"
+- site:aventurescapital.com "credit building fintech"
+- site:horizoncapital.ua "credit building fintech"
+- site:icthub.rs "credit building fintech"
+- site:stardust.capital "credit building fintech"
+- site:crowdberry.eu "credit building fintech"
+- site:neulogy.com "credit building fintech"
+- site:silicongardens.com "credit building fintech"
+- site:brunnur.is "credit building fintech"
+- site:crowberry.is "credit building fintech"
+- site:frumtak.is "credit building fintech"
+- site:feelsgood.capital "credit building fintech"
+- site:33east.com "credit building fintech"
+- site:zgi.lv "credit building fintech"
+- site:middlegame.vc "credit building fintech"
+- site:anamcara.com "credit building fintech"
+- site:aperture.vc "credit building fintech"
+- site:smok.vc "credit building fintech"
+- site:sidventures.com "credit building fintech"
+- site:1991.vc "credit building fintech"
+- site:n1.fund "credit building fintech"
+- site:tilia.vc "credit building fintech"
+- site:anthemis.com "credit building fintech"
+- site:wayra.com "credit building fintech"
+- site:startupwiseguys.com "credit building fintech"
+- site:sequoiacap.com "credit building fintech"
+- site:a16z.com "credit building fintech"
+- site:bvp.com "credit building fintech"
+- site:foundersfund.com "credit building fintech"
+- site:insightpartners.com "credit building fintech"
+- site:innovation.ox.ac.uk "credit building fintech"
+- site:enterprise.cam.ac.uk "credit building fintech"
+- site:imperial.ac.uk "credit building fintech"
+- site:uclb.com "credit building fintech"
+- site:edinburgh-innovations.ed.ac.uk "credit building fintech"
+- site:ethz.ch "credit building fintech"
+- site:epfl-innovationpark.ch "credit building fintech"
+- site:yesdelft.com "credit building fintech"
+- site:unternehmertum.de "credit building fintech"
+- site:karolinskainnovations.ki.se "credit building fintech"
+- site:startupcenter.aalto.fi "credit building fintech"
+- site:skylab.dtu.dk "credit building fintech"
+- site:ucd.ie "credit building fintech"
+- site:tcd.ie "credit building fintech"
+- site:spinout.fyi "credit building fintech"
+- site:taltech.ee "credit building fintech"
+- site:pw.edu.pl "credit building fintech"
+- site:agh.edu.pl "credit building fintech"
+- site:cuip.cuni.cz "credit building fintech"
+- site:cvut.cz "credit building fintech"
+- site:bme.hu "credit building fintech"
+- site:polimi.it "credit building fintech"
+- site:ie.edu "credit building fintech"
+- site:tecnico.ulisboa.pt "credit building fintech"
+- site:slush.org "credit building fintech"
+- site:websummit.com "credit building fintech"
+- site:eic.ec.europa.eu "credit building fintech"
+- site:hello-tomorrow.org "credit building fintech"
+- site:vivatechnology.com "credit building fintech"
+- site:thenextweb.com "credit building fintech"
+- site:techcrunch.com "credit building fintech"
+- site:f6s.com "credit building fintech"
+- site:money2020.com "credit building fintech"
+- site:fintechfutures.com "credit building fintech"
+- site:latitude59.ee "credit building fintech"
+- site:wolvessummit.com "credit building fintech"
+- site:bitsandpretzels.com "credit building fintech"
+- site:techbbq.dk "credit building fintech"
+- site:viennaup.com "credit building fintech"
+- site:southsummit.co "credit building fintech"
+- site:howtoweb.co "credit building fintech"
+- site:piratesummit.com "credit building fintech"
+- site:wellfound.com "credit building fintech"
+- site:f6s.com "credit building fintech"
+- site:dealroom.co "credit building fintech"
+- site:crunchbase.com "credit building fintech"
+- site:tracxn.com "credit building fintech"
+- site:beauhurst.com "credit building fintech"
+- site:pitchbook.com "credit building fintech"
+- site:seedtable.com "credit building fintech"
+- site:theorg.com "credit building fintech"
+- site:startupsmagazine.co.uk "credit building fintech"
+- site:eu-startups.com "credit building fintech"
+- site:sifted.eu "credit building fintech"
+- site:angelmatch.com "credit building fintech"
+- site:startupblink.com "credit building fintech"
+
+### G-PC — Property, Casualty & Liability
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- AI home insurance startup serving US families, seed to Series A, European-founded
+- auto insurance fintech serving US families, seed to Series A, European-founded
+- startup that is right-size your home and auto cover (US market)
+- early-stage company: umbrella insurance made simple
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "AI home insurance startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "AI home insurance startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "right-size your home and auto cover"
+- site:news.ycombinator.com 'Show HN' "right-size your home and auto cover"
+- site:betalist.com "right-size your home and auto cover"
+- site:indiehackers.com "right-size your home and auto cover"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="insurance quoting API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "AI home insurance startup"
+- site:joinef.com "AI home insurance startup"
+- site:antler.co "AI home insurance startup"
+- site:mourocapital.com "AI home insurance startup"
+- site:plugandplaytechcenter.com "AI home insurance startup"
+- site:techstars.com "AI home insurance startup"
+- site:seedcamp.com "AI home insurance startup"
+- site:notion.vc "AI home insurance startup"
+- site:indexventures.com "AI home insurance startup"
+- site:balderton.com "AI home insurance startup"
+- site:atomico.com "AI home insurance startup"
+- site:southparkcommons.com "AI home insurance startup"
+- site:beondeck.com "AI home insurance startup"
+- site:localglobe.vc "AI home insurance startup"
+- site:hoxtonventures.com "AI home insurance startup"
+- site:connectventures.co "AI home insurance startup"
+- site:adaventures.com "AI home insurance startup"
+- site:episode1.com "AI home insurance startup"
+- site:taliscapital.com "AI home insurance startup"
+- site:stride.vc "AI home insurance startup"
+- site:partechpartners.com "AI home insurance startup"
+- site:daphni.com "AI home insurance startup"
+- site:360cap.vc "AI home insurance startup"
+- site:unitedventures.it "AI home insurance startup"
+- site:cherry.vc "AI home insurance startup"
+- site:earlybird.com "AI home insurance startup"
+- site:project-a.com "AI home insurance startup"
+- site:hvcapital.com "AI home insurance startup"
+- site:lakestar.com "AI home insurance startup"
+- site:northzone.com "AI home insurance startup"
+- site:creandum.com "AI home insurance startup"
+- site:eqtventures.com "AI home insurance startup"
+- site:byfounders.vc "AI home insurance startup"
+- site:inventure.fi "AI home insurance startup"
+- site:frontline.vc "AI home insurance startup"
+- site:octopusventures.com "AI home insurance startup"
+- site:qedinvestors.com "AI home insurance startup"
+- site:ribbitcap.com "AI home insurance startup"
+- site:anthemis.com "AI home insurance startup"
+- site:augmentum.vc "AI home insurance startup"
+- site:speedinvest.com "AI home insurance startup"
+- site:mosaicventures.com "AI home insurance startup"
+- site:inovo.vc "AI home insurance startup"
+- site:otb.vc "AI home insurance startup"
+- site:czysta3.vc "AI home insurance startup"
+- site:blackpearls.vc "AI home insurance startup"
+- site:ffvc.com "AI home insurance startup"
+- site:innovationnest.com "AI home insurance startup"
+- site:bitspiration.com "AI home insurance startup"
+- site:karma.vc "AI home insurance startup"
+- site:teraventures.com "AI home insurance startup"
+- site:trind.vc "AI home insurance startup"
+- site:uavc.eu "AI home insurance startup"
+- site:changeventures.com "AI home insurance startup"
+- site:practica.lt "AI home insurance startup"
+- site:opencirclecapital.com "AI home insurance startup"
+- site:credoventures.com "AI home insurance startup"
+- site:reflex.capital "AI home insurance startup"
+- site:kaya.vc "AI home insurance startup"
+- site:jtventures.com "AI home insurance startup"
+- site:dayonecapital.com "AI home insurance startup"
+- site:hiventures.hu "AI home insurance startup"
+- site:earlybird.com "AI home insurance startup"
+- site:3tscapital.com "AI home insurance startup"
+- site:launchub.com "AI home insurance startup"
+- site:11.vc "AI home insurance startup"
+- site:catalystromania.com "AI home insurance startup"
+- site:earlygame.vc "AI home insurance startup"
+- site:sc-ventures.com "AI home insurance startup"
+- site:filrougecapital.com "AI home insurance startup"
+- site:kfund.vc "AI home insurance startup"
+- site:samaipata.vc "AI home insurance startup"
+- site:jme.vc "AI home insurance startup"
+- site:kiboventures.com "AI home insurance startup"
+- site:allironventures.com "AI home insurance startup"
+- site:byndvc.com "AI home insurance startup"
+- site:faberventures.com "AI home insurance startup"
+- site:indicocapital.com "AI home insurance startup"
+- site:mustardseedmaze.com "AI home insurance startup"
+- site:alliancevc.com "AI home insurance startup"
+- site:schibstedventures.com "AI home insurance startup"
+- site:hummingbird-vc.com "AI home insurance startup"
+- site:volta.ventures "AI home insurance startup"
+- site:smartfincapital.com "AI home insurance startup"
+- site:curiosityvc.com "AI home insurance startup"
+- site:endeit.com "AI home insurance startup"
+- site:atlanticbridge.com "AI home insurance startup"
+- site:furthrventures.com "AI home insurance startup"
+- site:actvc.com "AI home insurance startup"
+- site:delta.ie "AI home insurance startup"
+- site:ndrc.ie "AI home insurance startup"
+- site:exponcapital.com "AI home insurance startup"
+- site:encevo.lu "AI home insurance startup"
+- site:luxinnovation.lu "AI home insurance startup"
+- site:marathon.vc "AI home insurance startup"
+- site:venturefriends.vc "AI home insurance startup"
+- site:bigpi.vc "AI home insurance startup"
+- site:velocity.partners "AI home insurance startup"
+- site:genesis-investments.com "AI home insurance startup"
+- site:smrk.vc "AI home insurance startup"
+- site:roosh.com "AI home insurance startup"
+- site:aventurescapital.com "AI home insurance startup"
+- site:horizoncapital.ua "AI home insurance startup"
+- site:icthub.rs "AI home insurance startup"
+- site:stardust.capital "AI home insurance startup"
+- site:crowdberry.eu "AI home insurance startup"
+- site:neulogy.com "AI home insurance startup"
+- site:silicongardens.com "AI home insurance startup"
+- site:brunnur.is "AI home insurance startup"
+- site:crowberry.is "AI home insurance startup"
+- site:frumtak.is "AI home insurance startup"
+- site:feelsgood.capital "AI home insurance startup"
+- site:33east.com "AI home insurance startup"
+- site:zgi.lv "AI home insurance startup"
+- site:middlegame.vc "AI home insurance startup"
+- site:anamcara.com "AI home insurance startup"
+- site:aperture.vc "AI home insurance startup"
+- site:smok.vc "AI home insurance startup"
+- site:sidventures.com "AI home insurance startup"
+- site:1991.vc "AI home insurance startup"
+- site:n1.fund "AI home insurance startup"
+- site:tilia.vc "AI home insurance startup"
+- site:anthemis.com "AI home insurance startup"
+- site:wayra.com "AI home insurance startup"
+- site:startupwiseguys.com "AI home insurance startup"
+- site:sequoiacap.com "AI home insurance startup"
+- site:a16z.com "AI home insurance startup"
+- site:bvp.com "AI home insurance startup"
+- site:foundersfund.com "AI home insurance startup"
+- site:insightpartners.com "AI home insurance startup"
+- site:innovation.ox.ac.uk "AI home insurance startup"
+- site:enterprise.cam.ac.uk "AI home insurance startup"
+- site:imperial.ac.uk "AI home insurance startup"
+- site:uclb.com "AI home insurance startup"
+- site:edinburgh-innovations.ed.ac.uk "AI home insurance startup"
+- site:ethz.ch "AI home insurance startup"
+- site:epfl-innovationpark.ch "AI home insurance startup"
+- site:yesdelft.com "AI home insurance startup"
+- site:unternehmertum.de "AI home insurance startup"
+- site:karolinskainnovations.ki.se "AI home insurance startup"
+- site:startupcenter.aalto.fi "AI home insurance startup"
+- site:skylab.dtu.dk "AI home insurance startup"
+- site:ucd.ie "AI home insurance startup"
+- site:tcd.ie "AI home insurance startup"
+- site:spinout.fyi "AI home insurance startup"
+- site:taltech.ee "AI home insurance startup"
+- site:pw.edu.pl "AI home insurance startup"
+- site:agh.edu.pl "AI home insurance startup"
+- site:cuip.cuni.cz "AI home insurance startup"
+- site:cvut.cz "AI home insurance startup"
+- site:bme.hu "AI home insurance startup"
+- site:polimi.it "AI home insurance startup"
+- site:ie.edu "AI home insurance startup"
+- site:tecnico.ulisboa.pt "AI home insurance startup"
+- site:slush.org "AI home insurance startup"
+- site:websummit.com "AI home insurance startup"
+- site:eic.ec.europa.eu "AI home insurance startup"
+- site:hello-tomorrow.org "AI home insurance startup"
+- site:vivatechnology.com "AI home insurance startup"
+- site:thenextweb.com "AI home insurance startup"
+- site:techcrunch.com "AI home insurance startup"
+- site:f6s.com "AI home insurance startup"
+- site:money2020.com "AI home insurance startup"
+- site:fintechfutures.com "AI home insurance startup"
+- site:latitude59.ee "AI home insurance startup"
+- site:wolvessummit.com "AI home insurance startup"
+- site:bitsandpretzels.com "AI home insurance startup"
+- site:techbbq.dk "AI home insurance startup"
+- site:viennaup.com "AI home insurance startup"
+- site:southsummit.co "AI home insurance startup"
+- site:howtoweb.co "AI home insurance startup"
+- site:piratesummit.com "AI home insurance startup"
+- site:wellfound.com "AI home insurance startup"
+- site:f6s.com "AI home insurance startup"
+- site:dealroom.co "AI home insurance startup"
+- site:crunchbase.com "AI home insurance startup"
+- site:tracxn.com "AI home insurance startup"
+- site:beauhurst.com "AI home insurance startup"
+- site:pitchbook.com "AI home insurance startup"
+- site:seedtable.com "AI home insurance startup"
+- site:theorg.com "AI home insurance startup"
+- site:startupsmagazine.co.uk "AI home insurance startup"
+- site:eu-startups.com "AI home insurance startup"
+- site:sifted.eu "AI home insurance startup"
+- site:angelmatch.com "AI home insurance startup"
+- site:startupblink.com "AI home insurance startup"
+
+### G-FRAUD — Fraud & Financial Security
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- financial fraud protection startup serving US families, seed to Series A, European-founded
+- elder financial abuse fintech serving US families, seed to Series A, European-founded
+- startup that is protect your family from scams (US market)
+- early-stage company: stop financial fraud
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "financial fraud protection startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "financial fraud protection startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "protect your family from scams"
+- site:news.ycombinator.com 'Show HN' "protect your family from scams"
+- site:betalist.com "protect your family from scams"
+- site:indiehackers.com "protect your family from scams"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="fraud detection API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "financial fraud protection startup"
+- site:joinef.com "financial fraud protection startup"
+- site:antler.co "financial fraud protection startup"
+- site:mourocapital.com "financial fraud protection startup"
+- site:plugandplaytechcenter.com "financial fraud protection startup"
+- site:techstars.com "financial fraud protection startup"
+- site:seedcamp.com "financial fraud protection startup"
+- site:notion.vc "financial fraud protection startup"
+- site:indexventures.com "financial fraud protection startup"
+- site:balderton.com "financial fraud protection startup"
+- site:atomico.com "financial fraud protection startup"
+- site:southparkcommons.com "financial fraud protection startup"
+- site:beondeck.com "financial fraud protection startup"
+- site:localglobe.vc "financial fraud protection startup"
+- site:hoxtonventures.com "financial fraud protection startup"
+- site:connectventures.co "financial fraud protection startup"
+- site:adaventures.com "financial fraud protection startup"
+- site:episode1.com "financial fraud protection startup"
+- site:taliscapital.com "financial fraud protection startup"
+- site:stride.vc "financial fraud protection startup"
+- site:partechpartners.com "financial fraud protection startup"
+- site:daphni.com "financial fraud protection startup"
+- site:360cap.vc "financial fraud protection startup"
+- site:unitedventures.it "financial fraud protection startup"
+- site:cherry.vc "financial fraud protection startup"
+- site:earlybird.com "financial fraud protection startup"
+- site:project-a.com "financial fraud protection startup"
+- site:hvcapital.com "financial fraud protection startup"
+- site:lakestar.com "financial fraud protection startup"
+- site:northzone.com "financial fraud protection startup"
+- site:creandum.com "financial fraud protection startup"
+- site:eqtventures.com "financial fraud protection startup"
+- site:byfounders.vc "financial fraud protection startup"
+- site:inventure.fi "financial fraud protection startup"
+- site:frontline.vc "financial fraud protection startup"
+- site:octopusventures.com "financial fraud protection startup"
+- site:qedinvestors.com "financial fraud protection startup"
+- site:ribbitcap.com "financial fraud protection startup"
+- site:anthemis.com "financial fraud protection startup"
+- site:augmentum.vc "financial fraud protection startup"
+- site:speedinvest.com "financial fraud protection startup"
+- site:mosaicventures.com "financial fraud protection startup"
+- site:inovo.vc "financial fraud protection startup"
+- site:otb.vc "financial fraud protection startup"
+- site:czysta3.vc "financial fraud protection startup"
+- site:blackpearls.vc "financial fraud protection startup"
+- site:ffvc.com "financial fraud protection startup"
+- site:innovationnest.com "financial fraud protection startup"
+- site:bitspiration.com "financial fraud protection startup"
+- site:karma.vc "financial fraud protection startup"
+- site:teraventures.com "financial fraud protection startup"
+- site:trind.vc "financial fraud protection startup"
+- site:uavc.eu "financial fraud protection startup"
+- site:changeventures.com "financial fraud protection startup"
+- site:practica.lt "financial fraud protection startup"
+- site:opencirclecapital.com "financial fraud protection startup"
+- site:credoventures.com "financial fraud protection startup"
+- site:reflex.capital "financial fraud protection startup"
+- site:kaya.vc "financial fraud protection startup"
+- site:jtventures.com "financial fraud protection startup"
+- site:dayonecapital.com "financial fraud protection startup"
+- site:hiventures.hu "financial fraud protection startup"
+- site:earlybird.com "financial fraud protection startup"
+- site:3tscapital.com "financial fraud protection startup"
+- site:launchub.com "financial fraud protection startup"
+- site:11.vc "financial fraud protection startup"
+- site:catalystromania.com "financial fraud protection startup"
+- site:earlygame.vc "financial fraud protection startup"
+- site:sc-ventures.com "financial fraud protection startup"
+- site:filrougecapital.com "financial fraud protection startup"
+- site:kfund.vc "financial fraud protection startup"
+- site:samaipata.vc "financial fraud protection startup"
+- site:jme.vc "financial fraud protection startup"
+- site:kiboventures.com "financial fraud protection startup"
+- site:allironventures.com "financial fraud protection startup"
+- site:byndvc.com "financial fraud protection startup"
+- site:faberventures.com "financial fraud protection startup"
+- site:indicocapital.com "financial fraud protection startup"
+- site:mustardseedmaze.com "financial fraud protection startup"
+- site:alliancevc.com "financial fraud protection startup"
+- site:schibstedventures.com "financial fraud protection startup"
+- site:hummingbird-vc.com "financial fraud protection startup"
+- site:volta.ventures "financial fraud protection startup"
+- site:smartfincapital.com "financial fraud protection startup"
+- site:curiosityvc.com "financial fraud protection startup"
+- site:endeit.com "financial fraud protection startup"
+- site:atlanticbridge.com "financial fraud protection startup"
+- site:furthrventures.com "financial fraud protection startup"
+- site:actvc.com "financial fraud protection startup"
+- site:delta.ie "financial fraud protection startup"
+- site:ndrc.ie "financial fraud protection startup"
+- site:exponcapital.com "financial fraud protection startup"
+- site:encevo.lu "financial fraud protection startup"
+- site:luxinnovation.lu "financial fraud protection startup"
+- site:marathon.vc "financial fraud protection startup"
+- site:venturefriends.vc "financial fraud protection startup"
+- site:bigpi.vc "financial fraud protection startup"
+- site:velocity.partners "financial fraud protection startup"
+- site:genesis-investments.com "financial fraud protection startup"
+- site:smrk.vc "financial fraud protection startup"
+- site:roosh.com "financial fraud protection startup"
+- site:aventurescapital.com "financial fraud protection startup"
+- site:horizoncapital.ua "financial fraud protection startup"
+- site:icthub.rs "financial fraud protection startup"
+- site:stardust.capital "financial fraud protection startup"
+- site:crowdberry.eu "financial fraud protection startup"
+- site:neulogy.com "financial fraud protection startup"
+- site:silicongardens.com "financial fraud protection startup"
+- site:brunnur.is "financial fraud protection startup"
+- site:crowberry.is "financial fraud protection startup"
+- site:frumtak.is "financial fraud protection startup"
+- site:feelsgood.capital "financial fraud protection startup"
+- site:33east.com "financial fraud protection startup"
+- site:zgi.lv "financial fraud protection startup"
+- site:middlegame.vc "financial fraud protection startup"
+- site:anamcara.com "financial fraud protection startup"
+- site:aperture.vc "financial fraud protection startup"
+- site:smok.vc "financial fraud protection startup"
+- site:sidventures.com "financial fraud protection startup"
+- site:1991.vc "financial fraud protection startup"
+- site:n1.fund "financial fraud protection startup"
+- site:tilia.vc "financial fraud protection startup"
+- site:anthemis.com "financial fraud protection startup"
+- site:wayra.com "financial fraud protection startup"
+- site:startupwiseguys.com "financial fraud protection startup"
+- site:sequoiacap.com "financial fraud protection startup"
+- site:a16z.com "financial fraud protection startup"
+- site:bvp.com "financial fraud protection startup"
+- site:foundersfund.com "financial fraud protection startup"
+- site:insightpartners.com "financial fraud protection startup"
+- site:innovation.ox.ac.uk "financial fraud protection startup"
+- site:enterprise.cam.ac.uk "financial fraud protection startup"
+- site:imperial.ac.uk "financial fraud protection startup"
+- site:uclb.com "financial fraud protection startup"
+- site:edinburgh-innovations.ed.ac.uk "financial fraud protection startup"
+- site:ethz.ch "financial fraud protection startup"
+- site:epfl-innovationpark.ch "financial fraud protection startup"
+- site:yesdelft.com "financial fraud protection startup"
+- site:unternehmertum.de "financial fraud protection startup"
+- site:karolinskainnovations.ki.se "financial fraud protection startup"
+- site:startupcenter.aalto.fi "financial fraud protection startup"
+- site:skylab.dtu.dk "financial fraud protection startup"
+- site:ucd.ie "financial fraud protection startup"
+- site:tcd.ie "financial fraud protection startup"
+- site:spinout.fyi "financial fraud protection startup"
+- site:taltech.ee "financial fraud protection startup"
+- site:pw.edu.pl "financial fraud protection startup"
+- site:agh.edu.pl "financial fraud protection startup"
+- site:cuip.cuni.cz "financial fraud protection startup"
+- site:cvut.cz "financial fraud protection startup"
+- site:bme.hu "financial fraud protection startup"
+- site:polimi.it "financial fraud protection startup"
+- site:ie.edu "financial fraud protection startup"
+- site:tecnico.ulisboa.pt "financial fraud protection startup"
+- site:slush.org "financial fraud protection startup"
+- site:websummit.com "financial fraud protection startup"
+- site:eic.ec.europa.eu "financial fraud protection startup"
+- site:hello-tomorrow.org "financial fraud protection startup"
+- site:vivatechnology.com "financial fraud protection startup"
+- site:thenextweb.com "financial fraud protection startup"
+- site:techcrunch.com "financial fraud protection startup"
+- site:f6s.com "financial fraud protection startup"
+- site:money2020.com "financial fraud protection startup"
+- site:fintechfutures.com "financial fraud protection startup"
+- site:latitude59.ee "financial fraud protection startup"
+- site:wolvessummit.com "financial fraud protection startup"
+- site:bitsandpretzels.com "financial fraud protection startup"
+- site:techbbq.dk "financial fraud protection startup"
+- site:viennaup.com "financial fraud protection startup"
+- site:southsummit.co "financial fraud protection startup"
+- site:howtoweb.co "financial fraud protection startup"
+- site:piratesummit.com "financial fraud protection startup"
+- site:wellfound.com "financial fraud protection startup"
+- site:f6s.com "financial fraud protection startup"
+- site:dealroom.co "financial fraud protection startup"
+- site:crunchbase.com "financial fraud protection startup"
+- site:tracxn.com "financial fraud protection startup"
+- site:beauhurst.com "financial fraud protection startup"
+- site:pitchbook.com "financial fraud protection startup"
+- site:seedtable.com "financial fraud protection startup"
+- site:theorg.com "financial fraud protection startup"
+- site:startupsmagazine.co.uk "financial fraud protection startup"
+- site:eu-startups.com "financial fraud protection startup"
+- site:sifted.eu "financial fraud protection startup"
+- site:angelmatch.com "financial fraud protection startup"
+- site:startupblink.com "financial fraud protection startup"
+
+### G-SAVE — Novel Saving Mechanisms
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- novel savings startup serving US families, seed to Series A, European-founded
+- behavioural savings fintech serving US families, seed to Series A, European-founded
+- startup that is a new way to save (US market)
+- early-stage company: save without thinking
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "novel savings startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "novel savings startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "a new way to save"
+- site:news.ycombinator.com 'Show HN' "a new way to save"
+- site:betalist.com "a new way to save"
+- site:indiehackers.com "a new way to save"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="savings automation API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "novel savings startup"
+- site:joinef.com "novel savings startup"
+- site:antler.co "novel savings startup"
+- site:mourocapital.com "novel savings startup"
+- site:plugandplaytechcenter.com "novel savings startup"
+- site:techstars.com "novel savings startup"
+- site:seedcamp.com "novel savings startup"
+- site:notion.vc "novel savings startup"
+- site:indexventures.com "novel savings startup"
+- site:balderton.com "novel savings startup"
+- site:atomico.com "novel savings startup"
+- site:southparkcommons.com "novel savings startup"
+- site:beondeck.com "novel savings startup"
+- site:localglobe.vc "novel savings startup"
+- site:hoxtonventures.com "novel savings startup"
+- site:connectventures.co "novel savings startup"
+- site:adaventures.com "novel savings startup"
+- site:episode1.com "novel savings startup"
+- site:taliscapital.com "novel savings startup"
+- site:stride.vc "novel savings startup"
+- site:partechpartners.com "novel savings startup"
+- site:daphni.com "novel savings startup"
+- site:360cap.vc "novel savings startup"
+- site:unitedventures.it "novel savings startup"
+- site:cherry.vc "novel savings startup"
+- site:earlybird.com "novel savings startup"
+- site:project-a.com "novel savings startup"
+- site:hvcapital.com "novel savings startup"
+- site:lakestar.com "novel savings startup"
+- site:northzone.com "novel savings startup"
+- site:creandum.com "novel savings startup"
+- site:eqtventures.com "novel savings startup"
+- site:byfounders.vc "novel savings startup"
+- site:inventure.fi "novel savings startup"
+- site:frontline.vc "novel savings startup"
+- site:octopusventures.com "novel savings startup"
+- site:qedinvestors.com "novel savings startup"
+- site:ribbitcap.com "novel savings startup"
+- site:anthemis.com "novel savings startup"
+- site:augmentum.vc "novel savings startup"
+- site:speedinvest.com "novel savings startup"
+- site:mosaicventures.com "novel savings startup"
+- site:inovo.vc "novel savings startup"
+- site:otb.vc "novel savings startup"
+- site:czysta3.vc "novel savings startup"
+- site:blackpearls.vc "novel savings startup"
+- site:ffvc.com "novel savings startup"
+- site:innovationnest.com "novel savings startup"
+- site:bitspiration.com "novel savings startup"
+- site:karma.vc "novel savings startup"
+- site:teraventures.com "novel savings startup"
+- site:trind.vc "novel savings startup"
+- site:uavc.eu "novel savings startup"
+- site:changeventures.com "novel savings startup"
+- site:practica.lt "novel savings startup"
+- site:opencirclecapital.com "novel savings startup"
+- site:credoventures.com "novel savings startup"
+- site:reflex.capital "novel savings startup"
+- site:kaya.vc "novel savings startup"
+- site:jtventures.com "novel savings startup"
+- site:dayonecapital.com "novel savings startup"
+- site:hiventures.hu "novel savings startup"
+- site:earlybird.com "novel savings startup"
+- site:3tscapital.com "novel savings startup"
+- site:launchub.com "novel savings startup"
+- site:11.vc "novel savings startup"
+- site:catalystromania.com "novel savings startup"
+- site:earlygame.vc "novel savings startup"
+- site:sc-ventures.com "novel savings startup"
+- site:filrougecapital.com "novel savings startup"
+- site:kfund.vc "novel savings startup"
+- site:samaipata.vc "novel savings startup"
+- site:jme.vc "novel savings startup"
+- site:kiboventures.com "novel savings startup"
+- site:allironventures.com "novel savings startup"
+- site:byndvc.com "novel savings startup"
+- site:faberventures.com "novel savings startup"
+- site:indicocapital.com "novel savings startup"
+- site:mustardseedmaze.com "novel savings startup"
+- site:alliancevc.com "novel savings startup"
+- site:schibstedventures.com "novel savings startup"
+- site:hummingbird-vc.com "novel savings startup"
+- site:volta.ventures "novel savings startup"
+- site:smartfincapital.com "novel savings startup"
+- site:curiosityvc.com "novel savings startup"
+- site:endeit.com "novel savings startup"
+- site:atlanticbridge.com "novel savings startup"
+- site:furthrventures.com "novel savings startup"
+- site:actvc.com "novel savings startup"
+- site:delta.ie "novel savings startup"
+- site:ndrc.ie "novel savings startup"
+- site:exponcapital.com "novel savings startup"
+- site:encevo.lu "novel savings startup"
+- site:luxinnovation.lu "novel savings startup"
+- site:marathon.vc "novel savings startup"
+- site:venturefriends.vc "novel savings startup"
+- site:bigpi.vc "novel savings startup"
+- site:velocity.partners "novel savings startup"
+- site:genesis-investments.com "novel savings startup"
+- site:smrk.vc "novel savings startup"
+- site:roosh.com "novel savings startup"
+- site:aventurescapital.com "novel savings startup"
+- site:horizoncapital.ua "novel savings startup"
+- site:icthub.rs "novel savings startup"
+- site:stardust.capital "novel savings startup"
+- site:crowdberry.eu "novel savings startup"
+- site:neulogy.com "novel savings startup"
+- site:silicongardens.com "novel savings startup"
+- site:brunnur.is "novel savings startup"
+- site:crowberry.is "novel savings startup"
+- site:frumtak.is "novel savings startup"
+- site:feelsgood.capital "novel savings startup"
+- site:33east.com "novel savings startup"
+- site:zgi.lv "novel savings startup"
+- site:middlegame.vc "novel savings startup"
+- site:anamcara.com "novel savings startup"
+- site:aperture.vc "novel savings startup"
+- site:smok.vc "novel savings startup"
+- site:sidventures.com "novel savings startup"
+- site:1991.vc "novel savings startup"
+- site:n1.fund "novel savings startup"
+- site:tilia.vc "novel savings startup"
+- site:anthemis.com "novel savings startup"
+- site:wayra.com "novel savings startup"
+- site:startupwiseguys.com "novel savings startup"
+- site:sequoiacap.com "novel savings startup"
+- site:a16z.com "novel savings startup"
+- site:bvp.com "novel savings startup"
+- site:foundersfund.com "novel savings startup"
+- site:insightpartners.com "novel savings startup"
+- site:innovation.ox.ac.uk "novel savings startup"
+- site:enterprise.cam.ac.uk "novel savings startup"
+- site:imperial.ac.uk "novel savings startup"
+- site:uclb.com "novel savings startup"
+- site:edinburgh-innovations.ed.ac.uk "novel savings startup"
+- site:ethz.ch "novel savings startup"
+- site:epfl-innovationpark.ch "novel savings startup"
+- site:yesdelft.com "novel savings startup"
+- site:unternehmertum.de "novel savings startup"
+- site:karolinskainnovations.ki.se "novel savings startup"
+- site:startupcenter.aalto.fi "novel savings startup"
+- site:skylab.dtu.dk "novel savings startup"
+- site:ucd.ie "novel savings startup"
+- site:tcd.ie "novel savings startup"
+- site:spinout.fyi "novel savings startup"
+- site:taltech.ee "novel savings startup"
+- site:pw.edu.pl "novel savings startup"
+- site:agh.edu.pl "novel savings startup"
+- site:cuip.cuni.cz "novel savings startup"
+- site:cvut.cz "novel savings startup"
+- site:bme.hu "novel savings startup"
+- site:polimi.it "novel savings startup"
+- site:ie.edu "novel savings startup"
+- site:tecnico.ulisboa.pt "novel savings startup"
+- site:slush.org "novel savings startup"
+- site:websummit.com "novel savings startup"
+- site:eic.ec.europa.eu "novel savings startup"
+- site:hello-tomorrow.org "novel savings startup"
+- site:vivatechnology.com "novel savings startup"
+- site:thenextweb.com "novel savings startup"
+- site:techcrunch.com "novel savings startup"
+- site:f6s.com "novel savings startup"
+- site:money2020.com "novel savings startup"
+- site:fintechfutures.com "novel savings startup"
+- site:latitude59.ee "novel savings startup"
+- site:wolvessummit.com "novel savings startup"
+- site:bitsandpretzels.com "novel savings startup"
+- site:techbbq.dk "novel savings startup"
+- site:viennaup.com "novel savings startup"
+- site:southsummit.co "novel savings startup"
+- site:howtoweb.co "novel savings startup"
+- site:piratesummit.com "novel savings startup"
+- site:wellfound.com "novel savings startup"
+- site:f6s.com "novel savings startup"
+- site:dealroom.co "novel savings startup"
+- site:crunchbase.com "novel savings startup"
+- site:tracxn.com "novel savings startup"
+- site:beauhurst.com "novel savings startup"
+- site:pitchbook.com "novel savings startup"
+- site:seedtable.com "novel savings startup"
+- site:theorg.com "novel savings startup"
+- site:startupsmagazine.co.uk "novel savings startup"
+- site:eu-startups.com "novel savings startup"
+- site:sifted.eu "novel savings startup"
+- site:angelmatch.com "novel savings startup"
+- site:startupblink.com "novel savings startup"
+
+### G-DRAWDOWN — Tax-Aware Drawdown
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- retirement drawdown startup serving US families, seed to Series A, European-founded
+- decumulation fintech serving US families, seed to Series A, European-founded
+- startup that is spend down tax-efficiently (US market)
+- early-stage company: retirement withdrawal optimizer
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "retirement drawdown startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "retirement drawdown startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "spend down tax-efficiently"
+- site:news.ycombinator.com 'Show HN' "spend down tax-efficiently"
+- site:betalist.com "spend down tax-efficiently"
+- site:indiehackers.com "spend down tax-efficiently"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="decumulation API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "retirement drawdown startup"
+- site:joinef.com "retirement drawdown startup"
+- site:antler.co "retirement drawdown startup"
+- site:mourocapital.com "retirement drawdown startup"
+- site:plugandplaytechcenter.com "retirement drawdown startup"
+- site:techstars.com "retirement drawdown startup"
+- site:seedcamp.com "retirement drawdown startup"
+- site:notion.vc "retirement drawdown startup"
+- site:indexventures.com "retirement drawdown startup"
+- site:balderton.com "retirement drawdown startup"
+- site:atomico.com "retirement drawdown startup"
+- site:southparkcommons.com "retirement drawdown startup"
+- site:beondeck.com "retirement drawdown startup"
+- site:localglobe.vc "retirement drawdown startup"
+- site:hoxtonventures.com "retirement drawdown startup"
+- site:connectventures.co "retirement drawdown startup"
+- site:adaventures.com "retirement drawdown startup"
+- site:episode1.com "retirement drawdown startup"
+- site:taliscapital.com "retirement drawdown startup"
+- site:stride.vc "retirement drawdown startup"
+- site:partechpartners.com "retirement drawdown startup"
+- site:daphni.com "retirement drawdown startup"
+- site:360cap.vc "retirement drawdown startup"
+- site:unitedventures.it "retirement drawdown startup"
+- site:cherry.vc "retirement drawdown startup"
+- site:earlybird.com "retirement drawdown startup"
+- site:project-a.com "retirement drawdown startup"
+- site:hvcapital.com "retirement drawdown startup"
+- site:lakestar.com "retirement drawdown startup"
+- site:northzone.com "retirement drawdown startup"
+- site:creandum.com "retirement drawdown startup"
+- site:eqtventures.com "retirement drawdown startup"
+- site:byfounders.vc "retirement drawdown startup"
+- site:inventure.fi "retirement drawdown startup"
+- site:frontline.vc "retirement drawdown startup"
+- site:octopusventures.com "retirement drawdown startup"
+- site:qedinvestors.com "retirement drawdown startup"
+- site:ribbitcap.com "retirement drawdown startup"
+- site:anthemis.com "retirement drawdown startup"
+- site:augmentum.vc "retirement drawdown startup"
+- site:speedinvest.com "retirement drawdown startup"
+- site:mosaicventures.com "retirement drawdown startup"
+- site:inovo.vc "retirement drawdown startup"
+- site:otb.vc "retirement drawdown startup"
+- site:czysta3.vc "retirement drawdown startup"
+- site:blackpearls.vc "retirement drawdown startup"
+- site:ffvc.com "retirement drawdown startup"
+- site:innovationnest.com "retirement drawdown startup"
+- site:bitspiration.com "retirement drawdown startup"
+- site:karma.vc "retirement drawdown startup"
+- site:teraventures.com "retirement drawdown startup"
+- site:trind.vc "retirement drawdown startup"
+- site:uavc.eu "retirement drawdown startup"
+- site:changeventures.com "retirement drawdown startup"
+- site:practica.lt "retirement drawdown startup"
+- site:opencirclecapital.com "retirement drawdown startup"
+- site:credoventures.com "retirement drawdown startup"
+- site:reflex.capital "retirement drawdown startup"
+- site:kaya.vc "retirement drawdown startup"
+- site:jtventures.com "retirement drawdown startup"
+- site:dayonecapital.com "retirement drawdown startup"
+- site:hiventures.hu "retirement drawdown startup"
+- site:earlybird.com "retirement drawdown startup"
+- site:3tscapital.com "retirement drawdown startup"
+- site:launchub.com "retirement drawdown startup"
+- site:11.vc "retirement drawdown startup"
+- site:catalystromania.com "retirement drawdown startup"
+- site:earlygame.vc "retirement drawdown startup"
+- site:sc-ventures.com "retirement drawdown startup"
+- site:filrougecapital.com "retirement drawdown startup"
+- site:kfund.vc "retirement drawdown startup"
+- site:samaipata.vc "retirement drawdown startup"
+- site:jme.vc "retirement drawdown startup"
+- site:kiboventures.com "retirement drawdown startup"
+- site:allironventures.com "retirement drawdown startup"
+- site:byndvc.com "retirement drawdown startup"
+- site:faberventures.com "retirement drawdown startup"
+- site:indicocapital.com "retirement drawdown startup"
+- site:mustardseedmaze.com "retirement drawdown startup"
+- site:alliancevc.com "retirement drawdown startup"
+- site:schibstedventures.com "retirement drawdown startup"
+- site:hummingbird-vc.com "retirement drawdown startup"
+- site:volta.ventures "retirement drawdown startup"
+- site:smartfincapital.com "retirement drawdown startup"
+- site:curiosityvc.com "retirement drawdown startup"
+- site:endeit.com "retirement drawdown startup"
+- site:atlanticbridge.com "retirement drawdown startup"
+- site:furthrventures.com "retirement drawdown startup"
+- site:actvc.com "retirement drawdown startup"
+- site:delta.ie "retirement drawdown startup"
+- site:ndrc.ie "retirement drawdown startup"
+- site:exponcapital.com "retirement drawdown startup"
+- site:encevo.lu "retirement drawdown startup"
+- site:luxinnovation.lu "retirement drawdown startup"
+- site:marathon.vc "retirement drawdown startup"
+- site:venturefriends.vc "retirement drawdown startup"
+- site:bigpi.vc "retirement drawdown startup"
+- site:velocity.partners "retirement drawdown startup"
+- site:genesis-investments.com "retirement drawdown startup"
+- site:smrk.vc "retirement drawdown startup"
+- site:roosh.com "retirement drawdown startup"
+- site:aventurescapital.com "retirement drawdown startup"
+- site:horizoncapital.ua "retirement drawdown startup"
+- site:icthub.rs "retirement drawdown startup"
+- site:stardust.capital "retirement drawdown startup"
+- site:crowdberry.eu "retirement drawdown startup"
+- site:neulogy.com "retirement drawdown startup"
+- site:silicongardens.com "retirement drawdown startup"
+- site:brunnur.is "retirement drawdown startup"
+- site:crowberry.is "retirement drawdown startup"
+- site:frumtak.is "retirement drawdown startup"
+- site:feelsgood.capital "retirement drawdown startup"
+- site:33east.com "retirement drawdown startup"
+- site:zgi.lv "retirement drawdown startup"
+- site:middlegame.vc "retirement drawdown startup"
+- site:anamcara.com "retirement drawdown startup"
+- site:aperture.vc "retirement drawdown startup"
+- site:smok.vc "retirement drawdown startup"
+- site:sidventures.com "retirement drawdown startup"
+- site:1991.vc "retirement drawdown startup"
+- site:n1.fund "retirement drawdown startup"
+- site:tilia.vc "retirement drawdown startup"
+- site:anthemis.com "retirement drawdown startup"
+- site:wayra.com "retirement drawdown startup"
+- site:startupwiseguys.com "retirement drawdown startup"
+- site:sequoiacap.com "retirement drawdown startup"
+- site:a16z.com "retirement drawdown startup"
+- site:bvp.com "retirement drawdown startup"
+- site:foundersfund.com "retirement drawdown startup"
+- site:insightpartners.com "retirement drawdown startup"
+- site:innovation.ox.ac.uk "retirement drawdown startup"
+- site:enterprise.cam.ac.uk "retirement drawdown startup"
+- site:imperial.ac.uk "retirement drawdown startup"
+- site:uclb.com "retirement drawdown startup"
+- site:edinburgh-innovations.ed.ac.uk "retirement drawdown startup"
+- site:ethz.ch "retirement drawdown startup"
+- site:epfl-innovationpark.ch "retirement drawdown startup"
+- site:yesdelft.com "retirement drawdown startup"
+- site:unternehmertum.de "retirement drawdown startup"
+- site:karolinskainnovations.ki.se "retirement drawdown startup"
+- site:startupcenter.aalto.fi "retirement drawdown startup"
+- site:skylab.dtu.dk "retirement drawdown startup"
+- site:ucd.ie "retirement drawdown startup"
+- site:tcd.ie "retirement drawdown startup"
+- site:spinout.fyi "retirement drawdown startup"
+- site:taltech.ee "retirement drawdown startup"
+- site:pw.edu.pl "retirement drawdown startup"
+- site:agh.edu.pl "retirement drawdown startup"
+- site:cuip.cuni.cz "retirement drawdown startup"
+- site:cvut.cz "retirement drawdown startup"
+- site:bme.hu "retirement drawdown startup"
+- site:polimi.it "retirement drawdown startup"
+- site:ie.edu "retirement drawdown startup"
+- site:tecnico.ulisboa.pt "retirement drawdown startup"
+- site:slush.org "retirement drawdown startup"
+- site:websummit.com "retirement drawdown startup"
+- site:eic.ec.europa.eu "retirement drawdown startup"
+- site:hello-tomorrow.org "retirement drawdown startup"
+- site:vivatechnology.com "retirement drawdown startup"
+- site:thenextweb.com "retirement drawdown startup"
+- site:techcrunch.com "retirement drawdown startup"
+- site:f6s.com "retirement drawdown startup"
+- site:money2020.com "retirement drawdown startup"
+- site:fintechfutures.com "retirement drawdown startup"
+- site:latitude59.ee "retirement drawdown startup"
+- site:wolvessummit.com "retirement drawdown startup"
+- site:bitsandpretzels.com "retirement drawdown startup"
+- site:techbbq.dk "retirement drawdown startup"
+- site:viennaup.com "retirement drawdown startup"
+- site:southsummit.co "retirement drawdown startup"
+- site:howtoweb.co "retirement drawdown startup"
+- site:piratesummit.com "retirement drawdown startup"
+- site:wellfound.com "retirement drawdown startup"
+- site:f6s.com "retirement drawdown startup"
+- site:dealroom.co "retirement drawdown startup"
+- site:crunchbase.com "retirement drawdown startup"
+- site:tracxn.com "retirement drawdown startup"
+- site:beauhurst.com "retirement drawdown startup"
+- site:pitchbook.com "retirement drawdown startup"
+- site:seedtable.com "retirement drawdown startup"
+- site:theorg.com "retirement drawdown startup"
+- site:startupsmagazine.co.uk "retirement drawdown startup"
+- site:eu-startups.com "retirement drawdown startup"
+- site:sifted.eu "retirement drawdown startup"
+- site:angelmatch.com "retirement drawdown startup"
+- site:startupblink.com "retirement drawdown startup"
+
+### G-PURCHASE — Major-Purchase Decisions
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- major purchase decision startup serving US families, seed to Series A, European-founded
+- rent vs buy fintech serving US families, seed to Series A, European-founded
+- startup that is buy or lease (US market)
+- early-stage company: rent vs buy that acts
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "major purchase decision startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "major purchase decision startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "buy or lease"
+- site:news.ycombinator.com 'Show HN' "buy or lease"
+- site:betalist.com "buy or lease"
+- site:indiehackers.com "buy or lease"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="purchase decision API pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "major purchase decision startup"
+- site:joinef.com "major purchase decision startup"
+- site:antler.co "major purchase decision startup"
+- site:mourocapital.com "major purchase decision startup"
+- site:plugandplaytechcenter.com "major purchase decision startup"
+- site:techstars.com "major purchase decision startup"
+- site:seedcamp.com "major purchase decision startup"
+- site:notion.vc "major purchase decision startup"
+- site:indexventures.com "major purchase decision startup"
+- site:balderton.com "major purchase decision startup"
+- site:atomico.com "major purchase decision startup"
+- site:southparkcommons.com "major purchase decision startup"
+- site:beondeck.com "major purchase decision startup"
+- site:localglobe.vc "major purchase decision startup"
+- site:hoxtonventures.com "major purchase decision startup"
+- site:connectventures.co "major purchase decision startup"
+- site:adaventures.com "major purchase decision startup"
+- site:episode1.com "major purchase decision startup"
+- site:taliscapital.com "major purchase decision startup"
+- site:stride.vc "major purchase decision startup"
+- site:partechpartners.com "major purchase decision startup"
+- site:daphni.com "major purchase decision startup"
+- site:360cap.vc "major purchase decision startup"
+- site:unitedventures.it "major purchase decision startup"
+- site:cherry.vc "major purchase decision startup"
+- site:earlybird.com "major purchase decision startup"
+- site:project-a.com "major purchase decision startup"
+- site:hvcapital.com "major purchase decision startup"
+- site:lakestar.com "major purchase decision startup"
+- site:northzone.com "major purchase decision startup"
+- site:creandum.com "major purchase decision startup"
+- site:eqtventures.com "major purchase decision startup"
+- site:byfounders.vc "major purchase decision startup"
+- site:inventure.fi "major purchase decision startup"
+- site:frontline.vc "major purchase decision startup"
+- site:octopusventures.com "major purchase decision startup"
+- site:qedinvestors.com "major purchase decision startup"
+- site:ribbitcap.com "major purchase decision startup"
+- site:anthemis.com "major purchase decision startup"
+- site:augmentum.vc "major purchase decision startup"
+- site:speedinvest.com "major purchase decision startup"
+- site:mosaicventures.com "major purchase decision startup"
+- site:inovo.vc "major purchase decision startup"
+- site:otb.vc "major purchase decision startup"
+- site:czysta3.vc "major purchase decision startup"
+- site:blackpearls.vc "major purchase decision startup"
+- site:ffvc.com "major purchase decision startup"
+- site:innovationnest.com "major purchase decision startup"
+- site:bitspiration.com "major purchase decision startup"
+- site:karma.vc "major purchase decision startup"
+- site:teraventures.com "major purchase decision startup"
+- site:trind.vc "major purchase decision startup"
+- site:uavc.eu "major purchase decision startup"
+- site:changeventures.com "major purchase decision startup"
+- site:practica.lt "major purchase decision startup"
+- site:opencirclecapital.com "major purchase decision startup"
+- site:credoventures.com "major purchase decision startup"
+- site:reflex.capital "major purchase decision startup"
+- site:kaya.vc "major purchase decision startup"
+- site:jtventures.com "major purchase decision startup"
+- site:dayonecapital.com "major purchase decision startup"
+- site:hiventures.hu "major purchase decision startup"
+- site:earlybird.com "major purchase decision startup"
+- site:3tscapital.com "major purchase decision startup"
+- site:launchub.com "major purchase decision startup"
+- site:11.vc "major purchase decision startup"
+- site:catalystromania.com "major purchase decision startup"
+- site:earlygame.vc "major purchase decision startup"
+- site:sc-ventures.com "major purchase decision startup"
+- site:filrougecapital.com "major purchase decision startup"
+- site:kfund.vc "major purchase decision startup"
+- site:samaipata.vc "major purchase decision startup"
+- site:jme.vc "major purchase decision startup"
+- site:kiboventures.com "major purchase decision startup"
+- site:allironventures.com "major purchase decision startup"
+- site:byndvc.com "major purchase decision startup"
+- site:faberventures.com "major purchase decision startup"
+- site:indicocapital.com "major purchase decision startup"
+- site:mustardseedmaze.com "major purchase decision startup"
+- site:alliancevc.com "major purchase decision startup"
+- site:schibstedventures.com "major purchase decision startup"
+- site:hummingbird-vc.com "major purchase decision startup"
+- site:volta.ventures "major purchase decision startup"
+- site:smartfincapital.com "major purchase decision startup"
+- site:curiosityvc.com "major purchase decision startup"
+- site:endeit.com "major purchase decision startup"
+- site:atlanticbridge.com "major purchase decision startup"
+- site:furthrventures.com "major purchase decision startup"
+- site:actvc.com "major purchase decision startup"
+- site:delta.ie "major purchase decision startup"
+- site:ndrc.ie "major purchase decision startup"
+- site:exponcapital.com "major purchase decision startup"
+- site:encevo.lu "major purchase decision startup"
+- site:luxinnovation.lu "major purchase decision startup"
+- site:marathon.vc "major purchase decision startup"
+- site:venturefriends.vc "major purchase decision startup"
+- site:bigpi.vc "major purchase decision startup"
+- site:velocity.partners "major purchase decision startup"
+- site:genesis-investments.com "major purchase decision startup"
+- site:smrk.vc "major purchase decision startup"
+- site:roosh.com "major purchase decision startup"
+- site:aventurescapital.com "major purchase decision startup"
+- site:horizoncapital.ua "major purchase decision startup"
+- site:icthub.rs "major purchase decision startup"
+- site:stardust.capital "major purchase decision startup"
+- site:crowdberry.eu "major purchase decision startup"
+- site:neulogy.com "major purchase decision startup"
+- site:silicongardens.com "major purchase decision startup"
+- site:brunnur.is "major purchase decision startup"
+- site:crowberry.is "major purchase decision startup"
+- site:frumtak.is "major purchase decision startup"
+- site:feelsgood.capital "major purchase decision startup"
+- site:33east.com "major purchase decision startup"
+- site:zgi.lv "major purchase decision startup"
+- site:middlegame.vc "major purchase decision startup"
+- site:anamcara.com "major purchase decision startup"
+- site:aperture.vc "major purchase decision startup"
+- site:smok.vc "major purchase decision startup"
+- site:sidventures.com "major purchase decision startup"
+- site:1991.vc "major purchase decision startup"
+- site:n1.fund "major purchase decision startup"
+- site:tilia.vc "major purchase decision startup"
+- site:anthemis.com "major purchase decision startup"
+- site:wayra.com "major purchase decision startup"
+- site:startupwiseguys.com "major purchase decision startup"
+- site:sequoiacap.com "major purchase decision startup"
+- site:a16z.com "major purchase decision startup"
+- site:bvp.com "major purchase decision startup"
+- site:foundersfund.com "major purchase decision startup"
+- site:insightpartners.com "major purchase decision startup"
+- site:innovation.ox.ac.uk "major purchase decision startup"
+- site:enterprise.cam.ac.uk "major purchase decision startup"
+- site:imperial.ac.uk "major purchase decision startup"
+- site:uclb.com "major purchase decision startup"
+- site:edinburgh-innovations.ed.ac.uk "major purchase decision startup"
+- site:ethz.ch "major purchase decision startup"
+- site:epfl-innovationpark.ch "major purchase decision startup"
+- site:yesdelft.com "major purchase decision startup"
+- site:unternehmertum.de "major purchase decision startup"
+- site:karolinskainnovations.ki.se "major purchase decision startup"
+- site:startupcenter.aalto.fi "major purchase decision startup"
+- site:skylab.dtu.dk "major purchase decision startup"
+- site:ucd.ie "major purchase decision startup"
+- site:tcd.ie "major purchase decision startup"
+- site:spinout.fyi "major purchase decision startup"
+- site:taltech.ee "major purchase decision startup"
+- site:pw.edu.pl "major purchase decision startup"
+- site:agh.edu.pl "major purchase decision startup"
+- site:cuip.cuni.cz "major purchase decision startup"
+- site:cvut.cz "major purchase decision startup"
+- site:bme.hu "major purchase decision startup"
+- site:polimi.it "major purchase decision startup"
+- site:ie.edu "major purchase decision startup"
+- site:tecnico.ulisboa.pt "major purchase decision startup"
+- site:slush.org "major purchase decision startup"
+- site:websummit.com "major purchase decision startup"
+- site:eic.ec.europa.eu "major purchase decision startup"
+- site:hello-tomorrow.org "major purchase decision startup"
+- site:vivatechnology.com "major purchase decision startup"
+- site:thenextweb.com "major purchase decision startup"
+- site:techcrunch.com "major purchase decision startup"
+- site:f6s.com "major purchase decision startup"
+- site:money2020.com "major purchase decision startup"
+- site:fintechfutures.com "major purchase decision startup"
+- site:latitude59.ee "major purchase decision startup"
+- site:wolvessummit.com "major purchase decision startup"
+- site:bitsandpretzels.com "major purchase decision startup"
+- site:techbbq.dk "major purchase decision startup"
+- site:viennaup.com "major purchase decision startup"
+- site:southsummit.co "major purchase decision startup"
+- site:howtoweb.co "major purchase decision startup"
+- site:piratesummit.com "major purchase decision startup"
+- site:wellfound.com "major purchase decision startup"
+- site:f6s.com "major purchase decision startup"
+- site:dealroom.co "major purchase decision startup"
+- site:crunchbase.com "major purchase decision startup"
+- site:tracxn.com "major purchase decision startup"
+- site:beauhurst.com "major purchase decision startup"
+- site:pitchbook.com "major purchase decision startup"
+- site:seedtable.com "major purchase decision startup"
+- site:theorg.com "major purchase decision startup"
+- site:startupsmagazine.co.uk "major purchase decision startup"
+- site:eu-startups.com "major purchase decision startup"
+- site:sifted.eu "major purchase decision startup"
+- site:angelmatch.com "major purchase decision startup"
+- site:startupblink.com "major purchase decision startup"
+
+### G-CONSENT — Consent & Permissions
+*Team: studio | geo: us-market-europe-supply | bonus: +10*
+
+#### Layer 1a — Exa entity discovery (natural language)
+- family financial permissions startup serving US families, seed to Series A, European-founded
+- delegated financial access fintech serving US families, seed to Series A, European-founded
+- startup that is let family act on your behalf safely (US market)
+- early-stage company: scoped financial permissions
+#### Layer 1b — WebSearch targeted outlets (site:)
+- site:fintech.global "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:sifted.eu "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techcrunch.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:eu-startups.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconangle.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:tech.eu "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:finextra.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:pymnts.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:techfundingnews.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:news.crunchbase.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:mamstartup.pl "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:150sec.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:therecursive.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:siliconrepublic.com "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:paperjam.lu "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:ain.ua "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- site:startit.rs "family financial permissions startup" -crypto -DeFi -blockchain -web3 -NFT -token
+- (site:fintechfutures.com OR site:theinformation.com OR site:maddyness.com OR site:fnlondon.com OR site:risk.net OR site:wealthmanagement.com OR site:bankingtech.com OR site:finews.com) "family financial permissions startup"
+#### Layer 2 — Product launches (WebSearch)
+- site:producthunt.com "let family act on your behalf safely"
+- site:news.ycombinator.com 'Show HN' "let family act on your behalf safely"
+- site:betalist.com "let family act on your behalf safely"
+- site:indiehackers.com "let family act on your behalf safely"
+#### Layer 3 — Technical artifacts (GitHub MCP)
+- mcp__github__search_repositories q="financial delegation API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="consent management SDK pushed:>2026-03-22" sort=updated
+#### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
+- site:ycombinator.com "family financial permissions startup"
+- site:joinef.com "family financial permissions startup"
+- site:antler.co "family financial permissions startup"
+- site:mourocapital.com "family financial permissions startup"
+- site:plugandplaytechcenter.com "family financial permissions startup"
+- site:techstars.com "family financial permissions startup"
+- site:seedcamp.com "family financial permissions startup"
+- site:notion.vc "family financial permissions startup"
+- site:indexventures.com "family financial permissions startup"
+- site:balderton.com "family financial permissions startup"
+- site:atomico.com "family financial permissions startup"
+- site:southparkcommons.com "family financial permissions startup"
+- site:beondeck.com "family financial permissions startup"
+- site:localglobe.vc "family financial permissions startup"
+- site:hoxtonventures.com "family financial permissions startup"
+- site:connectventures.co "family financial permissions startup"
+- site:adaventures.com "family financial permissions startup"
+- site:episode1.com "family financial permissions startup"
+- site:taliscapital.com "family financial permissions startup"
+- site:stride.vc "family financial permissions startup"
+- site:partechpartners.com "family financial permissions startup"
+- site:daphni.com "family financial permissions startup"
+- site:360cap.vc "family financial permissions startup"
+- site:unitedventures.it "family financial permissions startup"
+- site:cherry.vc "family financial permissions startup"
+- site:earlybird.com "family financial permissions startup"
+- site:project-a.com "family financial permissions startup"
+- site:hvcapital.com "family financial permissions startup"
+- site:lakestar.com "family financial permissions startup"
+- site:northzone.com "family financial permissions startup"
+- site:creandum.com "family financial permissions startup"
+- site:eqtventures.com "family financial permissions startup"
+- site:byfounders.vc "family financial permissions startup"
+- site:inventure.fi "family financial permissions startup"
+- site:frontline.vc "family financial permissions startup"
+- site:octopusventures.com "family financial permissions startup"
+- site:qedinvestors.com "family financial permissions startup"
+- site:ribbitcap.com "family financial permissions startup"
+- site:anthemis.com "family financial permissions startup"
+- site:augmentum.vc "family financial permissions startup"
+- site:speedinvest.com "family financial permissions startup"
+- site:mosaicventures.com "family financial permissions startup"
+- site:inovo.vc "family financial permissions startup"
+- site:otb.vc "family financial permissions startup"
+- site:czysta3.vc "family financial permissions startup"
+- site:blackpearls.vc "family financial permissions startup"
+- site:ffvc.com "family financial permissions startup"
+- site:innovationnest.com "family financial permissions startup"
+- site:bitspiration.com "family financial permissions startup"
+- site:karma.vc "family financial permissions startup"
+- site:teraventures.com "family financial permissions startup"
+- site:trind.vc "family financial permissions startup"
+- site:uavc.eu "family financial permissions startup"
+- site:changeventures.com "family financial permissions startup"
+- site:practica.lt "family financial permissions startup"
+- site:opencirclecapital.com "family financial permissions startup"
+- site:credoventures.com "family financial permissions startup"
+- site:reflex.capital "family financial permissions startup"
+- site:kaya.vc "family financial permissions startup"
+- site:jtventures.com "family financial permissions startup"
+- site:dayonecapital.com "family financial permissions startup"
+- site:hiventures.hu "family financial permissions startup"
+- site:earlybird.com "family financial permissions startup"
+- site:3tscapital.com "family financial permissions startup"
+- site:launchub.com "family financial permissions startup"
+- site:11.vc "family financial permissions startup"
+- site:catalystromania.com "family financial permissions startup"
+- site:earlygame.vc "family financial permissions startup"
+- site:sc-ventures.com "family financial permissions startup"
+- site:filrougecapital.com "family financial permissions startup"
+- site:kfund.vc "family financial permissions startup"
+- site:samaipata.vc "family financial permissions startup"
+- site:jme.vc "family financial permissions startup"
+- site:kiboventures.com "family financial permissions startup"
+- site:allironventures.com "family financial permissions startup"
+- site:byndvc.com "family financial permissions startup"
+- site:faberventures.com "family financial permissions startup"
+- site:indicocapital.com "family financial permissions startup"
+- site:mustardseedmaze.com "family financial permissions startup"
+- site:alliancevc.com "family financial permissions startup"
+- site:schibstedventures.com "family financial permissions startup"
+- site:hummingbird-vc.com "family financial permissions startup"
+- site:volta.ventures "family financial permissions startup"
+- site:smartfincapital.com "family financial permissions startup"
+- site:curiosityvc.com "family financial permissions startup"
+- site:endeit.com "family financial permissions startup"
+- site:atlanticbridge.com "family financial permissions startup"
+- site:furthrventures.com "family financial permissions startup"
+- site:actvc.com "family financial permissions startup"
+- site:delta.ie "family financial permissions startup"
+- site:ndrc.ie "family financial permissions startup"
+- site:exponcapital.com "family financial permissions startup"
+- site:encevo.lu "family financial permissions startup"
+- site:luxinnovation.lu "family financial permissions startup"
+- site:marathon.vc "family financial permissions startup"
+- site:venturefriends.vc "family financial permissions startup"
+- site:bigpi.vc "family financial permissions startup"
+- site:velocity.partners "family financial permissions startup"
+- site:genesis-investments.com "family financial permissions startup"
+- site:smrk.vc "family financial permissions startup"
+- site:roosh.com "family financial permissions startup"
+- site:aventurescapital.com "family financial permissions startup"
+- site:horizoncapital.ua "family financial permissions startup"
+- site:icthub.rs "family financial permissions startup"
+- site:stardust.capital "family financial permissions startup"
+- site:crowdberry.eu "family financial permissions startup"
+- site:neulogy.com "family financial permissions startup"
+- site:silicongardens.com "family financial permissions startup"
+- site:brunnur.is "family financial permissions startup"
+- site:crowberry.is "family financial permissions startup"
+- site:frumtak.is "family financial permissions startup"
+- site:feelsgood.capital "family financial permissions startup"
+- site:33east.com "family financial permissions startup"
+- site:zgi.lv "family financial permissions startup"
+- site:middlegame.vc "family financial permissions startup"
+- site:anamcara.com "family financial permissions startup"
+- site:aperture.vc "family financial permissions startup"
+- site:smok.vc "family financial permissions startup"
+- site:sidventures.com "family financial permissions startup"
+- site:1991.vc "family financial permissions startup"
+- site:n1.fund "family financial permissions startup"
+- site:tilia.vc "family financial permissions startup"
+- site:anthemis.com "family financial permissions startup"
+- site:wayra.com "family financial permissions startup"
+- site:startupwiseguys.com "family financial permissions startup"
+- site:sequoiacap.com "family financial permissions startup"
+- site:a16z.com "family financial permissions startup"
+- site:bvp.com "family financial permissions startup"
+- site:foundersfund.com "family financial permissions startup"
+- site:insightpartners.com "family financial permissions startup"
+- site:innovation.ox.ac.uk "family financial permissions startup"
+- site:enterprise.cam.ac.uk "family financial permissions startup"
+- site:imperial.ac.uk "family financial permissions startup"
+- site:uclb.com "family financial permissions startup"
+- site:edinburgh-innovations.ed.ac.uk "family financial permissions startup"
+- site:ethz.ch "family financial permissions startup"
+- site:epfl-innovationpark.ch "family financial permissions startup"
+- site:yesdelft.com "family financial permissions startup"
+- site:unternehmertum.de "family financial permissions startup"
+- site:karolinskainnovations.ki.se "family financial permissions startup"
+- site:startupcenter.aalto.fi "family financial permissions startup"
+- site:skylab.dtu.dk "family financial permissions startup"
+- site:ucd.ie "family financial permissions startup"
+- site:tcd.ie "family financial permissions startup"
+- site:spinout.fyi "family financial permissions startup"
+- site:taltech.ee "family financial permissions startup"
+- site:pw.edu.pl "family financial permissions startup"
+- site:agh.edu.pl "family financial permissions startup"
+- site:cuip.cuni.cz "family financial permissions startup"
+- site:cvut.cz "family financial permissions startup"
+- site:bme.hu "family financial permissions startup"
+- site:polimi.it "family financial permissions startup"
+- site:ie.edu "family financial permissions startup"
+- site:tecnico.ulisboa.pt "family financial permissions startup"
+- site:slush.org "family financial permissions startup"
+- site:websummit.com "family financial permissions startup"
+- site:eic.ec.europa.eu "family financial permissions startup"
+- site:hello-tomorrow.org "family financial permissions startup"
+- site:vivatechnology.com "family financial permissions startup"
+- site:thenextweb.com "family financial permissions startup"
+- site:techcrunch.com "family financial permissions startup"
+- site:f6s.com "family financial permissions startup"
+- site:money2020.com "family financial permissions startup"
+- site:fintechfutures.com "family financial permissions startup"
+- site:latitude59.ee "family financial permissions startup"
+- site:wolvessummit.com "family financial permissions startup"
+- site:bitsandpretzels.com "family financial permissions startup"
+- site:techbbq.dk "family financial permissions startup"
+- site:viennaup.com "family financial permissions startup"
+- site:southsummit.co "family financial permissions startup"
+- site:howtoweb.co "family financial permissions startup"
+- site:piratesummit.com "family financial permissions startup"
+- site:wellfound.com "family financial permissions startup"
+- site:f6s.com "family financial permissions startup"
+- site:dealroom.co "family financial permissions startup"
+- site:crunchbase.com "family financial permissions startup"
+- site:tracxn.com "family financial permissions startup"
+- site:beauhurst.com "family financial permissions startup"
+- site:pitchbook.com "family financial permissions startup"
+- site:seedtable.com "family financial permissions startup"
+- site:theorg.com "family financial permissions startup"
+- site:startupsmagazine.co.uk "family financial permissions startup"
+- site:eu-startups.com "family financial permissions startup"
+- site:sifted.eu "family financial permissions startup"
+- site:angelmatch.com "family financial permissions startup"
+- site:startupblink.com "family financial permissions startup"
+
 
 ## PLATFORM INFRASTRUCTURE
 
 ### P1 — Agent Orchestration
-*Team: greens | geo: europe-first | bonus: +0 | status: filled*
+*Team: greens | geo: europe-first | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - multi-agent orchestration startup seed to Series A, Europe
@@ -4951,8 +8726,8 @@
 - site:betalist.com "multi-agent framework"
 - site:indiehackers.com "multi-agent framework"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="multi-agent orchestration github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="agent workflow SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="multi-agent orchestration github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="agent workflow SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "multi-agent orchestration startup"
 - site:joinef.com "multi-agent orchestration startup"
@@ -5142,7 +8917,7 @@
 - site:startupblink.com "multi-agent orchestration startup"
 
 ### P2 — AI Safety & Guardrails
-*Team: greens | geo: europe-first | bonus: +0 | status: partial*
+*Team: greens | geo: europe-first | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI agent safety startup seed to Series A, Europe
@@ -5174,8 +8949,8 @@
 - site:betalist.com "agent guardrails SDK"
 - site:indiehackers.com "agent guardrails SDK"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent safety SDK github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="guardrails python pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent safety SDK github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="guardrails python pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI agent safety startup"
 - site:joinef.com "AI agent safety startup"
@@ -5365,7 +9140,7 @@
 - site:startupblink.com "AI agent safety startup"
 
 ### P3 — Pre-Trade Compliance Agent
-*Team: greens | geo: europe-first | bonus: +20 | status: market-gap*
+*Team: greens | geo: europe-first | bonus: +20*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - pre-trade compliance AI startup seed to Series A, Europe
@@ -5397,8 +9172,8 @@
 - site:betalist.com "pre-trade compliance API"
 - site:indiehackers.com "pre-trade compliance API"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="pre-trade compliance API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="suitability check SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="pre-trade compliance API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="suitability check SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "pre-trade compliance AI startup"
 - site:joinef.com "pre-trade compliance AI startup"
@@ -5588,7 +9363,7 @@
 - site:startupblink.com "pre-trade compliance AI startup"
 
 ### P4 — Agent Authentication & Identity (KYA)
-*Team: greens | geo: europe-first | bonus: +15 | status: partial*
+*Team: greens | geo: europe-first | bonus: +15*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI agent identity startup seed to Series A, Europe
@@ -5620,8 +9395,8 @@
 - site:betalist.com "agent identity API"
 - site:indiehackers.com "agent identity API"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent authentication github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="non-human identity API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent authentication github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="non-human identity API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI agent identity startup"
 - site:joinef.com "AI agent identity startup"
@@ -5811,7 +9586,7 @@
 - site:startupblink.com "AI agent identity startup"
 
 ### P5 — Audit & Explainability
-*Team: greens | geo: europe-first | bonus: +15 | status: partial*
+*Team: greens | geo: europe-first | bonus: +15*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI audit trail fintech startup seed to Series A, Europe
@@ -5843,8 +9618,8 @@
 - site:betalist.com "agent audit trail API"
 - site:indiehackers.com "agent audit trail API"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent audit SDK github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="explainability API fintech pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent audit SDK github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="explainability API fintech pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI audit trail fintech startup"
 - site:joinef.com "AI audit trail fintech startup"
@@ -6034,7 +9809,7 @@
 - site:startupblink.com "AI audit trail fintech startup"
 
 ### P6 — Dispute Resolution & Agent Liability
-*Team: greens | geo: europe-first | bonus: +0 | status: partial*
+*Team: greens | geo: europe-first | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI agent liability insurance startup seed to Series A, Europe
@@ -6066,8 +9841,8 @@
 - site:betalist.com "insurance for AI agents"
 - site:indiehackers.com "insurance for AI agents"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent liability SDK pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="AI insurance API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent liability SDK pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="AI insurance API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI agent liability insurance startup"
 - site:joinef.com "AI agent liability insurance startup"
@@ -6257,7 +10032,7 @@
 - site:startupblink.com "AI agent liability insurance startup"
 
 ### P7 — Agent Monetisation
-*Team: greens | geo: europe-first | bonus: +0 | status: partial*
+*Team: greens | geo: europe-first | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI agent billing startup seed to Series A, Europe
@@ -6289,8 +10064,8 @@
 - site:betalist.com "billing for AI agents"
 - site:indiehackers.com "billing for AI agents"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent billing SDK pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="usage based billing API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent billing SDK pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="usage based billing API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI agent billing startup"
 - site:joinef.com "AI agent billing startup"
@@ -6480,7 +10255,7 @@
 - site:startupblink.com "AI agent billing startup"
 
 ### P8 — Agent Payment Rails
-*Team: greens | geo: europe-first | bonus: +0 | status: partial*
+*Team: greens | geo: europe-first | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - agent payment infrastructure startup seed to Series A, Europe
@@ -6512,8 +10287,8 @@
 - site:betalist.com "payments for AI agents"
 - site:indiehackers.com "payments for AI agents"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="agent payment SDK github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="agentic transaction API pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="agent payment SDK github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="agentic transaction API pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "agent payment infrastructure startup"
 - site:joinef.com "agent payment infrastructure startup"
@@ -6706,7 +10481,7 @@
 ## RESEARCH TEAM
 
 ### R1 — Product Inversion / Retail Derivatives
-*Team: research | geo: global | bonus: +0 | status: partial*
+*Team: research | geo: global | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - retail derivatives startup seed to Series A financial services
@@ -6738,8 +10513,8 @@
 - site:betalist.com "prediction market app"
 - site:indiehackers.com "prediction market app"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="prediction market API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="derivatives for retail github pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="prediction market API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="derivatives for retail github pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "retail derivatives startup"
 - site:joinef.com "retail derivatives startup"
@@ -6929,7 +10704,7 @@
 - site:startupblink.com "retail derivatives startup"
 
 ### R2 — Tokenization & Fractionalization
-*Team: research | geo: global | bonus: +0 | status: partial*
+*Team: research | geo: global | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - real estate tokenization startup seed to Series A financial services
@@ -6961,8 +10736,8 @@
 - site:betalist.com "own a piece of anything"
 - site:indiehackers.com "own a piece of anything"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="asset tokenization github pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="fractionalization SDK pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="asset tokenization github pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="fractionalization SDK pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "real estate tokenization startup"
 - site:joinef.com "real estate tokenization startup"
@@ -7152,7 +10927,7 @@
 - site:startupblink.com "real estate tokenization startup"
 
 ### R3 — Wealth Management Reinvention
-*Team: research | geo: global | bonus: +0 | status: partial*
+*Team: research | geo: global | bonus: +0*
 
 #### Layer 1a — Exa entity discovery (natural language)
 - AI-native RIA startup seed to Series A financial services
@@ -7184,8 +10959,8 @@
 - site:betalist.com "wealth management for everyone"
 - site:indiehackers.com "wealth management for everyone"
 #### Layer 3 — Technical artifacts (GitHub MCP)
-- mcp__github__search_repositories q="wealth management API pushed:>2026-03-21" sort=updated
-- mcp__github__search_repositories q="RIA technology startup pushed:>2026-03-21" sort=updated
+- mcp__github__search_repositories q="wealth management API pushed:>2026-03-22" sort=updated
+- mcp__github__search_repositories q="RIA technology startup pushed:>2026-03-22" sort=updated
 #### Layer 4 — Accelerators / VCs / Universities / Competitions / Databases (WebSearch)
 - site:ycombinator.com "AI-native RIA startup"
 - site:joinef.com "AI-native RIA startup"
@@ -7377,6 +11152,6 @@
 
 ---
 ## SEARCH STATE
-*Last generated: 2026-05-21*
-*Thesis hash: 5d18946ba0c77d73625f7415b96ce908be79e212fe4c50b7355896328ce67039*
-*Total queries: 7062*
+*Last generated: 2026-05-22*
+*Thesis hash: 3c3515b8d2586457dfafb5ae457178a96a19d03c1a5b8dab0f6283b291e2fed0*
+*Total queries: 10684*
