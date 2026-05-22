@@ -2,10 +2,10 @@
   "_schema_version": "1.0",
   "_last_updated": "2026-05-21",
   "_seeded_in": "search-terms v4.7; calibration update v4.8; v5.1 regen (2026-05-06); cycle-14 hash-update 2026-05-08; v5.6 regen (2026-05-08, scheduled task); v5.7 regen (2026-05-15, scheduled task bg-search-terms-update); v5.8 regen (2026-05-19, scheduled task bg-search-terms-update)",
-  "search_terms_version": "6.0",
-  "search_terms_generated": "2026-05-21",
+  "search_terms_version": "7.0",
+  "search_terms_generated": "2026-05-22",
   "search_terms_source": "config/thesis-schema.yaml v1.0",
-  "thesis_hash": "5d18946ba0c77d73625f7415b96ce908be79e212fe4c50b7355896328ce67039",
+  "thesis_hash": "3c3515b8d2586457dfafb5ae457178a96a19d03c1a5b8dab0f6283b291e2fed0",
   "_purpose": "Persistent cycle memory \u2014 tracks per-query-category hit rates, per-team coverage, empty cells flagged by the negative-space audit, and queries marked for auto-deprecation or auto-promotion. Read at the start of every cycle to prioritise underexplored areas.",
   "cycle": 15,
   "cycle_completed_at": "2026-05-12",
@@ -574,11 +574,11 @@
       "status": "active"
     },
     "S6_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"smart order routing python pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"smart order routing python pushed:>2026-03-22\" sort=updated",
       "gap_id": "S6",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -666,7 +666,7 @@
       "gap_id": "S-FRONT",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -676,7 +676,7 @@
       "gap_id": "S-FRONT",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -686,17 +686,17 @@
       "gap_id": "S-FRONT",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S-FRONT_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"financial agent SDK pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"financial agent SDK pushed:>2026-03-22\" sort=updated",
       "gap_id": "S-FRONT",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -706,7 +706,7 @@
       "gap_id": "S-FRONT",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -716,7 +716,7 @@
       "gap_id": "S1",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -726,7 +726,7 @@
       "gap_id": "S1",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -736,17 +736,17 @@
       "gap_id": "S1",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S1_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"financial MCP server pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"financial MCP server pushed:>2026-03-22\" sort=updated",
       "gap_id": "S1",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -756,7 +756,7 @@
       "gap_id": "S1",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -766,7 +766,7 @@
       "gap_id": "S2",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -776,7 +776,7 @@
       "gap_id": "S2",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -786,17 +786,17 @@
       "gap_id": "S2",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S2_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"portfolio optimisation python library pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"portfolio optimisation python library pushed:>2026-03-22\" sort=updated",
       "gap_id": "S2",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -806,7 +806,7 @@
       "gap_id": "S2",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -816,7 +816,7 @@
       "gap_id": "S3",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -826,7 +826,7 @@
       "gap_id": "S3",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -836,17 +836,17 @@
       "gap_id": "S3",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S3_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"options pricing API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"options pricing API pushed:>2026-03-22\" sort=updated",
       "gap_id": "S3",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -856,7 +856,7 @@
       "gap_id": "S3",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -866,7 +866,7 @@
       "gap_id": "S4",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -876,7 +876,7 @@
       "gap_id": "S4",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -886,17 +886,17 @@
       "gap_id": "S4",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S4_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"tax lot optimisation python pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"tax lot optimisation python pushed:>2026-03-22\" sort=updated",
       "gap_id": "S4",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -906,7 +906,7 @@
       "gap_id": "S4",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -916,7 +916,7 @@
       "gap_id": "S5",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -926,7 +926,7 @@
       "gap_id": "S5",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -936,17 +936,17 @@
       "gap_id": "S5",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S5_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"options pricing python pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"options pricing python pushed:>2026-03-22\" sort=updated",
       "gap_id": "S5",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -956,7 +956,7 @@
       "gap_id": "S5",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -966,7 +966,7 @@
       "gap_id": "S6",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -976,7 +976,7 @@
       "gap_id": "S6",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -986,7 +986,7 @@
       "gap_id": "S6",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -996,7 +996,7 @@
       "gap_id": "S6",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1006,7 +1006,7 @@
       "gap_id": "S7",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1016,7 +1016,7 @@
       "gap_id": "S7",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1026,17 +1026,17 @@
       "gap_id": "S7",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S7_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"event-driven portfolio monitoring pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"event-driven portfolio monitoring pushed:>2026-03-22\" sort=updated",
       "gap_id": "S7",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1046,7 +1046,7 @@
       "gap_id": "S7",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1056,7 +1056,7 @@
       "gap_id": "S8",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1066,7 +1066,7 @@
       "gap_id": "S8",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1076,17 +1076,17 @@
       "gap_id": "S8",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S8_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"retirement planning SDK pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"retirement planning SDK pushed:>2026-03-22\" sort=updated",
       "gap_id": "S8",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1096,7 +1096,7 @@
       "gap_id": "S8",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1106,7 +1106,7 @@
       "gap_id": "S9",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1116,7 +1116,7 @@
       "gap_id": "S9",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1126,17 +1126,17 @@
       "gap_id": "S9",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S9_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"behavioural finance API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"behavioural finance API pushed:>2026-03-22\" sort=updated",
       "gap_id": "S9",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1146,7 +1146,7 @@
       "gap_id": "S9",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1156,7 +1156,7 @@
       "gap_id": "S10",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1166,7 +1166,7 @@
       "gap_id": "S10",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1176,17 +1176,17 @@
       "gap_id": "S10",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "S10_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"trade attribution python pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"trade attribution python pushed:>2026-03-22\" sort=updated",
       "gap_id": "S10",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1196,7 +1196,7 @@
       "gap_id": "S10",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1206,7 +1206,7 @@
       "gap_id": "G1",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1216,7 +1216,7 @@
       "gap_id": "G1",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1226,17 +1226,17 @@
       "gap_id": "G1",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G1_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"household financial graph API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"household financial graph API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G1",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1246,7 +1246,7 @@
       "gap_id": "G1",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1256,7 +1256,7 @@
       "gap_id": "G2",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1266,7 +1266,7 @@
       "gap_id": "G2",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1276,17 +1276,17 @@
       "gap_id": "G2",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G2_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"gift tax engine API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"gift tax engine API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G2",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1296,7 +1296,7 @@
       "gap_id": "G2",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1306,7 +1306,7 @@
       "gap_id": "G3",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1316,7 +1316,7 @@
       "gap_id": "G3",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1326,17 +1326,17 @@
       "gap_id": "G3",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G3_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"estate document automation API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"estate document automation API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G3",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1346,7 +1346,7 @@
       "gap_id": "G3",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1356,7 +1356,7 @@
       "gap_id": "G4",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1366,7 +1366,7 @@
       "gap_id": "G4",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1376,17 +1376,17 @@
       "gap_id": "G4",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G4_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"goal funding API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"goal funding API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G4",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1396,7 +1396,7 @@
       "gap_id": "G4",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1406,7 +1406,7 @@
       "gap_id": "G5",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1416,7 +1416,7 @@
       "gap_id": "G5",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1426,17 +1426,17 @@
       "gap_id": "G5",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G5_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"intra-family loan API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"intra-family loan API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G5",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1446,7 +1446,7 @@
       "gap_id": "G5",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1456,7 +1456,7 @@
       "gap_id": "G6",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1466,7 +1466,7 @@
       "gap_id": "G6",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1476,17 +1476,17 @@
       "gap_id": "G6",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G6_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"financial planning agent API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"financial planning agent API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G6",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1496,7 +1496,7 @@
       "gap_id": "G6",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1506,7 +1506,7 @@
       "gap_id": "G7",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1516,7 +1516,7 @@
       "gap_id": "G7",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1526,17 +1526,17 @@
       "gap_id": "G7",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G7_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"insurance needs API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"insurance needs API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G7",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1546,7 +1546,7 @@
       "gap_id": "G7",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1556,7 +1556,7 @@
       "gap_id": "G8",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1566,7 +1566,7 @@
       "gap_id": "G8",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1576,17 +1576,17 @@
       "gap_id": "G8",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G8_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"LTC cost modeling API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"LTC cost modeling API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G8",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1596,7 +1596,7 @@
       "gap_id": "G8",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1606,7 +1606,7 @@
       "gap_id": "G9",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1616,7 +1616,7 @@
       "gap_id": "G9",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1626,17 +1626,17 @@
       "gap_id": "G9",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G9_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"caregiver financial API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"caregiver financial API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G9",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1646,7 +1646,7 @@
       "gap_id": "G9",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1656,7 +1656,7 @@
       "gap_id": "G10",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1666,7 +1666,7 @@
       "gap_id": "G10",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1676,17 +1676,17 @@
       "gap_id": "G10",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G10_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"medical billing API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"medical billing API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G10",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1696,7 +1696,7 @@
       "gap_id": "G10",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1706,7 +1706,7 @@
       "gap_id": "G11",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1716,7 +1716,7 @@
       "gap_id": "G11",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1726,17 +1726,17 @@
       "gap_id": "G11",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "G11_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"financial coaching agent API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"financial coaching agent API pushed:>2026-03-22\" sort=updated",
       "gap_id": "G11",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1746,7 +1746,7 @@
       "gap_id": "G11",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1756,7 +1756,7 @@
       "gap_id": "P1",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1766,7 +1766,7 @@
       "gap_id": "P1",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1776,17 +1776,17 @@
       "gap_id": "P1",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P1_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"multi-agent orchestration github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"multi-agent orchestration github pushed:>2026-03-22\" sort=updated",
       "gap_id": "P1",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1796,7 +1796,7 @@
       "gap_id": "P1",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1806,7 +1806,7 @@
       "gap_id": "P2",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1816,7 +1816,7 @@
       "gap_id": "P2",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1826,17 +1826,17 @@
       "gap_id": "P2",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P2_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent safety SDK github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent safety SDK github pushed:>2026-03-22\" sort=updated",
       "gap_id": "P2",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1846,7 +1846,7 @@
       "gap_id": "P2",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1856,7 +1856,7 @@
       "gap_id": "P3",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1866,7 +1866,7 @@
       "gap_id": "P3",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1876,17 +1876,17 @@
       "gap_id": "P3",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P3_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"pre-trade compliance API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"pre-trade compliance API pushed:>2026-03-22\" sort=updated",
       "gap_id": "P3",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1896,7 +1896,7 @@
       "gap_id": "P3",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1906,7 +1906,7 @@
       "gap_id": "P4",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1916,7 +1916,7 @@
       "gap_id": "P4",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1926,17 +1926,17 @@
       "gap_id": "P4",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P4_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent authentication github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent authentication github pushed:>2026-03-22\" sort=updated",
       "gap_id": "P4",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1946,7 +1946,7 @@
       "gap_id": "P4",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1956,7 +1956,7 @@
       "gap_id": "P5",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1966,7 +1966,7 @@
       "gap_id": "P5",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1976,17 +1976,17 @@
       "gap_id": "P5",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P5_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent audit SDK github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent audit SDK github pushed:>2026-03-22\" sort=updated",
       "gap_id": "P5",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -1996,7 +1996,7 @@
       "gap_id": "P5",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2006,7 +2006,7 @@
       "gap_id": "P6",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2016,7 +2016,7 @@
       "gap_id": "P6",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2026,17 +2026,17 @@
       "gap_id": "P6",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P6_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent liability SDK pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent liability SDK pushed:>2026-03-22\" sort=updated",
       "gap_id": "P6",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2046,7 +2046,7 @@
       "gap_id": "P6",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2056,7 +2056,7 @@
       "gap_id": "P7",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2066,7 +2066,7 @@
       "gap_id": "P7",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2076,17 +2076,17 @@
       "gap_id": "P7",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P7_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent billing SDK pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent billing SDK pushed:>2026-03-22\" sort=updated",
       "gap_id": "P7",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2096,7 +2096,7 @@
       "gap_id": "P7",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2106,7 +2106,7 @@
       "gap_id": "P8",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2116,7 +2116,7 @@
       "gap_id": "P8",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2126,17 +2126,17 @@
       "gap_id": "P8",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "P8_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"agent payment SDK github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"agent payment SDK github pushed:>2026-03-22\" sort=updated",
       "gap_id": "P8",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2146,7 +2146,7 @@
       "gap_id": "P8",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2156,7 +2156,7 @@
       "gap_id": "R1",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2166,7 +2166,7 @@
       "gap_id": "R1",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2176,17 +2176,17 @@
       "gap_id": "R1",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "R1_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"prediction market API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"prediction market API pushed:>2026-03-22\" sort=updated",
       "gap_id": "R1",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2196,7 +2196,7 @@
       "gap_id": "R1",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2206,7 +2206,7 @@
       "gap_id": "R2",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2216,7 +2216,7 @@
       "gap_id": "R2",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2226,17 +2226,17 @@
       "gap_id": "R2",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "R2_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"asset tokenization github pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"asset tokenization github pushed:>2026-03-22\" sort=updated",
       "gap_id": "R2",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2246,7 +2246,7 @@
       "gap_id": "R2",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2256,7 +2256,7 @@
       "gap_id": "R3",
       "layer": "1a",
       "scanner": "exa",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2266,7 +2266,7 @@
       "gap_id": "R3",
       "layer": "1b",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2276,17 +2276,17 @@
       "gap_id": "R3",
       "layer": "2",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
     },
     "R3_layer3_github_mcp": {
-      "query": "mcp__github__search_repositories q=\"wealth management API pushed:>2026-03-21\" sort=updated",
+      "query": "mcp__github__search_repositories q=\"wealth management API pushed:>2026-03-22\" sort=updated",
       "gap_id": "R3",
       "layer": "3",
       "scanner": "github_mcp",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
@@ -2296,7 +2296,857 @@
       "gap_id": "R3",
       "layer": "4",
       "scanner": "websearch",
-      "first_added": "2026-05-21",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-INCOME_layer1a_exa": {
+      "query": "income optimization fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-INCOME",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-INCOME_layer1b_websearch": {
+      "query": "site:fintech.global \"income optimization fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-INCOME",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-INCOME_layer2_websearch": {
+      "query": "site:producthunt.com \"maximise your take-home pay\"",
+      "gap_id": "G-INCOME",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-INCOME_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"income data API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-INCOME",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-INCOME_layer4_websearch": {
+      "query": "site:ycombinator.com \"income optimization fintech\"",
+      "gap_id": "G-INCOME",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-COMP_layer1a_exa": {
+      "query": "equity compensation platform serving US families, seed to Series A, European-founded",
+      "gap_id": "G-COMP",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-COMP_layer1b_websearch": {
+      "query": "site:fintech.global \"equity compensation platform\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-COMP",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-COMP_layer2_websearch": {
+      "query": "site:producthunt.com \"manage your RSUs and options\"",
+      "gap_id": "G-COMP",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-COMP_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"equity comp API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-COMP",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-COMP_layer4_websearch": {
+      "query": "site:ycombinator.com \"equity compensation platform\"",
+      "gap_id": "G-COMP",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-BENEFITS_layer1a_exa": {
+      "query": "employee benefits optimization startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-BENEFITS",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-BENEFITS_layer1b_websearch": {
+      "query": "site:fintech.global \"employee benefits optimization startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-BENEFITS",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-BENEFITS_layer2_websearch": {
+      "query": "site:producthunt.com \"maximise your benefits\"",
+      "gap_id": "G-BENEFITS",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-BENEFITS_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"benefits eligibility API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-BENEFITS",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-BENEFITS_layer4_websearch": {
+      "query": "site:ycombinator.com \"employee benefits optimization startup\"",
+      "gap_id": "G-BENEFITS",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CASH_layer1a_exa": {
+      "query": "cash management fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-CASH",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CASH_layer1b_websearch": {
+      "query": "site:fintech.global \"cash management fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-CASH",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CASH_layer2_websearch": {
+      "query": "site:producthunt.com \"put your cash to work\"",
+      "gap_id": "G-CASH",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CASH_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"cash sweep API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-CASH",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CASH_layer4_websearch": {
+      "query": "site:ycombinator.com \"cash management fintech\"",
+      "gap_id": "G-CASH",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LIQUIDITY_layer1a_exa": {
+      "query": "liquidity planning fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-LIQUIDITY",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LIQUIDITY_layer1b_websearch": {
+      "query": "site:fintech.global \"liquidity planning fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-LIQUIDITY",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LIQUIDITY_layer2_websearch": {
+      "query": "site:producthunt.com \"never miss a bill or overpay\"",
+      "gap_id": "G-LIQUIDITY",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LIQUIDITY_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"cashflow forecasting API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-LIQUIDITY",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LIQUIDITY_layer4_websearch": {
+      "query": "site:ycombinator.com \"liquidity planning fintech\"",
+      "gap_id": "G-LIQUIDITY",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEPOSIT_layer1a_exa": {
+      "query": "deposit management fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-DEPOSIT",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEPOSIT_layer1b_websearch": {
+      "query": "site:fintech.global \"deposit management fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-DEPOSIT",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEPOSIT_layer2_websearch": {
+      "query": "site:producthunt.com \"maximise FDIC coverage\"",
+      "gap_id": "G-DEPOSIT",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEPOSIT_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"deposit network API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-DEPOSIT",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEPOSIT_layer4_websearch": {
+      "query": "site:ycombinator.com \"deposit management fintech\"",
+      "gap_id": "G-DEPOSIT",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LOCATION_layer1a_exa": {
+      "query": "asset location optimization startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-LOCATION",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LOCATION_layer1b_websearch": {
+      "query": "site:fintech.global \"asset location optimization startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-LOCATION",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LOCATION_layer2_websearch": {
+      "query": "site:producthunt.com \"put assets in the right account\"",
+      "gap_id": "G-LOCATION",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LOCATION_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"asset location API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-LOCATION",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-LOCATION_layer4_websearch": {
+      "query": "site:ycombinator.com \"asset location optimization startup\"",
+      "gap_id": "G-LOCATION",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-GLIDEPATH_layer1a_exa": {
+      "query": "goal based investing startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-GLIDEPATH",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-GLIDEPATH_layer1b_websearch": {
+      "query": "site:fintech.global \"goal based investing startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-GLIDEPATH",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-GLIDEPATH_layer2_websearch": {
+      "query": "site:producthunt.com \"invest for each goal\"",
+      "gap_id": "G-GLIDEPATH",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-GLIDEPATH_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"goal investing API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-GLIDEPATH",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-GLIDEPATH_layer4_websearch": {
+      "query": "site:ycombinator.com \"goal based investing startup\"",
+      "gap_id": "G-GLIDEPATH",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-MORTGAGE_layer1a_exa": {
+      "query": "AI mortgage startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-MORTGAGE",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-MORTGAGE_layer1b_websearch": {
+      "query": "site:fintech.global \"AI mortgage startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-MORTGAGE",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-MORTGAGE_layer2_websearch": {
+      "query": "site:producthunt.com \"get the best mortgage\"",
+      "gap_id": "G-MORTGAGE",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-MORTGAGE_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"mortgage pricing API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-MORTGAGE",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-MORTGAGE_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI mortgage startup\"",
+      "gap_id": "G-MORTGAGE",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEBT_layer1a_exa": {
+      "query": "debt payoff fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-DEBT",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEBT_layer1b_websearch": {
+      "query": "site:fintech.global \"debt payoff fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-DEBT",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEBT_layer2_websearch": {
+      "query": "site:producthunt.com \"pay off debt faster\"",
+      "gap_id": "G-DEBT",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEBT_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"debt optimization API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-DEBT",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DEBT_layer4_websearch": {
+      "query": "site:ycombinator.com \"debt payoff fintech\"",
+      "gap_id": "G-DEBT",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CREDIT_layer1a_exa": {
+      "query": "credit building fintech serving US families, seed to Series A, European-founded",
+      "gap_id": "G-CREDIT",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CREDIT_layer1b_websearch": {
+      "query": "site:fintech.global \"credit building fintech\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-CREDIT",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CREDIT_layer2_websearch": {
+      "query": "site:producthunt.com \"build your credit\"",
+      "gap_id": "G-CREDIT",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CREDIT_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"credit data API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-CREDIT",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CREDIT_layer4_websearch": {
+      "query": "site:ycombinator.com \"credit building fintech\"",
+      "gap_id": "G-CREDIT",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PC_layer1a_exa": {
+      "query": "AI home insurance startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-PC",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PC_layer1b_websearch": {
+      "query": "site:fintech.global \"AI home insurance startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-PC",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PC_layer2_websearch": {
+      "query": "site:producthunt.com \"right-size your home and auto cover\"",
+      "gap_id": "G-PC",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PC_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"insurance quoting API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-PC",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PC_layer4_websearch": {
+      "query": "site:ycombinator.com \"AI home insurance startup\"",
+      "gap_id": "G-PC",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-FRAUD_layer1a_exa": {
+      "query": "financial fraud protection startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-FRAUD",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-FRAUD_layer1b_websearch": {
+      "query": "site:fintech.global \"financial fraud protection startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-FRAUD",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-FRAUD_layer2_websearch": {
+      "query": "site:producthunt.com \"protect your family from scams\"",
+      "gap_id": "G-FRAUD",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-FRAUD_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"fraud detection API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-FRAUD",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-FRAUD_layer4_websearch": {
+      "query": "site:ycombinator.com \"financial fraud protection startup\"",
+      "gap_id": "G-FRAUD",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-SAVE_layer1a_exa": {
+      "query": "novel savings startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-SAVE",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-SAVE_layer1b_websearch": {
+      "query": "site:fintech.global \"novel savings startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-SAVE",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-SAVE_layer2_websearch": {
+      "query": "site:producthunt.com \"a new way to save\"",
+      "gap_id": "G-SAVE",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-SAVE_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"savings automation API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-SAVE",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-SAVE_layer4_websearch": {
+      "query": "site:ycombinator.com \"novel savings startup\"",
+      "gap_id": "G-SAVE",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DRAWDOWN_layer1a_exa": {
+      "query": "retirement drawdown startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-DRAWDOWN",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DRAWDOWN_layer1b_websearch": {
+      "query": "site:fintech.global \"retirement drawdown startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-DRAWDOWN",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DRAWDOWN_layer2_websearch": {
+      "query": "site:producthunt.com \"spend down tax-efficiently\"",
+      "gap_id": "G-DRAWDOWN",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DRAWDOWN_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"decumulation API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-DRAWDOWN",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-DRAWDOWN_layer4_websearch": {
+      "query": "site:ycombinator.com \"retirement drawdown startup\"",
+      "gap_id": "G-DRAWDOWN",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PURCHASE_layer1a_exa": {
+      "query": "major purchase decision startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-PURCHASE",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PURCHASE_layer1b_websearch": {
+      "query": "site:fintech.global \"major purchase decision startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-PURCHASE",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PURCHASE_layer2_websearch": {
+      "query": "site:producthunt.com \"buy or lease\"",
+      "gap_id": "G-PURCHASE",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PURCHASE_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"purchase decision API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-PURCHASE",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-PURCHASE_layer4_websearch": {
+      "query": "site:ycombinator.com \"major purchase decision startup\"",
+      "gap_id": "G-PURCHASE",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CONSENT_layer1a_exa": {
+      "query": "family financial permissions startup serving US families, seed to Series A, European-founded",
+      "gap_id": "G-CONSENT",
+      "layer": "1a",
+      "scanner": "exa",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CONSENT_layer1b_websearch": {
+      "query": "site:fintech.global \"family financial permissions startup\" -crypto -DeFi -blockchain -web3 -NFT -token",
+      "gap_id": "G-CONSENT",
+      "layer": "1b",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CONSENT_layer2_websearch": {
+      "query": "site:producthunt.com \"let family act on your behalf safely\"",
+      "gap_id": "G-CONSENT",
+      "layer": "2",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CONSENT_layer3_github_mcp": {
+      "query": "mcp__github__search_repositories q=\"financial delegation API pushed:>2026-03-22\" sort=updated",
+      "gap_id": "G-CONSENT",
+      "layer": "3",
+      "scanner": "github_mcp",
+      "first_added": "2026-05-22",
+      "hit_count": 0,
+      "empty_run_streak": 0,
+      "status": "active"
+    },
+    "G-CONSENT_layer4_websearch": {
+      "query": "site:ycombinator.com \"family financial permissions startup\"",
+      "gap_id": "G-CONSENT",
+      "layer": "4",
+      "scanner": "websearch",
+      "first_added": "2026-05-22",
       "hit_count": 0,
       "empty_run_streak": 0,
       "status": "active"
