@@ -1492,3 +1492,13 @@ The first scout carded only NestiFi because the geo bar was over-applied as "Eur
 **Cited /answer rejected 2 false fits:** Goya Health (provider-side healthcare billing, wrong side of G10) and Rule (impulse-spend PFM = addition-wealth/Whistl anti-pattern). The verification + judgment working as intended.
 **Still-open cells (no clean European-built fit this pass):** G8 Eldercare, G10 Health & Medical-Cost, G11 Rising-Generation. Scout G2/G3 estate for European fits next pass (Testamento flagged).
 **Lesson:** the dramatic-thesis-low-yield worry was a filter bug, not an engine or thesis failure. Discovery surfaced 30+ relevant companies; the bottleneck was an over-narrow geo gate.
+
+## Cycle 23 — 2026-05-22 — Full pipeline run on settled Studio thesis (v3.7)
+
+**Strategise:** Thesis → v3.7. Three focus projects (interface layer, intelligent tax, decomposed family office); Nostradamus retired (absorbed by orchestrator); orchestrator elevated as the spine; generational cluster reorganised around what money does (earns/rests/invests/borrows/protected/saved/spent/orchestrated).
+**Arm:** Schema → 50 gaps (+17 money-job cells: G-INCOME, G-COMP, G-BENEFITS, G-CASH, G-LIQUIDITY, G-DEPOSIT, G-LOCATION, G-GLIDEPATH, G-MORTGAGE, G-DEBT, G-CREDIT, G-PC, G-FRAUD, G-SAVE, G-DRAWDOWN, G-PURCHASE, G-CONSENT). Search terms → v7.0, 10,684 queries, Layer-1a Exa verified operator-free.
+**Scout:** Hybrid engine across the new money-job cells. Discovery returned European-built candidates in every cell. Cited /answer verified funding/origin.
+  - Carded: Sprive (UK, G-MORTGAGE, Series A $7.3M, mortgage payoff/refi), FinProxy (UK, G-CONSENT, delegated POA access — the spine), Sapiendo (FR, G-DRAWDOWN, retirement decumulation, watch-grade consultancy flag).
+  - Rejected by gates+judgment: Equify (FR, cap-table-for-companies = G-COMP anti-pattern), Prograd (UK, education + survey earning, not debt payoff), Alwy (SE, broad PFM, not the cash-yield specialist).
+**Verification:** generator clean over 50 cells; Exa returns entities not articles; /answer cited (7–8 cites each); geo two-axis + anti-pattern gates working.
+**Coverage:** deep-scouted the new money-job surface; existing S/P/R + G1–G11 carry prior candidates and run on cadence. Pipeline 153 → 156.
