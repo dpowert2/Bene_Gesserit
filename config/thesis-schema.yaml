@@ -1748,6 +1748,536 @@ gaps:
     novelty_signals: ["coaching wired into the real family plan", "agent-callable, not a card"]
     novelty_antipatterns: ["kids debit card", "gamified allowance app"]
 
+  # ── Money-job search cells (added v3.7): earns / rests / invests / borrows / protects / saves / spends / orchestrates ──
+  - id: G-INCOME
+    name: "Income & Cashflow"
+    team: studio
+    thesis_anchor: >
+      Maximises household take-home across salary, multiple or irregular income streams and side income, and smooths cashflow.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "income optimization fintech"
+      - "cashflow management startup"
+      - "gig income financial platform"
+    founder_vocabulary:
+      - "maximise your take-home pay"
+      - "smooth your cashflow"
+      - "income optimization app"
+    technical_vocabulary:
+      - "income data API"
+    community_vocabulary:
+      - "household income optimizer"
+    reference_archetypes:
+      - "thin, open"
+    anti_archetypes:
+      - "generic budgeting app"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["optimizes total household income", "handles irregular or gig income"]
+    novelty_antipatterns: ["budgeting app", "expense tracker"]
+  - id: G-COMP
+    name: "Compensation & Equity"
+    team: studio
+    thesis_anchor: >
+      Manages the whole pay package: employer match, RSUs, stock options, ESPP and deferred comp, and the exercise, sell and diversify decisions.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "equity compensation platform"
+      - "RSU management fintech"
+      - "stock option planning startup"
+    founder_vocabulary:
+      - "manage your RSUs and options"
+      - "equity comp planner"
+      - "when to exercise your options"
+    technical_vocabulary:
+      - "equity comp API"
+    community_vocabulary:
+      - "RSU tax planning"
+    reference_archetypes:
+      - "Secfi or Carta-adjacent"
+    anti_archetypes:
+      - "cap-table software for companies"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["household-side equity comp management", "exercise, sell and diversify decisions"]
+    novelty_antipatterns: ["company cap-table tool"]
+  - id: G-BENEFITS
+    name: "Benefits Capture"
+    team: studio
+    thesis_anchor: >
+      Extracts the full value of employer and government benefits, from HSA and dependent-care accounts to tax credits and public programs.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "employee benefits optimization startup"
+      - "government benefits navigation fintech"
+      - "HSA optimization startup"
+    founder_vocabulary:
+      - "maximise your benefits"
+      - "claim every benefit"
+      - "benefits optimizer"
+    technical_vocabulary:
+      - "benefits eligibility API"
+    community_vocabulary:
+      - "benefits navigation AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "employer HR benefits-admin SaaS"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["household-side benefits capture", "government and employer benefits together"]
+    novelty_antipatterns: ["employer HR benefits platform"]
+  - id: G-CASH
+    name: "Cash & Yield"
+    team: studio
+    thesis_anchor: >
+      Sweeps idle balances into the best safe yield across high-yield savings, money-market and Treasuries, and moves the money as rates change.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "cash management fintech"
+      - "high yield savings startup"
+      - "consumer treasury management startup"
+    founder_vocabulary:
+      - "put your cash to work"
+      - "best yield on idle cash"
+      - "automated cash sweep"
+    technical_vocabulary:
+      - "cash sweep API"
+    community_vocabulary:
+      - "idle cash optimizer"
+    reference_archetypes:
+      - "Flourish or MaxMyInterest-adjacent"
+    anti_archetypes:
+      - "plain neobank checking account"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["optimizes idle-cash yield automatically", "moves across providers as rates change"]
+    novelty_antipatterns: ["plain savings account", "neobank"]
+  - id: G-LIQUIDITY
+    name: "Liquidity Timing"
+    team: studio
+    thesis_anchor: >
+      Ensures the right cash is in the right account for upcoming obligations such as bills, tax and tuition, avoiding both shortfalls and idle drag.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "liquidity planning fintech"
+      - "cashflow forecasting startup"
+      - "household liquidity management startup"
+    founder_vocabulary:
+      - "never miss a bill or overpay"
+      - "cash-flow timing app"
+      - "liquidity planner"
+    technical_vocabulary:
+      - "cashflow forecasting API"
+    community_vocabulary:
+      - "liquidity timing AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "budgeting app"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["forecasts and times household liquidity", "obligation-aware cash routing"]
+    novelty_antipatterns: ["expense tracker"]
+  - id: G-DEPOSIT
+    name: "Deposit Optimisation & Buffer"
+    team: studio
+    thesis_anchor: >
+      Spreads cash across institutions for the best terms and full deposit-insurance coverage, and right-sizes the household emergency buffer.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "deposit management fintech"
+      - "FDIC coverage optimization startup"
+      - "emergency fund startup"
+    founder_vocabulary:
+      - "maximise FDIC coverage"
+      - "right-size your emergency fund"
+      - "deposit optimizer"
+    technical_vocabulary:
+      - "deposit network API"
+    community_vocabulary:
+      - "FDIC sweep"
+    reference_archetypes:
+      - "IntraFi or MaxMyInterest-adjacent"
+    anti_archetypes:
+      - "single-bank savings"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["multi-bank insurance optimization", "emergency-buffer sizing"]
+    novelty_antipatterns: ["single savings account"]
+  - id: G-LOCATION
+    name: "Asset Location"
+    team: studio
+    thesis_anchor: >
+      Places each holding in the most tax-efficient account across the family's many accounts.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "asset location optimization startup"
+      - "tax-efficient investing fintech"
+      - "account placement optimizer"
+    founder_vocabulary:
+      - "put assets in the right account"
+      - "asset location optimizer"
+      - "tax-smart account placement"
+    technical_vocabulary:
+      - "asset location API"
+    community_vocabulary:
+      - "asset location AI"
+    reference_archetypes:
+      - "direct-indexing-adjacent"
+    anti_archetypes:
+      - "robo-advisor rebrand"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["cross-account tax-efficient placement", "household-wide asset location"]
+    novelty_antipatterns: ["single-account robo"]
+  - id: G-GLIDEPATH
+    name: "Goal-Linked Investing"
+    team: studio
+    thesis_anchor: >
+      Invests each pot on a glidepath matched to its goal and horizon, from a college fund a decade out to retirement decades away.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "goal based investing startup"
+      - "glidepath investing fintech"
+      - "horizon based portfolio startup"
+    founder_vocabulary:
+      - "invest for each goal"
+      - "goal-based portfolios"
+      - "glidepath for your goals"
+    technical_vocabulary:
+      - "goal investing API"
+    community_vocabulary:
+      - "goal-based investing AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "generic robo-advisor"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["per-goal glidepath", "horizon-matched investing"]
+    novelty_antipatterns: ["one-size robo portfolio"]
+  - id: G-MORTGAGE
+    name: "Mortgage & Refinancing"
+    team: studio
+    thesis_anchor: >
+      Secures and optimises the household's largest debt, including when to refinance.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "AI mortgage startup"
+      - "mortgage optimization fintech"
+      - "refinance timing startup"
+    founder_vocabulary:
+      - "get the best mortgage"
+      - "when to refinance"
+      - "mortgage optimizer"
+    technical_vocabulary:
+      - "mortgage pricing API"
+    community_vocabulary:
+      - "refinance alerts AI"
+    reference_archetypes:
+      - "Tomo or Better-adjacent"
+    anti_archetypes:
+      - "lead-gen mortgage marketplace"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["ongoing mortgage optimization", "refinance-timing intelligence"]
+    novelty_antipatterns: ["mortgage lead-gen site"]
+  - id: G-DEBT
+    name: "Debt Payoff"
+    team: studio
+    thesis_anchor: >
+      Sequences, consolidates and refinances student loans, credit cards and other debt, and works the forgiveness and relief programs.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "debt payoff fintech"
+      - "student loan optimization startup"
+      - "debt consolidation AI startup"
+    founder_vocabulary:
+      - "pay off debt faster"
+      - "optimize your student loans"
+      - "debt payoff planner"
+    technical_vocabulary:
+      - "debt optimization API"
+    community_vocabulary:
+      - "student loan AI"
+    reference_archetypes:
+      - "student-loan-fintech-adjacent"
+    anti_archetypes:
+      - "payday lender"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["optimal payoff sequencing", "forgiveness and relief navigation"]
+    novelty_antipatterns: ["payday loan", "debt-settlement boiler room"]
+  - id: G-CREDIT
+    name: "Credit Access"
+    team: studio
+    thesis_anchor: >
+      Builds and improves credit, especially for the rising generation and thin-file households.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "credit building fintech"
+      - "thin file credit startup"
+      - "credit improvement AI startup"
+    founder_vocabulary:
+      - "build your credit"
+      - "improve your score"
+      - "credit builder"
+    technical_vocabulary:
+      - "credit data API"
+    community_vocabulary:
+      - "credit building AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "subprime credit card"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["family and rising-gen credit building", "thin-file credit access"]
+    novelty_antipatterns: ["subprime card", "credit-repair scam"]
+  - id: G-PC
+    name: "Property, Casualty & Liability"
+    team: studio
+    thesis_anchor: >
+      Home, auto and umbrella cover sized to the family's real exposure.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "AI home insurance startup"
+      - "auto insurance fintech"
+      - "umbrella liability insurtech startup"
+    founder_vocabulary:
+      - "right-size your home and auto cover"
+      - "umbrella insurance made simple"
+      - "property protection planner"
+    technical_vocabulary:
+      - "insurance quoting API"
+    community_vocabulary:
+      - "family liability cover AI"
+    reference_archetypes:
+      - "insurtech-adjacent"
+    anti_archetypes:
+      - "insurance comparison marketplace"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["exposure-based P&C sizing", "family-system liability cover"]
+    novelty_antipatterns: ["quote comparison site"]
+  - id: G-FRAUD
+    name: "Fraud & Financial Security"
+    team: studio
+    thesis_anchor: >
+      Protects the household, and its vulnerable members in particular, from scams and financial abuse.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "financial fraud protection startup"
+      - "elder financial abuse fintech"
+      - "scam prevention AI startup"
+    founder_vocabulary:
+      - "protect your family from scams"
+      - "stop financial fraud"
+      - "elder fraud protection"
+    technical_vocabulary:
+      - "fraud detection API"
+    community_vocabulary:
+      - "family fraud protection AI"
+    reference_archetypes:
+      - "Carefull or EverSafe-adjacent"
+    anti_archetypes:
+      - "enterprise bank AML platform"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["household and elder fraud protection", "consumer-side financial safety"]
+    novelty_antipatterns: ["enterprise bank AML"]
+  - id: G-SAVE
+    name: "Novel Saving Mechanisms"
+    team: studio
+    thesis_anchor: >
+      New vehicles and behavioural or automated ways to save and store money beyond the standard accounts.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "novel savings startup"
+      - "behavioural savings fintech"
+      - "automated saving startup"
+    founder_vocabulary:
+      - "a new way to save"
+      - "save without thinking"
+      - "novel savings product"
+    technical_vocabulary:
+      - "savings automation API"
+    community_vocabulary:
+      - "behavioural saving AI"
+    reference_archetypes:
+      - "prize-linked or round-up-adjacent"
+    anti_archetypes:
+      - "plain savings account"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["genuinely novel saving mechanism", "behavioural or automated saving"]
+    novelty_antipatterns: ["standard savings account", "round-up-only app"]
+  - id: G-DRAWDOWN
+    name: "Tax-Aware Drawdown"
+    team: studio
+    thesis_anchor: >
+      Spends down efficiently in later life, sequencing which accounts to draw first.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "retirement drawdown startup"
+      - "decumulation fintech"
+      - "withdrawal sequencing startup"
+    founder_vocabulary:
+      - "spend down tax-efficiently"
+      - "retirement withdrawal optimizer"
+      - "drawdown planner"
+    technical_vocabulary:
+      - "decumulation API"
+    community_vocabulary:
+      - "withdrawal sequencing AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "accumulation-only robo"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["tax-aware withdrawal sequencing", "later-life decumulation"]
+    novelty_antipatterns: ["budgeting app"]
+  - id: G-PURCHASE
+    name: "Major-Purchase Decisions"
+    team: studio
+    thesis_anchor: >
+      Buy versus lease, rent versus buy, and the timing of large outlays, with the whole-household impact modelled.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "major purchase decision startup"
+      - "rent vs buy fintech"
+      - "big purchase planning AI startup"
+    founder_vocabulary:
+      - "buy or lease"
+      - "rent vs buy that acts"
+      - "big purchase advisor"
+    technical_vocabulary:
+      - "purchase decision API"
+    community_vocabulary:
+      - "rent vs buy AI"
+    reference_archetypes:
+      - "thin"
+    anti_archetypes:
+      - "shopping cashback app"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["whole-household purchase modelling", "buy-vs-lease and rent-vs-buy decisions"]
+    novelty_antipatterns: ["coupon or cashback app", "everyday budgeting"]
+  - id: G-CONSENT
+    name: "Consent & Permissions"
+    team: studio
+    thesis_anchor: >
+      Who can see and act for whom: scoped, revocable, auditable delegation across the family, a parent for a child and an adult child for a parent. Extends Know-Your-Agent.
+    target_company_shape: >
+      US-market household money job; European-built preferred and transferable in principle. Seed to Series A.
+    institutional_vocabulary:
+      - "family financial permissions startup"
+      - "delegated financial access fintech"
+      - "financial power of attorney platform"
+    founder_vocabulary:
+      - "let family act on your behalf safely"
+      - "scoped financial permissions"
+      - "family delegation app"
+    technical_vocabulary:
+      - "financial delegation API"
+      - "consent management SDK"
+    community_vocabulary:
+      - "family financial consent AI"
+    reference_archetypes:
+      - "extends KYA (Vouched)"
+    anti_archetypes:
+      - "shared password manager"
+    stage_gate: {min: pre-seed, max: series-a}
+    geo_preference: us-market-europe-supply
+    specialist_bonus: 10
+    gap_status: empty
+    crypto_exclusion: true
+    third_party_qualifier: false
+    novelty_signals: ["scoped revocable family delegation", "auditable intra-family permissions"]
+    novelty_antipatterns: ["shared login", "password sharing"]
+
 audience_archetypes:
 
   A:
